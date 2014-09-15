@@ -1,0 +1,470 @@
+@charset "UTF-8";
+/*!
+  Lithium - Base Styles for the Lithium Universe
+
+  Copyright (c) 2014 Union of RAD - All rights reserved.
+
+  The code is distributed under the terms of the BSD 3-clause
+  License. For the full license text see the LICENSE file.
+*/
+
+/* Basics
+---------------------------------------------------------------- */
+body {
+  font-size: 14px;
+  font-family: 'Anonymous Pro', sans-serif;
+  word-spacing: -.02em;
+
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "liga" 1, "frac" 1, "kern" 1, "smcp" 1;
+  font-feature-settings: "liga" 1, "frac" 1, "kern" 1, "smcp" 1;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+
+  line-height: 1.45;
+
+  color: #1b1b1b;
+  background-color: #fefeff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+.hyphenate {
+  hyphens: auto;
+}
+.hyphenate-hard {
+  word-break: break-all;
+  hyphens: auto;
+}
+
+.cleafix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.use-section-spacing section + section {
+  margin-top: 60px;
+}
+.use-section-spacing section article + article {
+}
+
+#content {
+  min-height: 100vh;
+  padding: 80px 60px 300px 60px;
+}
+#content > .fullwidth {
+  max-width: none;
+}
+#content > article {
+  max-width: 680px;
+}
+
+ol {
+  padding-left: 1.5em;
+  list-style-type: upper-roman;
+}
+ul {
+  padding-left: 1.1em;
+}
+li {
+  margin-bottom: .5em;
+}
+code, pre {
+ font-family: 'Anonymous Pro', sans-serif;
+}
+pre {
+  width: 100%;
+}
+
+blockquote {
+  margin-left: 0;
+  font-style: italic;
+}
+
+.section-separator {
+  transform: rotate(-4deg);
+  margin: 80px auto;
+  height: 5px;
+  width: 200px;
+  border: none;
+  -webkit-backface-visibility: hidden;
+  background-color: #e6e6e6;
+}
+.section-separator.lightblue {
+  background-color: #00AEEF;
+}
+.section-separator.darkblue {
+  background-color: #180274;
+}
+.section-separator.red {
+  background-color: #CB057A;
+}
+
+/* Headlines / Text
+---------------------------------------------------------------- */
+h1, h2, h3, h4 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  line-height: 1;
+}
+
+.li3-docs h1,
+.li3-docs h2,
+.li3-docs h3,
+.li3-docs h4,
+.li3-docs h5,
+.h-alpha,
+.h-beta,
+.h-gamma,
+.h-delta,
+.h-epsilon {
+  letter-spacing: .01em; /* Works only for Firfox. */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bolder;
+}
+
+.li3-docs h1,
+.h-alpha {
+  line-height: 1.05;
+  margin: 0.67em 0;
+  font-size: 32px;
+}
+.li3-docs h2,
+.h-beta {
+  line-height: 1.05;
+  font-size: 20px;
+  margin: 0.67em 0;
+}
+.li3-docs h3,
+.h-gamma {
+  margin: 0.67em 0;
+}
+.li3-docs h4,
+.h-delta {
+  font-size: 14px;
+}
+.li3-docs h5,
+.h-epsilon {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* Hyperlinks
+---------------------------------------------------------------- */
+a {
+  color: #1b1b1b;
+  text-decoration: none;
+}
+.li3-docs ul a,
+.li3-docs #parent a,
+.crumbs a,
+footer.main a,
+#content p a {
+  /* border-bottom: 1px solid #929294; */
+  border-bottom: 1px solid #e8e8e8;
+}
+.li3-docs ul a:hover,
+.crumbs a:hover,
+footer.main a:hover,
+#content p a:hover {
+  border-color: #1b1b1b;
+}
+#content .aside a {
+  border: none;
+}
+
+/* Header
+---------------------------------------------------------------- */
+.main-nav a {
+  text-decoration: none;
+  padding-bottom: 20px;
+  margin-left: 20px;
+  border-bottom: 2px solid transparent;
+}
+.main-nav a.active,
+.main-nav a:hover {
+  border-color: black;
+}
+header.main .main-nav {
+  line-height: 3;
+}
+header.main {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: white;
+  padding: 10px 60px 10px 10px;
+  /* border-bottom: 1px solid gray; */
+  border-bottom: 1px solid #e6e6e6;
+}
+
+header.main .logo {
+  font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 40px;
+  line-height: 1;
+}
+header.main .logo:hover {
+  font-weight: bold;
+}
+header.main .left {
+  float: left;
+}
+header.main .right {
+  float: right;
+}
+
+
+/* Footer
+---------------------------------------------------------------- */
+footer.main {
+  overflow: hidden;
+  background: white;
+  border-top: 5px solid #e6e6e6;
+  background: #f6f6f6;
+  padding-top: 10px;
+  width: 100%;
+}
+footer.main .separator {
+  margin: 0 5px;
+  opacity: .5;
+}
+
+footer.main .social,
+footer.main .testimonial,
+footer.main .copyright {
+  position: absolute;
+  z-index: 10;
+}
+
+footer.main .area {
+  top: 0;
+  position: absolute;
+  width: 200%;
+  height: 200%;
+}
+footer.main .area:nth-of-type(1) {
+  z-index: 6;
+  background-image: url(../img/bg2.png);
+  transform: rotate(210deg);
+  background-color: #00AEEF;
+}
+footer.main .area:nth-of-type(2) {
+  display: none;
+  background-image: url(../img/bg2dark.png);
+  transform: rotate(45deg);
+  z-index: 5;
+  left: -55%;
+  background-color: #180274;
+  height: 100%;
+}
+footer.main .area:nth-of-type(3) {
+  background-image: url(../img/bg2.png);
+  transform: rotate(15deg);
+  z-index: 4;
+  background-color: #CB057A;
+}
+
+footer.main .copyright {
+  bottom: 20px;
+  right: 30px;
+  background: white;
+  padding: 10px 15px;
+}
+
+footer.main .social {
+  top: 20px;
+  right: 30px;
+  background: white;
+  padding: 10px 15px;
+}
+
+footer.main .testimonial {
+  bottom: 0;
+}
+footer.main .testimonial p {
+  background: white;
+  padding: 10px 15px;
+  margin-left: 10px;
+  vertical-align: bottom;
+  float: left;
+}
+footer.main .testimonial img {
+  float: left;
+}
+
+/* Sticky sticky Footer
+---------------------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+  min-width: 1100px;
+}
+body {
+  margin: 0 0 200px; /* bottom = footer height */
+}
+footer.main {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 200px;
+}
+
+/* Forms
+---------------------------------------------------------------- */
+input,
+textarea {
+  color: #1b1b1b;
+  background: transparent;
+  border: 1px solid #1b1b1b;
+  padding: .5em;
+}
+textarea:focus,
+input:focus {
+  background: white;
+  color: #000;
+  outline: none; /* Disable auto glow for webkit. */
+}
+form label {
+  display: block;
+  margin-bottom: .25em;
+}
+form input,
+form textarea {
+  margin-bottom: 1em;
+}
+input,
+textarea {
+  width: 100%;
+}
+form button[type="submit"] {
+  margin-top: 1em;
+}
+
+/* Buttons
+---------------------------------------------------------------- */
+a.button {
+  text-decoration: none;
+}
+
+button,
+.button {
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+  display: inline-block;
+  padding: 7px 5px 4px 5px;
+  color: #1b1b1b;
+  background: white;
+  border: 2px solid white;
+  /* border-color: #e6e6e6; */
+  transition: all .05s;
+ box-shadow: 0 0 8px -3px #111;
+}
+button:hover,
+.button:hover {
+  border-color: #180274;
+}
+button.small,
+.button.small {
+  font-size: 14px;
+  padding: 3px 6px 3px 6px;
+}
+button.large,
+.button.large {
+  border-width: 2px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 12px 18px;
+}
+
+/* Aside Navigation
+---------------------------------------------------------------- */
+.aside {
+  transition: top .5s;
+  width: 220px;
+  padding-bottom: 100px;
+  opacity: .7;
+}
+.aside:hover {
+  opacity: 1;
+}
+.aside > ul {
+  padding-left: 0;
+}
+.aside ul {
+  list-style: none;
+  margin-top: .5em;
+}
+.aside a {
+  text-decoration: none;
+}
+.aside a:hover,
+.aside .active {
+  font-weight: bold;
+}
+.has-aside-right {
+  margin-right: 300px;
+}
+.has-aside-left {
+  margin-left: 300px;
+}
+.aside-sticky-wrapper,
+.aside {
+  position: absolute;
+  top: 10.5em;
+}
+.aside-right-sticky-wrapper,
+.aside-right {
+  right: 60px;
+}
+.aside-left-sticky-wrapper,
+.aside-left {
+  left: 60px;
+}
+.aside-sticky-wrapper .aside-right {
+  position: relative;
+  right: 0;
+  top: 0;
+}
+.aside-right.stuck {
+  position: fixed;
+  top: 5em;
+  right: 60px;
+}
+
+/* Docked Crumbs Navigation
+---------------------------------------------------------------- */
+.crumbs {
+  z-index: 101;
+/*  opacity: .6; */
+  position: fixed;
+  top: 20px;
+  margin-left: 60px;
+/*  font-size: 12px; */
+}
+.crumbs:hover {
+  opacity: 1;
+}
+.crumbs ul, .crumbs li {
+  padding: 0;
+  display: inline;
+}
+.crumbs li + li:before {
+  content: ">"
+}

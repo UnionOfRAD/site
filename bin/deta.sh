@@ -1,0 +1,1 @@
+../lib/deta/deta.sh

@@ -1,0 +1,11 @@
+.DS_Store
+assets/aud/*
+app/libraries/*
+app/resources/bot/*
+!app/resources/bot/empty
+app/resources/tmp/*
+.*.sw[op]
+config/nginx/password
+config/nginx/includes/*.conf
+config/nginx/servers/*.conf
+config/deta/*.conf

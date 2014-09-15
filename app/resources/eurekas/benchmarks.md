@@ -1,0 +1,1 @@
+Lithium is quite fast. We consistenly rank high for JSON serialization, single query and multiple queries benchmarks as performed by TechEmpower. [Seeing is believing](http://www.techempower.com/benchmarks/#section=data-r8&hw=i7&test=db&l=sg) the results speak for themself.

@@ -1,0 +1,242 @@
+/*!
+  Lithium - Site Styles for use within the Lithium Universe
+
+  Copyright (c) 2014 Union of RAD - All rights reserved.
+
+  The code is distributed under the terms of the BSD 3-clause
+  License. For the full license text see the LICENSE file.
+*/
+
+/* General
+---------------------------------------------------------------- */
+.home pre code, .home .code pre {
+    background: white;
+    border-color: transparent;
+    padding: 0;
+}
+
+/* Home
+---------------------------------------------------------------- */
+.home section + section {
+  margin-top: 250px;
+}
+.home hr + section,
+.home section + hr {
+  margin-top: 150px;
+}
+.home .latest-posts {
+  margin-top: 100px;
+}
+.home .features {
+  margin-top: 200px;
+}
+.home .features,
+.home .define,
+.home .eureka {
+  min-width: 600px;
+  max-width: 800px;
+}
+.home .wild {
+  min-width: 800px;
+}
+
+.hero {
+  background: #f6f6f6;
+}
+.hero nav {
+  margin-top: 3em;
+}
+.hero {
+  overflow: hidden;
+  position: relative;
+  margin: -21px -60px 0 -60px;
+  padding: 5em 0 7em 0;
+  color: white;
+  border-top: 5px solid #e6e6e6;
+  border-bottom: 5px solid #e6e6e6;
+}
+.hero .text {
+  margin-left: 80px;
+  position: relative;
+  z-index: 10;
+}
+.hero h1, .hero h2 {
+  display: inline-block;
+  margin-bottom: 0;
+  color: black;
+  background: white;
+  padding: 5px 10px;
+}
+.hero .area {
+  top: 0;
+  position: absolute;
+  width: 200%;
+  height: 200%;
+}
+.hero .area:nth-of-type(1) {
+  z-index: 6;
+  background-image: url(../img/bg2.png);
+  background-color: #00AEEF;
+  transform: rotate(210deg);
+}
+.hero .area:nth-of-type(2) {
+  background-image: url(../img/bg2dark.png);
+  background-color: #180274;
+  transform: rotate(45deg);
+  z-index: 5;
+  left: -55%;
+  height: 100%;
+}
+.hero .area:nth-of-type(3) {
+  background-image: url(../img/bg2.png);
+  background-color: #CB057A;
+  transform: rotate(15deg);
+  z-index: 4;
+}
+
+.features {
+  width: 75%;
+  margin: 0 auto 0 auto;
+  text-align: justify;
+}
+.features > h1 {
+  margin-bottom: 40px;
+}
+.features article + article {
+  margin-top: 30px;
+}
+
+.backers {
+  text-align: center;
+}
+.logo-radify {
+  position: relative;
+  top: 5px;
+}
+.logo-uor {
+  position: relative;
+  top: -8px;
+  height: 70px;
+}
+.logo-disko {
+  height: 19px;
+}
+.logo-ey {
+  height: 29px;
+}
+.wild h1,
+.backers article h1 {
+  padding-top: 35px;
+  border-top: 1px solid #e6e6e6;
+  /* color: #777; */
+ /* color: #BDBDBD; */
+}
+.backers .upper {
+  height: 80px;
+}
+.backers .and,
+.backers .you {
+  position: relative;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* .features > h1, */
+/*.backers .you {
+  background: -webkit-linear-gradient(20deg, #CB057A, #00AEEF, #180274);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}*/
+.sponsors,
+.creators {
+  min-height: 150px;
+  vertical-align: top;
+  display: inline-block;
+}
+.creators {
+  margin-right: 100px;
+}
+.backers .upper {
+  padding: 0 60px;
+}
+.backers .upper a + a {
+  margin-left: 40px;
+}
+.sponsors img,
+.creators img {
+  vertical-align: middle;
+}
+
+.latest-posts {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.post-item {
+  display: inline-block;
+  text-align: justify;
+  max-width: 400px;
+}
+.post-item h1 {
+  line-height: 1.2;
+  min-height: 40px;
+}
+.post-item h1 a {
+  text-decoration: none;
+}
+.post-item + .post-item {
+  vertical-align: top;
+  margin-left: 100px;
+}
+
+.define {
+  text-align: justify;
+}
+.define, .eureka {
+  margin: 0 auto;
+  width: calc(50% - 30px);
+}
+
+.eureka p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1.2;
+}
+.eureka p + pre {
+  margin-top: 2em;
+}
+.eureka pre {
+  width: 100%;
+}
+
+.wild h1 {
+/*   color: #111; */
+}
+.wild {
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+}
+.wild .project {
+  display: inline-block;
+  margin: 5px 20px;
+}
+.wild a.title {
+  font-weight: bold;
+  border-color: transparent !important;
+}
+
+/* Present
+---------------------------------------------------------------- */
+.present img {
+  padding: 20px 0;
+  max-width: 100%;
+}
+.present img + .credit {
+  font-size: 11px;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}

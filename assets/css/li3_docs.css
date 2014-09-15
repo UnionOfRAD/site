@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/*!
+  Lithium - li3_docs Styles for use within the Lithium Universe
+
+  Copyright (c) 2014 Union of RAD - All rights reserved.
+
+  The code is distributed under the terms of the BSD 3-clause
+  License. For the full license text see the LICENSE file.
+*/
+
+
+.li3-docs pre {
+  width: 120%;
+}
+.li3-docs p {
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+.li3-docs #parent {
+  margin: -1em 0 2em 0;
+}
+.li3-docs span.parent {
+  font-weight: bold;
+}
+.li3-docs .type {
+  font-weight: bold;
+}
+.li3-docs .parameter ul {
+  list-style-type: disc;
+}
+.li3-docs .description:first-child {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.li3-docs .return p,
+.li3-docs .parameter p {
+  margin-top: 0;
+}
+.li3-docs .parameter p + ul {
+  margin-top: -.5em;
+}
+.li3-docs .parameter ul p {
+  margin: 0;
+}
+
+.li3-docs .nav-up {
+  font-weight: bold;
+}
+.li3-docs .aside ul ul {
+  display: none;
+}
+
+.note {
+  padding: 20px;
+  margin: 3em -200px 4em 200px;
+  border: 2px solid transparent;
+}
+.note-hint {
+  border-color: rgb(0, 174, 239);
+}
+.note-info {
+  border-color: #319931;
+}
+.note-caution{
+  border-color: #CB057A;
+}

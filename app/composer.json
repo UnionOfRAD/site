@@ -1,0 +1,24 @@
+{
+    "name": "unionofrad/site",
+    "type": "project",
+    "description": "Main website for lithium.",
+    "license": "BSD-3-clause",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=5.5.0",
+        "tumblr/tumblr": "dev-master",
+        "naneau/semver": "0.0.*",
+        "fzaninotto/faker": "1.*",
+        "unionofrad/lithium": "dev-dev as 1.0.0-dev",
+        "unionofrad/li3_docs": "dev-dev as 1.0.0-dev",
+        "unionofrad/li3_bot": "dev-master as 1.0.0-dev",
+        "davidpersson/textual": "1.*",
+        "unionofrad/manual": "dev-dev as 1.0.0-dev",
+        "unionofrad/specs": "dev-master as 1.0.0-dev",
+        "cebe/markdown": "0.9.*"
+    },
+    "config": {
+        "vendor-dir": "./libraries"
+    }
+}

@@ -1,0 +1,57 @@
+#
+# This file is to be included *inside* a server directive.
+#
+
+# ---------------------------------------------------------------------
+# Basics
+# ---------------------------------------------------------------------
+index index.html;
+
+# ---------------------------------------------------------------------
+# Logging
+# ---------------------------------------------------------------------
+# Access log disabled by default for performance reasons.
+access_log off;
+# access_log PROJECT/log/nginx_access_assets.log main;
+error_log PROJECT/log/nginx_error_assets.log warn;
+
+# ---------------------------------------------------------------------
+# Access
+# ---------------------------------------------------------------------
+# add_header "Access-Control-Allow-Origin" "*";
+
+# ---------------------------------------------------------------------
+# Optimizations
+# ---------------------------------------------------------------------
+# Compress certain types.
+gzip on;
+gzip_disable "MSIE [1-6]\."; 
+gzip_http_version 1.1;
+gzip_proxied  expired no-cache no-store private auth;
+gzip_min_length 1100;
+gzip_buffers 4 8k;
+gzip_types		text/css
+				application/x-javascript text/javascript;
+gzip_vary on;
+
+# On a domain with cookies.
+add_header Cache-Control private;
+
+# These assets carry a stamp.
+
+# Enable expires only on timestamped files. RFC says max cache 1 year.
+# 168h = 1 week, 720h = 1 month
+expires 720h;
+
+# Some browsers still send conditional-GET requests if there's a
+# Last-Modified header or an ETag header even if they haven't
+# reached the expiry date sent in the Expires header.
+etag off;
+if_modified_since off;
+more_clear_headers "Last-Modified: ";
+
+# Strip versioning for cache busting.
+location ~ {
+	rewrite ^(.*)/v:[a-z0-9A-Z_\.\+\-]+/(.*)$ $1/$2 last;
+}
+
