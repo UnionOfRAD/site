@@ -34,7 +34,7 @@ use app\models\Projects;
 class PagesController extends \lithium\action\Controller {
 
 	public function home() {
-		$cacheKey = 'latest_postsXX';
+		$cacheKey = 'latest_posts';
 
 		if (!$posts = Cache::read('default', $cacheKey)) {
 			$config = Environment::get('service.tumblr');
