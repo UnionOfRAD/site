@@ -55,6 +55,11 @@ $bodyClasses[] = str_replace('_', '-', $this->request()->library ?: 'site');
 			<?=$this->view()->render(['element' => 'header'], [], [
 				'library' => 'app'
 			]) ?>
+			<?php if ($this->request()->library == 'li3_docs'): ?>
+				<?php echo $this->_view->render(
+					array('element' => 'crumbs'), compact('object'), array('library' => 'li3_docs')
+				); ?>
+			<?php endif ?>
 			<div id="content">
 				<?php echo $this->content() ?>
 			</div>
