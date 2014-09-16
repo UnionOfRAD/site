@@ -143,12 +143,11 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-/* .features > h1, */
-/*.backers .you {
+.features > h1 {
   background: -webkit-linear-gradient(20deg, #CB057A, #00AEEF, #180274);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}*/
+}
 .sponsors,
 .creators {
   min-height: 150px;
