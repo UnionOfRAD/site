@@ -697,12 +697,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/specs.git",
-                "reference": "dac5ea52bf92265e2f6b573df8c611a293249152"
+                "reference": "5b25e5967925c8ab3f75105b5875890cebe2c99e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/specs/zipball/dac5ea52bf92265e2f6b573df8c611a293249152",
-                "reference": "dac5ea52bf92265e2f6b573df8c611a293249152",
+                "url": "https://api.github.com/repos/UnionOfRAD/specs/zipball/5b25e5967925c8ab3f75105b5875890cebe2c99e",
+                "reference": "5b25e5967925c8ab3f75105b5875890cebe2c99e",
                 "shasum": ""
             },
             "require": {
@@ -723,7 +723,7 @@
                 "specifcation",
                 "standard"
             ],
-            "time": "2014-09-14 17:03:01"
+            "time": "2014-09-15 21:28:07"
         }
     ],
     "packages-dev": [],
