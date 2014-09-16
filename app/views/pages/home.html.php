@@ -124,8 +124,6 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 		</article>
 	</section>
 
-	<hr class="section-separator">
-
 	<section class="backers">
 		<article class="creators">
 			<div class="upper">
@@ -145,8 +143,6 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 			<h1 class="h-gamma">Sponsors</h1>
 		</article>
 	</section>
-
-	<hr class="section-separator red">
 
 	<section class="define">
 		<h1 class="h-gamma">Some Context</h1>
