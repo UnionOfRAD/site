@@ -8,13 +8,44 @@
   License. For the full license text see the LICENSE file.
 */
 
+.li3-docs h2 {
+  margin-top: 60px;
+}
+.li3-docs h3 {
+  margin-top: 40px;
+}
+
 
 .li3-docs pre {
   width: 120%;
 }
+
 .li3-docs p {
   -moz-hyphens: auto;
   hyphens: auto;
+}
+
+.li3-docs .nav-up {
+  font-weight: bold;
+}
+.li3-docs .aside ul ul {
+  display: none;
+}
+
+.li3-docs .note {
+  padding: 20px;
+  width: 500px;
+  margin: 3em -200px 4em 200px;
+  border: 4px solid transparent;
+}
+.li3-docs .note-hint {
+  border-color: rgb(0, 174, 239);
+}
+.li3-docs .note-info {
+  border-color: #319931;
+}
+.li3-docs .note-caution {
+  border-color: #CB057A;
 }
 
 .li3-docs #parent {
@@ -43,26 +74,4 @@
 }
 .li3-docs .parameter ul p {
   margin: 0;
-}
-
-.li3-docs .nav-up {
-  font-weight: bold;
-}
-.li3-docs .aside ul ul {
-  display: none;
-}
-
-.note {
-  padding: 20px;
-  margin: 3em -200px 4em 200px;
-  border: 2px solid transparent;
-}
-.note-hint {
-  border-color: rgb(0, 174, 239);
-}
-.note-info {
-  border-color: #319931;
-}
-.note-caution{
-  border-color: #CB057A;
 }

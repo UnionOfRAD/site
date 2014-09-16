@@ -17,6 +17,7 @@
 
 /* Home
 ---------------------------------------------------------------- */
+/* Fine tune spacing between sections. */
 .home section + section {
   margin-top: 250px;
 }
@@ -40,60 +41,7 @@
   min-width: 800px;
 }
 
-.hero {
-  background: #f6f6f6;
-}
-.hero nav {
-  margin-top: 3em;
-}
-.hero {
-  overflow: hidden;
-  position: relative;
-  margin: -21px -60px 0 -60px;
-  padding: 5em 0 7em 0;
-  color: white;
-  border-top: 5px solid #e6e6e6;
-  border-bottom: 5px solid #e6e6e6;
-}
-.hero .text {
-  margin-left: 80px;
-  position: relative;
-  z-index: 10;
-}
-.hero h1, .hero h2 {
-  display: inline-block;
-  margin-bottom: 0;
-  color: black;
-  background: white;
-  padding: 5px 10px;
-}
-.hero .area {
-  top: 0;
-  position: absolute;
-  width: 200%;
-  height: 200%;
-}
-.hero .area:nth-of-type(1) {
-  z-index: 6;
-  background-image: url(../img/bg2.png);
-  background-color: #00AEEF;
-  transform: rotate(210deg);
-}
-.hero .area:nth-of-type(2) {
-  background-image: url(../img/bg2dark.png);
-  background-color: #180274;
-  transform: rotate(45deg);
-  z-index: 5;
-  left: -55%;
-  height: 100%;
-}
-.hero .area:nth-of-type(3) {
-  background-image: url(../img/bg2.png);
-  background-color: #CB057A;
-  transform: rotate(15deg);
-  z-index: 4;
-}
-
+/* Features */
 .features {
   width: 75%;
   margin: 0 auto 0 auto;
@@ -101,35 +49,37 @@
 }
 .features > h1 {
   margin-bottom: 40px;
+  background: -webkit-linear-gradient(20deg, #CB057A, #00AEEF, #180274);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .features article + article {
   margin-top: 30px;
 }
 
+/* Backers & In the Wild */
 .backers {
   text-align: center;
 }
-.logo-radify {
+.backers .logo-radify {
   position: relative;
   top: 5px;
 }
-.logo-uor {
+.backers .logo-uor {
   position: relative;
   top: -8px;
   height: 70px;
 }
-.logo-disko {
+.backers .logo-disko {
   height: 19px;
 }
-.logo-ey {
+.backers .logo-ey {
   height: 29px;
 }
 .wild h1,
 .backers article h1 {
   padding-top: 35px;
   border-top: 1px solid #e6e6e6;
-  /* color: #777; */
- /* color: #BDBDBD; */
 }
 .backers .upper {
   height: 80px;
@@ -142,11 +92,6 @@
   font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
-}
-.features > h1 {
-  background: -webkit-linear-gradient(20deg, #CB057A, #00AEEF, #180274);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .sponsors,
 .creators {
@@ -167,7 +112,21 @@
 .creators img {
   vertical-align: middle;
 }
+.wild {
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+}
+.wild .project {
+  display: inline-block;
+  margin: 5px 20px;
+}
+.wild a.title {
+  font-weight: bold;
+  border-color: transparent !important;
+}
 
+/* Latest Posts */
 .latest-posts {
   width: 100%;
   margin: 0 auto;
@@ -181,6 +140,7 @@
 .post-item h1 {
   line-height: 1.2;
   min-height: 40px;
+  text-align: left;
 }
 .post-item h1 a {
   text-decoration: none;
@@ -190,6 +150,7 @@
   margin-left: 100px;
 }
 
+/* Define */
 .define {
   text-align: justify;
 }
@@ -198,6 +159,7 @@
   width: calc(50% - 30px);
 }
 
+/* Eureka */
 .eureka p {
   margin: 0;
   font-weight: bold;
@@ -211,21 +173,60 @@
   width: 100%;
 }
 
-.wild h1 {
-/*   color: #111; */
+/* Home: Hero
+---------------------------------------------------------------- */
+.home .hero {
+  background: #f6f6f6;
 }
-.wild {
-  margin: 0 auto;
-  width: 60%;
-  text-align: center;
+.home .hero nav {
+  margin-top: 3em;
 }
-.wild .project {
+.home .hero {
+  overflow: hidden;
+  position: relative;
+  margin: -21px -60px 0 -60px;
+  padding: 5em 0 7em 0;
+  color: white;
+  border-top: 5px solid #e6e6e6;
+  border-bottom: 5px solid #e6e6e6;
+}
+.home .hero .text {
+  margin-left: 80px;
+  position: relative;
+  z-index: 10;
+}
+.home .hero h1, .home .hero h2 {
   display: inline-block;
-  margin: 5px 20px;
+  margin-bottom: 0;
+  color: black;
+  background: white;
+  padding: 5px 10px;
 }
-.wild a.title {
-  font-weight: bold;
-  border-color: transparent !important;
+.home .hero .area {
+  top: 0;
+  position: absolute;
+  width: 200%;
+  height: 200%;
+}
+.home .hero .area:nth-of-type(1) {
+  z-index: 6;
+  background-image: url(../img/bg2.png);
+  background-color: #00AEEF;
+  transform: rotate(210deg);
+}
+.home .hero .area:nth-of-type(2) {
+  background-image: url(../img/bg2dark.png);
+  background-color: #180274;
+  transform: rotate(45deg);
+  z-index: 5;
+  left: -55%;
+  height: 100%;
+}
+.home .hero .area:nth-of-type(3) {
+  background-image: url(../img/bg2.png);
+  background-color: #CB057A;
+  transform: rotate(15deg);
+  z-index: 4;
 }
 
 /* Present

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
-  Lithium - Bright Highlighting Theme
+  Lithium - Bright Highlighting Theme for HighlightJS
 
   Copyright (c) 2014 Union of RAD - All rights reserved.
 
@@ -17,14 +17,14 @@ pre code, .code pre {
     padding: 10px;
 }
 pre code:hover, .code pre:hover {
-/*  background: #fefeff; */
   border-style: solid;
 }
+
 .code ol, pre code .rownumber {
 	padding: 0 1em 0 2em;
 	color: #111;
 }
-.annotation, .decorator, .doctype, .pi, .chunk, .shebang, .kw2 {
+.annotation, .decorator, .doctype, .pi, .chunk, .shebang {
 	color:#d42aae;
 }
 .hljs-preprocessor {
@@ -35,43 +35,21 @@ pre code:hover, .code pre:hover {
 	font-weight: bold;
 }
 .hljs-phpdoc,
-pre code .hljs-comment, .template_comment, .javadoc, .diff .header {
+pre code .hljs-comment, .template_comment, .javadoc {
 	color: #ababab;
 }
-.hljs-string, .st_h {
+.hljs-string {
 	color: #319931;
 }
 .me1 {
 	color: #111;
 }
-pre code .hljs-number, .nu0 {
+pre code .hljs-number {
 	color: #7044bb;
 }
-pre code .hljs-comment, .co4, .co1 {
+pre code .hljs-comment {
 	color: #6c6c6d;
 }
-.hljs-variable, .envvar, .re0 {
+.hljs-variable, .envvar {
 	color: #2060ad;
-}
-
-.diff .file .line {
-	width: 100%;
-	clear: both;
-	overflow: visible;
-	white-space: nowrap;
-	font-size: 12px;
-	color: #111;
-	background: #141414;
-}
-.diff .file .removed, .re7 {
-	color: #f9c7fd;
-	background-color: #512b51;
-}
-.diff .file .added, .re8 {
-	color: #d6fedf;
-	background-color: #263d2b;
-}
-.re7, .re8 { /* Fix for Geshi */
-	display: inline-block;
-	width: 100%;
 }

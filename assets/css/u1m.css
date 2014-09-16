@@ -35,12 +35,15 @@ body {
 .hide {
   display: none;
 }
+
 .hyphenate {
   hyphens: auto;
 }
-.hyphenate-hard {
-  word-break: break-all;
-  hyphens: auto;
+.balance-text {
+  transition: opacity .05s;
+}
+.balance-text:not(.balanced) {
+  opacity: 0;
 }
 
 .cleafix:before,
@@ -55,20 +58,27 @@ body {
 .use-section-spacing section + section {
   margin-top: 60px;
 }
-.use-section-spacing section article + article {
+
+blockquote {
+  margin-left: 0;
+  font-style: italic;
 }
 
+/* Layout
+---------------------------------------------------------------- */
 #content {
   min-height: 100vh;
   padding: 80px 60px 300px 60px;
 }
-#content > .fullwidth {
-  max-width: none;
-}
 #content > article {
   max-width: 680px;
 }
+#content > article.fullwidth {
+  max-width: none;
+}
 
+/* Lists
+---------------------------------------------------------------- */
 ol {
   padding-left: 1.5em;
   list-style-type: upper-roman;
@@ -86,11 +96,8 @@ pre {
   width: 100%;
 }
 
-blockquote {
-  margin-left: 0;
-  font-style: italic;
-}
-
+/* Section Separator
+---------------------------------------------------------------- */
 .section-separator {
   transform: rotate(-4deg);
   margin: 80px auto;
@@ -208,7 +215,6 @@ header.main {
   height: 60px;
   background: white;
   padding: 10px 60px 10px 10px;
-  /* border-bottom: 1px solid gray; */
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -228,7 +234,6 @@ header.main .left {
 header.main .right {
   float: right;
 }
-
 
 /* Footer
 ---------------------------------------------------------------- */
@@ -452,11 +457,9 @@ button.large,
 ---------------------------------------------------------------- */
 .crumbs {
   z-index: 101;
-/*  opacity: .6; */
   position: fixed;
-  top: 20px;
+  top: 21px;
   margin-left: 60px;
-/*  font-size: 12px; */
 }
 .crumbs:hover {
   opacity: 1;
