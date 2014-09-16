@@ -22,6 +22,7 @@ requirejs.config({
     'showdown': { exports: 'Showdown' },
     'highlight': { exports: 'hljs' },
     'highlightPhp': { deps: ['highlight'] },
+    'balanceText': { deps: ['jquery'] }
   }
 });
 
@@ -39,18 +40,24 @@ require([
       Highlight.initHighlighting();
     });
   }
+
   if ($('.aside.sticky').length) {
     require(['asideSticky'], function() {
       // ..
     });
   }
   if ($aside.length) {
-
     var aH = $aside.height();
     var cH = $content.height();
 
     if (aH > cH) {
       $content.css('min-height', aH + 'px');
     }
+  }
+
+  if ($('.balance-text').length) {
+    require(['balanceText'], function() {
+      $('.balance-text').addClass('balanced');
+    });
   }
 });

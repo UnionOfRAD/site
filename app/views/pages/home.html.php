@@ -27,7 +27,7 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 	<section class="latest-posts">
 		<?php foreach ($posts as $post): ?>
 			<article class="post-item">
-				<h1 class="h-gamma"><?= $this->html->link($post->title, $post->post_url) ?></h1>
+				<h1 class="h-gamma balance-text"><?= $this->html->link($post->title, $post->post_url) ?></h1>
 				<time><?= date('m/d/Y', $post->timestamp) ?></time>
 				<div class="body">
 					<?php echo Textual::limit($post->body, 400, ['html' => true]) ?>
