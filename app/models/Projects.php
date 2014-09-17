@@ -27,6 +27,15 @@ class Projects extends \lithium\data\Model {
 	protected static function _data() {
 		return [
 			[
+				'launched' => 2013,
+				'title' => 'MoodPik',
+				'url' => 'http://moodpik.com/',
+				'client_name' => null,
+				'client_url' => null,
+				'author_name' => 'Radify',
+				'author_url' => 'http://radify.io'
+			],
+			[
 				'launched' => 2014,
 				'title' => 'Transdirect',
 				'url' => 'https://www.transdirect.com.au/',
