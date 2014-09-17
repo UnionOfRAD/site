@@ -211,6 +211,23 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 		<?php endforeach ?>
 		</div>
 		<h1 class="h-gamma">In the Wild</h1>
+		<p class="let-us-now">
+			Are you using Lithium?
+			<?= $this->html->link('Let us know.', '#submit-wild') ?>
+			<div id="submit-wild" class="hide">
+				<p>
+					If you want to have your project to be listed send an email with the subject li3 - in the wild to David Persson with the following details about your project:
+					title, year the project launched, link to the project website, name of the author, link to the author's website (optional), name of the client, link to the client's website (optional).
+				</p>
+				<p>
+					Both open and closed source projects are OK. We will be curating this list and thus it may be possible that your submission can not be included. We cannot include projects like libraries or plugins to Lithium those are best found through the GitHub search.
+					However we hope to include as many projects as possible and are happy about every submission.
+				</p>
+				<p>
+					Note: By submitting your project you give Union of RAD the permission to publish it on this page and on http://li3.me. You also confirm that you have the rights to disclose the fact that Lithium was used in building the project and that you have the rights to give us permission to publish it on this page.
+				</p>
+			</div>
+		</p>
 	</section>
 
 	<div class="clearfix"></div>
