@@ -434,6 +434,9 @@ button.large,
   position: absolute;
   top: 10.5em;
 }
+.li3-docs .aside {
+  top: 8.5em;
+}
 .aside-right-sticky-wrapper,
 .aside-right {
   right: 60px;
