@@ -17,8 +17,8 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 			<div></div>
 			<h2 class="h-beta">Lithium is the fast, flexible and most RAD development framework for PHP 5.3 and up.</h1>
 			<nav>
-				<?= $this->html->link('Quickstart', ['library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser', 'lib' => 'manual', 'args' => ['quickstart']], ['class' => 'button large']) ?>
-				<?= $this->html->link('Source', 'https://github.com/unionofrad/lithium', ['class' => 'button large']) ?>
+				<?= $this->html->link('Quickstart', ['library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser', 'lib' => 'manual', 'args' => ['quickstart']], ['class' => 'button large quickstart']) ?>
+				<?= $this->html->link('Source', 'https://github.com/unionofrad/lithium', ['class' => 'button large source']) ?>
 			</nav>
 		</div>
 	</section>
