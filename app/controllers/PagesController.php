@@ -8,6 +8,7 @@
 
 namespace app\controllers;
 
+use Exception;
 use lithium\storage\Cache;
 use lithium\core\Libraries;
 use lithium\core\Environment;
@@ -39,17 +40,20 @@ class PagesController extends \lithium\action\Controller {
 		if (!$posts = Cache::read('default', $cacheKey)) {
 			$config = Environment::get('service.tumblr');
 
-			$client = new Tumblr(
-				$config['consumerKey'],
-				$config['consumerSecret'],
-				$config['token'],
-				$config['tokenSecret']
-			);
 			try {
+				$client = new Tumblr(
+					$config['consumerKey'],
+					$config['consumerSecret'],
+					$config['token'],
+					$config['tokenSecret']
+				);
 				$results = $client->getBlogPosts($config['name'], ['limit' => 2]);
 				$posts = $results->posts;
+
 				Cache::write('default', $cacheKey, $posts, '+1 day');
 			} catch (CurlException $e) {
+				$posts = [];
+			} catch (Exception $e) {
 				$posts = [];
 			}
 		}
