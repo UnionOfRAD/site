@@ -213,7 +213,7 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 		<h1 class="h-gamma">In the Wild</h1>
 		<p class="let-us-now">
 			Are you using Lithium?
-			<?= $this->html->link('Let us know.', '#submit-wild') ?>
+			<?= $this->html->link('Let us know.', '#submit-wild', ['class' => 'vis-toggler']) ?>
 			<div id="submit-wild" class="hide">
 				<p>
 					If you want to have your project to be listed send an email with the subject li3 - in the wild to David Persson with the following details about your project:

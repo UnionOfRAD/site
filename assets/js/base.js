@@ -60,4 +60,9 @@ require([
       $('.balance-text').addClass('balanced');
     });
   }
+
+  $('.vis-toggler').on('click', function(ev) {
+    ev.preventDefault();
+    $($(this).attr('href')).toggleClass('hide');
+  });
 });
