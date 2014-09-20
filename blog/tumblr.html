@@ -3,12 +3,13 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>
-		    {block:PostSummary}– {PostSummary} &lt;{/block:PostSummary}
-		    News — li3</title>
-
+		    {block:PostSummary}{PostSummary} –{/block:PostSummary}
+			News – li3
+		</title>
 		<meta name="description" content="{MetaDescription}"/>
-		<link rel="shortcut icon" href="http://stage.lithium.atelierdisko.de/assets/ico/site.png"/>
-  		<link rel="alternate" type="application/rss+xml" name="RSS" href="{RSS}"/>
+		<link rel="shortcut icon" href="http://li3.me/assets/ico/site.png"/>
+		<link rel="alternate" type="application/rss+xml" name="RSS" href="{RSS}"/>
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic">
 		<!-- reset styles -->
 		<style>
 			__STYLES_RESET__
@@ -17,9 +18,52 @@
 		<style>
 			__STYLES_U1M__
 		</style>
+		<!-- highlight styles -->
+		<style>
+			__STYLES_HIGHLIGHT__
+		</style>
 		<!-- news styles -->
 		<style>
-
+		.u1m-entity {
+			display: inline-block;
+			position: fixed;
+			top: 23px;
+			left: 60px;
+		}
+		.post-item + .post-item {
+			margin-top: 240px;
+		}
+		.post-item .meta {
+			margin-top: -20px;
+			opacity: .7;
+		}
+		.post-item .meta:hover {
+			opacity: 1;
+		}
+		.post-item time {
+			display: inline-block;
+			margin-right: 20px;
+		}
+		.post-item .tags {
+			display: inline-block;
+		}
+		.post-item .tag {
+			display: inline-block;
+			margin-right: 10px;
+		}
+		.post-item .read-more {
+			text-align: center;
+			margin-top: 40px;
+			display: block;
+			font-weight: bold;
+		}
+		.post-item .body {
+			margin-top: 40px;
+		}
+		.nav-paging {
+			margin-top: 100px;
+			text-align: center;
+		}
 		</style>
 		<!-- Google Analytics Tracker -->
 		<!--
@@ -34,120 +78,99 @@
 		</script>
 		-->
   	</head>
-	<body>
+	<body class="news">
 		<div class="container">
-		    <iframe src="http://stage.site.lithium.atelierdisko.de/api/universe/header.html" height="100px" width="100%" seamless>
+			<header class="main">
+				<div class="left">
+					<h1><a href="http://li3.me" class="li3-logo">li3</a></h1>
+					<h2 class="u1m-entity"><a href="http://news.li3.me">News</a></h2>
+				</div>
+				<div class="right">
+					<nav class="main-nav">
+						<a class="active" href="http://news.li3.me">News</a>
+						<a href="http://li3.me/docs/manual">Manual</a>
+						<a href="http://li3.me/docs/lithium">API</a>
+						<a href="http://li3.me/docs/specs">Specs</a>
+						<a href="http://li3.me/present">Presentations</a>
+						<a href="http://li3.me/support">Community</a>
+						<a href="http://li3.me/development">Development</a>
+					</nav>	
+				</div>
+			</header>
+		<div id="content">
+			<article>
+				{block:Posts}
+					<div class="post-item post-item-compact">
+						{block:Text}
+							<h1 class="h-alpha t-fancy">
+								{block:Title}
+									<a href="{Permalink}">{Title}</a>
+								{/block:Title}
+							</h1>
+							<div class="meta">
+								{block:Date}
+								<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" pubdate class="pubdate">
+									{MonthNumber}/{DayOfMonth}/{Year} – {24Hour}:{Minutes} UTC
+								</time>
+								{/block:Date}
 
-		      </iframe>
-			<div id="header">
-				<h1 id="site-title">
-					<a href="/">
-						#li3 News
-					</a>
-				</h1>
-			</div>
-
-		<div id="content" class="posts index">
-		{block:Posts}
-		<div class="post item">
-			<div class="meta">
-				<div class="date">{block:Date}{DayOfMonth}{DayOfMonthSuffix} {Month} {Year} &ndash; {24Hour}:{Minutes} UTC{/block:Date}</div>
-			</div>
-
-			{block:Text}
-				<h3>{block:Title}<a href="{Permalink}">{Title}</a>{/block:Title}</h3>
-				<div id="text">{body}</div>
-			{/block:Text}
-
-			{block:Photo}
-				<div style="height:5px;"></div>
-				{LinkOpenTag}<img src="{PhotoURL-500}" border="0" alt="{PhotoAlt}">{LinkCloseTag}
-				<br>
-				<div id="text">{block:Caption}{Caption}{/block:Caption}</div>
-			{/block:Photo}
-
-			{block:Photoset}
-				<div style="height:5px;"></div>
-				{Photoset-500}
-				<div id="text">{block:Caption}{Caption}{/block:Caption}</div>
-			{/block:Photoset}
-
-			{block:Quote}
-				<h3><a href="{Permalink}">"{Quote}"</a></h3>
-				<br>
-				{block:Source}<div id="text" style="padding-left: 10px;">-{Source}</div>{/block:Source}
-			{/block:Quote}
-
-			{block:Link}
-				<h3><a href="{URL}" {Target}>{Name}</a></h3>
-				{block:Description}{Description}{/block:Description}
-			{/block:Link}
-
-			 {block:Chat}
-				{block:Title}<h3>{Title}</h3>{/block:Title}
-					<ul>
-						{block:Lines}
-							<li>
-								{block:Label}{Label}{/block:Label}
-								{Line}
-							</li>
-						{/block:Lines}
-					</ul>
-			{/block:Chat}
-
-			{block:Audio}
-				<div style="height:5px;"></div>
-				{block:AlbumArt}<img src="{AlbumArtURL}" style="width:50px;height:50px;float:left;padding-right:10px;padding-bottom:10px;">{/block:AlbumArt}{AudioPlayerGrey}
-				<div id="text">{Caption}</div>
-				[{FormattedPlayCount} plays] {block:ExternalAudio}<a href="{ExternalAudioURL}">[download]</a>{/block:ExternalAudio}
-			{/block:Audio}
-
-			{block:Video}
-				<div style="height:5px;"></div>
-				{Video-500}
-				<div id="text">{Caption}</div>
-			{/block:Video}
-
-			{block:Answer}
-				<h2>{Asker} asked: <span style="text-transform:none;">{Question}</span></h2>
-				<div id="text">{Answer}</div>
-				{block:AskEnabled}<a href="/ask">[ask]</a>{/block:AskEnabled}
-			{/block:Answer}
-
-				<br />
-				<!-- <a href="{Permalink}">Permalink</a> -->
-			</div>
-		{/block:Posts}
-			<script type="text/javascript">
-				var disqus_url = "{Permalink}";
-				var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";
-			</script>
+								<div class="tags">
+									{block:Tags}
+										<span class="tag">#<a href="{TagURL}">{Tag}</a></span>
+									{/block:Tags}
+								</div>
+							</div>
+							<div class="body">
+								{body}
+							</div>
+						{/block:Text}
+						{block:IndexPage}
+							<a class="read-more" href="{Permalink}">view full post…</a>
+							<hr class="section-separator blue">
+						{/block:IndexPage}
+					</div>
+				{/block:Posts}
+	
+				{block:PermalinkPage}
+					{block:PermalinkPagination} 
+					<nav class="nav-paging">
+						{block:PreviousPost}
+							← <a href="{PreviousPost}">previous post</a>
+						{/block:PreviousPost}
+						{block:NextPost}
+							<a href="{NextPost}">next post</a> →
+						{/block:NextPost} 
+					</nav>
+					{/block:PermalinkPagination}
+				{/block:PermalinkPage}
+				{block:IndexPage}
+				<nav class="nav-paging">
+					{block:PreviousPage}
+						← <a href="{PreviousPage}">previous page</a>
+					{/block:PreviousPage}
+					{block:NextPage}
+						<a href="{NextPage}">next page</a> →
+					{/block:NextPage}
+				</nav>
+				{/block:IndexPage}
+			</article>
 		</div>
+		
+		<footer class="main">
+			<div class="area"></div>
+			<div class="area"></div>
+			<div class="area"></div>
+			<div class="area"></div>
 
-		<div class="nav paging">
-			{block:PreviousPage}
-                ← <a href="{PreviousPage}">previous</a>
-            {/block:PreviousPage}
-			{block:NextPage}
-                <a href="{NextPage}">next</a> →
-            {/block:NextPage}
-		</div>
-
-		{block:PermalinkPage}
-          {block:PostNotes}
-            {PostNotes}
-          {/block:PostNotes}
-        {/block:PermalinkPage}
-
-		</div>
-		<div id="footer">
+			<div class="social">
+				<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+				<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+				<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+				<span>#li3 on <a href="http://webchat.freenode.net/">Freenode</a></span>
+			</div>
+			<div class="testimonial"></div>
 			<div class="copyright">
-				Pretty much everything (c) 2014 and beyond the Union of RAD. All rights reserved.</div>	
-			<div class="about">
-				<a href="http://li3.me/">Main Site</a>.
-			</div>
-			Powered by <a href="http://www.tumblr.com">Tumblr</a> / <a href="{RSS}">RSS</a>
-		</div>
+				Pretty much everything is (c) 2009-2014 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+		</footer>
 	</body>
 </html>
-

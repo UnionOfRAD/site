@@ -49,9 +49,6 @@
 }
 .features > h1 {
   margin-bottom: 40px;
-  background: -webkit-linear-gradient(20deg, #CB057A, #00AEEF, #180274);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .features article + article {
   margin-top: 30px;

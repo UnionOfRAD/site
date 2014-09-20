@@ -41,7 +41,7 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 
 
 	<section class="features">
-		<h1 class="h-alpha">What is li₃?</h1>
+		<h1 class="h-alpha t-fancy">What is li₃?</h1>
 		<article>
 			<h1 class="h-gamma">A framework of firsts</h1>
 			<p>

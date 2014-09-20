@@ -35,12 +35,15 @@ pre code:hover, .code pre:hover {
 	font-weight: bold;
 }
 .hljs-phpdoc,
+pre code .comment,
 pre code .hljs-comment, .template_comment, .javadoc {
 	color: #ababab;
 }
+pre code .string,
 .hljs-string {
 	color: #319931;
 }
+pre code .keyword,
 .me1 {
 	color: #111;
 }
@@ -50,6 +53,7 @@ pre code .hljs-number {
 pre code .hljs-comment {
 	color: #6c6c6d;
 }
+pre code .variable,
 .hljs-variable, .envvar {
 	color: #2060ad;
 }

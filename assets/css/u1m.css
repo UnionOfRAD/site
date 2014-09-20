@@ -126,6 +126,11 @@ h1, h2, h3, h4 {
   line-height: 1;
 }
 
+.news .body h1,
+.news .body h2,
+.news .body h3,
+.news .body h4,
+.news .body h5,
 .li3-docs h1,
 .li3-docs h2,
 .li3-docs h3,
@@ -141,30 +146,41 @@ h1, h2, h3, h4 {
   font-weight: bolder;
 }
 
+.news .body h1,
 .li3-docs h1,
 .h-alpha {
   line-height: 1.05;
   margin: 0.67em 0;
   font-size: 32px;
 }
+.news .body h2,
 .li3-docs h2,
 .h-beta {
   line-height: 1.05;
   font-size: 20px;
   margin: 0.67em 0;
 }
+.news .body h3,
 .li3-docs h3,
 .h-gamma {
   margin: 0.67em 0;
 }
+.news .body h4,
 .li3-docs h4,
 .h-delta {
   font-size: 14px;
 }
+.news .body h5,
 .li3-docs h5,
 .h-epsilon {
   font-size: 14px;
   font-weight: normal;
+}
+
+.t-fancy {
+  background: -webkit-linear-gradient(20deg, #CB057A, #00AEEF, #180274);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Hyperlinks
