@@ -39,7 +39,7 @@ $this->nav->add(
 ?>
 <header class="main">
 	<div class="left">
-		<a href="/" class="logo" title="Lithium">⟁</a>
+		<h1><a href="/" class="li3-logo">li3</a></h1>
 	</div>
 	<div class="right">
 		<?= $this->nav->generate('main', ['class' => 'main-nav', 'match' => 'loose']) ?>
