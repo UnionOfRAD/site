@@ -29,7 +29,7 @@ use lithium\core\Environment;
 		'base'
 	]) ?>
 	<?php echo $this->scripts(); ?>
-	<link rel="icon" href="/ico/site.png">
+	<link rel="icon" href="/assets/ico/site.png">
 
 	<?php if (Environment::is('production')): ?>
 	<script>

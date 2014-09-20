@@ -1,204 +1,48 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<title>Union of RAD – Blog {block:PostSummary}– {PostSummary}{/block:PostSummary}</title>
+		<title>
+		    {block:PostSummary}– {PostSummary} &lt;{/block:PostSummary}
+		    News — li3</title>
 
 		<meta name="description" content="{MetaDescription}"/>
-		<link rel="shortcut icon" href="http://static.tumblr.com/7gfvy5v/3cul4jlak/site.ico"/>
+		<link rel="shortcut icon" href="http://stage.lithium.atelierdisko.de/assets/ico/site.png"/>
   		<link rel="alternate" type="application/rss+xml" name="RSS" href="{RSS}"/>
-		<style type="text/css">
-/* Reset
--------------------------------------------------------------- */
-img { border: none; }
-
-/* Main layout elements
--------------------------------------------------------------- */
-html, body, .container {
-    height: 100%; /* needed for sticky footer */
-}
-html {
-    overflow-y: scroll;
-}
-body {
-    font-size: 75%;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #111;
-    background: #fff;
-}
-body * {
-    outline: 0;
-}
-body > .container {
-    width: 950px;
-    margin: 0 auto;
-    min-height: 100%; /* needed for sticky footer */
-}
-
-/* HYPERlinks
--------------------------------------------------------------- */
-a {
-    color: #222;
-    text-decoration: none;
-}
-a:hover {
-    color: #000;
-}
-#content .body a:hover {
-    text-decoration: underline;
-}
-#footer a {
-    color: #a6a6a6;
-}
-#footer a, p a {
-    border-bottom: 1px dotted;
-}
-
-
-/* Misc styling of (inline) elements
--------------------------------------------------------------- */
-p               { margin-bottom: .5em; }
-em              {font-style: italic; }
-strong          {font-weight: bold; }
-abbr,acronym    { border-bottom: 1px dotted #111; }
-
-
-/* Headings
--------------------------------------------------------------- */
-h1              { font-size: 3em; line-height: 1; }
-h2              { font-size: 1.6em; margin-bottom: .5em; }
-h3, caption     { font-size: 1.2em; line-height: 1; margin-bottom: 1em; }
-h4              { font-size: 1em; line-height: 1; margin-bottom: 0.5em; }
-h1, #content h2, #content h3, #content h4, caption { text-transform: uppercase; }
-
-/* Lists
--------------------------------------------------------------- */
-dl    { margin-bottom: 1em; }
-dt    { margin-top: 0.5em; font-weight: bold; }
-dd    { font-style: italic; }
-ol    { margin: 0.5em 0 1em 20px; }
-ol li { margin-bottom: 0.5em; }
-
-/* Code and literal values in text
--------------------------------------------------------------- */
-pre > code         { display: block; }
-code, pre, .fixed  { font: 95% Monaco, Courier, monospace; }
-code               { padding: .2em .25em; border: 1px solid #f0f0f0; background: #fafafa; }
-pre                { padding-bottom: 0.5em; }
-
-
-/* Content
--------------------------------------------------------------- */
-#content {
-    float: left;
-    width: 710px;
-    margin: 0 10px 0 0;
-    padding-bottom: 50px; /* same height as footer */
-}
-#content.view {
-    padding-bottom: 0;
-}
-
-/* Context
--------------------------------------------------------------- */
-#context {
-    float: left;
-    width: 230px;
-    margin: 0;
-	color: #a6a6a6;
-}
-
-/* Header
--------------------------------------------------------------- */
-#header #site-title {
-    font-size: 2em;
-    letter-spacing: .03em;
-}
-#header {
-	margin-top: 3em;
-    margin-bottom: 4em;
-}
-
-/* Footer
--------------------------------------------------------------- */
-#footer {
-    color: #a6a6a6;
-    position: relative;
-    margin: -50px auto 0 auto;  /* top is negative value of footer height */
-    clear: both;
-    height: 50px;
-    width: 950px;  /* same as container */
-}
-#footer .copyright, #footer .about {
-    display: inline;
-}
-
-/* Posts
--------------------------------------------------------------- */
-.post h3 {
-margin-top:0;
-
-}
-.post {
-    max-width: 600px;
-}
-.post + .post {
-    padding-top: 2em;
-}
-.post h3:first-of-type, .post h2:first-of-type {
-    margin-bottom: 1em;
-}
-.post h2:first-of-type {
-    margin-top: -.2em;
-}
-.post .meta {
-	font-weight: bold;
-    font-size: 1.3em;
-    margin-bottom: 0;
-}
-.view .post {
-    width: auto;
-}
-.post .media:not(:empty) {
-    float: left;
-    width: 300px;
-    margin: 0 40px 1em 0;
-}
-.view .post .media:not(:empty),
-.view .page .media:not(:empty) {
-    float: left;
-    width: 300px;
-    margin: 0 40px 1em 0;
-}
-.post .body:after,
-.page .body:after {
-    content: "";
-    clear: both;
-    display: block;
-}
-
-/* Paging
--------------------------------------------------------------- */
-.nav.paging {
-	float:left;
-	width: 100%;
-	font-size: 2em;
-	margin-bottom: 3em;
-}
+		<!-- reset styles -->
+		<style>
+			__STYLES_RESET__
+		</style>
+		<!-- u1m styles -->
+		<style>
+			__STYLES_U1M__
+		</style>
+		<!-- news styles -->
+		<style>
 
 		</style>
-
 		<!-- Google Analytics Tracker -->
-		<script type="text/javascript">
-		</script
+		<!--
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-11048416-4', 'auto');
+		  ga('send', 'pageview');
+		</script>
+		-->
   	</head>
 	<body>
 		<div class="container">
+		    <iframe src="http://stage.site.lithium.atelierdisko.de/api/universe/header.html" height="100px" width="100%" seamless>
+
+		      </iframe>
 			<div id="header">
 				<h1 id="site-title">
 					<a href="/">
-						Union of RAD
+						#li3 News
 					</a>
 				</h1>
 			</div>
@@ -272,20 +116,12 @@ margin-top:0;
 
 				<br />
 				<!-- <a href="{Permalink}">Permalink</a> -->
-
-				<a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a>
-
 			</div>
 		{/block:Posts}
 			<script type="text/javascript">
 				var disqus_url = "{Permalink}";
 				var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";
 			</script>
-		</div>
-
-		<div id="context">
-			This is the blog of Union of RAD where we mainly talk about 
-			<a href="http://li3.me">Lithium</a>.
 		</div>
 
 		<div class="nav paging">
@@ -306,7 +142,7 @@ margin-top:0;
 		</div>
 		<div id="footer">
 			<div class="copyright">
-				Pretty much everythin © 2014 and beyond the Union of RAD. All rights reserved.</div>	
+				Pretty much everything (c) 2014 and beyond the Union of RAD. All rights reserved.</div>	
 			<div class="about">
 				<a href="http://li3.me/">Main Site</a>.
 			</div>
@@ -314,5 +150,4 @@ margin-top:0;
 		</div>
 	</body>
 </html>
-
 
