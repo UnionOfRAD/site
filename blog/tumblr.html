@@ -66,7 +66,33 @@
 			margin-top: 100px;
 			font-weight: bold;
 		}
+		.nav-paging [rel="next"] {
+		    float: right;
+		    display: block;
+		    text-align: right;
+		    width: 30%;
+		}
+		.nav-paging [rel="prev"] {
+		    float: left;
+		    display: block;
+		    width: 30%;
+		}
 		</style>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/languages/php.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('pre > code').each(function() {
+					var $code = $(this);
+
+					if ($code.hasClass('php')) {
+						hljs.highlightBlock(this);
+					}
+				})
+			})
+		</script>
+		
 		<!-- Google Analytics Tracker -->
 		<!--
 		<script>
@@ -99,6 +125,22 @@
 				</div>
 			</header>
 		<div id="content">
+			
+			<nav class="aside aside-right sticky">
+				<h1 class="h-gamma">Tagged</h1>
+				<ul>
+					<li><span class="tag">#<a href="/tagged/release">release</a></span>
+					<li><span class="tag">#<a href="/tagged/talk">talk</a></span>
+					<li><span class="tag">#<a href="/tagged/casestudy">casestudy</a></span>
+					<li><span class="tag">#<a href="/tagged/security">security</a></span>
+					<li><span class="tag">#<a href="/tagged/mongodb">mongodb</a></span>
+					<li><span class="tag">#<a href="/tagged/couchdb">couchdb</a></span>
+					<li><span class="tag">#<a href="/tagged/profiling">profiling</a></span>
+					<li><span class="tag">#<a href="/tagged/performance">performance</a></span>
+					<li><span class="tag">#<a href="/tagged/ifriday">ifriday</a></span>
+				</ul>
+			</nav>
+						
 			<article>
 				{block:Posts}
 					<div class="post-item post-item-compact {TagsAsClasses}">
@@ -137,30 +179,32 @@
 						{/block:IndexPage}
 					</div>
 				{/block:Posts}
-	
+				
+			
+				<nav class="nav-paging">
+					{block:PreviousPage}
+						<a href="{PreviousPage}" rel="prev">← previous</a>
+					{/block:PreviousPage}
+					{block:NextPage}
+						<a href="{NextPage}" rel="next">next →</a>
+					{/block:NextPage}
+				</nav>
+
+
 				{block:PermalinkPage}
 					{block:PermalinkPagination} 
 					<nav class="nav-paging">
 						{block:PreviousPost}
-							← <a href="{PreviousPost}">previous post</a>
+							<a href="{PreviousPost}" rel="prev">← previous</a>
 						{/block:PreviousPost}
 						{block:NextPost}
-							<a href="{NextPost}">next post</a> →
+							<a href="{NextPost}" rel="next">next →</a>
 						{/block:NextPost} 
 					</nav>
 					{/block:PermalinkPagination}
-				{/block:PermalinkPage}
-				{block:IndexPage}
-				<nav class="nav-paging">
-					{block:PreviousPage}
-						← <a href="{PreviousPage}">previous page</a>
-					{/block:PreviousPage}
-					{block:NextPage}
-						<a href="{NextPage}">next page</a> →
-					{/block:NextPage}
-				</nav>
-				{/block:IndexPage}
+				{/block:PermalinkPage}				
 			</article>
+
 		</div>
 		
 		<footer class="main">
