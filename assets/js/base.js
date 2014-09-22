@@ -55,11 +55,12 @@ require([
     }
   }
 
-  if ($('.balance-text').length) {
-    require(['balanceText'], function() {
-      $('.balance-text').addClass('balanced');
-    });
-  }
+  // Does not work with links inside headings.
+  // if ($('.balance-text').length) {
+  //  require(['balanceText'], function() {
+  //    $('.balance-text').addClass('balanced');
+  //  });
+  // }
 
   $('.vis-toggler').on('click', function(ev) {
     ev.preventDefault();

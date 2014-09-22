@@ -35,9 +35,12 @@
 		}
 		.post-item .meta {
 			margin-top: -20px;
+		}
+		.post-item time,
+		.post-item .meta a {
 			opacity: .7;
 		}
-		.post-item .meta:hover {
+		.post-item .meta a:hover {
 			opacity: 1;
 		}
 		.post-item time {
@@ -51,18 +54,17 @@
 			display: inline-block;
 			margin-right: 10px;
 		}
-		.post-item .read-more {
-			text-align: center;
-			margin-top: 40px;
-			display: block;
-			font-weight: bold;
+		.post-item .permalink {
+			margin-right: 20px;
 		}
 		.post-item .body {
 			margin-top: 40px;
 		}
+		.post-item.release {}
+		.post-item.security {}
 		.nav-paging {
 			margin-top: 100px;
-			text-align: center;
+			font-weight: bold;
 		}
 		</style>
 		<!-- Google Analytics Tracker -->
@@ -83,7 +85,6 @@
 			<header class="main">
 				<div class="left">
 					<h1><a href="http://li3.me" class="li3-logo">li3</a></h1>
-					<h2 class="u1m-entity"><a href="http://news.li3.me">News</a></h2>
 				</div>
 				<div class="right">
 					<nav class="main-nav">
@@ -100,11 +101,11 @@
 		<div id="content">
 			<article>
 				{block:Posts}
-					<div class="post-item post-item-compact">
+					<div class="post-item post-item-compact {TagsAsClasses}">
 						{block:Text}
-							<h1 class="h-alpha t-fancy">
+							<h1 class="h-alpha">
 								{block:Title}
-									<a href="{Permalink}">{Title}</a>
+									<a href="{Permalink}" class="t-fancy">{Title}</a>
 								{/block:Title}
 							</h1>
 							<div class="meta">
@@ -113,6 +114,10 @@
 									{MonthNumber}/{DayOfMonth}/{Year} – {24Hour}:{Minutes} UTC
 								</time>
 								{/block:Date}
+
+								{block:IndexPage}
+									<span class="permalink">◎ <a href="{Permalink}">permalink</a></span>
+								{/block:IndexPage}
 
 								<div class="tags">
 									{block:Tags}
@@ -123,9 +128,11 @@
 							<div class="body">
 								{body}
 							</div>
-						{/block:Text}
+							{/block:Text}
+							<!--
+							<a href="https://twitter.com/intent/tweet?source=webclient&text={Title} - {Permalink}" class="button twitter inverse" target="new">Tweet</a>
+							-->
 						{block:IndexPage}
-							<a class="read-more" href="{Permalink}">view full post…</a>
 							<hr class="section-separator blue">
 						{/block:IndexPage}
 					</div>
