@@ -4,7 +4,7 @@
 	<nav class="aside aside-right sticky">
 		<h1 class="h-gamma">Contents</h1>
 		<ul>
-			<li><?= $this->html->link('Contributing to Lithium', '#contributing') ?>
+			<li><?= $this->html->link('Contributing to li3', '#contributing') ?>
 				<ul>
 					<li><?= $this->html->link('Types of Contributions', '#types-of-contributions') ?>
 					<ul>
@@ -22,8 +22,8 @@
 	</nav>
 
 	<section id="contributing">
-		<h1 class="h-beta">Contributing to Lithium</h1>
-		<p>Thank you for your interest in contributing to Lithium! This project is built by a thriving community of developers who value cutting-edge technology and concise, maintainable code. If you've found a bug, or have an idea for a feature, we encourage your participation in making Lithium better.</p>
+		<h1 class="h-beta">Contributing to li3</h1>
+		<p>Thank you for your interest in contributing to li3! This project is built by a thriving community of developers who value cutting-edge technology and concise, maintainable code. If you've found a bug, or have an idea for a feature, we encourage your participation in making li3 better.</p>
 
 		<article id="tldr">
 			<h1 class="h-gamma">tl;dr</h1>
@@ -56,14 +56,14 @@
 
 			<p>We value collaboration and believe that the best solutions are usually found through use-case-oriented discussions and—occasionally—some healthy debate. If you have an idea for a killer feature or think you've found a bug, please talk it over with a seasoned member of the team on IRC.</p>
 
-			<p>Combining great new ideas with the wisdom of experience will help us create the best possible features for Lithium.  Likewise, talking through a bug with a core team member will help us ensure the best possible fix.  We're striving to maintain a lean, clean core and want to avoid introducing patches for symptoms of an underlying flaw.</p>
+			<p>Combining great new ideas with the wisdom of experience will help us create the best possible features for li3.  Likewise, talking through a bug with a core team member will help us ensure the best possible fix.  We're striving to maintain a lean, clean core and want to avoid introducing patches for symptoms of an underlying flaw.</p>
 
 			<hr class="section-separator">
 
 			<article id="enhancements">
 				<h1 class="h-delta">Enhancements and New Features</h1>
 
-				<p>One of Lithium's key goals is a light, clean core, which means careful consideration of new features. Here are some of the criteria we go by when deciding whether or not to incorporate a new feature into the framework:<br><br></p>
+				<p>One of li3's key goals is a light, clean core, which means careful consideration of new features. Here are some of the criteria we go by when deciding whether or not to incorporate a new feature into the framework:<br><br></p>
 
 				<ul>
 					<li><strong>Does it fit within the existing set of features?</strong> Lots of features are great ideas in their own right, but might not be right for integration with the core itself. Examples include wholly new pieces of functionality that could easily fit within a plugin, or adapters for technologies that aren't widely used.<br><br>Often, even in cases where integration for a widely-used technology might otherwise make an obvious addition, we choose to keep things in plugins in order to ensure the core always stays as light as possible. Every new feature introduced has a permanent cost in terms of maintenance and documentation, increases testing burden and couples additional code to every release cycle.</li>
@@ -108,7 +108,7 @@
 			<article id="documentation">
 				<h1 class="h-delta">Documentation</h1>
 
-				<p>Lithium documentation is an ongoing work, and we need your help. Lithium users <em>new</em> and <em>old</em> are welcome and encouraged to join in the fun. If you've struggled with something, help us record and share the solution so others can find the way more easily. There are many ways you can help:</p>
+				<p>li3 documentation is an ongoing work, and we need your help. li3 users <em>new</em> and <em>old</em> are welcome and encouraged to join in the fun. If you've struggled with something, help us record and share the solution so others can find the way more easily. There are many ways you can help:</p>
 
 				<ul>
 					<li>Code examples to enrich current documentation</li>
@@ -127,7 +127,7 @@
 		<article id="branching">
 			<h1 class="h-gamma">Branching</h1>
 
-			<p>The Lithium core is managed on a very simple branching workflow: when developing new features or bug fixes, a topic branch with a relevant name is created, such as <code>new-media-encode</code> or <code>model-find-fix</code>. Using comprehensible branch names helps us make sense of the source history as branches are merged.</p>
+			<p>The li3 core is managed on a very simple branching workflow: when developing new features or bug fixes, a topic branch with a relevant name is created, such as <code>new-media-encode</code> or <code>model-find-fix</code>. Using comprehensible branch names helps us make sense of the source history as branches are merged.</p>
 
 			<p>Once commits on a topic branch have been verified through testing, are properly documented and pass our QA checks, the topic branch will be merged into the <code>dev</code> integration branch. Ordinarily, you'll want to point your pull requests at this branch.</p>
 
@@ -140,9 +140,9 @@
 	<section id="specs">
 		<h1 class="h-beta">Standard Specifications</h1>
 		<p>
-			Standard <?= $this->html->link('Specifications', ['library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser', 'lib' => 'specs']) ?> (or <em>specs</em> for short) help us take Lithium further.
-			Lithium adheres to several standards, created by the PHP Framework Interoperability
-			Group (i.e. PSR-0) as well as the Lithium Community.
+			Standard <?= $this->html->link('Specifications', ['library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser', 'lib' => 'specs']) ?> (or <em>specs</em> for short) help us take li3 further.
+			li3 adheres to several standards, created by the PHP Framework Interoperability
+			Group (i.e. PSR-0) as well as the li3 Community.
 			<?= $this->html->link('Read more…', ['library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser', 'lib' => 'specs']) ?>
 		</p>
 	</section>

@@ -18,7 +18,7 @@
 
 	<section>
 		<p>
-			Lithium is not just a framework, but the embodiment of a community. This
+			li3 is not just a framework, but the embodiment of a community. This
 			community is dedicated to open collaboration and friendly discourse, with
 			the goal of producing better quality software.
 		</p>
@@ -85,10 +85,10 @@
 		<ul>
 			<li><a href="https://twitter.com/#!/UnionOfRAD">Union of RAD on Twitter</a></li>
 			<li><a href="https://twitter.com/#!/search?q=%23li3">Follow the #li3 hashtag on Twitter</a></li>
-			<li><a href="https://twitter.com/#!/UnionOfRAD/lithium">Union of RAD's Lithium List</a></li>
-			<li><a href="http://www.reddit.com/r/li3/">Official Lithium Reddit</a></li>
-			<li><a href="http://www.last.fm/group/li3">Official Lithium last.fm group</a></li>
-			<li><a href="http://www.meetup.com/lithium/">Lithium meetup group</a></li>
+			<li><a href="https://twitter.com/#!/UnionOfRAD/lithium">Union of RAD's li3 List</a></li>
+			<li><a href="http://www.reddit.com/r/li3/">Official li3 Reddit</a></li>
+			<li><a href="http://www.last.fm/group/li3">Official li3 last.fm group</a></li>
+			<li><a href="http://www.meetup.com/lithium/">li3 meetup group</a></li>
 		</ul>
 	</section>
 
@@ -99,7 +99,7 @@
 		<p>
 			Make sure to bookmark
 			<strong><?= $this->html->link('Lithium101', 'http://lithium101.com/', array('rel' => 'nofollow')) ?></strong>
-			an unofficial community resource for the Lithium PHP framework indexing articles, tutorials, code snippets and libraries.
+			an unofficial community resource for the li3 PHP framework indexing articles, tutorials, code snippets and libraries.
 		</p>
 	</section>
 

@@ -10,10 +10,10 @@
 	</nav>
 
 	<p>
-		Here you find all the presentations, press, audio and video materials related to Lithium
+		Here you find all the presentations, press, audio and video materials related to li3
 		that we currently know of. <em>If you want your presentation to get listed here, ping
 		us on IRC.</em> This page also archives any old material in order to document the development
-		Lithium took over the years and how it spread around the globe.
+		li3 took over the years and how it spread around the globe.
 		Its ultimate goal however is to provide you with informational (and
 		sometimes humerous and entertaining)
 		material that auguments the official documentation.

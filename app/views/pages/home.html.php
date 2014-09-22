@@ -2,7 +2,7 @@
 
 use textual\Modulation as Textual;
 
-$this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
+$this->title('li3 is the most RAD development framework for PHP 5.3 and up')
 
 ?>
 <article class="fullwidth home">
@@ -45,7 +45,7 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 		<article>
 			<h1 class="h-gamma">A framework of firsts</h1>
 			<p>
-				Lithium is the first and only major PHP framework built from
+				li3 is the first and only major PHP framework built from
 				the ground up for PHP 5.3+, and the first to break ground into major
 				new technologies, including bridging the gap between relational and
 				non-relational databases through a single, unified API.
@@ -63,8 +63,8 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 				to override or replace core framework classes.
 			</p>
 			<p>
-				Lithium is the first framework to give you the best of both worlds, without
-				compromising either. In fact, Lithium's API is intentionally designed to
+				li3 is the first framework to give you the best of both worlds, without
+				compromising either. In fact, li3's API is intentionally designed to
 				allow you to "grow out of" the framework and into your own custom code over
 				the course of your application's lifecycle, if your needs require.
 			</p>
@@ -73,8 +73,8 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 		<article>
 			<h1 class="h-gamma">Technology</h1>
 			<p>
-				Lithium takes full advantage of the latest PHP 5.3 features, including
-				namespaces, late static binding and closures. Lithium's innovative
+				li3 takes full advantage of the latest PHP 5.3 features, including
+				namespaces, late static binding and closures. li3's innovative
 				<?= $this->html->link('method filter system', [
 					'library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser',
 					'lib' => 'lithium', 'args' => ['util/collection/Filters']
@@ -84,12 +84,12 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 				parameters before, and return values after.
 			</p>
 			<p>
-				Lithium also complies with PSR-0, the PHP 5.3 namespacing standard, allowing you
+				li3 also complies with PSR-0, the PHP 5.3 namespacing standard, allowing you
 				to easily integrate other PHP 5.3 standard libraries and frameworks with
-				Lithium applications, and vice-versa.
+				li3 applications, and vice-versa.
 			</p>
 			<p>
-				Lithium integrates the latest storage technologies, including MongoDB,
+				li3 integrates the latest storage technologies, including MongoDB,
 				CouchDB and Redis, with plugin support for Cassandra, ElasticSearch and
 				others.
 			</p>
@@ -98,14 +98,14 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 		<article>
 			<h1 class="h-gamma">Flexibility</h1>
 			<p>
-				Lithium gives you full control over your application, from filters to
+				li3 gives you full control over your application, from filters to
 				dynamically modify framework internals, to dynamic dependencies to extend
 				and replace core classes with application or plugin classes, to heavy use
 				of adapter-oriented configurations, to make it seamless to move between
 				different technologies and options.
 			</p>
 			<p>
-				Every component of the Lithium framework stack is replaceable through the
+				Every component of the li3 framework stack is replaceable through the
 				robust plugin architecture. Swap out the default ORM / ODM implementation
 				for
 				<?= $this->html->link('Doctrine 2', 'https://github.com/mariano/li3_doctrine2/') ?>
@@ -147,8 +147,7 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 	<section class="define">
 		<h1 class="h-gamma">Some Context</h1>
 		<p>
-			As defined by Wikipedia is
-			Lithium (from Greek: λίθος lithos, "stone") a soft, silver-white metal belonging to the alkali metal group of chemical elements. Under standard conditions it is the lightest metal and the least dense solid element. Like all alkali metals, lithium is highly reactive and flammable.
+			[…] a soft, silver-white metal belonging to the alkali metal group of chemical elements. Under standard conditions it is the lightest metal and the least dense solid element. Like all alkali metals, it is highly reactive and flammable.
 		</p>
 		–
 		<p>
@@ -157,7 +156,7 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 			and
 			developer <?= $this->html->link('Nate Abele', 'https://twitter.com/nateabele') ?>
 			resigned from the project to focus on
-			Lithium, a framework code base originally being developed
+			li3, a framework code base originally being developed
 			at the CakePHP project as Cake3.
 		</p>
 		<p>
@@ -175,7 +174,7 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 			is quite simply described as a community of developers dedicated to helping each other write better software.
 		</p>
 		<p>
-			Since then many many more excellent
+			Over the years many many more excellent
 			<?= $this->html->link('contributors', 'https://github.com/UnionOfRAD/lithium/graphs/contributors') ?>
 			have joined the project, brought it further
 			and keep it alive.
@@ -185,9 +184,7 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 			 official sponsorship from Engine Yard.
 		</p>
 		<p>
-			The name <em>Lithium</em> with its atomic number 3 has originally been chosen following up on the former name
-			<em>Cake3</em>. In January 2014 the project changed its name from <em>Lithium</em> to
-			<em>li3</em> which still is pronounced [lith-ee-uh m].
+			In January 2014 the project underwent a rebranding effort during which it changed its name to <em>li3</em> which some pronounce [lith-ee-uh m].
 		</p>
 	</section>
 
@@ -212,7 +209,7 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 		</div>
 		<h1 class="h-gamma">In the Wild</h1>
 		<p class="let-us-now">
-			Are you using Lithium?
+			Are you using li3?
 			<?= $this->html->link('Let us know.', '#submit-wild', ['class' => 'vis-toggler']) ?>
 			<div id="submit-wild" class="hide">
 				<p>
@@ -220,11 +217,11 @@ $this->title('Lithium is the most RAD development framework for PHP 5.3 and up')
 					title, year the project launched, link to the project website, name of the author, link to the author's website (optional), name of the client, link to the client's website (optional).
 				</p>
 				<p>
-					Both open and closed source projects are OK. We will be curating this list and thus it may be possible that your submission can not be included. We cannot include projects like libraries or plugins to Lithium those are best found through the GitHub search.
+					Both open and closed source projects are OK. We will be curating this list and thus it may be possible that your submission can not be included. We cannot include projects like libraries or plugins to li3 those are best found through the GitHub search.
 					However we hope to include as many projects as possible and are happy about every submission.
 				</p>
 				<p>
-					Note: By submitting your project you give Union of RAD the permission to publish it on this page and on http://li3.me. You also confirm that you have the rights to disclose the fact that Lithium was used in building the project and that you have the rights to give us permission to publish it on this page.
+					Note: By submitting your project you give Union of RAD the permission to publish it on this page and on http://li3.me. You also confirm that you have the rights to disclose the fact that li3 was used in building the project and that you have the rights to give us permission to publish it on this page.
 				</p>
 			</div>
 		</p>

@@ -49,7 +49,7 @@ grab a snack after I am done…",
 		];
 		$data[] = [
 			'url' => '/img/testimonials/6.png',
-			'body' => "You see this? I'm giving Lithium\nthe thumbs up and pointing at you.\nAt the same time.",
+			'body' => "You see this? I'm giving li3\nthe thumbs up and pointing at you.\nAt the same time.",
 		];
 		$data[] = [
 			'url' => '/img/testimonials/7.png',
@@ -68,7 +68,7 @@ badass framework
 for PHP 5.3.
 
 May I suggest:
-- Using Lithium",
+- Using li3",
 		];
 		$data[] = [
 			'url' => '/img/testimonials/10.png',
@@ -93,11 +93,11 @@ May I suggest:
 		];
 		$data[] = [
 			'url' => '/img/testimonials/16.png',
-			'body' => "We welcome our lithium overlords!",
+			'body' => "We welcome our li3 overlords!",
 		];
 		$data[] = [
 			'url' => '/img/testimonials/17.png',
-			'body' => "With Lithium, I don't need to\nreverse the polarity of the neutron flow…",
+			'body' => "With li3, I don't need to\nreverse the polarity of the neutron flow…",
 		];
 		$data[] = [
 			'url' => '/img/testimonials/18.png',
@@ -109,7 +109,7 @@ May I suggest:
 		];
 		$data[] = [
 			'url' => '/img/testimonials/20.png',
-			'body' => "According to legend…\nLithium holds the secret to ultimate ninja power."
+			'body' => "According to legend…\nli3 holds the secret to ultimate ninja power."
 		];
 		return $data;
 	}
