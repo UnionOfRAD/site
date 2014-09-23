@@ -32,7 +32,7 @@ class Eurekas extends \lithium\data\Model {
 		}
 		if ($type === 'random') {
 			return static::create([
-				'file' => $files[rand() /*abs(crc32(date('Y-m-d')))*/ % count($files)]
+				'file' => $files[abs(crc32(date('Y-m-d'))) % count($files)]
 			]);
 		}
 	}

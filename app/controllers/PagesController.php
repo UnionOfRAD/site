@@ -59,7 +59,7 @@ class PagesController extends \lithium\action\Controller {
 		}
 		$results = [];
 		foreach ($posts as $post) {
-			if ($post->timestamp < strtotime('-4 years')) {
+			if ($post->timestamp < strtotime('-4 months')) {
 				continue;
 			}
 			$results[] = $post;
