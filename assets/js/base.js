@@ -11,8 +11,8 @@ requirejs.config({
     // li3 docs
 	'jqueryUi': '//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min',
 	'showdown': '//cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min',
-	'highlight': '//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min',
-	'highlightPhp': '//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/languages/php.min',
+	'highlight': '//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min',
+	'highlightPhp': '//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/languages/php.min',
   },
   shim: {
     'jquery': { exports: '$' },
@@ -37,6 +37,10 @@ require([
 
   if ($('code').length) {
     require(['highlight', 'highlightPhp'], function(Highlight) {
+      Highlight.configure({
+        tabReplace: '    ',
+        languages: ['php', 'bash', 'fix', 'html']
+      });
       Highlight.initHighlighting();
     });
   }

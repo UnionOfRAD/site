@@ -203,6 +203,7 @@ a {
 .site .post-item .read-more,
 .li3-docs ul a,
 .li3-docs #parent a,
+.li3-docs .note a,
 .crumbs a,
 footer.main a,
 #content p a {
@@ -211,6 +212,8 @@ footer.main a,
 }
 .site .post-item .read-more:hover,
 .li3-docs ul a:hover,
+.li3-docs #parent a:hover,
+.li3-docs .note a:hover,
 .crumbs a:hover,
 footer.main a:hover,
 #content p a:hover {
