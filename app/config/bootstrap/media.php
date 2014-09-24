@@ -31,7 +31,7 @@ use lithium\net\http\Media;
 
 Media::attach('app', array(
 	'path' => dirname(LITHIUM_APP_PATH) . '/assets',
-	'prefix' => 'assets/v:' . PROJECT_VERSION
+	'prefix' => 'assets/v:' . PROJECT_VERSION_BUILD
 ));
 
 // Set default scope.
