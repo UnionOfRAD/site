@@ -24,12 +24,6 @@
 		</style>
 		<!-- news styles -->
 		<style>
-		.u1m-entity {
-			display: inline-block;
-			position: fixed;
-			top: 23px;
-			left: 60px;
-		}
 		.post-item + .post-item {
 			margin-top: 240px;
 		}
@@ -57,8 +51,25 @@
 		.post-item .permalink {
 			margin-right: 20px;
 		}
+		.post-item .permalink .symbol {
+			position: relative;
+			top: 2px;
+			margin-right: 2px;
+		}
 		.post-item .body {
 			margin-top: 40px;
+		}
+		.post-item .social {
+			margin-top: 40px;
+		}
+		.button.tweet {
+			border-color: blue;
+			color: blue;
+			background: white;
+		}
+		.button.tweet:hover {
+			color: white;
+			background: blue;
 		}
 		.post-item.release {}
 		.post-item.security {}
@@ -162,7 +173,7 @@
 								{/block:Date}
 
 								{block:IndexPage}
-									<span class="permalink">◎ <a href="{Permalink}">permalink</a></span>
+								<span class="permalink"><span class="symbol">◎</span><a href="{Permalink}">permalink</a></span>
 								{/block:IndexPage}
 
 								<div class="tags">
@@ -175,9 +186,9 @@
 								{body}
 							</div>
 							{/block:Text}
-							<!--
-							<a href="https://twitter.com/intent/tweet?source=webclient&text={Title} - {Permalink}" class="button twitter inverse" target="new">Tweet</a>
-							-->
+							<div class="social">
+								<a href="https://twitter.com/intent/tweet?source=webclient&text={Title} - {ShortURL} %23li3" class="button tweet" target="new">Tweet</a>
+							</div>
 						{block:IndexPage}
 							<hr class="section-separator blue">
 						{/block:IndexPage}

@@ -417,13 +417,12 @@ button,
   font-family: Helvetica, Arial, sans-serif;
   text-align: center;
   display: inline-block;
-  padding: 7px 5px 4px 5px;
+  padding: 9px 18px 7px 18px;
   color: #1b1b1b;
   background: white;
   border: 2px solid white;
   /* border-color: #e6e6e6; */
   transition: all .05s;
- box-shadow: 0 0 8px -3px #111;
 }
 button:hover,
 .button:hover {
@@ -441,6 +440,7 @@ button.large,
   font-weight: bold;
   line-height: 1;
   padding: 12px 18px;
+  box-shadow: 0 0 8px -3px #111;
 }
 
 /* Aside Navigation
