@@ -26,7 +26,8 @@ use lithium\core\Environment;
 	<?php echo $this->styles(); ?>
 	<?php echo $this->html->script([
 		'//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js',
-		'base'
+		'base',
+		'//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js'
 	]) ?>
 	<?php echo $this->scripts(); ?>
 	<link rel="icon" href="/assets/ico/site.png">

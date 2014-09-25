@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*!
   Lithium - Bright Highlighting Theme for HighlightJS
+  Works with HighlighJS and Prism.
 
   Copyright (c) 2014 Union of RAD - All rights reserved.
 
@@ -8,22 +9,94 @@
   License. For the full license text see the LICENSE file.
 */
 
-pre code, .code pre {
-	display: block;
-	color: #111;
-    border: 1px dotted #e6e6e6;
-    background: rgb(253,252,255);
-	overflow: auto;
-    padding: 10px;
+pre > code {
+  display: block;
+  color: #111;
+  border-left: 8px solid #e8e8e8;
+  background: rgb(253,252,255);
+  overflow: auto;
+  padding: 15px;
+  margin-left: -23px;
+  margin-right: -15px;
+
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+
+  -moz-tab-size: 4;
+  tab-size: 4;
 }
-pre code:hover, .code pre:hover {
-  border-style: solid;
+/*
+:not(pre) > code {
+    padding: 0 .25em;
+    border-left: 1px solid #00AEEF;
+}
+*/
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata,
+.hljs-phpdoc,
+.hljs-comment,
+code .comment,
+.template_comment, .javadoc {
+	color: #ababab;
 }
 
-.code ol, pre code .rownumber {
-	padding: 0 1em 0 2em;
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted,
+pre code .string,
+.hljs-string {
+	color: #319931;
+}
+
+.token.punctuation,
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+code .keyword,
+.me1 {
 	color: #111;
 }
+
+.token.boolean {
+  color: #E91E90;
+}
+.token.number,
+code .hljs-number {
+	color: #7044bb;
+    color: #7745D1
+}
+.token.variable,
+code .variable,
+.hljs-variable, .envvar {
+	color: #2060ad;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #f92672;
+}
+.token.atrule,
+.token.attr-value {
+    color: #e6db74;
+}
+.token.keyword {
+    color: #2490A5;
+}
+
+/* Probably unused */
+/*
 .annotation, .decorator, .doctype, .pi, .chunk, .shebang {
 	color:#d42aae;
 }
@@ -34,26 +107,15 @@ pre code:hover, .code pre:hover {
 .hljs-keyword {
 	font-weight: bold;
 }
-.hljs-phpdoc,
-pre code .comment,
-pre code .hljs-comment, .template_comment, .javadoc {
-	color: #ababab;
+.token.regex,
+.token.important {
+    color: #fd971f;
 }
-pre code .string,
-.hljs-string {
-	color: #319931;
+.token.important {
+    font-weight: bold;
 }
-pre code .keyword,
-.me1 {
-	color: #111;
+.token.entity {
+    cursor: help;
 }
-pre code .hljs-number {
-	color: #7044bb;
-}
-pre code .hljs-comment {
-	color: #6c6c6d;
-}
-pre code .variable,
-.hljs-variable, .envvar {
-	color: #2060ad;
-}
+*/
+

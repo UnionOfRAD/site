@@ -9,19 +9,14 @@ requirejs.config({
     'waypoints': '//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min',
 
     // li3 docs
-	'jqueryUi': '//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min',
-	'showdown': '//cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min',
-	'highlight': '//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min',
-	'highlightPhp': '//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/languages/php.min',
+    // Because how this uses web workers it must directly be included in the head.
+    // 'prism': '//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min'
   },
   shim: {
     'jquery': { exports: '$' },
     'sticky': { deps: ['jquery'] },
     'waypoints': { deps: ['jquery'] },
     'waypointsSticky': { deps: ['waypoints'] },
-    'showdown': { exports: 'Showdown' },
-    'highlight': { exports: 'hljs' },
-    'highlightPhp': { deps: ['highlight'] },
     'balanceText': { deps: ['jquery'] }
   }
 });
@@ -34,16 +29,6 @@ require([
 ) {
   var $aside = $('.aside');
   var $content = $('#content > article');
-
-  if ($('code').length) {
-    require(['highlight', 'highlightPhp'], function(Highlight) {
-      Highlight.configure({
-        tabReplace: '    ',
-        languages: ['php', 'bash', 'fix', 'html']
-      });
-      Highlight.initHighlighting();
-    });
-  }
 
   if ($('.aside.sticky').length) {
     require(['asideSticky'], function() {

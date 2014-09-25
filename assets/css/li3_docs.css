@@ -25,9 +25,6 @@
 .li3-docs pre {
   width: 120%;
 }
-.li3-docs .note pre {
-  width: auto;
-}
 
 .li3-docs p {
   -moz-hyphens: auto;
@@ -44,7 +41,11 @@
 .li3-docs .note {
   padding: 20px;
   margin: 3em 0 2em 0;
-  border: 4px solid transparent;
+  border-left: 8px solid #e8e8e8;
+  background: rgb(253,252,255);
+  padding: 15px;
+  margin-left: -23px;
+  margin-right: -15px;
 }
 .li3-docs .note-hint {
   border-color: rgb(0, 174, 239);
@@ -54,6 +55,9 @@
 }
 .li3-docs .note-caution {
   border-color: #CB057A;
+}
+.li3-docs .note pre {
+  width: auto;
 }
 
 .li3-docs #parent {
