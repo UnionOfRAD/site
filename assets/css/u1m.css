@@ -68,7 +68,7 @@ blockquote {
 ---------------------------------------------------------------- */
 #content {
   min-height: 100vh;
-  padding: 80px 60px 300px 60px;
+  padding: 80px 60px 150px 60px;
 }
 #content > article {
   max-width: 680px;

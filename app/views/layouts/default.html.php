@@ -15,11 +15,17 @@ use lithium\core\Environment;
 			'u1m'
 		];
 		switch ($this->request()->library) {
+			case 'li3_bot':
+				$styles[] = 'li3_bot';
+			break;
 			case 'li3_docs':
 				$styles[] = 'li3_docs';
 				$styles[] = 'highlight';
+			break;
 			default:
 				$styles[] = 'site';
+				$styles[] = 'highlight';
+			break;
 		}
 		echo $this->html->style($styles);
 	?>
@@ -60,6 +66,12 @@ $bodyClasses[] = str_replace('_', '-', $this->request()->library ?: 'site');
 				<?php echo $this->_view->render(
 					array('element' => 'crumbs'), compact('object'), array('library' => 'li3_docs')
 				); ?>
+			<?php elseif ($this->request()->library == 'li3_bot'): ?>
+				<?php if (isset($breadcrumbs)): ?>
+					<?php echo $this->_view->render(
+						array('element' => 'crumbs'), ['data' => $breadcrumbs], array('library' => 'li3_bot')
+					); ?>
+				<?php endif; ?>
 			<?php endif ?>
 			<div id="content">
 				<?php echo $this->content() ?>

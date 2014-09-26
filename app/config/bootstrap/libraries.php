@@ -116,7 +116,13 @@ Libraries::add('app', array('default' => true));
 /**
  * Add some plugins:
  */
-Libraries::add('li3_bot');
+Libraries::add('li3_bot', array(
+	'host' => 'irc.freenode.net',
+	'port' => 6667,
+	'nick' => 'li3bot',
+	'channels' => ['#li3', '#li3-core']
+));
+
 Libraries::add('li3_docs', array(
 	'index' => array('lithium', 'manual', 'specs'),
 	'cache' => true

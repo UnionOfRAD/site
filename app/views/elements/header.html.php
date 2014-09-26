@@ -27,6 +27,11 @@ $this->nav->add(
 );
 $this->nav->add(
 	'main',
+	'Bot',
+	'li3_bot.Pages::home'
+);
+$this->nav->add(
+	'main',
 	'Community',
 	'Pages::support'
 );

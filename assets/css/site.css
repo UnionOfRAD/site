@@ -19,17 +19,20 @@
 ---------------------------------------------------------------- */
 /* Fine tune spacing between sections. */
 .home section + section {
-  margin-top: 250px;
+  margin-top: 150px;
 }
 .home hr + section,
 .home section + hr {
-  margin-top: 150px;
+  margin-top: 120px;
 }
-.home .latest-posts {
+.home section + hr {
   margin-top: 100px;
 }
+.home .latest-posts {
+  margin-top: 80px;
+}
 .home .features {
-  margin-top: 200px;
+  margin-top: 100px;
 }
 .home .features,
 .home .define,

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
-  Lithium - li3_docs Styles for use within the Lithium Universe
+  i3_docs Styles
 
   Copyright (c) 2014 Union of RAD - All rights reserved.
 
@@ -8,10 +8,10 @@
   License. For the full license text see the LICENSE file.
 */
 
-.li3-docs h2 {
+.li3-docs #content h2 {
   margin-top: 60px;
 }
-.li3-docs h3 {
+.li3-docs #content h3 {
   margin-top: 40px;
 }
 

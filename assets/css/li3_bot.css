@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/*!
+  li3_bot - Styles
+
+  Copyright (c) 2014 Union of RAD - All rights reserved.
+
+  The code is distributed under the terms of the BSD 3-clause
+  License. For the full license text see the LICENSE file.
+*/
+.li3-bot table {
+  table-layout: fixed;
+}
+.li3-bot table td {
+  vertical-align: top;
+  padding: 2px 5px;
+}
+.li3-bot table {
+  margin-left: -5px;
+}
+.li3-bot table tr:hover td {
+  background-color: #e8e8e8;
+}
+.li3-bot .message .time {
+  opacity: .3;
+}
+.li3-bot .tells td:first-child {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.li3-bot .nav-paging {
+    margin-top: 100px;
+    font-weight: bold;
+}
+.li3-bot .nav-paging [rel="next"] {
+    float: right;
+    display: block;
+    text-align: right;
+    width: 30%;
+}
+.li3-bot .nav-paging [rel="prev"] {
+    float: left;
+    display: block;
+    width: 30%;
+}
+
+.li3-bot .view-all-tells {
+  margin-top: 20px;
+}
+
+.li3-bot .home section {
+  margin-top: 40px;
+}
+.cal-day {
+  opacity: .2;
+  width: 40px;
+  margin: 4px;
+  padding: 4px 8px;
+  background: #e6e6e6;
+  float: left;
+}
+a.cal-day {
+  opacity: 1;
+}
+a.cal-day:hover {
+  background: #00AEEF !important;
+}
+.cal-month .name {
+  display: block;
+  width: 100%;
+  float: left;
+  clear: both;
+  margin-left: 5px;
+}
+.cal-month {
+  float: left;
+  clear: both;
+  margin-left: -5px;
+  margin-top: 20px;
+}
