@@ -208,7 +208,7 @@ $this->title('li3 is the most RAD development framework for PHP 5.3 and up')
 		<?php endforeach ?>
 		</div>
 		<h1 class="h-gamma">In the Wild</h1>
-		<p class="let-us-now">
+		<p class="let-us-know">
 			Are you using li3?
 			<?= $this->html->link('Let us know.', '#submit-wild', ['class' => 'vis-toggler']) ?>
 			<div id="submit-wild" class="hide">

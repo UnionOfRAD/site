@@ -125,6 +125,9 @@
   font-weight: bold;
   border-color: transparent !important;
 }
+.wild .let-us-know {
+  opacity: .5;
+}
 
 /* Latest Posts */
 .latest-posts {
@@ -151,9 +154,6 @@
 }
 
 /* Define */
-.define {
-  text-align: justify;
-}
 .define, .eureka {
   margin: 0 auto;
   width: calc(50% - 30px);
