@@ -33,15 +33,16 @@ for NAME in app; do
 done
 cd -
 
-# cd $THIS_PATH/config
-# for NAME in crons logrotate.conf; do
-# 	msg "Generating configuration from templates for ${NAME}..."
-#
-# 	cp $NAME{.default,}
-# 	fill PROJECT $THIS_PATH $NAME
-# 	fill DOMAIN $THIS_DOMAIN $NAME
-# 	fill USER $THIS_USER $NAME
-# 	fill NGINX_REOPEN_LOGFILES "$THIS_NGINX_REOPEN_LOGFILES" $NAME
-# done
-# cd -
+cd $THIS_PATH/config
+for NAME in supervisord.conf; do
+	msg "Generating configuration from templates for ${NAME}..."
+
+	cp $NAME{.default,}
+	fill NAME $THIS_NAME $NAME
+	fill PROJECT $THIS_PATH $NAME
+	# fill DOMAIN $THIS_DOMAIN $NAME
+	fill USER $THIS_USER $NAME
+	# fill NGINX_REOPEN_LOGFILES "$THIS_NGINX_REOPEN_LOGFILES" $NAME
+done
+cd -
 

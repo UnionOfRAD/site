@@ -9,3 +9,4 @@ config/nginx/password
 config/nginx/includes/*.conf
 config/nginx/servers/*.conf
 config/deta/*.conf
+config/*.conf
