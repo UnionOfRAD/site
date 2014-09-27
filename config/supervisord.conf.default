@@ -3,7 +3,7 @@
 ;
 
 [program:NAME_irc_bot]
-command=PROJECT/app/libraries/unionofrad/lithium/lithium/console/li3 --app=PROJECT bot
+command=php -f PROJECT/app/libraries/unionofrad/lithium/lithium/console/lithium.php -- --app=PROJECT/app bot
 numprocs=1
 process_name=%(program_name)s_%(process_num)02d
 redirect_stderr=true
@@ -12,4 +12,4 @@ stdout_logfile=PROJECT/log/%(program_name)s_%(process_num)02d.log
 ; stdout_logfile_maxbytes=0
 directory=PROJECT
 user=USER
-
+stopsignal=QUIT
