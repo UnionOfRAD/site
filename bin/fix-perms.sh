@@ -13,7 +13,7 @@ set +o errexit
 
 # chmod -R a+rwX $THIS_PATH/app/resources/bot
 chmod -R a+rwX $THIS_PATH/app/resources/tmp
-chmod -R a+rwX $THIS_PATH/log
+# chmod -R a+rwX $THIS_PATH/log
 
 # Enable once target allows sudo.
 # msg "Fixing permissions on config/logrotate.conf..."
