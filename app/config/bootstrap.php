@@ -40,7 +40,7 @@ require __DIR__ . '/bootstrap/libraries.php';
  * rules of the `ErrorHandler` class to provide a high level of control over managing exceptions in
  * your application, with no impact on framework or application code.
  */
-// require __DIR__ . '/bootstrap/errors.php';
+require __DIR__ . '/bootstrap/errors.php';
 
 /**
  * This file defines bindings between classes which are triggered during the request cycle, and
