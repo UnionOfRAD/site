@@ -2,19 +2,34 @@
 
 use lithium\core\Environment;
 
+$library = $this->request()->library;
+
 ?>
 <!doctype html>
 <html lang="en">
 <head>
 	<?php echo $this->html->charset();?>
-	<title><?php echo ($title = $this->title()) ? "{$title} – " : null ?>li3</title>
+	<title><?php
+		$title = [];
+		if ($this->title()) {
+			$title[] = $this->title();
+		}
+
+		if ($library === 'li3_bot') {
+			$title[] = 'Bot';
+		}
+		$title[] = 'li3';
+
+		echo implode(' – ', $title);
+	?></title>
+echo () ? "{$title} – " : null ?>li3</title>
 	<?php
 		$styles = [
 			'reset',
 			'http://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic',
 			'u1m'
 		];
-		switch ($this->request()->library) {
+		switch ($library) {
 			case 'li3_bot':
 				$styles[] = 'li3_bot';
 			break;
@@ -54,7 +69,7 @@ use lithium\core\Environment;
 
 $bodyClasses = [];
 $bodyClasses[] = 'layout-default';
-$bodyClasses[] = str_replace('_', '-', $this->request()->library ?: 'site');
+$bodyClasses[] = str_replace('_', '-', $library ?: 'site');
 
 ?>
 <body class="<?= implode(' ', $bodyClasses) ?>">
@@ -62,11 +77,11 @@ $bodyClasses[] = str_replace('_', '-', $this->request()->library ?: 'site');
 			<?=$this->view()->render(['element' => 'header'], [], [
 				'library' => 'app'
 			]) ?>
-			<?php if ($this->request()->library == 'li3_docs'): ?>
+			<?php if ($library == 'li3_docs'): ?>
 				<?php echo $this->_view->render(
 					array('element' => 'crumbs'), compact('object'), array('library' => 'li3_docs')
 				); ?>
-			<?php elseif ($this->request()->library == 'li3_bot'): ?>
+			<?php elseif ($library == 'li3_bot'): ?>
 				<?php if (isset($breadcrumbs)): ?>
 					<?php echo $this->_view->render(
 						array('element' => 'crumbs'), ['data' => $breadcrumbs], array('library' => 'li3_bot')
