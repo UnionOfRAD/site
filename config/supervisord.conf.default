@@ -3,7 +3,7 @@
 ;
 
 [program:NAME_irc_bot]
-command=cd PROJECT/bin && ./deta.sh li3.sh bot
+command=PROJECT/app/libraries/unionofrad/lithium/lithium/console/li3 --app=PROJECT bot
 numprocs=1
 process_name=%(program_name)s_%(process_num)02d
 redirect_stderr=true
