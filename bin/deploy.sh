@@ -133,6 +133,9 @@ run_ssh $TARGET_USER@$TARGET_HOST <<-SESSION
 	cd $TARGET_PATH/bin
 	./deta.sh -c ../config/deta create-config.sh
 	./deta.sh -c ../config/deta fix-perms.sh
+	echo "Updating supervisor processes..."
+	supervisorctl update
+	supervisorctl restart ${TARGET_NAME}_irc_bot:*
 SESSION
 
 #
