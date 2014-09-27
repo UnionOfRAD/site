@@ -514,12 +514,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/li3_bot.git",
-                "reference": "fa34bbca0964ebf0609d974e3097148909a16c95"
+                "reference": "11a71363cfc0bbe0fe7d35c1cca99a490535de0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/li3_bot/zipball/fa34bbca0964ebf0609d974e3097148909a16c95",
-                "reference": "fa34bbca0964ebf0609d974e3097148909a16c95",
+                "url": "https://api.github.com/repos/UnionOfRAD/li3_bot/zipball/11a71363cfc0bbe0fe7d35c1cca99a490535de0b",
+                "reference": "11a71363cfc0bbe0fe7d35c1cca99a490535de0b",
                 "shasum": ""
             },
             "require": {
@@ -539,7 +539,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2014-09-27 00:43:06"
+            "time": "2014-09-27 15:10:11"
         },
         {
             "name": "unionofrad/li3_docs",
