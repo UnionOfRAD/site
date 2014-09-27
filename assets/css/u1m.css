@@ -180,6 +180,13 @@ h1, h2, h3, h4 {
 .t-red {
   color: #CB057A;
 }
+.t-lightblue {
+  color: #00AEEF;
+}
+.t-darkblue {
+  color: #180274;
+}
+
 .t-fancy {
   background: -webkit-linear-gradient(20deg, #CB057A 50%, #00AEEF, #180274);
   -webkit-background-clip: text;
