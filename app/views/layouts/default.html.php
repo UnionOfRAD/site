@@ -22,7 +22,6 @@ $library = $this->request()->library;
 
 		echo implode(' – ', $title);
 	?></title>
-echo () ? "{$title} – " : null ?>li3</title>
 	<?php
 		$styles = [
 			'reset',
