@@ -513,13 +513,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/unionofrad/li3_bot.git",
-                "reference": "18b8460fa238f48220eae402f13b28c8d0f33e9c"
+                "url": "https://github.com/UnionOfRAD/li3_bot.git",
+                "reference": "fa34bbca0964ebf0609d974e3097148909a16c95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unionofrad/li3_bot/zipball/18b8460fa238f48220eae402f13b28c8d0f33e9c",
-                "reference": "18b8460fa238f48220eae402f13b28c8d0f33e9c",
+                "url": "https://api.github.com/repos/UnionOfRAD/li3_bot/zipball/fa34bbca0964ebf0609d974e3097148909a16c95",
+                "reference": "fa34bbca0964ebf0609d974e3097148909a16c95",
                 "shasum": ""
             },
             "require": {
@@ -531,7 +531,7 @@
             "license": [
                 "BSD-3-clause"
             ],
-            "description": "An IRC bot for your Lithium application.",
+            "description": "IRC bot for li3.",
             "homepage": "https://github.com/UnionOfRAD/li3_bot",
             "keywords": [
                 "bot",
@@ -539,7 +539,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2014-07-01 22:33:59"
+            "time": "2014-09-27 00:43:06"
         },
         {
             "name": "unionofrad/li3_docs",
@@ -615,12 +615,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/lithium.git",
-                "reference": "acbbd4b463105775bbfafcf4d5a600358c0e980a"
+                "reference": "f85d6982cf425ed4ee7aa45a7b8f23ec3c3293ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/acbbd4b463105775bbfafcf4d5a600358c0e980a",
-                "reference": "acbbd4b463105775bbfafcf4d5a600358c0e980a",
+                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/f85d6982cf425ed4ee7aa45a7b8f23ec3c3293ff",
+                "reference": "f85d6982cf425ed4ee7aa45a7b8f23ec3c3293ff",
                 "shasum": ""
             },
             "require": {
@@ -655,7 +655,7 @@
                 "framework",
                 "lithium"
             ],
-            "time": "2014-09-24 20:03:47"
+            "time": "2014-09-26 10:31:44"
         },
         {
             "name": "unionofrad/manual",
@@ -663,12 +663,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/manual.git",
-                "reference": "7b741860c0700b34f72292acf59d5dfc2da183fd"
+                "reference": "bb0de3a6529f94fa6c73262c4979fee091f656c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/7b741860c0700b34f72292acf59d5dfc2da183fd",
-                "reference": "7b741860c0700b34f72292acf59d5dfc2da183fd",
+                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/bb0de3a6529f94fa6c73262c4979fee091f656c8",
+                "reference": "bb0de3a6529f94fa6c73262c4979fee091f656c8",
                 "shasum": ""
             },
             "require": {
@@ -689,7 +689,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2014-09-25 00:19:42"
+            "time": "2014-09-26 21:03:27"
         },
         {
             "name": "unionofrad/specs",
