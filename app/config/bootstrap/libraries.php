@@ -119,8 +119,27 @@ Libraries::add('app', array('default' => true));
 Libraries::add('li3_bot', array(
 	'host' => 'irc.freenode.net',
 	'port' => 6667,
-	'nick' => 'li3bot',
-	'channels' => ['#li3', '#li3-core']
+	'nick' => 'silva',
+	'channels' => ['#li3', '#li3-core'],
+	'rewriters' => [
+		'(pastium\.(org|com))' => function($inner, $outer) {
+			return str_replace($inner, '<strike>' . $inner . '</strike>', $outer);
+		},
+		'(dev\.lithify\.me|rad\-dev\.org|sphere\.lithify\.me|iteration-friday.net)' => function($inner, $outer) {
+			$wayback= 'https://web.archive.org/web/';
+
+			return '<a href="' . $wayback . $outer . '" rel="nofollow">' . $outer . '</a>';
+		},
+		'(lithify\.me)' => function($inner, $outer) {
+			$text = str_replace($inner, '<strike>' . $inner . '</strike>li3.me', $outer);
+			$link = str_replace('lithify.me', 'li3.me', $outer);
+
+			return '<a href="' . $link . '" rel="nofollow">' . $text . '</a>';
+		},
+		'(.*)' => function($inner, $outer) {
+			return '<a href="' . $inner . '" rel="nofollow">' . $outer . '</a>';
+		}
+	]
 ));
 
 Libraries::add('li3_docs', array(

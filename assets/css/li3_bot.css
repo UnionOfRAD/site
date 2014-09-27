@@ -51,6 +51,11 @@
 .li3-bot .home section {
   margin-top: 40px;
 }
+ul.channels {
+  list-style: none;
+  padding: 0;
+}
+
 .cal-day {
   opacity: .2;
   width: 40px;
