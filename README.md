@@ -1,4 +1,4 @@
-# The Lithium Site
+# The official li₃ Site
 
 ## Synopsis
 
@@ -6,8 +6,7 @@ This is the repository for the main lithium site. Its goal is to provide
 a fresh, modern and lean web entity that makes content around lithium easy
 to discover.
 
-It serves the naked DOMAIN, chat.DOMAIN and docs.DOMAIN. No database is
-needed to run the site.
+It serves the naked DOMAIN. A MySQL database is needed to run the site.
 
 ## Development
 
@@ -27,7 +26,7 @@ $ ./deta -c ../config/deta create-config.sh
 
 Add the following entry to `/etc/hosts`:
 ``` 
-127.0.0.1 lithium-site.dev docs.lithium-site.dev chat.lithium-site.dev
+127.0.0.1 lithium-site.dev
 ```
 
 Include the generated nginx configuration file in you main nginx.conf and 
