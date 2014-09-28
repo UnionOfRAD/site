@@ -1,3 +1,12 @@
+<?php
+
+$this->set([
+	'meta' => [
+		'description' => 'Here you find all the presentations, press, audio and video materials related to li3 that we currently know of.'
+	]
+])
+
+?>
 <article class="present use-section-spacing">
 	<h1 class="h-alpha"><?= $this->title('Presentations, Press, Audio and Video') ?></h1>
 

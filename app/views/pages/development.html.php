@@ -1,3 +1,12 @@
+<?php
+
+$this->set([
+	'meta' => [
+		'description' => 'This project is built by a thriving community of developers who value cutting-edge technology and concise, maintainable code. If you\'ve found a bug, or have an idea for a feature, we encourage your participation in making li3 better.'
+	]
+])
+
+?>
 <article class="has-aside-right use-section-spacing">
 	<h1 class="h-alpha"><?= $this->title('Development') ?></h1>
 

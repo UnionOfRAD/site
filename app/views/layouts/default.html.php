@@ -22,6 +22,9 @@ $library = $this->request()->library;
 
 		echo implode(' – ', $title);
 	?></title>
+	<?php if (isset($meta['description'])): ?>
+		<meta name="description" content="<?= $meta['description'] ?>">
+	<?php endif ?>
 	<?php
 		$styles = [
 			'reset',

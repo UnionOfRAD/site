@@ -1,3 +1,12 @@
+<?php
+
+$this->set([
+	'meta' => [
+		'description' => 'li3 is not just a framework, but the embodiment of a community. This community is dedicated to open collaboration and friendly discourse, with the goal of producing better quality software.'
+	]
+])
+
+?>
 <article class="use-section-spacing">
 	<h1 class="h-alpha"><?= $this->title('Participate') ?></h1>
 
