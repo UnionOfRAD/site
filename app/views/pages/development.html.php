@@ -25,9 +25,7 @@ $this->set([
 					<li><?= $this->html->link('Branching', '#branching') ?>
 				</ul>
 			<li><?= $this->html->link('Specifications', '#specs') ?>
-			<!--
-			<li><?= $this->html->link('More', '#more') ?>
-			-->
+		</ul>
 	</nav>
 
 	<section id="contributing">

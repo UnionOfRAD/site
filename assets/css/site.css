@@ -67,9 +67,11 @@
 }
 .backers .logo-uor {
   position: relative;
-  top: -8px;
+  top: -3px;
   height: 70px;
+  filter: grayscale(100%);
 }
+
 .backers .logo-disko {
   height: 19px;
 }
@@ -82,16 +84,7 @@
   border-top: 1px solid #e6e6e6;
 }
 .backers .upper {
-  height: 80px;
-}
-.backers .and,
-.backers .you {
-  position: relative;
-  display: inline-block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 40px;
-  font-weight: bold;
-  text-transform: uppercase;
+  height: 70px;
 }
 .sponsors,
 .creators {
@@ -242,7 +235,9 @@
   padding: 20px 0;
   max-width: 100%;
 }
-.present img + .credit {
+img + .credit {
+  opacity: .7;
+  text-align: right;
   font-size: 11px;
   margin-top: -20px;
   margin-bottom: 30px;

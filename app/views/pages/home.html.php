@@ -44,7 +44,6 @@ $this->set([
 	<hr class="section-separator lightblue">
 	<?php endif ?>
 
-
 	<section class="features">
 		<h1 class="h-alpha t-red">What is li₃?</h1>
 		<article>
@@ -133,8 +132,6 @@ $this->set([
 		<article class="creators">
 			<div class="upper">
 				<?= $this->html->link($this->html->image('uor.png', ['class' => 'logo-uor']), 'https://github.com/UnionOfRAD', ['escape' => false, 'title' => 'Union of RAD']) ?>
-				<div class="and">+</div>
-				<div class="you">you</div>
 			</div>
 			<h1 class="h-gamma">Creators</h1>
 		</article>

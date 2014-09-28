@@ -40,6 +40,9 @@ $this->set([
 		</p>
 	</section>
 	<?= $this->html->image('/ico/network.png', ['width' => 400]) ?>
+	<div class="credit">
+		Graphic by Bruno Castro, CC BY 3.0
+	</div>
 
 	<hr class="section-separator">
 
