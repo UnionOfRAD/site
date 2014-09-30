@@ -26,12 +26,10 @@ pre > code {
   -moz-tab-size: 4;
   tab-size: 4;
 }
-/*
 :not(pre) > code {
-    padding: 0 .25em;
-    border-left: 1px solid #00AEEF;
+  background: #F8F7F7;
+  padding: .1em .20em .1em .3em;
 }
-*/
 
 .token.comment,
 .token.prolog,
@@ -118,4 +116,3 @@ code .variable,
     cursor: help;
 }
 */
-
