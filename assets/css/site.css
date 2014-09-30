@@ -235,10 +235,3 @@
   padding: 20px 0;
   max-width: 100%;
 }
-img + .credit {
-  opacity: .7;
-  text-align: right;
-  font-size: 11px;
-  margin-top: -20px;
-  margin-bottom: 30px;
-}
