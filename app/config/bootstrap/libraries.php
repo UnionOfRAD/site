@@ -119,7 +119,7 @@ Libraries::add('app', array('default' => true));
 Libraries::add('li3_bot', array(
 	'host' => 'irc.freenode.net',
 	'port' => 6667,
-	'nick' => 'silva',
+	'nick' => 'li3bot',
 	'channels' => ['#li3', '#li3-core'],
 	'rewriters' => [
 		'(pastium\.(org|com))' => function($inner, $outer) {
