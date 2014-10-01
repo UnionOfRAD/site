@@ -20,7 +20,7 @@ $this->set([
 		<div class="text">
 			<h1 class="h-alpha">You asked for a better framework. Here it is.</h1>
 			<div></div>
-			<h2 class="h-beta">li₃ is the fast, flexible and most RAD development framework for PHP 5.3 and up.</h1>
+			<h2 class="h-beta">li₃ is the fast, flexible and most RAD development framework for PHP 5.3+</h1>
 			<nav>
 				<?= $this->html->link('Quickstart', ['library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser', 'lib' => 'manual', 'args' => ['quickstart']], ['class' => 'button large quickstart']) ?>
 				<?= $this->html->link('Source', 'https://github.com/unionofrad/lithium', ['class' => 'button large source']) ?>
