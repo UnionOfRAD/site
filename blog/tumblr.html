@@ -88,6 +88,9 @@
 		    display: block;
 		    width: 30%;
 		}
+		p + .credit {
+			text-align: left;
+		}
 		</style>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
@@ -113,14 +116,14 @@
 				</div>
 				<div class="right">
 					<nav class="main-nav">
-						<a class="active" href="http://news.li3.me">News</a>
-						<a href="http://li3.me/docs/manual">Manual</a>
-						<a href="http://li3.me/docs/lithium">API</a>
-						<a href="http://li3.me/docs/specs">Specs</a>
-						<a href="http://li3.me/present">Presentations</a>
-						<a href="http://li3.me/bot">Bot</a>
-						<a href="http://li3.me/support">Community</a>
-						<a href="http://li3.me/development">Development</a>
+						<a class="active" href="http://news.li3.me">News</a><!--
+						--><a href="http://li3.me/docs/manual">Manual</a><!--
+						--><a href="http://li3.me/docs/lithium">API</a><!--
+						--><a href="http://li3.me/docs/specs">Specs</a><!--
+						--><a href="http://li3.me/present">Presentations</a><!--
+						--><a href="http://li3.me/bot">Bot</a><!--
+						--><a href="http://li3.me/support">Community</a><!--
+						--><a href="http://li3.me/development">Development</a>
 					</nav>	
 				</div>
 			</header>
@@ -147,7 +150,7 @@
 						{block:Text}
 							<h1 class="h-alpha">
 								{block:Title}
-									<a href="{Permalink}" class="t-darkblue">{Title}</a>
+									<a href="{Permalink}">{Title}</a>
 								{/block:Title}
 							</h1>
 							<div class="meta">
@@ -171,9 +174,6 @@
 								{body}
 							</div>
 							{/block:Text}
-							<div class="social">
-								<a href="https://twitter.com/intent/tweet?source=webclient&text={Title} - {ShortURL} %23li3" class="button tweet" target="new">Tweet</a>
-							</div>
 						{block:IndexPage}
 							<hr class="section-separator red">
 						{/block:IndexPage}

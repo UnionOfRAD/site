@@ -69,7 +69,7 @@
   position: relative;
   top: -3px;
   height: 70px;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
 }
 
 .backers .logo-disko {
