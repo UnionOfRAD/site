@@ -80,11 +80,11 @@
 }
 .wild h1,
 .backers article h1 {
-  padding-top: 35px;
+  padding-top: 30px;
   border-top: 1px solid #e6e6e6;
 }
 .backers .upper {
-  height: 70px;
+  height: 65px;
 }
 .sponsors,
 .creators {
