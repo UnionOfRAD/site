@@ -21,7 +21,7 @@ ErrorHandler::apply('lithium\action\Dispatcher::run', array(), function($info, $
 	Media::render($response, compact('info', 'params'), array(
 		'library' => true,
 		'controller' => '_errors',
-		'template' => 'fiveohoh',
+		'template' => $info['exception']->getCode() == 404? 'fourohfour' : 'fiveohoh',
 		'layout' => 'default',
 		'request' => $params['request']
 	));

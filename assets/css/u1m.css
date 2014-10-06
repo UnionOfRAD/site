@@ -535,3 +535,21 @@ button.large,
 .crumbs li + li:before {
   content: ">"
 }
+
+/* Error Pages
+---------------------------------------------------------------- */
+.error ul {
+  margin-top: 1em;
+  list-style: none;
+  padding: 0;
+}
+.error li {
+  margin: .25em 0;
+}
+.error .message {
+	margin: 1em 0;
+}
+
+.error .try li:before    { content: "➜ "; }
+.error .reason li:before { content: "✖ "; }
+
