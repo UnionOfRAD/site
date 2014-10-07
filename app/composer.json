@@ -7,7 +7,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=5.5.0",
-        "tumblr/tumblr": "dev-master",
+        "tumblr/tumblr": "dev-master#32fef6e6fb047371607a33e5665bf72da7dbad7d",
         "naneau/semver": "0.0.*",
         "fzaninotto/faker": "1.*",
         "unionofrad/lithium": "dev-dev as 1.0.0-dev",
