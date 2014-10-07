@@ -35,7 +35,7 @@ gzip_types		text/css
 gzip_vary on;
 
 # On a domain with cookies.
-add_header Cache-Control private;
+# add_header Cache-Control private;
 
 # These assets carry a stamp.
 
