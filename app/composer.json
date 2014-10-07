@@ -1,7 +1,7 @@
 {
     "name": "unionofrad/site",
     "type": "project",
-    "description": "Main website for lithium.",
+    "description": "Main website for li3.",
     "license": "BSD-3-clause",
     "minimum-stability": "dev",
     "prefer-stable": true,

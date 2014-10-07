@@ -2,8 +2,8 @@
 
 ## Synopsis
 
-This is the repository for the main lithium site. Its goal is to provide
-a fresh, modern and lean web entity that makes content around lithium easy
+This is the repository for the main li3 site. Its goal is to provide
+a fresh, modern and lean web entity that makes content around li3 easy
 to discover.
 
 It serves the naked DOMAIN. A MySQL database is needed to run the site.
@@ -57,7 +57,7 @@ Assets within plugins are not used, instead all assets needed by the site and
 its plugins should be placed into `DOMAIN/assets` and name accordingly.
 
 ```
-css/u1m.css - Base styles used on any entity in the lithium universe.
+css/u1m.css - Base styles used on any entity in the li3 universe.
 css/site.css - Contains styles relevant to the site only.
 css/li3_bot.css  - Contains styles when using the bot plugin.
 css/highlight.css - Extra styles that can be loaded if needed.
@@ -101,7 +101,7 @@ $ ./deta -c ../config/deta deploy.sh
 
 ## Copyright & License
 
-The Lithium Website is Copyright (c) 2014 Union of RAD. The code is
+The li3 Website is Copyright (c) 2014 Union of RAD. The code is
 distributed under the terms of the BSD 3-clause License. For the full
 license text see the LICENSE.txt file.
 
