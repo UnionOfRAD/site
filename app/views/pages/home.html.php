@@ -138,9 +138,9 @@ $this->set([
 
 		<article class="sponsors">
 			<div class="upper">
-				<?= $this->html->link($this->html->image('logo_radify.png', ['class' => 'logo-radify']), 'http://radify.io', ['escape' => false, 'alt' => 'Radify']) ?>
-				<?= $this->html->link($this->html->image('logo_atelierdisko.png', ['class' => 'logo-disko']), 'http://atelierdisko.de', ['escape' => false, 'alt' => 'Atelier Disko']) ?>
-				<?= $this->html->link($this->html->image('logo_ey.png', ['class' => 'logo-ey']), 'https://engineyard.com', ['escape' => false, 'Engine Yard']) ?>
+				<?= $this->html->link($this->html->image('logo_radify.png', ['class' => 'logo-radify', 'alt' => 'Radify']), 'http://radify.io', ['escape' => false]) ?>
+				<?= $this->html->link($this->html->image('logo_atelierdisko.png', ['class' => 'logo-disko', 'alt' => 'Atelier Disko']), 'http://atelierdisko.de', ['escape' => false]) ?>
+				<?= $this->html->link($this->html->image('logo_ey.png', ['class' => 'logo-ey', 'alt' => 'Engine Yard']), 'https://engineyard.com', ['escape' => false]) ?>
 			</div>
 			<h1 class="h-gamma">Sponsors</h1>
 		</article>
