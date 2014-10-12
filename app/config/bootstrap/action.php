@@ -51,36 +51,4 @@ Dispatcher::applyFilter('run', function($self, $params, $chain) {
 	return $chain->next($self, $params, $chain);
 });
 
-Dispatcher::applyFilter('run', function($self, $params, $chain) {
-	if (Environment::is('development')) {
-		return $chain->next($self, $params, $chain);
-	}
-	$request  = $params['request'];
-	$response = $chain->next($self, $params, $chain);
-
-	// Cache only HTML responses, JSON responses come from
-	// APIs and are most often highly dynamic.
-	if ($response->type() !== 'html') {
-		$response->headers['Cache-Control'] = 'no-cache, no-store, must-revalidate';
-		$response->headers['Pragma'] = 'no-cache';
-		$response->headers['Expires'] = '0';
-		return $response;
-	}
-
-	$hash = 'W/' . md5(serialize([
-		$response->body,
-		$response->headers,
-		PROJECT_VERSION
-	]));
-	$condition = trim($request->get('http:if_none_match'), '"');
-
-	if ($condition === $hash) {
-		$response->status(304);
-		$response->body = [];
-	}
-	$response->headers['ETag'] = "\"{$hash}\"";
-	return $response;
-});
-
-
 ?>
