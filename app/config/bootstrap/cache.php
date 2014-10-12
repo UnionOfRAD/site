@@ -66,26 +66,26 @@ Dispatcher::applyFilter('run', function($self, $params, $chain) {
 if (!Environment::is('development')) {
 	Dispatcher::applyFilter('run', function($self, $params, $chain) {
 		$request = $params['request'];
-		$response = $chain->next($self, $params, $chain);
 
+		if (!$request->is('get')) {
+			return $chain->next($self, $params, $chain);
+		}
 		$cacheKey = 'fpc_' . md5($request->url);
 
 		if ($cached = Cache::read('default', $cacheKey)) {
 			return $cached;
 		}
+		$response = $chain->next($self, $params, $chain);
 
-		$skip = !$request->is('get') || $response->type() !== 'html';
-		$skip = $skip || strpos($request->url, '/bot') === 0;
-
-		if (!$skip) {
-			switch ($request->url) {
-				case '/':
-					$ttl = '+1 hour';
-				default:
-					$ttl = Cache::PERSIST;
-			}
-			Cache::write('default', $cacheKey, $response, $ttl);
+		switch ($request->url) {
+			case (strpos($request->url, '/bot') === 0):
+				$ttl = '+2 minutes';
+			case '/':
+				$ttl = '+1 hour';
+			default:
+				$ttl = Cache::PERSIST;
 		}
+		Cache::write('default', $cacheKey, $response, $ttl);
 		return $response;
 	});
 
@@ -95,7 +95,7 @@ if (!Environment::is('development')) {
 
 		// Cache only HTML responses, JSON responses come from
 		// APIs and are most often highly dynamic.
-		if ($response->type() !== 'html') {
+		if (!$request->is('get') || $response->type() !== 'html') {
 			return $response;
 		}
 		$hash = 'W/' . md5(serialize([
