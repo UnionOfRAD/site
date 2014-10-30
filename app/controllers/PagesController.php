@@ -8,14 +8,10 @@
 
 namespace app\controllers;
 
-use Exception;
-use lithium\storage\Cache;
 use lithium\core\Libraries;
-use lithium\core\Environment;
-use Tumblr\API\Client as Tumblr;
-use Guzzle\Http\Exception\CurlException;
 use app\models\Eurekas;
 use app\models\Projects;
+use app\models\Posts;
 
 /**
  * This controller is used for serving static pages by name, which are located in the `/views/pages`
@@ -35,39 +31,9 @@ use app\models\Projects;
 class PagesController extends \lithium\action\Controller {
 
 	public function home() {
-		$cacheKey = 'latest_posts';
-
-		if (!$posts = Cache::read('default', $cacheKey)) {
-			$config = Environment::get('service.tumblr');
-
-			try {
-				$client = new Tumblr(
-					$config['consumerKey'],
-					$config['consumerSecret'],
-					$config['token'],
-					$config['tokenSecret']
-				);
-				$results = $client->getBlogPosts($config['name'], ['limit' => 2]);
-				$posts = $results->posts;
-
-				Cache::write('default', $cacheKey, $posts, '+1 day');
-			} catch (CurlException $e) {
-				$posts = [];
-			} catch (Exception $e) {
-				$posts = [];
-			}
-		}
-		$results = [];
-		foreach ($posts as $post) {
-			if ($post->timestamp < strtotime('-4 months')) {
-				continue;
-			}
-			$results[] = $post;
-		}
-		$posts = $results;
-
 		$eureka = Eurekas::find('random');
 		$projects = Projects::find('all');
+		$posts = Posts::latest();
 
 		return compact('posts', 'eureka', 'projects');
 	}

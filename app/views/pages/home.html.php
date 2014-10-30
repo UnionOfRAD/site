@@ -1,7 +1,5 @@
 <?php
 
-use textual\Modulation as Textual;
-
 $this->title('The most RAD framework for PHP');
 $this->set([
 	'meta' => [
@@ -35,7 +33,7 @@ $this->set([
 				<h1 class="h-gamma"><?= $this->html->link($post->title, $post->post_url) ?></h1>
 				<time><?= date('m/d/Y', $post->timestamp) ?></time>
 				<div class="body">
-					<?php echo Textual::limit(strip_tags(preg_replace('#\<div.class\=.credit.*\/div\>#mis','', $post->body)), 190, ['html' => true]) ?>
+					<?php echo $post->teaser() ?>
 					[<?= $this->html->link('read more…', $post->post_url, ['class' => 'read-more']) ?>]
 				</div>
 			</article>
