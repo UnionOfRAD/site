@@ -4,8 +4,6 @@
 #
 # We serve:
 # - DOMAIN
-# - bot.DOMAIN
-# - docs.DOMAIN
 #
 server {
 	listen 80;
