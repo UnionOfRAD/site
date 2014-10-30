@@ -13,15 +13,21 @@ use lithium\net\http\Media;
 use lithium\analysis\Logger;
 
 ErrorHandler::apply('lithium\action\Dispatcher::run', array(), function($info, $params) {
+	if (preg_match('/not found/i ', $info['exception']->getMessage())) {
+		$code = 404;
+	} else {
+		$code = $info['exception']->getCode() == 404 ? 404 : 500;
+	}
+
 	$response = new Response(array(
 		'request' => $params['request'],
-		'status' => $info['exception']->getCode()
+		'status' => $code
 	));
 
 	Media::render($response, compact('info', 'params'), array(
 		'library' => true,
 		'controller' => '_errors',
-		'template' => $info['exception']->getCode() == 404? 'fourohfour' : 'fiveohoh',
+		'template' => $code == 404 ? 'fourohfour' : 'fiveohoh',
 		'layout' => 'default',
 		'request' => $params['request']
 	));
