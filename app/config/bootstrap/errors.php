@@ -13,7 +13,7 @@ use lithium\net\http\Media;
 use lithium\analysis\Logger;
 
 ErrorHandler::apply('lithium\action\Dispatcher::run', array(), function($info, $params) {
-	if (preg_match('/not found/i ', $info['exception']->getMessage())) {
+	if (preg_match('/not found/i', $info['exception']->getMessage())) {
 		$code = 404;
 	} else {
 		$code = $info['exception']->getCode() == 404 ? 404 : 500;
