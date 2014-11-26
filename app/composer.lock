@@ -404,17 +404,17 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.5.6",
+            "version": "v2.5.7",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "804eb28dbbfba9ffdab21fe2066744906cea2212"
+                "reference": "bb6fc12085cd195dceaf48016087b12b632df497"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/804eb28dbbfba9ffdab21fe2066744906cea2212",
-                "reference": "804eb28dbbfba9ffdab21fe2066744906cea2212",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/bb6fc12085cd195dceaf48016087b12b632df497",
+                "reference": "bb6fc12085cd195dceaf48016087b12b632df497",
                 "shasum": ""
             },
             "require": {
@@ -457,7 +457,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2014-10-01 15:43:05"
+            "time": "2014-10-30 20:17:55"
         },
         {
             "name": "tumblr/tumblr",
@@ -615,12 +615,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/lithium.git",
-                "reference": "be947d48ae98d9baf97f67a3095e0ac1442c2d7e"
+                "reference": "f355feab38678c939082d0ec72ad23276648889a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/be947d48ae98d9baf97f67a3095e0ac1442c2d7e",
-                "reference": "be947d48ae98d9baf97f67a3095e0ac1442c2d7e",
+                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/f355feab38678c939082d0ec72ad23276648889a",
+                "reference": "f355feab38678c939082d0ec72ad23276648889a",
                 "shasum": ""
             },
             "require": {
@@ -655,7 +655,7 @@
                 "framework",
                 "lithium"
             ],
-            "time": "2014-10-27 23:17:27"
+            "time": "2014-11-14 12:05:30"
         },
         {
             "name": "unionofrad/manual",
@@ -663,12 +663,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/manual.git",
-                "reference": "7aaa983d1515bc85f9c7513ec90c4edb07a0d021"
+                "reference": "bfabcbd524883304155bf83c097942a39d239c89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/7aaa983d1515bc85f9c7513ec90c4edb07a0d021",
-                "reference": "7aaa983d1515bc85f9c7513ec90c4edb07a0d021",
+                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/bfabcbd524883304155bf83c097942a39d239c89",
+                "reference": "bfabcbd524883304155bf83c097942a39d239c89",
                 "shasum": ""
             },
             "require": {
@@ -689,7 +689,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2014-10-20 12:08:06"
+            "time": "2014-11-26 10:55:56"
         },
         {
             "name": "unionofrad/specs",
