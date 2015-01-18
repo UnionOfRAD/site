@@ -40,10 +40,24 @@ $this->set([
 			</p>
 
 			<ul>
-				<li><strong>Conceptual integrity</strong>: code should conform to the goals of the framework</li>
-				<li><strong>Maintainability</strong>: code should pass existing tests, have adequate test coverage and should conform to our coding standards &amp; QA guidelines</li>
-				<li><strong>Comprehensibility</strong>: Code should be concise and expressive, and should be accompanied by new documentation as appropriate, or updates to existing docs</li>
-				<li><strong>Integration</strong>: Finally, pull requests should be submitted against the <a href="https://github.com/UnionOfRAD/lithium/tree/dev"><code>dev</code></a> branch for integration testing</li>
+				<li><strong>Conceptual integrity</strong>:
+				code should conform to the goals of the framework
+
+				<li><strong>Maintainability</strong>:
+				code should pass existing
+				<?= $this->html->link('tests', 'http://li3.me/docs/specs/accepted/LSR-2-testing.md') ?>,
+				have adequate test coverage and should conform to our
+				<?= $this->html->link('coding standards', 'http://li3.me/docs/specs/accepted/LSR-0-coding.md') ?>
+
+				<li><strong>Comprehensibility</strong>:
+				code should be concise and expressive, and should be accompanied by new
+				<?= $this->html->link('documentation', 'http://li3.me/docs/specs/accepted/LSR-1-documenting.md') ?>
+				as appropriate, or updates to existing docs
+
+				<li><strong>Integration</strong>:
+				finally, pull requests should be submitted against the
+				<code><?= $this->html->link('dev', 'https://github.com/UnionOfRAD/lithium/tree/dev')?></code>
+				branch for integration testing
 			</ul>
 		</article>
 
@@ -108,7 +122,7 @@ $this->set([
 			<article id="security">
 				<h1 class="h-delta">Security Vulnerabilities</h1>
 
-				<p>Security vulnerabilities are an especially sensitive class of bug and should be confidentially reported directly to <a href="mailto:security@union-of-rad.org">security@union-of-rad.org</a>. Please do not disclose any details publicly. When reporting security vulnerabilities, please specify the version affected, include relevant reproduction code along with any other pertinent information relevant to addressing the vulnerability, such as 3rd-party software or components, etc.</p>
+				<p>Security vulnerabilities are an especially sensitive class of bug and should be confidentially reported directly to security@-THIS .me HOSTNAME- </a>. Please do not disclose any details publicly. When reporting security vulnerabilities, please specify the version affected, include relevant reproduction code along with any other pertinent information relevant to addressing the vulnerability, such as 3rd-party software or components, etc.</p>
 
 				<p>On reporting a confirmed security vulnerability, you can expect to receive a response from a core team member within 24 hours containing next steps as well as any follow-up questions necessary to produce a patch and publish a security update.</p>
 			</article>

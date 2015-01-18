@@ -221,7 +221,7 @@ $this->set([
 					However we hope to include as many projects as possible and are happy about every submission.
 				</p>
 				<p>
-					Note: By submitting your project you give Union of RAD the permission to publish it on this page and on http://li3.me. You also confirm that you have the rights to disclose the fact that li3 was used in building the project and that you have the rights to give us permission to publish it on this page.
+					Note: By submitting your project you give Union of RAD the permission to publish it on this site. You also confirm that you have the rights to disclose the fact that li3 was used in building the project and that you have the rights to give us permission to publish its name.
 				</p>
 			</div>
 		</p>
