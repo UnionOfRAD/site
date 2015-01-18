@@ -61,16 +61,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.18",
+            "version": "v1.0.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "74fb0a7a1a23696d9c8cc2fba5903f6711cdd067"
+                "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/74fb0a7a1a23696d9c8cc2fba5903f6711cdd067",
-                "reference": "74fb0a7a1a23696d9c8cc2fba5903f6711cdd067",
+                "url": "https://api.github.com/repos/composer/installers/zipball/1bff8aa77a18f3616f468ed8000cf86a5725bac3",
+                "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3",
                 "shasum": ""
             },
             "replace": {
@@ -112,6 +112,8 @@
                 "Hurad",
                 "MODX Evo",
                 "OXID",
+                "SMF",
+                "Thelia",
                 "WolfCMS",
                 "agl",
                 "annotatecms",
@@ -121,9 +123,11 @@
                 "codeigniter",
                 "concrete5",
                 "croogo",
+                "dokuwiki",
                 "drupal",
                 "elgg",
                 "fuelphp",
+                "grav",
                 "installer",
                 "joomla",
                 "kohana",
@@ -147,7 +151,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2014-08-18 20:00:12"
+            "time": "2015-01-11 03:51:11"
         },
         {
             "name": "davidpersson/textual",
@@ -404,17 +408,17 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.5.7",
+            "version": "v2.6.3",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "bb6fc12085cd195dceaf48016087b12b632df497"
+                "reference": "40ff70cadea3785d83cac1c8309514b36113064e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/bb6fc12085cd195dceaf48016087b12b632df497",
-                "reference": "bb6fc12085cd195dceaf48016087b12b632df497",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/40ff70cadea3785d83cac1c8309514b36113064e",
+                "reference": "40ff70cadea3785d83cac1c8309514b36113064e",
                 "shasum": ""
             },
             "require": {
@@ -422,9 +426,10 @@
             },
             "require-dev": {
                 "psr/log": "~1.0",
-                "symfony/config": "~2.0",
-                "symfony/dependency-injection": "~2.0,<2.6.0",
-                "symfony/stopwatch": "~2.2"
+                "symfony/config": "~2.0,>=2.0.5",
+                "symfony/dependency-injection": "~2.6",
+                "symfony/expression-language": "~2.6",
+                "symfony/stopwatch": "~2.3"
             },
             "suggest": {
                 "symfony/dependency-injection": "",
@@ -433,7 +438,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5-dev"
+                    "dev-master": "2.6-dev"
                 }
             },
             "autoload": {
@@ -457,7 +462,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "http://symfony.com",
-            "time": "2014-10-30 20:17:55"
+            "time": "2015-01-05 14:28:40"
         },
         {
             "name": "tumblr/tumblr",
@@ -615,12 +620,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/lithium.git",
-                "reference": "f355feab38678c939082d0ec72ad23276648889a"
+                "reference": "1d6857327dd200fd4ccdb7e7ef9e479e55df448a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/f355feab38678c939082d0ec72ad23276648889a",
-                "reference": "f355feab38678c939082d0ec72ad23276648889a",
+                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/1d6857327dd200fd4ccdb7e7ef9e479e55df448a",
+                "reference": "1d6857327dd200fd4ccdb7e7ef9e479e55df448a",
                 "shasum": ""
             },
             "require": {
@@ -655,7 +660,7 @@
                 "framework",
                 "lithium"
             ],
-            "time": "2014-11-14 12:05:30"
+            "time": "2015-01-13 16:50:37"
         },
         {
             "name": "unionofrad/manual",
@@ -663,12 +668,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/manual.git",
-                "reference": "bfabcbd524883304155bf83c097942a39d239c89"
+                "reference": "3b7f653eff706fee0a2cd36081974aa26f966e98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/bfabcbd524883304155bf83c097942a39d239c89",
-                "reference": "bfabcbd524883304155bf83c097942a39d239c89",
+                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/3b7f653eff706fee0a2cd36081974aa26f966e98",
+                "reference": "3b7f653eff706fee0a2cd36081974aa26f966e98",
                 "shasum": ""
             },
             "require": {
@@ -689,7 +694,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2014-11-26 10:55:56"
+            "time": "2015-01-18 19:32:52"
         },
         {
             "name": "unionofrad/specs",
@@ -769,6 +774,7 @@
         "unionofrad/specs": 20
     },
     "prefer-stable": true,
+    "prefer-lowest": false,
     "platform": {
         "php": ">=5.5.0"
     },
