@@ -17,6 +17,23 @@
 
 /* Home
 ---------------------------------------------------------------- */
+.home .versions {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-left: 15px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+.home .version {
+  display: block;
+  color: white;
+  font-weight: bold;
+}
+.home .version:hover  {
+  color: black;
+}
+
 /* Fine tune spacing between sections. */
 .home section + section {
   margin-top: 150px;

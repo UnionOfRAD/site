@@ -22,6 +22,12 @@ $this->set([
 			<nav>
 				<?= $this->html->link('Quickstart', ['library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser', 'lib' => 'manual', 'args' => ['quickstart']], ['class' => 'button large quickstart']) ?>
 				<?= $this->html->link('Source', 'https://github.com/unionofrad/lithium', ['class' => 'button large source']) ?>
+				<div class="versions">
+					<!-- <?= $this->html->link('Latest Stable 0.11.0', 'https://github.com/UnionOfRAD/lithium/tree/0.11', ['class' => 'version']) ?> -->
+					<!-- <?= $this->html->link('Latest Unstable 1.0.0-beta', 'https://github.com/UnionOfRAD/lithium/tree/1.0-beta', ['class' => 'version']) ?> -->
+					<?= $this->html->link('Latest 1.0.0-beta', 'https://github.com/UnionOfRAD/lithium/tree/1.0-beta', ['class' => 'version']) ?>
+					<?= $this->html->link('Next 1.0.0-dev', 'https://github.com/UnionOfRAD/lithium/tree/dev', ['class' => 'version']) ?>
+				</div>
 			</nav>
 		</div>
 	</section>
