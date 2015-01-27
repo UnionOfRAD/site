@@ -65,7 +65,7 @@ grab a snack after I am done…",
 trying to build an
 application with a
 badass framework
-for PHP 5.3.
+for PHP.
 
 May I suggest:
 - Using li3",
