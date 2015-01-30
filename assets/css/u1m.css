@@ -15,7 +15,11 @@ body {
   font-family: 'Anonymous Pro', sans-serif;
   word-spacing: -.02em;
 
-  text-rendering: optimizeLegibility;
+  /* Regression in Chromium 40 that causes tabs to be removed. Disable rendering optimization
+     until Chromium 40 is fixed. */
+  /* text-rendering: optimizeLegibility; */
+  -moz-text-rendering: optimizeLegibility;
+
   -moz-font-feature-settings: "liga" 1, "frac" 1, "kern" 1, "smcp" 1;
   font-feature-settings: "liga" 1, "frac" 1, "kern" 1, "smcp" 1;
   -webkit-font-smoothing: antialiased;
