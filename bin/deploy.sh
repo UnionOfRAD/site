@@ -95,10 +95,10 @@ fill "__PROJECT_VERSION_BUILD__" "$REV_HEAD" $TMP/app/config/bootstrap.php
 COMPRESSOR_JS="yuicompressor"
 COMPRESSOR_CSS="yuicompressor"
 
-for FILE in $(find -L $TMP/assets -name "*.css"); do
-	myth $FILE $FILE
-	msgok "Myth processed %s." $FILE
-done
+#for FILE in $(find -L $TMP/assets -name "*.css"); do
+	# myth $FILE $FILE
+	# msgok "Myth processed %s." $FILE
+#done
 if [[ "$OPTIMIZE" != "n" ]]; then
 	for FILE in $(find -L -E $TMP/assets -name "*.js"); do
 		compress_js $FILE $FILE
