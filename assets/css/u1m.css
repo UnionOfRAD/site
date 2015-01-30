@@ -227,8 +227,9 @@ a {
 .crumbs a,
 footer.main a,
 #content p a {
-  /* border-bottom: 1px solid #929294; */
-  border-bottom: 1px solid #e8e8e8;
+  /* border-bottom: 2px solid #e8e8e8; */
+  border-bottom: 1px solid #dedede;
+
 }
 .site .post-item .read-more:hover,
 .li3-docs ul a:hover,
