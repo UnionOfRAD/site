@@ -23,6 +23,7 @@ body {
   -moz-font-feature-settings: "liga" 1, "frac" 1, "kern" 1, "smcp" 1;
   font-feature-settings: "liga" 1, "frac" 1, "kern" 1, "smcp" 1;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 
