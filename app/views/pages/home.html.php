@@ -135,7 +135,11 @@ $this->set([
 	<section class="backers">
 		<article class="creators">
 			<div class="upper">
-				<?= $this->html->link($this->html->image('uor.png', ['class' => 'logo-uor']), 'https://github.com/UnionOfRAD', ['escape' => false, 'title' => 'Union of RAD']) ?>
+				<?= $this->html->link(
+					$this->html->image('uor.png', ['class' => 'logo-uor']),
+					'https://github.com/orgs/UnionOfRAD/people',
+					['escape' => false, 'title' => 'Union of RAD']
+				) ?>
 			</div>
 			<h1 class="h-gamma">Creators</h1>
 		</article>
