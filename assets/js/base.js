@@ -7,6 +7,7 @@ requirejs.config({
     'domready': '//cdnjs.cloudflare.com/ajax/libs/require-domReady/2.0.1/domReady.min',
     'jquery': '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min',
     'waypoints': '//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min',
+    'recaptcha': 'https://www.google.com/recaptcha/api'
 
     // li3 docs
     // Because how this uses web workers it must directly be included in the head.
@@ -17,7 +18,8 @@ requirejs.config({
     'sticky': { deps: ['jquery'] },
     'waypoints': { deps: ['jquery'] },
     'waypointsSticky': { deps: ['waypoints'] },
-    'balanceText': { deps: ['jquery'] }
+    'balanceText': { deps: ['jquery'] },
+    'recaptcha': { exports: 'grecaptcha' }
   }
 });
 

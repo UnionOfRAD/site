@@ -11,6 +11,10 @@ $config = [
 			'consumerSecret' => '',
 			'token' => '',
 			'tokenSecret' => ''
+		],
+		'recaptcha' => [
+			'siteKey' => '',
+			'secretKey' => ''
 		]
 	]
 ];

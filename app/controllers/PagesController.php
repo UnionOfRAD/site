@@ -8,10 +8,12 @@
 
 namespace app\controllers;
 
+use lithium\core\Environment;
 use lithium\core\Libraries;
 use app\models\Eurekas;
 use app\models\Projects;
 use app\models\Posts;
+use jsend\Response as JSendResponse;
 
 /**
  * This controller is used for serving static pages by name, which are located in the `/views/pages`
@@ -46,6 +48,41 @@ class PagesController extends \lithium\action\Controller {
 		$file = Libraries::get('lithium', 'path') . '/CONTRIBUTING.md';
 		$contributing = file_get_contents($file);
 	//	var_dump($contributing);
+	}
+
+	public function api_verify_captcha() {
+		$response = new JSendResponse();
+
+		if (!$verified = $this->_verify($this->request)) {
+			die('Failed to verify.');
+		}
+
+		if ($this->request->data['entity'] === 'mail.security') {
+			$response->success([
+				'email' => 'security@li3.me'
+			]);
+		}
+
+		$this->render(array(
+			'type' => $this->request->accepts(),
+			'data' => $response->to('array')
+		));
+	}
+
+	protected function _verify($request) {
+		$config = Environment::get('service.recaptcha');
+
+		$url  = 'https://www.google.com/recaptcha/api/siteverify';
+		$url .= '?secret=' . $config['secretKey'];
+		$url .= '&response=' .$this->request->data['token'];
+
+		$ch = curl_init($url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+		$result = json_decode(curl_exec($ch), true);
+		curl_close($ch);
+
+		return $result['success'] === true;
 	}
 
 	public function view() {

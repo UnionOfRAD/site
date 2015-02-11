@@ -1,5 +1,7 @@
 <?php
 
+use lithium\core\Environment;
+
 $this->set([
 	'meta' => [
 		'description' => 'This project is built by a thriving community of developers who value cutting-edge technology and concise, maintainable code. If you\'ve found a bug, or have an idea for a feature, we encourage your participation in making li3 better.'
@@ -7,6 +9,35 @@ $this->set([
 ])
 
 ?>
+<script>
+function verifyCaptcha(token) {
+	require(['jquery'], function($) {
+		$.ajax({
+			url: '/captcha/verify',
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				token: token,
+				entity: 'mail.security',
+			}
+		}).done(function(res) {
+			var $mail = $('.secured .mail');
+			var $captcha = $('.secured .captcha');
+
+			if (res.status === 'success') {
+				$mail.html(res.data.email);
+				$captcha.remove();
+			}
+		});
+	})
+};
+require(['jquery', 'recaptcha', 'domready!'], function($) {
+	$('.secured .mail').on('click', function(ev) {
+		ev.preventDefault();
+		$('.secured .captcha').removeClass('hide');
+	});
+});
+</script>
 <article class="has-aside-right use-section-spacing">
 	<h1 class="h-alpha"><?= $this->title('Development') ?></h1>
 
@@ -122,7 +153,27 @@ $this->set([
 			<article id="security">
 				<h1 class="h-delta">Security Vulnerabilities</h1>
 
-				<p>Security vulnerabilities are an especially sensitive class of bug and should be confidentially reported directly to security@-THIS .me HOSTNAME- </a>. Please do not disclose any details publicly. When reporting security vulnerabilities, please specify the version affected, include relevant reproduction code along with any other pertinent information relevant to addressing the vulnerability, such as 3rd-party software or components, etc.</p>
+				<p>
+					Security vulnerabilities are an especially sensitive class
+					of bug and <strong>should be confidentially reported directly</strong> to
+					the following email address:
+				</p>
+
+				<div class="secured">
+					<strong><a href="#" class="mail">secu…@… (click to show)</a></strong>
+					<div
+						class="g-recaptcha captcha hide"
+						data-sitekey="<?= Environment::get('service.recaptcha.siteKey') ?>"
+						data-callback="verifyCaptcha"
+					></div>
+				</div>
+
+				<p>
+					<strong>Please do not disclose any details publicly.</strong> When reporting security vulnerabilities, please
+					specify the version affected, include relevant reproduction code along with any other pertinent
+					information relevant to addressing the vulnerability, such as 3rd-party software or components,
+					etc.
+				</p>
 
 				<p>On reporting a confirmed security vulnerability, you can expect to receive a response from a core team member within 24 hours containing next steps as well as any follow-up questions necessary to produce a patch and publish a security update.</p>
 			</article>
