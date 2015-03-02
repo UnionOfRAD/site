@@ -104,16 +104,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.20",
+            "version": "v1.0.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3"
+                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/1bff8aa77a18f3616f468ed8000cf86a5725bac3",
-                "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
+                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
                 "shasum": ""
             },
             "replace": {
@@ -159,6 +159,7 @@
                 "Thelia",
                 "WolfCMS",
                 "agl",
+                "aimeos",
                 "annotatecms",
                 "bitrix",
                 "cakephp",
@@ -194,7 +195,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2015-01-11 03:51:11"
+            "time": "2015-02-18 17:17:01"
         },
         {
             "name": "davidpersson/textual",
@@ -663,12 +664,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/lithium.git",
-                "reference": "5556a693bdee0bd2bc7c7b38d3f5e8d20884a7ad"
+                "reference": "58accb272e634a250667b321a98bd060bf96f784"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/5556a693bdee0bd2bc7c7b38d3f5e8d20884a7ad",
-                "reference": "5556a693bdee0bd2bc7c7b38d3f5e8d20884a7ad",
+                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/58accb272e634a250667b321a98bd060bf96f784",
+                "reference": "58accb272e634a250667b321a98bd060bf96f784",
                 "shasum": ""
             },
             "require": {
@@ -703,7 +704,7 @@
                 "framework",
                 "lithium"
             ],
-            "time": "2015-02-02 14:57:20"
+            "time": "2015-03-02 20:14:24"
         },
         {
             "name": "unionofrad/manual",
@@ -711,12 +712,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/manual.git",
-                "reference": "79127e96d44184f49e669b0dfd61871a72407a41"
+                "reference": "c594cc64fdc2c5105e352fb033515af4d743b0c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/79127e96d44184f49e669b0dfd61871a72407a41",
-                "reference": "79127e96d44184f49e669b0dfd61871a72407a41",
+                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/c594cc64fdc2c5105e352fb033515af4d743b0c5",
+                "reference": "c594cc64fdc2c5105e352fb033515af4d743b0c5",
                 "shasum": ""
             },
             "require": {
@@ -737,7 +738,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2015-02-03 23:39:58"
+            "time": "2015-03-02 20:44:32"
         },
         {
             "name": "unionofrad/specs",
