@@ -79,13 +79,12 @@
 }
 .backers .logo-radify {
   position: relative;
-  top: 5px;
+  top: 3px;
 }
 .backers .logo-uor {
   position: relative;
-  top: -3px;
+  top: -10px;
   height: 70px;
-  /* filter: grayscale(100%); */
 }
 
 .backers .logo-disko {
