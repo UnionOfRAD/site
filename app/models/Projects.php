@@ -56,10 +56,10 @@ class Projects extends \lithium\data\Model {
 			],
 			 */
 			[
-				'launched' => 2013,
-				'title' => 'Cleptomanicx',
-				'url' => 'http://cleptomanicx.com/',
-				'client_name' => 'Welfare Distribution GmbH',
+				'launched' => 2014,
+				'title' => 'Kleiderei',
+				'url' => 'https://kleiderei.com/',
+				'client_name' => 'Kleiderei Hamburg UG',
 				'client_url' => null,
 				'author_name' => 'Atelier Disko',
 				'author_url' => 'http://atelierdisko.de'
