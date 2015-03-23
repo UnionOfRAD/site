@@ -262,6 +262,7 @@ header.main .main-nav {
 header.main {
   z-index: 100;
   position: fixed;
+  min-width: 1100px;
   top: 0;
   left: 0;
   width: 100%;
