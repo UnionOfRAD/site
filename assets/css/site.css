@@ -17,22 +17,6 @@
 
 /* Home
 ---------------------------------------------------------------- */
-.home .versions {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 15px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-}
-.home .version {
-  display: block;
-  color: white;
-  font-weight: bold;
-}
-.home .version:hover  {
-  color: black;
-}
-
 /* Fine tune spacing between sections. */
 .home section + section {
   margin-top: 150px;
@@ -171,8 +155,9 @@
 .eureka p {
   margin: 0;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 16px;
   line-height: 1.2;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .eureka p + pre {
   margin-top: 2em;
@@ -180,12 +165,12 @@
 .eureka pre {
   width: 100%;
 }
+.eureka pre > code {
+  margin-left: -7px;
+}
 
 /* Home: Hero
 ---------------------------------------------------------------- */
-.home .hero {
-  background: #f6f6f6;
-}
 .home .hero nav {
   margin-top: 3em;
 }
@@ -193,15 +178,18 @@
   overflow: hidden;
   position: relative;
   margin: -21px -60px 0 -60px;
-  padding: 5em 0 7em 0;
+  padding: 10% 0 10% 0;
+  height: calc(100vh - 59px);
+  max-height: 700px;
   color: white;
-  border-top: 5px solid #e6e6e6;
-  border-bottom: 5px solid #e6e6e6;
 }
 .home .hero .text {
   margin-left: 80px;
   position: relative;
   z-index: 10;
+}
+.home .hero h2 {
+  margin-top: 2px;
 }
 .home .hero h1, .home .hero h2 {
   display: inline-block;
@@ -216,33 +204,57 @@
   width: 200%;
   height: 200%;
 }
-.home .hero .area:nth-of-type(1) {
-  z-index: 6;
-  background-image: url(../img/bg2.png);
-  background-color: #00AEEF;
-  transform: rotate(210deg);
-}
 .home .hero .area:nth-of-type(2) {
   background-image: url(../img/bg2dark.png);
   background-color: #180274;
-  transform: rotate(45deg);
+  transform: rotate(26deg);
+  z-index: 6;
+  top: 50%;
+  left: 10%;
+  height: 250%;
+
+}
+.home .hero .area:nth-of-type(1) {
   z-index: 5;
-  left: -55%;
-  height: 100%;
+  background-image: url(../img/bg2.png);
+  background-color: #2F99A1;
+  transform: rotate(210deg);
+  width: 250%;
 }
 .home .hero .area:nth-of-type(3) {
   background-image: url(../img/bg2.png);
-  background-color: #CB057A;
+  background-color: #CB0532;
   transform: rotate(15deg);
   z-index: 4;
 }
+.home .hero nav > a + a {
+  margin-left: -5px;
+}
+.home .hero .source:before {
+  background-image: url(../ico/github_mark.png);
+}
 
-.home .hero .source {
-  background-image: url(../ico/GitHub-Mark-32px.png);
-  background-repeat: no-repeat;
-  background-position: 8px;
-  padding-left: 50px;
-  margin-left: 6px;
+.home .download {
+  display: inline-block;
+  margin-top: 100px;
+  min-width: 300px;
+
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: left;
+}
+.home .download__title {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.home .download__version {
+  font-size: 16px;
+  display: block;
+}
+.home .version {
+  display: block;
+  color: white;
+  font-weight: bold;
 }
 
 /* Present

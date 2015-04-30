@@ -65,7 +65,7 @@ code .keyword,
 }
 
 .token.boolean {
-  color: #E91E90;
+  color: #CB0532;
 }
 .token.number,
 code .hljs-number {
@@ -90,7 +90,7 @@ code .variable,
     color: #e6db74;
 }
 .token.keyword {
-    color: #2490A5;
+    color: #2F99A1;
 }
 
 /* Probably unused */

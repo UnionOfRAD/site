@@ -65,6 +65,15 @@ class Projects extends \lithium\data\Model {
 				'author_url' => 'http://atelierdisko.de'
 			],
 			[
+				'launched' => 2015,
+				'title' => 'Tocotronic',
+				'url' => 'http://tocotronic.de',
+				'client_name' => 'Universal Music',
+				'client_url' => null,
+				'author_name' => 'Atelier Disko',
+				'author_url' => 'http://atelierdisko.de'
+			],
+			[
 				'launched' => 2012,
 				'title' => 'dacardworld.com',
 				'url' => 'http://www.dacardworld.com/',

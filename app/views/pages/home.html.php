@@ -21,14 +21,14 @@ $this->set([
 			<h2 class="h-beta">li₃ is the fast, flexible and most RAD development framework for PHP</h1>
 			<nav>
 				<?= $this->html->link('Quickstart', ['library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser', 'lib' => 'manual', 'args' => ['quickstart']], ['class' => 'button large quickstart']) ?>
-				<?= $this->html->link('Source', 'https://github.com/unionofrad/lithium', ['class' => 'button large source']) ?>
-				<div class="versions">
-					<!-- <?= $this->html->link('Latest Stable 0.11.0', 'https://github.com/UnionOfRAD/lithium/tree/0.11', ['class' => 'version']) ?> -->
-					<!-- <?= $this->html->link('Latest Unstable 1.0.0-beta', 'https://github.com/UnionOfRAD/lithium/tree/1.0-beta', ['class' => 'version']) ?> -->
-					<?= $this->html->link('Latest 1.0.0-beta', 'https://github.com/UnionOfRAD/lithium/tree/1.0-beta', ['class' => 'version']) ?>
-					<?= $this->html->link('Next 1.0.0-dev', 'https://github.com/UnionOfRAD/lithium/tree/dev', ['class' => 'version']) ?>
-				</div>
+				<?= $this->html->link('Source', 'https://github.com/unionofrad/lithium', ['class' => 'button icon large source']) ?>
 			</nav>
+			<a href="https://github.com/UnionOfRAD/lithium/tree/1.0-beta" target="new" class="download button large">
+				<span class="download__title">Download</span>
+				<span class="download__version">
+					li₃ version 1.0.0-beta
+				</span>
+			</a>
 		</div>
 	</section>
 
@@ -201,10 +201,7 @@ $this->set([
 	<hr class="section-separator darkblue">
 
 	<section class="eureka">
-		<h1 class="h-gamma">Eureka Moment</h1>
-		<div>
-			<?php echo $eureka->body() ?>
-		</div>
+		<?php echo $eureka->body() ?>
 	</section>
 
 	<hr class="section-separator lightblue">

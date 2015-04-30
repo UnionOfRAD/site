@@ -41,13 +41,13 @@
   margin-right: -15px;
 }
 .li3-docs .note-hint {
-  border-color: rgb(0, 174, 239);
+  border-color: #2F99A1;
 }
 .li3-docs .note-info {
   border-color: #319931;
 }
 .li3-docs .note-caution {
-  border-color: #CB057A;
+  border-color: #CB0532;
 }
 .li3-docs .note pre {
   width: auto;
