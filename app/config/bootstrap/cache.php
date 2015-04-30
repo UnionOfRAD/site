@@ -67,7 +67,7 @@ if (!Environment::is('development')) {
 	Dispatcher::applyFilter('run', function($self, $params, $chain) {
 		$request = $params['request'];
 
-		if (true || !$request->is('get')) {
+		if (!$request->is('get')) {
 			return $chain->next($self, $params, $chain);
 		}
 		$cacheKey = 'fpc_' . md5($request->url);
