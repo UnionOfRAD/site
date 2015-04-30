@@ -32,9 +32,16 @@ compress_css /tmp/highlight.css /tmp/highlight.css
 fill "../img/bg2.png" "http://static.tumblr.com/5za9i77/x4Inc7ltk/bg2.png" /tmp/u1m.css
 fill "../img/bg2dark.png" "http://static.tumblr.com/5za9i77/Qtnnc7lwb/bg2dark.png" /tmp/u1m.css
 
-fill __STYLES_RESET__ "$(cat /tmp/reset.css)" /tmp/tumblr.html
-fill __STYLES_U1M__ "$(cat /tmp/u1m.css)" /tmp/tumblr.html
-fill __STYLES_HIGHLIGHT__ "$(cat /tmp/highlight.css)" /tmp/tumblr.html
+fill __YEAR__ $(date +%Y) /tmp/tumblr.html
+
+# This is pretty hacky, but I currently see
+# no better solution to work arround sed's limitations (escaping).
+php -r "echo str_replace('__STYLES_RESET__', file_get_contents('/tmp/reset.css'), file_get_contents('/tmp/tumblr.html'));" > /tmp/tumblr_temp.html
+mv -v /tmp/tumblr_temp.html /tmp/tumblr.html
+php -r "echo str_replace('__STYLES_U1M__', file_get_contents('/tmp/u1m.css'), file_get_contents('/tmp/tumblr.html'));" > /tmp/tumblr_temp.html
+mv -v /tmp/tumblr_temp.html /tmp/tumblr.html
+php -r "echo str_replace('__STYLES_HIGHLIGHT__', file_get_contents('/tmp/highlight.css'), file_get_contents('/tmp/tumblr.html'));" > /tmp/tumblr_temp.html
+mv -v /tmp/tumblr_temp.html /tmp/tumblr.html
 
 cat /tmp/tumblr.html
 
