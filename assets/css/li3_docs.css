@@ -35,7 +35,6 @@
 .li3-docs .note {
   border-left: 8px solid #e8e8e8;
   background: rgb(253,252,255);
-  padding: 15px;
   margin-left: -23px;
   margin-right: -15px;
 }
@@ -47,12 +46,13 @@
   margin-top: 1em;
   margin-bottom: .25em;
   opacity: .4;
+  padding-left: 15px;
 }
 .li3-docs .note-hint,
 .li3-docs .note-info,
 .li3-docs .note-caution,
 .li3-docs .deprecated {
-  padding: 20px;
+  padding: 15px;
   margin-top: 3em;
   margin-bottom: 2em;
 }
