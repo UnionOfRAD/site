@@ -93,10 +93,6 @@ require(['jquery', 'recaptcha', 'domready!'], function($) {
 					<li>Patches for BC-features against <em>next minor</em>. (i.e. 1.1)
 					<li>Patches for BC-breaking-features against <em>next major</em>. (i.e. 2.0)
 				</ol>
-				<li><strong>Integration</strong>:
-				finally, pull requests should be submitted against the
-				<code><?= $this->html->link('dev', 'https://github.com/UnionOfRAD/lithium/tree/dev')?></code>
-				branch for integration testing
 			</ul>
 		</article>
 
