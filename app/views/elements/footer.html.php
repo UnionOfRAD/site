@@ -16,6 +16,8 @@ use lithium\util\String;
 		<span class="separator">/</span>
 		<?= $this->html->link('Reddit', 'http://www.reddit.com/r/li3', ['target' => 'new']) ?>
 		<span class="separator">/</span>
+		<?= $this->html->link('SO', 'http://stackoverflow.com/questions/tagged/lithium', ['target' => 'new']) ?>
+		<span class="separator">/</span>
 		<span>#li3 on <a href="http://webchat.freenode.net/">Freenode</a></span>
 	</div>
 	<div class="testimonial">
