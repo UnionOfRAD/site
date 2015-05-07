@@ -15,8 +15,8 @@ $this->set([
 		<ul>
 			<li><?= $this->html->link('Get Help', '#get-help') ?>
 			<ul>
-				<li><?= $this->html->link('IRC', '#irc') ?>
 				<li><?= $this->html->link('Stack Overflow', '#so') ?>
+				<li><?= $this->html->link('IRC', '#irc') ?>
 				<li><?= $this->html->link('Issue Tracker', '#issues') ?>
 			</ul>
 			<li><?= $this->html->link('Elsewhere', '#elsewhere') ?>
@@ -47,10 +47,22 @@ $this->set([
 
 	<section id="get-help">
 		<h1 class="h-beta">Get Help</h1>
+
+		<article id="so">
+			<h1 class="h-gamma"><a href="http://stackoverflow.com/questions/tagged/lithium">Stack Overflow</a></h1>
+			<p>
+				Currently the best place where you get great help.
+				With over 200 questions already tagged, ask yours on
+				<a href="http://stackoverflow.com/questions/tagged/lithium">stackoverflow.com</a>
+				and <a href="http://stackoverflow.com/questions/tagged/lithium">use the
+				<em>lithium</em> tag</a>.
+			</p>
+		</article>
+
 		<article id="irc">
 			<h1 class="h-gamma">IRC</h1>
 			<p>
-				Currently the fastest way to get in contact with the
+				Get in contact with the
 				core developers and the community as a whole is through IRC, on the
 				<code>irc.freenode.net</code> server. There you can join the #li3
 				channel. We suggest to use an IRC client or alternatively
@@ -68,16 +80,6 @@ $this->set([
 				]) ?>
 			</p>
 			<p></p>
-		</article>
-
-		<article id="so">
-			<h1 class="h-gamma"><a href="http://stackoverflow.com/questions/tagged/lithium">Stack Overflow</a></h1>
-			<p>
-				With over 200 questions already tagged, ask yours on
-				<a href="http://stackoverflow.com/questions/tagged/lithium">stackoverflow.com</a>
-				and <a href="http://stackoverflow.com/questions/tagged/lithium">use the
-				<em>lithium</em> tag</a>.
-			</p>
 		</article>
 
 		<article id="issues">
