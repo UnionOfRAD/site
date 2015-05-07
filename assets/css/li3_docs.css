@@ -31,33 +31,41 @@
   display: none;
 }
 
+.li3-docs .deprecated,
 .li3-docs .note {
-  padding: 20px;
-  margin: 3em 0 2em 0;
   border-left: 8px solid #e8e8e8;
   background: rgb(253,252,255);
   padding: 15px;
   margin-left: -23px;
   margin-right: -15px;
 }
+.li3-docs .note pre {
+  width: auto;
+}
+
 .li3-docs .note-version {
-  opacity: .4;
-  padding-top: 0;
-  padding-bottom: 0;
   margin-top: 1em;
   margin-bottom: .25em;
+  opacity: .4;
 }
+.li3-docs .note-hint,
+.li3-docs .note-info,
+.li3-docs .note-caution,
+.li3-docs .deprecated {
+  padding: 20px;
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
 .li3-docs .note-hint {
   border-color: #2F99A1;
 }
 .li3-docs .note-info {
   border-color: #319931;
 }
+.li3-docs .deprecated,
 .li3-docs .note-caution {
   border-color: #CB0532;
-}
-.li3-docs .note pre {
-  width: auto;
 }
 
 .li3-docs #parent {
