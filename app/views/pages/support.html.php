@@ -20,7 +20,6 @@ $this->set([
 				<li><?= $this->html->link('Issue Tracker', '#issues') ?>
 			</ul>
 			<li><?= $this->html->link('Elsewhere', '#elsewhere') ?>
-			<li><?= $this->html->link('Community Run Projects', '#community-run') ?>
 			<li><?= $this->html->link('Community Guidelines', '#guidelines') ?>
 	</nav>
 
@@ -105,17 +104,6 @@ $this->set([
 	</section>
 
 	<hr class="section-separator darkblue">
-
-	<section id="community-run">
-		<h1 class="h-beta">Community-Run Projects</h1>
-		<p>
-			Make sure to bookmark
-			<strong><?= $this->html->link('Lithium101', 'http://lithium101.com/', array('rel' => 'nofollow')) ?></strong>
-			an unofficial community resource for the li3 PHP framework indexing articles, tutorials, code snippets and libraries.
-		</p>
-	</section>
-
-	<hr class="section-separator red">
 
 	<section id="guidelines">
 		<h1 class="h-beta">Community Guidelines</h1>
