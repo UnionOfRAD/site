@@ -86,6 +86,14 @@ require(['jquery', 'recaptcha', 'domready!'], function($) {
 				as appropriate, or updates to existing docs
 
 				<li><strong>Integration</strong>:
+				finally, pull requests should be submitted against their respective version
+				branch. The following 3 rules help, to determine the correct version branch.
+				<ol>
+					<li>Patches for bug fixes against <em>next stable</em> (i.e. 1.0).
+					<li>Patches for BC-features against <em>next minor</em>. (i.e. 1.1)
+					<li>Patches for BC-breaking-features against <em>next major</em>. (i.e. 2.0)
+				</ol>
+				<li><strong>Integration</strong>:
 				finally, pull requests should be submitted against the
 				<code><?= $this->html->link('dev', 'https://github.com/UnionOfRAD/lithium/tree/dev')?></code>
 				branch for integration testing
