@@ -14,9 +14,9 @@
         "unionofrad/li3_docs": "dev-dev as 1.0.0-dev",
         "unionofrad/li3_bot": "dev-master as 1.0.0-dev",
         "davidpersson/textual": "1.*",
-        "unionofrad/manual": "dev-dev as 1.0.0-dev",
+        "unionofrad/manual": "dev-master",
         "unionofrad/specs": "dev-master as 1.0.0-dev",
-        "cebe/markdown": "0.9.*",
+        "cebe/markdown": "1.*",
         "atelierdisko/jsend": "0.*"
     },
     "config": {
