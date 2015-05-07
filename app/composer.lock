@@ -607,12 +607,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/li3_docs.git",
-                "reference": "34f3eddd5955edb4005e75bbd2d5cd874bdf4fe5"
+                "reference": "74ba17ccc67e574e6c92631d0f2a98597daced20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/li3_docs/zipball/34f3eddd5955edb4005e75bbd2d5cd874bdf4fe5",
-                "reference": "34f3eddd5955edb4005e75bbd2d5cd874bdf4fe5",
+                "url": "https://api.github.com/repos/UnionOfRAD/li3_docs/zipball/74ba17ccc67e574e6c92631d0f2a98597daced20",
+                "reference": "74ba17ccc67e574e6c92631d0f2a98597daced20",
                 "shasum": ""
             },
             "require": {
@@ -666,7 +666,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2015-05-07 14:25:21"
+            "time": "2015-05-07 14:59:34"
         },
         {
             "name": "unionofrad/lithium",
@@ -717,12 +717,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/manual.git",
-                "reference": "b69b5a80568e3b5d7c7a49e2121adb7f3ce53c31"
+                "reference": "f0100662a1f721f64c652e41c4081e0efa4886b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/b69b5a80568e3b5d7c7a49e2121adb7f3ce53c31",
-                "reference": "b69b5a80568e3b5d7c7a49e2121adb7f3ce53c31",
+                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/f0100662a1f721f64c652e41c4081e0efa4886b7",
+                "reference": "f0100662a1f721f64c652e41c4081e0efa4886b7",
                 "shasum": ""
             },
             "require": {
@@ -743,7 +743,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2015-05-07 13:53:06"
+            "time": "2015-05-07 16:08:38"
         },
         {
             "name": "unionofrad/specs",
