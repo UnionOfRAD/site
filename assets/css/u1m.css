@@ -577,3 +577,22 @@ button.large,
 
 .error .try li:before    { content: "➜ "; }
 .error .reason li:before { content: "✖ "; }
+
+/* Tables
+---------------------------------------------------------------- */
+table {
+  width: 100%;
+  text-align: left;
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+}
+tbody tr {
+  border-top: 1px solid #e8e8e8;
+
+}
+table td:first-child {
+  padding-left: 10px;
+}
+table td:last-child {
+  padding-right: 10px;
+}
