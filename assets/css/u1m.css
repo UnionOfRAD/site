@@ -586,9 +586,14 @@ table {
   margin-top: 1.5em;
   margin-bottom: 2em;
 }
-tbody tr {
-  border-top: 1px solid #e8e8e8;
-
+td {
+  vertical-align: top;
+}
+tr {
+  border-bottom: 1px solid #e8e8e8;
+}
+tbody tr:last-child {
+  border-bottom: none;
 }
 table td:first-child {
   padding-left: 10px;
