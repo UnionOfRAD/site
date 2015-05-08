@@ -180,8 +180,8 @@
   position: relative;
   margin: -21px -60px 0 -60px;
   padding: 10% 0 10% 0;
-  height: calc(100vh - 59px);
-  max-height: 700px;
+  height: calc(100vh - 150px);
+  max-height: 1000px;
   color: white;
 }
 .home .hero .text {
