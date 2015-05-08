@@ -53,7 +53,7 @@ $this->set([
 		<article>
 			<h1 class="h-gamma">A framework of firsts</h1>
 			<p>
-				li3 is the first and only major PHP framework built from
+				li₃ is the first and only major PHP framework built from
 				the ground up for PHP 5.3+, and the first to break ground into major
 				new technologies, including bridging the gap between relational and
 				non-relational databases through a single, unified API.
@@ -71,8 +71,8 @@ $this->set([
 				to override or replace core framework classes.
 			</p>
 			<p>
-				li3 is the first framework to give you the best of both worlds, without
-				compromising either. In fact, li3's API is intentionally designed to
+				li₃ is the first framework to give you the best of both worlds, without
+				compromising either. In fact, the framework's API is intentionally designed to
 				allow you to "grow out of" the framework and into your own custom code over
 				the course of your application's lifecycle, if your needs require.
 			</p>
@@ -81,8 +81,8 @@ $this->set([
 		<article>
 			<h1 class="h-gamma">Technology</h1>
 			<p>
-				li3 takes full advantage of the latest PHP 5.3 features, including
-				namespaces, late static binding and closures. li3's innovative
+				li₃ takes full advantage of the latest PHP language features, including
+				namespaces, late static binding and closures. li₃'s innovative
 				<?= $this->html->link('method filter system', [
 					'library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser',
 					'lib' => 'lithium', 'args' => ['util/collection/Filters']
@@ -92,12 +92,12 @@ $this->set([
 				parameters before, and return values after.
 			</p>
 			<p>
-				li3 also complies with PSR-0, the PHP 5.3 namespacing standard, allowing you
-				to easily integrate other PHP 5.3 standard libraries and frameworks with
-				li3 applications, and vice-versa.
+				The framework also complies with PSR-4, the PHP namespacing standard, allowing you
+				to easily integrate other PHP standard libraries and frameworks with
+				your applications, and vice-versa.
 			</p>
 			<p>
-				li3 integrates the latest storage technologies, including MongoDB,
+				The framework integrates the latest storage technologies, including MongoDB,
 				CouchDB and Redis, with plugin support for Cassandra, ElasticSearch and
 				others.
 			</p>
@@ -106,14 +106,14 @@ $this->set([
 		<article>
 			<h1 class="h-gamma">Flexibility</h1>
 			<p>
-				li3 gives you full control over your application, from filters to
+				li₃ gives you full control over your application, from filters to
 				dynamically modify framework internals, to dynamic dependencies to extend
 				and replace core classes with application or plugin classes, to heavy use
 				of adapter-oriented configurations, to make it seamless to move between
 				different technologies and options.
 			</p>
 			<p>
-				Every component of the li3 framework stack is replaceable through the
+				Every component of the framework stack is replaceable through the
 				robust plugin architecture. Swap out the default ORM / ODM implementation
 				for
 				<?= $this->html->link('Doctrine 2', 'https://github.com/mariano/li3_doctrine2/') ?>
