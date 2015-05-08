@@ -3,7 +3,7 @@
 ;
 
 [program:NAME_irc_bot]
-command=php -f PROJECT/app/libraries/unionofrad/lithium/lithium/console/lithium.php -- --app=PROJECT/app bot
+command=php -f PROJECT/app/libraries/lithium/console/lithium.php -- --app=PROJECT/app bot
 numprocs=1
 process_name=%(program_name)s_%(process_num)02d
 redirect_stderr=true
