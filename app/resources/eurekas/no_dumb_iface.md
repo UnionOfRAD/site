@@ -1,5 +1,5 @@
 
-[Never dumb down the interface](www.catb.org/esr/writings/taouu/html/ch01s03.html), they said. 
+[Never dumb down the interface](http://www.catb.org/esr/writings/taouu/html/ch01s03.html), they said. 
 Not everything can and should be abstracted away. In li3 we allow you to access underlying
 objects wherever possible.
 
