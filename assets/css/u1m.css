@@ -252,7 +252,10 @@ footer.main a:hover,
 }
 
 /* headline link */
-h3 a {
+.headline-nav {
+  display: inline-block;
+}
+.headline-nav a {
   font-size: 14px;
   font-weight: normal;
   margin-left: 5px;
