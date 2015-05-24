@@ -225,6 +225,7 @@ a {
   color: #1b1b1b;
   text-decoration: none;
 }
+h3 a,
 .site .post-item .read-more,
 .li3-docs ul a,
 .li3-docs #parent a,
@@ -232,10 +233,11 @@ a {
 .crumbs a,
 footer.main a,
 #content p a {
-  /* border-bottom: 2px solid #e8e8e8; */
+  font-family: 'Anonymous Pro', sans-serif;
   border-bottom: 1px solid #dedede;
-
 }
+
+h3 a:hover,
 .site .post-item .read-more:hover,
 .li3-docs ul a:hover,
 .li3-docs #parent a:hover,
@@ -247,6 +249,13 @@ footer.main a:hover,
 }
 #content .aside a {
   border: none;
+}
+
+/* headline link */
+h3 a {
+  font-size: 14px;
+  font-weight: normal;
+  margin-left: 5px;
 }
 
 /* Header
