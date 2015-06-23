@@ -71,8 +71,6 @@ $this->set([
 			<li><a href="https://twitter.com/#!/search?q=%23li3">Follow the #li3 hashtag on Twitter</a></li>
 			<li><a href="https://twitter.com/#!/UnionOfRAD/lithium">Union of RAD's li3 List</a></li>
 			<li><a href="http://www.reddit.com/r/li3/">Official li3 Reddit</a></li>
-			<li><a href="http://www.last.fm/group/li3">Official li3 last.fm group</a></li>
-			<li><a href="http://www.meetup.com/lithium/">li3 meetup group</a></li>
 		</ul>
 	</section>
 
