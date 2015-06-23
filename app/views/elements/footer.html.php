@@ -16,7 +16,7 @@ use lithium\util\String;
 		<span class="separator">/</span>
 		<?= $this->html->link('Reddit', 'http://www.reddit.com/r/li3', ['target' => 'new']) ?>
 		<span class="separator">/</span>
-		<?= $this->html->link('SO', 'http://stackoverflow.com/questions/tagged/lithium', ['target' => 'new']) ?>
+		<?= $this->html->link('Stack Overflow', 'https://stackoverflow.com/questions/tagged/lithium', ['target' => 'new']) ?>
 	</div>
 	<div class="testimonial">
 		<?= $this->html->image($testimonial['url'], ['alt' => 'Testimonial Image']) ?>
