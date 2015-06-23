@@ -14,10 +14,6 @@ $library = $this->request()->library;
 		if ($this->title()) {
 			$title[] = $this->title();
 		}
-
-		if ($library === 'li3_bot') {
-			$title[] = 'Bot';
-		}
 		$title[] = 'li3';
 
 		echo implode(' – ', $title);
@@ -32,9 +28,6 @@ $library = $this->request()->library;
 			'u1m'
 		];
 		switch ($library) {
-			case 'li3_bot':
-				$styles[] = 'li3_bot';
-			break;
 			case 'li3_docs':
 				$styles[] = 'li3_docs';
 				$styles[] = 'highlight';
@@ -83,12 +76,6 @@ $bodyClasses[] = str_replace('_', '-', $library ?: 'site');
 				<?php echo $this->_view->render(
 					array('element' => 'crumbs'), compact('object'), array('library' => 'li3_docs')
 				); ?>
-			<?php elseif ($library == 'li3_bot'): ?>
-				<?php if (isset($breadcrumbs)): ?>
-					<?php echo $this->_view->render(
-						array('element' => 'crumbs'), ['data' => $breadcrumbs], array('library' => 'li3_bot')
-					); ?>
-				<?php endif; ?>
 			<?php endif ?>
 			<div id="content">
 				<?php echo $this->content() ?>

@@ -14,11 +14,6 @@ $this->set([
 		<h1 class="h-gamma">Contents</h1>
 		<ul>
 			<li><?= $this->html->link('Get Help', '#get-help') ?>
-			<ul>
-				<li><?= $this->html->link('Stack Overflow', '#so') ?>
-				<li><?= $this->html->link('IRC', '#irc') ?>
-				<li><?= $this->html->link('Issue Tracker', '#issues') ?>
-			</ul>
 			<li><?= $this->html->link('Elsewhere', '#elsewhere') ?>
 			<li><?= $this->html->link('Community Guidelines', '#guidelines') ?>
 	</nav>
@@ -48,47 +43,23 @@ $this->set([
 	<section id="get-help">
 		<h1 class="h-beta">Get Help</h1>
 
-		<article id="so">
-			<h1 class="h-gamma"><a href="http://stackoverflow.com/questions/tagged/lithium">Stack Overflow</a></h1>
-			<p>
-				Currently the best place where you get great help.
-				With over 200 questions already tagged, ask yours on
-				<a href="http://stackoverflow.com/questions/tagged/lithium">stackoverflow.com</a>
-				and <a href="http://stackoverflow.com/questions/tagged/lithium">use the
-				<em>lithium</em> tag</a>.
-			</p>
-		</article>
-
-		<article id="irc">
-			<h1 class="h-gamma">IRC</h1>
-			<p>
-				Get in contact with the
-				core developers and the community as a whole is through IRC, on the
-				<code>irc.freenode.net</code> server. There you can join the #li3
-				channel. We suggest to use an IRC client or alternatively
-				<a href="http://webchat.freenode.net/">Freenode's Webchat interface</a>.
-				Please note that anything more than one line of code should not be
-				put in the IRC channel. For longer code snippets instead use
-				<a href="https://gist.github.com">Gists</a>.
-			</p>
-			<p>
-				<code>#li3</code> on freenode
-				- <em>General discussion and support questions.</em>
-				- <?= $this->html->link('logs', [
-					'controller' => 'logs', 'library' => 'li3_bot',
-					'action' => 'index', 'channel' => 'li3'
-				]) ?>
-			</p>
-			<p></p>
-		</article>
-
-		<article id="issues">
-			<h1 class="h-gamma"><a href="https://github.com/UnionOfRAD/lithium/issues">GitHub Issue Tracker</a></h1>
-			<p>
-				Although not dedicated for support questions you may find the discussions
-				happening on pull requests and tickets in the <a href="https://github.com/UnionOfRAD/lithium/issues">issue tracker</a> helpful.
-			</p>
-		</article>
+		<p>
+			Currently the best place to get great support is Stack Overflow.
+			With over 200 questions already tagged, ask yours on
+			<a href="http://stackoverflow.com/questions/tagged/lithium">stackoverflow.com</a>
+			and remember to <a href="http://stackoverflow.com/questions/tagged/lithium">use the
+			<em>lithium</em> tag</a>.
+		</p>
+		<p>
+			Members of the community and core team will regularly try to answer your questions.
+		</p>
+		<p>
+		Found a bug?
+		<?= $this->html->link(
+			'Open a ticket in our issue tracker', '
+			https://github.com/UnionOfRAD/lithium/issues'
+		) ?>.
+		</p>
 	</section>
 
 	<hr class="section-separator lightblue">

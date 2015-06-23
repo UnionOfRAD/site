@@ -102,17 +102,12 @@ require(['jquery', 'recaptcha', 'domready!'], function($) {
 			<h1 class="h-gamma">Types of Contributions</h1>
 
 			<p>
-				Whatever you'd like to contribute to the project, you may wish to discuss it with the core team and development community before beginning your work. This can happen in one of two ways: you can <a href="https://github.com/UnionOfRAD/lithium/issues/new">open an appropriately-labeled issue</a> in GitHub, or you can chat directly with a core team member by joining the <a href="irc://irc.freenode.net/#li3-core">#li3-core</a>
-				(<?= $this->html->link('logs', [
-					'controller' => 'logs', 'library' => 'li3_bot',
-					'action' => 'index', 'channel' => 'li3-core'
-				]) ?>)
-				IRC channel on Freenode.
+				Whatever you'd like to contribute to the project, you may wish to discuss it with the core team and development community before beginning your work. <a href="https://github.com/UnionOfRAD/lithium/issues/new">Open an appropriately-labeled issue</a> in GitHub.
 			</p>
 
-			<p>We value collaboration and believe that the best solutions are usually found through use-case-oriented discussions and—occasionally—some healthy debate. If you have an idea for a killer feature or think you've found a bug, please talk it over with a seasoned member of the team on IRC.</p>
+			<p>We value collaboration and believe that the best solutions are usually found through use-case-oriented discussions and—occasionally—some healthy debate. If you have an idea for a killer feature or think you've found a bug, please talk it over with a seasoned member of the team.</p>
 
-			<p>Combining great new ideas with the wisdom of experience will help us create the best possible features for li3.  Likewise, talking through a bug with a core team member will help us ensure the best possible fix.  We're striving to maintain a lean, clean core and want to avoid introducing patches for symptoms of an underlying flaw.</p>
+			<p>Combining great new ideas with the wisdom of experience will help us create the best possible features for the framework.  Likewise, talking through a bug with a core team member will help us ensure the best possible fix.  We're striving to maintain a lean, clean core and want to avoid introducing patches for symptoms of an underlying flaw.</p>
 
 			<hr class="section-separator">
 
@@ -194,7 +189,7 @@ require(['jquery', 'recaptcha', 'domready!'], function($) {
 					<li>Translations</li>
 				</ul>
 
-				<p>If you'd like to help, simply <a href="https://github.com/UnionOfRAD/manual">fork the project on GitHub</a>, <a href="https://github.com/UnionOfRAD/manual/issues">open a new issue</a>, or get in contact with one of the core team members. You can give us a shout in channel #li3 on server Freenode, or send an email to anderson.johnd at gmail dot com.</p>
+				<p>If you'd like to help, simply <a href="https://github.com/UnionOfRAD/manual">fork the project on GitHub</a>, <a href="https://github.com/UnionOfRAD/manual/issues">open a new pull request</a> and get in contact with one of the core team members.</p>
 			</article>
 		</article>
 
