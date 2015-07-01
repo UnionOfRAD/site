@@ -42,15 +42,10 @@
   width: auto;
 }
 
-.li3-docs .note-version {
-  margin-top: 1em;
-  margin-bottom: .25em;
-  opacity: .4;
-  padding-left: 15px;
-}
 .li3-docs .note-hint,
 .li3-docs .note-info,
 .li3-docs .note-caution,
+.li3-docs .note-version,
 .li3-docs .deprecated {
   padding: 15px;
   margin-top: 3em;
@@ -66,6 +61,11 @@
 .li3-docs .deprecated,
 .li3-docs .note-caution {
   border-color: #CB0532;
+}
+.li3-docs .note-version {
+  margin-top: 1em;
+  margin-bottom: .25em;
+  border-color: #180274;
 }
 
 .li3-docs #parent {
