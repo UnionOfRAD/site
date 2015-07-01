@@ -687,12 +687,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/manual.git",
-                "reference": "d7208411dc842b5935fc555346c1208c8671d81a"
+                "reference": "bdb6e1dd25c3081ddb5dc8460efaca1b14a370a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/d7208411dc842b5935fc555346c1208c8671d81a",
-                "reference": "d7208411dc842b5935fc555346c1208c8671d81a",
+                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/bdb6e1dd25c3081ddb5dc8460efaca1b14a370a6",
+                "reference": "bdb6e1dd25c3081ddb5dc8460efaca1b14a370a6",
                 "shasum": ""
             },
             "require": {
@@ -713,7 +713,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2015-05-09 12:56:16"
+            "time": "2015-07-01 11:07:01"
         },
         {
             "name": "unionofrad/specs",
