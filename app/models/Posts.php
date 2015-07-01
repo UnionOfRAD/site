@@ -48,7 +48,7 @@ class Posts extends \lithium\data\Model {
 
 		$results = (new Collection(['data' => $results]))
 			->find(function($item) {
-				return $item->timestamp >= strtotime('-4 months');
+				return $item->timestamp >= strtotime('-2 months');
 			})
 			->each(function($item) {
 				return static::create((array) $item);
