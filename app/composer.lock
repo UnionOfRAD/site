@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8d699d1f65cb3a7cb5d0829f6fd54e57",
+    "hash": "ff472a4f5795695e89ced278d1144b6e",
     "packages": [
         {
             "name": "atelierdisko/jsend",
@@ -272,16 +272,16 @@
         },
         {
             "name": "fzaninotto/faker",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "010c7efedd88bf31141a02719f51fb44c732d5a0"
+                "reference": "d0190b156bcca848d401fb80f31f504f37141c8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/010c7efedd88bf31141a02719f51fb44c732d5a0",
-                "reference": "010c7efedd88bf31141a02719f51fb44c732d5a0",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/d0190b156bcca848d401fb80f31f504f37141c8d",
+                "reference": "d0190b156bcca848d401fb80f31f504f37141c8d",
                 "shasum": ""
             },
             "require": {
@@ -291,14 +291,18 @@
                 "phpunit/phpunit": "~4.0",
                 "squizlabs/php_codesniffer": "~1.5"
             },
+            "suggest": {
+                "ext-intl": "*"
+            },
             "type": "library",
             "extra": {
-                "branch-alias": []
+                "branch-alias": {
+                    "dev-master": "1.5.x-dev"
+                }
             },
             "autoload": {
-                "psr-0": {
-                    "Faker": "src/",
-                    "Faker\\PHPUnit": "test/"
+                "psr-4": {
+                    "Faker\\": "src/Faker/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -316,7 +320,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2014-06-04 14:43:02"
+            "time": "2015-05-29 06:29:14"
         },
         {
             "name": "guzzle/guzzle",
@@ -462,21 +466,20 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.6.6",
-            "target-dir": "Symfony/Component/EventDispatcher",
+            "version": "v2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "70f7c8478739ad21e3deef0d977b38c77f1fb284"
+                "reference": "be3c5ff8d503c46768aeb78ce6333051aa6f26d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/70f7c8478739ad21e3deef0d977b38c77f1fb284",
-                "reference": "70f7c8478739ad21e3deef0d977b38c77f1fb284",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/be3c5ff8d503c46768aeb78ce6333051aa6f26d9",
+                "reference": "be3c5ff8d503c46768aeb78ce6333051aa6f26d9",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.9"
             },
             "require-dev": {
                 "psr/log": "~1.0",
@@ -493,11 +496,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
+                "psr-4": {
                     "Symfony\\Component\\EventDispatcher\\": ""
                 }
             },
@@ -507,17 +510,17 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony EventDispatcher Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-03-13 17:37:22"
+            "homepage": "https://symfony.com",
+            "time": "2015-06-08 09:37:21"
         },
         {
             "name": "tumblr/tumblr",
@@ -529,7 +532,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tumblr/tumblr.php/zipball/32fef6e6fb047371607a33e5665bf72da7dbad7d",
+                "url": "https://api.github.com/repos/tumblr/tumblr.php/zipball/efbae0a1a4079eeb8b895a40314b04499e63b1b7",
                 "reference": "32fef6e6fb047371607a33e5665bf72da7dbad7d",
                 "shasum": ""
             },
@@ -569,50 +572,17 @@
             "time": "2014-08-12 07:19:42"
         },
         {
-            "name": "unionofrad/li3_bot",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/UnionOfRAD/li3_bot.git",
-                "reference": "be1bcc4f3032b1e50a89d7f06e54e16269e18a82"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/li3_bot/zipball/be1bcc4f3032b1e50a89d7f06e54e16269e18a82",
-                "reference": "be1bcc4f3032b1e50a89d7f06e54e16269e18a82",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "*",
-                "php": ">=5.3"
-            },
-            "type": "lithium-library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-clause"
-            ],
-            "description": "IRC bot for li3.",
-            "homepage": "https://github.com/UnionOfRAD/li3_bot",
-            "keywords": [
-                "bot",
-                "irc",
-                "li3",
-                "lithium"
-            ],
-            "time": "2015-01-30 18:42:10"
-        },
-        {
             "name": "unionofrad/li3_docs",
             "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/li3_docs.git",
-                "reference": "74ba17ccc67e574e6c92631d0f2a98597daced20"
+                "reference": "136504ea0a1dabc2f044c111690777c9409f6309"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/li3_docs/zipball/74ba17ccc67e574e6c92631d0f2a98597daced20",
-                "reference": "74ba17ccc67e574e6c92631d0f2a98597daced20",
+                "url": "https://api.github.com/repos/UnionOfRAD/li3_docs/zipball/136504ea0a1dabc2f044c111690777c9409f6309",
+                "reference": "136504ea0a1dabc2f044c111690777c9409f6309",
                 "shasum": ""
             },
             "require": {
@@ -666,7 +636,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2015-05-07 14:59:34"
+            "time": "2015-05-24 12:09:55"
         },
         {
             "name": "unionofrad/lithium",
@@ -674,12 +644,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/lithium.git",
-                "reference": "6db373145a6a7b8dbcb21718c194459290b60744"
+                "reference": "34b22483d9553c06696b8d3b3c87a667e3a261b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/6db373145a6a7b8dbcb21718c194459290b60744",
-                "reference": "6db373145a6a7b8dbcb21718c194459290b60744",
+                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/34b22483d9553c06696b8d3b3c87a667e3a261b9",
+                "reference": "34b22483d9553c06696b8d3b3c87a667e3a261b9",
                 "shasum": ""
             },
             "require": {
@@ -709,7 +679,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2015-05-07 14:52:43"
+            "time": "2015-06-21 07:47:03"
         },
         {
             "name": "unionofrad/manual",
@@ -717,12 +687,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/manual.git",
-                "reference": "a5a44cd9a60e04ee12ea549789b7fb3bd858b08d"
+                "reference": "d7208411dc842b5935fc555346c1208c8671d81a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/a5a44cd9a60e04ee12ea549789b7fb3bd858b08d",
-                "reference": "a5a44cd9a60e04ee12ea549789b7fb3bd858b08d",
+                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/d7208411dc842b5935fc555346c1208c8671d81a",
+                "reference": "d7208411dc842b5935fc555346c1208c8671d81a",
                 "shasum": ""
             },
             "require": {
@@ -743,7 +713,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2015-05-08 13:36:02"
+            "time": "2015-05-09 12:56:16"
         },
         {
             "name": "unionofrad/specs",
@@ -798,12 +768,6 @@
             "alias": "1.0.0-dev",
             "alias_normalized": "1.0.0.0-dev",
             "version": "9999999-dev",
-            "package": "unionofrad/li3_bot"
-        },
-        {
-            "alias": "1.0.0-dev",
-            "alias_normalized": "1.0.0.0-dev",
-            "version": "9999999-dev",
             "package": "unionofrad/specs"
         }
     ],
@@ -812,7 +776,6 @@
         "tumblr/tumblr": 20,
         "unionofrad/lithium": 20,
         "unionofrad/li3_docs": 20,
-        "unionofrad/li3_bot": 20,
         "unionofrad/manual": 20,
         "unionofrad/specs": 20
     },
