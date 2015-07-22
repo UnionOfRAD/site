@@ -466,16 +466,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.7.1",
+            "version": "v2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "be3c5ff8d503c46768aeb78ce6333051aa6f26d9"
+                "reference": "9310b5f9a87ec2ea75d20fec0b0017c77c66dac3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/be3c5ff8d503c46768aeb78ce6333051aa6f26d9",
-                "reference": "be3c5ff8d503c46768aeb78ce6333051aa6f26d9",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/9310b5f9a87ec2ea75d20fec0b0017c77c66dac3",
+                "reference": "9310b5f9a87ec2ea75d20fec0b0017c77c66dac3",
                 "shasum": ""
             },
             "require": {
@@ -520,7 +520,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-08 09:37:21"
+            "time": "2015-06-18 19:21:56"
         },
         {
             "name": "tumblr/tumblr",
@@ -644,12 +644,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/lithium.git",
-                "reference": "34b22483d9553c06696b8d3b3c87a667e3a261b9"
+                "reference": "457c6aa06a84e0ac7d00b728bd27627d9524e47a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/34b22483d9553c06696b8d3b3c87a667e3a261b9",
-                "reference": "34b22483d9553c06696b8d3b3c87a667e3a261b9",
+                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/457c6aa06a84e0ac7d00b728bd27627d9524e47a",
+                "reference": "457c6aa06a84e0ac7d00b728bd27627d9524e47a",
                 "shasum": ""
             },
             "require": {
@@ -679,7 +679,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2015-06-21 07:47:03"
+            "time": "2015-07-21 17:59:01"
         },
         {
             "name": "unionofrad/manual",
