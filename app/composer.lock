@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ff472a4f5795695e89ced278d1144b6e",
+    "hash": "07daa398308ab6ecbd7a9573edff9ef6",
     "packages": [
         {
             "name": "atelierdisko/jsend",
@@ -466,7 +466,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.7.2",
+            "version": "v2.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
@@ -573,22 +573,23 @@
         },
         {
             "name": "unionofrad/li3_docs",
-            "version": "dev-dev",
+            "version": "v1.0.0-rc2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/li3_docs.git",
-                "reference": "136504ea0a1dabc2f044c111690777c9409f6309"
+                "reference": "470bf9848b7247a48de823f06f4e10ba5890ad52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/li3_docs/zipball/136504ea0a1dabc2f044c111690777c9409f6309",
-                "reference": "136504ea0a1dabc2f044c111690777c9409f6309",
+                "url": "https://api.github.com/repos/UnionOfRAD/li3_docs/zipball/470bf9848b7247a48de823f06f4e10ba5890ad52",
+                "reference": "470bf9848b7247a48de823f06f4e10ba5890ad52",
                 "shasum": ""
             },
             "require": {
                 "cebe/markdown": "1.*",
-                "composer/installers": "*",
-                "php": ">=5.3"
+                "composer/installers": "1.*",
+                "php": ">=5.3",
+                "unionofrad/lithium": "1.0.0-rc1"
             },
             "type": "lithium-library",
             "notification-url": "https://packagist.org/downloads/",
@@ -597,37 +598,14 @@
             ],
             "authors": [
                 {
-                    "name": "gwoo",
-                    "homepage": "https://github.com/gwoo"
+                    "name": "Union of RAD"
                 },
                 {
-                    "name": "Nate Abele",
-                    "email": "nate.abele@gmail.com",
-                    "homepage": "http://nateabele.com/"
-                },
-                {
-                    "name": "David Persson",
-                    "email": "nperson@gmx.de",
-                    "homepage": "http://nperson.de"
-                },
-                {
-                    "name": "Jon Adams",
-                    "email": "pointlessjon@me.com",
-                    "homepage": "http://daetal.us"
-                },
-                {
-                    "name": "John Anderson",
-                    "email": "anderson.johnd@gmail.com",
-                    "homepage": "https://twitter.com/#!/raisinbread"
-                },
-                {
-                    "name": "Hans Donner",
-                    "email": "hans.donner@pobox.com",
-                    "homepage": "https://github.com/hans-d"
+                    "name": "The Community"
                 }
             ],
             "description": "A documentation generator for Lithium projects.",
-            "homepage": "https://github.com/UnionOfRAD/li3_docs",
+            "homepage": "http://li3.me",
             "keywords": [
                 "docblock",
                 "docs",
@@ -636,20 +614,20 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2015-05-24 12:09:55"
+            "time": "2015-08-13 19:53:26"
         },
         {
             "name": "unionofrad/lithium",
-            "version": "dev-dev",
+            "version": "v1.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/lithium.git",
-                "reference": "457c6aa06a84e0ac7d00b728bd27627d9524e47a"
+                "reference": "b997e9b63de9b6d084c794d42143bdb512d8f210"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/457c6aa06a84e0ac7d00b728bd27627d9524e47a",
-                "reference": "457c6aa06a84e0ac7d00b728bd27627d9524e47a",
+                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/b997e9b63de9b6d084c794d42143bdb512d8f210",
+                "reference": "b997e9b63de9b6d084c794d42143bdb512d8f210",
                 "shasum": ""
             },
             "require": {
@@ -679,11 +657,11 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2015-07-21 17:59:01"
+            "time": "2015-08-12 16:07:39"
         },
         {
             "name": "unionofrad/manual",
-            "version": "dev-master",
+            "version": "v1.0.0-rc1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/manual.git",
@@ -751,31 +729,10 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "alias": "1.0.0-dev",
-            "alias_normalized": "1.0.0.0-dev",
-            "version": "dev-dev",
-            "package": "unionofrad/lithium"
-        },
-        {
-            "alias": "1.0.0-dev",
-            "alias_normalized": "1.0.0.0-dev",
-            "version": "dev-dev",
-            "package": "unionofrad/li3_docs"
-        },
-        {
-            "alias": "1.0.0-dev",
-            "alias_normalized": "1.0.0.0-dev",
-            "version": "9999999-dev",
-            "package": "unionofrad/specs"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
         "tumblr/tumblr": 20,
-        "unionofrad/lithium": 20,
-        "unionofrad/li3_docs": 20,
         "unionofrad/manual": 20,
         "unionofrad/specs": 20
     },
