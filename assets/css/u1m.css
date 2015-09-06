@@ -20,8 +20,8 @@ body {
   /* text-rendering: optimizeLegibility; */
   -moz-text-rendering: optimizeLegibility;
 
-  -moz-font-feature-settings: "liga" 1, "frac" 1, "kern" 1, "smcp" 1;
-  font-feature-settings: "liga" 1, "frac" 1, "kern" 1, "smcp" 1;
+  -moz-font-feature-settings: "liga" 1, "frac" 1, "kern" 1;
+  font-feature-settings: "liga" 1, "frac" 1, "kern" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: none;
