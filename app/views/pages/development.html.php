@@ -136,7 +136,7 @@ require(['jquery', 'recaptcha', 'domready!'], function($) {
 
 				<p>Helping to fix bugs is a huge help to the core team, who is often burdened with more they can already handle. Fixing existing issues is also a great way to free up core team time for adding new feaures!</p>
 
-				<p>Helping with bugs follows the same 5-step process outlined above: just be sure to check in with someone on the core team to understand how to best help. This will make sure that you're workign on bugs that have a high-priority and aren't being investigated by anyone else.</p>
+				<p>Helping with bugs follows the same 5-step process outlined above: just be sure to check in with someone on the core team to understand how to best help. This will make sure that you're working on bugs that have a high-priority and aren't being investigated by anyone else.</p>
 
 				<p>If you're looking to report an issue, there are a few things you'll want to consider before submitting an issue on one of our GitHub repos:</p>
 
