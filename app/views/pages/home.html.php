@@ -40,7 +40,7 @@ $this->set([
 				<time><?= date('m/d/Y', $post->timestamp) ?></time>
 				<div class="body">
 					<?php echo $post->teaser() ?>
-					[<?= $this->html->link('read more…', $post->post_url, ['class' => 'read-more']) ?>]
+					&nbsp;[<?= $this->html->link('read&nbsp;more', $post->post_url, ['class' => 'read-more', 'escape' => false]) ?>]
 				</div>
 			</article>
 		<?php endforeach ?>
