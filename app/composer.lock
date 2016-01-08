@@ -1,10 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9f832cad69f6029677ec968c78719d0e",
+    "hash": "6fffbd20882e8fd07d4622a971b6177e",
+    "content-hash": "7f257c02afde4b90b672eba724fd9a81",
     "packages": [
         {
             "name": "atelierdisko/jsend",
@@ -111,17 +112,20 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.21",
+            "version": "v1.0.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45"
+                "reference": "bd9b14f094c89c8b5804a4e41edeb7853bb85046"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
-                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
+                "url": "https://api.github.com/repos/composer/installers/zipball/bd9b14f094c89c8b5804a4e41edeb7853bb85046",
+                "reference": "bd9b14f094c89c8b5804a4e41edeb7853bb85046",
                 "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "1.0.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
@@ -131,9 +135,9 @@
                 "composer/composer": "1.0.*@dev",
                 "phpunit/phpunit": "4.1.*"
             },
-            "type": "composer-installer",
+            "type": "composer-plugin",
             "extra": {
-                "class": "Composer\\Installers\\Installer",
+                "class": "Composer\\Installers\\Plugin",
                 "branch-alias": {
                     "dev-master": "1.0-dev"
                 }
@@ -202,7 +206,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2015-02-18 17:17:01"
+            "time": "2015-10-29 23:28:48"
         },
         {
             "name": "davidpersson/textual",
@@ -466,16 +470,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.7.3",
+            "version": "v2.8.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "9310b5f9a87ec2ea75d20fec0b0017c77c66dac3"
+                "url": "https://github.com/symfony/event-dispatcher.git",
+                "reference": "a5eb815363c0388e83247e7e9853e5dbc14999cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/9310b5f9a87ec2ea75d20fec0b0017c77c66dac3",
-                "reference": "9310b5f9a87ec2ea75d20fec0b0017c77c66dac3",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/a5eb815363c0388e83247e7e9853e5dbc14999cc",
+                "reference": "a5eb815363c0388e83247e7e9853e5dbc14999cc",
                 "shasum": ""
             },
             "require": {
@@ -483,11 +487,10 @@
             },
             "require-dev": {
                 "psr/log": "~1.0",
-                "symfony/config": "~2.0,>=2.0.5",
-                "symfony/dependency-injection": "~2.6",
-                "symfony/expression-language": "~2.6",
-                "symfony/phpunit-bridge": "~2.7",
-                "symfony/stopwatch": "~2.3"
+                "symfony/config": "~2.0,>=2.0.5|~3.0.0",
+                "symfony/dependency-injection": "~2.6|~3.0.0",
+                "symfony/expression-language": "~2.6|~3.0.0",
+                "symfony/stopwatch": "~2.3|~3.0.0"
             },
             "suggest": {
                 "symfony/dependency-injection": "",
@@ -496,13 +499,16 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7-dev"
+                    "dev-master": "2.8-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\EventDispatcher\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -520,7 +526,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-18 19:21:56"
+            "time": "2015-10-30 20:15:42"
         },
         {
             "name": "tumblr/tumblr",
@@ -664,16 +670,16 @@
         },
         {
             "name": "unionofrad/manual",
-            "version": "v1.0.0-rc1",
+            "version": "1.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/manual.git",
-                "reference": "bdb6e1dd25c3081ddb5dc8460efaca1b14a370a6"
+                "reference": "cefe9b564a55c52e8b73441e92b2dd773af28b31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/bdb6e1dd25c3081ddb5dc8460efaca1b14a370a6",
-                "reference": "bdb6e1dd25c3081ddb5dc8460efaca1b14a370a6",
+                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/cefe9b564a55c52e8b73441e92b2dd773af28b31",
+                "reference": "cefe9b564a55c52e8b73441e92b2dd773af28b31",
                 "shasum": ""
             },
             "require": {
@@ -694,7 +700,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2015-07-01 11:07:01"
+            "time": "2016-01-08 17:31:36"
         },
         {
             "name": "unionofrad/specs",
@@ -702,12 +708,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/specs.git",
-                "reference": "3ac42ad4ee1fc3be242b77fd0bb0ab4b3dec5136"
+                "reference": "c780276f79abd10c8b129f6d4203390011735c8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/specs/zipball/3ac42ad4ee1fc3be242b77fd0bb0ab4b3dec5136",
-                "reference": "3ac42ad4ee1fc3be242b77fd0bb0ab4b3dec5136",
+                "url": "https://api.github.com/repos/UnionOfRAD/specs/zipball/c780276f79abd10c8b129f6d4203390011735c8c",
+                "reference": "c780276f79abd10c8b129f6d4203390011735c8c",
                 "shasum": ""
             },
             "require": {
@@ -728,7 +734,7 @@
                 "specifcation",
                 "standard"
             ],
-            "time": "2015-03-14 14:46:19"
+            "time": "2015-12-17 09:54:39"
         }
     ],
     "packages-dev": [],

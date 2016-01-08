@@ -13,7 +13,7 @@
         "unionofrad/lithium": "1.0.*@RC",
         "unionofrad/li3_docs": "1.0.*@RC",
         "davidpersson/textual": "1.*",
-        "unionofrad/manual": "1.*@dev",
+        "unionofrad/manual": "1.0.x-dev",
         "unionofrad/specs": "dev-master",
         "cebe/markdown": "1.*",
         "atelierdisko/jsend": "0.*"
