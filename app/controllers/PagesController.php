@@ -8,12 +8,12 @@
 
 namespace app\controllers;
 
-use lithium\core\Environment;
-use lithium\core\Libraries;
 use app\models\Eurekas;
-use app\models\Projects;
 use app\models\Posts;
+use app\models\Projects;
+use app\models\Versions;
 use jsend\Response as JSendResponse;
+use lithium\core\Environment;
 
 /**
  * This controller is used for serving static pages by name, which are located in the `/views/pages`
@@ -37,17 +37,22 @@ class PagesController extends \lithium\action\Controller {
 		$projects = Projects::find('all');
 		$posts = Posts::latest();
 
-		return compact('posts', 'eureka', 'projects');
+		$version = Versions::all()->first(function($item) {
+			return $item->isPromoted;
+		});
+
+		return compact('posts', 'eureka', 'projects', 'version');
 	}
 
 	public function support() {}
 
 	public function present() {}
 
-	public function development() {
-		$file = Libraries::get('lithium', 'path') . '/CONTRIBUTING.md';
-		$contributing = file_get_contents($file);
-	//	var_dump($contributing);
+	public function development() {}
+
+	public function versions() {
+		$data = Versions::all();
+		return compact('data');
 	}
 
 	public function api_verify_captcha() {

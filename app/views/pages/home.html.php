@@ -23,10 +23,10 @@ $this->set([
 				<?= $this->html->link('Quickstart', ['library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser', 'lib' => 'manual', 'args' => ['quickstart']], ['class' => 'button large quickstart']) ?>
 				<?= $this->html->link('Source', 'https://github.com/unionofrad/lithium', ['class' => 'button icon large source']) ?>
 			</nav>
-			<a href="https://github.com/UnionOfRAD/lithium/tree/v1.0.0-rc4" target="new" class="download button large">
+			<a href="https://github.com/UnionOfRAD/lithium/tree/<?= $version->ref() ?>" target="new" class="download button large">
 				<span class="download__title">Download</span>
 				<span class="download__version">
-					li₃ version 1.0.0-rc4
+					li₃ version <?= $version->version ?>
 				</span>
 			</a>
 		</div>

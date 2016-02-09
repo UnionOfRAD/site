@@ -21,6 +21,7 @@ use lithium\net\http\Router;
 Router::connect('/', 'Pages::home');
 Router::connect('/support', 'Pages::support');
 Router::connect('/development', 'Pages::development');
+Router::connect('/versions', 'Pages::versions');
 Router::connect('/present', 'Pages::present');
 Router::connect('/captcha/verify', [
 	'controller' => 'Pages', 'action' => 'api_verify_captcha'

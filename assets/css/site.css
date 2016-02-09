@@ -264,3 +264,18 @@
   padding: 20px 0;
   max-width: 100%;
 }
+
+/* Versions
+---------------------------------------------------------------- */
+.supported-versions-table {
+  table-layout: fixed;
+}
+.supported-versions-table tfoot {
+  margin-top: 40px;
+}
+.sv--pre {
+  background: gray;
+}
+.sv--live {
+  background: #2F99A1;
+}

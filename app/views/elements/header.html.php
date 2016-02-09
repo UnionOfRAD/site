@@ -32,6 +32,11 @@ $this->nav->add(
 );
 $this->nav->add(
 	'main',
+	'Versions',
+	'Pages::versions'
+);
+$this->nav->add(
+	'main',
 	'Development',
 	'Pages::development'
 );
