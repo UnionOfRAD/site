@@ -1,4 +1,10 @@
 <?php
+/**
+ * Lithium: the most rad php framework
+ *
+ * @copyright     Copyright 2013, Union of RAD (http://union-of-rad.org)
+ * @license       http://opensource.org/licenses/bsd-license.php The BSD License
+ */
 
 namespace app\models;
 
@@ -19,25 +25,7 @@ class Eurekas extends \lithium\data\Model {
 		static::$_parser->html5 = true;
 	}
 
-	public static function find($type, array $options = array()) {
-		$files = static::_files();
-
-		if ($type === 'all') {
-			$results = [];
-
-			foreach ($files as $file) {
-				$results[] = static::create(compact('file'));
-			}
-			return new Collection(['data' => $results]);
-		}
-		if ($type === 'random') {
-			return static::create([
-				'file' => $files[abs(crc32(date('Y-m-d'))) % count($files)]
-			]);
-		}
-	}
-
-	protected static function _files() {
+	public static function files() {
 		return glob(Libraries::get(true, 'resources') . '/eurekas/*.md');
 	}
 
@@ -47,5 +35,23 @@ class Eurekas extends \lithium\data\Model {
 }
 
 Eurekas::init();
+
+Eurekas::finder('all', function($self, $params, $chain) {
+	$files = Eurekas::files();
+
+	$results = [];
+
+	foreach ($files as $file) {
+		$results[] = Eurekas::create(compact('file'));
+	}
+	return new Collection(['data' => $results]);
+});
+
+Eurekas::finder('random', function($self, $params, $chain) {
+	$files = Eurekas::files();
+	return Eurekas::create([
+		'file' => $files[abs(crc32(date('Y-m-d'))) % count($files)]
+	]);
+});
 
 ?>
