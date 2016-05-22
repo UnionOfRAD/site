@@ -38,7 +38,6 @@ $this->set([
 					<th>
 					<th>required PHP
 					<th>recommended PHP
-					<th>compatible PHP
 			</thead>
 			<tbody>
 		<?php foreach ($data as $item): ?>
@@ -46,7 +45,6 @@ $this->set([
 					<th><?= $item->series ?>
 					<td><?= $item->required ?>
 					<td><?= $item->recommended ?>
-					<td><?= $item->compatible ?>
 		<?php endforeach ?>
 			</tbody>
 		</table>
