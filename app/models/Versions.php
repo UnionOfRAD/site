@@ -37,7 +37,7 @@ class Versions extends \lithium\data\Model {
 		return [
 			[
 				'series' => '1.0.x',
-				'version' => '1.0.0-rc4',
+				'version' => '1.0.0',
 				'required' => '>=5.3.6 <7.0.0',
 				'recommended' => '>=5.4.0 <7.0.0',
 				'isPromoted' => true
