@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6fffbd20882e8fd07d4622a971b6177e",
-    "content-hash": "7f257c02afde4b90b672eba724fd9a81",
+    "hash": "9ee966d783159405922adb85e50cebcd",
+    "content-hash": "2d857a06e4fbdbd88d663b7389ba7141",
     "packages": [
         {
             "name": "atelierdisko/jsend",
@@ -112,20 +112,20 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.22",
+            "version": "v1.0.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "bd9b14f094c89c8b5804a4e41edeb7853bb85046"
+                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/bd9b14f094c89c8b5804a4e41edeb7853bb85046",
-                "reference": "bd9b14f094c89c8b5804a4e41edeb7853bb85046",
+                "url": "https://api.github.com/repos/composer/installers/zipball/36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
+                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "1.0.0"
+                "composer-plugin-api": "^1.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
@@ -143,8 +143,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Composer\\Installers\\": "src/"
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -159,12 +159,14 @@
                 }
             ],
             "description": "A multi-framework Composer library installer",
-            "homepage": "http://composer.github.com/installers/",
+            "homepage": "https://composer.github.io/installers/",
             "keywords": [
                 "Craft",
                 "Dolibarr",
                 "Hurad",
+                "ImageCMS",
                 "MODX Evo",
+                "Mautic",
                 "OXID",
                 "SMF",
                 "Thelia",
@@ -206,7 +208,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2015-10-29 23:28:48"
+            "time": "2016-04-13 19:46:30"
         },
         {
             "name": "davidpersson/textual",
@@ -273,58 +275,6 @@
             ],
             "description": "OAuth 1 PHP Library",
             "time": "2012-12-13 23:48:10"
-        },
-        {
-            "name": "fzaninotto/faker",
-            "version": "v1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "d0190b156bcca848d401fb80f31f504f37141c8d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/d0190b156bcca848d401fb80f31f504f37141c8d",
-                "reference": "d0190b156bcca848d401fb80f31f504f37141c8d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~1.5"
-            },
-            "suggest": {
-                "ext-intl": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.5.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Faker\\": "src/Faker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "François Zaninotto"
-                }
-            ],
-            "description": "Faker is a PHP library that generates fake data for you.",
-            "keywords": [
-                "data",
-                "faker",
-                "fixtures"
-            ],
-            "time": "2015-05-29 06:29:14"
         },
         {
             "name": "guzzle/guzzle",
@@ -470,16 +420,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.8.1",
+            "version": "v2.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "a5eb815363c0388e83247e7e9853e5dbc14999cc"
+                "reference": "a158f13992a3147d466af7a23b564ac719a4ddd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/a5eb815363c0388e83247e7e9853e5dbc14999cc",
-                "reference": "a5eb815363c0388e83247e7e9853e5dbc14999cc",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/a158f13992a3147d466af7a23b564ac719a4ddd8",
+                "reference": "a158f13992a3147d466af7a23b564ac719a4ddd8",
                 "shasum": ""
             },
             "require": {
@@ -526,7 +476,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-30 20:15:42"
+            "time": "2016-05-03 18:59:18"
         },
         {
             "name": "tumblr/tumblr",
@@ -538,7 +488,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tumblr/tumblr.php/zipball/efbae0a1a4079eeb8b895a40314b04499e63b1b7",
+                "url": "https://api.github.com/repos/tumblr/tumblr.php/zipball/32fef6e6fb047371607a33e5665bf72da7dbad7d",
                 "reference": "32fef6e6fb047371607a33e5665bf72da7dbad7d",
                 "shasum": ""
             },
@@ -624,16 +574,16 @@
         },
         {
             "name": "unionofrad/lithium",
-            "version": "v1.0.0-rc4",
+            "version": "1.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/lithium.git",
-                "reference": "4e2ebb73868ef69c22749a25fd2497fe27b740e6"
+                "reference": "743677d84f2b203c18b97833965a336905699044"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/4e2ebb73868ef69c22749a25fd2497fe27b740e6",
-                "reference": "4e2ebb73868ef69c22749a25fd2497fe27b740e6",
+                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/743677d84f2b203c18b97833965a336905699044",
+                "reference": "743677d84f2b203c18b97833965a336905699044",
                 "shasum": ""
             },
             "require": {
@@ -666,7 +616,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2016-01-13 21:37:11"
+            "time": "2016-05-31 20:26:25"
         },
         {
             "name": "unionofrad/manual",
@@ -674,12 +624,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/manual.git",
-                "reference": "dc578de542a487dfaafe774f8551741bf69a6368"
+                "reference": "78b25940f3a91cdd154624b9c54578414603c551"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/dc578de542a487dfaafe774f8551741bf69a6368",
-                "reference": "dc578de542a487dfaafe774f8551741bf69a6368",
+                "url": "https://api.github.com/repos/UnionOfRAD/manual/zipball/78b25940f3a91cdd154624b9c54578414603c551",
+                "reference": "78b25940f3a91cdd154624b9c54578414603c551",
                 "shasum": ""
             },
             "require": {
@@ -700,7 +650,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2016-01-08 17:48:57"
+            "time": "2016-02-09 08:34:39"
         },
         {
             "name": "unionofrad/specs",
@@ -742,7 +692,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "tumblr/tumblr": 20,
-        "unionofrad/lithium": 5,
+        "unionofrad/lithium": 20,
         "unionofrad/li3_docs": 5,
         "unionofrad/manual": 20,
         "unionofrad/specs": 20
