@@ -73,10 +73,10 @@ $this->set([
 			<tbody>
 				<tr>
 					<td>0.11
-					<td colspan="4" class="sv--live">
+					<td colspan="5" class="sv--live">
 				<tr>
 					<td>1.0
-					<td colspan="4" class="sv--pre">
+					<td colspan="5" class="sv--pre">
 					<td colspan="3" class="sv--live">
 				<tr>
 					<td>1.1
