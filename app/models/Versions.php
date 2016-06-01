@@ -36,17 +36,20 @@ class Versions extends \lithium\data\Model {
 	public static function data() {
 		return [
 			[
-				'series' => '1.0.x',
-				'version' => '1.0.0',
-				'required' => '>=5.3.6 <7.0.0',
-				'recommended' => '>=5.4.0 <7.0.0',
-				'isPromoted' => true
-			],
-			[
 				'series' => '1.1.x',
 				'version' => '1.1.x-dev',
 				'required' => '>=5.5.14 <7.0.0 || >=7.0.3',
 				'recommended' => '>=5.6.0 <7.0.0 || >=7.0.3',
+				'isStable' => false,
+				'isPromoted' => true
+			],
+			[
+				'series' => '1.0.x',
+				'version' => '1.0.0',
+				'required' => '>=5.3.6 <7.0.0',
+				'recommended' => '>=5.4.0 <7.0.0',
+				'isStable' => true,
+				'isPromoted' => true
 			],
 		];
 	}

@@ -37,11 +37,14 @@ class PagesController extends \lithium\action\Controller {
 		$projects = Projects::find('all');
 		$posts = Posts::latest();
 
-		$version = Versions::all()->first(function($item) {
-			return $item->isPromoted;
+		$stableVersion = Versions::all()->first(function($item) {
+			return $item->isPromoted && $item->isStable;
+		});
+		$unstableVersion = Versions::all()->first(function($item) {
+			return $item->isPromoted && !$item->isStable;
 		});
 
-		return compact('posts', 'eureka', 'projects', 'version');
+		return compact('posts', 'eureka', 'projects', 'stableVersion', 'unstableVersion');
 	}
 
 	public function support() {}
