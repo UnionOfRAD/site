@@ -56,7 +56,7 @@ $this->set([
 			Subject to changes, especially for things in the far future.
 			There will be an absolute minimum of 1 year support for each version.
 			Heavily used versions can get an extended lifetime. Still the overall
-			goal here is, to allow to evolve quickly enough and keep up with changes
+			goal here is, allowing to evolve quick enough to keep up with changes
 			in the ecosystem.
 		</p>
 		<table class="supported-versions-table">
@@ -75,36 +75,45 @@ $this->set([
 			<tbody>
 				<tr>
 					<td>0.11
-					<td colspan="5" class="sv--live">
+					<td colspan="2" class="sv--live">
+					<td colspan="2" class="sv--sec">
 				<tr>
 					<td>1.0
-					<td colspan="5" class="sv--pre">
+					<td colspan="4" class="sv--pre">
 					<td colspan="3" class="sv--live">
+					<td colspan="1" class="sv--sec">
 				<tr>
 					<td>1.1
 					<td colspan="3">
 					<td colspan="3" class="sv--pre">
-					<td colspan="3" class="sv--live">
+					<td colspan="2" class="sv--live">
+					<td colspan="1" class="sv--sec">
 				<tr>
 					<td>1.2
 					<td colspan="6">
 					<td colspan="2" class="sv--pre">
-					<td colspan="3" class="sv--live">
+					<td colspan="2" class="sv--live">
+					<td colspan="1" class="sv--sec">
 				<tr>
 					<td>2.0
 					<td colspan="8">
 					<td colspan="2" class="sv--pre">
 					<td colspan="3" class="sv--live">
+					<td colspan="1" class="sv--sec">
 			</tbody>
 			<tfoot>
 				<tr>
 					<td class="sv--pre">
-					<td colspan="4">
+					<td colspan="6">
 						&nbsp;pre release phase
 				<tr>
 					<td class="sv--live">
-					<td colspan="4">
-						&nbsp;release lifetime
+					<td colspan="6">
+						&nbsp;active support
+				<tr>
+					<td class="sv--sec">
+					<td colspan="6">
+						&nbsp;security fixes only
 			</tfoot>
 		</table>
 	</section>
