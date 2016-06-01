@@ -54,8 +54,10 @@ $this->set([
 		<h2 class="h-beta">Supported Versions Schedule</h2>
 		<p>
 			Subject to changes, especially for things in the far future.
-			There will an absolute minimum of 1 year support for each version.
-			We may decide to extend lifetime of certain ones.
+			There will be an absolute minimum of 1 year support for each version.
+			Heavily used versions can get an extended lifetime. Still the overall
+			goal here is, to allow to evolve quickly enough and keep up with changes
+			in the ecosystem.
 		</p>
 		<table class="supported-versions-table">
 			<thead>
