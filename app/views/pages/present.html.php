@@ -211,6 +211,11 @@ $this->set([
 	<section id="press">
 		<h1 class="h-beta">Press</h1>
 
+		<p><strong>Das als Lithium gestartete PHP-Framework li3 erreicht Version 1.0</strong>, heise Developer, 06/02/2016, <a href="http://www.heise.de/developer/meldung/Das-als-Lithium-gestartete-PHP-Framework-li3-erreicht-Version-1-0-3225246.html">article</a></p>
+		<blockquote>
+		<p>Die Macher des Frameworks wagen nach gute sechs Jahren Entwicklung den Schritt zu 1.0 und versprechen künftig feste Releasezyklen. [...]</p>
+		</blockquote>
+
 		<p><strong>Engine Yard Sponsors the Lithium Framework</strong> by Elizabeth Naramore, 06/13/2012, <a href="https://blog.engineyard.com/2012/engine-yard-sponsors-the-lithium-framework">post</a></p>
 
 		<blockquote>
