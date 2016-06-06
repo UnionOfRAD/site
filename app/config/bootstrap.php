@@ -89,6 +89,8 @@ if (PHP_SAPI === 'cli') {
 
 require __DIR__ . '/bootstrap/environment.php';
 
+use li3_docs\models\Indexes;
+use lithium\core\Libraries;
 use lithium\net\http\Media;
 use app\models\Testimonials;
 
@@ -98,5 +100,23 @@ Media::applyFilter('_handle', function($self, $params, $chain) {
 	}
 	return $chain->next($self, $params, $chain);
 });
+
+// Register documentation indexes.
+$base = dirname(__DIR__) . '/resources/docs';
+
+Indexes::register(array(
+	'title' => 'li3',
+	'path' => $base . '/lithium_10',
+	'name' => 'lithium',
+	'version' => '1.0.x-dev',
+	'mapSymbolToPath' => function($symbol) {
+		// cannot use libraries path as that would require
+		// registering the live code with Libraries.
+		return false;
+	},
+	'mapPathToSymbol' => function($path) {
+		return false;
+	}
+));
 
 ?>

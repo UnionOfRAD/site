@@ -8,17 +8,35 @@ $this->nav->add(
 $this->nav->add(
 	'main',
 	'Manual',
-	['library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser', 'lib' => 'manual']
+	[
+		'library' => 'li3_docs',
+		'controller' => 'ApiBrowser',
+		'action' => 'view',
+		'name' => 'manual',
+		'version' => '1.0.x-dev'
+	]
 );
 $this->nav->add(
 	'main',
 	'API',
-	['library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser', 'lib' => 'lithium']
+	[
+		'library' => 'li3_docs',
+		'controller' => 'ApiBrowser',
+		'action' => 'view',
+		'name' => 'lithium',
+		'version' => '1.0.x-dev'
+	]
 );
 $this->nav->add(
 	'main',
 	'Specs',
-	['library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser', 'lib' => 'specs']
+	[
+		'library' => 'li3_docs',
+		'controller' => 'ApiBrowser',
+		'action' => 'view',
+		'name' => 'specs',
+		'version' => 'dev-master'
+	]
 );
 $this->nav->add(
 	'main',

@@ -14,7 +14,8 @@
         "unionofrad/manual": "1.x-dev",
         "unionofrad/specs": "dev-master",
         "cebe/markdown": "1.*",
-        "atelierdisko/jsend": "0.*"
+        "atelierdisko/jsend": "0.*",
+        "nikic/php-parser": "^2.1"
     },
     "config": {
         "vendor-dir": "./libraries"

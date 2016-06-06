@@ -117,11 +117,8 @@ Libraries::add('app', array('default' => true));
  * Add some plugins:
  */
 Libraries::add('li3_docs', array(
-	'index' => array('lithium', 'manual', 'specs'),
 	'cache' => true
 ));
-Libraries::add('manual');
-Libraries::add('specs');
 
 // Include composer autoloader.
 require LITHIUM_APP_PATH . '/libraries/autoload.php';

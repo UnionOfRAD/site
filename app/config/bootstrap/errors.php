@@ -11,7 +11,7 @@ use lithium\core\ErrorHandler;
 use lithium\action\Response;
 use lithium\net\http\Media;
 use lithium\analysis\Logger;
-
+/*
 ErrorHandler::apply('lithium\action\Dispatcher::run', array(), function($info, $params) {
 	if (preg_match('/not found/i', $info['exception']->getMessage())) {
 		$code = 404;
@@ -33,7 +33,7 @@ ErrorHandler::apply('lithium\action\Dispatcher::run', array(), function($info, $
 	));
 	return $response;
 });
-
+ */
 Logger::config([
 	'default' => [
 		'adapter' => 'File',

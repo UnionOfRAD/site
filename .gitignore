@@ -10,3 +10,4 @@ config/nginx/includes/*.conf
 config/nginx/servers/*.conf
 config/deta/*.conf
 config/*.conf
+app/resources/docs
