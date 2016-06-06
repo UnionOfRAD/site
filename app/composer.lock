@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9ee966d783159405922adb85e50cebcd",
-    "content-hash": "2d857a06e4fbdbd88d663b7389ba7141",
+    "hash": "68e7efe97f20af810a8ed21113d0da4c",
+    "content-hash": "c256e283be907cffa58ad25927e7f29e",
     "packages": [
         {
             "name": "atelierdisko/jsend",
@@ -370,53 +370,6 @@
                 "web service"
             ],
             "time": "2015-03-18 18:23:50"
-        },
-        {
-            "name": "naneau/semver",
-            "version": "0.0.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/naneau/semver.git",
-                "reference": "60ea59641aad840f97f3c9057e2f2b7bc087eaa3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/naneau/semver/zipball/60ea59641aad840f97f3c9057e2f2b7bc087eaa3",
-                "reference": "60ea59641aad840f97f3c9057e2f2b7bc087eaa3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Naneau\\SemVer\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Maurice Fonk",
-                    "email": "maurice@naneau.net",
-                    "homepage": "http://mauricefonk.com",
-                    "role": "developer"
-                }
-            ],
-            "description": "A decent, standards-compliant, Semantic Versioning (SemVer) parser and library",
-            "homepage": "https://github.com/naneau/semver",
-            "keywords": [
-                "semantic",
-                "semver",
-                "versioning"
-            ],
-            "time": "2013-01-04 00:00:00"
         },
         {
             "name": "symfony/event-dispatcher",
