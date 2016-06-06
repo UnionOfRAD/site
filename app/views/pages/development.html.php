@@ -61,7 +61,12 @@ require(['jquery', 'recaptcha', 'domready!'], function($) {
 
 	<section id="contributing">
 		<h1 class="h-beta">Contributing</h1>
-		<p>Thank you for your interest in contributing to the project! It is built by a thriving community of developers who value cutting-edge technology and concise, maintainable code. If you've found a bug, or have an idea for a feature, we encourage your participation in making li3 better.</p>
+		<p>
+			Thank you for your interest in contributing to the project! It is
+			built by a thriving community of developers who value cutting-edge technology
+			and concise, maintainable code. If you've found a bug, or have an idea for a
+			feature, we encourage your participation in making the framework better.
+		</p>
 
 		<article id="tldr">
 			<h1 class="h-gamma">tl;dr</h1>
