@@ -8,7 +8,6 @@
     "require": {
         "php": ">=5.5.0",
         "tumblr/tumblr": "dev-master#32fef6e6fb047371607a33e5665bf72da7dbad7d",
-        "naneau/semver": "0.0.*",
         "unionofrad/lithium": "1.0.x-dev",
         "unionofrad/li3_docs": "1.0.*@RC",
         "davidpersson/textual": "1.*",
