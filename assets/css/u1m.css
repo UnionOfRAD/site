@@ -20,8 +20,8 @@ body {
   /* text-rendering: optimizeLegibility; */
   -moz-text-rendering: optimizeLegibility;
 
-  -moz-font-feature-settings: "liga" 1, "frac" 1, "kern" 1;
-  font-feature-settings: "liga" 1, "frac" 1, "kern" 1;
+  -moz-font-feature-settings: "liga" 1, "kern" 1;
+  font-feature-settings: "liga" 1, "kern" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: none;
@@ -225,10 +225,9 @@ a {
   color: #1b1b1b;
   text-decoration: none;
 }
-h3 a,
+/* h3 a, */
 .site .post-item .read-more,
 .li3-docs ul a,
-.li3-docs #parent a,
 .li3-docs .note a,
 .crumbs a,
 footer.main a,
@@ -236,11 +235,16 @@ footer.main a,
   font-family: 'Anonymous Pro', sans-serif;
   border-bottom: 1px solid #dedede;
 }
+.li3-docs .apis-view .symbol-segment,
+.li3-docs .apis-view .extends__symbol {
+  border-bottom: 1px solid #dedede;
+}
 
-h3 a:hover,
+/* h3 a:hover, */
 .site .post-item .read-more:hover,
 .li3-docs ul a:hover,
-.li3-docs #parent a:hover,
+.li3-docs .apis-view .symbol-segment:hover,
+.li3-docs .apis-view .extends__symbol:hover,
 .li3-docs .note a:hover,
 .crumbs a:hover,
 footer.main a:hover,
@@ -502,10 +506,10 @@ button.large,
   transition: top .5s;
   width: 220px;
   padding-bottom: 100px;
-  opacity: .7;
 }
-.aside:hover {
-  opacity: 1;
+.aside,
+.aside a {
+  color: black;
 }
 .aside > ul {
   padding-left: 0;
@@ -516,10 +520,16 @@ button.large,
 }
 .aside a {
   text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
 }
 .aside a:hover,
 .aside .active {
   font-weight: bold;
+}
+.aside .active:before {
+  content: ">>> ";
 }
 .has-aside-right {
   margin-right: 300px;

@@ -89,10 +89,10 @@ if (PHP_SAPI === 'cli') {
 
 require __DIR__ . '/bootstrap/environment.php';
 
-use li3_docs\models\Indexes;
 use lithium\core\Libraries;
 use lithium\net\http\Media;
 use app\models\Testimonials;
+use li3_docs\models\Indexes;
 
 Media::applyFilter('_handle', function($self, $params, $chain) {
 	if ($params['handler']['type'] == 'html') {
@@ -105,18 +105,35 @@ Media::applyFilter('_handle', function($self, $params, $chain) {
 $base = dirname(__DIR__) . '/resources/docs';
 
 Indexes::register(array(
-	'title' => 'li3',
-	'path' => $base . '/lithium_10',
+	'type' => 'book',
+	'title' => 'li₃: The Definitive Guide',
+	'name' => 'manual',
+	'version' => '1.x',
+	'path' => $base . '/manual_1',
+));
+Indexes::register(array(
+	'type' => 'api',
+	'title' => 'Framework API',
 	'name' => 'lithium',
-	'version' => '1.0.x-dev',
-	'mapSymbolToPath' => function($symbol) {
-		// cannot use libraries path as that would require
-		// registering the live code with Libraries.
-		return false;
-	},
-	'mapPathToSymbol' => function($path) {
-		return false;
-	}
+	'version' => '1.0.x',
+	'path' => $base . '/lithium_10',
+	'namespace' => 'lithium'
+));
+Indexes::register(array(
+	'type' => 'api',
+	'title' => 'Framework API',
+	'name' => 'lithium',
+	'version' => '1.1.x',
+	'path' => $base . '/lithium_11',
+	'namespace' => 'lithium'
+));
+
+Indexes::register(array(
+	'type' => 'book',
+	'title' => 'Specifications',
+	'name' => 'specs',
+	'version' => '1.x',
+	'path' => $base . '/specs'
 ));
 
 ?>

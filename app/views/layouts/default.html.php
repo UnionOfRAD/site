@@ -74,7 +74,7 @@ $bodyClasses[] = str_replace('_', '-', $library ?: 'site');
 			]) ?>
 			<?php if ($library == 'li3_docs'): ?>
 				<?php echo $this->_view->render(
-					array('element' => 'crumbs'), compact('object'), array('library' => 'li3_docs')
+					array('element' => 'crumbs'), compact('crumbs'), array('library' => 'li3_docs')
 				); ?>
 			<?php endif ?>
 			<div id="content">

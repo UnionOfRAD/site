@@ -3,19 +3,15 @@
     "type": "project",
     "description": "Main website for li3.",
     "license": "BSD-3-clause",
-    "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "php": ">=5.5.0",
         "tumblr/tumblr": "dev-master#32fef6e6fb047371607a33e5665bf72da7dbad7d",
-        "unionofrad/lithium": "1.0.x-dev",
-        "unionofrad/li3_docs": "1.0.*@RC",
+        "unionofrad/lithium": "1.0.*",
+        "unionofrad/li3_docs": "2.0.*@dev",
         "davidpersson/textual": "1.*",
-        "unionofrad/manual": "1.x-dev",
-        "unionofrad/specs": "dev-master",
         "cebe/markdown": "1.*",
-        "atelierdisko/jsend": "0.*",
-        "nikic/php-parser": "^2.1"
+        "atelierdisko/jsend": "0.*"
     },
     "config": {
         "vendor-dir": "./libraries"

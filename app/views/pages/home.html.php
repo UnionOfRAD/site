@@ -20,7 +20,14 @@ $this->set([
 			<div></div>
 			<h2 class="h-beta">li₃ is the fast, flexible and most RAD development framework for PHP</h1>
 			<nav>
-				<?= $this->html->link('Quickstart', ['library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser', 'lib' => 'manual', 'args' => ['quickstart']], ['class' => 'button large quickstart']) ?>
+				<?= $this->html->link('Quickstart', [
+					'library' => 'li3_docs',
+					'controller' => 'Books',
+					'action' => 'view',
+					'name' => 'manual',
+					'version' => '1.x',
+					'page' => 'quickstart'
+				], ['class' => 'button large quickstart']) ?>
 				<?= $this->html->link('Source', 'https://github.com/unionofrad/lithium', ['class' => 'button icon large source']) ?>
 			</nav>
 			<div class="download-buttons">
@@ -92,8 +99,12 @@ $this->set([
 				li₃ takes full advantage of the latest PHP language features, including
 				namespaces, late static binding and closures. li₃'s innovative
 				<?= $this->html->link('method filter system', [
-					'library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser',
-					'lib' => 'lithium', 'args' => ['util/collection/Filters']
+					'library' => 'li3_docs',
+					'controller' => 'Apis',
+					'action' => 'view',
+					'name' => 'lithium',
+					'version' => '1.0.x',
+					'symbol' => 'util\collection\Filters'
 				]) ?>
 				makes extensive use of closures and anonymous functions to
 				allow application developers to "wrap" framework method calls, intercepting

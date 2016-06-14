@@ -17,6 +17,7 @@
  * @see lithium\net\http\Route
  */
 use lithium\net\http\Router;
+use lithium\action\Response;
 
 Router::connect('/', 'Pages::home');
 Router::connect('/support', 'Pages::support');
@@ -26,5 +27,48 @@ Router::connect('/present', 'Pages::present');
 Router::connect('/captcha/verify', [
 	'controller' => 'Pages', 'action' => 'api_verify_captcha'
 ]);
+
+/* Deprecated / BC */
+
+Router::connect('/docs/book/{:name}/{:version}/{:page:[a-zA-Z\/\-_0-9]+}.md',
+	[], function($request) {
+	return new Response([
+		'location' => [
+			'library' => 'li3_docs',
+			'controller' => 'Books',
+			'action' => 'view',
+			'name' => $request->name,
+			'version' => $request->params['version'],
+			'page' => $request->page
+		]
+	]);
+});
+
+Router::connect('/docs/manual/{:page:.*}', [], function($request) {
+	return new Response([
+		'location' => [
+			'library' => 'li3_docs',
+			'controller' => 'Books',
+			'action' => 'view',
+			'name' => 'manual',
+			'version' => '1.x',
+			'page' => str_replace('.md', '', $request->page)
+		]
+	]);
+});
+
+Router::connect('/docs/lithium/{:partialSymbol:.*}', [], function($request) {
+	return new Response([
+		'location' => [
+			'library' => 'li3_docs',
+			'controller' => 'Apis',
+			'action' => 'view',
+			'name' => 'lithium',
+			'version' => '1.0.x',
+			'symbol' => 'lithium/' . $request->partialSymbol
+		]
+	]);
+});
+
 
 ?>
