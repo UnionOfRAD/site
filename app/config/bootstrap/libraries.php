@@ -111,14 +111,14 @@ Libraries::add('lithium');
  * Add the application.  You can pass a `'path'` key here if this bootstrap file is outside of
  * your main application, but generally you should not need to change any settings.
  */
-Libraries::add('app', array('default' => true));
+Libraries::add('app', ['default' => true]);
 
 /**
  * Add some plugins:
  */
-Libraries::add('li3_docs', array(
+Libraries::add('li3_docs', [
 	'cache' => true
-));
+]);
 
 // Include composer autoloader.
 require LITHIUM_APP_PATH . '/libraries/autoload.php';

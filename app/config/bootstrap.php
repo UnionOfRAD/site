@@ -104,36 +104,36 @@ Media::applyFilter('_handle', function($self, $params, $chain) {
 // Register documentation indexes.
 $base = dirname(__DIR__) . '/resources/docs';
 
-Indexes::register(array(
+Indexes::register([
 	'type' => 'book',
 	'title' => 'li₃: The Definitive Guide',
 	'name' => 'manual',
 	'version' => '1.x',
 	'path' => $base . '/manual_1',
-));
-Indexes::register(array(
+]);
+Indexes::register([
 	'type' => 'api',
 	'title' => 'Framework API',
 	'name' => 'lithium',
 	'version' => '1.1.x',
 	'path' => $base . '/lithium_11',
 	'namespace' => 'lithium'
-));
-Indexes::register(array(
+]);
+Indexes::register([
 	'type' => 'api',
 	'title' => 'Framework API',
 	'name' => 'lithium',
 	'version' => '1.0.x',
 	'path' => $base . '/lithium_10',
 	'namespace' => 'lithium'
-));
+]);
 
-Indexes::register(array(
+Indexes::register([
 	'type' => 'book',
 	'title' => 'Specifications',
 	'name' => 'specs',
 	'version' => '1.x',
 	'path' => $base . '/specs'
-));
+]);
 
 ?>

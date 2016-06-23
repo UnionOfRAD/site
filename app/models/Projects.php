@@ -11,7 +11,7 @@ class Projects extends \lithium\data\Model {
 		'connection' => false
 	];
 
-	public static function find($type, array $options = array()) {
+	public static function find($type, array $options = []) {
 		$data = static::_data();
 
 		if ($type === 'all') {

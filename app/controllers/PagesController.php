@@ -71,10 +71,10 @@ class PagesController extends \lithium\action\Controller {
 			]);
 		}
 
-		$this->render(array(
+		$this->render([
 			'type' => $this->request->accepts(),
 			'data' => $response->to('array')
-		));
+		]);
 	}
 
 	protected function _verify($request) {
@@ -94,12 +94,12 @@ class PagesController extends \lithium\action\Controller {
 	}
 
 	public function view() {
-		$options = array();
+		$options = [];
 		$path = func_get_args();
 
-		if (!$path || $path === array('home')) {
-			$path = array('home');
-			$options['compiler'] = array('fallback' => true);
+		if (!$path || $path === ['home']) {
+			$path = ['home'];
+			$options['compiler'] = ['fallback' => true];
 		}
 
 		$options['template'] = join('/', $path);

@@ -30,12 +30,12 @@ use lithium\storage\cache\adapter\Apc;
  * @see lithium\storage\cache\adapters
  * @see lithium\storage\cache\strategies
  */
-Cache::config(array(
-	'default' => array(
+Cache::config([
+	'default' => [
 		'adapter' => 'Memcache',
 		'scope' => PROJECT_NAME . '_' . md5(LITHIUM_APP_PATH . PROJECT_VERSION)
-	)
-));
+	]
+]);
 
 /**
  * Apply

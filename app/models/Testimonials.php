@@ -4,9 +4,9 @@ namespace app\models;
 
 class Testimonials extends \lithium\data\Model {
 
-	protected $_meta = array(
+	protected $_meta = [
 		'connection' => false
-	);
+	];
 
 	public static function random() {
 		$data = static::_data();

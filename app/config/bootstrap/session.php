@@ -15,10 +15,10 @@
 use lithium\storage\Session;
 
 $name = basename(LITHIUM_APP_PATH);
-Session::config(array(
+Session::config([
 	// 'cookie' => array('adapter' => 'Cookie', 'name' => $name),
-	'default' => array('adapter' => 'Php', 'session.name' => $name)
-));
+	'default' => ['adapter' => 'Php', 'session.name' => $name]
+]);
 
 /**
  * Uncomment the lines below to enable forms-based authentication. This configuration will attempt

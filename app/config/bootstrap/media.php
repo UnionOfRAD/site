@@ -29,23 +29,23 @@ Collection::formats('lithium\net\http\Media');
 // Stamp assets with version.
 use lithium\net\http\Media;
 
-Media::attach('app', array(
+Media::attach('app', [
 	'path' => dirname(LITHIUM_APP_PATH) . '/assets',
 	'prefix' => 'assets/v:' . PROJECT_VERSION_BUILD
-));
+]);
 
 // Set default scope.
 Media::scope('app');
 
 // Render libary views in the app's layout only.
-Media::type('default', null, array(
+Media::type('default', null, [
 	'view' => 'lithium\template\View',
-	'paths' => array(
+	'paths' => [
 		'template' => '{:library}/views/{:controller}/{:template}.{:type}.php',
 		'layout'   => LITHIUM_APP_PATH . '/views/layouts/{:layout}.{:type}.php',
 		'element'  => '{:library}/views/elements/{:template}.{:type}.php'
-	)
-));
+	]
+]);
 
 
 /**

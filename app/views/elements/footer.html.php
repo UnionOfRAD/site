@@ -23,9 +23,9 @@ use lithium\util\String;
 		<p><?php echo nl2br($testimonial['body']) ?></p>
 	</div>
 	<div class="copyright">
-		<?php echo String::insert('Pretty much everything is (c) 2009-{:year} and beyond, the {:holder}.', array(
+		<?php echo String::insert('Pretty much everything is (c) 2009-{:year} and beyond, the {:holder}.', [
 			'holder' => $this->html->link('Union of RAD', 'http://unionofrad.org'),
 			'year' => date('Y')
-		)); ?>
+		]); ?>
 	</div>
 </footer>
