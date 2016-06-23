@@ -2,6 +2,11 @@
 
 $this->nav->add(
 	'main',
+	'News',
+	'http://news.li3.me'
+);
+$this->nav->add(
+	'main',
 	'Documentation',
 	[
 		'library' => 'li3_docs',
@@ -13,11 +18,6 @@ $this->nav->add(
 	'main',
 	'Versions',
 	'Pages::versions'
-);
-$this->nav->add(
-	'main',
-	'News',
-	'http://news.li3.me'
 );
 $this->nav->add(
 	'main',
