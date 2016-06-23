@@ -115,16 +115,16 @@ Indexes::register(array(
 	'type' => 'api',
 	'title' => 'Framework API',
 	'name' => 'lithium',
-	'version' => '1.0.x',
-	'path' => $base . '/lithium_10',
+	'version' => '1.1.x',
+	'path' => $base . '/lithium_11',
 	'namespace' => 'lithium'
 ));
 Indexes::register(array(
 	'type' => 'api',
 	'title' => 'Framework API',
 	'name' => 'lithium',
-	'version' => '1.1.x',
-	'path' => $base . '/lithium_11',
+	'version' => '1.0.x',
+	'path' => $base . '/lithium_10',
 	'namespace' => 'lithium'
 ));
 
