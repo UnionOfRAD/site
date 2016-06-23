@@ -6,9 +6,9 @@ use lithium\net\http\Router;
 use lithium\net\http\Response;	
 
 Router::connect('/testimonial.json', function($request) {
-	return new Response(array(
+	return new Response([
 		'type' => 'json',
 		'body' => json_encode(Testimonials::random())
-	));
+	]);
 });
 ```
