@@ -8,6 +8,7 @@
 
 namespace app\models;
 
+use app\models\VersionSeries;
 use lithium\util\Collection;
 
 class Versions extends \lithium\data\Model {
@@ -19,10 +20,10 @@ class Versions extends \lithium\data\Model {
 	// Map our composer-like version string to a ref in the repo. Non released
 	// versions must be affixed with `'.x-dev'`.
 	public function ref($entity) {
-		if (preg_match('/^([0-9]+\.[0-9]+)\.x-dev$/', $entity->version, $matches)) {
+		if (preg_match('/^([0-9]+\.[0-9]+)\.x-dev$/', $entity->name, $matches)) {
 			return $matches[1];
 		}
-		return 'v' . $entity->version;
+		return 'v' . $entity->name;
 	}
 
 	public function tar($entity) {
@@ -33,21 +34,29 @@ class Versions extends \lithium\data\Model {
 		return 'https://github.com/UnionOfRAD/lithium/archive/' . $entity->ref() . '.zip';
 	}
 
+	public function series($entity) {
+		return VersionSeries::find('all')->first(function($item) use ($entity) {
+			return $item->name === $entity->series;
+		});
+	}
+
 	public static function data() {
 		return [
-			[
+			'1.1.x-dev' => [
+				'name' => '1.1.x-dev',
 				'series' => '1.1.x',
-				'version' => '1.1.x-dev',
-				'required' => '>=5.5.14 <7.0.0 || >=7.0.3',
-				'recommended' => '>=5.6.0 <7.0.0 || >=7.0.3',
 				'isStable' => false,
 				'isPromoted' => true
 			],
-			[
+			'1.0.1' => [
+				'name' => '1.0.1',
 				'series' => '1.0.x',
-				'version' => '1.0.0',
-				'required' => '>=5.3.6 <7.0.0',
-				'recommended' => '>=5.4.0 <7.0.0',
+				'isStable' => true,
+				'isPromoted' => true
+			],
+			'1.0.0' => [
+				'name' => '1.0.1',
+				'series' => '1.0.x',
 				'isStable' => true,
 				'isPromoted' => true
 			],

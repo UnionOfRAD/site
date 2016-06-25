@@ -11,7 +11,7 @@ namespace app\controllers;
 use app\models\Eurekas;
 use app\models\Posts;
 use app\models\Projects;
-use app\models\Versions;
+use app\models\VersionSeries;
 use jsend\Response as JSendResponse;
 use lithium\core\Environment;
 
@@ -37,12 +37,20 @@ class PagesController extends \lithium\action\Controller {
 		$projects = Projects::find('all');
 		$posts = Posts::latest();
 
-		$stableVersion = Versions::all()->first(function($item) {
-			return $item->isPromoted && $item->isStable;
-		});
-		$unstableVersion = Versions::all()->first(function($item) {
-			return $item->isPromoted && !$item->isStable;
-		});
+		$stableVersion = null;
+		$unstableVersion = null;
+		foreach (VersionSeries::all() as $series) {
+			foreach ($series->versions() as $version) {
+				if (!$version->isPromoted) {
+					continue;
+				}
+				if ($version->isStable) {
+					$stableVersion = $version;
+				} else {
+					$unstableVersion = $version;
+				}
+			}
+		}
 
 		return compact('posts', 'eureka', 'projects', 'stableVersion', 'unstableVersion');
 	}
@@ -54,7 +62,7 @@ class PagesController extends \lithium\action\Controller {
 	public function development() {}
 
 	public function versions() {
-		$data = Versions::all();
+		$data = VersionSeries::all();
 		return compact('data');
 	}
 

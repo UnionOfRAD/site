@@ -34,13 +34,13 @@ $this->set([
 				<a href="https://github.com/UnionOfRAD/lithium/tree/<?= $unstableVersion->ref() ?>" target="new" class="download button large unstable">
 					<span class="download__title">Download Next</span>
 					<span class="download__version">
-						li₃ version <?= $unstableVersion->version ?>
+						li₃ version <?= $unstableVersion->name ?>
 					</span>
 				</a>
 				<a href="https://github.com/UnionOfRAD/lithium/tree/<?= $stableVersion->ref() ?>" target="new" class="download button large">
 					<span class="download__title">Download Stable</span>
 					<span class="download__version">
-						li₃ version <?= $stableVersion->version ?>
+						li₃ version <?= $stableVersion->name ?>
 					</span>
 				</a>
 			</div>

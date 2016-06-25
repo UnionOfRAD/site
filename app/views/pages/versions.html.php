@@ -42,7 +42,7 @@ $this->set([
 			<tbody>
 		<?php foreach ($data as $item): ?>
 				<tr>
-					<th><?= $item->series ?>
+					<th><?= $item->name ?>
 					<td><?= $item->required ?>
 					<td><?= $item->recommended ?>
 		<?php endforeach ?>
