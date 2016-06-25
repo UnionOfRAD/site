@@ -623,3 +623,49 @@ table td:first-child {
 table td:last-child {
   padding-right: 10px;
 }
+
+/* Jumpboxes
+---------------------------------------------------------------- */
+.jumpboxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+.jumpbox {
+  display: inline-block;
+  position: relative;
+  height: auto;
+  color: white;
+  max-width: 400px;
+  width: 100%;
+  margin-right: 40px;
+  margin-bottom: 60px;
+}
+.jumpbox__title,
+.jumpbox__version {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: .05em;
+  font-size: 30px;
+  font-weight: bold;
+}
+.jumpbox__title {
+  background-color: #180274;
+  background-image: url(../img/bg2dark.png);
+  padding: 20px;
+  min-height: 140px;
+}
+.jumpbox__description:not(:empty) {
+  padding: 20px;
+  background: white;
+  color: black;
+}
+.jumpbox__version {
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 10px 20px;
+  background-color: #2060AD;
+  background-image: url(../img/bg2.png);
+}
+.jumpbox__version:hover {
+  background-color: #2F99A1;
+}

@@ -40,6 +40,11 @@
   min-width: 600px;
   max-width: 800px;
 }
+
+.home .docs .jumpboxes {
+  justify-content: center;
+
+}
 .home .wild {
   min-width: 800px;
 }
@@ -129,7 +134,7 @@
 }
 .post-item {
   display: inline-block;
-  text-align: justify;
+  text-align: left;
   max-width: 400px;
 }
 .post-item h1 {
@@ -139,6 +144,12 @@
 }
 .post-item h1 a {
   text-decoration: none;
+}
+.post-item time {
+  display: block;
+  color: #CB0532;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 .post-item + .post-item {
   vertical-align: top;
@@ -156,7 +167,7 @@
   margin: 0;
   font-weight: bold;
   text-align: center;
-  font-size: 16px;
+  font-size: 30px;
   line-height: 1.2;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

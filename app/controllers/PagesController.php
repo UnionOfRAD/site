@@ -15,6 +15,7 @@ use app\models\VersionSeries;
 use app\models\Versions;
 use jsend\Response as JSendResponse;
 use lithium\core\Environment;
+use li3_docs\models\Indexes;
 
 /**
  * This controller is used for serving static pages by name, which are located in the `/views/pages`
@@ -37,10 +38,16 @@ class PagesController extends \lithium\action\Controller {
 		$eureka = Eurekas::find('random');
 		$projects = Projects::find('all');
 		$posts = Posts::latest();
+		$docs = Indexes::find('grouped', [
+			'conditions' => [
+				'name' => ['manual', 'lithium']
+			]
+		]);
 
 		$stableVersion = VersionSeries::findByName('1.0.x')->versions()->first();
 		$nextVersion = VersionSeries::findByName('1.1.x')->versions()->first();
-		return compact('posts', 'eureka', 'projects', 'stableVersion', 'nextVersion');
+
+		return compact('posts', 'eureka', 'projects', 'stableVersion', 'nextVersion', 'docs');
 	}
 
 	public function support() {}

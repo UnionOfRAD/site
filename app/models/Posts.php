@@ -63,7 +63,7 @@ class Posts extends \lithium\data\Model {
 
 		$html = preg_replace('#\<div.class\=.credit.*\/div\>#mis','', $html);
 		$html = strip_tags($html);
-		$html = Textual::limit($html, 210, ['html' => true]);
+		$html = Textual::limit($html, 300, ['html' => true]);
 
 		return $html;
 	}

@@ -51,7 +51,7 @@ $this->set([
 	<section class="latest-posts">
 		<?php foreach ($posts as $post): ?>
 			<article class="post-item">
-				<h1 class="h-gamma"><?= $this->html->link($post->title, $post->post_url) ?></h1>
+				<h1 class="h-beta"><?= $this->html->link($post->title, $post->post_url) ?></h1>
 				<time><?= date('m/d/Y', $post->timestamp) ?></time>
 				<div class="body">
 					<?php echo $post->teaser() ?>
@@ -62,6 +62,42 @@ $this->set([
 	</section>
 	<hr class="section-separator lightblue">
 	<?php endif ?>
+
+	<section class="docs">
+		<div class="jumpboxes">
+		<?php foreach ($docs as $name => $indexes): ?>
+			<div class="jumpbox jumpbox--<?= $indexes[0]->type ?>">
+				<div class="jumpbox__title">
+					<?= $indexes[0]->title() ?>
+				</div>
+				<div class="jumpbox__actions">
+					<?php foreach ($indexes as $index): ?>
+						<?php if ($index->type === 'book'): ?>
+							<?php echo $this->html->link($index->version, [
+								'library' => 'li3_docs',
+								'controller' => $index->type . 's',
+								'action' => 'view',
+								'name' => $index->name,
+								'version' => $index->version
+							], ['class' => 'jumpbox__version']) ?>
+						<?php else: ?>
+							<?php echo $this->html->link($index->version, [
+								'library' => 'li3_docs',
+								'controller' => $index->type . 's',
+								'action' => 'view',
+								'name' => $index->name,
+								'version' => $index->version,
+								'symbol' => $index->namespace
+							], ['class' => 'jumpbox__version']) ?>
+						<?php endif ?>
+					<?php endforeach ?>
+				</div>
+				<div class="jumpbox__description"><?= $indexes[0]->description ?></div>
+			</div>
+		<?php endforeach ?>
+		</div>
+	</section>
+	<hr class="section-separator lightblue">
 
 	<section class="features">
 		<h1 class="h-alpha t-red">What is li₃?</h1>
