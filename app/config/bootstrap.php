@@ -110,6 +110,11 @@ Indexes::register([
 	'name' => 'manual',
 	'version' => '1.x',
 	'path' => $base . '/manual_1',
+	'description' => <<<TEXT
+This set of guides is meant for PHP developers trying to get a handle on what li₃ can do,
+and—more importantly—what it can do for you. It is meant to give you a
+world-class tour of the framework.
+TEXT
 ]);
 Indexes::register([
 	'type' => 'api',
@@ -117,7 +122,10 @@ Indexes::register([
 	'name' => 'lithium',
 	'version' => '1.1.x',
 	'path' => $base . '/lithium_11',
-	'namespace' => 'lithium'
+	'namespace' => 'lithium',
+	'description' => <<<TEXT
+The framework's detailed technical API documentation.
+TEXT
 ]);
 Indexes::register([
 	'type' => 'api',
@@ -133,7 +141,11 @@ Indexes::register([
 	'title' => 'Specifications',
 	'name' => 'specs',
 	'version' => '1.x',
-	'path' => $base . '/specs'
+	'path' => $base . '/specs',
+	'description' => <<<TEXT
+Specifications (or specs for short) help us take li₃ further. Have a look
+at coding and documentation standards.
+TEXT
 ]);
 
 ?>
