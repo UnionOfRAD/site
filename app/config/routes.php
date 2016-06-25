@@ -30,6 +30,20 @@ Router::connect('/captcha/verify', [
 
 /* Deprecated / BC */
 
+// Renamed but popular pages.
+Router::connect('/docs/manual/common-tasks/basic-filters.md', [], function($request) {
+	return new Response([
+		'location' => [
+			'library' => 'li3_docs',
+			'controller' => 'Books',
+			'action' => 'view',
+			'name' => 'manual',
+			'version' => '1.x',
+			'page' => 'common-tasks/filters'
+		]
+	]);
+});
+
 Router::connect('/docs/book/{:name}/{:version}/{:page:[a-zA-Z\/\-_0-9]+}.md',
 	[], function($request) {
 	return new Response([
@@ -56,6 +70,40 @@ Router::connect('/docs/manual/{:page:.*}', [], function($request) {
 		]
 	]);
 });
+Router::connect('/docs/manual', [], function($request) {
+	return new Response([
+		'location' => [
+			'library' => 'li3_docs',
+			'controller' => 'Books',
+			'action' => 'view',
+			'name' => 'manual',
+			'version' => '1.x'
+		]
+	]);
+});
+Router::connect('/docs/specs/{:page:.*}', [], function($request) {
+	return new Response([
+		'location' => [
+			'library' => 'li3_docs',
+			'controller' => 'Books',
+			'action' => 'view',
+			'name' => 'specs',
+			'version' => '1.x',
+			'page' => str_replace('.md', '', $request->page)
+		]
+	]);
+});
+Router::connect('/docs/specs', [], function($request) {
+	return new Response([
+		'location' => [
+			'library' => 'li3_docs',
+			'controller' => 'Books',
+			'action' => 'view',
+			'name' => 'specs',
+			'version' => '1.x'
+		]
+	]);
+});
 
 Router::connect('/docs/lithium/{:partialSymbol:.*}', [], function($request) {
 	return new Response([
@@ -69,6 +117,30 @@ Router::connect('/docs/lithium/{:partialSymbol:.*}', [], function($request) {
 		]
 	]);
 });
+Router::connect('/docs/lithium', [], function($request) {
+	return new Response([
+		'location' => [
+			'library' => 'li3_docs',
+			'controller' => 'Apis',
+			'action' => 'view',
+			'name' => 'lithium',
+			'version' => '1.0.x',
+			'symbol' => 'lithium'
+		]
+	]);
+});
 
+Router::connect('/docs/lithium', [], function($request) {
+	return new Response([
+		'location' => [
+			'library' => 'li3_docs',
+			'controller' => 'Apis',
+			'action' => 'view',
+			'name' => 'lithium',
+			'version' => '1.0.x',
+			'symbol' => 'lithium'
+		]
+	]);
+});
 
 ?>
