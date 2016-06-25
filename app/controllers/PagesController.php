@@ -12,6 +12,7 @@ use app\models\Eurekas;
 use app\models\Posts;
 use app\models\Projects;
 use app\models\VersionSeries;
+use app\models\Versions;
 use jsend\Response as JSendResponse;
 use lithium\core\Environment;
 
@@ -62,8 +63,9 @@ class PagesController extends \lithium\action\Controller {
 	public function development() {}
 
 	public function versions() {
-		$data = VersionSeries::all();
-		return compact('data');
+		$versions = Versions::all();
+		$series = VersionSeries::all();
+		return compact('series', 'versions');
 	}
 
 	public function api_verify_captcha() {

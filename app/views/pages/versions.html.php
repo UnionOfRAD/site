@@ -14,6 +14,21 @@ $this->set([
 
 	<section>
 		<h2 class="h-beta">Release History</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>
+					<th>
+					<th>
+			</thead>
+			<tbody>
+		<?php foreach ($versions as $item): ?>
+				<tr>
+					<th><?= $item->name ?>
+					<td><?= $this->html->link('Change Log', $item->changelog(), ['target' => 'new']) ?>
+		<?php endforeach ?>
+			</tbody>
+		</table>
 		<p>
 		For downloads and changelogs see the <?= $this->html->link('GitHub Releases Page', 'https://github.com/UnionOfRAD/lithium/releases', [
 		]) ?>.
@@ -40,7 +55,7 @@ $this->set([
 					<th>recommended PHP
 			</thead>
 			<tbody>
-		<?php foreach ($data as $item): ?>
+		<?php foreach ($series as $item): ?>
 				<tr>
 					<th><?= $item->name ?>
 					<td><?= $item->required ?>

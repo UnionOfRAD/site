@@ -34,6 +34,10 @@ class Versions extends \lithium\data\Model {
 		return 'https://github.com/UnionOfRAD/lithium/archive/' . $entity->ref() . '.zip';
 	}
 
+	public function changelog($entity) {
+		return 'https://github.com/UnionOfRAD/lithium/blob/' . $entity->ref() . '/CHANGELOG.md';
+	}
+
 	public function series($entity) {
 		return VersionSeries::find('all')->first(function($item) use ($entity) {
 			return $item->name === $entity->series;
@@ -55,10 +59,10 @@ class Versions extends \lithium\data\Model {
 				'isPromoted' => true
 			],
 			'1.0.0' => [
-				'name' => '1.0.1',
+				'name' => '1.0.0',
 				'series' => '1.0.x',
 				'isStable' => true,
-				'isPromoted' => true
+				'isPromoted' => false
 			],
 		];
 	}
