@@ -608,16 +608,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.1.0",
+            "version": "v3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "eca51b7b65eb9be6af88ad7cc91685f1556f5c9a"
+                "reference": "c5a7e7fc273c758b92b85dcb9c46149ccda89623"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/eca51b7b65eb9be6af88ad7cc91685f1556f5c9a",
-                "reference": "eca51b7b65eb9be6af88ad7cc91685f1556f5c9a",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/c5a7e7fc273c758b92b85dcb9c46149ccda89623",
+                "reference": "c5a7e7fc273c758b92b85dcb9c46149ccda89623",
                 "shasum": ""
             },
             "require": {
@@ -653,7 +653,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-05-26 21:46:24"
+            "time": "2016-06-14 11:18:07"
         },
         {
             "name": "tumblr/tumblr",
@@ -710,12 +710,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/li3_docs.git",
-                "reference": "0625de42e3f08ee4de2e79b41d8d90b4bda11d64"
+                "reference": "ac35340f8c5b770e36820c1022d6e3dbe8aca203"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/li3_docs/zipball/0625de42e3f08ee4de2e79b41d8d90b4bda11d64",
-                "reference": "0625de42e3f08ee4de2e79b41d8d90b4bda11d64",
+                "url": "https://api.github.com/repos/UnionOfRAD/li3_docs/zipball/ac35340f8c5b770e36820c1022d6e3dbe8aca203",
+                "reference": "ac35340f8c5b770e36820c1022d6e3dbe8aca203",
                 "shasum": ""
             },
             "require": {
@@ -750,7 +750,7 @@
                 "lithium",
                 "wiki"
             ],
-            "time": "2016-06-14 18:41:36"
+            "time": "2016-06-25 18:15:10"
         },
         {
             "name": "unionofrad/lithium",
