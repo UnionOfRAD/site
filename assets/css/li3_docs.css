@@ -117,36 +117,46 @@
   flex-wrap: wrap;
 }
 .li3-docs .jumpbox {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: .05em;
   display: inline-block;
   position: relative;
   height: auto;
   color: white;
+  max-width: 400px;
+  width: 100%;
+  margin-right: 40px;
+  margin-bottom: 60px;
+}
+.li3-docs .jumpbox__title,
+.li3-docs .jumpbox__version {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: .05em;
   font-size: 30px;
   font-weight: bold;
-  background-color: #2f99a1;
-  background-image: url(../img/bg2.png);
-  box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.25);
-  max-width: 300px;
-  width: 33.33333%;
+}
+.li3-docs .jumpbox__title {
+  background-color: #180274;
+  background-image: url(../img/bg2dark.png);
   padding: 20px;
-  height: 300px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  min-height: 140px;
+}
+.li3-docs .jumpbox__description:not(:empty) {
+  padding: 20px;
+  background: white;
+  color: black;
 }
 .li3-docs .jumpbox__version {
   display: block;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  color: black;
+  color: white;
+  text-align: right;
+  padding: 10px 20px;
+  background-color: #2060AD;
+  background-image: url(../img/bg2.png);
+}
+.li3-docs .jumpbox__version:hover {
+  background-color: #2F99A1;
 }
 .li3-docs #content > article.docs-index {
   max-width: none;
-}
-.li3-docs .jumpbox:hover {
-  background: #180274;
 }
 
 /* ----- Aside Menu ----- */
