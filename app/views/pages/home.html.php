@@ -1,6 +1,6 @@
 <?php
 
-$this->title('The most RAD framework for PHP');
+$this->title('li3: The most RAD framework for PHP');
 $this->set([
 	'meta' => [
 		'description' => 'li3 is the first and only major PHP framework built from the ground up for PHP 5.3+, and the first to break ground into major new technologies.'

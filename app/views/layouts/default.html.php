@@ -14,7 +14,9 @@ $library = $this->request()->library;
 		if ($this->title()) {
 			$title[] = $this->title();
 		}
-		$title[] = 'li3';
+		if ($this->_request->action !== 'home') {
+			$title[] = 'li3 PHP-Framework';
+		}
 
 		echo implode(' – ', $title);
 	?></title>
