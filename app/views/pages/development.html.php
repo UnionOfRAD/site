@@ -45,16 +45,14 @@ require(['jquery', 'recaptcha', 'domready!'], function($) {
 		<h1 class="h-gamma">Contents</h1>
 		<ul>
 			<li><?= $this->html->link('Contributing', '#contributing') ?>
-				<ul>
-					<li><?= $this->html->link('Types of Contributions', '#types-of-contributions') ?>
-					<ul>
-						<li><?= $this->html->link('Enhancements', '#enhancements') ?>
-						<li><?= $this->html->link('Bugs', '#bugs') ?>
-						<li><?= $this->html->link('Security Vulnerabilities', '#security') ?>
-						<li><?= $this->html->link('Documentation', '#documentation') ?>
-					</ul>
-					<li><?= $this->html->link('Branching', '#branching') ?>
-				</ul>
+			<li><?= $this->html->link('Types of Contributions', '#types-of-contributions') ?>
+			<ul>
+				<li><?= $this->html->link('Enhancements', '#enhancements') ?>
+				<li><?= $this->html->link('Bugs', '#bugs') ?>
+				<li><?= $this->html->link('Security Vulnerabilities', '#security') ?>
+				<li><?= $this->html->link('Documentation', '#documentation') ?>
+			</ul>
+			<li><?= $this->html->link('Branching', '#branching') ?>
 			<li><?= $this->html->link('Specifications', '#specs') ?>
 		</ul>
 	</nav>
@@ -216,10 +214,11 @@ require(['jquery', 'recaptcha', 'domready!'], function($) {
 	<section id="specs">
 		<h1 class="h-beta">Standard Specifications</h1>
 		<p>
-			Standard <?= $this->html->link('Specifications', ['library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser', 'lib' => 'specs']) ?> (or <em>specs</em> for short) help us take li3 further.
+			Standard <?= $this->html->link('Specifications', [
+				'library' => 'li3_docs', 'action' => 'view', 'controller' => 'Books', 'name' => 'specs', 'version' => '1.x'
+			]) ?> (or <em>specs</em> for short) help us take li3 further.
 			li3 adheres to several standards, created by the PHP Framework Interoperability
 			Group (i.e. PSR-0) as well as the li3 Community.
-			<?= $this->html->link('Read more…', ['library' => 'li3_docs', 'action' => 'view', 'controller' => 'ApiBrowser', 'lib' => 'specs']) ?>
 		</p>
 	</section>
 <!--
