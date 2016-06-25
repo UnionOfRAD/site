@@ -38,22 +38,9 @@ class PagesController extends \lithium\action\Controller {
 		$projects = Projects::find('all');
 		$posts = Posts::latest();
 
-		$stableVersion = null;
-		$unstableVersion = null;
-		foreach (VersionSeries::all() as $series) {
-			foreach ($series->versions() as $version) {
-				if (!$version->isPromoted) {
-					continue;
-				}
-				if ($version->isStable) {
-					$stableVersion = $version;
-				} else {
-					$unstableVersion = $version;
-				}
-			}
-		}
-
-		return compact('posts', 'eureka', 'projects', 'stableVersion', 'unstableVersion');
+		$stableVersion = VersionSeries::findByName('1.0.x')->versions()->first();
+		$nextVersion = VersionSeries::findByName('1.1.x')->versions()->first();
+		return compact('posts', 'eureka', 'projects', 'stableVersion', 'nextVersion');
 	}
 
 	public function support() {}

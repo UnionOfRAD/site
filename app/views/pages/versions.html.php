@@ -11,31 +11,40 @@ $this->set([
 ?>
 <article class="use-section-spacing">
 	<h1 class="h-alpha"><?= $this->title('Versions') ?></h1>
-
 	<section>
 		<h2 class="h-beta">Release History</h2>
+		<p>
+			This table lists all released versions up to the current date.
+			For compatibility, see the <em>Series Compatibility</em> section below.
+		</p>
 		<table>
 			<thead>
 				<tr>
 					<th>
-					<th>
+					<th>Series
 					<th>
 			</thead>
 			<tbody>
 		<?php foreach ($versions as $item): ?>
 				<tr>
 					<th><?= $item->name ?>
-					<td><?= $this->html->link('Change Log', $item->changelog(), ['target' => 'new']) ?>
+					<td><?= $item->series()->name ?>
+					<td>
+						<?= $this->html->link('source', $item->tree(), ['target' => 'new']) ?>
+						<?php if ($url = $item->changelog()): ?>
+							&nbsp;|&nbsp;
+							<?= $this->html->link('changelog', $url, ['target' => 'new']) ?>
+						<?php endif ?>
+						<?php if ($url = $item->docs()): ?>
+							&nbsp;|&nbsp;
+							<?= $this->html->link('API documentation', $url) ?>
+						<?php endif ?>
 		<?php endforeach ?>
 			</tbody>
 		</table>
-		<p>
-		For downloads and changelogs see the <?= $this->html->link('GitHub Releases Page', 'https://github.com/UnionOfRAD/lithium/releases', [
-		]) ?>.
-		</p>
 	</section>
 	<section>
-		<h2 class="h-beta">Compatibility</h2>
+		<h2 class="h-beta">Series Compatibility</h2>
 		<p>
 			Because the framework takes advantage of advanced language features, a recent PHP version
 			is required. The compatibility table below shows which framework version requires which PHP

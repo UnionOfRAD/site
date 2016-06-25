@@ -29,15 +29,29 @@ class VersionSeries extends \lithium\data\Model {
 				'required' => '>=5.3.6 <7.0.0',
 				'recommended' => '>=5.4.0 <7.0.0'
 			],
+			'0.x' => [
+				'name' => '0.x',
+				'required' => '>=5.3.6 <7.0.0',
+				'recommended' => '>=5.4.0 <7.0.0'
+			],
 		];
 	}
 
 	public function versions($entity) {
 		return Versions::find('all')->find(function($item) use ($entity) {
-			return $item->series === $entity->name;
+			return $item->series(false) === $entity->name;
 		});
 	}
 }
+
+VersionSeries::finder('first', function($self, $params, $chain) {
+	$result = VersionSeries::data()[$params['options']['conditions']['name']];
+
+	if (!$result) {
+		return false;
+	}
+	return VersionSeries::create($result);
+});
 
 VersionSeries::finder('all', function($self, $params, $chain) {
 	$results = new Collection();

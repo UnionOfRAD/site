@@ -31,13 +31,13 @@ $this->set([
 				<?= $this->html->link('Source', 'https://github.com/unionofrad/lithium', ['class' => 'button icon large source']) ?>
 			</nav>
 			<div class="download-buttons">
-				<a href="https://github.com/UnionOfRAD/lithium/tree/<?= $unstableVersion->ref() ?>" target="new" class="download button large unstable">
+				<a href="<?= $nextVersion->tree() ?>" target="new" class="download button large next">
 					<span class="download__title">Download Next</span>
 					<span class="download__version">
-						li₃ version <?= $unstableVersion->name ?>
+						li₃ version <?= $nextVersion->name ?>
 					</span>
 				</a>
-				<a href="https://github.com/UnionOfRAD/lithium/tree/<?= $stableVersion->ref() ?>" target="new" class="download button large">
+				<a href="<?= $stableVersion->tree() ?>" target="new" class="download button large">
 					<span class="download__title">Download Stable</span>
 					<span class="download__version">
 						li₃ version <?= $stableVersion->name ?>
