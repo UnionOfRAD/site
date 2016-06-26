@@ -34,6 +34,13 @@ pre > code {
   margin-right: -.2em;
 }
 
+pre > code.language-asciiart {
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  border-left: 0;
+  margin-left: 0;
+  background: none;
+}
+
 .token.comment,
 .token.prolog,
 .token.doctype,
