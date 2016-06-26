@@ -227,16 +227,13 @@ a {
 }
 /* h3 a, */
 .site .post-item .read-more,
+.li3-docs .apis-view .symbol-segment,
+.li3-docs .apis-view .extends__symbol,
 .li3-docs ul a,
 .li3-docs .note a,
 .crumbs a,
 footer.main a,
 #content p a {
-  font-family: 'Anonymous Pro', sans-serif;
-  border-bottom: 1px solid #dedede;
-}
-.li3-docs .apis-view .symbol-segment,
-.li3-docs .apis-view .extends__symbol {
   border-bottom: 1px solid #dedede;
 }
 
@@ -571,9 +568,6 @@ button.large,
   position: fixed;
   top: 21px;
   margin-left: 60px;
-}
-.crumbs:hover {
-  opacity: 1;
 }
 .crumbs ul, .crumbs li {
   padding: 0;
