@@ -95,27 +95,3 @@ code .variable,
 .token.keyword {
     color: #2F99A1;
 }
-
-/* Probably unused */
-/*
-.annotation, .decorator, .doctype, .pi, .chunk, .shebang {
-	color:#d42aae;
-}
-.hljs-preprocessor {
-	color: #111;
-	font-weight: bold;
-}
-.hljs-keyword {
-	font-weight: bold;
-}
-.token.regex,
-.token.important {
-    color: #fd971f;
-}
-.token.important {
-    font-weight: bold;
-}
-.token.entity {
-    cursor: help;
-}
-*/
