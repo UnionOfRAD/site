@@ -111,9 +111,9 @@ Indexes::register([
 	'version' => '1.x',
 	'path' => $base . '/manual_1',
 	'description' => <<<TEXT
-This set of guides is meant for PHP developers trying to get a handle on what li₃ can do,
-and—more importantly—what it can do for you. It is meant to give you a
-world-class tour of the framework.
+This is your handbook to building li₃ applications. It takes you through getting started,
+and provides an overview of all aspects of application-building that are covered by the
+framework.
 TEXT
 ]);
 Indexes::register([
