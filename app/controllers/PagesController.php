@@ -57,7 +57,9 @@ class PagesController extends \lithium\action\Controller {
 	public function development() {}
 
 	public function versions() {
-		$versions = Versions::all();
+		$versions = Versions::all()->find(function($item) {
+			return $item->isReleased === true;
+		});
 		$series = VersionSeries::all();
 		return compact('series', 'versions');
 	}

@@ -47,9 +47,6 @@ class Versions extends \lithium\data\Model {
 	}
 
 	public function docs($entity) {
-		if (!$entity->isStable() && VersionParser::parseStability($entity->name) !== 'dev') {
-			return false;
-		}
 		if (Comparator::lessThan($entity->name, '1.0.0-alpha')) {
 			return false;
 		}
@@ -75,9 +72,6 @@ class Versions extends \lithium\data\Model {
 
 	// Changelogs exists beginning with 1.0.0-rc1
 	public function changelog($entity) {
-		if (!$entity->isStable() && VersionParser::parseStability($entity->name) !== 'dev') {
-			return false;
-		}
 		if (Comparator::lessThan($entity->name, '1.0.0-rc1')) {
 			return false;
 		}
@@ -109,7 +103,8 @@ class Versions extends \lithium\data\Model {
 		$results = [
 			'1.1.x-dev' => [
 				'name' => '1.1.x-dev',
-				'ref' => '1.1'
+				'ref' => '1.1',
+				'isReleased' => false
 			]
 		];
 		if (!$tags = Cache::read('default', 'gh-lithium-tags')) {
@@ -123,7 +118,8 @@ class Versions extends \lithium\data\Model {
 			}
 			$results[$tag['name']] = [
 				'name' => substr($tag['name'], 1),
-				'ref' => $tag['name']
+				'ref' => $tag['name'],
+				'isReleased' => true
 			];
 		}
 		return $results;
