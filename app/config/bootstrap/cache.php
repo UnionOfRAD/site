@@ -70,7 +70,7 @@ if (!Environment::is('development')) {
 		if (!$request->is('get')) {
 			return $chain->next($self, $params, $chain);
 		}
-		$cacheKey = 'fpc_' . md5($request->url);
+		$cacheKey = 'fpc_' . md5($request->env('REQUEST_URI'));
 
 		if ($cached = Cache::read('default', $cacheKey)) {
 			return $cached;
