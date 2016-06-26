@@ -11,6 +11,7 @@ namespace app\models;
 use app\models\VersionSeries;
 use lithium\util\Collection;
 use Github\Client;
+use Composer\Semver\VersionParser;
 use Composer\Semver\Comparator;
 use lithium\storage\Cache;
 use li3_docs\models\Indexes;
@@ -46,6 +47,9 @@ class Versions extends \lithium\data\Model {
 	}
 
 	public function docs($entity) {
+		if (!$entity->isStable() && VersionParser::parseStability($entity->name) !== 'dev') {
+			return false;
+		}
 		if (Comparator::lessThan($entity->name, '1.0.0-alpha')) {
 			return false;
 		}
@@ -71,6 +75,9 @@ class Versions extends \lithium\data\Model {
 
 	// Changelogs exists beginning with 1.0.0-rc1
 	public function changelog($entity) {
+		if (!$entity->isStable() && VersionParser::parseStability($entity->name) !== 'dev') {
+			return false;
+		}
 		if (Comparator::lessThan($entity->name, '1.0.0-rc1')) {
 			return false;
 		}
