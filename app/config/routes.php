@@ -31,18 +31,24 @@ Router::connect('/captcha/verify', [
 /* Deprecated / BC */
 
 // Renamed but popular pages.
-Router::connect('/docs/manual/common-tasks/basic-filters.md', [], function($request) {
-	return new Response([
-		'location' => [
-			'library' => 'li3_docs',
-			'controller' => 'Books',
-			'action' => 'view',
-			'name' => 'manual',
-			'version' => '1.x',
-			'page' => 'common-tasks/filters'
-		]
-	]);
-});
+$renamed = [
+	'common-tasks/basic-filters.md' => 'common-tasks/filters',
+	'views/views.md' => 'views/'
+];
+foreach ($renamed as $from => $to) {
+	Router::connect('/docs/manual/' . $from, [], function($request) use ($to) {
+		return new Response([
+			'location' => [
+				'library' => 'li3_docs',
+				'controller' => 'Books',
+				'action' => 'view',
+				'name' => 'manual',
+				'version' => '1.x',
+				'page' => $to
+			]
+		]);
+	});
+}
 
 Router::connect('/docs/book/{:name}/{:version}/{:page:[a-zA-Z\/\-_0-9]+}.md',
 	[], function($request) {
