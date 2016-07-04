@@ -431,6 +431,7 @@
                 "rest",
                 "web service"
             ],
+            "abandoned": "guzzlehttp/guzzle",
             "time": "2015-03-18 18:23:50"
         },
         {
@@ -548,16 +549,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.8.7",
+            "version": "v2.8.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "2a6b8713f8bdb582058cfda463527f195b066110"
+                "reference": "b180b70439dca70049b6b9b7e21d75e6e5d7aca9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/2a6b8713f8bdb582058cfda463527f195b066110",
-                "reference": "2a6b8713f8bdb582058cfda463527f195b066110",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/b180b70439dca70049b6b9b7e21d75e6e5d7aca9",
+                "reference": "b180b70439dca70049b6b9b7e21d75e6e5d7aca9",
                 "shasum": ""
             },
             "require": {
@@ -604,20 +605,20 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2016-06-06 11:11:27"
+            "time": "2016-06-29 05:29:29"
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.1.1",
+            "version": "v3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "c5a7e7fc273c758b92b85dcb9c46149ccda89623"
+                "reference": "2884c26ce4c1d61aebf423a8b912950fe7c764de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/c5a7e7fc273c758b92b85dcb9c46149ccda89623",
-                "reference": "c5a7e7fc273c758b92b85dcb9c46149ccda89623",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/2884c26ce4c1d61aebf423a8b912950fe7c764de",
+                "reference": "2884c26ce4c1d61aebf423a8b912950fe7c764de",
                 "shasum": ""
             },
             "require": {
@@ -653,7 +654,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-06-14 11:18:07"
+            "time": "2016-06-29 05:41:56"
         },
         {
             "name": "tumblr/tumblr",
@@ -710,12 +711,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/li3_docs.git",
-                "reference": "bc965258767c930bd9a71d23c5763874fe124ff5"
+                "reference": "4ee7c26c0bef0ef49b078a98a6762c1e7f03d36c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/li3_docs/zipball/bc965258767c930bd9a71d23c5763874fe124ff5",
-                "reference": "bc965258767c930bd9a71d23c5763874fe124ff5",
+                "url": "https://api.github.com/repos/UnionOfRAD/li3_docs/zipball/4ee7c26c0bef0ef49b078a98a6762c1e7f03d36c",
+                "reference": "4ee7c26c0bef0ef49b078a98a6762c1e7f03d36c",
                 "shasum": ""
             },
             "require": {
@@ -750,20 +751,20 @@
                 "lithium",
                 "wiki"
             ],
-            "time": "2016-06-26 11:56:20"
+            "time": "2016-07-01 20:19:00"
         },
         {
             "name": "unionofrad/lithium",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UnionOfRAD/lithium.git",
-                "reference": "b8f908123162e19e9989722f0675ab9c7628fd00"
+                "reference": "549b0aa5b0b31b8fa26f0ebd02949d80584139e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/b8f908123162e19e9989722f0675ab9c7628fd00",
-                "reference": "b8f908123162e19e9989722f0675ab9c7628fd00",
+                "url": "https://api.github.com/repos/UnionOfRAD/lithium/zipball/549b0aa5b0b31b8fa26f0ebd02949d80584139e0",
+                "reference": "549b0aa5b0b31b8fa26f0ebd02949d80584139e0",
                 "shasum": ""
             },
             "require": {
@@ -771,7 +772,7 @@
                 "php": ">=5.3.6 <7.0.0"
             },
             "require-dev": {
-                "unionofrad/li3_fixtures": "1.0.*@RC"
+                "unionofrad/li3_fixtures": "1.0.*"
             },
             "bin": [
                 "console/li3"
@@ -796,7 +797,7 @@
                 "li3",
                 "lithium"
             ],
-            "time": "2016-05-22 17:15:25"
+            "time": "2016-06-27 12:45:21"
         }
     ],
     "packages-dev": [],
