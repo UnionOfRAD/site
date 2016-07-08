@@ -49,6 +49,11 @@ foreach ($renamed as $from => $to) {
 		]);
 	});
 }
+Router::connect('/manual', [], function($request) use ($to) {
+	return new Response([
+		'location' => '/docs/book/manual/1.x/'
+	]);
+});
 
 Router::connect('/docs/book/{:name}/{:version}/{:page:[a-zA-Z\/\-_0-9]+}.md',
 	[], function($request) {
