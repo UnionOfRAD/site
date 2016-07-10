@@ -30,30 +30,21 @@ Router::connect('/captcha/verify', [
 
 /* Deprecated / BC */
 
-// Renamed but popular pages.
+// Renamed but popular pages
 $renamed = [
-	'common-tasks/basic-filters.md' => 'common-tasks/filters',
-	'views/views.md' => 'views/'
+	'/docs/manual/common-tasks/basic-filters.md' => '/docs/book/manual/1.x/common-tasks/filters',
+	'/docs/manual/views/views.md' => '/docs/book/manual/1.x/views/',
+	'/manual' => '/docs/book/manual/1.x/',
+	'/docs/manual/configuration/servers/nginx.wiki' => '/docs/book/manual/1.x/installation/web-servers',
+	'/docs/manual/handling-http-requests/helpers.wiki' => '/docs/book/manual/1.x/views/helpers'
 ];
 foreach ($renamed as $from => $to) {
-	Router::connect('/docs/manual/' . $from, [], function($request) use ($to) {
+	Router::connect($from, [], function($request) use ($to) {
 		return new Response([
-			'location' => [
-				'library' => 'li3_docs',
-				'controller' => 'Books',
-				'action' => 'view',
-				'name' => 'manual',
-				'version' => '1.x',
-				'page' => $to
-			]
+			'location' => $to
 		]);
 	});
 }
-Router::connect('/manual', [], function($request) use ($to) {
-	return new Response([
-		'location' => '/docs/book/manual/1.x/'
-	]);
-});
 
 Router::connect('/docs/book/{:name}/{:version}/{:page:[a-zA-Z\/\-_0-9]+}.md',
 	[], function($request) {
@@ -77,7 +68,7 @@ Router::connect('/docs/manual/{:page:.*}', [], function($request) {
 			'action' => 'view',
 			'name' => 'manual',
 			'version' => '1.x',
-			'page' => str_replace('.md', '', $request->page)
+			'page' => str_replace(['.wiki', '.md'], '', $request->page)
 		]
 	]);
 });
@@ -100,7 +91,7 @@ Router::connect('/docs/specs/{:page:.*}', [], function($request) {
 			'action' => 'view',
 			'name' => 'specs',
 			'version' => '1.x',
-			'page' => str_replace('.md', '', $request->page)
+			'page' => str_replace(['.wiki', '.md'], '', $request->page)
 		]
 	]);
 });
@@ -128,19 +119,6 @@ Router::connect('/docs/lithium/{:partialSymbol:.*}', [], function($request) {
 		]
 	]);
 });
-Router::connect('/docs/lithium', [], function($request) {
-	return new Response([
-		'location' => [
-			'library' => 'li3_docs',
-			'controller' => 'Apis',
-			'action' => 'view',
-			'name' => 'lithium',
-			'version' => '1.0.x',
-			'symbol' => 'lithium'
-		]
-	]);
-});
-
 Router::connect('/docs/lithium', [], function($request) {
 	return new Response([
 		'location' => [
