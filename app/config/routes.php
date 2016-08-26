@@ -32,81 +32,63 @@ Router::connect('/captcha/verify', [
 
 // Renamed but popular pages
 $renamed = [
-	'/docs/manual/common-tasks/basic-filters.md' => '/docs/book/manual/1.x/common-tasks/filters',
-	'/docs/manual/views/views.md' => '/docs/book/manual/1.x/views/',
-	'/manual' => '/docs/book/manual/1.x/',
-	'/docs/manual/configuration/servers/nginx.wiki' => '/docs/book/manual/1.x/installation/web-servers',
-	'/docs/manual/handling-http-requests/helpers.wiki' => '/docs/book/manual/1.x/views/helpers'
+	301 => [
+		// Before li3_docs 2.0
+		'/docs/lithium' => '/docs/api/lithium/1.0.x',
+		'/docs/manual' => '/docs/book/manual/1.x',
+
+		// Incoming from external tutorial sites.
+		'/docs/manual/common-tasks/basic-filters.md' => '/docs/book/manual/1.x/common-tasks/filters',
+		'/docs/manual/views/views.md' => '/docs/book/manual/1.x/views/',
+		'/docs/manual/configuration/servers/nginx.wiki' => '/docs/book/manual/1.x/installation/web-servers',
+		'/docs/manual/handling-http-requests/helpers.wiki' => '/docs/book/manual/1.x/views/helpers',
+		'/docs/manual/handling-http-requests/routing.md' => '/docs/book/manual/1.x/controllers/routing',
+		'/docs/manual/handling-http-requests/views.md' => '/docs/book/manual/1.x/views',
+		'/docs/manual/working-with-data/using-models.md' => '/docs/book/manual/1.x/models',
+		'/docs/app/config/routes' => 'https://github.com/UnionOfRAD/framework/blob/master/app/config/routes.php',
+	],
+	302 => [
+		// Renamed after new li3_docs 2.0 deployment (ongoing)
+		// These are usually not linked.
+		'/docs/book/manual/1.x/security' => '/docs/book/manual/1.x/quality-code/security',
+
+		// Very old routes. Too generic for use with 301. We might need this later.
+		'/manual' => '/docs/book/manual/1.x/',
+	],
+
 ];
-foreach ($renamed as $from => $to) {
+foreach ($renamed[301] as $from => $to) {
 	Router::connect($from, [], function($request) use ($to) {
 		return new Response([
-			'location' => $to
+			'location' => $to,
+			'status' => 301
+		]);
+	});
+}
+foreach ($renamed[302] as $from => $to) {
+	Router::connect($from, [], function($request) use ($to) {
+		return new Response([
+			'location' => $to,
+			'status' => 302
 		]);
 	});
 }
 
-Router::connect('/docs/book/{:name}/{:version}/{:page:[a-zA-Z\/\-_0-9]+}.md',
-	[], function($request) {
+// Redirect /docs/manual/* to /docs/book/manual/1.x/* as well as specs.
+Router::connect('/docs/{name:(manual|specs)}/{:page:.*}', [], function($request) {
 	return new Response([
 		'location' => [
 			'library' => 'li3_docs',
 			'controller' => 'Books',
 			'action' => 'view',
 			'name' => $request->name,
-			'version' => $request->params['version'],
-			'page' => $request->page
-		]
-	]);
-});
-
-Router::connect('/docs/manual/{:page:.*}', [], function($request) {
-	return new Response([
-		'location' => [
-			'library' => 'li3_docs',
-			'controller' => 'Books',
-			'action' => 'view',
-			'name' => 'manual',
 			'version' => '1.x',
 			'page' => str_replace(['.wiki', '.md'], '', $request->page)
 		]
 	]);
 });
-Router::connect('/docs/manual', [], function($request) {
-	return new Response([
-		'location' => [
-			'library' => 'li3_docs',
-			'controller' => 'Books',
-			'action' => 'view',
-			'name' => 'manual',
-			'version' => '1.x'
-		]
-	]);
-});
-Router::connect('/docs/specs/{:page:.*}', [], function($request) {
-	return new Response([
-		'location' => [
-			'library' => 'li3_docs',
-			'controller' => 'Books',
-			'action' => 'view',
-			'name' => 'specs',
-			'version' => '1.x',
-			'page' => str_replace(['.wiki', '.md'], '', $request->page)
-		]
-	]);
-});
-Router::connect('/docs/specs', [], function($request) {
-	return new Response([
-		'location' => [
-			'library' => 'li3_docs',
-			'controller' => 'Books',
-			'action' => 'view',
-			'name' => 'specs',
-			'version' => '1.x'
-		]
-	]);
-});
 
+// Redirect old lithium API.
 Router::connect('/docs/lithium/{:partialSymbol:.*}', [], function($request) {
 	return new Response([
 		'location' => [
@@ -116,18 +98,6 @@ Router::connect('/docs/lithium/{:partialSymbol:.*}', [], function($request) {
 			'name' => 'lithium',
 			'version' => '1.0.x',
 			'symbol' => 'lithium/' . $request->partialSymbol
-		]
-	]);
-});
-Router::connect('/docs/lithium', [], function($request) {
-	return new Response([
-		'location' => [
-			'library' => 'li3_docs',
-			'controller' => 'Apis',
-			'action' => 'view',
-			'name' => 'lithium',
-			'version' => '1.0.x',
-			'symbol' => 'lithium'
 		]
 	]);
 });
