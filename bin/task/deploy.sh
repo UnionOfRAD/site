@@ -72,10 +72,6 @@ cd -
 # Version
 fill "__VERSION_BUILD__" "$REV_HEAD" $TMP/Envfile
 fill "__PROJECT_VERSION_BUILD__" "$REV_HEAD" $TMP/app/config/bootstrap.php
-fill "__PROJECT_VERSION_BUILD__" "$REV_HEAD" $TMP/assets/css/base.css
-
-# Resources
-g11n_compile_mo $TMP/app/resources/g11n/po
 
 # Assets pipeline
 COMPRESSOR_JS="yuicompressor"
@@ -111,6 +107,11 @@ chmod -R ug+rwX $TMP
 # Transfer
 #
 msg "Entering transfer stage..."
+sync_sanity $TMP/ $THIS_USER@$THIS_HOST:$THIS_PATH "$THIS_TRANSFER_IGNORE"
+set +o errexit
+sync $TMP/ $THIS_USER@$THIS_HOST:$THIS_PATH "$THIS_TRANSFER_IGNORE"
+set -o errexit
+
 run_ssh $THIS_USER@$THIS_HOST <<-SESSION
 	chmod -R a+rwX $THIS_PATH/app/resources/tmp
 	sudo hoictl --project=$THIS_PATH load
