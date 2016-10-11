@@ -107,6 +107,8 @@ license text see the LICENSE.txt file.
 
 ## Search
 
+**planned**
+
 * If the first letter in the query is upper-case, you will only get _classes_ in the results.
 * If the query contains a $, only _properties_ will be shown in the results.
 * If the query ends with or contains a parenthesis, you'll only be searching _methods_.
