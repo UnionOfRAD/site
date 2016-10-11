@@ -71,8 +71,8 @@ cd -
 
 # Version
 fill "__VERSION_BUILD__" "$REV_HEAD" $TMP/Envfile
-fill "__PROJECT_VERSION_BUILD__" "$REV_HEAD" $TMP/app/assets/css/base.css
-fill "__PROJECT_VERSION_BUILD__" "$REV_HEAD" $TMP/app/libraries/base_core/assets/css/admin.css
+fill "__PROJECT_VERSION_BUILD__" "$REV_HEAD" $TMP/app/config/bootstrap.php
+fill "__PROJECT_VERSION_BUILD__" "$REV_HEAD" $TMP/assets/css/base.css
 
 # Resources
 g11n_compile_mo $TMP/app/resources/g11n/po
