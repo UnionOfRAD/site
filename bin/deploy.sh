@@ -10,24 +10,22 @@
 source $DETA/transfer.sh
 source $DETA/invoke.sh
 source $DETA/util.sh
+source $DETA/g11n.sh
 source $DETA/asset.sh
 source $DETA/vcs.sh
 
-role SOURCE
-role TARGET
-
-TMP=$(mktemp -d -t deta)
+role THIS
+SOURCE_PATH=$(dirname $(pwd)) # we execute in bin/
+TMP=$(mktemp -d -t deta.XXXX)
 defer rm -rf $TMP
 
 BRANCH=$(git_current_branch)
 msgwarn "Selected branch %s!" $BRANCH
 
-dry
-
 msg "Preparing build stage..."
 
 msg "Cloning repository..."
-git clone --verbose --single-branch --recursive --branch $BRANCH $SOURCE_REPO $TMP
+git clone --verbose --single-branch --recursive --branch $BRANCH file://$SOURCE_PATH $TMP
 
 msg "Determing versions...."
 
@@ -47,40 +45,19 @@ else
 	msgwarn "No tag found; using first commit %s." $REV_DEPLOYED
 fi
 
-read -p "Optimize? (Y/n) " OPTIMIZE
-
 msg "Changes since %s to-be-deployed:" $REV_DEPLOYED
 git --no-pager log --oneline ${REV_DEPLOYED}..
 echo
 git --no-pager diff --shortstat $REV_DEPLOYED
 echo
-read -p "Deploy these changes? (Y/n) " CONFIRM
-if [[ $CONFIRM == "n" ]]; then
-	exit 1
-fi
 
-if [[ $INITIAL_DEPLOYMENT != "y" ]]; then
-	set +o errexit
-	run_ssh $TARGET_USER@$TARGET_HOST <<-SESSION
-		cd $TARGET_PATH/bin
-		./deta.sh -c ../config/deta check-integrity.sh
-	SESSION
-	set -o errexit
-	read -p "Integrity OK? (Y/n) " PROCEED
-	if [[ "$PROCEED" = "n" ]]; then
-		exit 1
-	fi
-fi
+msg "Will enter build stage."
+dry
 
 #
 # Continue build
 #
 msg "Entering build stage..."
-
-msg "Installing submodules..."
-cd $TMP
-git submodule update --init --recursive
-cd -
 
 msg "Installing composer packages..."
 cd $TMP/app
@@ -88,30 +65,41 @@ composer --prefer-dist --no-dev install
 composer dump-autoload --optimize
 cd -
 
+# Last preparations before transfer.
+# msg "Determing data upgrades..."
+# DATA_UPGRADE_FILES=$(git diff-tree --name-only -r ${REV_DEPLOYED}.. -- data/upgrade);
+
 # Version
-fill "__PROJECT_VERSION_BUILD__" "$REV_HEAD" $TMP/app/config/bootstrap.php
+fill "__VERSION_BUILD__" "$REV_HEAD" $TMP/Envfile
+fill "__PROJECT_VERSION_BUILD__" "$REV_HEAD" $TMP/app/assets/css/base.css
+fill "__PROJECT_VERSION_BUILD__" "$REV_HEAD" $TMP/app/libraries/base_core/assets/css/admin.css
+
+# Resources
+g11n_compile_mo $TMP/app/resources/g11n/po
 
 # Assets pipeline
 COMPRESSOR_JS="yuicompressor"
-COMPRESSOR_CSS="yuicompressor"
+COMPRESSOR_CSS="sqwish"
 
-for FILE in $(find -L $TMP/assets -name "*.css"); do
+for FILE in $(find $TMP -iregex '.*/assets/.*\.css'); do
 	myth $FILE $FILE
 	msgok "Myth processed %s." $FILE
 done
-if [[ "$OPTIMIZE" != "n" ]]; then
-	for FILE in $(find -L -E $TMP/assets -name "*.js"); do
-		compress_js $FILE $FILE
-	done
 
-	for FILE in $(find -L $TMP/assets -name "*.css"); do
-		compress_css $FILE $FILE
-	done
+for FILE in $(find $TMP -iregex '.*/assets/.*\.js'); do
+	compress_js $FILE $FILE
+done
 
-	for FILE in $(find -L $TMP/assets -name "*.png"); do
-		compress_img $FILE $FILE
-	done
-fi
+for FILE in $(find $TMP -iregex '.*/assets/.*\.css'); do
+	compress_css $FILE $FILE
+done
+
+for FILE in $(find $TMP -iregex '.*/assets/.*\.png'); do
+	compress_img $FILE $FILE
+done
+#	for FILE in $(find $TMP -iregex '.*/assets/.*\.jpg'); do
+#		compress_img $FILE $FILE
+#	done
 
 vcs_clear $TMP
 
@@ -123,18 +111,29 @@ chmod -R ug+rwX $TMP
 # Transfer
 #
 msg "Entering transfer stage..."
-
-sync_sanity $TMP/ $TARGET_USER@$TARGET_HOST:$TARGET_PATH "$TARGET_TRANSFER_IGNORE"
-set +o errexit
-sync $TMP/ $TARGET_USER@$TARGET_HOST:$TARGET_PATH "$TARGET_TRANSFER_IGNORE"
-set -o errexit
-
-run_ssh $TARGET_USER@$TARGET_HOST <<-SESSION
-	cd $TARGET_PATH/bin
-	./deta.sh -c ../config/deta create-config.sh
-	chmod -R a+rwX ../app/resources/tmp
-	./deta.sh -c ../config/deta create-integrity-spec.sh
-SESSION
+if [[ $THIS_TRANSFER_METHOD == "ssh+rsync" ]]; then
+	sync_sanity $TMP/ $THIS_USER@$THIS_HOST:$THIS_PATH "$THIS_TRANSFER_IGNORE"
+	set +o errexit
+	sync $TMP/ $THIS_USER@$THIS_HOST:$THIS_PATH "$THIS_TRANSFER_IGNORE"
+	set -o errexit
+fi
+if [[ $THIS_TRANSFER_METHOD == "manual" ]]; then
+	BUILD_FILE=$TMP/${THIS_NAME}_$(date +%Y-%m-%d-%H-%M).tar.gz
+	msg "Creating build file %s..." $BUILD_FILE
+	cd $TMP
+	tar cvfz $BUILD_FILE *
+	cd -
+	msginfo "Transfer method 'manual' was selected, to finalize the deployment you must"
+	msginfo "now copy the files yourself. Archive is available at:\n -> %s" $BUILD_FILE
+fi
+if [[ $THIS_TRANSFER_METHOD == ssh* ]]; then
+	run_ssh $THIS_USER@$THIS_HOST <<-SESSION
+		chmod -R a+rwX $THIS_PATH/app/resources/tmp
+		sudo hoictl --project=$THIS_PATH load
+	SESSION
+else
+	msginfo "Do not have SSH. You must execute commands on target manually."
+fi
 
 #
 # Post-Deploy
@@ -146,4 +145,3 @@ cd $SOURCE_PATH
 msg "Tagging revision %s as deployed." $REV_HEAD
 git tag -f $TAG_DEPLOYED $REV_HEAD
 cd -
-
