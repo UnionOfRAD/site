@@ -1,8 +1,0 @@
-#
-# This file is to be included *inside* a server directive.
-# Configurations here deal not with application level but 
-# server level settings.
-#
-auth_basic "Restricted - Staging";
-auth_basic_user_file PROJECT/config/nginx/password;
-

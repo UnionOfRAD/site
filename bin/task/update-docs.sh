@@ -7,11 +7,9 @@
 # License. For the full license text see the LICENSE file.
 #
 
-role THIS
-
 set +o errexit
 
-DOCS_PATH=$THIS_PATH/app/resources/docs
+DOCS_PATH=$(dirname $(pwd))/app/resources/docs
 
 rm -fr $DOCS_PATH
 mkdir -p $DOCS_PATH

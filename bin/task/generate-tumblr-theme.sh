@@ -10,7 +10,7 @@
 source $DETA/util.sh
 source $DETA/asset.sh
 
-role THIS
+THIS_PATH=$(dirname $(pwd)) # we execute in bin/
 
 cp $THIS_PATH/blog/tumblr.html /tmp/
 cp $THIS_PATH/assets/css/reset.css /tmp/

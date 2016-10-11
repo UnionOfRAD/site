@@ -13,29 +13,7 @@ It serves the naked DOMAIN. A MySQL database is needed to run the site.
 Currently only Linux and Darwin are supported as deployment and developing
 platforms. It is expected that you are running ningx with php-fpm.
 
-To initialize the project for development run the following commands. You
-have to run these only once. After running `make install` verify the deta
-configuration created for your local development environment.
-
-```
-$ make install
-$ $EDITOR config/deta/dev.conf
-$ cd bin
-$ ./deta -c ../config/deta create-config.sh
-```
-
-Add the following entry to `/etc/hosts`:
-``` 
-127.0.0.1 lithium-site.dev
-```
-
-Include the generated nginx configuration file in you main nginx.conf and 
-restart the server afterwards.
-``` 
-include /path/to/lithium_site/config/nginx/servers/*.conf;
-```
-
-Now the site should be available under [lithium-site.dev](http://lithium-site.dev).
+The development domain is `lithium-site.dev`.
 
 ### Updating Dependencies 
 

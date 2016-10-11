@@ -111,29 +111,10 @@ chmod -R ug+rwX $TMP
 # Transfer
 #
 msg "Entering transfer stage..."
-if [[ $THIS_TRANSFER_METHOD == "ssh+rsync" ]]; then
-	sync_sanity $TMP/ $THIS_USER@$THIS_HOST:$THIS_PATH "$THIS_TRANSFER_IGNORE"
-	set +o errexit
-	sync $TMP/ $THIS_USER@$THIS_HOST:$THIS_PATH "$THIS_TRANSFER_IGNORE"
-	set -o errexit
-fi
-if [[ $THIS_TRANSFER_METHOD == "manual" ]]; then
-	BUILD_FILE=$TMP/${THIS_NAME}_$(date +%Y-%m-%d-%H-%M).tar.gz
-	msg "Creating build file %s..." $BUILD_FILE
-	cd $TMP
-	tar cvfz $BUILD_FILE *
-	cd -
-	msginfo "Transfer method 'manual' was selected, to finalize the deployment you must"
-	msginfo "now copy the files yourself. Archive is available at:\n -> %s" $BUILD_FILE
-fi
-if [[ $THIS_TRANSFER_METHOD == ssh* ]]; then
-	run_ssh $THIS_USER@$THIS_HOST <<-SESSION
-		chmod -R a+rwX $THIS_PATH/app/resources/tmp
-		sudo hoictl --project=$THIS_PATH load
-	SESSION
-else
-	msginfo "Do not have SSH. You must execute commands on target manually."
-fi
+run_ssh $THIS_USER@$THIS_HOST <<-SESSION
+	chmod -R a+rwX $THIS_PATH/app/resources/tmp
+	sudo hoictl --project=$THIS_PATH load
+SESSION
 
 #
 # Post-Deploy

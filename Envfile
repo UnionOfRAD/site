@@ -1,0 +1,21 @@
+# -----------------------------------------------------------
+# Environment
+# -----------------------------------------------------------
+
+# The host i.e. example.org and username.
+HOST="localhost"
+USER="nobody"
+
+# The domain under which the project is served.
+DOMAIN="lithium-site.dev"
+
+# Name and absolute path to project (w/o trailing slash) and repository.
+NAME="lithium_site"
+PATH="/var/www/lithium_site"
+
+# Will exclude directories and files in transfer tasks. Separate with
+# spaces. Possible used with rsync and lftp. fnmatch(5) patterns are
+# allowed. To exclude whole directory (not just its contents) DO append
+# slash. Patterns prefixed with a slash are anchored at the base path
+# (when used with rsync).
+TRANSFER_IGNORE=".git/ /log/"

@@ -3,6 +3,7 @@ assets/aud/*
 app/libraries/*
 app/resources/bot/*
 !app/resources/bot/empty
+tmp/*
 app/resources/tmp/*
 .*.sw[op]
 config/nginx/password
