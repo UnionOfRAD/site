@@ -132,7 +132,7 @@ set -o errexit
 run_ssh $TARGET_USER@$TARGET_HOST <<-SESSION
 	cd $TARGET_PATH/bin
 	./deta.sh -c ../config/deta create-config.sh
-	./deta.sh -c ../config/deta fix-perms.sh
+	chmod -R a+rwX ../app/resources/tmp
 	./deta.sh -c ../config/deta create-integrity-spec.sh
 SESSION
 

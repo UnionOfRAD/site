@@ -83,7 +83,7 @@ information see the deta projects documentation.
 ```
 $ cd /path/to/project/bin
 $ ./deta -c ../config/deta
-$ ./deta -c ../config/deta fix-perms.sh
+$ chmod -R a+rwX app/resources/tmp
 ```
 
 ## Deployment
