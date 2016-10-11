@@ -34,14 +34,12 @@ ErrorHandler::apply('lithium\action\Dispatcher::run', array(), function($info, $
 	return $response;
 });
  */
+
 Logger::config([
 	'default' => [
-		'adapter' => 'File',
-		'path' => dirname(Libraries::get(true, 'path')) . '/log',
-		'timestamp' => '[Y-m-d H:i:s]',
-		// Log everything into one file.
-		'file' => function($data, $config) { return 'app.log'; },
-		'priority' => ['debug', 'error', 'notice', 'warning']
+		'adapter' => 'Syslog',
+		'priority' => ['debug', 'error', 'notice', 'warning'],
+		'identity' => 'lithium_site@dev'
 	],
 ]);
 
