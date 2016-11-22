@@ -100,13 +100,8 @@ class Versions extends \lithium\data\Model {
 	}
 
 	public static function data() {
-		$results = [
-			'1.1.x-dev' => [
-				'name' => '1.1.x-dev',
-				'ref' => '1.1',
-				'isReleased' => false
-			]
-		];
+		$results = [];
+
 		if (!$tags = Cache::read('default', 'gh-lithium-tags')) {
 			$client = new Client();
 			$tags = $client->api('repo')->tags('UnionOfRAD', 'lithium');
