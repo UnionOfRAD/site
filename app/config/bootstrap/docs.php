@@ -16,7 +16,7 @@ Indexes::register([
 	'title' => 'li₃: The Definitive Guide',
 	'name' => 'manual',
 	'version' => '1.x',
-	'path' => $base . '/manual_1',
+	'path' => $base . '/manual_1.x',
 	'description' => <<<TEXT
 This is your handbook to building li₃ applications. It takes you through getting started,
 and provides an overview of all aspects of application-building that are covered by the
@@ -28,7 +28,7 @@ Indexes::register([
 	'title' => 'Framework API',
 	'name' => 'lithium',
 	'version' => '1.1.x',
-	'path' => $base . '/lithium_11',
+	'path' => $base . '/lithium_1.1',
 	'namespace' => 'lithium',
 	'description' => <<<TEXT
 The framework's detailed technical API documentation.
@@ -39,7 +39,7 @@ Indexes::register([
 	'title' => 'Framework API',
 	'name' => 'lithium',
 	'version' => '1.0.x',
-	'path' => $base . '/lithium_10',
+	'path' => $base . '/lithium_1.0',
 	'namespace' => 'lithium'
 ]);
 
@@ -48,11 +48,23 @@ Indexes::register([
 	'title' => 'Specifications',
 	'name' => 'specs',
 	'version' => '1.x',
-	'path' => $base . '/specs',
+	'path' => $base . '/specs_master',
 	'description' => <<<TEXT
 Specifications (or specs for short) help us take li₃ further. Have a look
 at coding and documentation standards.
 TEXT
 ]);
+
+Indexes::register([
+	'type' => 'api',
+	'title' => 'li₃ Behaviors API',
+	'name' => 'li3_behaviors',
+	'version' => '2.0.x',
+	'path' => $base . '/li3_behaviors_2.0',
+	'description' => <<<TEXT
+Model Behaviors plugin for the li₃ PHP framework.
+TEXT
+]);
+
 
 ?>
