@@ -1,9 +1,10 @@
 <?php
 /**
- * Lithium: the most rad php framework
+ * li₃: the most RAD framework for PHP (http://li3.me)
  *
- * @copyright     Copyright 2013, Union of RAD (http://union-of-rad.org)
- * @license       http://opensource.org/licenses/bsd-license.php The BSD License
+ * Copyright 2016, Union of RAD. All rights reserved. This source
+ * code is distributed under the terms of the BSD 3-Clause License.
+ * The full license text can be found in the LICENSE.txt file.
  */
 
 /**
@@ -81,10 +82,9 @@ use lithium\core\Libraries;
  */
 require LITHIUM_LIBRARY_PATH . '/lithium/core/Object.php';
 require LITHIUM_LIBRARY_PATH . '/lithium/core/StaticObject.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/util/Collection.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/util/collection/Filters.php';
+require LITHIUM_LIBRARY_PATH . '/lithium/aop/Filters.php';
 require LITHIUM_LIBRARY_PATH . '/lithium/util/Inflector.php';
-require LITHIUM_LIBRARY_PATH . '/lithium/util/String.php';
+require LITHIUM_LIBRARY_PATH . '/lithium/util/Text.php';
 require LITHIUM_LIBRARY_PATH . '/lithium/util/Set.php';
 require LITHIUM_LIBRARY_PATH . '/lithium/core/Adaptable.php';
 require LITHIUM_LIBRARY_PATH . '/lithium/core/Environment.php';
@@ -100,6 +100,7 @@ require LITHIUM_LIBRARY_PATH . '/lithium/action/Dispatcher.php';
 require LITHIUM_LIBRARY_PATH . '/lithium/action/Request.php';
 require LITHIUM_LIBRARY_PATH . '/lithium/action/Response.php';
 require LITHIUM_LIBRARY_PATH . '/lithium/storage/Cache.php';
+require LITHIUM_LIBRARY_PATH . '/lithium/storage/cache/Adapter.php';
 
 /**
  * Add the Lithium core library.  This sets default paths and initializes the autoloader.  You
@@ -114,13 +115,22 @@ Libraries::add('lithium');
 Libraries::add('app', ['default' => true]);
 
 /**
- * Add some plugins:
+ * Add lithium plugins. You may manually add plugins or use the library discovery mechanism
+ * by uncommenting the code below. This will automatically register any libraries prefixed
+ * with `li3_` in the libraries directories and enable autoloading of them.
  */
-Libraries::add('li3_docs', [
-	'cache' => true
-]);
+// foreach ([LITHIUM_LIBRARY_PATH, LITHIUM_APP_PATH . '/libraries'] as $base) {
+// 	foreach (glob($base . '/li3_*', GLOB_ONLYDIR) as $path) {
+// 		Libraries::add(basename($path), compact('path'));
+// 	}
+// }
 
-// Include composer autoloader.
-require LITHIUM_APP_PATH . '/libraries/autoload.php';
+/**
+ * Enable external autoloading through composer by including its autoloader bootstrap. The
+ * `autoload.php` file will be available once `composer install` was run.
+ */
+if (file_exists($file = LITHIUM_LIBRARY_PATH . '/autoload.php')) {
+	require $file;
+}
 
 ?>

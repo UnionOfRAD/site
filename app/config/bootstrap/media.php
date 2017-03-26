@@ -1,9 +1,10 @@
 <?php
 /**
- * Lithium: the most rad php framework
+ * li₃: the most RAD framework for PHP (http://li3.me)
  *
- * @copyright     Copyright 2013, Union of RAD (http://union-of-rad.org)
- * @license       http://opensource.org/licenses/bsd-license.php The BSD License
+ * Copyright 2016, Union of RAD. All rights reserved. This source
+ * code is distributed under the terms of the BSD 3-Clause License.
+ * The full license text can be found in the LICENSE.txt file.
  */
 
 /**
@@ -57,13 +58,13 @@ Media::type('default', null, [
  * plugin's `webroot` directory into your main application's `webroot` directory, or adding routing
  * rules in your web server's configuration.
  */
+// use lithium\aop\Filters;
 // use lithium\action\Dispatcher;
 // use lithium\action\Response;
-// use lithium\net\http\Media;
 //
-// Dispatcher::applyFilter('_callable', function($self, $params, $chain) {
+// Filters::apply(Dispatcher::class, '_callable', function($params, $next) {
 // 	$url = ltrim($params['request']->url, '/');
-// 	list($library, $asset) = explode('/', $url, 2) + array("", "");
+// 	list($library, $asset) = explode('/', $url, 2) + ["", ""];
 //
 // 	if ($asset && ($path = Media::webroot($library)) && file_exists($file = "{$path}/{$asset}")) {
 // 		return function() use ($file) {
@@ -71,13 +72,13 @@ Media::type('default', null, [
 // 			$media = Media::type($info['extension']);
 // 			$content = (array) $media['content'];
 //
-// 			return new Response(array(
-// 				'headers' => array('Content-type' => reset($content)),
+// 			return new Response([
+// 				'headers' => ['Content-type' => reset($content)],
 // 				'body' => file_get_contents($file)
-// 			));
+// 			]);
 // 		};
 // 	}
-// 	return $chain->next($self, $params, $chain);
+// 	return $next($params);
 // });
 
 ?>

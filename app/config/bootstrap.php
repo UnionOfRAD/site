@@ -1,9 +1,10 @@
 <?php
 /**
- * Lithium: the most rad php framework
+ * li₃: the most RAD framework for PHP (http://li3.me)
  *
- * @copyright     Copyright 2013, Union of RAD (http://union-of-rad.org)
- * @license       http://opensource.org/licenses/bsd-license.php The BSD License
+ * Copyright 2016, Union of RAD. All rights reserved. This source
+ * code is distributed under the terms of the BSD 3-Clause License.
+ * The full license text can be found in the LICENSE.txt file.
  */
 
 define('PROJECT_NAME', 'lithium_site');
@@ -24,7 +25,7 @@ define('PROJECT_VERSION_BUILD', '__PROJECT_VERSION_BUILD__');
  * If you have other services that must be configured globally for the entire application, create a
  * new bootstrap file and `require` it here.
  *
- * @see lithium\util\collection\Filters
+ * @see lithium\aop\Filters
  */
 
 /**

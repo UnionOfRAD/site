@@ -1,16 +1,20 @@
 <?php
 /**
- * Lithium: the most rad php framework
+ * li₃: the most RAD framework for PHP (http://li3.me)
  *
- * @copyright     Copyright 2013, Union of RAD (http://union-of-rad.org)
- * @license       http://opensource.org/licenses/bsd-license.php The BSD License
+ * Copyright 2016, Union of RAD. All rights reserved. This source
+ * code is distributed under the terms of the BSD 3-Clause License.
+ * The full license text can be found in the LICENSE.txt file.
  */
 
+use lithium\action\Dispatcher;
+use lithium\aop\Filters;
 use lithium\storage\Cache;
+use lithium\storage\cache\adapter\Apc;
 use lithium\core\Libraries;
 use lithium\core\Environment;
-use lithium\action\Dispatcher;
-use lithium\storage\cache\adapter\Apc;
+use lithium\data\Connections;
+use lithium\data\source\Database;
 
 /**
  * Configuration
@@ -43,19 +47,25 @@ Cache::config([
  * Applies caching to neuralgic points of the framework but only when we are running
  * in production. This is also a good central place to add your own caching rules.
  *
- * Here we cache paths for auto-loaded and service-located classes.
+ * A couple of caching rules are already defined below:
+ *  1. Cache paths for auto-loaded and service-located classes.
+ *  2. Cache describe calls on all connections that use a `Database` based adapter.
  *
  * @see lithium\core\Environment
  * @see lithium\core\Libraries
  */
-Dispatcher::applyFilter('run', function($self, $params, $chain) {
+if (!Environment::is('production')) {
+	return;
+}
+
+Filters::apply(Dispatcher::class, 'run', function($params, $next) {
 	$cacheKey = 'core.libraries';
 
 	if ($cached = Cache::read('default', $cacheKey)) {
 		$cached = (array) $cached + Libraries::cache();
 		Libraries::cache($cached);
 	}
-	$result = $chain->next($self, $params, $chain);
+	$result = $next($params);
 
 	if ($cached != ($data = Libraries::cache())) {
 		Cache::write('default', $cacheKey, $data, '+1 day');
@@ -63,8 +73,29 @@ Dispatcher::applyFilter('run', function($self, $params, $chain) {
 	return $result;
 });
 
+Filters::apply(Dispatcher::class, 'run', function($params, $next) {
+	foreach (Connections::get() as $name) {
+		if (!(($connection = Connections::get($name)) instanceof Database)) {
+			continue;
+		}
+		Filters::apply($connection, 'describe', function($params, $next) use ($name) {
+			if ($params['fields']) {
+				return $next($params);
+			}
+			$cacheKey = "data.connections.{$name}.sources.{$params['entity']}.schema";
+
+			return Cache::read('default', $cacheKey, [
+				'write' => function() use ($params, $next) {
+					return ['+1 day' => $next($params)];
+				}
+			]);
+		});
+	}
+	return $next($params);
+});
+
 if (!Environment::is('development')) {
-	Dispatcher::applyFilter('run', function($self, $params, $chain) {
+	Filters::apply(Dispatcher::class, 'run', function($self, $params, $chain) {
 		$request = $params['request'];
 
 		if (!$request->is('get')) {
@@ -113,6 +144,5 @@ if (!Environment::is('development')) {
 		return $response;
 	});
 }
-
 
 ?>
