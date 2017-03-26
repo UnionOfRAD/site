@@ -9,7 +9,7 @@
 use li3_docs\models\Indexes;
 
 // Register documentation indexes.
-$base = dirname(dirname(__DIR__)) . '/resources/docs';
+$base = dirname(dirname(dirname(__DIR__))) . '/tmp';
 
 Indexes::register([
 	'type' => 'book',

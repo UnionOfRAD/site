@@ -19,3 +19,10 @@ domain lithium-site.dev {
 database lithium_site {
 	password = ""
 }
+
+volume tmp {
+	isTemporary = true
+}
+volume log {
+	isTemporary = true
+}
