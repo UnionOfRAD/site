@@ -15,6 +15,9 @@
         "knplabs/github-api": "^1.7",
         "composer/semver": "^1.4"
     },
+    "require-dev": {
+        "digitalnature/php-ref": "1.2.*"
+    },
     "config": {
         "vendor-dir": "./libraries"
     }
