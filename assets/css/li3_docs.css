@@ -20,8 +20,10 @@
 }
 
 .li3-docs p {
-  -moz-hyphens: auto;
   hyphens: auto;
+}
+.li3-docs code {
+  hyphens: none;
 }
 
 .li3-docs .nav-up {
