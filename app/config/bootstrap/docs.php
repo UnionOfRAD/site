@@ -63,7 +63,7 @@ Indexes::register([
 	'namespace' => 'li3_behaviors',
 	'path' => $base . '/li3_behaviors_2.0',
 	'description' => <<<TEXT
-Model Behaviors plugin for the li₃ PHP framework.
+Model Behaviors plugin for the li₃ PHP framework. Model behaviors provide a simple way to extend models.
 TEXT
 ]);
 
