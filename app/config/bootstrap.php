@@ -94,12 +94,13 @@ require __DIR__ . '/bootstrap/docs.php';
 
 use lithium\net\http\Media;
 use app\models\Testimonials;
+use lithium\aop\Filters;
 
-Media::applyFilter('_handle', function($self, $params, $chain) {
+Filters::apply(Media::class, '_handle', function($params, $next) {
 	if ($params['handler']['type'] == 'html') {
 		$params['data']['testimonial'] = Testimonials::random();
 	}
-	return $chain->next($self, $params, $chain);
+	return $next($params);
 });
 
 ?>

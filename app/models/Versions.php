@@ -121,7 +121,7 @@ class Versions extends \lithium\data\Model {
 	}
 }
 
-Versions::finder('first', function($self, $params, $chain) {
+Versions::finder('first', function($params, $next) {
 	$result = Versions::data()[$params['options']['conditions']['name']];
 
 	if (!$result) {
@@ -130,7 +130,7 @@ Versions::finder('first', function($self, $params, $chain) {
 	return Versions::create($result);
 });
 
-Versions::finder('all', function($self, $params, $chain) {
+Versions::finder('all', function($params, $next) {
 	$results = new Collection();
 
 	foreach (Versions::data() as $item) {

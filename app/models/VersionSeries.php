@@ -44,7 +44,7 @@ class VersionSeries extends \lithium\data\Model {
 	}
 }
 
-VersionSeries::finder('first', function($self, $params, $chain) {
+VersionSeries::finder('first', function($params, $next) {
 	$result = VersionSeries::data()[$params['options']['conditions']['name']];
 
 	if (!$result) {
@@ -53,7 +53,7 @@ VersionSeries::finder('first', function($self, $params, $chain) {
 	return VersionSeries::create($result);
 });
 
-VersionSeries::finder('all', function($self, $params, $chain) {
+VersionSeries::finder('all', function($params, $next) {
 	$results = new Collection();
 
 	foreach (VersionSeries::data() as $item) {

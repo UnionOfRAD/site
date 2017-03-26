@@ -36,7 +36,7 @@ class Eurekas extends \lithium\data\Model {
 
 Eurekas::init();
 
-Eurekas::finder('all', function($self, $params, $chain) {
+Eurekas::finder('all', function($params, $chain) {
 	$files = Eurekas::files();
 
 	$results = [];
@@ -47,8 +47,9 @@ Eurekas::finder('all', function($self, $params, $chain) {
 	return new Collection(['data' => $results]);
 });
 
-Eurekas::finder('random', function($self, $params, $chain) {
+Eurekas::finder('random', function($params, $next) {
 	$files = Eurekas::files();
+
 	return Eurekas::create([
 		'file' => $files[abs(crc32(date('Y-m-d'))) % count($files)]
 	]);
