@@ -57,9 +57,10 @@ TEXT
 
 Indexes::register([
 	'type' => 'api',
-	'title' => 'li₃ Behaviors API',
+	'title' => 'li₃ Behaviors',
 	'name' => 'li3_behaviors',
 	'version' => '2.0.x',
+	'namespace' => 'li3_behaviors',
 	'path' => $base . '/li3_behaviors_2.0',
 	'description' => <<<TEXT
 Model Behaviors plugin for the li₃ PHP framework.
