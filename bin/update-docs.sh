@@ -12,7 +12,7 @@ set +o errexit
 
 DOCS_PATH=$(dirname $(pwd))/tmp
 
-REPOS="lithium manual specs li3_behaviors"
+REPOS="lithium manual specs li3_behaviors li3_docs"
 for R in $REPOS; do
 
 	echo "Cleaning up..."
@@ -24,13 +24,15 @@ for R in $REPOS; do
 	echo "Cloning version repos..."
 	case $R in
 		lithium)
-			REFS="1.0 1.1" ;;
+			REFS="1.0 1.1 1.2" ;;
 		manual)
 			REFS="1.x" ;;
 		specs)
 			REFS="" ;;
+		li3_docs)
+			REFS="1.0 1.1 2.0" ;;
 		li3_behaviors)
-			REFS="v1.1.0 2.0" ;;
+			REFS="v1.0.0 v1.1.0 2.0" ;;
 	esac
 
 	for REF in $REFS; do

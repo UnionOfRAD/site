@@ -23,25 +23,20 @@ and provides an overview of all aspects of application-building that are covered
 framework.
 TEXT
 ]);
-Indexes::register([
-	'type' => 'api',
-	'title' => 'Framework API',
-	'name' => 'lithium',
-	'version' => '1.1.x',
-	'path' => $base . '/lithium_1.1',
-	'namespace' => 'lithium',
-	'description' => <<<TEXT
-The framework's detailed technical API documentation.
+
+foreach (['1.2', '1.1', '1.0'] as $v) {
+	Indexes::register([
+		'type' => 'api',
+		'title' => 'Framework API',
+		'name' => 'lithium',
+		'version' => $v . '.x',
+		'path' => $base . '/lithium_' . $v,
+		'namespace' => 'lithium',
+		'description' => <<<TEXT
+	The framework's detailed technical API documentation.
 TEXT
-]);
-Indexes::register([
-	'type' => 'api',
-	'title' => 'Framework API',
-	'name' => 'lithium',
-	'version' => '1.0.x',
-	'path' => $base . '/lithium_1.0',
-	'namespace' => 'lithium'
-]);
+	]);
+}
 
 Indexes::register([
 	'type' => 'book',
@@ -66,6 +61,41 @@ Indexes::register([
 Model Behaviors plugin for the li₃ PHP framework. Model behaviors provide a simple way to extend models.
 TEXT
 ]);
+Indexes::register([
+	'type' => 'api',
+	'title' => 'li₃ Behaviors',
+	'name' => 'li3_behaviors',
+	'version' => '1.1.x',
+	'namespace' => 'li3_behaviors',
+	'path' => $base . '/li3_behaviors_v1.1.0',
+	'description' => <<<TEXT
+Model Behaviors plugin for the li₃ PHP framework. Model behaviors provide a simple way to extend models.
+TEXT
+]);
+Indexes::register([
+	'type' => 'api',
+	'title' => 'li₃ Behaviors',
+	'name' => 'li3_behaviors',
+	'version' => '1.0.x',
+	'namespace' => 'li3_behaviors',
+	'path' => $base . '/li3_behaviors_v1.0.0',
+	'description' => <<<TEXT
+Model Behaviors plugin for the li₃ PHP framework. Model behaviors provide a simple way to extend models.
+TEXT
+]);
 
+foreach (['2.0', '1.1', '1.0'] as $v) {
+	Indexes::register([
+		'type' => 'api',
+		'title' => 'li₃ Docs',
+		'name' => 'li3_docs',
+		'version' => $v . '.x',
+		'namespace' => 'li3_docs',
+		'path' => $base . '/li3_docs_' . $v,
+		'description' => <<<TEXT
+Documentation generator for li₃.
+TEXT
+	]);
+}
 
 ?>
