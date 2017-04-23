@@ -52,6 +52,15 @@ class VersionSeries extends \lithium\data\Model {
 			return $item->series(false) === $entity->name;
 		});
 	}
+
+	public function hasReleasedVersions($entity) {
+		foreach ($entity->versions() as $v) {
+			if ($v->isReleased) {
+				return true;
+			}
+		}
+		return false;
+	}
 }
 
 VersionSeries::finder('first', function($params, $next) {

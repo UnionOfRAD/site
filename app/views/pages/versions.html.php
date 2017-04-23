@@ -67,7 +67,7 @@ $this->set([
 		<?php foreach ($series as $item): ?>
 				<tr>
 					<th><?= $item->name ?>
-					<?php if (!$item->versions()->count()): ?>
+					<?php if (!$item->hasReleasedVersions()): ?>
 						<sup>+</sup>
 					<?php endif ?>
 					<td><?= $item->required ?>
