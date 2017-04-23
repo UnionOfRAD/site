@@ -44,8 +44,8 @@ class PagesController extends \lithium\action\Controller {
 			]
 		]);
 
-		$stableVersion = VersionSeries::findByName('1.0.x')->versions()->first();
-		$nextVersion = VersionSeries::findByName('1.1.x')->versions()->first();
+		$stableVersion = VersionSeries::findByName('1.1.x')->versions()->first();
+		$nextVersion = VersionSeries::findByName('1.2.x')->versions()->first();
 
 		return compact('posts', 'eureka', 'projects', 'stableVersion', 'nextVersion', 'docs');
 	}
