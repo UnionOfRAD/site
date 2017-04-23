@@ -100,7 +100,13 @@ class Versions extends \lithium\data\Model {
 	}
 
 	public static function data() {
-		$results = [];
+		$results = [
+			'1.2.x-dev' => [
+				'name' => '1.2.x-dev',
+				'ref' => '1.2',
+				'isReleased' => false
+			]
+		];
 
 		if (!$tags = Cache::read('default', 'gh-lithium-tags')) {
 			$client = new Client();
