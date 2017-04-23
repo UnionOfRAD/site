@@ -59,8 +59,8 @@ $this->set([
 				<time><?= date('m/d/Y', $post->timestamp) ?></time>
 				<div class="body">
 					<?php echo $post->teaser() ?>
-					&nbsp;[<?= $this->html->link('read&nbsp;more', $post->post_url, ['class' => 'read-more', 'escape' => false]) ?>]
 				</div>
+				[<?= $this->html->link('read&nbsp;more', $post->post_url, ['class' => 'read-more', 'escape' => false]) ?>]
 			</article>
 		<?php endforeach ?>
 	</section>
