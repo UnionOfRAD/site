@@ -67,11 +67,18 @@ $this->set([
 		<?php foreach ($series as $item): ?>
 				<tr>
 					<th><?= $item->name ?>
+					<?php if (!$item->versions()->count()): ?>
+						<sup>+</sup>
+					<?php endif ?>
 					<td><?= $item->required ?>
 					<td><?= $item->recommended ?>
 		<?php endforeach ?>
 			</tbody>
 		</table>
+		<p>
+			<sup>+</sup> unreleased<br>
+			<span>^</span> <?= $this->html->link('always allow non-breaking updates', 'https://getcomposer.org/doc/articles/versions.md#caret') ?>
+		</p>
 	</section>
 
 	<section>
