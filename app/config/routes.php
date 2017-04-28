@@ -35,6 +35,8 @@ $renamed = [
 	301 => [
 		// Before li3_docs 2.0
 		'/docs/lithium' => '/docs/api/lithium/1.0.x',
+		'/docs/manual/quickstart' => '/docs/book/manual/1.x/quickstart',
+		'/docs/manual/installation' => '/docs/book/manual/1.x/installation',
 		'/docs/manual' => '/docs/book/manual/1.x',
 
 		// Incoming from external tutorial sites.
