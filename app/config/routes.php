@@ -75,7 +75,7 @@ foreach ($renamed[302] as $from => $to) {
 }
 
 // Redirect /docs/manual/* to /docs/book/manual/1.x/* as well as specs.
-Router::connect('/docs/{name:(manual|specs)}/{:page:.*}', [], function($request) {
+Router::connect('/docs/{:name:(manual|specs)}/{:page:.*}', [], function($request) {
 	return new Response([
 		'location' => [
 			'library' => 'li3_docs',
