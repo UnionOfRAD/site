@@ -22,27 +22,27 @@ class VersionSeries extends \lithium\data\Model {
 			'2.0.x' => [
 				'name' => '2.0.x',
 				'required' => '^7.0.3',
-				'recommended' => '^7.1.0'
+				'recommended' => '^7.1'
 			],
 			'1.2.x' => [
 				'name' => '1.2.x',
-				'required' => '^5.6.0 || ^7.0.3',
-				'recommended' => '^7.0.3'
+				'required' => '5.6 || ~7.0.3 || ~7.1.0',
+				'recommended' => '7.1'
 			],
 			'1.1.x' => [
 				'name' => '1.1.x',
-				'required' => '^5.5.14 || ^7.0.3',
-				'recommended' => '^5.6.0 || ^7.0.3'
+				'required' => '^5.5.14 || ~7.0.3 || ~7.1.0',
+				'recommended' => '7.1'
 			],
 			'1.0.x' => [
 				'name' => '1.0.x',
 				'required' => '^5.3.6',
-				'recommended' => '^5.4.0'
+				'recommended' => '^5.4'
 			],
 			'0.x' => [
 				'name' => '0.x',
 				'required' => '^5.3.6',
-				'recommended' => '^5.4.0'
+				'recommended' => '^5.4'
 			],
 		];
 	}
