@@ -46,9 +46,9 @@ $this->set([
 		<p>
 			Currently the best place to get great support is Stack Overflow.
 			With over 200 questions already tagged, ask yours on
-			<a href="http://stackoverflow.com/questions/tagged/lithium">stackoverflow.com</a>
-			and remember to <a href="http://stackoverflow.com/questions/tagged/lithium">use the
-			<em>lithium</em> tag</a>.
+			<a href="http://stackoverflow.com/questions/tagged/li3">stackoverflow.com</a>
+			and remember to <a href="http://stackoverflow.com/questions/tagged/li3">use the
+			<em>li3</em> tag</a>.
 		</p>
 		<p>
 			Members of the community and core team will regularly try to answer your questions.
