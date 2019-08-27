@@ -37,7 +37,8 @@ use lithium\data\source\Database;
 Cache::config([
 	'default' => [
 		'adapter' => 'Memcache',
-		'scope' => PROJECT_NAME . '_' . md5(LITHIUM_APP_PATH . PROJECT_VERSION)
+		'scope' => PROJECT_NAME . '_' . md5(LITHIUM_APP_PATH . PROJECT_VERSION),
+		'host' => 'cache.test'
 	]
 ]);
 

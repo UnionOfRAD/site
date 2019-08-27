@@ -7,7 +7,7 @@ HOST="localhost"
 USER="nobody"
 
 # The domain under which the project is served.
-DOMAIN="lithium-site.dev"
+DOMAIN="lithium-site.test"
 
 # Name and absolute path to project (w/o trailing slash) and repository.
 NAME="lithium_site"

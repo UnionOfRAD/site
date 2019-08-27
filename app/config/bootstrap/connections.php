@@ -63,8 +63,8 @@ use lithium\data\Connections;
 Connections::add('default', [
 	'type' => 'database',
 	'adapter' => 'MySql',
-	'host' => 'localhost',
-	'login' => 'root',
+	'host' => 'db.test',
+	'login' => 'lithium_site',
 	'password' => '',
 	'database' => 'lithium_site',
 	'encoding' => 'UTF-8'

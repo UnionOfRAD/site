@@ -12,7 +12,7 @@
 name = "lithium_site"
 context = "dev"
 
-domain lithium-site.dev {
+domain lithium-site.test {
 	www = "drop"
 }
 
