@@ -5,9 +5,8 @@
     "license": "BSD-3-clause",
     "prefer-stable": true,
     "require": {
-        "php": ">=5.5.0",
         "tumblr/tumblr": "dev-master#32fef6e6fb047371607a33e5665bf72da7dbad7d",
-        "unionofrad/lithium": "1.1.*",
+        "unionofrad/lithium": "1.2.0-beta as 1.2.0",
         "unionofrad/li3_docs": "2.0.*@dev",
         "davidpersson/textual": "1.*",
         "cebe/markdown": "1.*",
@@ -19,6 +18,16 @@
         "digitalnature/php-ref": "1.2.*"
     },
     "config": {
+        "platform": {
+            "ext-curl": "99",
+            "ext-dom": "99999999",
+            "ext-pctnl": "99",
+            "ext-xml": "99",
+            "ext-xmlwriter": "99",
+            "ext-memcached": "99",
+            "lib-curl": "99",
+            "php": "7.1.99"
+        },
         "vendor-dir": "./libraries"
     }
 }
