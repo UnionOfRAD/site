@@ -18,6 +18,10 @@ domain lithium-site.test {
 
 database lithium_site {
 	password = ""
+	SSL = {
+		certificate = "!selfsigned"
+		certificateKey = "!generate"
+	}
 }
 
 volume tmp {

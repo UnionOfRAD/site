@@ -26,7 +26,7 @@ $library = $this->request()->library;
 	<?php
 		$styles = [
 			'reset',
-			'http://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic',
+			'https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic',
 			'u1m'
 		];
 		switch ($library) {
