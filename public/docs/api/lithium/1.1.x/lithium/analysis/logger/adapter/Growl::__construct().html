@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\analysis\logger\adapter\Growl::__construct() – Framework API v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../../versions.html">Versions</a><a href="../../../../../../../../present.html">Presentations</a><a href="../../../../../../../../support.html">Community</a><a href="../../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../../analysis.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">analysis</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../../logger.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">logger</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="../adapter.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">adapter</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<a href="Growl.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Growl</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="8" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">__construct()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="Growl.html" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../../analysis.html" class="symbol-segment">analysis</a>\<a href="../../logger.html" class="symbol-segment">logger</a>\<a href="../adapter.html" class="symbol-segment">adapter</a>\<a href="Growl.html" class="symbol-segment">Growl</a>::__construct()		</h1>
+
+		<section class="under">
+																<div class="extends">
+					<span class="extends__title">
+													Overrides
+											</span>
+					<a href="../../../core/Object::__construct().html" class="extends__symbol">lithium\core\Object::__construct()</a>				</div>
+						<div class="tags">
+													<span class="tag public">public</span>
+												<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Constructor. Growl logger constructor. Accepts an array of settings which are merged
+with the default settings and used to create the connection and handle notifications.</p>
+					</div>
+				
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">array</span>
+							<code class="name">$config</code>
+															<span class="parameter">
+									<p>The settings to configure the logger. Available settings are as follows:</p>
+<ul>
+<li><code>'name</code>' <em>string</em>: The name of the application as it should appear in Growl's
+system settings. Defaults to the directory name containing your application.</li>
+<li><code>'host'</code> <em>string</em>: The Growl host with which to communicate, usually your
+local machine. Use this setting to send notifications to another machine on
+the network. Defaults to <code>'127.0.0.1'</code>.</li>
+<li><code>'port'</code> <em>integer</em>: Port of the host machine. Defaults to the standard Growl
+port, <code>9887</code>.</li>
+<li><code>'password'</code> <em>string</em>: Only required if the host machine requires a password.
+If notification or registration fails, check this against the host machine's
+Growl settings.</li>
+<li>'<code>protocol'</code> <em>string</em>: Protocol to use when opening socket communication to
+Growl. Defaults to <code>'udp'</code>.</li>
+<li><code>'title'</code> <em>string</em>: The default title to display when showing Growl messages.
+The default value is the same as <code>'name'</code>, but can be changed on a per-message
+basis by specifying a <code>'title'</code> key in the <code>$options</code> parameter of
+<code>Logger::write()</code>.</li>
+<li><code>'notification'</code> <em>array</em>: A list of message types you wish to register with
+Growl to be able to send. Defaults to <code>array('Errors', 'Messages')</code>.</li>
+</ul>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">void</span>
+							</section>
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="../../Logger::write().html">lithium\analysis\Logger::write()</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public function __construct(array $config = []) {
+		$name = basename(Libraries::get(true, &#039;path&#039;));
+
+		$defaults = compact(&#039;name&#039;) + [
+			&#039;host&#039;     =&gt; &#039;127.0.0.1&#039;,
+			&#039;port&#039;     =&gt; 9887,
+			&#039;password&#039; =&gt; null,
+			&#039;protocol&#039; =&gt; &#039;udp&#039;,
+			&#039;title&#039;    =&gt; Inflector::humanize($name),
+			&#039;notifications&#039; =&gt; [&#039;Errors&#039;, &#039;Messages&#039;],
+			&#039;registered&#039; =&gt; false
+		];
+		parent::__construct($config + $defaults);
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

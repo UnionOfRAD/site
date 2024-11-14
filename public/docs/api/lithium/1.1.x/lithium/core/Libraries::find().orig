@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\core\Libraries::find() – Framework API v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.1.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.1.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.1.x/lithium/core" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">core</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.1.x/lithium/core/Libraries" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Libraries</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">find()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.1.x/lithium/core/Libraries" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.1.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.1.x/lithium/core" class="symbol-segment">core</a>\<a href="/docs/api/lithium/1.1.x/lithium/core/Libraries" class="symbol-segment">Libraries</a>::find()		</h1>
+
+		<section class="under">
+															<div class="tags">
+													<span class="tag public">public</span>
+													<span class="tag">static</span>
+								<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Finds the classes or namespaces belonging to a particular library. <em>Note</em>: This method
+assumes loaded class libraries use a consistent class-to-file naming convention.</p>
+					</div>
+				
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">mixed</span>
+							<code class="name">$library</code>
+															<span class="parameter">
+									<p>The name of a library added to the application with <code>Libraries::add()</code>,
+or <code>true</code> to search all libraries.</p>
+								</span>
+													</li>
+											<li>
+							<span class="type">array</span>
+							<code class="name">$options</code>
+															<span class="parameter">
+									<p>The options this method accepts:</p>
+<ul>
+<li><code>'path'</code> <em>string</em>: A physical filesystem path relative to the directory of the
+library being searched. If provided, only the classes or namespaces within
+this path will be returned.</li>
+<li><code>'recursive'</code> <em>boolean</em>: If <code>true</code>, recursively searches all directories
+(namespaces) in the given library. If <code>false</code> (the default), only searches the
+top level of the given path.</li>
+<li><code>'filter'</code> <em>string</em>: A regular expression applied to a class after it is
+transformed into a fully-namespaced class name. The default regular expression
+filters class names based on the
+<a href="http://groups.google.com/group/php-standards/web/psr-0-final-proposal">PSR-0</a>
+PHP 5.3 naming standard.</li>
+<li><code>'exclude'</code> <em>mixed</em>: Can be either a regular expression of classes/namespaces
+to exclude, or a PHP callable to be used with <code>array_filter()</code>.</li>
+<li><code>'namespaces'</code> <em>boolean</em>: Indicates whether namespaces should be included in
+the search results. If <code>false</code> (the default), only classes are returned.</li>
+</ul>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">array</span>
+									<span class="return">
+						<p>Returns an array of fully-namespaced class names found in the given library or
+libraries.</p>
+					</span>
+							</section>
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public static function find($library, array $options = []) {
+		$format = function($file, $config) {
+			$trim = [strlen($config[&#039;path&#039;]) + 1, strlen($config[&#039;suffix&#039;])];
+			$rTrim = strpos($file, $config[&#039;suffix&#039;]) !== false ? -$trim[1] : 9999;
+			$file = preg_split(&#039;/[\/\\\\]/&#039;, substr($file, $trim[0], $rTrim));
+			return $config[&#039;prefix&#039;] . join(&#039;\\&#039;, $file);
+		};
+
+		$defaults = compact(&#039;format&#039;) + [
+			&#039;path&#039; =&gt; &#039;&#039;,
+			&#039;recursive&#039; =&gt; false,
+			&#039;filter&#039; =&gt; &#039;/^(\w+)?(\\\\[a-z0-9_]+)+\\\\[A-Z][a-zA-Z0-9]+$/&#039;,
+			&#039;exclude&#039; =&gt; &#039;&#039;,
+			&#039;namespaces&#039; =&gt; false
+		];
+		$options += $defaults;
+		$libs = [];
+
+		if ($options[&#039;namespaces&#039;] &amp;&amp; $options[&#039;filter&#039;] === $defaults[&#039;filter&#039;]) {
+			$options[&#039;format&#039;] = function($class, $config) use ($format, $defaults) {
+				if (is_dir($class)) {
+					return $format($class, $config);
+				}
+				if (preg_match($defaults[&#039;filter&#039;], $class = $format($class, $config))) {
+					return $class;
+				}
+			};
+			$options[&#039;filter&#039;] = false;
+		}
+		if ($library === true) {
+			foreach (static::$_configurations as $library =&gt; $config) {
+				$libs = array_merge($libs, static::find($library, $options));
+			}
+			return $libs;
+		}
+		if (!isset(static::$_configurations[$library])) {
+			return null;
+		}
+
+		$config = static::$_configurations[$library];
+		$options[&#039;path&#039;] = &quot;{$config[&#039;path&#039;]}{$options[&#039;path&#039;]}/*&quot;;
+		$libs = static::_search($config, $options);
+		return array_values(array_filter($libs));
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

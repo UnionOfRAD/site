@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\core\Libraries::locate() – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../core.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">core</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../../../latest:1.x/lithium/core/Libraries.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Libraries</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">locate()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../../../latest:1.x/lithium/core/Libraries.html" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../core.html" class="symbol-segment">core</a>\<a href="../../../latest:1.x/lithium/core/Libraries.html" class="symbol-segment">Libraries</a>::locate()		</h1>
+
+		<section class="under">
+															<div class="tags">
+													<span class="tag public">public</span>
+													<span class="tag">static</span>
+								<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Performs service location for an object of a specific type. If <code>$name</code> is a string, finds the
+first instance of a class with the given name in any registered library (i.e. apps, plugins
+or vendor libraries registered via <code>Libraries::add()</code>), based on each library's order of
+precedence. For example, this will find the first model called <code>File</code> in any plugin or class
+library loaded into an application, including the application itself.</p>
+					</div>
+				
+									<div class="description">
+						<pre><code class="language-php">Libraries::locate('models', 'File');
+</code></pre>
+<p>Order of precedence is usually based on the order in which the library was registered (via
+<code>Libraries::add()</code>), unless the library was registered with the <code>'defer'</code> option set to
+<code>true</code>. All libraries with the <code>'defer'</code> option set will be searched in
+registration-order <strong>after</strong> searching all libraries <strong>without</strong> <code>'defer'</code> set. This means
+that in the above example, if an app and a plugin both have a model named <code>File</code>, then the
+model from the app will be returned first, assuming the app was registered first (and
+assuming the default settings).</p>
+<p>If <code>$name</code> is not specified, <code>locate()</code> returns an array with all classes of the specified
+type which can be found. By default, <code>locate()</code> searches all registered libraries.</p>
+<pre><code class="language-php">Libraries::locate('models');
+</code></pre>
+<p>For example, the above will return an array of all model classes in all registered plugins
+and libraries (including the app itself).</p>
+<p>To learn more about adding and modifying the class paths used with <code>locate()</code>, see the
+documentation for the <code>paths()</code> method.</p>
+					</div>
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">string</span>
+							<code class="name">$type</code>
+															<span class="parameter">
+									<p>The type of class to search for. Typically follows the name of the
+directory in which the class is stored, i.e. <code>'models'</code>, <code>'controllers'</code> or
+<code>'adapter'</code>. Some classes types, such as adapters, will require a greater
+degree of specificity when looking up the desired class. In this case, the dot
+syntax is used, as in this example when looking up cache adapters:
+<code>'adapter.storage.cache'</code>, or this example, when looking up authentication
+adapters: <code>'adapter.security.auth'</code>.</p>
+								</span>
+													</li>
+											<li>
+							<span class="type">string</span>
+							<code class="name">$name</code>
+															<span class="parameter">
+									<p>The base name (without namespace) of the class you wish to locate. If
+unspecified, <code>locate()</code> will attempt to find all classes of the type specified
+in <code>$type</code>. If you only wish to search for classes within a single plugin or
+library, you may use the dot syntax to prefix the class name with the library
+name, i.e. <code>'app.Post'</code>, which will only look for a <code>Post</code> model within the
+app itself.</p>
+								</span>
+													</li>
+											<li>
+							<span class="type">array</span>
+							<code class="name">$options</code>
+															<span class="parameter">
+									<p>The options to use when searching and returning class names.</p>
+<ul>
+<li><code>'type'</code> <em>string</em>: Defaults to <code>'class'</code>. If set to <code>'file'</code>, returns file
+names instead of class names.</li>
+<li><code>'library'</code> <em>string</em>: When specified, only the given library/plugin name will
+be searched.</li>
+</ul>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">mixed</span>
+									<span class="return">
+						<p>If <code>$name</code> is specified, returns the name of the first class found that matches
+<code>$name</code> and <code>$type</code>, or returns <code>null</code> if no matching classes were found in any
+registered library. If <code>$name</code> is not specified, returns an array of all classes
+found which match <code>$type</code>.</p>
+					</span>
+							</section>
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="./Libraries::paths().html">lithium\core\Libraries::paths()</a>									<li><a href="../../../latest:1.x/lithium/core/Libraries::add().html">lithium\core\Libraries::add()</a>									<li><a href="./Libraries::_locateDeferred().html">lithium\core\Libraries::_locateDeferred()</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public static function locate($type, $name = null, array $options = []) {
+		if (is_object($name) || strpos($name, &#039;\\&#039;) !== false) {
+			return $name;
+		}
+		$ident  = $name ? ($type . &#039;.&#039; . $name) : ($type . &#039;.*&#039;);
+		$ident .= $options ? &#039;.&#039; . md5(serialize($options)) : null;
+
+		if (isset(static::$_cachedPaths[$ident])) {
+			return static::$_cachedPaths[$ident];
+		}
+		$params = static::_params($type, $name);
+		$defaults = [
+			&#039;type&#039; =&gt; &#039;class&#039;,
+			&#039;library&#039; =&gt; $params[&#039;library&#039;] !== &#039;*&#039; ? $params[&#039;library&#039;] : null
+		];
+		$options += $defaults;
+		unset($params[&#039;library&#039;]);
+		$paths = static::paths($params[&#039;type&#039;]);
+
+		if (!isset($paths)) {
+			return null;
+		}
+		if ($params[&#039;name&#039;] === &#039;*&#039;) {
+			$result = static::_locateAll($params, $options);
+			return (static::$_cachedPaths[$ident] = $result);
+		}
+		if ($options[&#039;library&#039;]) {
+			$result = static::_locateDeferred(null, $paths, $params, $options);
+			return static::$_cachedPaths[$ident] = $result;
+		}
+		foreach ([false, true] as $defer) {
+			if ($result = static::_locateDeferred($defer, $paths, $params, $options)) {
+				return (static::$_cachedPaths[$ident] = $result);
+			}
+		}
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

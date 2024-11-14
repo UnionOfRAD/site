@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\core\Environment – Framework API v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../core.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">core</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Environment</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../core.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Environment::reset().html">reset()</a>												<li class="method public">
+				<a href="./Environment::is().html">is()</a>												<li class="method public">
+				<a href="./Environment::get().html">get()</a>												<li class="method protected">
+				<a href="./Environment::_processDotPath().html">_processDotPath()</a>												<li class="method public">
+				<a href="./Environment::set().html">set()</a>												<li class="method protected">
+				<a href="./Environment::_detector().html">_detector()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./Environment::$_configurations.html">$_configurations</a>												<li class="property protected">
+				<a href="./Environment::$_current.html">$_current</a>												<li class="property protected">
+				<a href="./Environment::$_detector.html">$_detector</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../core.html" class="symbol-segment">core</a>\Environment		</h1>
+
+		<section class="under">
+															<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The <code>Environment</code> class allows you to manage multiple configurations for your application,
+depending on the context within which it is running, i.e. development, test or production.</p>
+					</div>
+				
+									<div class="description">
+						<p>While those three environments are the most common, you can create any arbitrary environment
+with any set of configuration, for example:</p>
+<pre><code class="language-php">
+You can then retrieve the configurations using the key name. The correct configuration is
+returned, automatically accounting for the current environment:
+
+``` embed:lithium\tests\cases\core\EnvironmentTest::testSetAndGetCurrentEnvironment(15-15)```
+
+`Environment` also works with subclasses of `Adaptable`, allowing you to maintain separate
+configurations for database servers, cache adapters, and other environment-specific classes, for
+example:
+```
+Connections::add('default', [
+	'production' =&gt; [
+		'type'     =&gt; 'database',
+		'adapter'  =&gt; 'MySql',
+		'host'     =&gt; 'db1.application.local',
+		'login'    =&gt; 'secure',
+		'password' =&gt; 'secret',
+		'database' =&gt; 'app-production'
+	],
+	'development' =&gt; [
+		'type'     =&gt; 'database',
+		'adapter'  =&gt; 'MySql',
+		'host'     =&gt; 'localhost',
+		'login'    =&gt; 'root',
+		'password' =&gt; '',
+		'database' =&gt; 'app'
+	]
+]);
+```
+
+This allows the database connection named `'default'` to be connected to a local database in
+development, and a production database in production. You can define environment-specific
+configurations for caching, logging, even session storage, i.e.:
+```
+Cache::config([
+	'userData' =&gt; [
+		'development' =&gt; ['adapter' =&gt; 'File'],
+		'production' =&gt; ['adapter' =&gt; 'Memcache']
+	]
+]);
+```
+
+When the cache configuration is accessed in the application's code, the correct configuration is
+automatically used:
+```
+$user = User::find($request-&gt;id);
+Cache::write('userData', "User.{$request-&gt;id}", $user-&gt;data(), '+5 days');
+```
+
+In this configuration, the above example will automatically send cache writes to the file
+system during local development, and to a memcache server in production.
+
+When writing classes that connect to other external resources, you can automatically take
+advantage of environment-specific configurations by extending `Adaptable` and implementing
+your resource-handling functionality in adapter classes.
+
+In addition to managing your environment-specific configurations, `Environment` will also help
+you by automatically detecting which environment your application is running in. For additional
+information, see the documentation for `Environment::is()`.
+
+</code></pre>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="Adaptable.html">lithium\core\Adaptable</a>								</ul>
+			</section>
+			
+						<section id="links">
+				<h3 class="h-beta">Links</h3>
+				<ul class="links">
+									<li><a href="http://memcached.org" target="new">http://memcached.org</a>								</ul>
+			</section>
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Environment {
+
+	protected static $_configurations = [
+		&#039;production&#039; =&gt; [],
+		&#039;development&#039; =&gt; [],
+		&#039;test&#039; =&gt; []
+	];
+
+	/**
+	 * Holds the name of the current environment under which the application is running. Set by
+	 * passing a `Request` object or `$_SERVER` or `$_ENV` array into `Environment::set()` (which
+	 * in turn passes this on to the _detector_ used to determine the correct environment). Can be
+	 * tested or retrieved using `Environment::is()` or `Environment::get()`.
+	 *
+	 * @see lithium\core\Environment::set()
+	 * @see lithium\core\Environment::is()
+	 * @see lithium\core\Environment::get()
+	 * @var string
+	 */
+	protected static $_current = &#039;&#039;;
+
+	/**
+	 * If `Environment::is()` is used to assign a custom closure for environment detection, a copy
+	 * is kept in `$_detector`. Otherwise, `$_detector` is `null`, and the hard-coded detector is
+	 * used.
+	 *
+	 * @see lithium\core\Environment::_detector()
+	 * @see lithium\core\Environment::is()
+	 * @var callable
+	 */
+	protected static $_detector = null;
+
+	/**
+	 * Resets the `Environment` class to its default state, including unsetting the current
+	 * environment, removing any environment-specific configurations, and removing the custom
+	 * environment detector, if any has been specified.
+	 *
+	 * @param $env If set, delete the defined environment only.
+	 */
+	public static function reset($env = null) {
+		if ($env) {
+			unset(static::$_configurations[$env]);
+			return;
+		}
+		static::$_current = &#039;&#039;;
+		static::$_detector = null;
+		static::$_configurations = [
+			&#039;production&#039; =&gt; [],
+			&#039;development&#039; =&gt; [],
+			&#039;test&#039; =&gt; []
+		];
+	}
+
+	/**
+	 * A simple boolean detector that can be used to test which environment the application is
+	 * running under. For example `Environment::is(&#039;development&#039;)` will return `true` if
+	 * `&#039;development&#039;` is, in fact, the current environment.
+	 *
+	 * This method also handles how the environment is detected at the beginning of the request.
+	 *
+	 * #### Custom Detection
+	 *
+	 * While the default detection rules are very simple (if the `&#039;SERVER_ADDR&#039;` variable is set to
+	 * `127.0.0.1`, the environment is assumed to be `&#039;development&#039;`, or if the string `&#039;test&#039;` is
+	 * found anywhere in the host name, it is assumed to be `&#039;test&#039;`, and in all other cases it
+	 * is assumed to be `&#039;production&#039;`), you can define your own detection rule set easily using a
+	 * closure that accepts an instance of the `Request` object, and returns the name of the correct
+	 * environment, as in the following example:
+	 * ``` embed:lithium\tests\cases\core\EnvironmentTest::testCustomDetector(1-9) ```
+	 *
+	 * In the above example, the user-specified closure takes in a `Request` object, and using the
+	 * server data which it encapsulates, returns the correct environment name as a string.
+	 *
+	 * #### Host Mapping
+	 *
+	 * The most common use case is to set the environment depending on host name. For convenience,
+	 * the `is()` method also accepts an array that matches host names to environment names, where
+	 * each key is an environment, and each value is either an array of valid host names, or a
+	 * regular expression used to match a valid host name.
+	 *
+	 * ``` embed:lithium\tests\cases\core\EnvironmentTest::testDetectionWithArrayMap(1-5) ```
+	 *
+	 * In this example, a regular expression is being used to match local domains
+	 * (i.e. `localhost`), as well as the built-in `.console` domain, for console requests. Note
+	 * that in the console, the environment can always be overridden by specifying the `--env`
+	 * option.
+	 *
+	 * Then, one or more host names are matched up to `&#039;test&#039;` and `&#039;staging&#039;`, respectively. Note
+	 * that no rule is present for production: this is because `&#039;production&#039;` is the default value
+	 * if no other environment matches.
+	 *
+	 * @param mixed $detect Either the name of an environment to check against the current, i.e.
+	 *              `&#039;development&#039;` or `&#039;production&#039;`, or a closure which `Environment` will use
+	 *              to determine the current environment name, or an array mapping environment names
+	 *              to host names.
+	 * @return boolean If `$detect` is a string, returns `true` if the current environment matches
+	 *         the value of `$detect`, or `false` if no match. If used to set a custom detector,
+	 *         returns `null`.
+	 */
+	public static function is($detect) {
+		if (is_callable($detect)) {
+			static::$_detector = $detect;
+		}
+		if (!is_array($detect)) {
+			return (static::$_current == $detect);
+		}
+		static::$_detector = function($request) use ($detect) {
+			if ($request-&gt;env || $request-&gt;command == &#039;test&#039;) {
+				return $request-&gt;env ?: &#039;test&#039;;
+			}
+			$host = method_exists($request, &#039;get&#039;) ? $request-&gt;get(&#039;http:host&#039;) : &#039;.console&#039;;
+
+			foreach ($detect as $environment =&gt; $hosts) {
+				if (is_string($hosts) &amp;&amp; preg_match($hosts, $host)) {
+					return $environment;
+				}
+				if (is_array($hosts) &amp;&amp; in_array($host, $hosts)) {
+					return $environment;
+				}
+			}
+			return &quot;production&quot;;
+		};
+	}
+
+	/**
+	 * Gets the current environment name, a setting associated with the current environment, or the
+	 * entire configuration array for the current environment.
+	 *
+	 * @param string $name The name of the environment setting to retrieve, or the name of an
+	 *               environment, if that environment&#039;s entire configuration is to be retrieved. If
+	 *               retrieving the current environment name, `$name` should not be passed.
+	 * @return mixed If `$name` is unspecified, returns the name of the current environment name as
+	 *         a string (i.e. `&#039;production&#039;`). If an environment name is specified, returns that
+	 *         environment&#039;s entire configuration as an array.
+	 */
+	public static function get($name = null) {
+		$cur = static::$_current;
+
+		if (!$name) {
+			return $cur;
+		}
+		if ($name === true) {
+			return isset(static::$_configurations[$cur]) ? static::$_configurations[$cur] : null;
+		}
+		if (isset(static::$_configurations[$name])) {
+			return static::_processDotPath($name, static::$_configurations);
+		}
+		if (!isset(static::$_configurations[$cur])) {
+			return static::_processDotPath($name, static::$_configurations);
+		}
+
+		return static::_processDotPath($name, static::$_configurations[$cur]);
+	}
+
+	protected static function _processDotPath($path, &amp;$arrayPointer) {
+		if (isset($arrayPointer[$path])) {
+			return $arrayPointer[$path];
+		}
+		if (strpos($path, &#039;.&#039;) === false) {
+			return null;
+		}
+		$pathKeys = explode(&#039;.&#039;, $path);
+		foreach ($pathKeys as $pathKey) {
+			if (!is_array($arrayPointer) || !isset($arrayPointer[$pathKey])) {
+				return false;
+			}
+			$arrayPointer = &amp;$arrayPointer[$pathKey];
+		}
+		return $arrayPointer;
+	}
+
+	/**
+	 * Creates, modifies or switches to an existing environment configuration. To create a new
+	 * configuration, or to update an existing configuration, pass an environment name and an array
+	 * that defines its configuration:
+	 * ``` embed:lithium\tests\cases\core\EnvironmentTest::testModifyEnvironmentConfig(1-1) ```
+	 *
+	 * You can then add to an existing configuration by calling the `set()` method again with the
+	 * same environment name:
+	 * ``` embed:lithium\tests\cases\core\EnvironmentTest::testModifyEnvironmentConfig(6-6) ```
+	 *
+	 * The settings for the environment will then be the aggregate of all `set()` calls:
+	 * ``` embed:lithium\tests\cases\core\EnvironmentTest::testModifyEnvironmentConfig(7-7) ```
+	 *
+	 * By passing an array to `$env`, you can assign the same configuration to multiple
+	 * environments:
+	 * ``` embed:lithium\tests\cases\core\EnvironmentTest::testSetMultipleEnvironments(5-7) ```
+	 *
+	 * The `set()` method can also be called to manually set which environment to operate in:
+	 * ``` embed:lithium\tests\cases\core\EnvironmentTest::testSetAndGetCurrentEnvironment(5-5) ```
+	 *
+	 * Finally, `set()` can accept a `Request` object, to automatically detect the correct
+	 * environment.
+	 *
+	 * ``` embed:lithium\tests\cases\core\EnvironmentTest::testEnvironmentDetection(9-10) ```
+	 *
+	 * For more information on defining custom rules to automatically detect your application&#039;s
+	 * environment, see the documentation for `Environment::is()`.
+	 *
+	 * @see lithium\action\Request
+	 * @see lithium\core\Environment::is()
+	 * @param mixed $env The name(s) of the environment(s) you wish to create, update or switch to
+	 *              (string/array), or a `Request` object or `$_SERVER` / `$_ENV` array used to
+	 *              detect (and switch to) the application&#039;s current environment.
+	 * @param array $config If creating or updating a configuration, accepts an array of settings.
+	 *              If the environment name specified in `$env` already exists, the values in
+	 *              `$config` will be recursively merged with any pre-existing settings.
+	 * @return array If creating or updating a configuration, returns an array of the environment&#039;s
+	 *               settings. If updating an existing configuration, this will be the newly-applied
+	 *               configuration merged with the pre-existing values. If setting the environment
+	 *               itself (i.e. `$config` is unspecified), returns `null`.
+	 */
+	public static function set($env, $config = null) {
+		if ($config === null) {
+			if (is_object($env) || is_array($env)) {
+				static::$_current = static::_detector()-&gt;__invoke($env);
+			} elseif (isset(static::$_configurations[$env])) {
+				static::$_current = $env;
+			}
+			return;
+		}
+		if (is_array($env)) {
+			foreach ($env as $name) {
+				static::set($name, $config);
+			}
+			return;
+		}
+		$env = ($env === true) ? static::$_current : $env;
+
+		if (isset(static::$_configurations[$env])) {
+			$config = Set::merge(static::$_configurations[$env], $config);
+		}
+		return static::$_configurations[$env] = $config;
+	}
+
+	/**
+	 * Accessor method for `Environment::$_detector`. If `$_detector` is unset, returns the default
+	 * detector built into the class. For more information on setting and using `$_detector`, see
+	 * the documentation for `Environment::is()`. The `_detector()` method is called at the
+	 * beginning of the application&#039;s life-cycle, when `Environment::set()` is passed either an
+	 * instance of a `Request` object, or the `$_SERVER` or `$_ENV` array. This object (or array)
+	 * is then passed onto `$_detector`, which returns the correct environment.
+	 *
+	 * @see lithium\core\Environment::is()
+	 * @see lithium\core\Environment::set()
+	 * @see lithium\core\Environment::$_detector
+	 * @return object Returns a callable object (anonymous function) which detects the application&#039;s
+	 *         current environment.
+	 */
+	protected static function _detector() {
+		return static::$_detector ?: function($request) {
+			$isLocal = in_array($request-&gt;env(&#039;SERVER_ADDR&#039;), [&#039;::1&#039;, &#039;127.0.0.1&#039;]);
+			switch (true) {
+				case (isset($request-&gt;env)):
+					return $request-&gt;env;
+				case ($request-&gt;command == &#039;test&#039;):
+					return &#039;test&#039;;
+				case ($request-&gt;env(&#039;PLATFORM&#039;) == &#039;CLI&#039;):
+					return &#039;development&#039;;
+				case (preg_match(&#039;/^\/test/&#039;, $request-&gt;url) &amp;&amp; $isLocal):
+					return &#039;test&#039;;
+				case ($isLocal):
+					return &#039;development&#039;;
+				case (preg_match(&#039;/^test/&#039;, $request-&gt;env(&#039;HTTP_HOST&#039;))):
+					return &#039;test&#039;;
+				default:
+					return &#039;production&#039;;
+			}
+		};
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

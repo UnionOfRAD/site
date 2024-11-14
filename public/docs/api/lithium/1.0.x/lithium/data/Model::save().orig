@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\data\Model::save() – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.0.x/lithium/data" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">data</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.0.x/lithium/data/Model" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Model</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">save()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.0.x/lithium/data/Model" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.0.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.0.x/lithium/data" class="symbol-segment">data</a>\<a href="/docs/api/lithium/1.0.x/lithium/data/Model" class="symbol-segment">Model</a>::save()		</h1>
+
+		<section class="under">
+															<div class="tags">
+													<span class="tag public">public</span>
+												<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>An instance method (called on record and document objects) to create or update the record or
+document in the database that corresponds to <code>$entity</code>.</p>
+					</div>
+				
+									<div class="description">
+						<p>For example, to create a new record or document:</p>
+<pre><code class="language-php">$post = Posts::create(); // Creates a new object, which doesn't exist in the database yet
+$post-&gt;title = "My post";
+$success = $post-&gt;save();
+</code></pre>
+<p>It is also used to update existing database objects, as in the following:</p>
+<pre><code class="language-php">$post = Posts::first($id);
+$post-&gt;title = "Revised title";
+$success = $post-&gt;save();
+</code></pre>
+<p>By default, an object's data will be checked against the validation rules of the model it is
+bound to. Any validation errors that result can then be accessed through the <code>errors()</code>
+method.</p>
+<pre><code class="language-php">if (!$post-&gt;save($someData)) {
+    return array('errors' =&gt; $post-&gt;errors());
+}
+</code></pre>
+<p>To override the validation checks and save anyway, you can pass the <code>'validate'</code> option:</p>
+<pre><code class="language-php">$post-&gt;title = "We Don't Need No Stinkin' Validation";
+$post-&gt;body = "I know what I'm doing.";
+$post-&gt;save(null, array('validate' =&gt; false));
+</code></pre>
+<p>By default only validates and saves fields from the schema (if available). This behavior
+can be controlled via the <code>'whitelist'</code> and <code>'locked'</code> options.</p>
+					</div>
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">object</span>
+							<code class="name">$entity</code>
+															<span class="parameter">
+									<p>The record or document object to be saved in the database. This
+parameter is implicit and should not be passed under normal circumstances.
+In the above example, the call to <code>save()</code> on the <code>$post</code> object is
+transparently proxied through to the <code>Posts</code> model class, and <code>$post</code> is passed
+in as the <code>$entity</code> parameter.</p>
+								</span>
+													</li>
+											<li>
+							<span class="type">array</span>
+							<code class="name">$data</code>
+															<span class="parameter">
+									<p>Any data that should be assigned to the record before it is saved.</p>
+								</span>
+													</li>
+											<li>
+							<span class="type">array</span>
+							<code class="name">$options</code>
+															<span class="parameter">
+									<p>Options:</p>
+<ul>
+<li><code>'callbacks'</code> <em>boolean</em>: If <code>false</code>, all callbacks will be disabled before
+executing. Defaults to <code>true</code>.</li>
+<li><code>'validate'</code> <em>boolean|array</em>: If <code>false</code>, validation will be skipped, and the
+record will be immediately saved. Defaults to <code>true</code>. May also be specified as
+an array, in which case it will replace the default validation rules specified
+in the <code>$validates</code> property of the model.</li>
+<li><code>'events'</code> <em>string|array</em>: A string or array defining one or more validation
+<em>events</em>. Events are different contexts in which data events can occur, and
+correspond to the optional <code>'on'</code> key in validation rules. They will be passed
+to the validates() method if <code>'validate'</code> is not <code>false</code>.</li>
+<li><code>'whitelist'</code> <em>array</em>: An array of fields that are allowed to be saved to this
+record. When unprovided will - if available - default to fields of the current
+schema and the <code>'locked'</code> option is not <code>false</code>.</li>
+<li><code>'locked'</code> <em>boolean</em>: Whether to use schema for saving just fields from the
+schema or not. Defaults to <code>true</code>.</li>
+</ul>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">boolean</span>
+									<span class="return">
+						<p>Returns <code>true</code> on a successful save operation, <code>false</code> on failure.</p>
+					</span>
+							</section>
+			
+						<section id="filter" class="flag">
+				<h3 class="h-beta">
+					Filter
+					<nav class="headline-nav">
+						<a href="http://li3.me/docs/book/manual/1.x/common-tasks/filters">see how to use filters</a>					</nav>
+				</h3>
+				<p>
+					This method can be filtered.				</p>
+			</section>
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="/docs/api/lithium/1.0.x/lithium/data/Model::$validates">lithium\data\Model::$validates</a>									<li><a href="/docs/api/lithium/1.0.x/lithium/data/Model::validates()">lithium\data\Model::validates()</a>									<li><a href="/docs/api/lithium/1.0.x/lithium/data/Entity::errors()">lithium\data\Entity::errors()</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public function save($entity, $data = null, array $options = array()) {
+		$self = static::_object();
+		$_meta = array(&#039;model&#039; =&gt; get_called_class()) + $self-&gt;_meta;
+		$_schema = $self-&gt;schema();
+
+		$defaults = array(
+			&#039;validate&#039; =&gt; true,
+			&#039;events&#039; =&gt; $entity-&gt;exists() ? &#039;update&#039; : &#039;create&#039;,
+			&#039;whitelist&#039; =&gt; null,
+			&#039;callbacks&#039; =&gt; true,
+			&#039;locked&#039; =&gt; $self-&gt;_meta[&#039;locked&#039;]
+		);
+		$options += $defaults;
+		$params = compact(&#039;entity&#039;, &#039;data&#039;, &#039;options&#039;);
+
+		$filter = function($self, $params) use ($_meta, $_schema) {
+			$entity = $params[&#039;entity&#039;];
+			$options = $params[&#039;options&#039;];
+
+			if ($params[&#039;data&#039;]) {
+				$entity-&gt;set($params[&#039;data&#039;]);
+			}
+			if (($whitelist = $options[&#039;whitelist&#039;]) || $options[&#039;locked&#039;]) {
+				$whitelist = $whitelist ?: array_keys($_schema-&gt;fields());
+			}
+			if ($rules = $options[&#039;validate&#039;]) {
+				$events = $options[&#039;events&#039;];
+				$validateOpts = compact(&#039;events&#039;, &#039;whitelist&#039;);
+				if (is_array($rules)) {
+					$validateOpts[&#039;rules&#039;] = $rules;
+				}
+
+				if (!$entity-&gt;validates($validateOpts)) {
+					return false;
+				}
+			}
+			$type = $entity-&gt;exists() ? &#039;update&#039; : &#039;create&#039;;
+
+			$query = $self::invokeMethod(&#039;_instance&#039;, array(
+				&#039;query&#039;, compact(&#039;type&#039;, &#039;whitelist&#039;, &#039;entity&#039;) + $options + $_meta
+			));
+			return $self::connection()-&gt;{$type}($query, $options);
+		};
+
+		if (!$options[&#039;callbacks&#039;]) {
+			return $filter(get_called_class(), $params);
+		}
+		return static::_filter(__FUNCTION__, $params, $filter);
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

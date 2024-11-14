@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Filters – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../docs.html" class="active">Documentation</a><a href="../../../../../versions.html">Versions</a><a href="../../../../../present.html">Presentations</a><a href="../../../../../support.html">Community</a><a href="../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../common-tasks.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Common Tasks</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Filters</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="../common-tasks.html" class="">Common Tasks</a><ul><li><a href="logging.html" class="">Logging</a><li><a href="plugins.html" class="">Plugins</a><li><a href="error-handling.html" class="">Error Handling</a><li><a href="caching.html" class="">Caching</a><li><a href="filters.html" class="active">Filters</a><li><a href="etags.html" class="">Etags</a><li><a href="globalization.html" class="">Globalization</a><li><a href="simple-authentication.html" class="">Simple Authentication</a><li><a href="simple-auth-user.html" class="">Simple Auth User</a><li><a href="console-applications.html" class="">Console Applications</a></ul><li><a href="../appendices.html" class="">Appendices</a><ul><li><a href="../appendices/faqs.html" class="">FAQs</a><li><a href="../appendices/using-in-other-applications.html" class="">Using In Other Applications</a></ul><li><a href="../quickstart.html" class="">Quickstart</a><li><a href="../controllers.html" class="">Controllers</a><ul><li><a href="../controllers/actions.html" class="">Actions</a><li><a href="../controllers/flow-control.html" class="">Flow Control</a><li><a href="../controllers/parameters.html" class="">Parameters</a><li><a href="../controllers/type-rendering-detection.html" class="">Type Rendering Detection</a><li><a href="../controllers/routing.html" class="">Routing</a></ul><li><a href="../installation.html" class="">Installation</a><ul><li><a href="../installation/requirements.html" class="">Requirements</a><li><a href="../installation/troubleshooting.html" class="">Troubleshooting</a><li><a href="../installation/web-servers.html" class="">Web Servers</a></ul><li><a href="../architecture.html" class="">Architecture</a><ul><li><a href="../architecture/file-structure.html" class="">File Structure</a><li><a href="../architecture/response-lifecycle.html" class="">Response Lifecycle</a><li><a href="../architecture/aop.html" class="">AOP</a><li><a href="../architecture/mvc.html" class="">MVC</a><li><a href="../architecture/objects.html" class="">Objects</a></ul><li><a href="../quality-code.html" class="">Quality Code</a><ul><li><a href="../quality-code/fixtures.html" class="">Fixtures</a><li><a href="../quality-code/analysis.html" class="">Analysis</a><li><a href="../../../../manual/quality-code/testing.wiki.html" class="">Testing</a><li><a href="../quality-code/security.html" class="">Security</a></ul><li><a href="../configuration.html" class="">Configuration</a><ul><li><a href="../configuration/environment.html" class="">Environment</a><li><a href="../configuration/bootstrapping.html" class="">Bootstrapping</a><li><a href="../configuration/third-party-libraries.html" class="">Third Party Libraries</a></ul><li><a href="../views.html" class="">Views</a><ul><li><a href="../views/layouts.html" class="">Layouts</a><li><a href="../views/elements.html" class="">Elements</a><li><a href="../views/helpers.html" class="">Helpers</a><li><a href="../views/static-content.html" class="">Static Content</a><li><a href="../views/auto-escaping.html" class="">Auto Escaping</a></ul><li><a href="../models.html" class="">Models</a><ul><li><a href="../models/mongodb.html" class="">Mongodb</a><li><a href="../models/meta.html" class="">Meta</a><li><a href="../models/relationships.html" class="">Relationships</a><li><a href="../models/saving.html" class="">Saving</a><li><a href="../models/using-data-sources.html" class="">Using Data Sources</a><li><a href="../models/adding-functions.html" class="">Adding Functions</a><li><a href="../models/data-mutation.html" class="">Data Mutation</a><li><a href="../models/connections.html" class="">Connections</a><li><a href="../models/creating-data-sources.html" class="">Creating Data Sources</a><li><a href="../models/querying.html" class="">Querying</a><li><a href="../models/validation.html" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="the-filter-system" class="anchor" href="filters.html#the-filter-system">The Filter System</a></h1>
+<p>This guide is meant as an introductory course in creating filters in applications. Filters are essentially an efficient way of introducing event-driven communication between classes in your application. They allow you to inject bits of logic in the middle of main-line program flow while at the same time keeping the API clean, avoiding tight class coupling and some sort of centralized publish/subscribe system.
+What would you need a filter for? Here are some quick examples:</p>
+<ul>
+<li>A <em>before filter</em> that marks the <code>'created'</code> column in your database with the current date</li>
+<li>Intercepting certain requests to deliver raw file contents rather than an HTML response</li>
+<li>Wrapping profiling measurements around each dispatched request</li>
+<li>Checking each request to make sure the user has been authenticated</li>
+<li>Logging various events in your application</li>
+<li>Creating a read-through cache filter that encapsulates the process of checking whether a result has been cached, serving a cached result, and writing results to a cache backend</li>
+</ul>
+<p>By the end of this guide, you should feel comfortable in your understanding of the theory and best practices behind filters, as well as identifying filterable logic in the framework and creating your own filterable methods.</p>
+<div class="note note-version">
+	The filtering system was overhauled in framework version
+	1.1. This guide uses the new API in its examples and
+	descriptions. The pre-1.1 syntax is documented <a href="../../../../lithium/util/collection/Filters.html">here</a>.
+</div>
+<h2><a id="aspect-oriented-programming" class="anchor" href="filters.html#aspect-oriented-programming">Aspect-Oriented Programming</a></h2>
+<p>The framework's filter system is inspired by similar concepts in Aspect-Oriented Programming, or AOP. In AOP, an aspect refers to a bit of logic that is scattered throughout an application. Usually, it's a piece of logic that is used in a number of different points in the application, often in completely unrelated systems.</p>
+<p>There are a few examples of aspects that you're probably already familiar with. Logging and authentication are two great ones. Both are used in many different parts of an application, and maintaining something so widespread can get tricky unless you're organized. Not only that, those bits of logic aren't really part of the code that makes up your business logic. In other words, they're separate <em>concerns</em>.</p>
+<h2><a id="filter-structure" class="anchor" href="filters.html#filter-structure">Filter Structure</a></h2>
+<p>Long story short, a filterable method is created by encapsulating the main logic for a method inside a closure. That closure is then passed to <code>Filters::run()</code> to allow for chain management.</p>
+<p>Applying a custom filter to a filterable method is done by calling <code>Filters::apply()</code> with the appropriate information about the method. The first argument specifies the fully quallified class name, the second the name of the method to filter, and the third argument is the closure that defines what you want the filter to do.</p>
+<p>The following sections will illustrate a few examples that should help you understand how both to apply and create filters.</p>
+<h2><a id="applying-filters-authentication" class="anchor" href="filters.html#applying-filters-authentication">Applying Filters: Authentication</a></h2>
+<p>Since it's likely to be more common, let's tackle applying filters first. The location of the filter application might depend some on what it is you're filtering, but bootstrap files are often a good choice.</p>
+<p>Let's imagine for a moment that we're aiming to add a filter to a li3 application that checks for authenticated users. Let's start with a basic filter setup, and place it in <code>bootstrap/session.php</code> (if you look at <code>session.php</code>, you'll notice there's already some configuration for defining session storage and authentication). The thinking here is that we want to inject a bit of authentication verification logic as the dispatcher receives each request. Since <code>Dispatcher::run()</code> is filterable, we'll apply the filter to it:</p>
+<pre><code class="language-php">use lithium\aop\Filters;
+use lithium\action\Dispatcher;
+
+Filters::apply(Dispatcher::class, 'run', function($params, $next) {
+	return $next($params);
+});
+</code></pre>
+<p>This is the basic structure for applying a filter: call <code>Filters::apply()</code> with information on the class or object in question, hand it the name of the method you'd like to filter, then a closure that implements your filter logic.</p>
+<p>But let's talk about the parameters involved in the closure:</p>
+<p><em>The first parameter</em>, <code>$params</code> gives you access to any parameters that original method implementation had access to. The bulk of your logic will often be in accessing or modifying what's in those parameters before allowing the filters chain advance and continue.</p>
+<p><em>The second and last parameter</em>, <code>$next</code>, is important. It is a function supposed to be called with just <code>$params</code> as its only parameter. Once called, the next filter in line will be executed until it reaches the last item in the filter chain: the original method implementation itself.</p>
+<p>Unless you want to short-circuit filter execution (which includes the base logic of the method you're filtering), you'll want to include this somewhere in your filter logic. The position this call has in your filter also might be important. For example, if you're creating a filter you want to have happen <strong>after</strong> a certain method, your custom filter logic should follow the <code>next()</code> call rather than proceed it:</p>
+<pre><code class="language-php">use lithium\aop\Filters;
+
+Filters::apply(SomeClass::class, 'methodName', function($params, $next) {
+	// Custom "before" logic goes here.
+	$result = $next($params); // if you don't call $next() the chain is short-circuited
+	// Custom "after" logic goes here.
+	return $result;
+});
+</code></pre>
+<p>Alright: let's use these parameters to our advantage in creating an authentication setup. If we look at the parameters for <code>Dispatcher::_callable()</code> we can see that accepts three: the current <code>Request</code> object (an instance of <code>lithium\action\Request</code>), the parameters returned from routing the request, and an options array.</p>
+<p>When designing filters, it's important to have a clear understanding of the method you're hooking into, and where it fits in the framework's lifecycle. The <code>_callable()</code> method is invoked immediately after the application's routes have been processed, and routing parameters have been returned. This method's responsibility is to take those routing parameters and convert them to a callable object (i.e. a controller) that can process the request and turn it into a response.</p>
+<p>For this filter, we'll intercept the method after it finds a controller object (assuming it finds one), but before it returns it to <code>Dispatcher::run()</code>:</p>
+<pre><code class="language-php">use lithium\aop\Filters;
+use lithium\action\Dispatcher;
+use lithium\action\Response;
+use lithium\security\Auth;
+
+Filters::apply(Dispatcher::class, '_callable', function($params, $next) {
+	$ctrl    = $next($params);
+	$request = isset($params['request']) ? $params['request'] : null;
+	$action  = $params['params']['action'];
+
+	if (Auth::check('default')) {
+		return $ctrl;
+	}
+	if (isset($ctrl-&gt;publicActions) &amp;&amp; in_array($action, $ctrl-&gt;publicActions)) {
+		return $ctrl;
+	}
+	return function() use ($request) {
+		return new Response(compact('request') + ['location' =&gt; 'Sessions::add']);
+	};
+});
+</code></pre>
+<p>This particular listing assumes you've set up a configuration with the <code>Auth</code> class called <code>'default'</code>. Check out the authentication chapter for more on this. Taking it from the top, we can see that the filter first continues executing the chain in order to get the <code>Controller</code> object (<code>$ctrl</code>) to work with, and does all of its processing <em>after</em> the actual method executes.</p>
+<p>Next, it uses the <code>Auth</code> class to see if a user is logged in, and if so, allows the application to continue normally. Then, it checks to see if the controller has a <code>$publicActions</code> property defined, and if so, checks the array of whitelisted actions to see if the requested one matches, and again, allows processing to continue if so.</p>
+<p>Finally, if the user is not logged in, and the requested action is not public, the user is redirected to the login page. Note that, as opposed to returning a <code>Response</code> object directly, as would be appropriate when filtering other <code>Dispatcher</code> methods like <code>run()</code> or <code>_call()</code>, here we are returning a closure.</p>
+<p>It is important when filtering a method that we honor the method's <em>contract</em>. That is, when filtering a method, if we intercept and modify its parameters, or if we bypass it and substitute the return value, we must still keep the values within the acceptable range of what the method accepts or produces. In the case of the <code>_callable()</code> method, it is expected to produce a callable object. The <code>Controller</code> uses PHP's magic <code>__invoke()</code> method to achieve this. Therefore, we can interchange controller objects with closures, and vice versa.</p>
+<p>Implementing the controller for this example might look something like this:</p>
+<pre><code class="language-php">namespace app\controllers;
+
+use lithium\security\Auth;
+
+class SessionsController extends \lithium\action\Controller {
+
+	public $publicActions = ['add'];
+
+	public function add() {
+		if ($this-&gt;request-&gt;data) {
+			$success = Auth::check('default', $this-&gt;request);
+			// ...
+		}
+		// ...
+	}
+}
+</code></pre>
+<p>The rest of the code necessary to implement user authentication is covered in another chapter, but take special note of the <code>$publicActions</code> property in the controller. Without this, the <code>add()</code> action would be treated as private, resulting in an infinite redirect loop.</p>
+<p>Although authentication is a very deep subject, through this example you should be able to see how, whatever your app's rules and constraints are, integrating into your application should be straightforward, and most importantly, unobtrusive.</p>
+<h2><a id="applying-filters-logging" class="anchor" href="filters.html#applying-filters-logging">Applying Filters: Logging</a></h2>
+<p>One more example is common enough to cover: logging. When building a large application, it's handy to log SQL queries made against your data store. It helps in debugging and performance optimization. Let's cover building a quick filter around your data connection logic in order to log SQL statements to a file.</p>
+<p>The approach here requires a bit of understanding how the data layer works. In the setup of your application, you've probably created new database (or other datasource) connections in <code>config/bootstrap/connections.php</code>. Here's what a simple connection to a MySQL database might look like:</p>
+<pre><code class="language-php">Connections::add('default', [
+	'type' =&gt; 'database',
+	'adapter' =&gt; 'MySql',
+	'host' =&gt; 'localhost',
+	'login' =&gt; 'myusername',
+	'password' =&gt; 'mypassword',
+	'database' =&gt; 'appname'
+]);
+</code></pre>
+<p>Looking at the API of the data source adapters, we want to add logging to the <code>_execute()</code> method. Its only parameter is the SQL being executed, and that's exactly what we'll need for our filter logic.</p>
+<p>The adapter classes are implemented as concrete classes. That's also why <code>Connections::get('default')</code> in the example below will give us an instance of the <code>MySql</code> class. Using that we can continue and filter just calls to that particular instance or using a different syntax in <code>Filters::apply()</code>, to filter <em>any</em> instance of that class.</p>
+<pre><code class="language-php">use lithium\aop\Filters;
+use lithium\analysis\Logger;
+use lithium\data\Connections;
+use lithium\data\source\database\adapter\MySql;
+
+// Set up the logger configuration to use the file adapter.
+Logger::config([
+	'default' =&gt; ['adapter' =&gt; 'File']
+]);
+
+// Filter any instance of the MySql adapter (preferred):
+Filters::apply(MySql::class, '_execute', function($params, $next) {
+	// Hand the SQL in the params headed to _execute() to the logger:
+	Logger::debug(date('D M j G:i:s') . ' ' . $params['sql']);
+
+	// Always make sure to keep the filter chain going.
+	return $next($params);
+});
+
+// Filter just that single instance:
+Filters::apply(Connections::get('default'), '_execute', function($params, $next) {
+	// ...
+});
+</code></pre>
+<h2><a id="creating-filter-able-logic" class="anchor" href="filters.html#creating-filter-able-logic">Creating Filter-able Logic</a></h2>
+<p>If you're planning on creating and distributing your own code you might consider writing parts of your API to be filter-able. This allows other developers to take advantage of our powerful filter system, while at the same time helping you avoid writing extra callback methods or configuration options in your code.</p>
+<p>Let's imagine for a bit that you're creating a social media integration extension for li3. The library will connect to popular social networking sites to post or gather information. Since you're offering this to other developers to use in their applications, it'd be nice to enable filtering on some of the logic.</p>
+<p>For example, let's add a filter to the method that posts content to Twitter. It's conceivable that developers might want to filter that logic to shorten URLs using different services, or automatically include hashtags at the end of the tweet.</p>
+<p>First, start with the basics:</p>
+<pre><code class="language-php">class Twitter {
+
+	public function tweet($status, $options) {
+
+		$defaults = ['responseFormat' =&gt; 'json'];
+		$options += $defaults;
+
+		// Twitter connection and data transfer logic goes here...
+		return $result;
+	}
+}
+</code></pre>
+<p>Here we've got a basic method implementation. Of note is the <code>$options</code> parameter: the framework API is a big fan of keeping parameter counts small using options arrays. Coding to that same standard helps developers more quickly understand how to put things together. Here you can see a bit of prep work happen before the main logic of the method, mostly just in merging some default values into the supplied options.</p>
+<p>Once we've got the core logic in, adding the ability to filter it is relatively painless. What we end up doing is wrapping up the core implementation in a closure that we hand to <code>Filters::run()</code>, and returning the result of that call. Here's what it looks like:</p>
+<pre><code class="language-php">use lithium\aop\Filters;
+
+class Twitter extends \lithium\core\Object {
+
+	public function tweet($status, $options) {
+
+		$defaults = ['responseFormat' =&gt; 'json'];
+		$options += $defaults;
+
+		$params = compact('status', 'options');
+
+		return Filters::run($this, __FUNCTION__, $params, function($params) {
+			// Twitter connection and data transfer logic goes here...
+			return $result;
+		});
+	}
+}
+</code></pre>
+<p>The <code>filter()</code> method takes four arguments. The first is the object instance (<code>$this</code>) or the class' name (<code>get_called_class()</code>), the second is the name of the method, the third is an array of parameters the original method implementation takes. The last parameter is a closure containing the original method implementation. That's it! If you're doing something pretty simple - that's all you need to do.</p>
+<p>There are a few situations that make things a bit different. One example is if your method is accessed statically. Let's adjust our <code>tweet()</code> example to illustrate (note that the parent class also changes):</p>
+<pre><code class="language-php">use lithium\aop\Filters;
+
+class Twitter extends \lithium\core\StaticObject {
+
+	public static function tweet($status, $options) {
+
+		$defaults = ['responseFormat' =&gt; 'json'];
+		$options += $defaults;
+
+		$params = compact('status', 'options');
+
+		return Filters::run(get_called_class(), __FUNCTION__, $params, function($params) {
+			// Twitter connection and data transfer logic goes here...
+			return $result;
+		});
+	}
+}
+</code></pre>
+<p>Mostly the same...</p>
+<p>Another situation that makes things a bit tricky is if your main method implementation requires the use of properties or methods that would normally be out of scope once everything has been wrapped in a closure (i.e. private or protected members). For example, let's say our <code>tweet()</code> method logic makes use of a class called <code>OAuth</code> that's already a property of the <code>Twitter</code> class.</p>
+<p>What you need to do is set up a local reference before you start the closure definition, making sure to use the <code>use</code> clause within the closure definition:</p>
+<pre><code class="language-php">class Twitter extends \lithium\core\StaticObject {
+
+	public static function tweet($status, $options) {
+		$auth = static::$_classes['oauth'];
+		$defaults = ['responseFormat' =&gt; 'json'];
+		$options += $defaults;
+
+		$params = compact('status', 'options');
+
+		return Filters::run(get_called_class(), __FUNCTION__, $params, function($params) use ($auth) {
+			// Twitter connection and data transfer logic goes here...
+			return $result;
+		});
+	}
+}
+</code></pre>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

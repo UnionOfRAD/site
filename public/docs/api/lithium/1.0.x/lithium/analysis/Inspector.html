@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\analysis\Inspector – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../analysis.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">analysis</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Inspector</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../analysis.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Inspector::isCallable().html">isCallable()</a>												<li class="method public">
+				<a href="./Inspector::type().html">type()</a>												<li class="method public">
+				<a href="./Inspector::info().html">info()</a>												<li class="method public">
+				<a href="./Inspector::executable().html">executable()</a>												<li class="method public">
+				<a href="./Inspector::methods().html">methods()</a>												<li class="method public">
+				<a href="./Inspector::properties().html">properties()</a>												<li class="method public">
+				<a href="./Inspector::lines().html">lines()</a>												<li class="method public">
+				<a href="./Inspector::parents().html">parents()</a>												<li class="method public">
+				<a href="./Inspector::classes().html">classes()</a>												<li class="method public">
+				<a href="./Inspector::dependencies().html">dependencies()</a>												<li class="method protected">
+				<a href="./Inspector::_class().html">_class()</a>												<li class="method protected">
+				<a href="./Inspector::_items().html">_items()</a>												<li class="method protected">
+				<a href="./Inspector::_modifiers().html">_modifiers()</a>												<li class="method protected">
+				<a href="./Inspector::_instance().html">_instance()</a>												<li class="method public">
+				<a href="./Inspector::invokeMethod().html">invokeMethod()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./Inspector::$_classes.html">$_classes</a>												<li class="property protected">
+				<a href="./Inspector::$_methodMap.html">$_methodMap</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../analysis.html" class="symbol-segment">analysis</a>\Inspector		</h1>
+
+		<section class="under">
+															<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>General source code inspector.</p>
+					</div>
+				
+									<div class="description">
+						<p>This inspector provides a simple interface to the PHP Reflection API that
+can be used to gather information about any PHP source file for purposes of
+test metrics or static analysis.</p>
+					</div>
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Inspector {
+
+	/**
+	 * Class dependencies.
+	 *
+	 * @var array
+	 */
+	protected static $_classes = array(
+		&#039;collection&#039; =&gt; &#039;lithium\util\Collection&#039;
+	);
+
+	/**
+	 * Maps reflect method names to result array keys.
+	 *
+	 * @var array
+	 */
+	protected static $_methodMap = array(
+		&#039;name&#039;      =&gt; &#039;getName&#039;,
+		&#039;start&#039;     =&gt; &#039;getStartLine&#039;,
+		&#039;end&#039;       =&gt; &#039;getEndLine&#039;,
+		&#039;file&#039;      =&gt; &#039;getFileName&#039;,
+		&#039;comment&#039;   =&gt; &#039;getDocComment&#039;,
+		&#039;namespace&#039; =&gt; &#039;getNamespaceName&#039;,
+		&#039;shortName&#039; =&gt; &#039;getShortName&#039;
+	);
+
+	/**
+	 * Determines if a given method can be called on an object/class.
+	 *
+	 * @param string|object $object Class or instance to inspect.
+	 * @param string $method Name of the method.
+	 * @param boolean $internal Should be `true` if you want to check from inside the
+	 *                class/object. When `false` will also check for public visibility,
+	 *                defaults to `false`.
+	 * @return boolean Returns `true` if the method can be called, `false` otherwise.
+	 */
+	public static function isCallable($object, $method, $internal = false) {
+		$methodExists = method_exists($object, $method);
+		return $internal ? $methodExists : $methodExists &amp;&amp; is_callable(array($object, $method));
+	}
+
+	/**
+	 * Determines if a given $identifier is a class property, a class method, a class itself,
+	 * or a namespace identifier.
+	 *
+	 * @param string $identifier The identifier to be analyzed
+	 * @return string Identifier type. One of `property`, `method`, `class` or `namespace`.
+	 */
+	public static function type($identifier) {
+		$identifier = ltrim($identifier, &#039;\\&#039;);
+
+		if (strpos($identifier, &#039;::&#039;)) {
+			return (strpos($identifier, &#039;$&#039;) !== false) ? &#039;property&#039; : &#039;method&#039;;
+		}
+		if (is_readable(Libraries::path($identifier))) {
+			if (class_exists($identifier) &amp;&amp; in_array($identifier, get_declared_classes())) {
+				return &#039;class&#039;;
+			}
+		}
+		return &#039;namespace&#039;;
+	}
+
+	/**
+	 * Detailed source code identifier analysis.
+	 *
+	 * Analyzes a passed $identifier for more detailed information such
+	 * as method/property modifiers (e.g. `public`, `private`, `abstract`)
+	 *
+	 * @param string $identifier The identifier to be analyzed
+	 * @param array $info Optionally restrict or expand the default information
+	 *        returned from the `info` method. By default, the information returned
+	 *        is the same as the array keys contained in the `$_methodMap` property of
+	 *        Inspector.
+	 * @return array An array of the parsed meta-data information of the given identifier.
+	 */
+	public static function info($identifier, $info = array()) {
+		$info = $info ?: array_keys(static::$_methodMap);
+		$type = static::type($identifier);
+		$result = array();
+		$class = null;
+
+		if ($type === &#039;method&#039; || $type === &#039;property&#039;) {
+			list($class, $identifier) = explode(&#039;::&#039;, $identifier);
+
+			try {
+				$classInspector = new ReflectionClass($class);
+			} catch (Exception $e) {
+				return null;
+			}
+
+			if ($type === &#039;property&#039;) {
+				$identifier = substr($identifier, 1);
+				$accessor = &#039;getProperty&#039;;
+			} else {
+				$identifier = str_replace(&#039;()&#039;, &#039;&#039;, $identifier);
+				$accessor = &#039;getMethod&#039;;
+			}
+
+			try {
+				$inspector = $classInspector-&gt;{$accessor}($identifier);
+			} catch (Exception $e) {
+				return null;
+			}
+			$result[&#039;modifiers&#039;] = static::_modifiers($inspector);
+		} elseif ($type === &#039;class&#039;) {
+			$inspector = new ReflectionClass($identifier);
+			$classInspector = null;
+		} else {
+			return null;
+		}
+
+		foreach ($info as $key) {
+			if (!isset(static::$_methodMap[$key])) {
+				continue;
+			}
+			if (method_exists($inspector, static::$_methodMap[$key])) {
+				$setAccess = (
+					($type === &#039;method&#039; || $type === &#039;property&#039;) &amp;&amp;
+					array_intersect($result[&#039;modifiers&#039;], array(&#039;private&#039;, &#039;protected&#039;)) !== array() &amp;&amp;
+					method_exists($inspector, &#039;setAccessible&#039;)
+				);
+
+				if ($setAccess) {
+					$inspector-&gt;setAccessible(true);
+				}
+				$result[$key] = $inspector-&gt;{static::$_methodMap[$key]}();
+
+				if ($setAccess) {
+					$inspector-&gt;setAccessible(false);
+				}
+			}
+		}
+
+		if ($type === &#039;property&#039; &amp;&amp; $classInspector &amp;&amp; !$classInspector-&gt;isAbstract()) {
+			$inspector-&gt;setAccessible(true);
+
+			try {
+				$result[&#039;value&#039;] = $inspector-&gt;getValue(static::_class($class));
+			} catch (Exception $e) {
+				return null;
+			}
+		}
+
+		if (isset($result[&#039;start&#039;]) &amp;&amp; isset($result[&#039;end&#039;])) {
+			$result[&#039;length&#039;] = $result[&#039;end&#039;] - $result[&#039;start&#039;];
+		}
+		if (isset($result[&#039;comment&#039;])) {
+			$result += Docblock::comment($result[&#039;comment&#039;]);
+		}
+		return $result;
+	}
+
+	/**
+	 * Gets the executable lines of a class, by examining the start and end lines of each method.
+	 *
+	 * @param mixed $class Class name as a string or object instance.
+	 * @param array $options Set of options:
+	 *        - `&#039;self&#039;` _boolean_: If `true` (default), only returns lines of methods defined in
+	 *          `$class`, excluding methods from inherited classes.
+	 *        - `&#039;methods&#039;` _array_: An arbitrary list of methods to search, as a string (single
+	 *          method name) or array of method names.
+	 *        - `&#039;filter&#039;` _boolean_: If `true`, filters out lines containing only whitespace or
+	 *          braces. Note: for some reason, the Zend engine does not report `switch` and `try`
+	 *          statements as executable lines, as well as parts of multi-line assignment
+	 *          statements, so they are filtered out as well.
+	 * @return array Returns an array of the executable line numbers of the class.
+	 */
+	public static function executable($class, array $options = array()) {
+		$defaults = array(
+			&#039;self&#039; =&gt; true,
+			&#039;filter&#039; =&gt; true,
+			&#039;methods&#039; =&gt; array(),
+			&#039;empty&#039; =&gt; array(&#039; &#039;, &quot;\t&quot;, &#039;}&#039;, &#039;)&#039;, &#039;;&#039;),
+			&#039;pattern&#039; =&gt; null,
+			&#039;blockOpeners&#039; =&gt; array(&#039;switch (&#039;, &#039;try {&#039;, &#039;} else {&#039;, &#039;do {&#039;, &#039;} while&#039;)
+		);
+		$options += $defaults;
+
+		if (empty($options[&#039;pattern&#039;]) &amp;&amp; $options[&#039;filter&#039;]) {
+			$pattern = str_replace(&#039; &#039;, &#039;\s*&#039;, join(&#039;|&#039;, array_map(
+				function($str) { return preg_quote($str, &#039;/&#039;); },
+				$options[&#039;blockOpeners&#039;]
+			)));
+			$pattern = join(&#039;|&#039;, array(
+				&quot;({$pattern})&quot;,
+				&quot;\\$(.+)\($&quot;,
+				&quot;\s*[&#039;\&quot;]\w+[&#039;\&quot;]\s*=&gt;\s*.+[\{\(]$&quot;,
+				&quot;\s*[&#039;\&quot;]\w+[&#039;\&quot;]\s*=&gt;\s*[&#039;\&quot;]*.+[&#039;\&quot;]*\s*&quot;
+			));
+			$options[&#039;pattern&#039;] = &quot;/^({$pattern})/&quot;;
+		}
+
+		if (!$class instanceof ReflectionClass) {
+			$class = new ReflectionClass(is_object($class) ? get_class($class) : $class);
+		}
+		$options += array(&#039;group&#039; =&gt; false);
+		$result = array_filter(static::methods($class, &#039;ranges&#039;, $options));
+
+		if ($options[&#039;filter&#039;] &amp;&amp; $class-&gt;getFileName() &amp;&amp; $result) {
+			$lines = static::lines($class-&gt;getFileName(), $result);
+			$start = key($lines);
+
+			$code = implode(&quot;\n&quot;, $lines);
+			$tokens = token_get_all(&#039;&lt;&#039; . &#039;?php&#039; . $code);
+			$tmp = array();
+
+			foreach ($tokens as $token) {
+				if (is_array($token)) {
+					if (!in_array($token[0], array(T_COMMENT, T_DOC_COMMENT, T_WHITESPACE))) {
+						$tmp[] = $token[2];
+					}
+				}
+			}
+
+			$filteredLines = array_values(array_map(
+				function($ln) use ($start) { return $ln + $start - 1; },
+				array_unique($tmp))
+			);
+
+			$lines = array_intersect_key($lines, array_flip($filteredLines));
+
+			$result = array_keys(array_filter($lines, function($line) use ($options) {
+				$line = trim($line);
+				$empty = preg_match($options[&#039;pattern&#039;], $line);
+				return $empty ? false : (str_replace($options[&#039;empty&#039;], &#039;&#039;, $line) !== &#039;&#039;);
+			}));
+		}
+		return $result;
+	}
+
+	/**
+	 * Returns various information on the methods of an object, in different formats.
+	 *
+	 * @param mixed $class A string class name or an object instance, from which to get methods.
+	 * @param string $format The type and format of data to return. Available options are:
+	 *        - `null`: Returns a `Collection` object containing a `ReflectionMethod` instance
+	 *         for each method.
+	 *        - `&#039;extents&#039;`: Returns a two-dimensional array with method names as keys, and
+	 *         an array with starting and ending line numbers as values.
+	 *        - `&#039;ranges&#039;`: Returns a two-dimensional array where each key is a method name,
+	 *         and each value is an array of line numbers which are contained in the method.
+	 * @param array $options Set of options applied directly (check `_items()` for more options):
+	 *        - `&#039;methods&#039;` _array_: An arbitrary list of methods to search, as a string (single
+	 *          method name) or array of method names.
+	 *        - `&#039;group&#039;`: If true (default) the array is grouped by context (ex.: method name), if
+	 *         false the results are sequentially appended to an array.
+	 *        -&#039;self&#039;: If true (default), only returns properties defined in `$class`,
+	 *         excluding properties from inherited classes.
+	 * @return mixed Return value depends on the $format given:
+	 *        - `null` on failure.
+	 *        - `lithium\util\Collection` if $format is `null`
+	 *        - `array` if $format is either `&#039;extends&#039;` or `&#039;ranges&#039;`.
+	 */
+	public static function methods($class, $format = null, array $options = array()) {
+		$defaults = array(&#039;methods&#039; =&gt; array(), &#039;group&#039; =&gt; true, &#039;self&#039; =&gt; true);
+		$options += $defaults;
+
+		if (!(is_object($class) &amp;&amp; $class instanceof ReflectionClass)) {
+			try {
+				$class = new ReflectionClass($class);
+			} catch (ReflectionException $e) {
+				return null;
+			}
+		}
+		$options += array(&#039;names&#039; =&gt; $options[&#039;methods&#039;]);
+		$methods = static::_items($class, &#039;getMethods&#039;, $options);
+		$result = array();
+
+		switch ($format) {
+			case null:
+				return $methods;
+			case &#039;extents&#039;:
+				if ($methods-&gt;getName() === array()) {
+					return array();
+				}
+
+				$extents = function($start, $end) { return array($start, $end); };
+				$result = array_combine($methods-&gt;getName(), array_map(
+					$extents, $methods-&gt;getStartLine(), $methods-&gt;getEndLine()
+				));
+			break;
+			case &#039;ranges&#039;:
+				$ranges = function($lines) {
+					list($start, $end) = $lines;
+					return ($end &lt;= $start + 1) ? array() : range($start + 1, $end - 1);
+				};
+				$result = array_map($ranges, static::methods(
+					$class, &#039;extents&#039;, array(&#039;group&#039; =&gt; true) + $options
+				));
+			break;
+		}
+
+		if ($options[&#039;group&#039;]) {
+			return $result;
+		}
+		$tmp = $result;
+		$result = array();
+
+		array_map(function($ln) use (&amp;$result) { $result = array_merge($result, $ln); }, $tmp);
+		return $result;
+	}
+
+	/**
+	 * Returns various information on the properties of an object.
+	 *
+	 * @param mixed $class A string class name or an object instance, from which to get methods.
+	 * @param array $options Set of options applied directly (check `_items()` for more options):
+	 *        - `&#039;properties&#039;`: array of properties to gather information from.
+	 *        - `&#039;self&#039;`: If true (default), only returns properties defined in `$class`,
+	 *         excluding properties from inherited classes.
+	 * @return mixed Returns an array with information about the properties from the class given in
+	 *               $class or null on error.
+	 */
+	public static function properties($class, array $options = array()) {
+		$defaults = array(&#039;properties&#039; =&gt; array(), &#039;self&#039; =&gt; true);
+		$options += $defaults;
+
+		if (!(is_object($class) &amp;&amp; $class instanceof ReflectionClass)) {
+			try {
+				$class = new ReflectionClass($class);
+			} catch (ReflectionException $e) {
+				return null;
+			}
+		}
+		$options += array(&#039;names&#039; =&gt; $options[&#039;properties&#039;]);
+
+		return static::_items($class, &#039;getProperties&#039;, $options)-&gt;map(function($item) {
+			$class = __CLASS__;
+			$modifiers = array_values($class::invokeMethod(&#039;_modifiers&#039;, array($item)));
+			$setAccess = (
+				array_intersect($modifiers, array(&#039;private&#039;, &#039;protected&#039;)) !== array()
+			);
+			if ($setAccess) {
+				$item-&gt;setAccessible(true);
+			}
+			$result = compact(&#039;modifiers&#039;) + array(
+				&#039;docComment&#039; =&gt; $item-&gt;getDocComment(),
+				&#039;name&#039; =&gt; $item-&gt;getName(),
+				&#039;value&#039; =&gt; $item-&gt;getValue($item-&gt;getDeclaringClass())
+			);
+			if ($setAccess) {
+				$item-&gt;setAccessible(false);
+			}
+			return $result;
+		}, array(&#039;collect&#039; =&gt; false));
+	}
+
+	/**
+	 * Returns an array of lines from a file, class, or arbitrary string, where $data is the data
+	 * to read the lines from and $lines is an array of line numbers specifying which lines should
+	 * be read.
+	 *
+	 * @param string $data If `$data` contains newlines, it will be read from directly, and have
+	 *        its own lines returned.  If `$data` is a physical file path, that file will be
+	 *        read and have its lines returned.  If `$data` is a class name, it will be
+	 *        converted into a physical file path and read.
+	 * @param array $lines The array of lines to read. If a given line is not present in the data,
+	 *        it will be silently ignored.
+	 * @return array Returns an array where the keys are matching `$lines`, and the values are the
+	 *         corresponding line numbers in `$data`.
+	 * @todo Add an $options parameter with a &#039;context&#039; flag, to pull in n lines of context.
+	 */
+	public static function lines($data, $lines) {
+		$c = array();
+
+		if (strpos($data, PHP_EOL) !== false) {
+			$c = explode(PHP_EOL, PHP_EOL . $data);
+		} else {
+			if (!file_exists($data)) {
+				$data = Libraries::path($data);
+				if (!file_exists($data)) {
+					return null;
+				}
+			}
+
+			$file = new SplFileObject($data);
+			foreach ($file as $current) {
+				$c[$file-&gt;key() + 1] = rtrim($file-&gt;current());
+			}
+		}
+
+		if (!count($c) || !count($lines)) {
+			return null;
+		}
+		return array_intersect_key($c, array_combine($lines, array_fill(0, count($lines), null)));
+	}
+
+	/**
+	 * Gets the full inheritance list for the given class.
+	 *
+	 * @param string $class Class whose inheritance chain will be returned
+	 * @param array $options Option consists of:
+	 *        - `&#039;autoLoad&#039;` _boolean_: Whether or not to call `__autoload` by default. Defaults
+	 *          to `true`.
+	 * @return array An array of the name of the parent classes of the passed `$class` parameter,
+	 *         or `false` on error.
+	 * @link http://php.net/function.class-parents.php PHP Manual: `class_parents()`.
+	 */
+	public static function parents($class, array $options = array()) {
+		$defaults = array(&#039;autoLoad&#039; =&gt; false);
+		$options += $defaults;
+		$class = is_object($class) ? get_class($class) : $class;
+
+		if (!class_exists($class, $options[&#039;autoLoad&#039;])) {
+			return false;
+		}
+		return class_parents($class);
+	}
+
+	/**
+	 * Gets an array of classes and their corresponding definition files, or examines a file and
+	 * returns the classes it defines.
+	 *
+	 * @param array $options Option consists of:
+	 *        - `&#039;group&#039;`: Can be `classes` for grouping by class name or `files` for grouping by
+	 *         filename.
+	 *         - `&#039;file&#039;: Valid file path for inspecting the containing classes.
+	 * @return array Associative of classes and their corresponding definition files
+	 */
+	public static function classes(array $options = array()) {
+		$defaults = array(&#039;group&#039; =&gt; &#039;classes&#039;, &#039;file&#039; =&gt; null);
+		$options += $defaults;
+
+		$list = get_declared_classes();
+		$files = get_included_files();
+		$classes = array();
+
+		if ($file = $options[&#039;file&#039;]) {
+			$loaded = static::_instance(&#039;collection&#039;, array(&#039;data&#039; =&gt; array_map(
+				function($class) { return new ReflectionClass($class); }, $list
+			)));
+			$classFiles = $loaded-&gt;getFileName();
+
+			if (in_array($file, $files) &amp;&amp; !in_array($file, $classFiles)) {
+				return array();
+			}
+			if (!in_array($file, $classFiles)) {
+				include $file;
+				$list = array_diff(get_declared_classes(), $list);
+			} else {
+				$filter = function($class) use ($file) { return $class-&gt;getFileName() === $file; };
+				$list = $loaded-&gt;find($filter)-&gt;map(function ($class) {
+					return $class-&gt;getName() ?: $class-&gt;name;
+				}, array(&#039;collect&#039; =&gt; false));
+			}
+		}
+
+		foreach ($list as $class) {
+			$inspector = new ReflectionClass($class);
+
+			if ($options[&#039;group&#039;] === &#039;classes&#039;) {
+				$inspector-&gt;getFileName() ? $classes[$class] = $inspector-&gt;getFileName() : null;
+			} elseif ($options[&#039;group&#039;] === &#039;files&#039;) {
+				$classes[$inspector-&gt;getFileName()][] = $inspector;
+			}
+		}
+		return $classes;
+	}
+
+	/**
+	 * Gets the static and dynamic dependencies for a class or group of classes.
+	 *
+	 * @param mixed $classes Either a string specifying a class, or a numerically indexed array
+	 *        of classes
+	 * @param array $options Option consists of:
+	 *        - `&#039;type&#039;`: The type of dependency to check: `static` for static dependencies,
+	 *         `dynamic`for dynamic dependencies or `null` for both merged in the same array.
+	 *         Defaults to `null`.
+	 * @return array An array of the static and dynamic class dependencies or each if `type` is
+	 *         defined in $options.
+	 */
+	public static function dependencies($classes, array $options = array()) {
+		$defaults = array(&#039;type&#039; =&gt; null);
+		$options += $defaults;
+		$static = $dynamic = array();
+		$trim = function($c) { return trim(trim($c, &#039;\\&#039;)); };
+		$join = function($i) { return join(&#039;&#039;, $i); };
+
+		foreach ((array) $classes as $class) {
+			$data = explode(&quot;\n&quot;, file_get_contents(Libraries::path($class)));
+			$data = &quot;&lt;?php \n&quot; . join(&quot;\n&quot;, preg_grep(&#039;/^\s*use /&#039;, $data)) . &quot;\n ?&gt;&quot;;
+
+			$classes = array_map($join, Parser::find($data, &#039;use *;&#039;, array(
+				&#039;return&#039;      =&gt; &#039;content&#039;,
+				&#039;lineBreaks&#039;  =&gt; true,
+				&#039;startOfLine&#039; =&gt; true,
+				&#039;capture&#039;     =&gt; array(&#039;T_STRING&#039;, &#039;T_NS_SEPARATOR&#039;)
+			)));
+
+			if ($classes) {
+				$static = array_unique(array_merge($static, array_map($trim, $classes)));
+			}
+			$classes = static::info($class . &#039;::$_classes&#039;, array(&#039;value&#039;));
+
+			if (isset($classes[&#039;value&#039;])) {
+				$dynamic = array_merge($dynamic, array_map($trim, array_values($classes[&#039;value&#039;])));
+			}
+		}
+
+		if (empty($options[&#039;type&#039;])) {
+			return array_unique(array_merge($static, $dynamic));
+		}
+		$type = $options[&#039;type&#039;];
+		return isset(${$type}) ? ${$type} : null;
+	}
+
+	/**
+	 * Returns an instance of the given class without directly instantiating it. Inspired by the
+	 * work of Sebastian Bergmann on the PHP Object Freezer project.
+	 *
+	 * @link http://sebastian-bergmann.de/archives/831-Freezing-and-Thawing-PHP-Objects.html
+	 *       Freezing and Thawing PHP Objects
+	 * @param string $class The name of the class to return an instance of.
+	 * @return object Returns an instance of the object given by `$class` without calling that
+	 *        class&#039; constructor.
+	 */
+	protected static function _class($class) {
+		if (!class_exists($class)) {
+			throw new RuntimeException(sprintf(&#039;Class `%s` could not be found.&#039;, $class));
+		}
+		return unserialize(sprintf(&#039;O:%d:&quot;%s&quot;:0:{}&#039;, strlen($class), $class));
+	}
+
+	/**
+	 * Helper method to get an array of `ReflectionMethod` or `ReflectionProperty` objects, wrapped
+	 * in a `Collection` object, and filtered based on a set of options.
+	 *
+	 * @param ReflectionClass $class A reflection class instance from which to fetch.
+	 * @param string $method A getter method to call on the `ReflectionClass` instance, which will
+	 *               return an array of items, i.e. `&#039;getProperties&#039;` or `&#039;getMethods&#039;`.
+	 * @param array $options The options used to filter the resulting method list.
+	 *         - `&#039;names&#039;`: array of properties for filtering the result.
+	 *         - `&#039;self&#039;`: If true (default), only returns properties defined in `$class`,
+	 *         excluding properties from inherited classes.
+	 *         - `&#039;public&#039;`: If true (default) forces the property to be recognized as public.
+	 * @return object Returns a `Collection` object instance containing the results of the items
+	 *         returned from the call to the method specified in `$method`, after being passed
+	 *         through the filters specified in `$options`.
+	 */
+	protected static function _items($class, $method, $options) {
+		$defaults = array(&#039;names&#039; =&gt; array(), &#039;self&#039; =&gt; true, &#039;public&#039; =&gt; true);
+		$options += $defaults;
+
+		$params = array(
+			&#039;getProperties&#039; =&gt; ReflectionProperty::IS_PUBLIC | (
+				$options[&#039;public&#039;] ? 0 : ReflectionProperty::IS_PROTECTED
+			)
+		);
+		$data = isset($params[$method]) ? $class-&gt;{$method}($params[$method]) : $class-&gt;{$method}();
+
+		if (!empty($options[&#039;names&#039;])) {
+			$data = array_filter($data, function($item) use ($options) {
+				return in_array($item-&gt;getName(), (array) $options[&#039;names&#039;]);
+			});
+		}
+
+		if ($options[&#039;self&#039;]) {
+			$data = array_filter($data, function($item) use ($class) {
+				return ($item-&gt;getDeclaringClass()-&gt;getName() === $class-&gt;getName());
+			});
+		}
+
+		if ($options[&#039;public&#039;]) {
+			$data = array_filter($data, function($item) { return $item-&gt;isPublic(); });
+		}
+		return static::_instance(&#039;collection&#039;, compact(&#039;data&#039;));
+	}
+
+	/**
+	 * Helper method to determine if a class applies to a list of modifiers.
+	 *
+	 * @param string $inspector ReflectionClass instance.
+	 * @param array|string $list List of modifiers to test.
+	 * @return boolean Test result.
+	 */
+	protected static function _modifiers($inspector, $list = array()) {
+		$list = $list ?: array(&#039;public&#039;, &#039;private&#039;, &#039;protected&#039;, &#039;abstract&#039;, &#039;final&#039;, &#039;static&#039;);
+		return array_filter($list, function($modifier) use ($inspector) {
+			$method = &#039;is&#039; . ucfirst($modifier);
+			return (method_exists($inspector, $method) &amp;&amp; $inspector-&gt;{$method}());
+		});
+	}
+
+	/**
+	 * Returns an instance of a class with given `config`. The `name` could be a key from the
+	 * `classes` array, a fully namespaced class name, or an object. Typically this method is used
+	 * in `_init` to create the dependencies used in the current class.
+	 *
+	 * @param string|object $name A `$_classes` key or fully-namespaced class name.
+	 * @param array $options The configuration passed to the constructor.
+	 * @see  lithium\core\Libraries::instance()
+	 * @return object An object instance of the given value in `$name`.
+	 */
+	protected static function _instance($name, array $options = array()) {
+		if (is_string($name) &amp;&amp; isset(static::$_classes[$name])) {
+			$name = static::$_classes[$name];
+		}
+		return Libraries::instance(null, $name, $options);
+	}
+
+	/**
+	 * Calls a method on this object with the given parameters. Provides an OO wrapper for
+	 * `forward_static_call_array()`.
+	 *
+	 * @param string $method Name of the method to call.
+	 * @param array $params Parameter list to use when calling `$method`.
+	 * @return mixed Returns the result of the method call.
+	 */
+	public static function invokeMethod($method, $params = array()) {
+		return forward_static_call_array(array(get_called_class(), $method), $params);
+	}
+
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

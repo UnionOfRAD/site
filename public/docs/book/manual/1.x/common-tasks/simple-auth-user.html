@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Simple Auth User – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../docs.html" class="active">Documentation</a><a href="../../../../../versions.html">Versions</a><a href="../../../../../present.html">Presentations</a><a href="../../../../../support.html">Community</a><a href="../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../common-tasks.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Common Tasks</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Simple Auth User</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="../common-tasks.html" class="">Common Tasks</a><ul><li><a href="logging.html" class="">Logging</a><li><a href="plugins.html" class="">Plugins</a><li><a href="error-handling.html" class="">Error Handling</a><li><a href="caching.html" class="">Caching</a><li><a href="filters.html" class="">Filters</a><li><a href="etags.html" class="">Etags</a><li><a href="globalization.html" class="">Globalization</a><li><a href="simple-authentication.html" class="">Simple Authentication</a><li><a href="simple-auth-user.html" class="active">Simple Auth User</a><li><a href="console-applications.html" class="">Console Applications</a></ul><li><a href="../appendices.html" class="">Appendices</a><ul><li><a href="../appendices/faqs.html" class="">FAQs</a><li><a href="../appendices/using-in-other-applications.html" class="">Using In Other Applications</a></ul><li><a href="../quickstart.html" class="">Quickstart</a><li><a href="../controllers.html" class="">Controllers</a><ul><li><a href="../controllers/actions.html" class="">Actions</a><li><a href="../controllers/flow-control.html" class="">Flow Control</a><li><a href="../controllers/parameters.html" class="">Parameters</a><li><a href="../controllers/type-rendering-detection.html" class="">Type Rendering Detection</a><li><a href="../controllers/routing.html" class="">Routing</a></ul><li><a href="../installation.html" class="">Installation</a><ul><li><a href="../installation/requirements.html" class="">Requirements</a><li><a href="../installation/troubleshooting.html" class="">Troubleshooting</a><li><a href="../installation/web-servers.html" class="">Web Servers</a></ul><li><a href="../architecture.html" class="">Architecture</a><ul><li><a href="../architecture/file-structure.html" class="">File Structure</a><li><a href="../architecture/response-lifecycle.html" class="">Response Lifecycle</a><li><a href="../architecture/aop.html" class="">AOP</a><li><a href="../architecture/mvc.html" class="">MVC</a><li><a href="../architecture/objects.html" class="">Objects</a></ul><li><a href="../quality-code.html" class="">Quality Code</a><ul><li><a href="../quality-code/fixtures.html" class="">Fixtures</a><li><a href="../quality-code/analysis.html" class="">Analysis</a><li><a href="../../../../manual/quality-code/testing.wiki.html" class="">Testing</a><li><a href="../quality-code/security.html" class="">Security</a></ul><li><a href="../configuration.html" class="">Configuration</a><ul><li><a href="../configuration/environment.html" class="">Environment</a><li><a href="../configuration/bootstrapping.html" class="">Bootstrapping</a><li><a href="../configuration/third-party-libraries.html" class="">Third Party Libraries</a></ul><li><a href="../views.html" class="">Views</a><ul><li><a href="../views/layouts.html" class="">Layouts</a><li><a href="../views/elements.html" class="">Elements</a><li><a href="../views/helpers.html" class="">Helpers</a><li><a href="../views/static-content.html" class="">Static Content</a><li><a href="../views/auto-escaping.html" class="">Auto Escaping</a></ul><li><a href="../models.html" class="">Models</a><ul><li><a href="../models/mongodb.html" class="">Mongodb</a><li><a href="../models/meta.html" class="">Meta</a><li><a href="../models/relationships.html" class="">Relationships</a><li><a href="../models/saving.html" class="">Saving</a><li><a href="../models/using-data-sources.html" class="">Using Data Sources</a><li><a href="../models/adding-functions.html" class="">Adding Functions</a><li><a href="../models/data-mutation.html" class="">Data Mutation</a><li><a href="../models/connections.html" class="">Connections</a><li><a href="../models/creating-data-sources.html" class="">Creating Data Sources</a><li><a href="../models/querying.html" class="">Querying</a><li><a href="../models/validation.html" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="creating-a-user-in-m-v-c" class="anchor" href="simple-auth-user.html#creating-a-user-in-m-v-c">Creating a user in M, V, C</a></h1>
+<p>First, create a database with a <code>users</code> table or collection, with at least a primary key (usually <code>id</code> or <code>_id</code>) and the fields <code>username</code> and <code>password</code> (these could of course be renamed, but that requires more configuration).</p>
+<h2><a id="the-model" class="anchor" href="simple-auth-user.html#the-model">The Model</a></h2>
+<p>Create the model in <code>models/Users.php</code>:</p>
+<pre><code class="language-php">namespace app\models;
+
+class Users extends \lithium\data\Model {}
+</code></pre>
+<p>Then, create a model filter in a new bootstrap file in <code>config/bootstrap/</code> called <code>user.php</code>. This file will automatically hash user passwords before the accounts are created. The <code>Password</code> class will automatically use the most secure hashing method available on your system:</p>
+<pre><code class="language-php">use app\models\Users;
+use lithium\aop\Filters;
+use lithium\security\Password;
+
+Filters::apply(Users::class, 'save', function($params, $next) {
+	if ($params['data']) {
+		$params['entity']-&gt;set($params['data']);
+		$params['data'] = [];
+	}
+	if (!$params['entity']-&gt;exists()) {
+		$params['entity']-&gt;password = Password::hash($params['entity']-&gt;password);
+	}
+	return $next($params);
+});
+</code></pre>
+<div class="note note-info">This example uses new-style filters, available with 1.1.</div>
+<p>Now add the following line to config/bootstrap.php to include your new user.php bootstrap file.</p>
+<pre><code class="language-php">require __DIR__ . '/bootstrap/user.php';
+</code></pre>
+<h2><a id="the-controller" class="anchor" href="simple-auth-user.html#the-controller">The Controller</a></h2>
+<p>Create this file in <code>controllers/UsersController</code>:</p>
+<pre><code class="language-php">namespace app\controllers;
+
+use lithium\security\Auth;
+use app\models\Users;
+
+class UsersController extends \lithium\action\Controller {
+
+	public function index() {
+		$users = Users::all();
+		return compact('users');
+	}
+
+	public function add() {
+		$user = Users::create($this-&gt;request-&gt;data);
+
+		if (($this-&gt;request-&gt;data) &amp;&amp; $user-&gt;save()) {
+			return $this-&gt;redirect('Users::index');
+		}
+		return compact('user');
+	}
+}
+</code></pre>
+<h2><a id="the-views" class="anchor" href="simple-auth-user.html#the-views">The views</a></h2>
+<p>Then create the templates.</p>
+<p><code>views/users/add.html.php</code>:</p>
+<pre><code class="language-html">&lt;h2&gt;Add user&lt;/h2&gt;
+&lt;?= $this-&gt;form-&gt;create($user) ?&gt;
+	&lt;?= $this-&gt;form-&gt;field('username') ?&gt;
+	&lt;?= $this-&gt;form-&gt;field('password', ['type' =&gt; 'password']) ?&gt;
+	&lt;?= $this-&gt;form-&gt;submit('Create me') ?&gt;
+&lt;?= $this-&gt;form-&gt;end() ?&gt;
+</code></pre>
+<p><code>views/users/index.html.php</code>:</p>
+<pre><code class="language-html">&lt;h2&gt;Users&lt;/h2&gt;
+
+&lt;ul&gt;
+	&lt;?php foreach ($users as $user) { ?&gt;
+		&lt;li&gt;&lt;?= $user-&gt;username ?&gt;&lt;/li&gt;
+	&lt;?php } ?&gt;
+&lt;/ul&gt;
+</code></pre>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

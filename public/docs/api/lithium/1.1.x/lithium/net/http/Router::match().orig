@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\net\http\Router::match() – Framework API v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.1.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.1.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.1.x/lithium/net" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">net</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.1.x/lithium/net/http" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">http</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="/docs/api/lithium/1.1.x/lithium/net/http/Router" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Router</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">match()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.1.x/lithium/net/http/Router" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.1.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.1.x/lithium/net" class="symbol-segment">net</a>\<a href="/docs/api/lithium/1.1.x/lithium/net/http" class="symbol-segment">http</a>\<a href="/docs/api/lithium/1.1.x/lithium/net/http/Router" class="symbol-segment">Router</a>::match()		</h1>
+
+		<section class="under">
+															<div class="tags">
+													<span class="tag public">public</span>
+													<span class="tag">static</span>
+								<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Attempts to match an array of route parameters (i.e. <code>'controller'</code>, <code>'action'</code>, etc.)
+against a connected <code>Route</code> object. For example, given the following route:</p>
+					</div>
+				
+									<div class="description">
+						<pre><code class="language-php">Router::connect('/login', ['controller' =&gt; 'users', 'action' =&gt; 'login']);
+</code></pre>
+<p>This will match:</p>
+<pre><code class="language-php">$url = Router::match(['controller' =&gt; 'users', 'action' =&gt; 'login']);
+// returns /login
+</code></pre>
+<p>For URLs templates with no insert parameters (i.e. elements like <code>{:id}</code> that are replaced
+with a value), all parameters must match exactly as they appear in the route parameters.</p>
+<p>Alternatively to using a full array, you can specify routes using a more compact syntax. The
+above example can be written as:</p>
+<pre><code class="language-php">$url = Router::match('Users::login'); // still returns /login
+</code></pre>
+<p>You can combine this with more complicated routes; for example:</p>
+<pre><code class="language-php">Router::connect('/posts/{:id:\d+}', ['controller' =&gt; 'posts', 'action' =&gt; 'view']);
+</code></pre>
+<p>This will match:</p>
+<pre><code class="language-php">$url = Router::match(['controller' =&gt; 'posts', 'action' =&gt; 'view', 'id' =&gt; '1138']);
+// returns /posts/1138
+</code></pre>
+<p>Again, you can specify the same URL with a more compact syntax, as in the following:</p>
+<pre><code class="language-php">$url = Router::match(['Posts::view', 'id' =&gt; '1138']);
+// again, returns /posts/1138
+</code></pre>
+<p>You can use either syntax anywhere an URL is accepted, i.e. when redirecting
+or creating links using the <code>Html</code> helper.</p>
+					</div>
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">array|string</span>
+							<code class="name">$url</code>
+															<span class="parameter">
+									<p>An array of parameters to match, or paremeters in their
+shorthand form (i.e. <code>'Posts::view'</code>). Also takes non-routed, manually generated
+URL strings.</p>
+								</span>
+													</li>
+											<li>
+							<span class="type">\lithium\action\Request</span>
+							<code class="name">$context</code>
+															<span class="parameter">
+									<p>This supplies the context for
+any persistent parameters, as well as the base URL for the application.</p>
+								</span>
+													</li>
+											<li>
+							<span class="type">array</span>
+							<code class="name">$options</code>
+															<span class="parameter">
+									<p>Options for the generation of the matched URL. Currently accepted
+values are:</p>
+<ul>
+<li><code>'absolute'</code> <em>boolean</em>: Indicates whether or not the returned URL should be an
+absolute path (i.e. including scheme and host name).</li>
+<li><code>'host'</code> <em>string</em>: If <code>'absolute'</code> is <code>true</code>, sets the host name to be used,
+or overrides the one provided in <code>$context</code>.</li>
+<li><code>'scheme'</code> <em>string</em>: If <code>'absolute'</code> is <code>true</code>, sets the URL scheme to be
+used, or overrides the one provided in <code>$context</code>.</li>
+<li><code>'scope'</code> <em>string</em>: Optionnal scope name.</li>
+</ul>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">string</span>
+									<span class="return">
+						<p>Returns a generated URL, based on the URL template of the matched route, and
+prefixed with the base URL of the application.</p>
+					</span>
+							</section>
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="/docs/api/lithium/1.1.x/lithium/action/Controller::redirect()">lithium\action\Controller::redirect()</a>									<li><a href="/docs/api/lithium/1.1.x/lithium/template/helper/Html::link()">lithium\template\helper\Html::link()</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public static function match($url = [], $context = null, array $options = []) {
+		$options = static::_matchOptions($url, $context, $options);
+
+		if (is_string($url = static::_prepareParams($url, $context, $options))) {
+			return $url;
+		}
+
+		$base = $options[&#039;base&#039;];
+		$url += [&#039;action&#039; =&gt; &#039;index&#039;];
+		$stack = [];
+
+		$suffix = isset($url[&#039;#&#039;]) ? &quot;#{$url[&#039;#&#039;]}&quot; : null;
+		unset($url[&#039;#&#039;]);
+
+		$scope = $options[&#039;scope&#039;];
+		if (isset(static::$_configurations[$scope])) {
+			foreach (static::$_configurations[$scope] as $route) {
+				if (!$match = $route-&gt;match($url + [&#039;scope&#039; =&gt; static::attached($scope)], $context)) {
+					continue;
+				}
+				if ($route-&gt;canContinue()) {
+					$stack[] = $match;
+					$export = $route-&gt;export();
+					$keys = $export[&#039;match&#039;] + $export[&#039;keys&#039;] + $export[&#039;defaults&#039;];
+					unset($keys[&#039;args&#039;]);
+					$url = array_diff_key($url, $keys);
+					continue;
+				}
+				if ($stack) {
+					$stack[] = $match;
+					$match = static::_compileStack($stack);
+				}
+				$path = rtrim(&quot;{$base}{$match}{$suffix}&quot;, &#039;/&#039;) ?: &#039;/&#039;;
+				$path = ($options) ? static::_prefix($path, $context, $options) : $path;
+				return $path ?: &#039;/&#039;;
+			}
+		}
+		$url = static::_formatError($url);
+		$message = &quot;No parameter match found for URL `{$url}`&quot;;
+		$message .= $scope ? &quot; in `{$scope}` scope.&quot; : &#039;.&#039;;
+		throw new RoutingException($message);
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

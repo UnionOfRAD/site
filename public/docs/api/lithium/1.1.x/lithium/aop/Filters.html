@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\aop\Filters – Framework API v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../aop.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">aop</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Filters</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../aop.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Filters::apply().html">apply()</a>												<li class="method public">
+				<a href="./Filters::hasApplied().html">hasApplied()</a>												<li class="method public">
+				<a href="./Filters::run().html">run()</a>												<li class="method public">
+				<a href="./Filters::clear().html">clear()</a>												<li class="method protected">
+				<a href="./Filters::_ids().html">_ids()</a>												<li class="method protected">
+				<a href="./Filters::_chain().html">_chain()</a>												<li class="method public">
+				<a href="./Filters::bcRun().html">bcRun()</a>												<li class="method protected">
+				<a href="./Filters::_bcImplementation().html">_bcImplementation()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./Filters::$_filters.html">$_filters</a>												<li class="property protected">
+				<a href="./Filters::$_chains.html">$_chains</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../aop.html" class="symbol-segment">aop</a>\Filters		</h1>
+
+		<section class="under">
+															<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The <code>Filters</code> class centrally manages all filters and together with <code>Chain</code>
+forms the basis of the filtering system.</p>
+					</div>
+				
+									<div class="description">
+						<p>The filters system is the innovative, no-nonsense and streamlined take on AOP:
+an efficient way to enable event-driven communication between classes without
+tight coupling.</p>
+<h2><a id="making-a-method-filterable" class="anchor" href="Filters.html#making-a-method-filterable">Making a Method Filterable</a></h2>
+<p>Many methods inside the framework are already filterable and marked with
+a <code>@filter</code> docblock tag.</p>
+<p>To make a method filterable you first wrap the implementation inside a
+closure, create a named array of the parameters, then use <code>Filters::run()</code>.</p>
+<pre><code class="language-php">class Foo {
+	public function bar($name) {
+		return "Hello {$name}!";
+	}
+}
+</code></pre>
+<p>... turns into  ..</p>
+<pre><code class="language-php">use lithium\aop\Filters;
+
+class Foo {
+	public function bar($name) {
+		return Filters::run($this, __FUNCTION__, compact('name'), function($params) {
+			return "Hello {$params['name']}!";
+		});
+	}
+}
+</code></pre>
+<h2><a id="creating-a-filter" class="anchor" href="Filters.html#creating-a-filter">Creating a Filter</a></h2>
+<p>A filter can be any callable, but usually is a closure. It always takes two
+parameters: <code>$params</code> and <code>$next</code>, both are explained below.</p>
+<pre><code class="language-php">function($params, $next) {
+	// Do something before ...
+	$result = $next($params);
+	// Do something after ...
+	return $result;
+};
+</code></pre>
+<p><code>$params</code> contains an associative array of the parameters that are passed
+into the implementation. You can modify or inspect these parameters before
+allowing the filter to continue.</p>
+<p><code>$next</code> allows you to pass control to the next filter
+in the chain and finally when to the implementation itself. This allows you
+to interact with the return value as well as the parameters.</p>
+<h2><a id="applying-a-filter" class="anchor" href="Filters.html#applying-a-filter">Applying a Filter</a></h2>
+<p>Filters are applied using <code>Filters::apply()</code>. The method needs the class
+and method which should be filtered as well as a filter to apply.</p>
+<p>Filters can be applied to both static or instantiated objects.</p>
+<p>Here we apply a filter to the <code>Dispatcher</code>, where we want to run custom
+logic before <code>Dispatcher::run()</code> executes. The logic in the filter will be
+executed on every call to <code>Dispatcher::run()</code>, and <code>$response</code> will always be
+modified by any custom logic present before being returned from <code>run()</code>.</p>
+<pre><code class="language-php">use lithium\aop\Filters;
+use lithium\action\Dispatcher;
+
+Filters::apply(Dispatcher::class, 'run', function($params, $next) {
+	// Custom pre-dispatch logic goes here.
+	$response = $next($params);
+
+	// $response now contains a Response object with the result of the
+	// dispatched request, and can be modified as appropriate.
+	return $response;
+});
+</code></pre>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="Chain.html">lithium\aop\Chain</a>								</ul>
+			</section>
+			
+						<section id="links">
+				<h3 class="h-beta">Links</h3>
+				<ul class="links">
+									<li><a href="https://en.wikipedia.org/wiki/Aspect-oriented_programming" target="new">https://en.wikipedia.org/wiki/Aspect-oriented_programming</a>									<li><a href="http://php.net/functions.anonymous.php" target="new">http://php.net/functions.anonymous.php</a>								</ul>
+			</section>
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Filters {
+
+	/**
+	 * An array of filters keyed by their class and method id.
+	 * Will be used to later construct `Chain` objects, per class and method.
+	 *
+	 * @see lithium\aop\Filters::_ids()
+	 * @see lithium\aop\Filters::_chain()
+	 * @var array
+	 */
+	protected static $_filters = [];
+
+	/**
+	 * Holds `Chain` objects keyed by their primary class and method id.
+	 *
+	 * @see lithium\aop\Filters::_ids()
+	 * @see lithium\aop\Filters::_chain()
+	 * @array
+	 */
+	protected static $_chains = [];
+
+	/**
+	 * Lazily applies a filter to a method.
+	 *
+	 * Classes aliased via `class_alias()` are treated as entirely separate from
+	 * their original class.
+	 *
+	 * When calling apply after previous runs (rarely happens), this method will
+	 * invalidate the chain cache.
+	 *
+	 * Multiple applications of a filter will add the filter multiple times to
+	 * the chain. It is up to the user to keep the list of filters unique.
+	 *
+	 * This method intentionally does not establish class context for closures
+	 * by binding them to the instance or statically to the class. Closures can
+	 * originate from static and instance methods and PHP does not allow to
+	 * rebind a closure from a static method to an instance.
+	 *
+	 * @param string|object $class The fully namespaced name of a static class or
+	 *        an instance of a concrete class to which the filter will be applied.
+	 *        Passing a class name for a concrete class will apply the filter to all
+	 *        instances of that class.
+	 * @param string $method The method name to which the filter will be applied i.e. `&#039;bar&#039;`.
+	 * @param callable $filter The filter to apply to the class method. Can be anykind of
+	 *        a callable, most often this is a closure.
+	 * @return void
+	 */
+	public static function apply($class, $method, $filter) {
+		list($id,) = static::_ids($class, $method);
+
+		if (!isset(static::$_filters[$id])) {
+			static::$_filters[$id] = [];
+		}
+		static::$_filters[$id][] = $filter;
+
+		if (isset(static::$_chains[$id])) {
+			unset(static::$_chains[$id]);
+		}
+	}
+
+	/**
+	 * Checks to see if the given class/method has any filters applied.
+	 *
+	 * @param string|object $class Fully namespaced class name or an instance of a class.
+	 * @param string $method The method name i.e. `&#039;bar&#039;`.
+	 * @return boolean
+	 */
+	public static function hasApplied($class, $method) {
+		foreach (static::_ids($class, $method) as $id) {
+			if (isset(static::$_filters[$id])) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Runs the chain and returns its result value. This method is used to make
+	 * a method filterable.
+	 *
+	 * All filters in the run will have access to given parameters. The
+	 * implementation will be placed as the last item in the chain, so
+	 * that effectively filters for the implementation wrap arround its
+	 * implementation.
+	 *
+	 * Creates `Chain` objects lazily, caches and reuses them with differing
+	 * parameters for best of both worlds: lazy object construction to save
+	 * upfront memory as well as quick re-execution. This method may be called
+	 * quite often when filtered methods are executed inside a loop. Thus it
+	 * tries to reduce overhead as much as possible. Optimized for the common
+	 * case that no filters for a filtered method are present.
+	 *
+	 * An example implementation function:
+	 * ```
+	 * function($params) {
+	 *     $params[&#039;foo&#039;] = &#039;bar&#039;;
+	 *     return $params[&#039;foo&#039;];
+	 * }
+	 * ```
+	 *
+	 * Two examples to make a method filterable.
+	 * ```
+	 * // Inside a static method.
+	 * Filters::run(get_called_class(), __FUNCTION__, $params, function($params) {
+	 *     return &#039;implementation&#039;;
+	 * });
+	 *
+	 * // Inside an instance method.
+	 * Filters::run($this, __FUNCTION__, $params, function($params) {
+	 *     return &#039;implementation&#039;;
+	 * });
+	 * ```
+	 *
+	 * @see lithium\aop\Chain
+	 * @see lithium\aop\Chain::run()
+	 * @param string|object $class The fully namespaced name of a static class or
+	 *        an instance of a concrete class. Do not pass a class name for
+	 *        concrete classes. For instances will use a set of merged filters.
+	 *        First class filter, then instance filters.
+	 * @param string $method The method name i.e. `&#039;bar&#039;`.
+	 * @param array $params
+	 * @param callable $implementation
+	 * @return mixed The result of running the chain.
+	 */
+	public static function run($class, $method, array $params, $implementation) {
+		$implementation = static::_bcImplementation($class, $method, $params, $implementation);
+
+		if (!static::hasApplied($class, $method)) {
+			return $implementation($params);
+		}
+		return static::_chain($class, $method)-&gt;run($params, $implementation);
+	}
+
+	/**
+	 * Clears filters optionally constrained by class or class and method combination.
+	 *
+	 * To clear filters for all methods of static class:
+	 * ```
+	 * Filters::clear(&#039;Foo&#039;);
+	 * ```
+	 *
+	 * To clear instance and class filters for all methods of concrete class,
+	 * or to clear just the instance filters for all methods:
+	 * ```
+	 * Filters::clear(&#039;Bar&#039;);
+	 * Filters::clear($instance);
+	 * ```
+	 *
+	 * This method involves some overhead. This is neglectable as it isn&#039;t commonly
+	 * called in hot code paths.
+	 *
+	 * @param string|object $class Fully namespaced class name or an instance of a class.
+	 * @param string $method The method name i.e. `&#039;bar&#039;`.
+	 * @return void
+	 */
+	public static function clear($class = null, $method = null) {
+		if ($class === null &amp;&amp; $method === null) {
+			static::$_filters = static::$_chains = [];
+			return;
+		}
+
+		if (is_string($class)) {
+			$regex  = &#039;^&lt;&#039; . str_replace(&#039;\\&#039;, &#039;\\\\&#039;, ltrim($class, &#039;\\&#039;)) . &#039;.*&gt;&#039;;
+		} else {
+			$regex  = &#039;^&lt;.*#&#039; . spl_object_hash($class) . &#039;&gt;&#039;;
+		}
+		if ($method) {
+			$regex .= &quot;::{$method}$&quot;;
+		}
+		foreach (preg_grep(&quot;/{$regex}/&quot;, array_keys(static::$_filters)) as $id) {
+			unset(static::$_filters[$id]);
+		}
+		foreach (preg_grep(&quot;/{$regex}/&quot;, array_keys(static::$_chains)) as $id) {
+			unset(static::$_chains[$id]);
+		}
+	}
+
+	/**
+	 * Calculates possible ids for a class/method combination. Normalizes
+	 * leading backslash in class name by removing it.
+	 *
+	 * In general instances have two possible ids and static classes have one.
+	 * The id is formattet according to the following pattern which is inspired
+	 * by the format used by `psysh`:
+	 * ```
+	 * &lt;foo\Bar #0000000046feb0630000000176a1b630&gt;::baz
+	 * &lt;lithium\action\Dispatcher&gt;::run
+	 * ```
+	 *
+	 * @link http://psysh.org/
+	 * @param string|object $class Fully namespaced class name or an instance of a class.
+	 * @param string $method The method name i.e. `&#039;bar&#039;`.
+	 * @return array An array of the possible ids.
+	 */
+	protected static function _ids($class, $method) {
+		if (is_string($class)) {
+			return [&#039;&lt;&#039; . ltrim($class, &#039;\\&#039;) . &quot;&gt;::{$method}&quot;];
+		}
+		return [
+			&#039;&lt;&#039; . get_class($class) . &#039; #&#039; . spl_object_hash($class) . &quot;&gt;::{$method}&quot;,
+			&#039;&lt;&#039; . get_class($class) . &quot;&gt;::{$method}&quot;
+		];
+	}
+
+	/**
+	 * Creates a chain for given class/method combination or retrieves it from
+	 * cache. Will implictly do a reverse merge to put static filters first before
+	 * instance filters.
+	 *
+	 * @see lithium\aop\Chain
+	 * @param string|object $class Fully namespaced class name or an instance of a class.
+	 * @param string $method The method name i.e. `&#039;bar&#039;`.
+	 * @return \lithium\aop\Chain
+	 */
+	protected static function _chain($class, $method) {
+		$ids = static::_ids($class, $method);
+
+		if (isset(static::$_chains[$ids[0]])) {
+			return static::$_chains[$ids[0]];
+		}
+		$filters = [];
+
+		foreach ($ids as $id) {
+			if (isset(static::$_filters[$id])) {
+				$filters = array_merge(static::$_filters[$id], $filters);
+			}
+		}
+		return static::$_chains[$ids[0]] = new Chain(compact(&#039;class&#039;, &#039;method&#039;, &#039;filters&#039;));
+	}
+
+	/* Deprecated / BC */
+
+	public static function bcRun($class, $method, array $params, $implementation, array $filters) {
+		$implementation = static::_bcImplementation($class, $method, $params, $implementation);
+		$ids = static::_ids($class, $method);
+
+		foreach ($ids as $id) {
+			if (isset(static::$_filters[$id])) {
+				$filters = array_merge(static::$_filters[$id], $filters);
+			}
+		}
+		return new Chain(compact(&#039;class&#039;, &#039;method&#039;, &#039;filters&#039;));
+	}
+
+	protected static function _bcImplementation($class, $method, $params, $implementation) {
+		$reflect = new \ReflectionFunction($implementation);
+
+		if ($reflect-&gt;getNumberOfParameters() &gt; 1) {
+			$message  = &#039;Old style implementation function in file &#039; . $reflect-&gt;getFileName() . &#039; &#039;;
+			$message .= &#039;on line &#039; . $reflect-&gt;getStartLine() . &#039;. &#039;;
+			$message .= &#039;The signature for implementation functions has changed. It is now &#039;;
+			$message .= &#039;`($params)` instead of the old `($self, $params)`. &#039;;
+			$message .= &#039;Instead of `$self` use `$this` or `static`.&#039;;
+			trigger_error($message, E_USER_DEPRECATED);
+
+			$implementation = function($params) use ($class, $implementation) {
+				return $implementation($class, $params, null);
+			};
+		}
+		return $implementation;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Helpers – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../docs.html" class="active">Documentation</a><a href="../../../../../versions.html">Versions</a><a href="../../../../../present.html">Presentations</a><a href="../../../../../support.html">Community</a><a href="../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../views.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Views</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Helpers</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="../common-tasks.html" class="">Common Tasks</a><ul><li><a href="../common-tasks/logging.html" class="">Logging</a><li><a href="../common-tasks/plugins.html" class="">Plugins</a><li><a href="../common-tasks/error-handling.html" class="">Error Handling</a><li><a href="../common-tasks/caching.html" class="">Caching</a><li><a href="../common-tasks/filters.html" class="">Filters</a><li><a href="../common-tasks/etags.html" class="">Etags</a><li><a href="../common-tasks/globalization.html" class="">Globalization</a><li><a href="../common-tasks/simple-authentication.html" class="">Simple Authentication</a><li><a href="../common-tasks/simple-auth-user.html" class="">Simple Auth User</a><li><a href="../common-tasks/console-applications.html" class="">Console Applications</a></ul><li><a href="../appendices.html" class="">Appendices</a><ul><li><a href="../appendices/faqs.html" class="">FAQs</a><li><a href="../appendices/using-in-other-applications.html" class="">Using In Other Applications</a></ul><li><a href="../quickstart.html" class="">Quickstart</a><li><a href="../controllers.html" class="">Controllers</a><ul><li><a href="../controllers/actions.html" class="">Actions</a><li><a href="../controllers/flow-control.html" class="">Flow Control</a><li><a href="../controllers/parameters.html" class="">Parameters</a><li><a href="../controllers/type-rendering-detection.html" class="">Type Rendering Detection</a><li><a href="../controllers/routing.html" class="">Routing</a></ul><li><a href="../installation.html" class="">Installation</a><ul><li><a href="../installation/requirements.html" class="">Requirements</a><li><a href="../installation/troubleshooting.html" class="">Troubleshooting</a><li><a href="../installation/web-servers.html" class="">Web Servers</a></ul><li><a href="../architecture.html" class="">Architecture</a><ul><li><a href="../architecture/file-structure.html" class="">File Structure</a><li><a href="../architecture/response-lifecycle.html" class="">Response Lifecycle</a><li><a href="../architecture/aop.html" class="">AOP</a><li><a href="../architecture/mvc.html" class="">MVC</a><li><a href="../architecture/objects.html" class="">Objects</a></ul><li><a href="../quality-code.html" class="">Quality Code</a><ul><li><a href="../quality-code/fixtures.html" class="">Fixtures</a><li><a href="../quality-code/analysis.html" class="">Analysis</a><li><a href="../../../../manual/quality-code/testing.wiki.html" class="">Testing</a><li><a href="../quality-code/security.html" class="">Security</a></ul><li><a href="../configuration.html" class="">Configuration</a><ul><li><a href="../configuration/environment.html" class="">Environment</a><li><a href="../configuration/bootstrapping.html" class="">Bootstrapping</a><li><a href="../configuration/third-party-libraries.html" class="">Third Party Libraries</a></ul><li><a href="../views.html" class="">Views</a><ul><li><a href="layouts.html" class="">Layouts</a><li><a href="elements.html" class="">Elements</a><li><a href="helpers.html" class="active">Helpers</a><li><a href="static-content.html" class="">Static Content</a><li><a href="auto-escaping.html" class="">Auto Escaping</a></ul><li><a href="../models.html" class="">Models</a><ul><li><a href="../models/mongodb.html" class="">Mongodb</a><li><a href="../models/meta.html" class="">Meta</a><li><a href="../models/relationships.html" class="">Relationships</a><li><a href="../models/saving.html" class="">Saving</a><li><a href="../models/using-data-sources.html" class="">Using Data Sources</a><li><a href="../models/adding-functions.html" class="">Adding Functions</a><li><a href="../models/data-mutation.html" class="">Data Mutation</a><li><a href="../models/connections.html" class="">Connections</a><li><a href="../models/creating-data-sources.html" class="">Creating Data Sources</a><li><a href="../models/querying.html" class="">Querying</a><li><a href="../models/validation.html" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="helpers" class="anchor" href="helpers.html#helpers">Helpers</a></h1>
+<p>li3 helpers take the concept of elements a bit further, and create a place to house reusable presentation logic across your application. The framework comes with a few of it's own, and creating your own application-specific helpers is a snap.</p>
+<h2><a id="usage" class="anchor" href="helpers.html#usage">Usage</a></h2>
+<p>Helper usage in li3 is simple because helpers are lazy-loaded by the renderer. To use a helper in the view layer, just reference it as a property of the renderer:</p>
+<pre><code class="language-php">&lt;p&gt;
+Here is a &lt;?= $this-&gt;html-&gt;link('link', 'http://li3.me') ?&gt; you'll all enjoy.
+&lt;/p&gt;
+</code></pre>
+<p>This approach means you won't have to declare which helpers you're planning on using. Ever. This also means that things aren't loaded up unless (and until!) you're actually using them.</p>
+<p>Remember, you can use helpers anywhere in the view layer: inside layouts, view templates or elements.</p>
+<h2><a id="creating-your-own-helpers" class="anchor" href="helpers.html#creating-your-own-helpers">Creating Your Own Helpers</a></h2>
+<p>To create a custom helper, create a class in the <code>extensions/helper/</code> directory that extends li3's base <code>Helper</code> class. As a simple example, let's create a simple helper that creates a special sort of link by creating a new file in <code>extensions/helper/AwesomeHtml.php</code>:</p>
+<pre><code class="language-php">namespace app\extensions\helper;
+
+class AwesomeHtml extends \lithium\template\Helper {
+
+	public function link($title, $url) {
+		return "&lt;a class=\"awesome\" href=\"$url\"&gt;$title&lt;/a&gt;";
+	}
+}
+</code></pre>
+<p>One important note to consider here is that the contents of <code>$title</code> and <code>$url</code> aren't escaped since they're being returned raw from the helper method. <em>Make sure you make liberal usage of the <code>escape()</code> method of the <code>Helper</code> class to keep things safe</em>.</p>
+<p>Because string construction can get a little messy, you may wish to make use of the <code>_render()</code> method of the <code>Helper</code> class as well. This works when you create an array of string templates as the <code>_strings</code> property of a helper. Let's secure our example helper and make it a bit more flexible:</p>
+<pre><code class="language-php">namespace app\extensions\helper;
+
+class AwesomeHtml extends \lithium\template\Helper {
+
+	protected $_strings = [
+		'awesome'    =&gt; '&lt;a class="awesome" href="{:url}"&gt;{:title}&lt;/a&gt;',
+		'super_cool' =&gt; '&lt;span class="super"&gt;&lt;a class="cool" href="{:url}"&gt;{:title}&lt;/a&gt;&lt;/span&gt;',
+	];
+
+	public function link($title, $url, $options) {
+		$title = $this-&gt;escape($title);
+		return $this-&gt;_render(__METHOD__, $options['type'], compact('title', 'url'));
+	}
+}
+</code></pre>
+<p>Once this has been setup, we can use the new helper as we would any of the core helpers:</p>
+<pre><code class="language-php">&lt;p&gt;
+	You should really check out
+	&lt;?= $this-&gt;awesomeHtml-&gt;link('li3', 'http://li3.me', [
+		'type' =&gt; 'super_cool'
+	]) ?&gt;
+&lt;/p&gt;
+</code></pre>
+<h2><a id="extending-and-replacing-core-helpers" class="anchor" href="helpers.html#extending-and-replacing-core-helpers">Extending (and replacing) Core Helpers</a></h2>
+<p>li3 gives preference to your classes over the core. If you want to create your own version of the core helpers, it's as easy as creating a new class inside the <code>extensions/helper</code> directory with the same name.</p>
+<p>For example, we can replace li3's core <code>Html</code> helper class with our newly created helper class by renaming the class and filename to 'Html' rather than 'AwesomeHtml'. Doing this also allows you to leave your templates untouched: calls to <code>$this-&gt;html</code> will reference your helper automatically.</p>
+<p>Also realize that in doing this, you'll probably wish to extend the helper you're replacing to take advantage of the functionality already there. If we took our own advice, the new helper would extend <code>lithium\template\helper\Html</code> and <code>link()</code> would be refactored to take advantage of the <code>Html</code> helper's existing link function.</p>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

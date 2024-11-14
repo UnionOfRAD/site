@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Web Servers – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/book/manual/1.x" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/book/manual/1.x/installation" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Installation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Web Servers</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="/docs/book/manual/1.x/common-tasks" class="">Common Tasks</a><ul><li><a href="/docs/book/manual/1.x/common-tasks/logging" class="">Logging</a><li><a href="/docs/book/manual/1.x/common-tasks/plugins" class="">Plugins</a><li><a href="/docs/book/manual/1.x/common-tasks/error-handling" class="">Error Handling</a><li><a href="/docs/book/manual/1.x/common-tasks/caching" class="">Caching</a><li><a href="/docs/book/manual/1.x/common-tasks/filters" class="">Filters</a><li><a href="/docs/book/manual/1.x/common-tasks/etags" class="">Etags</a><li><a href="/docs/book/manual/1.x/common-tasks/globalization" class="">Globalization</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-authentication" class="">Simple Authentication</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-auth-user" class="">Simple Auth User</a><li><a href="/docs/book/manual/1.x/common-tasks/console-applications" class="">Console Applications</a></ul><li><a href="/docs/book/manual/1.x/appendices" class="">Appendices</a><ul><li><a href="/docs/book/manual/1.x/appendices/faqs" class="">FAQs</a><li><a href="/docs/book/manual/1.x/appendices/using-in-other-applications" class="">Using In Other Applications</a></ul><li><a href="/docs/book/manual/1.x/quickstart" class="">Quickstart</a><li><a href="/docs/book/manual/1.x/controllers" class="">Controllers</a><ul><li><a href="/docs/book/manual/1.x/controllers/actions" class="">Actions</a><li><a href="/docs/book/manual/1.x/controllers/flow-control" class="">Flow Control</a><li><a href="/docs/book/manual/1.x/controllers/parameters" class="">Parameters</a><li><a href="/docs/book/manual/1.x/controllers/type-rendering-detection" class="">Type Rendering Detection</a><li><a href="/docs/book/manual/1.x/controllers/routing" class="">Routing</a></ul><li><a href="/docs/book/manual/1.x/installation" class="">Installation</a><ul><li><a href="/docs/book/manual/1.x/installation/requirements" class="">Requirements</a><li><a href="/docs/book/manual/1.x/installation/troubleshooting" class="">Troubleshooting</a><li><a href="/docs/book/manual/1.x/installation/web-servers" class="active">Web Servers</a></ul><li><a href="/docs/book/manual/1.x/architecture" class="">Architecture</a><ul><li><a href="/docs/book/manual/1.x/architecture/file-structure" class="">File Structure</a><li><a href="/docs/book/manual/1.x/architecture/response-lifecycle" class="">Response Lifecycle</a><li><a href="/docs/book/manual/1.x/architecture/aop" class="">AOP</a><li><a href="/docs/book/manual/1.x/architecture/mvc" class="">MVC</a><li><a href="/docs/book/manual/1.x/architecture/objects" class="">Objects</a></ul><li><a href="/docs/book/manual/1.x/quality-code" class="">Quality Code</a><ul><li><a href="/docs/book/manual/1.x/quality-code/fixtures" class="">Fixtures</a><li><a href="/docs/book/manual/1.x/quality-code/analysis" class="">Analysis</a><li><a href="/docs/book/manual/1.x/quality-code/testing" class="">Testing</a><li><a href="/docs/book/manual/1.x/quality-code/security" class="">Security</a></ul><li><a href="/docs/book/manual/1.x/configuration" class="">Configuration</a><ul><li><a href="/docs/book/manual/1.x/configuration/environment" class="">Environment</a><li><a href="/docs/book/manual/1.x/configuration/bootstrapping" class="">Bootstrapping</a><li><a href="/docs/book/manual/1.x/configuration/third-party-libraries" class="">Third Party Libraries</a></ul><li><a href="/docs/book/manual/1.x/views" class="">Views</a><ul><li><a href="/docs/book/manual/1.x/views/layouts" class="">Layouts</a><li><a href="/docs/book/manual/1.x/views/elements" class="">Elements</a><li><a href="/docs/book/manual/1.x/views/helpers" class="">Helpers</a><li><a href="/docs/book/manual/1.x/views/static-content" class="">Static Content</a><li><a href="/docs/book/manual/1.x/views/auto-escaping" class="">Auto Escaping</a></ul><li><a href="/docs/book/manual/1.x/models" class="">Models</a><ul><li><a href="/docs/book/manual/1.x/models/mongodb" class="">Mongodb</a><li><a href="/docs/book/manual/1.x/models/meta" class="">Meta</a><li><a href="/docs/book/manual/1.x/models/relationships" class="">Relationships</a><li><a href="/docs/book/manual/1.x/models/saving" class="">Saving</a><li><a href="/docs/book/manual/1.x/models/using-data-sources" class="">Using Data Sources</a><li><a href="/docs/book/manual/1.x/models/adding-functions" class="">Adding Functions</a><li><a href="/docs/book/manual/1.x/models/data-mutation" class="">Data Mutation</a><li><a href="/docs/book/manual/1.x/models/connections" class="">Connections</a><li><a href="/docs/book/manual/1.x/models/creating-data-sources" class="">Creating Data Sources</a><li><a href="/docs/book/manual/1.x/models/querying" class="">Querying</a><li><a href="/docs/book/manual/1.x/models/validation" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="web-servers" class="anchor" href="#web-servers">Web Servers</a></h1>
+<h2><a id="using-apache-httpd" class="anchor" href="#using-apache-httpd">Using Apache httpd</a></h2>
+<p>Before starting things up, make sure <code>mod_rewrite</code> is enabled, and the <code>AllowOverride</code> directive
+is set to <code>All</code> on the necessary directories involved. Be sure to restart the server before
+checking things.</p>
+<p>In order to provide applications with clean URLs, distributions ship with a set of <code>.htaccess</code> files for use with Apache, which will handle URL rewriting.</p>
+<p>By default, these files can be utilized by finding all references to <code>AllowOverride</code> in your <code>httpd.conf</code> configuration file and setting the values to <code>All</code>. On an OS X system, your setup may look something like this:</p>
+<pre><code class="language-apache">&lt;Directory "/Library/WebServer/Documents"&gt;
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+&lt;/Directory&gt;
+</code></pre>
+<p>Once you've made sure <code>AllowOverride</code> has been set correctly, you can toss an application in your <code>DocumentRoot</code>. Using the past example, placing the application in <code>/Library/WebServer/Documents/app</code> would allow you to access your application at <code>http://localhost/app</code>.</p>
+<p><strong>In production</strong>, it is recommended that you set <code>AllowOverride</code> to <code>None</code> and instead, create a <code>&lt;VirtualHost /&gt;</code> configuration pointed at your application's <code>webroot</code> directory, which contains the rewrite rules. For example, if your application is located in <code>/var/www/html/app</code>, your configuration would resemble the following:</p>
+<pre><code class="language-apache">&lt;VirtualHost *:80&gt;
+	ServerName example.com
+	DocumentRoot "/var/www/html/app/webroot"
+	ErrorLog "logs/error_log"
+
+	&lt;Directory "/var/www/html/app/webroot"&gt;
+		RewriteEngine On
+		RewriteCond %{REQUEST_FILENAME} !-d
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteCond %{REQUEST_FILENAME} !favicon.ico$
+		RewriteRule ^ index.php [QSA,L]
+	&lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</code></pre>
+<p>In this case, your app is available at <code>http://example.com</code>.</p>
+<h2><a id="using-nginx" class="anchor" href="#using-nginx">Using NGINX</a></h2>
+<p>Nginx requires a simple rewrite configuration that enables it to serve dynamic URLs. With nginx, each domain has its own configuration file that encapsulates all such rewriting rules.</p>
+<p>The following example file is typically stored at <code>/etc/nginx/sites-available/example.org.conf</code>. All instances of <code>example.org</code> can be replaced with the domain name of your site or application.</p>
+<pre><code class="language-nginx">server {
+	listen 80;
+	server_name example.org;
+	root /path/to/app/webroot;
+
+	index index.php;
+	try_files $uri $uri/ /index.php?$args;
+
+	location ~ \.php$ {
+		# These are example paths. Check your FPM configuration as your setup may vary.
+		include /usr/local/etc/nginx/fastcgi.conf;
+
+		# Either use a FPM socket...
+		fastcgi_pass unix:/usr/local/var/run/php-fpm.socket;
+
+		# ... or an address to bind to.
+		# fastcgi_pass 127.0.0.1:9000;
+	}
+}
+</code></pre>
+<h2><a id="using-internet-information-services-iis" class="anchor" href="#using-internet-information-services-iis">Using Internet Information Services (IIS)</a></h2>
+<p>IIS Is a Microsoft-supplied product which manages many internet services—one of them being HTTPD—that comes standard on most Windows machines.</p>
+<h3><a id="obtaining-iis" class="anchor" href="#obtaining-iis">Obtaining IIS</a></h3>
+<p>To install IIS under Windows you need to go to "Add/Remove Programs" in your control panel. After entering the "Add/Remove Programs" window, click "Turn Windows features on or off" and locate the following:</p>
+<ul>
+<li>Internet Information Services</li>
+<li>Internet Information Services Hostable Web Core</li>
+</ul>
+<p>For a quick setup, check both. If you want to remove specific features, you can expand "Intenernet Information Services" and remove unwanted features.</p>
+<p>Once this is done you can now locate IIS within your Start menu or find it through search by typing "IIS".</p>
+<h3><a id="preparations" class="anchor" href="#preparations">Preparations</a></h3>
+<p>To make IIS work well with li3's pretty URL system, install the URL Rewrite extension located on the <a href="http://www.iis.net/download/URLRewrite">iis.net website</a> and follow the proper installation instructions located there.</p>
+<p>Next, follow the setup instructions for <a href="http://php.iis.net/">PHP on IIS</a> for either <a href="http://learn.iis.net/page.aspx/247/using-fastcgi-to-host-php-applications-on-iis-60/">IIS 6.0</a> or <a href="http://learn.iis.net/page.aspx/246/using-fastcgi-to-host-php-applications-on-iis-7/">IIS 7.0</a>.</p>
+<p>Setup a site by right clicking "Sites" and click "Add Web Site"</p>
+<ol>
+<li>Enter your website name.</li>
+<li>Enter the physical path to your application's webroot directory (<em>\path\to\app\webroot</em>).</li>
+<li><em>Optional:</em> If your content is in your home directory, click "Connect As" and click "Specific User". From there enter your Windows login details, as this will allow IIS to have proper access to the application.</li>
+<li>Enter the desired port.</li>
+<li>Click "OK".</li>
+</ol>
+<h3><a id="adding-rewrite-rules-to-iis" class="anchor" href="#adding-rewrite-rules-to-iis">Adding Rewrite Rules to IIS</a></h3>
+<ol>
+<li>Locate your site in the "Sites" tree and click it.</li>
+<li>Locate the URL Rewrite icon from the extension installed earlier.</li>
+<li>On the right hand side under "Inbound Rules" click "Import Rules"</li>
+<li>Click the ellipsis (...) next to the field box and locate the <code>.htaccess</code> file within your <code>\path\to\app\webroot\</code> directory and select it.</li>
+<li>Click "Import".</li>
+<li>On the right hand side, click "Apply".</li>
+</ol>
+<p>Your li3 application should now be accessible via IIS.</p>
+<div class="note note-info">
+	Tested with IIS7 (which is shipped with Windows 7).
+</div>
+<h2><a id="on-lighty" class="anchor" href="#on-lighty">On Lighty</a></h2>
+<p>This quick guide is meant to help Lighty users get a development setup running in order to create li3 apps served up by Lighttpd. Lighttpd is a web server designed and optimized for high-performance production environments. It has a small memory footprint, yet contains a rich feature set. If you're planning on using li3 and Lighttpd together, this guide is for you.</p>
+<h3><a id="running-lighty" class="anchor" href="#running-lighty">Running Lighty</a></h3>
+<p>You can download a copy of Lighty on the <a href="http://www.lighttpd.net/download/">official website</a>. Once downloaded, follow the instructions to get a running instance.</p>
+<p>Installation details should be found in the <code>INSTALL</code> file packaged with the downloaded archive. Online installation tips can also be found on <a href="http://redmine.lighttpd.net/projects/lighttpd/wiki/InstallFromSource">the Lighttpd website</a>.</p>
+<h3><a id="configuration" class="anchor" href="#configuration">Configuration</a></h3>
+<p>Let us assume for this example that you're developing locally and would like your app to be accessible at <code>http://lithium.local/li3</code>.</p>
+<p>First, enable <code>mod_magnet</code> in your <code>lighttpd.conf</code>.</p>
+<pre><code class="language-lighty">server.modules += ( "mod_magnet" )
+</code></pre>
+<p>Then, save the following script in a file named <code>li3.lua</code>, preferably somewhere near your <code>lighttpd.conf</code>.</p>
+<pre><code class="language-lighty">	-- Helper function
+	function file_exists(path)
+	  local attr = lighty.stat(path)
+	  if (attr) then
+	      return true
+	  else
+	      return false
+	  end
+	end
+	function removePrefix(str, prefix)
+	  return str:sub(1,#prefix+1) == prefix.."/" and str:sub(#prefix+2)
+	end
+
+	--[[
+	  Prefix without the trailing slash.
+	  If you are _not_ serving out of a subfolder, leave `prefix` empty.
+	--]]
+	local prefix = '/li3'
+
+	-- The magic ;)
+	if (not file_exists(lighty.env["physical.path"])) then
+	    -- File still missing: pass it to the fastCGI backend.
+	    request_uri = removePrefix(lighty.env["uri.path"], prefix)
+	    if request_uri then
+	      lighty.env["uri.path"]          = prefix .. "/index.php"
+	      local uriquery = lighty.env["uri.query"] or ""
+	      lighty.env["uri.query"] = uriquery .. (uriquery ~= "" and "&amp;" or "") .. "url=" .. request_uri
+	      lighty.env["physical.rel-path"] = lighty.env["uri.path"]
+	      lighty.env["request.orig-uri"]  = lighty.env["request.uri"]
+	      lighty.env["physical.path"]     = lighty.env["physical.doc-root"] .. lighty.env["physical.rel-path"]
+	    end
+	end
+	-- Fallthrough will put it back into the lighty request loop..
+	-- That means we get the 304 handling for free. ;)
+</code></pre>
+<p>Finally, in your <code>lighttpd.conf</code>, add the following conditional:</p>
+<pre><code class="language-lighty">	$HTTP["host"] =~ "lithium.local" {
+		server.document-root = "/path/to/app/webroot/"
+		magnet.attract-physical-path-to = ( "/path/to/li3.lua" )
+	}
+</code></pre>
+<p>You'll probably need to add a line item in your <code>/etc/hosts</code> file as well:</p>
+<pre><code class="language-text">127.0.0.1 lithium.local
+</code></pre>
+<p>Restart your lighttpd process, and you're done!</p>
+<h2><a id="using-caddy" class="anchor" href="#using-caddy">Using Caddy</a></h2>
+<p>Caddy is a new HTTP/2 web server with automatic HTTPS written in Go. It is pretty fast and easy to learn. You can get a quick start reading the <a href="https://caddyserver.com/docs/getting-started">Getting Started</a> chapter from the <a href="https://caddyserver.com/docs">documentation</a>.</p>
+<p>To make use of Caddy and be able to start the Caddy Server with the command <code>caddy</code> there has to be a Caddyfile present. This file resides in the root directory of the application.</p>
+<p>The following example file is typically stored at <code>/path/to/app</code> with the name <code>Caddyfile</code>.</p>
+<pre><code class="language-nginx">localhost:2020
+
+gzip
+
+root webroot
+fastcgi / localhost:9000 php
+
+log resources/tmp/logs/access.log
+errors resources/tmp/logs/error.log
+
+rewrite / {
+	if {file} not favicon.ico
+	to {path} {path}/ /index.php?url={query}
+}
+</code></pre>
+<p>If you want to run Caddy with different plugins, check their documentation for a list of all possible directives.</p>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

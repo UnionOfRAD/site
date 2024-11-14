@@ -1,0 +1,1255 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\data\source\MongoDb – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.3.x/lithium/data" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">data</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.3.x/lithium/data/source" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">source</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">MongoDb</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.3.x/lithium/data/source" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::enabled()">enabled()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::__construct()">__construct()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::_init()">_init()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::__destruct()">__destruct()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::configureClass()">configureClass()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::connect()">connect()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::disconnect()">disconnect()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::sources()">sources()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::describe()">describe()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::name()">name()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::__call()">__call()</a>												<li class="method public deprecated">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::respondsTo()">respondsTo()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::schema()">schema()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::create()">create()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::_saveFile()">_saveFile()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::read()">read()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::_group()">_group()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::update()">update()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::delete()">delete()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::_deleteFile()">_deleteFile()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::_ok()">_ok()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::calculation()">calculation()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::relationship()">relationship()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::group()">group()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::conditions()">conditions()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::_conditions()">_conditions()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::_isMongoCode()">_isMongoCode()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::_operators()">_operators()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::fields()">fields()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::limit()">limit()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::order()">order()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::_checkConnection()">_checkConnection()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::relationFieldName()">relationFieldName()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/Source::isConnected()">isConnected()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/Source::methods()">methods()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/Source::applyStrategy()">applyStrategy()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::__set_state()">__set_state()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::invokeMethod()">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_instance()">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_stop()">_stop()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_parents()">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::applyFilter()">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_filter()">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::$server">$server</a>												<li class="property public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::$connection">$connection</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::$_classes">$_classes</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::$_operators">$_operators</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::$_boolean">$_boolean</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::$_schema">$_schema</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::$_autoConfig">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/Source::$_isConnected">$_isConnected</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/Source::$_cachedMethods">$_cachedMethods</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::$_config">$_config</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::$_parents">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::$_methodFilters">$_methodFilters</a>							</ul>
+								<h3 class="h-gamma">Constants</h3>
+			<ul>
+												<li class="constant ">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::DEFAULT_HOST">DEFAULT_HOST</a>												<li class="constant ">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::DEFAULT_PORT">DEFAULT_PORT</a>							</ul>
+			</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.3.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.3.x/lithium/data" class="symbol-segment">data</a>\<a href="/docs/api/lithium/1.3.x/lithium/data/source" class="symbol-segment">source</a>\MongoDb		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.3.x/lithium/data/Source" class="extends__symbol">lithium\data\Source</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>A data source adapter which allows you to connect to the MongoDB database engine. MongoDB is an
+Open Source distributed document database which bridges the gap between key/value stores and
+relational databases.</p>
+					</div>
+				
+									<div class="description">
+						<p>Rather than operating on records and record sets, queries against MongoDB will return nested sets
+of <code>Document</code> objects. A <code>Document</code>'s fields can contain both simple and complex data types
+(i.e. arrays) including other <code>Document</code> objects.</p>
+<p>After installing MongoDB, you can connect to it as follows:</p>
+<pre><code class="language-php">// config/bootstrap/connections.php:
+Connections::add('default', ['type' =&gt; 'MongoDb', 'database' =&gt; 'myDb']);
+</code></pre>
+<p>By default, it will attempt to connect to a Mongo instance running on <code>localhost</code> on port</p>
+<ol>
+<li>See <code>__construct()</code> for details on the accepted configuration settings.</li>
+</ol>
+<p>This adapter is officially supported on PHP 5, where it simply needs the <code>mongo</code>
+extension. Usage on top of PHP 7 is unofficially supported by using the new <code>mongodb</code>
+extension in conjunction with a compatibility layer (i.e. <code>mongo-php-adapter</code>).</p>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="/docs/api/lithium/1.3.x/lithium/data/entity/Document">lithium\data\entity\Document</a>									<li><a href="/docs/api/lithium/1.3.x/lithium/data/Connections::add()">lithium\data\Connections::add()</a>									<li><a href="/docs/api/lithium/1.3.x/lithium/data/source/MongoDb::__construct()">lithium\data\source\MongoDb::__construct()</a>								</ul>
+			</section>
+			
+						<section id="links">
+				<h3 class="h-beta">Links</h3>
+				<ul class="links">
+									<li><a href="https://pecl.php.net/package/mongo" target="new">https://pecl.php.net/package/mongo</a>									<li><a href="http://www.mongodb.org/" target="new">http://www.mongodb.org/</a>									<li><a href="https://github.com/alcaeus/mongo-php-adapter" target="new">https://github.com/alcaeus/mongo-php-adapter</a>								</ul>
+			</section>
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class MongoDb extends \lithium\data\Source {
+
+	/**
+	 * The default host used to connect to the server.
+	 */
+	const DEFAULT_HOST = &#039;localhost&#039;;
+
+	/**
+	 * The default port used to connect to the server.
+	 */
+	const DEFAULT_PORT = 27017;
+
+	/**
+	 * The Mongo class instance.
+	 *
+	 * @var object
+	 */
+	public $server = null;
+
+	/**
+	 * The MongoDB object instance.
+	 *
+	 * @var object
+	 */
+	public $connection = null;
+
+	/**
+	 * Classes used by this class.
+	 *
+	 * @var array
+	 */
+	protected $_classes = [
+		&#039;entity&#039;       =&gt; &#039;lithium\data\entity\Document&#039;,
+		&#039;set&#039;          =&gt; &#039;lithium\data\collection\DocumentSet&#039;,
+		&#039;result&#039;       =&gt; &#039;lithium\data\source\mongo_db\Result&#039;,
+		&#039;schema&#039;       =&gt; &#039;lithium\data\source\mongo_db\Schema&#039;,
+		&#039;exporter&#039;     =&gt; &#039;lithium\data\source\mongo_db\Exporter&#039;,
+		&#039;relationship&#039; =&gt; &#039;lithium\data\model\Relationship&#039;,
+		&#039;server&#039;       =&gt; &#039;MongoClient&#039;
+	];
+
+	/**
+	 * Map of typical SQL-like operators to their MongoDB equivalents.
+	 *
+	 * @var array Keys are SQL-like operators, value is the MongoDB equivalent.
+	 */
+	protected $_operators = [
+		&#039;&lt;&#039;   =&gt; &#039;$lt&#039;,
+		&#039;&gt;&#039;   =&gt; &#039;$gt&#039;,
+		&#039;&lt;=&#039;  =&gt; &#039;$lte&#039;,
+		&#039;&gt;=&#039;  =&gt; &#039;$gte&#039;,
+		&#039;!=&#039;  =&gt; [&#039;single&#039; =&gt; &#039;$ne&#039;, &#039;multiple&#039; =&gt; &#039;$nin&#039;],
+		&#039;&lt;&gt;&#039;  =&gt; [&#039;single&#039; =&gt; &#039;$ne&#039;, &#039;multiple&#039; =&gt; &#039;$nin&#039;],
+		&#039;or&#039;  =&gt; &#039;$or&#039;,
+		&#039;||&#039;  =&gt; &#039;$or&#039;,
+		&#039;not&#039; =&gt; &#039;$not&#039;,
+		&#039;!&#039;   =&gt; &#039;$not&#039;,
+		&#039;and&#039; =&gt; &#039;$and&#039;,
+		&#039;&amp;&amp;&#039;  =&gt; &#039;$and&#039;,
+		&#039;nor&#039; =&gt; &#039;$nor&#039;
+	];
+
+	/**
+	 * List of comparison operators to use when performing boolean logic in a query.
+	 *
+	 * @var array
+	 */
+	protected $_boolean = [&#039;&amp;&amp;&#039;, &#039;||&#039;, &#039;and&#039;, &#039;$and&#039;, &#039;or&#039;, &#039;$or&#039;, &#039;nor&#039;, &#039;$nor&#039;];
+
+	/**
+	 * A closure or anonymous function which receives an instance of this class, a
+	 * collection name and associated meta information, and returns an array defining the
+	 * schema for an associated model, where the keys are field names, and the values are
+	 * arrays defining the type information for each field. At a minimum, type arrays
+	 * must contain a `&#039;type&#039;` key. For more information on schema definitions see the
+	 * `$_schema` property of the `Model` class.
+	 *
+	 * This example shows how to implement a schema callback in your database connection
+	 * configuration that fetches and returns the schema data. It defines an optional
+	 * MongoDB convention in which the schema for each individual collection is stored
+	 * in a `schemas` collection, where each document contains the name of a collection,
+	 * along with a `&#039;data&#039;` key, which contains the schema for that collection.
+	 *
+	 * ```
+	 * Connections::add(&#039;default&#039;, [
+	 *  &#039;type&#039; =&gt; &#039;MongoDb&#039;,
+	 *  &#039;host&#039; =&gt; &#039;localhost&#039;,
+	 *  &#039;database&#039; =&gt; &#039;app&#039;,
+	 *  &#039;schema&#039; =&gt; function($db, $collection, $meta) {
+	 *      $result = $db-&gt;connection-&gt;schemas-&gt;findOne(compact(&#039;collection&#039;));
+	 *      return $result ? $result[&#039;data&#039;] : [];
+	 *  }
+	 * ]);
+	 * ```
+	 *
+	 * A complete schema defintion looks like:
+	 * ```
+	 * [
+	 *     &#039;_id&#039;  =&gt; [&#039;type&#039; =&gt; &#039;id&#039;],
+	 *     &#039;name&#039; =&gt; [&#039;type&#039; =&gt; &#039;string&#039;, &#039;default&#039; =&gt; &#039;Moe&#039;, &#039;null&#039; =&gt; false],
+	 *     &#039;sign&#039; =&gt; [&#039;type&#039; =&gt; &#039;string&#039;, &#039;default&#039; =&gt; &#039;bar&#039;, &#039;null&#039; =&gt; false],
+	 *     &#039;age&#039;  =&gt; [&#039;type&#039; =&gt; &#039;integer&#039;, &#039;default&#039; =&gt; 0, &#039;null&#039; =&gt; false]
+	 * ];
+	 * ```
+	 *
+	 * The tyes in the schema map to database native type like this:
+	 * ```
+	 *  id      =&gt; MongoId
+	 *  date    =&gt; MongoDate
+	 *  regex   =&gt; MongoRegex
+	 *  integer =&gt; integer
+	 *  float   =&gt; float
+	 *  boolean =&gt; boolean
+	 *  code    =&gt; MongoCode
+	 *  binary  =&gt; MongoBinData
+	 * ```
+	 *
+	 * @see lithium\data\Model::$_schema
+	 * @var Closure|null
+	 */
+	protected $_schema = null;
+
+	/**
+	 * List of configuration keys which will be automatically assigned to their corresponding
+	 * protected class properties.
+	 *
+	 * @var array
+	 */
+	protected $_autoConfig = [&#039;schema&#039;, &#039;classes&#039; =&gt; &#039;merge&#039;];
+
+	/**
+	 * With no parameter, checks to see if adapter&#039;s dependencies are installed. With a
+	 * parameter, queries for a specific supported feature.
+	 *
+	 * A compatibility layer cannot be detected via `extension_loaded()`, thus we check
+	 * for the existence of one of the legacy classes to determine if this adapter can be
+	 * enabled at all.
+	 *
+	 * @param string $feature Test for support for a specific feature, i.e. `&quot;transactions&quot;` or
+	 *               `&quot;arrays&quot;`.
+	 * @return boolean Returns `true` if the particular feature (or if MongoDB) support is enabled,
+	 *         otherwise `false`.
+	 */
+	public static function enabled($feature = null) {
+		if (!$feature) {
+			return class_exists(&#039;MongoClient&#039;);
+		}
+		$features = [
+			&#039;arrays&#039; =&gt; true,
+			&#039;transactions&#039; =&gt; false,
+			&#039;booleans&#039; =&gt; true,
+			&#039;relationships&#039; =&gt; true,
+			&#039;schema&#039; =&gt; false,
+			&#039;sources&#039; =&gt; true
+		];
+		return isset($features[$feature]) ? $features[$feature] : null;
+	}
+
+	/**
+	 * Constructor.
+	 *
+	 * @see lithium\data\Connections::add()
+	 * @see lithium\data\source\MongoDb::$_schema
+	 * @link http://php.net/mongo.construct.php PHP Manual: Mongo::__construct()
+	 * @param array $config Configuration options required to connect to the database, including:
+	 *        - `&#039;host&#039;` _string|array_: A string in the form of `&#039;&lt;host&gt;&#039;`, `&#039;&lt;host&gt;:&lt;port&gt;&#039;` or
+	 *          `&#039;:&lt;port&gt;&#039;` indicating the host and/or port to connect to. When one or both are
+	 *          not provided uses general server defaults (if possible retrieved from the client
+	 *          implementation).
+	 *          Use the array format for multiple hosts:
+	 *          `array(&#039;167.221.1.5:11222&#039;, &#039;167.221.1.6&#039;)`
+	 *        - `&#039;database&#039;` _string_: The name of the database to connect to. Defaults to `null`.
+	 *        - `&#039;timeout&#039;` _integer_: The number of milliseconds a connection attempt will wait
+	 *          before timing out and throwing an exception. Defaults to `100`.
+	 *        - `&#039;schema&#039;` _\Closure_: A closure or anonymous function which returns the schema
+	 *          information for a model class. See the `$_schema` property for more information.
+	 *        - `&#039;gridPrefix&#039;` _string_: The default prefix for MongoDB&#039;s `chunks` and `files`
+	 *          collections. Defaults to `&#039;fs&#039;`.
+	 *        - `&#039;replicaSet&#039;` _string_: See the documentation for `Mongo::__construct()`. Defaults
+	 *          to `false`.
+	 *        - `&#039;readPreference&#039;` _mixed_: May either be a single value such as Mongo::RP_NEAREST,
+	 *          or an array containing a read preference and a tag set such as:
+	 *          (Mongo::RP_SECONDARY_PREFERRED, [&#039;dc&#039; =&gt; &#039;east] See the documentation for
+	 *          `Mongo::setReadPreference()`. Defaults to null.
+	 *          Typically, these parameters are set in `Connections::add()`, when adding the
+	 *          adapter to the list of active connections.
+	 *
+	 *        Disables auto-connect, which is by default enabled in `Source`. Instead before
+	 *        each query execution the connection is checked and if needed (re-)established.
+	 * @return void
+	 */
+	public function __construct(array $config = []) {
+		if (class_exists($server = $this-&gt;_classes[&#039;server&#039;], false)) {
+			$defaultHost = $server::DEFAULT_HOST . &#039;:&#039; . $server::DEFAULT_PORT;
+		} else {
+			$defaultHost = static::DEFAULT_HOST . &#039;:&#039; . static::DEFAULT_PORT;
+		}
+		$defaults = [
+			&#039;host&#039; =&gt; $defaultHost,
+			&#039;login&#039;      =&gt; null,
+			&#039;password&#039;   =&gt; null,
+			&#039;database&#039;   =&gt; null,
+			&#039;timeout&#039;    =&gt; 100,
+			&#039;replicaSet&#039; =&gt; false,
+			&#039;schema&#039;     =&gt; null,
+			&#039;gridPrefix&#039; =&gt; &#039;fs&#039;,
+			&#039;w&#039;          =&gt; 1,
+			&#039;wTimeoutMS&#039; =&gt; 10000,
+			&#039;readPreference&#039; =&gt; null,
+			&#039;autoConnect&#039; =&gt; false,
+			&#039;dsn&#039; =&gt; null
+		];
+		parent::__construct($config + $defaults);
+	}
+
+	/**
+	 * Initializer. Adds operator handlers which will later allow to correctly cast any
+	 * values. Constructs a DSN from configuration.
+	 *
+	 * @see lithium\data\source\MongoDb::$_operators
+	 * @see lithium\data\source\MongoDb::_operators()
+	 * @return void
+	 */
+	protected function _init() {
+		$hosts = [];
+		foreach ((array) $this-&gt;_config[&#039;host&#039;] as $host) {
+			$host = HostString::parse($host) + [
+				&#039;host&#039; =&gt; static::DEFAULT_HOST,
+				&#039;port&#039; =&gt; static::DEFAULT_PORT
+			];
+			$hosts[] = &quot;{$host[&#039;host&#039;]}:{$host[&#039;port&#039;]}&quot;;
+		}
+		if ($this-&gt;_config[&#039;login&#039;]) {
+			$this-&gt;_config[&#039;dsn&#039;] = sprintf(
+				&#039;mongodb://%s:%s@%s/%s&#039;,
+				$this-&gt;_config[&#039;login&#039;],
+				$this-&gt;_config[&#039;password&#039;],
+				implode(&#039;,&#039;, $hosts),
+				$this-&gt;_config[&#039;database&#039;]
+			);
+		} else {
+			$this-&gt;_config[&#039;dsn&#039;] = sprintf(
+				&#039;mongodb://%s&#039;,
+				implode(&#039;,&#039;, $hosts)
+			);
+		}
+		parent::_init();
+
+		$this-&gt;_operators += [
+			&#039;like&#039; =&gt; function($key, $value) {
+				return new MongoRegex($value);
+			},
+			&#039;$exists&#039; =&gt; function($key, $value) {
+				return [&#039;$exists&#039; =&gt; (boolean) $value];
+			},
+			&#039;$type&#039; =&gt; function($key, $value) {
+				return [&#039;$type&#039; =&gt; (integer) $value];
+			},
+			&#039;$mod&#039; =&gt; function($key, $value) {
+				$value = (array) $value;
+				return [&#039;$mod&#039; =&gt; [current($value), next($value) ?: 0]];
+			},
+			&#039;$size&#039; =&gt; function($key, $value) {
+				return [&#039;$size&#039; =&gt; (integer) $value];
+			},
+			&#039;$elemMatch&#039; =&gt; function($operator, $values, $options = []) {
+				$options += [
+					&#039;castOpts&#039; =&gt; [],
+					&#039;field&#039; =&gt; &#039;&#039;
+				];
+				$options[&#039;castOpts&#039;] += [&#039;pathKey&#039; =&gt; $options[&#039;field&#039;]];
+				$values = (array) $values;
+
+				if (empty($options[&#039;castOpts&#039;][&#039;schema&#039;])) {
+					return [&#039;$elemMatch&#039; =&gt; $values];
+				}
+				foreach ($values as $key =&gt; &amp;$value) {
+					$value = $options[&#039;castOpts&#039;][&#039;schema&#039;]-&gt;cast(
+						null, $key, $value, $options[&#039;castOpts&#039;]
+					);
+				}
+				return [&#039;$elemMatch&#039; =&gt; $values];
+			}
+		];
+	}
+
+	/**
+	 * Destructor. Ensures that the server connection is closed and resources are freed when
+	 * the adapter instance is destroyed.
+	 *
+	 * @return void
+	 */
+	public function __destruct() {
+		if ($this-&gt;_isConnected) {
+			$this-&gt;disconnect();
+		}
+	}
+
+	/**
+	 * Configures a model class by overriding the default dependencies for `&#039;set&#039;` and
+	 * `&#039;entity&#039;` , and sets the primary key to `&#039;_id&#039;`, in keeping with Mongo&#039;s conventions.
+	 *
+	 * @see lithium\data\Model::$_meta
+	 * @see lithium\data\Model::$_classes
+	 * @param string $class The fully-namespaced model class name to be configured.
+	 * @return Returns an array containing keys `&#039;classes&#039;` and `&#039;meta&#039;`, which will be merged with
+	 *         their respective properties in `Model`.
+	 */
+	public function configureClass($class) {
+		return [
+			&#039;classes&#039; =&gt; $this-&gt;_classes,
+			&#039;schema&#039; =&gt; [],
+			&#039;meta&#039; =&gt; [&#039;key&#039; =&gt; &#039;_id&#039;, &#039;locked&#039; =&gt; false]
+		];
+	}
+
+	/**
+	 * Connects to the Mongo server. Matches up parameters from the constructor to create a Mongo
+	 * database connection.
+	 *
+	 * @see lithium\data\source\MongoDb::__construct()
+	 * @link http://php.net/mongo.construct.php PHP Manual: Mongo::__construct()
+	 * @return boolean Returns `true` the connection attempt was successful, otherwise `false`.
+	 */
+	public function connect() {
+		$server = $this-&gt;_classes[&#039;server&#039;];
+
+		if ($this-&gt;server &amp;&amp; $this-&gt;server-&gt;getConnections() &amp;&amp; $this-&gt;connection) {
+			return $this-&gt;_isConnected = true;
+		}
+		$this-&gt;_isConnected = false;
+
+		$options = [
+			&#039;connect&#039; =&gt; true,
+			&#039;connectTimeoutMS&#039; =&gt; $this-&gt;_config[&#039;timeout&#039;],
+			&#039;replicaSet&#039; =&gt; $this-&gt;_config[&#039;replicaSet&#039;],
+		];
+
+		try {
+			$this-&gt;server = new $server($this-&gt;_config[&#039;dsn&#039;], $options);
+
+			if ($prefs = $this-&gt;_config[&#039;readPreference&#039;]) {
+				$prefs = !is_array($prefs) ? [$prefs, []] : $prefs;
+				$this-&gt;server-&gt;setReadPreference($prefs[0], $prefs[1]);
+			}
+
+			if ($this-&gt;connection = $this-&gt;server-&gt;{$this-&gt;_config[&#039;database&#039;]}) {
+				$this-&gt;_isConnected = true;
+			}
+		} catch (Exception $e) {
+			throw new NetworkException(&quot;Could not connect to the database.&quot;, 503, $e);
+		}
+		return $this-&gt;_isConnected;
+	}
+
+	/**
+	 * Disconnect from the Mongo server.
+	 *
+	 * Don&#039;t call the Mongo-&gt;close() method. The driver documentation states this should not
+	 * be necessary since it auto disconnects when out of scope.
+	 * With version 1.2.7, when using replica sets, close() can cause a segmentation fault.
+	 *
+	 * @return boolean True
+	 */
+	public function disconnect() {
+		if ($this-&gt;server &amp;&amp; $this-&gt;server-&gt;getConnections()) {
+			$this-&gt;_isConnected = false;
+			unset($this-&gt;connection, $this-&gt;server);
+		}
+		return true;
+	}
+
+	/**
+	 * Returns the list of collections in the currently-connected database.
+	 *
+	 * @param string $class The fully-name-spaced class name of the model object making the request.
+	 * @return array Returns an array of objects to which models can connect.
+	 */
+	public function sources($class = null) {
+		$this-&gt;_checkConnection();
+		$conn = $this-&gt;connection;
+		return array_map(function($col) { return $col-&gt;getName(); }, $conn-&gt;listCollections());
+	}
+
+	/**
+	 * Gets the column &#039;schema&#039; for a given MongoDB collection. Only returns a schema if the
+	 * `&#039;schema&#039;` configuration flag has been set in the constructor.
+	 *
+	 * @see lithium\data\source\MongoDb::$_schema
+	 * @param mixed $collection Specifies a collection name for which the schema should be queried.
+	 * @param mixed $fields Any schema data pre-defined by the model.
+	 * @param array $meta Any meta information pre-defined in the model.
+	 * @return array Returns an associative array describing the given collection&#039;s schema.
+	 */
+	public function describe($collection, $fields = [], array $meta = []) {
+		if (!$fields &amp;&amp; ($func = $this-&gt;_schema)) {
+			$fields = $func($this, $collection, $meta);
+		}
+		return Libraries::instance(null, &#039;schema&#039;, compact(&#039;fields&#039;), $this-&gt;_classes);
+	}
+
+	/**
+	 * Quotes identifiers.
+	 *
+	 * MongoDb does not need identifiers quoted, so this method simply returns the identifier.
+	 *
+	 * @param string $name The identifier to quote.
+	 * @return string The quoted identifier.
+	 */
+	public function name($name) {
+		return $name;
+	}
+
+	/**
+	 * A method dispatcher that allows direct calls to native methods in PHP&#039;s `Mongo` object. Read
+	 * more here: http://php.net/manual/class.mongo.php
+	 *
+	 * For example (assuming this instance is stored in `Connections` as `&#039;mongo&#039;`):
+	 * ```
+	 * // Manually repairs a MongoDB instance
+	 * Connections::get(&#039;mongo&#039;)-&gt;repairDB($db); // returns null
+	 * ```
+	 *
+	 * @param string $method The name of native method to call. See the link above for available
+	 *        class methods.
+	 * @param array $params A list of parameters to be passed to the native method.
+	 * @return mixed The return value of the native method specified in `$method`.
+	 */
+	public function __call($method, $params) {
+		if ((!$this-&gt;server) &amp;&amp; !$this-&gt;connect()) {
+			return null;
+		}
+		return call_user_func_array([&amp;$this-&gt;server, $method], $params);
+	}
+
+	/**
+	 * Determines if a given method can be called.
+	 *
+	 * @deprecated
+	 * @param string $method Name of the method.
+	 * @param boolean $internal Provide `true` to perform check from inside the
+	 *                class/object. When `false` checks also for public visibility;
+	 *                defaults to `false`.
+	 * @return boolean Returns `true` if the method can be called, `false` otherwise.
+	 */
+	public function respondsTo($method, $internal = false) {
+		$message  = &#039;`&#039; . __METHOD__ . &#039;()` has been deprecated. &#039;;
+		$message .= &#039;Use `is_callable([$adapter-&gt;server, \&#039;&lt;method&gt;\&#039;])` instead.&#039;;
+		trigger_error($message, E_USER_DEPRECATED);
+
+		$childRespondsTo = is_object($this-&gt;server) &amp;&amp; is_callable([$this-&gt;server, $method]);
+		return parent::respondsTo($method, $internal) || $childRespondsTo;
+	}
+
+	/**
+	 * Normally used in cases where the query is a raw string (as opposed to a `Query` object),
+	 * to database must determine the correct column names from the result resource. Not
+	 * applicable to this data source.
+	 *
+	 * @internal param mixed $query
+	 * @internal param \lithium\data\source\resource $resource
+	 * @internal param object $context
+	 * @return array
+	 */
+	public function schema($query, $resource = null, $context = null) {
+		return [];
+	}
+
+	/**
+	 * Create new document
+	 *
+	 * @param string $query
+	 * @param array $options
+	 * @return boolean
+	 * @filter
+	 */
+	public function create($query, array $options = []) {
+		$this-&gt;_checkConnection();
+
+		$defaults = [
+			&#039;w&#039; =&gt; $this-&gt;_config[&#039;w&#039;],
+			&#039;wTimeoutMS&#039; =&gt; $this-&gt;_config[&#039;wTimeoutMS&#039;],
+			&#039;fsync&#039; =&gt; false
+		];
+		$options += $defaults;
+
+		$params = compact(&#039;query&#039;, &#039;options&#039;);
+
+		return Filters::run($this, __FUNCTION__, $params, function($params) {
+			$exporter = $this-&gt;_classes[&#039;exporter&#039;];
+			$prefix = $this-&gt;_config[&#039;gridPrefix&#039;];
+
+			$query   = $params[&#039;query&#039;];
+			$options = $params[&#039;options&#039;];
+
+			$args    = $query-&gt;export($this, [&#039;keys&#039; =&gt; [&#039;source&#039;, &#039;data&#039;]]);
+			$data    = $exporter::get(&#039;create&#039;, $args[&#039;data&#039;]);
+			$source  = $args[&#039;source&#039;];
+
+			if ($source === &quot;{$prefix}.files&quot; &amp;&amp; isset($data[&#039;create&#039;][&#039;file&#039;])) {
+				$result = [&#039;ok&#039; =&gt; true];
+				$data[&#039;create&#039;][&#039;_id&#039;] = $this-&gt;_saveFile($data[&#039;create&#039;]);
+			} else {
+				$result = $this-&gt;connection-&gt;{$source}-&gt;insert($data[&#039;create&#039;], $options);
+				$result = $this-&gt;_ok($result);
+			}
+
+			if ($result === true || isset($result[&#039;ok&#039;]) &amp;&amp; (boolean) $result[&#039;ok&#039;] === true) {
+				if ($query-&gt;entity()) {
+					$query-&gt;entity()-&gt;sync($data[&#039;create&#039;][&#039;_id&#039;]);
+				}
+				return true;
+			}
+			return false;
+		});
+	}
+
+	protected function _saveFile($data) {
+		$uploadKeys = [&#039;name&#039;, &#039;type&#039;, &#039;tmp_name&#039;, &#039;error&#039;, &#039;size&#039;];
+		$grid = $this-&gt;connection-&gt;getGridFS($this-&gt;_config[&#039;gridPrefix&#039;]);
+		$file = null;
+		$method = null;
+
+		switch (true) {
+			case  (is_array($data[&#039;file&#039;]) &amp;&amp; array_keys($data[&#039;file&#039;]) == $uploadKeys):
+				if (!$data[&#039;file&#039;][&#039;error&#039;] &amp;&amp; is_uploaded_file($data[&#039;file&#039;][&#039;tmp_name&#039;])) {
+					$method = &#039;storeFile&#039;;
+					$file = $data[&#039;file&#039;][&#039;tmp_name&#039;];
+					$data[&#039;filename&#039;] = $data[&#039;file&#039;][&#039;name&#039;];
+				}
+			break;
+			case $data[&#039;file&#039;]:
+				$method = &#039;storeBytes&#039;;
+				$file = $data[&#039;file&#039;];
+			break;
+		}
+
+		if (!$method || !$file) {
+			return;
+		}
+
+		if (isset($data[&#039;_id&#039;])) {
+			$data += (array) get_object_vars($grid-&gt;get($data[&#039;_id&#039;]));
+			$grid-&gt;delete($data[&#039;_id&#039;]);
+		}
+		unset($data[&#039;file&#039;]);
+		return $grid-&gt;{$method}($file, $data);
+	}
+
+	/**
+	 * Read from document
+	 *
+	 * @param string $query
+	 * @param array $options
+	 * @return object
+	 * @filter
+	 */
+	public function read($query, array $options = []) {
+		$this-&gt;_checkConnection();
+
+		$defaults = [&#039;return&#039; =&gt; &#039;resource&#039;];
+		$options += $defaults;
+
+		$params = compact(&#039;query&#039;, &#039;options&#039;);
+
+		return Filters::run($this, __FUNCTION__, $params, function($params) {
+			$prefix = $this-&gt;_config[&#039;gridPrefix&#039;];
+
+			$query = $params[&#039;query&#039;];
+			$options = $params[&#039;options&#039;];
+			$args = $query-&gt;export($this);
+			$source = $args[&#039;source&#039;];
+			$model = $query-&gt;model();
+
+			if ($group = $args[&#039;group&#039;]) {
+				$result = $this-&gt;_group($group, $args, $options);
+				$config = [&#039;class&#039; =&gt; &#039;set&#039;, &#039;defaults&#039; =&gt; false] + compact(&#039;query&#039;) + $result;
+				return $model::create($config[&#039;data&#039;], $config);
+			}
+			$collection = $this-&gt;connection-&gt;{$source};
+
+			if ($source === &quot;{$prefix}.files&quot;) {
+				$collection = $this-&gt;connection-&gt;getGridFS($prefix);
+			}
+			$result = $collection-&gt;find($args[&#039;conditions&#039;], $args[&#039;fields&#039;]);
+
+			if ($query-&gt;calculate()) {
+				return $result;
+			}
+
+			$resource = $result-&gt;sort($args[&#039;order&#039;])-&gt;limit($args[&#039;limit&#039;])-&gt;skip($args[&#039;offset&#039;]);
+			$result = Libraries::instance(null, &#039;result&#039;, compact(&#039;resource&#039;), $this-&gt;_classes);
+			$config = compact(&#039;result&#039;, &#039;query&#039;) + [&#039;class&#039; =&gt; &#039;set&#039;, &#039;defaults&#039; =&gt; false];
+			$collection = $model::create([], $config);
+
+			if (is_object($query) &amp;&amp; $query-&gt;with()) {
+				$model::embed($collection, $query-&gt;with());
+			}
+			return $collection;
+		});
+	}
+
+	protected function _group($group, $args, $options) {
+		$conditions = $args[&#039;conditions&#039;];
+		$group += [&#039;$reduce&#039; =&gt; $args[&#039;reduce&#039;], &#039;initial&#039; =&gt; $args[&#039;initial&#039;]];
+		$command = [&#039;group&#039; =&gt; $group + [&#039;ns&#039; =&gt; $args[&#039;source&#039;], &#039;cond&#039; =&gt; $conditions]];
+
+		$stats = $this-&gt;connection-&gt;command($command);
+		$data = isset($stats[&#039;retval&#039;]) ? $stats[&#039;retval&#039;] : null;
+		unset($stats[&#039;retval&#039;]);
+		return compact(&#039;data&#039;, &#039;stats&#039;);
+	}
+
+	/**
+	 * Update document
+	 *
+	 * @param string $query
+	 * @param array $options
+	 * @return boolean
+	 * @filter
+	 */
+	public function update($query, array $options = []) {
+		$this-&gt;_checkConnection();
+
+		$defaults = [
+			&#039;upsert&#039; =&gt; false,
+			&#039;multiple&#039; =&gt; true,
+			&#039;w&#039; =&gt; $this-&gt;_config[&#039;w&#039;],
+			&#039;wTimeoutMS&#039; =&gt; $this-&gt;_config[&#039;wTimeoutMS&#039;],
+			&#039;fsync&#039; =&gt; false
+		];
+		$options += $defaults;
+
+		$params = compact(&#039;query&#039;, &#039;options&#039;);
+
+		return Filters::run($this, __FUNCTION__, $params, function($params) {
+			$exporter = $this-&gt;_classes[&#039;exporter&#039;];
+			$prefix = $this-&gt;_config[&#039;gridPrefix&#039;];
+
+			$options = $params[&#039;options&#039;];
+			$query  = $params[&#039;query&#039;];
+			$args   = $query-&gt;export($this, [&#039;keys&#039; =&gt; [&#039;conditions&#039;, &#039;source&#039;, &#039;data&#039;]]);
+			$source = $args[&#039;source&#039;];
+			$data   = $args[&#039;data&#039;];
+
+			if ($query-&gt;entity()) {
+				$data = $exporter::get(&#039;update&#039;, $data);
+			}
+
+			if ($source === &quot;{$prefix}.files&quot; &amp;&amp; isset($data[&#039;update&#039;][&#039;file&#039;])) {
+				$args[&#039;data&#039;][&#039;_id&#039;] = $this-&gt;_saveFile($data[&#039;update&#039;]);
+			}
+			$update = $query-&gt;entity() ? $exporter::toCommand($data) : $data;
+
+			if (empty($update)) {
+				return true;
+			}
+			if ($options[&#039;multiple&#039;] &amp;&amp; !preg_grep(&#039;/^\$/&#039;, array_keys($update))) {
+				$update = [&#039;$set&#039; =&gt; $update];
+			}
+			$result = $this-&gt;connection-&gt;{$source}-&gt;update($args[&#039;conditions&#039;], $update, $options);
+
+			if ($this-&gt;_ok($result)) {
+				$query-&gt;entity() ? $query-&gt;entity()-&gt;sync() : null;
+				return true;
+			}
+			return false;
+		});
+	}
+
+	/**
+	 * Delete document
+	 *
+	 * @param string $query
+	 * @param array $options
+	 * @return boolean
+	 * @filter
+	 */
+	public function delete($query, array $options = []) {
+		$this-&gt;_checkConnection();
+
+		$defaults = [
+			&#039;justOne&#039; =&gt; false,
+			&#039;w&#039; =&gt; $this-&gt;_config[&#039;w&#039;],
+			&#039;wTimeoutMS&#039; =&gt; $this-&gt;_config[&#039;wTimeoutMS&#039;],
+			&#039;fsync&#039; =&gt; false
+		];
+		$options = array_intersect_key($options + $defaults, $defaults);
+		$params = compact(&#039;query&#039;, &#039;options&#039;);
+
+		return Filters::run($this, __FUNCTION__, $params, function($params) {
+			$prefix = $this-&gt;_config[&#039;gridPrefix&#039;];
+
+			$query = $params[&#039;query&#039;];
+			$options = $params[&#039;options&#039;];
+			$args = $query-&gt;export($this, [&#039;keys&#039; =&gt; [&#039;source&#039;, &#039;conditions&#039;]]);
+			$source = $args[&#039;source&#039;];
+			$conditions = $args[&#039;conditions&#039;];
+
+			if ($source === &quot;{$prefix}.files&quot;) {
+				$result = $this-&gt;_deleteFile($conditions);
+			} else {
+				$result = $this-&gt;connection-&gt;{$args[&#039;source&#039;]}-&gt;remove($conditions, $options);
+				$result = $this-&gt;_ok($result);
+			}
+			if ($result &amp;&amp; $query-&gt;entity()) {
+				$query-&gt;entity()-&gt;sync(null, [], [&#039;dematerialize&#039; =&gt; true]);
+			}
+			return $result;
+		});
+	}
+
+	protected function _deleteFile($conditions, $options = []) {
+		$_config = $this-&gt;_config;
+		$defaults = [&#039;w&#039; =&gt; $_config[&#039;w&#039;], &#039;wTimeoutMS&#039; =&gt; $_config[&#039;wTimeoutMS&#039;]];
+		$options += $defaults;
+		$prefix = $this-&gt;_config[&#039;gridPrefix&#039;];
+		return $this-&gt;connection-&gt;getGridFS($prefix)-&gt;remove($conditions, $options);
+	}
+
+	/**
+	 * Parse a `MongoCollection::&lt;insert|update|delete&gt;()` response and
+	 * return `true` on success.
+	 *
+	 * @return boolean
+	 */
+	protected function _ok($result) {
+		if (is_bool($result)) {
+			return $result;
+		}
+		return !isset($result[&#039;err&#039;]) || $result[&#039;err&#039;] === null;
+	}
+
+	/**
+	 * Executes calculation-related queries, such as those required for `count`.
+	 *
+	 * @param string $type Only accepts `count`.
+	 * @param mixed $query The query to be executed.
+	 * @param array $options Optional arguments for the `read()` query that will be executed
+	 *        to obtain the calculation result.
+	 * @return integer Result of the calculation.
+	 */
+	public function calculation($type, $query, array $options = []) {
+		$query-&gt;calculate($type);
+
+		switch ($type) {
+			case &#039;count&#039;:
+				return $this-&gt;read($query, $options)-&gt;count();
+		}
+	}
+
+	/**
+	 * Document relationships.
+	 *
+	 * @param string $class
+	 * @param string $type Relationship type, e.g. `belongsTo`.
+	 * @param string $name
+	 * @param array $config
+	 * @return array
+	 */
+	public function relationship($class, $type, $name, array $config = []) {
+		$fieldName = $this-&gt;relationFieldName($type, $name);
+		$config += compact(&#039;name&#039;, &#039;type&#039;, &#039;key&#039;, &#039;fieldName&#039;);
+		$config[&#039;from&#039;] = $class;
+
+		return Libraries::instance(null, &#039;relationship&#039;, $config + [
+			&#039;strategy&#039; =&gt; function($rel) use ($config, $class, $name, $type) {
+				if (isset($config[&#039;key&#039;])) {
+					return [];
+				}
+				$link = null;
+				$hasLink = isset($config[&#039;link&#039;]);
+
+				$result = [];
+				$to = $rel-&gt;to();
+				$local = $class::key();
+				$className = $class::meta(&#039;name&#039;);
+
+				$keys = [
+					[$class, $name],
+					[$class, Inflector::singularize($name)],
+					[$to, Inflector::singularize($className)],
+					[$to, $className]
+				];
+				foreach ($keys as $map) {
+					list($on, $key) = $map;
+					$key = lcfirst(Inflector::camelize($key));
+
+					if (!$on::hasField($key)) {
+						continue;
+					}
+					$join = ($on === $class) ? [$key =&gt; $on::key()] : [$local =&gt; $key];
+					$result[&#039;key&#039;] = $join;
+
+					if (isset($config[&#039;link&#039;])) {
+						return $result;
+					}
+					$fieldType = $on::schema()-&gt;type($key);
+
+					if ($fieldType === &#039;id&#039; || $fieldType === &#039;MongoId&#039;) {
+						$isArray = $on::schema()-&gt;is(&#039;array&#039;, $key);
+						$link = $isArray ? $rel::LINK_KEY_LIST : $rel::LINK_KEY;
+						break;
+					}
+				}
+				if (!$link &amp;&amp; !$hasLink) {
+					$link = ($type === &quot;belongsTo&quot;) ? $rel::LINK_CONTAINED : $rel::LINK_EMBEDDED;
+				}
+				return $result + ($hasLink ? [] : compact(&#039;link&#039;));
+			}
+		], $this-&gt;_classes);
+	}
+
+	/**
+	 * Formats `group` clauses for MongoDB.
+	 *
+	 * @param string|array $group The group clause.
+	 * @param object $context
+	 * @return array Formatted `group` clause.
+	 */
+	public function group($group, $context) {
+		if (!$group) {
+			return;
+		}
+		if (is_string($group) &amp;&amp; strpos($group, &#039;function&#039;) === 0) {
+			return [&#039;$keyf&#039; =&gt; new MongoCode($group)];
+		}
+		$group = (array) $group;
+
+		foreach ($group as $i =&gt; $field) {
+			if (is_int($i)) {
+				$group[$field] = true;
+				unset($group[$i]);
+			}
+		}
+		return [&#039;key&#039; =&gt; $group];
+	}
+
+	/**
+	 * Maps incoming conditions with their corresponding MongoDB-native operators.
+	 *
+	 * @param array $conditions Array of conditions
+	 * @param object $context Context with which this method was called; currently
+	 *        inspects the return value of `$context-&gt;type()`.
+	 * @return array Transformed conditions
+	 */
+	public function conditions($conditions, $context) {
+		if (!$conditions) {
+			return [];
+		}
+		if ($code = $this-&gt;_isMongoCode($conditions)) {
+			return $code;
+		}
+		$schema = null;
+		$model = null;
+
+		if ($context) {
+			$schema = $context-&gt;schema();
+			$model = $context-&gt;model();
+		}
+		return $this-&gt;_conditions($conditions, $model, $schema, $context);
+	}
+
+	/**
+	 * Protected helper method used to format conditions.
+	 *
+	 * @todo Catch Document/Array objects used in conditions and extract their values.
+	 * @param array $conditions The conditions array to be processed.
+	 * @param string $model The name of the model class used in the query.
+	 * @param object $schema The object containing the schema definition.
+	 * @param object $context The `Query` object.
+	 * @return array Processed query conditions.
+	 */
+	protected function _conditions(array $conditions, $model, $schema, $context) {
+		$ops = $this-&gt;_operators;
+		$castOpts = [
+			&#039;first&#039; =&gt; true, &#039;database&#039; =&gt; $this, &#039;wrap&#039; =&gt; false, &#039;asContent&#039; =&gt; true
+		];
+
+		$cast = function($key, $value) use (&amp;$schema, &amp;$castOpts) {
+			return $schema ? $schema-&gt;cast(null, $key, $value, $castOpts) : $value;
+		};
+
+		foreach ($conditions as $key =&gt; $value) {
+			if (in_array($key, $this-&gt;_boolean)) {
+				$operator = isset($ops[$key]) ? $ops[$key] : $key;
+
+				foreach ($value as $i =&gt; $compare) {
+					$value[$i] = $this-&gt;_conditions($compare, $model, $schema, $context);
+				}
+				unset($conditions[$key]);
+				$conditions[$operator] = $value;
+				continue;
+			}
+			if (is_object($value)) {
+				continue;
+			}
+			if (!is_array($value)) {
+				$conditions[$key] = $cast($key, $value);
+				continue;
+			}
+			$current = key($value);
+
+			if (!isset($ops[$current]) &amp;&amp; $current[0] !== &#039;$&#039;) {
+				$conditions[$key] = [&#039;$in&#039; =&gt; $cast($key, $value)];
+				continue;
+			}
+			$conditions[$key] = $this-&gt;_operators($key, $value, $schema);
+		}
+		return $conditions;
+	}
+
+	protected function _isMongoCode($conditions) {
+		if (is_string($conditions)) {
+			$conditions = new MongoCode($conditions);
+		}
+		if ($conditions instanceof MongoCode) {
+			return [&#039;$where&#039; =&gt; $conditions];
+		}
+	}
+
+	protected function _operators($field, $operators, $schema) {
+		$castOpts = compact(&#039;schema&#039;);
+		$castOpts += [&#039;first&#039; =&gt; true, &#039;database&#039; =&gt; $this, &#039;wrap&#039; =&gt; false];
+
+		$cast = function($key, $value) use (&amp;$schema, &amp;$castOpts) {
+			return $schema ? $schema-&gt;cast(null, $key, $value, $castOpts) : $value;
+		};
+
+		foreach ($operators as $key =&gt; $value) {
+			if (!isset($this-&gt;_operators[$key])) {
+				$operators[$key] = $cast($field, $value);
+				continue;
+			}
+			$operator = $this-&gt;_operators[$key];
+
+			if (is_array($operator)) {
+				$operator = $operator[is_array($value) ? &#039;multiple&#039; : &#039;single&#039;];
+			}
+			if (is_callable($operator)) {
+				return $operator($key, $value, compact(&#039;castOpts&#039;, &#039;field&#039;));
+			}
+			unset($operators[$key]);
+			$operators[$operator] = $cast($field, $value);
+		}
+		return $operators;
+	}
+
+	/**
+	 * Return formatted identifiers for fields.
+	 *
+	 * MongoDB does nt require field identifer escaping; as a result, this method is not
+	 * implemented.
+	 *
+	 * @param array $fields Fields to be parsed
+	 * @param object $context
+	 * @return array Parsed fields array
+	 */
+	public function fields($fields, $context) {
+		return $fields ?: [];
+	}
+
+	/**
+	 * Return formatted clause for limit.
+	 *
+	 * MongoDB doesn&#039;t require limit identifer formatting; as a result, this method is not
+	 * implemented.
+	 *
+	 * @param mixed $limit The `limit` clause to be formatted.
+	 * @param object $context The `Query` object instance.
+	 * @return mixed Formatted `limit` clause.
+	 */
+	public function limit($limit, $context) {
+		return $limit ?: 0;
+	}
+
+	/**
+	 * Return formatted clause for order.
+	 *
+	 * @param mixed $order The `order` clause to be formatted
+	 * @param object $context
+	 * @return mixed Formatted `order` clause.
+	 */
+	public function order($order, $context) {
+		if (!$order) {
+			return [];
+		}
+		if (is_string($order)) {
+			return [$order =&gt; 1];
+		}
+		if (!is_array($order)) {
+			return [];
+		}
+		foreach ($order as $key =&gt; $value) {
+			if (!is_string($key)) {
+				unset($order[$key]);
+				$order[$value] = 1;
+				continue;
+			}
+			if (is_string($value)) {
+				$order[$key] = strtolower($value) === &#039;asc&#039; ? 1 : -1;
+			}
+		}
+		return $order;
+	}
+
+	protected function _checkConnection() {
+		if (!$this-&gt;_isConnected &amp;&amp; !$this-&gt;connect()) {
+			throw new NetworkException(&quot;Could not connect to the database.&quot;);
+		}
+	}
+
+	/**
+	 * Returns the field name of a relation name (camelBack).
+	 *
+	 * @param string The type of the relation.
+	 * @param string The name of the relation.
+	 * @return string
+	 */
+	public function relationFieldName($type, $name) {
+		$fieldName = Inflector::camelize($name, false);
+		if (preg_match(&#039;/Many$/&#039;, $type)) {
+			$fieldName = Inflector::pluralize($fieldName);
+		} else {
+			$fieldName = Inflector::singularize($fieldName);
+		}
+		return $fieldName;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

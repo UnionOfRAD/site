@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Requirements – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../docs.html" class="active">Documentation</a><a href="../../../../../versions.html">Versions</a><a href="../../../../../present.html">Presentations</a><a href="../../../../../support.html">Community</a><a href="../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../installation.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Installation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Requirements</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="../common-tasks.html" class="">Common Tasks</a><ul><li><a href="../common-tasks/logging.html" class="">Logging</a><li><a href="../common-tasks/plugins.html" class="">Plugins</a><li><a href="../common-tasks/error-handling.html" class="">Error Handling</a><li><a href="../common-tasks/caching.html" class="">Caching</a><li><a href="../common-tasks/filters.html" class="">Filters</a><li><a href="../common-tasks/etags.html" class="">Etags</a><li><a href="../common-tasks/globalization.html" class="">Globalization</a><li><a href="../common-tasks/simple-authentication.html" class="">Simple Authentication</a><li><a href="../common-tasks/simple-auth-user.html" class="">Simple Auth User</a><li><a href="../common-tasks/console-applications.html" class="">Console Applications</a></ul><li><a href="../appendices.html" class="">Appendices</a><ul><li><a href="../appendices/faqs.html" class="">FAQs</a><li><a href="../appendices/using-in-other-applications.html" class="">Using In Other Applications</a></ul><li><a href="../quickstart.html" class="">Quickstart</a><li><a href="../controllers.html" class="">Controllers</a><ul><li><a href="../controllers/actions.html" class="">Actions</a><li><a href="../controllers/flow-control.html" class="">Flow Control</a><li><a href="../controllers/parameters.html" class="">Parameters</a><li><a href="../controllers/type-rendering-detection.html" class="">Type Rendering Detection</a><li><a href="../controllers/routing.html" class="">Routing</a></ul><li><a href="../installation.html" class="">Installation</a><ul><li><a href="requirements.html" class="active">Requirements</a><li><a href="troubleshooting.html" class="">Troubleshooting</a><li><a href="web-servers.html" class="">Web Servers</a></ul><li><a href="../architecture.html" class="">Architecture</a><ul><li><a href="../architecture/file-structure.html" class="">File Structure</a><li><a href="../architecture/response-lifecycle.html" class="">Response Lifecycle</a><li><a href="../architecture/aop.html" class="">AOP</a><li><a href="../architecture/mvc.html" class="">MVC</a><li><a href="../architecture/objects.html" class="">Objects</a></ul><li><a href="../quality-code.html" class="">Quality Code</a><ul><li><a href="../quality-code/fixtures.html" class="">Fixtures</a><li><a href="../quality-code/analysis.html" class="">Analysis</a><li><a href="../../../../manual/quality-code/testing.wiki.html" class="">Testing</a><li><a href="../quality-code/security.html" class="">Security</a></ul><li><a href="../configuration.html" class="">Configuration</a><ul><li><a href="../configuration/environment.html" class="">Environment</a><li><a href="../configuration/bootstrapping.html" class="">Bootstrapping</a><li><a href="../configuration/third-party-libraries.html" class="">Third Party Libraries</a></ul><li><a href="../views.html" class="">Views</a><ul><li><a href="../views/layouts.html" class="">Layouts</a><li><a href="../views/elements.html" class="">Elements</a><li><a href="../views/helpers.html" class="">Helpers</a><li><a href="../views/static-content.html" class="">Static Content</a><li><a href="../views/auto-escaping.html" class="">Auto Escaping</a></ul><li><a href="../models.html" class="">Models</a><ul><li><a href="../models/mongodb.html" class="">Mongodb</a><li><a href="../models/meta.html" class="">Meta</a><li><a href="../models/relationships.html" class="">Relationships</a><li><a href="../models/saving.html" class="">Saving</a><li><a href="../models/using-data-sources.html" class="">Using Data Sources</a><li><a href="../models/adding-functions.html" class="">Adding Functions</a><li><a href="../models/data-mutation.html" class="">Data Mutation</a><li><a href="../models/connections.html" class="">Connections</a><li><a href="../models/creating-data-sources.html" class="">Creating Data Sources</a><li><a href="../models/querying.html" class="">Querying</a><li><a href="../models/validation.html" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="requirements" class="anchor" href="requirements.html#requirements">Requirements</a></h1>
+<h2><a id="web-server" class="anchor" href="requirements.html#web-server">Web Server</a></h2>
+<p>You need a <strong>web server</strong> to run your app, preferably running on your local machine (you do
+all of your development locally, right, right??). As PHP, the framework itself runs just
+fine on most popular web servers. <a href="web-servers.html">Setup guides are available for Apache, IIS, Lighttpd, and
+NGINX</a>.</p>
+<h2><a id="php" class="anchor" href="requirements.html#php">PHP</a></h2>
+<p>Because the framework takes advantage of advanced <strong>language</strong> features, a recent PHP version
+is required. <a href="../../../../../versions.html">Please review the compatibility table</a> to see if your
+PHP version is supported.</p>
+<p>The vanilla PHP configuration should be in general fine. However its always good to double
+check that certain configuration options are set correctly. Certain features are not supported
+as we consider those broken, very experimental or a hack.</p>
+<p>Please verify that:</p>
+<ul>
+<li>Magic Quotes are disabled.</li>
+<li>Register Globals are disabled.</li>
+<li>Function overloading is disabled when using the <code>mbstring</code> extension.</li>
+<li>PHP isn't compiled with curlwrappers.</li>
+<li>Short Open Tags are disabled. Although this is not a strict requirement.</li>
+<li>When using MongoDB you have the mongo extension &gt;= 1.2.0 installed.</li>
+</ul>
+<p>While you're making PHP configuration changes, you might also consider having PHP display errors temporarily during development. Just change the relevant lines in your <code>php.ini</code>:</p>
+<pre><code class="language-ini">; Show me teh errors.
+display_errors = On
+
+; Either choose to see all errors or all, but no deprecation warnings.
+error_reporting = E_ALL
+; error_reporting = E_ALL &amp; ~E_DEPRECATED
+</code></pre>
+<h2><a id="data-store" class="anchor" href="requirements.html#data-store">Data Store</a></h2>
+<p>Applications often feature some sort of <strong>data store</strong>. As such, you may want to track down one
+of the following as well:</p>
+<ul>
+<li>MongoDB</li>
+<li>MySQL or MariaDB</li>
+<li>PostgreSQL</li>
+<li>SQLite</li>
+<li>CouchDB</li>
+</ul>
+<h2><a id="version-control-system" class="anchor" href="requirements.html#version-control-system">Version Control System</a></h2>
+<p>While not absolutely essential, a working knowledge of the <a href="http://git-scm.com/">Git <strong>version control
+system</strong></a> is useful for most aspects of development in general, and li3
+specifically i.e. the workflow for contributing to projects is Git-based.</p>
+<h2><a id="command-line-terminal" class="anchor" href="requirements.html#command-line-terminal">Command-line Terminal</a></h2>
+<p>Also not required for working with the framework, however it provides many useful tools
+for automating complex or repetitive tasks.</p>
+<h2><a id="passion" class="anchor" href="requirements.html#passion">Passion!</a></h2>
+<p>... for <strong>innovation and collaboration</strong>.</p>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

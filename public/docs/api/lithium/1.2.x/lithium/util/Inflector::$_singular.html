@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\util\Inflector::$_singular – Framework API v1.2.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.2.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../util.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">util</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="Inflector.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Inflector</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">$_singular</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="Inflector.html" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../util.html" class="symbol-segment">util</a>\<a href="Inflector.html" class="symbol-segment">Inflector</a>::$_singular		</h1>
+
+		<section class="under">
+															<div class="tags">
+													<span class="tag protected">protected</span>
+													<span class="tag">static</span>
+								<span class="tag">property</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Contains the list of pluralization rules.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="./Inflector::rules().html">lithium\util\Inflector::rules()</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	protected static $_singular = [
+		&#039;rules&#039; =&gt; [
+			&#039;/(s)tatuses$/i&#039; =&gt; &#039;\1\2tatus&#039;,
+			&#039;/^(.*)(menu)s$/i&#039; =&gt; &#039;\1\2&#039;,
+			&#039;/(quiz)zes$/i&#039; =&gt; &#039;\\1&#039;,
+			&#039;/(matr)ices$/i&#039; =&gt; &#039;\1ix&#039;,
+			&#039;/(vert|ind)ices$/i&#039; =&gt; &#039;\1ex&#039;,
+			&#039;/^(ox)en/i&#039; =&gt; &#039;\1&#039;,
+			&#039;/(alias)(es)*$/i&#039; =&gt; &#039;\1&#039;,
+			&#039;/(alumn|bacill|cact|foc|fung|nucle|radi|stimul|syllab|termin|viri?)i$/i&#039; =&gt; &#039;\1us&#039;,
+			&#039;/(cris|ax|test)es$/i&#039; =&gt; &#039;\1is&#039;,
+			&#039;/(shoe)s$/i&#039; =&gt; &#039;\1&#039;,
+			&#039;/(o)es$/i&#039; =&gt; &#039;\1&#039;,
+			&#039;/ouses$/&#039; =&gt; &#039;ouse&#039;,
+			&#039;/([^a])uses$/&#039; =&gt; &#039;\1us&#039;,
+			&#039;/([m|l])ice$/i&#039; =&gt; &#039;\1ouse&#039;,
+			&#039;/(x|ch|ss|sh)es$/i&#039; =&gt; &#039;\1&#039;,
+			&#039;/(m)ovies$/i&#039; =&gt; &#039;\1\2ovie&#039;,
+			&#039;/(s)eries$/i&#039; =&gt; &#039;\1\2eries&#039;,
+			&#039;/([^aeiouy]|qu)ies$/i&#039; =&gt; &#039;\1y&#039;,
+			&#039;/([lr])ves$/i&#039; =&gt; &#039;\1f&#039;,
+			&#039;/(tive)s$/i&#039; =&gt; &#039;\1&#039;,
+			&#039;/(hive)s$/i&#039; =&gt; &#039;\1&#039;,
+			&#039;/(drive)s$/i&#039; =&gt; &#039;\1&#039;,
+			&#039;/([^fo])ves$/i&#039; =&gt; &#039;\1fe&#039;,
+			&#039;/(^analy)ses$/i&#039; =&gt; &#039;\1sis&#039;,
+			&#039;/((a)naly|(b)a|(d)iagno|(p)arenthe|(p)rogno|(s)ynop|(t)he)ses$/i&#039; =&gt; &#039;\1\2sis&#039;,
+			&#039;/([ti])a$/i&#039; =&gt; &#039;\1um&#039;,
+			&#039;/(p)eople$/i&#039; =&gt; &#039;\1\2erson&#039;,
+			&#039;/(m)en$/i&#039; =&gt; &#039;\1an&#039;,
+			&#039;/(c)hildren$/i&#039; =&gt; &#039;\1\2hild&#039;,
+			&#039;/(n)ews$/i&#039; =&gt; &#039;\1\2ews&#039;,
+			&#039;/^(.*us)$/&#039; =&gt; &#039;\\1&#039;,
+			&#039;/s$/i&#039; =&gt; &#039;&#039;
+		],
+		&#039;irregular&#039; =&gt; [],
+		&#039;uninflected&#039; =&gt; [
+			&#039;.*[nrlm]ese&#039;, &#039;.*deer&#039;, &#039;.*fish&#039;, &#039;.*measles&#039;, &#039;.*ois&#039;, &#039;.*pox&#039;, &#039;.*sheep&#039;, &#039;.*ss&#039;
+		]
+	];</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

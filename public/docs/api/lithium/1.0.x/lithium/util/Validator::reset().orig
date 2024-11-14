@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\util\Validator::reset() – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.0.x/lithium/util" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">util</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.0.x/lithium/util/Validator" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Validator</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">reset()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.0.x/lithium/util/Validator" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.0.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.0.x/lithium/util" class="symbol-segment">util</a>\<a href="/docs/api/lithium/1.0.x/lithium/util/Validator" class="symbol-segment">Validator</a>::reset()		</h1>
+
+		<section class="under">
+															<div class="tags">
+													<span class="tag public">public</span>
+													<span class="tag">static</span>
+								<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Initializes the list of default validation rules.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public static function reset() {
+		$alnum = &#039;[A-Fa-f0-9]&#039;;
+		$class = get_called_class();
+		static::$_methodFilters[$class] = array();
+
+		static::$_rules = array(
+			&#039;alphaNumeric&#039; =&gt; &#039;/^[\p{Ll}\p{Lm}\p{Lo}\p{Lt}\p{Lu}\p{Nd}]+$/mu&#039;,
+			&#039;blank&#039;        =&gt; &#039;/[^\\s]/&#039;,
+			&#039;creditCard&#039;   =&gt; array(
+				&#039;amex&#039;     =&gt; &#039;/^3[4|7]\\d{13}$/&#039;,
+				&#039;bankcard&#039; =&gt; &#039;/^56(10\\d\\d|022[1-5])\\d{10}$/&#039;,
+				&#039;diners&#039;   =&gt; &#039;/^(?:3(0[0-5]|[68]\\d)\\d{11})|(?:5[1-5]\\d{14})$/&#039;,
+				&#039;disc&#039;     =&gt; &#039;/^(?:6011|650\\d)\\d{12}$/&#039;,
+				&#039;electron&#039; =&gt; &#039;/^(?:417500|4917\\d{2}|4913\\d{2})\\d{10}$/&#039;,
+				&#039;enroute&#039;  =&gt; &#039;/^2(?:014|149)\\d{11}$/&#039;,
+				&#039;jcb&#039;      =&gt; &#039;/^(3\\d{4}|2100|1800)\\d{11}$/&#039;,
+				&#039;maestro&#039;  =&gt; &#039;/^(?:5020|6\\d{3})\\d{12}$/&#039;,
+				&#039;mc&#039;       =&gt; &#039;/^5[1-5]\\d{14}$/&#039;,
+				&#039;solo&#039;     =&gt; &#039;/^(6334[5-9][0-9]|6767[0-9]{2})\\d{10}(\\d{2,3})?$/&#039;,
+				&#039;switch&#039;   =&gt; &#039;/^(?:49(03(0[2-9]|3[5-9])|11(0[1-2]|7[4-9]|8[1-2])|36[0-9]{2})&#039; .
+				              &#039;\\d{10}(\\d{2,3})?)|(?:564182\\d{10}(\\d{2,3})?)|(6(3(33[0-4]&#039; .
+				              &#039;[0-9])|759[0-9]{2})\\d{10}(\\d{2,3})?)$/&#039;,
+				&#039;visa&#039;     =&gt; &#039;/^4\\d{12}(\\d{3})?$/&#039;,
+				&#039;voyager&#039;  =&gt; &#039;/^8699[0-9]{11}$/&#039;,
+				&#039;fast&#039;     =&gt; &#039;/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6011[0-9]{12}|3&#039; .
+				              &#039;(?:0[0-5]|[68][0-9])[0-9]{11}|3[47][0-9]{13})$/&#039;
+			),
+			&#039;date&#039;         =&gt; array(
+				&#039;dmy&#039;      =&gt; &#039;%^(?:(?:31(\\/|-|\\.|\\x20)(?:0?[13578]|1[02]))\\1|(?:(?:29|30)&#039; .
+				              &#039;(\\/|-|\\.|\\x20)(?:0?[1,3-9]|1[0-2])\\2))(?:(?:1[6-9]|[2-9]\\d)?&#039; .
+				              &#039;\\d{2})$|^(?:29(\\/|-|\\.|\\x20)0?2\\3(?:(?:(?:1[6-9]|[2-9]\\d)?&#039; .
+				              &#039;(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])&#039; .
+				              &#039;00))))$|^(?:0?[1-9]|1\\d|2[0-8])(\\/|-|\\.|\\x20)(?:(?:0?[1-9])|&#039; .
+				              &#039;(?:1[0-2]))\\4(?:(?:1[6-9]|[2-9]\\d)?\\d{2})$%&#039;,
+				&#039;mdy&#039;      =&gt; &#039;%^(?:(?:(?:0?[13578]|1[02])(\\/|-|\\.|\\x20)31)\\1|(?:(?:0?[13-9]|&#039; .
+				              &#039;1[0-2])(\\/|-|\\.|\\x20)(?:29|30)\\2))(?:(?:1[6-9]|[2-9]\\d)?\\d&#039; .
+				              &#039;{2})$|^(?:0?2(\\/|-|\\.|\\x20)29\\3(?:(?:(?:1[6-9]|[2-9]\\d)?&#039; .
+				              &#039;(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])&#039; .
+				              &#039;00))))$|^(?:(?:0?[1-9])|(?:1[0-2]))(\\/|-|\\.|\\x20)(?:0?[1-9]|1&#039; .
+				              &#039;\\d|2[0-8])\\4(?:(?:1[6-9]|[2-9]\\d)?\\d{2})$%&#039;,
+				&#039;ymd&#039;      =&gt; &#039;%^(?:(?:(?:(?:(?:1[6-9]|[2-9]\\d)?(?:0[48]|[2468][048]|[13579]&#039; .
+				              &#039;[26])|(?:(?:16|[2468][048]|[3579][26])00)))(\\/|-|\\.|\\x20)&#039; .
+				              &#039;(?:0?2\\1(?:29)))|(?:(?:(?:1[6-9]|[2-9]\\d)?\\d{2})(\\/|-|\\.|&#039; .
+				              &#039;\\x20)(?:(?:(?:0?[13578]|1[02])\\2(?:31))|(?:(?:0?[1,3-9]|1[0-2])&#039; .
+				              &#039;\\2(29|30))|(?:(?:0?[1-9])|(?:1[0-2]))\\2(?:0?[1-9]|1\\d|2[0-8]&#039; .
+				              &#039;))))$%&#039;,
+				&#039;dMy&#039;      =&gt; &#039;/^((31(?!\\ (Feb(ruary)?|Apr(il)?|June?|(Sep(?=\\b|t)t?|Nov)&#039; .
+				              &#039;(ember)?)))|((30|29)(?!\\ Feb(ruary)?))|(29(?=\\ Feb(ruary)?\\ &#039; .
+				              &#039;(((1[6-9]|[2-9]\\d)(0[48]|[2468][048]|[13579][26])|((16|[2468]&#039; .
+				              &#039;[048]|[3579][26])00)))))|(0?[1-9])|1\\d|2[0-8])\\ (Jan(uary)?|&#039; .
+				              &#039;Feb(ruary)?|Ma(r(ch)?|y)|Apr(il)?|Ju((ly?)|(ne?))|Aug(ust)?|&#039; .
+				              &#039;Oct(ober)?|(Sep(?=\\b|t)t?|Nov|Dec)(ember)?)\\ ((1[6-9]|[2-9]&#039; .
+				              &#039;\\d)\\d{2})$/&#039;,
+				&#039;Mdy&#039;      =&gt; &#039;/^(?:(((Jan(uary)?|Ma(r(ch)?|y)|Jul(y)?|Aug(ust)?|Oct(ober)?&#039; .
+				              &#039;|Dec(ember)?)\\ 31)|((Jan(uary)?|Ma(r(ch)?|y)|Apr(il)?|Ju((ly?)&#039; .
+				              &#039;|(ne?))|Aug(ust)?|Oct(ober)?|(Sept|Nov|Dec)(ember)?)\\ (0?[1-9]&#039; .
+				              &#039;|([12]\\d)|30))|(Feb(ruary)?\\ (0?[1-9]|1\\d|2[0-8]|(29(?=,?\\ &#039; .
+				              &#039;((1[6-9]|[2-9]\\d)(0[48]|[2468][048]|[13579][26])|((16|[2468]&#039; .
+				              &#039;[048]|[3579][26])00)))))))\\,?\\ ((1[6-9]|[2-9]\\d)\\d{2}))$/&#039;,
+				&#039;My&#039;       =&gt; &#039;%^(Jan(uary)?|Feb(ruary)?|Ma(r(ch)?|y)|Apr(il)?|Ju((ly?)|(ne?))|&#039; .
+				              &#039;Aug(ust)?|Oct(ober)?|(Sep(?=\\b|t)t?|Nov|Dec)(ember)?)\\ ((1[6-9]&#039; .
+				              &#039;|[2-9]\\d)\\d{2})$%&#039;,
+				&#039;my&#039;       =&gt; &#039;%^(0?[1-9]|1[012])([- /.])((1[6-9])|([2-9]\\d)\\d{2})$%&#039;
+			),
+			&#039;ip&#039; =&gt; function($value, $format = null, array $options = array()) {
+				$options += array(&#039;flags&#039; =&gt; array());
+				return (boolean) filter_var($value, FILTER_VALIDATE_IP, $options);
+			},
+			&#039;money&#039;        =&gt; array(
+				&#039;right&#039;    =&gt; &#039;/^(?!0,?\d)(?:\d{1,3}(?:([, .])\d{3})?(?:\1\d{3})*|(?:\d+))&#039; .
+				              &#039;((?!\1)[,.]\d{2})?(?&lt;!\x{00a2})\p{Sc}?$/u&#039;,
+				&#039;left&#039;     =&gt; &#039;/^(?!\x{00a2})\p{Sc}?(?!0,?\d)(?:\d{1,3}(?:([, .])\d{3})?&#039; .
+				              &#039;(?:\1\d{3})*|(?:\d+))((?!\1)[,.]\d{2})?$/u&#039;
+			),
+			&#039;notEmpty&#039;     =&gt; &#039;/[^\s]+/m&#039;,
+			&#039;phone&#039;        =&gt; &#039;/^\+?[0-9\(\)\-]{10,20}$/&#039;,
+			&#039;postalCode&#039;   =&gt; &#039;/(^|\A\b)[A-Z0-9\s\-]{5,}($|\b\z)/i&#039;,
+			&#039;regex&#039;        =&gt; &#039;/^(?:([^[:alpha:]\\\\{&lt;\[\(])(.+)(?:\1))|(?:{(.+)})|(?:&lt;(.+)&gt;)|&#039; .
+			                  &#039;(?:\[(.+)\])|(?:\((.+)\))[gimsxu]*$/&#039;,
+			&#039;time&#039;         =&gt; &#039;%^((0?[1-9]|1[012])(:[0-5]\d){0,2}([AP]M|[ap]m))$|^([01]\d|2[0-3])&#039; .
+			                  &#039;(:[0-5]\d){0,2}$%&#039;,
+			&#039;boolean&#039;      =&gt; function($value) {
+				$bool = is_bool($value);
+				$filter = filter_var($value, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE);
+				return ($bool || $filter !== null || empty($value));
+			},
+			&#039;decimal&#039; =&gt; function($value, $format = null, array $options = array()) {
+				if (isset($options[&#039;precision&#039;])) {
+					$precision = strlen($value) - strrpos($value, &#039;.&#039;) - 1;
+
+					if ($precision !== (int) $options[&#039;precision&#039;]) {
+						return false;
+					}
+				}
+				return (filter_var($value, FILTER_VALIDATE_FLOAT, FILTER_NULL_ON_FAILURE) !== null);
+			},
+			&#039;inList&#039; =&gt; function($value, $format, $options) {
+				$options += array(&#039;list&#039; =&gt; array());
+				$strict = is_bool($value) || $value === &#039;&#039;;
+				return in_array($value, $options[&#039;list&#039;], $strict);
+			},
+			&#039;lengthBetween&#039; =&gt; function($value, $format, $options) {
+				$length = strlen($value);
+				$options += array(&#039;min&#039; =&gt; 1, &#039;max&#039; =&gt; 255);
+				return ($length &gt;= $options[&#039;min&#039;] &amp;&amp; $length &lt;= $options[&#039;max&#039;]);
+			},
+			&#039;luhn&#039; =&gt; function($value) {
+				if (empty($value) || !is_string($value)) {
+					return false;
+				}
+				$sum = 0;
+				$length = strlen($value);
+
+				for ($position = 1 - ($length % 2); $position &lt; $length; $position += 2) {
+					$sum += $value[$position];
+				}
+				for ($position = ($length % 2); $position &lt; $length; $position += 2) {
+					$number = $value[$position] * 2;
+					$sum += ($number &lt; 10) ? $number : $number - 9;
+				}
+				return ($sum % 10 === 0);
+			},
+			&#039;numeric&#039; =&gt; function($value) {
+				return is_numeric($value);
+			},
+			&#039;inRange&#039; =&gt; function($value, $format, $options) {
+				$defaults = array(&#039;upper&#039; =&gt; null, &#039;lower&#039; =&gt; null);
+				$options += $defaults;
+
+				if (!is_numeric($value)) {
+					return false;
+				}
+				switch (true) {
+					case ($options[&#039;upper&#039;] !== null &amp;&amp; $options[&#039;lower&#039;] !== null):
+						return ($value &gt;= $options[&#039;lower&#039;] &amp;&amp; $value &lt;= $options[&#039;upper&#039;]);
+					case ($options[&#039;upper&#039;] !== null):
+						return ($value &lt;= $options[&#039;upper&#039;]);
+					case ($options[&#039;lower&#039;] !== null):
+						return ($value &gt;= $options[&#039;lower&#039;]);
+				}
+				return is_finite($value);
+			},
+			&#039;uuid&#039; =&gt; &quot;/^{$alnum}{8}-{$alnum}{4}-{$alnum}{4}-{$alnum}{4}-{$alnum}{12}$/&quot;,
+			&#039;email&#039; =&gt; function($value) {
+				return filter_var($value, FILTER_VALIDATE_EMAIL);
+			},
+			&#039;url&#039; =&gt; function($value, $format = null, array $options = array()) {
+				$options += array(&#039;flags&#039; =&gt; array());
+				return (boolean) filter_var($value, FILTER_VALIDATE_URL, $options);
+			}
+		);
+
+		$isEmpty = function($self, $params, $chain) {
+			extract($params);
+			return (empty($value) &amp;&amp; $value !== &#039;0&#039;) ? false : $chain-&gt;next($self, $params, $chain);
+		};
+
+		static::$_methodFilters[$class][&#039;alphaNumeric&#039;] = array($isEmpty);
+		static::$_methodFilters[$class][&#039;notEmpty&#039;] = array($isEmpty);
+
+		static::$_methodFilters[$class][&#039;creditCard&#039;] = array(function($self, $params, $chain) {
+			extract($params);
+			$options += array(&#039;deep&#039; =&gt; false);
+
+			if (strlen($value = str_replace(array(&#039;-&#039;, &#039; &#039;), &#039;&#039;, $value)) &lt; 13) {
+				return false;
+			}
+			if (!$chain-&gt;next($self, compact(&#039;value&#039;) + $params, $chain)) {
+				return false;
+			}
+			return $options[&#039;deep&#039;] ? Validator::isLuhn($value) : true;
+		});
+
+		static::$_methodFilters[$class][&#039;email&#039;] = array(function($self, $params, $chain) {
+			extract($params);
+			$defaults = array(&#039;deep&#039; =&gt; false);
+			$options += $defaults;
+
+			if (!$chain-&gt;next($self, $params, $chain)) {
+				return false;
+			}
+			if (!$options[&#039;deep&#039;]) {
+				return true;
+			}
+			list($prefix, $host) = explode(&#039;@&#039;, $params[&#039;value&#039;]);
+
+			$mxhosts = array();
+			if (getmxrr($host, $mxhosts)) {
+				return is_array($mxhosts);
+			}
+			return false;
+		});
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

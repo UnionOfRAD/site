@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\data\Model::validates() – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.0.x/lithium/data" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">data</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.0.x/lithium/data/Model" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Model</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">validates()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.0.x/lithium/data/Model" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.0.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.0.x/lithium/data" class="symbol-segment">data</a>\<a href="/docs/api/lithium/1.0.x/lithium/data/Model" class="symbol-segment">Model</a>::validates()		</h1>
+
+		<section class="under">
+															<div class="tags">
+													<span class="tag public">public</span>
+												<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>An important part of describing the business logic of a model class is defining the
+validation rules. In Lithium models, rules are defined through the <code>$validates</code> class
+property, and are used by this method before saving to verify the correctness of the data
+being sent to the backend data source.</p>
+					</div>
+				
+									<div class="description">
+						<p>Note that these are application-level validation rules, and do not
+interact with any rules or constraints defined in your data source. If such constraints fail,
+an exception will be thrown by the database layer. The <code>validates()</code> method only checks
+against the rules defined in application code.</p>
+<p>This method uses the <code>Validator</code> class to perform data validation. An array representation of
+the entity object to be tested is passed to the <code>check()</code> method, along with the model's
+validation rules. Any rules defined in the <code>Validator</code> class can be used to validate fields.
+See the <code>Validator</code> class to add custom rules, or override built-in rules.</p>
+					</div>
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">object</span>
+							<code class="name">$entity</code>
+															<span class="parameter">
+									<p>Model entity to validate. Typically either a <code>Record</code> or <code>Document</code>
+object. In the following example:</p>
+<pre><code>   ```
+       $post = Posts::create($data);
+       $success = $post-&gt;validates();
+</code></pre>
+<pre><code class="language-php">The `$entity` parameter is equal to the `$post` object instance.
+</code></pre>
+								</span>
+													</li>
+											<li>
+							<span class="type">array</span>
+							<code class="name">$options</code>
+															<span class="parameter">
+									<p>Available options:</p>
+<ul>
+<li><code>'rules'</code> <em>array</em>: If specified, this array will <em>replace</em> the default
+validation rules defined in <code>$validates</code>.</li>
+<li><code>'events'</code> <em>mixed</em>: A string or array defining one or more validation
+<em>events</em>. Events are different contexts in which data events can occur, and
+correspond to the optional <code>'on'</code> key in validation rules. For example, by
+default, <code>'events'</code> is set to either <code>'create'</code> or <code>'update'</code>, depending on
+whether <code>$entity</code> already exists. Then, individual rules can specify
+<code>'on' =&gt; 'create'</code> or <code>'on' =&gt; 'update'</code> to only be applied at certain times.
+Using this parameter, you can set up custom events in your rules as well, such
+as <code>'on' =&gt; 'login'</code>. Note that when defining validation rules, the <code>'on'</code> key
+can also be an array of multiple events.</li>
+<li><code>'required</code>' <em>mixed</em>: Represents whether the value is required to be present
+in <code>$values</code>. If <code>'required'</code> is set to <code>true</code>, the validation rule will be
+checked. if <code>'required'</code> is set to 'false' , the validation rule will be skipped
+if the corresponding key is not present. If don't set <code>'required'</code> or set this
+to <code>null</code>, the validation rule will be skipped if the corresponding key is not
+present in update and will be checked in insert. Defaults is set to <code>null</code>.</li>
+<li><code>'whitelist'</code> <em>array</em>: If specified, only fields in this array will be validated
+and others will be skipped.</li>
+</ul>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">boolean</span>
+									<span class="return">
+						<p>Returns <code>true</code> if all validation rules on all fields succeed, otherwise
+<code>false</code>. After validation, the messages for any validation failures are assigned to
+the entity, and accessible through the <code>errors()</code> method of the entity object.</p>
+					</span>
+							</section>
+			
+						<section id="filter" class="flag">
+				<h3 class="h-beta">
+					Filter
+					<nav class="headline-nav">
+						<a href="http://li3.me/docs/book/manual/1.x/common-tasks/filters">see how to use filters</a>					</nav>
+				</h3>
+				<p>
+					This method can be filtered.				</p>
+			</section>
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="/docs/api/lithium/1.0.x/lithium/data/Model::$validates">lithium\data\Model::$validates</a>									<li><a href="/docs/api/lithium/1.0.x/lithium/util/Validator::check()">lithium\util\Validator::check()</a>									<li><a href="/docs/api/lithium/1.0.x/lithium/data/Entity::errors()">lithium\data\Entity::errors()</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public function validates($entity, array $options = array()) {
+		$defaults = array(
+			&#039;rules&#039; =&gt; $this-&gt;validates,
+			&#039;events&#039; =&gt; $entity-&gt;exists() ? &#039;update&#039; : &#039;create&#039;,
+			&#039;model&#039; =&gt; get_called_class(),
+			&#039;required&#039; =&gt; null,
+			&#039;whitelist&#039; =&gt; null
+		);
+		$options += $defaults;
+
+		if ($options[&#039;required&#039;] === null) {
+			$options[&#039;required&#039;] = !$entity-&gt;exists();
+		}
+		$self = static::_object();
+		$validator = $self-&gt;_classes[&#039;validator&#039;];
+		$entity-&gt;errors(false);
+		$params = compact(&#039;entity&#039;, &#039;options&#039;);
+
+		$filter = function($parent, $params) use ($validator) {
+			$entity = $params[&#039;entity&#039;];
+			$options = $params[&#039;options&#039;];
+			$rules = $options[&#039;rules&#039;];
+			unset($options[&#039;rules&#039;]);
+			if ($whitelist = $options[&#039;whitelist&#039;]) {
+				$whitelist = array_combine($whitelist, $whitelist);
+				$rules = array_intersect_key($rules, $whitelist);
+			}
+
+			if ($errors = $validator::check($entity-&gt;data(), $rules, $options)) {
+				$entity-&gt;errors($errors);
+			}
+			return empty($errors);
+		};
+		return static::_filter(__FUNCTION__, $params, $filter);
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

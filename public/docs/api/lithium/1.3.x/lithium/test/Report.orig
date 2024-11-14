@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\test\Report – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.3.x/lithium/test" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">test</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Report</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.3.x/lithium/test" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/test/Report::__construct()">__construct()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/test/Report::_init()">_init()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/test/Report::run()">run()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/test/Report::collect()">collect()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/test/Report::stats()">stats()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/test/Report::render()">render()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/test/Report::filters()">filters()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::__set_state()">__set_state()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::respondsTo()">respondsTo()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::invokeMethod()">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_instance()">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_stop()">_stop()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_parents()">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::applyFilter()">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_filter()">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property public">
+				<a href="/docs/api/lithium/1.3.x/lithium/test/Report::$group">$group</a>												<li class="property public">
+				<a href="/docs/api/lithium/1.3.x/lithium/test/Report::$title">$title</a>												<li class="property public">
+				<a href="/docs/api/lithium/1.3.x/lithium/test/Report::$results">$results</a>												<li class="property public">
+				<a href="/docs/api/lithium/1.3.x/lithium/test/Report::$timer">$timer</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/test/Report::$_filters">$_filters</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::$_config">$_config</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::$_autoConfig">$_autoConfig</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::$_parents">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::$_methodFilters">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.3.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.3.x/lithium/test" class="symbol-segment">test</a>\Report		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated" class="extends__symbol">lithium\core\ObjectDeprecated</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>This <code>Report</code> object aggregates tests in a group and allows you to run said tests to
+obtain the results and stats (passes, fails, exceptions, skips) of the test run.</p>
+					</div>
+				
+									<div class="description">
+						<p>While Lithium already comes with a text-based as well as web-based test interface, you
+may use or extend the <code>Report</code> class to create your own test report functionality. In
+addition, you can also create your own custom templates for displaying results in a different
+format, such as json.</p>
+<p>Example usage, for built-in HTML format:</p>
+<pre><code class="language-php">$report = new Report([
+    'title' =&gt; 'Test Report Title',
+    'group' =&gt; new Group(['data' =&gt; ['lithium\tests\cases\net\http\MediaTest']]),
+    'format' =&gt; 'html'
+]);
+
+$report-&gt;run();
+
+// Get the test stats:
+$report-&gt;stats();
+
+// Get test results:
+$report-&gt;results
+</code></pre>
+<p>You may also choose to filter the results of the test runs to obtain additional information.
+For example, say you wish to calculate the cyclomatic complexity of the classes you are testing:</p>
+<pre><code class="language-php">$report = new Report([
+    'title' =&gt; 'Test Report Title',
+    'group' =&gt; new Group(['data' =&gt; ['lithium\tests\cases\net\http\MediaTest']]),
+    'filters' =&gt; ['Complexity']
+]);
+
+$report-&gt;run();
+
+// Get test results, including filter results:
+$report-&gt;results
+</code></pre>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="/docs/api/lithium/1.3.x/lithium/test/Group">lithium\test\Group</a>									<li><a href="/docs/api/lithium/1.3.x/lithium/test/filter">lithium\test\filter</a>									<li><a href="/docs/api/lithium/1.3.x/lithium/test/templates">lithium\test\templates</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Report extends \lithium\core\ObjectDeprecated {
+
+	/**
+	 * Contains an instance of `lithium\test\Group`, which contains all unit tests to be executed
+	 * this test run.
+	 *
+	 * @see lithium\test\Group
+	 * @var object
+	 */
+	public $group = null;
+
+	/**
+	 * Title of the group being run.
+	 *
+	 * @var string
+	 */
+	public $title;
+
+	/**
+	 * Group and filter results.
+	 *
+	 * @var array
+	 */
+	public $results = [&#039;group&#039; =&gt; [], &#039;filters&#039; =&gt; []];
+
+	/**
+	 * Start and end timers.
+	 *
+	 * @var array
+	 */
+	public $timer = [&#039;start&#039; =&gt; null, &#039;end&#039; =&gt; null];
+
+	/**
+	 * An array key on fully-namespaced class names of the filter with options to be
+	 * applied for the filter as the value
+	 *
+	 * @var array
+	 */
+	protected $_filters = [];
+
+	/**
+	 * Constructor.
+	 *
+	 * @param array $config Options array for the test run. Valid options are:
+	 *        - `&#039;group&#039;`: The test group with items to be run.
+	 *        - `&#039;filters&#039;`: An array of filters that the test output should be run through.
+	 *        - `&#039;format&#039;`: The format of the template to use, defaults to `&#039;txt&#039;`.
+	 *        - `&#039;reporter&#039;`: The reporter to use.
+	 * @return void
+	 */
+	public function __construct(array $config = []) {
+		$defaults = [
+			&#039;title&#039; =&gt; null,
+			&#039;group&#039; =&gt; null,
+			&#039;filters&#039; =&gt; [],
+			&#039;format&#039; =&gt; &#039;txt&#039;,
+			&#039;reporter&#039; =&gt; null
+		];
+		parent::__construct($config + $defaults);
+	}
+
+	/**
+	 * Initializer.
+	 *
+	 * @return void
+	 */
+	protected function _init() {
+		$this-&gt;group = $this-&gt;_config[&#039;group&#039;];
+		$this-&gt;title = $this-&gt;_config[&#039;title&#039;] ?: $this-&gt;_config[&#039;title&#039;];
+		$this-&gt;_filters = $this-&gt;filters($this-&gt;_config[&#039;filters&#039;]);
+	}
+
+	/**
+	 * Runs tests.
+	 *
+	 * @return void
+	 */
+	public function run() {
+		$tests = $this-&gt;group-&gt;tests();
+
+		foreach ($this-&gt;filters() as $filter =&gt; $options) {
+			$this-&gt;results[&#039;filters&#039;][$filter] = [];
+			$tests = $filter::apply($this, $tests, $options[&#039;apply&#039;]) ?: $tests;
+		}
+		$this-&gt;results[&#039;group&#039;] = $tests-&gt;run([
+			&#039;reporter&#039; =&gt; $this-&gt;_config[&#039;reporter&#039;]
+		]);
+
+		foreach ($this-&gt;filters() as $filter =&gt; $options) {
+			$this-&gt;results[&#039;filters&#039;][$filter] = $filter::analyze($this, $options[&#039;analyze&#039;]);
+		}
+	}
+
+	/**
+	 * Collects Results from the test filters and aggregates them.
+	 *
+	 * @param string $class Classname of the filter for which to aggregate results.
+	 * @param array $results Array of the filter results for
+	 *              later analysis by the filter itself.
+	 * @return void
+	 */
+	public function collect($class, $results) {
+		$this-&gt;results[&#039;filters&#039;][$class][] = $results;
+	}
+
+	/**
+	 * Return statistics from the test runs.
+	 *
+	 * @return array
+	 */
+	public function stats() {
+		$results = (array) $this-&gt;results[&#039;group&#039;];
+		$defaults = [
+			&#039;asserts&#039; =&gt; 0,
+			&#039;passes&#039; =&gt; [],
+			&#039;fails&#039; =&gt; [],
+			&#039;exceptions&#039; =&gt; [],
+			&#039;errors&#039; =&gt; [],
+			&#039;skips&#039; =&gt; []
+		];
+		$stats = array_reduce($results, function($stats, $result) use ($defaults) {
+			$stats = (array) $stats + $defaults;
+			$result = empty($result[0]) ? [$result] : $result;
+			foreach ($result as $response) {
+				if (empty($response[&#039;result&#039;])) {
+					continue;
+				}
+				$result = $response[&#039;result&#039;];
+
+				if (in_array($result, [&#039;fail&#039;, &#039;exception&#039;])) {
+					$response = array_merge(
+						[&#039;class&#039; =&gt; &#039;unknown&#039;, &#039;method&#039; =&gt; &#039;unknown&#039;], $response
+					);
+					$stats[&#039;errors&#039;][] = $response;
+				}
+				unset($response[&#039;file&#039;], $response[&#039;result&#039;]);
+
+				if (in_array($result, [&#039;pass&#039;, &#039;fail&#039;])) {
+					$stats[&#039;asserts&#039;]++;
+				}
+				if (in_array($result, [&#039;pass&#039;, &#039;fail&#039;, &#039;exception&#039;, &#039;skip&#039;])) {
+					$stats[Inflector::pluralize($result)][] = $response;
+				}
+			}
+			return $stats;
+		});
+		$stats = (array) $stats + $defaults;
+		$count = array_map(
+			function($value) { return is_array($value) ? count($value) : $value; }, $stats
+		);
+		$success = $count[&#039;passes&#039;] === $count[&#039;asserts&#039;] &amp;&amp; $count[&#039;errors&#039;] === 0;
+		return compact(&#039;stats&#039;, &#039;count&#039;, &#039;success&#039;);
+	}
+
+	/**
+	 * Renders the test output (e.g. layouts and filter templates).
+	 *
+	 * @param string $template name of the template (i.e. `&#039;layout&#039;`).
+	 * @param string|array $data array from `_data()` method.
+	 * @return string
+	 * @filter
+	 */
+	public function render($template, $data = []) {
+		$config = $this-&gt;_config;
+
+		if ($template === &#039;stats&#039; &amp;&amp; !$data) {
+			$data = $this-&gt;stats();
+		}
+		$template = Libraries::locate(&#039;test.templates&#039;, $template, [
+			&#039;filter&#039; =&gt; false, &#039;type&#039; =&gt; &#039;file&#039;, &#039;suffix&#039; =&gt; &quot;.{$config[&#039;format&#039;]}.php&quot;
+		]);
+
+		if ($template === null) {
+			$message = &quot;Templates for format `{$config[&#039;format&#039;]}` not found in `test/templates`.&quot;;
+			throw new TemplateException($message);
+		}
+		$params = compact(&#039;template&#039;, &#039;data&#039;, &#039;config&#039;);
+
+		return Filters::run(__CLASS__, __FUNCTION__, $params, function($params) {
+			extract($params[&#039;data&#039;]);
+			ob_start();
+			include $params[&#039;template&#039;];
+			return ob_get_clean();
+		});
+	}
+
+	/**
+	 * Getter/setter for report test filters.
+	 *
+	 * @param array $filters A set of filters, mapping the filter class names, to their
+	 *        corresponding array of options. When not provided, simply returns current
+	 *        set of filters.
+	 * @return array The current set of filters.
+	 */
+	public function filters(array $filters = []) {
+		foreach ($filters as $filter =&gt; $options) {
+			if (!$class = Libraries::locate(&#039;test.filter&#039;, $filter)) {
+				throw new ClassNotFoundException(&quot;`{$class}` is not a valid test filter.&quot;);
+			}
+			$this-&gt;_filters[$class] = $options + [
+				&#039;name&#039; =&gt; strtolower(join(&#039;&#039;, array_slice(explode(&quot;\\&quot;, $class), -1))),
+				&#039;apply&#039; =&gt; [],
+				&#039;analyze&#039; =&gt; []
+			];
+		}
+		return $this-&gt;_filters;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

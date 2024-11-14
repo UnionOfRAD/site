@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\security\Auth – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.3.x/lithium/security" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">security</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Auth</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.3.x/lithium/security" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/security/Auth::_initConfig()">_initConfig()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/security/Auth::check()">check()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/security/Auth::set()">set()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/security/Auth::clear()">clear()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::config()">config()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::reset()">reset()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::adapter()">adapter()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::strategies()">strategies()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::applyStrategies()">applyStrategies()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::enabled()">enabled()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::_initAdapter()">_initAdapter()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::_class()">_class()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::_strategy()">_strategy()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::_locate()">_locate()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::_config()">_config()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::respondsTo()">respondsTo()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::invokeMethod()">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::_instance()">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::_stop()">_stop()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::_parents()">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::applyFilter()">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::_filter()">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/security/Auth::$_configurations">$_configurations</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/security/Auth::$_adapters">$_adapters</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/security/Auth::$_classes">$_classes</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::$_strategies">$_strategies</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::$_parents">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::$_methodFilters">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.3.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.3.x/lithium/security" class="symbol-segment">security</a>\Auth		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable" class="extends__symbol">lithium\core\Adaptable</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The <code>Auth</code> class provides a common interface to authenticate user credentials from different
+sources against different storage backends in a uniform way. As with most other adapter-driven
+classes in the framework, <code>Auth</code> allows you to specify one or more named configurations,
+including an adapter, which can be referenced by name in your application.</p>
+					</div>
+				
+									<div class="description">
+						<p><code>Auth</code> is responsible for managing session state for each configuration, and exposes a set of
+methods which adapters can implement: <code>set()</code>, <code>check()</code> and <code>clear()</code>. You can read more about
+each method below. Beyond these methods, <code>Auth</code> makes very few assumptions about how your
+application authenticates users. Each adapter accepts a set of credentials, and returns an array
+of user information on success, and <code>false</code> on failure. On successful authentication attempts,
+the data returned from the credential check is written to the session, which is automatically
+accessed on subsequent checks (though manual re-checking can be forced on a per-instance basis).</p>
+<p>To be secure by default (and if you don't override it), a <code>password</code> field is never stored in
+the session adapter. This prevents a possible password hash to be leaked in a cookie (for
+example). You can also be very specific on what you want to store in the session:</p>
+<pre><code class="language-php">Auth::config([
+  'default' =&gt; [
+     'session' =&gt; [
+       'persist' =&gt; ['username', 'email']
+     ]
+  ]
+]);
+</code></pre>
+<p>You can also pass an optional <code>persist</code> param to the <code>check</code> method to override this default.</p>
+<p>For additional information on configuring and working with <code>Auth</code>, see the <code>Form</code> adapter.</p>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="/docs/api/lithium/1.3.x/lithium/security/auth/adapter/Form">lithium\security\auth\adapter\Form</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Auth extends \lithium\core\Adaptable {
+
+	/**
+	 * Stores configurations for various authentication adapters.
+	 *
+	 * @var object `Collection` of authentication configurations.
+	 */
+	protected static $_configurations = [];
+
+	/**
+	 * Libraries::locate() compatible path to adapters for this class.
+	 *
+	 * @see lithium\core\Libraries::locate()
+	 * @var string Dot-delimited path.
+	 */
+	protected static $_adapters = &#039;adapter.security.auth&#039;;
+
+	/**
+	 * Dynamic class dependencies.
+	 *
+	 * @var array Associative array of class names &amp; their namespaces.
+	 */
+	protected static $_classes = [
+		&#039;session&#039; =&gt; &#039;lithium\storage\Session&#039;
+	];
+
+	/**
+	 * Called when an adapter configuration is first accessed, this method sets the default
+	 * configuration for session handling. While each configuration can use its own session class
+	 * and options, this method initializes them to the default dependencies written into the class.
+	 * For the session key name, the default value is set to the name of the configuration.
+	 *
+	 * @param string $name The name of the adapter configuration being accessed.
+	 * @param array $config The user-specified configuration.
+	 * @return array Returns an array that merges the user-specified configuration with the
+	 *         generated default values.
+	 */
+	protected static function _initConfig($name, $config) {
+		$defaults = [&#039;session&#039; =&gt; [
+			&#039;key&#039; =&gt; $name,
+			&#039;class&#039; =&gt; static::$_classes[&#039;session&#039;],
+			&#039;options&#039; =&gt; [],
+			&#039;persist&#039; =&gt; []
+		]];
+		$config = parent::_initConfig($name, $config) + $defaults;
+		$config[&#039;session&#039;] += $defaults[&#039;session&#039;];
+		return $config;
+	}
+
+	/**
+	 * Performs an authentication check against the specified configuration, and writes the
+	 * resulting user information to the session such that credentials are not required for
+	 * subsequent authentication checks, and user information is returned directly from the session.
+	 *
+	 * @param string $name The name of the `Auth` configuration/adapter to check against.
+	 * @param mixed $credentials A container for the authentication credentials used in this check.
+	 *              This will vary by adapter, but generally will be an object or array containing
+	 *              a user name and password. In the case of the `Form` adapter, it contains a
+	 *              `Request` object containing `POST` data with user login information.
+	 * @param array $options Additional options used when performing the authentication check. The
+	 *              options available will vary by adapter, please consult the documentation for the
+	 *              `check()` method of the adapter you intend to use. The global options for this
+	 *              method are:
+	 *              - `&#039;checkSession&#039;` _boolean_: By default, the session store configured for the
+	 *                adapter will always be queried first, to see if an authentication check has
+	 *                already been performed during the current user session. If yes, then the
+	 *                session data will be returned. By setting `&#039;checkSession&#039;` to `false`,
+	 *                session checks are bypassed and the credentials provided are always checked
+	 *                against the adapter directly.
+	 *              - `&#039;writeSession&#039;` _boolean_: Upon a successful credentials check, the returned
+	 *                user information is, by default, written to the session. Set this to `false`
+	 *                to disable session writing for this authentication check.
+	 *              - `&#039;persist&#039;` _array_: A list of fields that should be stored in the session.
+	 *                If no list is provided will store all fields in the session except
+	 *                the `&#039;password&#039;` field.
+	 * @return array After a successful credential check against the adapter (or a successful
+	 *         lookup against the current session), returns an array of user information from the
+	 *         storage backend used by the configured adapter.
+	 * @filter
+	 */
+	public static function check($name, $credentials = null, array $options = []) {
+		$config = static::config($name);
+
+		$defaults = [
+			&#039;checkSession&#039; =&gt; true,
+			&#039;writeSession&#039; =&gt; true,
+			&#039;persist&#039; =&gt; isset($config[&#039;session&#039;][&#039;persist&#039;]) ? $config[&#039;session&#039;][&#039;persist&#039;] : static::_config(&#039;persist&#039;)
+		];
+
+		$options += $defaults;
+		$params = compact(&#039;name&#039;, &#039;credentials&#039;, &#039;options&#039;);
+
+		return Filters::run(get_called_class(), __FUNCTION__, $params, function($params) {
+			extract($params);
+			$config = static::_config($name);
+
+			if ($config === null) {
+				throw new ConfigException(&quot;Configuration `{$name}` has not been defined.&quot;);
+			}
+			$session = $config[&#039;session&#039;];
+
+			if ($options[&#039;checkSession&#039;]) {
+				if ($data = $session[&#039;class&#039;]::read($session[&#039;key&#039;], $session[&#039;options&#039;])) {
+					return $data;
+				}
+			}
+
+			if (($credentials) &amp;&amp; $data = static::adapter($name)-&gt;check($credentials, $options)) {
+				if ($options[&#039;persist&#039;] &amp;&amp; is_array($data)) {
+					$data = array_intersect_key($data, array_fill_keys($options[&#039;persist&#039;], true));
+				} elseif (is_array($data)) {
+					unset($data[&#039;password&#039;]);
+				}
+				return ($options[&#039;writeSession&#039;]) ? static::set($name, $data) : $data;
+			}
+			return false;
+		});
+	}
+
+	/**
+	 * Manually authenticate a user with the given set of data. Rather than checking a user&#039;s
+	 * credentials, this method allows you to manually specify a user for whom you&#039;d like to
+	 * initialize an authenticated session.
+	 *
+	 * By default, before writing the data to the session, the `set()` method of the named
+	 * configuration&#039;s adapter receives the data to be written, and has an opportunity to modify
+	 * or reject it.
+	 *
+	 * @param string $name The name of the adapter configuration to.
+	 * @param array $data The user data to be written to the session.
+	 * @param array $options Any additional session-writing options. These may override any options
+	 *              set by the default session configuration for `$name`.
+	 * @return array Returns the array of data written to the session, or `false` if the adapter
+	 *         rejects the data.
+	 * @filter
+	 */
+	public static function set($name, $data, array $options = []) {
+		$params = compact(&#039;name&#039;, &#039;data&#039;, &#039;options&#039;);
+
+		return Filters::run(get_called_class(), __FUNCTION__, $params, function($params) {
+			extract($params);
+			$config = static::_config($name);
+			$session = $config[&#039;session&#039;];
+
+			if ($data = static::adapter($name)-&gt;set($data, $options)) {
+				$session[&#039;class&#039;]::write($session[&#039;key&#039;], $data, $options + $session[&#039;options&#039;]);
+				return $data;
+			}
+			return false;
+		});
+	}
+
+	/**
+	 * Removes session information for the given configuration, and allows the configuration&#039;s
+	 * adapter to perform any associated cleanup tasks.
+	 *
+	 * @param string $name The name of the `Auth` configuration to clear the login information for.
+	 *               Calls the `clear()` method of the given configuration&#039;s adapter, and removes
+	 *               the information in the session key used by this configuration.
+	 * @param array $options Additional options used when clearing the authenticated session. See
+	 *              each adapter&#039;s `clear()` method for all available options. Global options:
+	 *              - `&#039;clearSession&#039;` _boolean_: If `true` (the default), session data for the
+	 *                specified configuration is removed, otherwise it is retained.
+	 * @return void
+	 * @filter
+	 */
+	public static function clear($name, array $options = []) {
+		$defaults = [&#039;clearSession&#039; =&gt; true];
+		$options += $defaults;
+
+		$params = compact(&#039;name&#039;, &#039;options&#039;);
+
+		return Filters::run(get_called_class(), __FUNCTION__, $params, function($params) {
+			extract($params);
+			$config = static::_config($name);
+			$session = $config[&#039;session&#039;];
+
+			if ($options[&#039;clearSession&#039;]) {
+				$session[&#039;class&#039;]::delete($session[&#039;key&#039;], $session[&#039;options&#039;]);
+			}
+			static::adapter($name)-&gt;clear($options);
+		});
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\storage\session\adapter\Php – Framework API v2.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../../versions.html">Versions</a><a href="../../../../../../../../present.html">Presentations</a><a href="../../../../../../../../support.html">Community</a><a href="../../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (2.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../../storage.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">storage</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../../session.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">session</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="../adapter.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">adapter</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Php</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../adapter.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Php::__construct().html">__construct()</a>												<li class="method protected">
+				<a href="./Php::_init().html">_init()</a>												<li class="method protected">
+				<a href="./Php::_start().html">_start()</a>												<li class="method public">
+				<a href="./Php::isStarted().html">isStarted()</a>												<li class="method public">
+				<a href="./Php::key().html">key()</a>												<li class="method public">
+				<a href="./Php::check().html">check()</a>												<li class="method public">
+				<a href="./Php::read().html">read()</a>												<li class="method public">
+				<a href="./Php::write().html">write()</a>												<li class="method public">
+				<a href="./Php::delete().html">delete()</a>												<li class="method public">
+				<a href="./Php::clear().html">clear()</a>												<li class="method public">
+				<a href="./Php::enabled().html">enabled()</a>												<li class="method public">
+				<a href="./Php::overwrite().html">overwrite()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./Php::$_defaults.html">$_defaults</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../../storage.html" class="symbol-segment">storage</a>\<a href="../../session.html" class="symbol-segment">session</a>\<a href="../adapter.html" class="symbol-segment">adapter</a>\Php		</h1>
+
+		<section class="under">
+														<div class="extends">
+					<span class="extends__title">Uses</span>
+											AutoConfigurable									</div>
+																<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>A minimal adapter to interface with native PHP sessions.</p>
+					</div>
+				
+									<div class="description">
+						<p>This adapter provides basic support for <code>write</code>, <code>read</code> and <code>delete</code>
+session handling, as well as allowing these three methods to be filtered as
+per the Lithium filtering system.</p>
+					</div>
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Php {
+
+	use AutoConfigurable;
+
+	/**
+	 * Default ini settings for this session adapter. Will disabl cookie lifetime,
+	 * set cookies to HTTP only and the cache_limiter to `&#039;nocache&#039;`.
+	 *
+	 * @link http://php.net/session.configuration.php
+	 * @link http://php.net/session.configuration.php#ini.session.cookie-lifetime
+	 * @link http://php.net/session.configuration.php#ini.session.cookie-httponly
+	 * @link http://php.net/session.configuration.php#ini.session.cache-limiter
+	 * @var array Configuration options matching the pattern `&#039;session.*&#039;` are session
+	 *      ini settings. Please consult the PHP documentation for further information.
+	 */
+	protected $_defaults = [
+		&#039;session.cookie_lifetime&#039; =&gt; &#039;0&#039;,
+		&#039;session.cookie_httponly&#039; =&gt; true,
+		&#039;session.cache_limiter&#039; =&gt; &#039;nocache&#039;
+	];
+
+	/**
+	 * Constructor. Takes care of setting appropriate configurations for this object. Also sets
+	 * session ini settings.
+	 *
+	 * @see lithium\storage\session\adapter\Php::$_defaults
+	 * @param array $config Configuration options matching the pattern `&#039;session.*&#039;` are interpreted
+	 *              as session ini settings. Please consult the PHP documentation for further
+	 *              information.
+	 *              A few ini settings are set by default here and will overwrite those from
+	 *              your php.ini. To disable sending a cache limiter set `&#039;session.cache_limiter&#039;`
+	 *              to `false`.
+	 * @return void
+	 */
+	public function __construct(array $config = []) {
+		if (empty($config[&#039;session.name&#039;])) {
+			$config[&#039;session.name&#039;] = basename(Libraries::get(true, &#039;path&#039;));
+		}
+		$this-&gt;_autoConfig($config + $this-&gt;_defaults, []);
+		$this-&gt;_autoInit($config);
+	}
+
+	/**
+	 * Initialization of the session.
+	 *
+	 * @todo Split up into an _initialize() and a _start().
+	 */
+	protected function _init() {
+		if ($this-&gt;isStarted()) {
+			return true;
+		}
+		$config = $this-&gt;_config;
+		unset($config[&#039;adapter&#039;], $config[&#039;strategies&#039;], $config[&#039;filters&#039;], $config[&#039;init&#039;]);
+
+		foreach ($config as $key =&gt; $value) {
+			if (strpos($key, &#039;session.&#039;) === false) {
+				continue;
+			}
+			if (ini_set($key, $value) === false) {
+				throw new ConfigException(&#039;Could not initialize the session.&#039;);
+			}
+		}
+	}
+
+	/**
+	 * Starts the session.
+	 *
+	 * @return boolean `true` if session successfully started
+	 *         (or has already been started), `false` otherwise.
+	 */
+	protected function _start() {
+		if ($this-&gt;isStarted()) {
+			return true;
+		}
+		session_cache_limiter();
+		return session_start();
+	}
+
+	/**
+	 * Obtain the status of the session.
+	 *
+	 * @return boolean True if a session is currently started, False otherwise. If PHP 5.4
+	 *                 then we know, if PHP 5.3 then we cannot tell for sure if a session
+	 *                 has been closed.
+	 */
+	public function isStarted() {
+		if (function_exists(&#039;session_status&#039;)) {
+			return session_status() === PHP_SESSION_ACTIVE;
+		}
+		return isset($_SESSION) &amp;&amp; session_id();
+	}
+
+	/**
+	 * Sets or obtains the session ID.
+	 *
+	 * @param string $key Optional. If specified, sets the session ID to the value of `$key`.
+	 * @return mixed Session ID, or `null` if the session has not been started.
+	 */
+	public function key($key = null) {
+		if ($key !== null) {
+			return session_id($key);
+		}
+		return session_id() ?: null;
+	}
+
+	/**
+	 * Checks if a value has been set in the session.
+	 *
+	 * @param string $key Key of the entry to be checked.
+	 * @param array $options Options array. Not used for this adapter method.
+	 * @return \Closure Function returning boolean `true` if the key exists, `false` otherwise.
+	 */
+	public function check($key, array $options = []) {
+		if (!$this-&gt;isStarted() &amp;&amp; !$this-&gt;_start()) {
+			throw new RuntimeException(&#039;Could not start session.&#039;);
+		}
+		return function($params) {
+			return Set::check($_SESSION, $params[&#039;key&#039;]);
+		};
+	}
+
+	/**
+	 * Read a value from the session.
+	 *
+	 * @param null|string $key Key of the entry to be read. If no key is passed, all
+	 *        current session data is returned.
+	 * @param array $options Options array. Not used for this adapter method.
+	 * @return \Closure Function returning data in the session if successful, `false` otherwise.
+	 */
+	public function read($key = null, array $options = []) {
+		if (!$this-&gt;isStarted() &amp;&amp; !$this-&gt;_start()) {
+			throw new RuntimeException(&#039;Could not start session.&#039;);
+		}
+		return function($params) {
+			$key = $params[&#039;key&#039;];
+
+			if (!$key) {
+				return $_SESSION;
+			}
+			if (strpos($key, &#039;.&#039;) === false) {
+				return isset($_SESSION[$key]) ? $_SESSION[$key] : null;
+			}
+			$filter  = function($keys, $data) use (&amp;$filter) {
+				$key = array_shift($keys);
+				if (isset($data[$key])) {
+					return (empty($keys)) ? $data[$key] : $filter($keys, $data[$key]);
+				}
+			};
+			return $filter(explode(&#039;.&#039;, $key), $_SESSION);
+		};
+	}
+
+	/**
+	 * Write a value to the session.
+	 *
+	 * @param string $key Key of the item to be stored.
+	 * @param mixed $value The value to be stored.
+	 * @param array $options Options array. Not used for this adapter method.
+	 * @return \Closure Function returning boolean `true` on successful write, `false` otherwise.
+	 */
+	public function write($key, $value, array $options = []) {
+		if (!$this-&gt;isStarted() &amp;&amp; !$this-&gt;_start()) {
+			throw new RuntimeException(&#039;Could not start session.&#039;);
+		}
+		return function($params) {
+			return $this-&gt;overwrite(
+				$_SESSION, Set::insert($_SESSION, $params[&#039;key&#039;], $params[&#039;value&#039;])
+			);
+		};
+	}
+
+	/**
+	 * Delete value from the session
+	 *
+	 * @param string $key The key to be deleted.
+	 * @param array $options Options array. Not used for this adapter method.
+	 * @return \Closure Function returning boolean `true` if the key no longer
+	 *         exists in the session, `false` otherwise
+	 */
+	public function delete($key, array $options = []) {
+		if (!$this-&gt;isStarted() &amp;&amp; !$this-&gt;_start()) {
+			throw new RuntimeException(&#039;Could not start session.&#039;);
+		}
+		return function($params) {
+			$key = $params[&#039;key&#039;];
+			$this-&gt;overwrite($_SESSION, Set::remove($_SESSION, $key));
+			return !Set::check($_SESSION, $key);
+		};
+	}
+
+	/**
+	 * Clears all keys from the session.
+	 *
+	 * @param array $options Options array. Not used for this adapter method.
+	 * @return \Closure Function returning boolean `true` on successful clear, `false` otherwise.
+	 */
+	public function clear(array $options = []) {
+		if (!$this-&gt;isStarted() &amp;&amp; !$this-&gt;_start()) {
+			throw new RuntimeException(&#039;Could not start session.&#039;);
+		}
+		return function($params) {
+			return session_destroy();
+		};
+	}
+
+	/**
+	 * Determines if PHP sessions are enabled.
+	 *
+	 * @return boolean Returns `true` if enabled (PHP session functionality
+	 *         can be disabled completely), `false` otherwise.
+	 */
+	public static function enabled() {
+		if (function_exists(&#039;session_status&#039;)) {
+			return session_status() !== PHP_SESSION_DISABLED;
+		}
+		return in_array(&#039;session&#039;, get_loaded_extensions());
+	}
+
+	/**
+	 * Overwrites session keys and values.
+	 *
+	 * @param array $old Reference to the array that needs to be
+	 *              overwritten. Will usually be `$_SESSION`.
+	 * @param array $new The data that should overwrite the keys/values in `$old`.
+	 * @return boolean Always `true`.
+	 */
+	public function overwrite(&amp;$old, $new) {
+		if (!empty($old)) {
+			foreach ($old as $key =&gt; $value) {
+				if (!isset($new[$key])) {
+					unset($old[$key]);
+				}
+			}
+		}
+		foreach ($new as $key =&gt; $value) {
+			$old[$key] = $value;
+		}
+		return true;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

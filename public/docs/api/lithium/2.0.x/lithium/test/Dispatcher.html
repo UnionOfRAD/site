@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\test\Dispatcher – Framework API v2.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (2.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../test.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">test</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Dispatcher</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../test.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Dispatcher::run().html">run()</a>												<li class="method protected">
+				<a href="./Dispatcher::_group().html">_group()</a>												<li class="method protected">
+				<a href="./Dispatcher::_report().html">_report()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./Dispatcher::$_classes.html">$_classes</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../test.html" class="symbol-segment">test</a>\Dispatcher		</h1>
+
+		<section class="under">
+															<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The Lithium Test Dispatcher</p>
+					</div>
+				
+									<div class="description">
+						<p>This Dispatcher is used exclusively for the purpose of running, organizing and compiling
+statistics for the built-in Lithium test suite.</p>
+					</div>
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Dispatcher {
+
+	/**
+	 * Composed classes used by the Dispatcher.
+	 *
+	 * @var array Key/value array of short identifier for the fully-namespaced class.
+	 */
+	protected static $_classes = [
+		&#039;group&#039; =&gt; &#039;lithium\test\Group&#039;,
+		&#039;report&#039; =&gt; &#039;lithium\test\Report&#039;
+	];
+
+	/**
+	 * Runs a test group or a specific test file based on the passed
+	 * parameters.
+	 *
+	 * @param string $group If set, this test group is run. If not set, a group test may
+	 *        also be run by passing the &#039;group&#039; option to the $options parameter.
+	 * @param array $options Options array for the test run. Valid options are:
+	 *        - `&#039;case&#039;`: The fully namespaced test case to be run.
+	 *        - `&#039;group&#039;`: The fully namespaced test group to be run.
+	 *        - `&#039;filters&#039;`: An array of filters that the test output should be run through.
+	 *        - `&#039;format&#039;`: The format of the template to use, defaults to `&#039;txt&#039;`.
+	 *        - `&#039;reporter&#039;`: The reporter to use.
+	 * @return object A Report object.
+	 * @filter
+	 */
+	public static function run($group = null, array $options = []) {
+		$defaults = [
+			&#039;title&#039; =&gt; $group,
+			&#039;filters&#039; =&gt; [],
+			&#039;format&#039; =&gt; &#039;txt&#039;,
+			&#039;reporter&#039; =&gt; null
+		];
+		$options += $defaults;
+		$isCase = is_string($group) &amp;&amp; preg_match(&#039;/Test$/&#039;, $group);
+		$items = ($isCase) ? [new $group()] : (array) $group;
+
+		$options[&#039;filters&#039;] = array_map(function($v) {
+			return (array) $v;
+		}, Set::normalize($options[&#039;filters&#039;]));
+
+		$group = static::_group($items);
+		$report = static::_report($group, $options);
+
+		return Filters::run(get_called_class(), __FUNCTION__, compact(&#039;report&#039;), function($params) {
+			$environment = Environment::get();
+			Environment::set(&#039;test&#039;);
+
+			$params[&#039;report&#039;]-&gt;run();
+
+			Environment::set($environment);
+			return $params[&#039;report&#039;];
+		});
+	}
+
+	/**
+	 * Creates the group class based
+	 *
+	 * @see lithium\test\Dispatcher::$_classes
+	 * @param array $data Array of cases or groups.
+	 * @return object Group object constructed with `$data`.
+	 */
+	protected static function _group($data) {
+		return Libraries::instance(&#039;test&#039;, static::$_classes[&#039;group&#039;], compact(&#039;data&#039;));
+	}
+
+	/**
+	 * Creates the test report class based on either the passed test case or the
+	 * passed test group.
+	 *
+	 * @see lithium\test\Dispatcher::$_classes
+	 * @param string $group
+	 * @param array $options Options array passed from Dispatcher::run(). Should contain
+	 *        one of &#039;case&#039; or &#039;group&#039; keys.
+	 * @return object Group object constructed with the test case or group passed in $options.
+	 */
+	protected static function _report($group, $options) {
+		return Libraries::instance(&#039;test&#039;, static::$_classes[&#039;report&#039;], compact(&#039;group&#039;) + $options);
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

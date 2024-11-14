@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Environment – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/book/manual/1.x" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/book/manual/1.x/configuration" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Configuration</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Environment</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="/docs/book/manual/1.x/common-tasks" class="">Common Tasks</a><ul><li><a href="/docs/book/manual/1.x/common-tasks/logging" class="">Logging</a><li><a href="/docs/book/manual/1.x/common-tasks/plugins" class="">Plugins</a><li><a href="/docs/book/manual/1.x/common-tasks/error-handling" class="">Error Handling</a><li><a href="/docs/book/manual/1.x/common-tasks/caching" class="">Caching</a><li><a href="/docs/book/manual/1.x/common-tasks/filters" class="">Filters</a><li><a href="/docs/book/manual/1.x/common-tasks/etags" class="">Etags</a><li><a href="/docs/book/manual/1.x/common-tasks/globalization" class="">Globalization</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-authentication" class="">Simple Authentication</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-auth-user" class="">Simple Auth User</a><li><a href="/docs/book/manual/1.x/common-tasks/console-applications" class="">Console Applications</a></ul><li><a href="/docs/book/manual/1.x/appendices" class="">Appendices</a><ul><li><a href="/docs/book/manual/1.x/appendices/faqs" class="">FAQs</a><li><a href="/docs/book/manual/1.x/appendices/using-in-other-applications" class="">Using In Other Applications</a></ul><li><a href="/docs/book/manual/1.x/quickstart" class="">Quickstart</a><li><a href="/docs/book/manual/1.x/controllers" class="">Controllers</a><ul><li><a href="/docs/book/manual/1.x/controllers/actions" class="">Actions</a><li><a href="/docs/book/manual/1.x/controllers/flow-control" class="">Flow Control</a><li><a href="/docs/book/manual/1.x/controllers/parameters" class="">Parameters</a><li><a href="/docs/book/manual/1.x/controllers/type-rendering-detection" class="">Type Rendering Detection</a><li><a href="/docs/book/manual/1.x/controllers/routing" class="">Routing</a></ul><li><a href="/docs/book/manual/1.x/installation" class="">Installation</a><ul><li><a href="/docs/book/manual/1.x/installation/requirements" class="">Requirements</a><li><a href="/docs/book/manual/1.x/installation/troubleshooting" class="">Troubleshooting</a><li><a href="/docs/book/manual/1.x/installation/web-servers" class="">Web Servers</a></ul><li><a href="/docs/book/manual/1.x/architecture" class="">Architecture</a><ul><li><a href="/docs/book/manual/1.x/architecture/file-structure" class="">File Structure</a><li><a href="/docs/book/manual/1.x/architecture/response-lifecycle" class="">Response Lifecycle</a><li><a href="/docs/book/manual/1.x/architecture/aop" class="">AOP</a><li><a href="/docs/book/manual/1.x/architecture/mvc" class="">MVC</a><li><a href="/docs/book/manual/1.x/architecture/objects" class="">Objects</a></ul><li><a href="/docs/book/manual/1.x/quality-code" class="">Quality Code</a><ul><li><a href="/docs/book/manual/1.x/quality-code/fixtures" class="">Fixtures</a><li><a href="/docs/book/manual/1.x/quality-code/analysis" class="">Analysis</a><li><a href="/docs/book/manual/1.x/quality-code/testing" class="">Testing</a><li><a href="/docs/book/manual/1.x/quality-code/security" class="">Security</a></ul><li><a href="/docs/book/manual/1.x/configuration" class="">Configuration</a><ul><li><a href="/docs/book/manual/1.x/configuration/environment" class="active">Environment</a><li><a href="/docs/book/manual/1.x/configuration/bootstrapping" class="">Bootstrapping</a><li><a href="/docs/book/manual/1.x/configuration/third-party-libraries" class="">Third Party Libraries</a></ul><li><a href="/docs/book/manual/1.x/views" class="">Views</a><ul><li><a href="/docs/book/manual/1.x/views/layouts" class="">Layouts</a><li><a href="/docs/book/manual/1.x/views/elements" class="">Elements</a><li><a href="/docs/book/manual/1.x/views/helpers" class="">Helpers</a><li><a href="/docs/book/manual/1.x/views/static-content" class="">Static Content</a><li><a href="/docs/book/manual/1.x/views/auto-escaping" class="">Auto Escaping</a></ul><li><a href="/docs/book/manual/1.x/models" class="">Models</a><ul><li><a href="/docs/book/manual/1.x/models/mongodb" class="">Mongodb</a><li><a href="/docs/book/manual/1.x/models/meta" class="">Meta</a><li><a href="/docs/book/manual/1.x/models/relationships" class="">Relationships</a><li><a href="/docs/book/manual/1.x/models/saving" class="">Saving</a><li><a href="/docs/book/manual/1.x/models/using-data-sources" class="">Using Data Sources</a><li><a href="/docs/book/manual/1.x/models/adding-functions" class="">Adding Functions</a><li><a href="/docs/book/manual/1.x/models/data-mutation" class="">Data Mutation</a><li><a href="/docs/book/manual/1.x/models/connections" class="">Connections</a><li><a href="/docs/book/manual/1.x/models/creating-data-sources" class="">Creating Data Sources</a><li><a href="/docs/book/manual/1.x/models/querying" class="">Querying</a><li><a href="/docs/book/manual/1.x/models/validation" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="environment-configuration" class="anchor" href="#environment-configuration">Environment Configuration</a></h1>
+<p>Most applications use a set of different environments to validate new features and test the fixes for bugs before letting the end users see it. li3's <code>Environment</code> class offers a way to organize settings and make logic in your application conditional based on where the application thinks it resides.</p>
+<p>Rather than wrapping conditionals around all of your database settings and API keys and endpoints, you can use the <code>Environment</code> class to direct the application automatically, based on context.</p>
+<p>li3 offers a default set of environments (development, test, and production) as well as a starting point for determining which one the application resides in. This guide covers the process of showing li3 how to detect and define your different environments and use them in configuration details.</p>
+<h2><a id="getting-started-detection" class="anchor" href="#getting-started-detection">Getting Started: Detection</a></h2>
+<p>The first step in using different environmental settings is telling li3 how to detect where it is operating from. There are a number of clues often used in determining the environment: IP address or ranges, hostname pattern matching, or possibly even looking at the filesystem or database.</p>
+<p>Environment detection is determined by default as follows:</p>
+<ul>
+<li>The request is local (IP address 127.0.0.1, etc.): <em>development</em>.</li>
+<li>The request URL or hostname starts with "test": <em>test</em>.</li>
+<li>Neither of the above: <em>production</em>.</li>
+</ul>
+<p>To customize this behavior, use the <code>Environment::is()</code> method inside a bootstrap file. Supply a closure that inspects an incoming <code>Request</code> and returns the name of the environment deteted. Here's a simple example:</p>
+<pre><code class="language-php">Environment::is(function($request){
+  $host = $request-&gt;env('HTTP_HOST');
+
+  if ($host == 'app.local' || $host == 'localhost') {
+    return 'development';
+  }
+  if (preg_match('/^qa/', $host)) {
+    return 'qa';
+  }
+  if (preg_match('/beta/', $host)) {
+    return 'staging';
+  }
+  return 'production';
+});
+</code></pre>
+<p>This code defines four custom environments: <em>development</em> if the hostname matches a predetermined set of hostnames, <em>qa</em> if the hostname begins with "qa" (qa1.example.com, qa2.example.com), and <em>staging</em> if the hostname contains "beta" (beta.example.com, www.example-beta.com).</p>
+<p>If none of those conditions are met, the default is production.</p>
+<h2><a id="environment-specific-settings" class="anchor" href="#environment-specific-settings">Environment-Specific Settings</a></h2>
+<p>Once detection is configured, you're able to set environment-specific variables inside of your bootstrap files.</p>
+<pre><code class="language-php">Environment::set('development', ['service_endpoint', 'dev.service.example.com']);
+Environment::set('staging'    , ['service_endpoint', 'beta.service.example.com']);
+Environment::set('qa'         , ['service_endpoint', 'qa1.service.example.com']);
+Environment::set('production' , ['service_endpoint', 'www.service.example.com']);
+
+// If run on my local system:
+Environment::get('service_endpoint'); // 'dev.service.example.com'
+</code></pre>
+<h2><a id="adaptable-environment-settings" class="anchor" href="#adaptable-environment-settings">Adaptable Environment Settings</a></h2>
+<p>Subclasses of the core <code>Adaptable</code> class (<code>Logger</code>, <code>Connections</code>, <code>Cache</code>, <code>Session</code>, etc.) can also be configured on an environmental basis. For core functionality, this is much cleaner than large sets of <code>Environment::set</code> calls in your bootstrap files.</p>
+<p>The most common example is configuring different database connections based on environment. Here's a quick example:</p>
+<pre><code class="language-php">Connections::add('default', [
+    'production' =&gt; [
+        'type'     =&gt; 'database',
+        'adapter'  =&gt; 'MySql',
+        'host'     =&gt; 'live.example.com',
+        'login'    =&gt; 'mysqluser',
+        'password' =&gt; 's3cr3tg035h3rE',
+        'database' =&gt; 'app-production'
+    ],
+    'development' =&gt; [
+        'type'     =&gt; 'database',
+        'adapter'  =&gt; 'MySql',
+        'host'     =&gt; 'localhost',
+        'login'    =&gt; 'root',
+        'password' =&gt; '4d1fFeR3n75eCr37',
+        'database' =&gt; 'app'
+    ]
+]);
+</code></pre>
+<p>While it is handy for using the same types of technologies in each environment, this mechanism allows you to switch between engines as well. For example, using different kinds of Cache engines in each environment:</p>
+<pre><code class="language-php">Cache::config([
+    'userData' =&gt; [
+        'development' =&gt; ['adapter' =&gt; 'File'],
+        'production' =&gt; ['adapter' =&gt; 'Memcache']
+    ]
+]);
+</code></pre>
+<p>For more information about creating your own classes that utilize <code>Adaptable</code> and <code>Environment</code> for automatically changing settings, see the Adaptable guide in the Advanced Tasks section.</p>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

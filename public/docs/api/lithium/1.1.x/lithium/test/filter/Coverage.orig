@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\test\filter\Coverage – Framework API v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.1.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.1.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.1.x/lithium/test" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">test</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.1.x/lithium/test/filter" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">filter</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Coverage</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.1.x/lithium/test/filter" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/test/filter/Coverage::apply()">apply()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/test/filter/Coverage::analyze()">analyze()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/test/filter/Coverage::collectLines()">collectLines()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/test/filter/Coverage::collect()">collect()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/test/filter/Coverage::_density()">_density()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::invokeMethod()">invokeMethod()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::respondsTo()">respondsTo()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::_instance()">_instance()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::_parents()">_parents()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::_stop()">_stop()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::applyFilter()">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::_filter()">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::$_parents">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::$_methodFilters">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.1.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.1.x/lithium/test" class="symbol-segment">test</a>\<a href="/docs/api/lithium/1.1.x/lithium/test/filter" class="symbol-segment">filter</a>\Coverage		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.1.x/lithium/test/Filter" class="extends__symbol">lithium\test\Filter</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Runs code coverage analysis for the executed tests.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Coverage extends \lithium\test\Filter {
+
+	/**
+	 * Takes an instance of an object (usually a Collection object) containing test
+	 * instances. Attaches code coverage filtering to test cases.
+	 *
+	 * @see lithium\test\filter\Coverage::collect()
+	 * @param object $report Instance of Report which is calling apply.
+	 * @param \lithium\util\Collection $tests The tests to apply this filter on.
+	 * @param array $options Options for how code coverage should be applied. These options are
+	 *              also passed to `Coverage::collect()` to determine how to aggregate results. See
+	 *              the documentation for `collect()` for further options.  Options affecting this
+	 *              method are:
+	 *              -&#039;method&#039;: The name of method to attach to, defaults to &#039;run&#039;.
+	 * @return object Returns the instance of `$tests` with code coverage analysis
+	 *                     triggers applied.
+	 */
+	public static function apply($report, $tests, array $options = []) {
+		$defaults = [&#039;method&#039; =&gt; &#039;run&#039;];
+		$options += $defaults;
+
+		if (!function_exists(&#039;xdebug_start_code_coverage&#039;)) {
+			$msg = &quot;Xdebug not installed. Please install Xdebug before running code coverage.&quot;;
+			throw new RuntimeException($msg);
+		}
+
+		foreach ($tests as $test) {
+			$filter = function($params, $next) use ($test, $report) {
+				xdebug_start_code_coverage(XDEBUG_CC_UNUSED);
+				$next($params);
+				$results = xdebug_get_code_coverage();
+				xdebug_stop_code_coverage();
+				$report-&gt;collect(__CLASS__, [$test-&gt;subject() =&gt; $results]);
+			};
+			Filters::apply($test, $options[&#039;method&#039;], $filter);
+		}
+		return $tests;
+	}
+
+	/**
+	 * Analyzes code coverage results collected from XDebug, and performs coverage density analysis.
+	 *
+	 * @param object $report The report instance running this filter and aggregating results
+	 * @param array $classes A list of classes to analyze coverage on. By default, gets all
+	 *              defined subclasses of lithium\test\Unit which are currently in memory.
+	 * @return array Returns an array indexed by file and line, showing the number of
+	 *                    instances each line was called.
+	 */
+	public static function analyze($report, array $classes = []) {
+		$data = static::collect($report-&gt;results[&#039;filters&#039;][__CLASS__]);
+		$classes = $classes ?: array_filter(get_declared_classes(), function($class) use ($data) {
+			$unit = &#039;lithium\test\Unit&#039;;
+			return (!(is_subclass_of($class, $unit)) || array_key_exists($class, $data));
+		});
+		$classes = array_values(array_intersect((array) $classes, array_keys($data)));
+		$densities = $result = [];
+
+		foreach ($classes as $class) {
+			$classMap = [$class =&gt; Libraries::path($class)];
+			$densities += static::_density($data[$class], $classMap);
+		}
+		$executableLines = [];
+
+		if ($classes) {
+			$executableLines = array_combine($classes, array_map(
+				function($cls) { return Inspector::executable($cls, [&#039;public&#039; =&gt; false]); },
+				$classes
+			));
+		}
+
+		foreach ($densities as $class =&gt; $density) {
+			$executable = $executableLines[$class];
+			$covered = array_intersect(array_keys($density), $executable);
+			$uncovered = array_diff($executable, $covered);
+			if (count($executable)) {
+				$percentage = round(count($covered) / (count($executable) ?: 1), 4) * 100;
+			} else {
+				$percentage = 100;
+			}
+			$result[$class] = compact(&#039;class&#039;, &#039;executable&#039;, &#039;covered&#039;, &#039;uncovered&#039;, &#039;percentage&#039;);
+		}
+
+		$result = static::collectLines($result);
+		return $result;
+	}
+
+	/**
+	 * Takes the raw line numbers and returns results with the code from
+	 * uncovered lines included.
+	 *
+	 * @param array $result The raw line number results
+	 * @return array
+	 */
+	public static function collectLines($result) {
+		$aggregate = [&#039;covered&#039; =&gt; 0, &#039;executable&#039; =&gt; 0];
+
+		foreach ($result as $class =&gt; $coverage) {
+			$out = [];
+			$file = Libraries::path($class);
+
+			$aggregate[&#039;covered&#039;] += count($coverage[&#039;covered&#039;]);
+			$aggregate[&#039;executable&#039;] += count($coverage[&#039;executable&#039;]);
+
+			$uncovered = array_flip($coverage[&#039;uncovered&#039;]);
+			$contents = explode(&quot;\n&quot;, file_get_contents($file));
+			array_unshift($contents, &#039; &#039;);
+			$count = count($contents);
+
+			for ($i = 1; $i &lt;= $count; $i++) {
+				if (isset($uncovered[$i])) {
+					if (!isset($out[$i - 2])) {
+						$out[$i - 2] = [
+							&#039;class&#039; =&gt; &#039;ignored&#039;,
+							&#039;data&#039; =&gt; &#039;...&#039;
+						];
+					}
+					if (!isset($out[$i - 1])) {
+						$out[$i - 1] = [
+							&#039;class&#039; =&gt; &#039;covered&#039;,
+							&#039;data&#039; =&gt; $contents[$i - 1]
+						];
+					}
+					$out[$i] = [
+						&#039;class&#039; =&gt; &#039;uncovered&#039;,
+						&#039;data&#039; =&gt; $contents[$i]
+					];
+
+					if (!isset($uncovered[$i + 1])) {
+						$out[$i + 1] = [
+							&#039;class&#039; =&gt; &#039;covered&#039;,
+							&#039;data&#039; =&gt; $contents[$i + 1]
+						];
+					}
+				} elseif (
+					isset($out[$i - 1]) &amp;&amp; $out[$i - 1][&#039;data&#039;] !== &#039;...&#039; &amp;&amp;
+					!isset($out[$i]) &amp;&amp; !isset($out[$i + 1])
+				) {
+					$out[$i] = [
+						&#039;class&#039; =&gt; &#039;ignored&#039;,
+						&#039;data&#039; =&gt; &#039;...&#039;
+					];
+				}
+			}
+			$result[$class][&#039;output&#039;][$file] = $out;
+		}
+		return $result;
+	}
+
+	/**
+	 * Collects code coverage analysis results from `xdebug_get_code_coverage()`.
+	 *
+	 * @see lithium\test\filter\Coverage::analyze()
+	 * @param array $filterResults An array of results arrays from `xdebug_get_code_coverage()`.
+	 * @param array $options Set of options defining how results should be collected.
+	 * @return array The packaged filter results.
+	 * @todo Implement $options[&#039;merging&#039;]
+	 */
+	public static function collect($filterResults, array $options = []) {
+		$defaults = [&#039;merging&#039; =&gt; &#039;class&#039;];
+		$options += $defaults;
+		$packagedResults = [];
+
+		foreach ($filterResults as $results) {
+			$class = key($results);
+			$results = $results[$class];
+			foreach ($results as $file =&gt; $lines) {
+				unset($results[$file][0]);
+			}
+
+			switch ($options[&#039;merging&#039;]) {
+				case &#039;class&#039;:
+				default:
+					if (!isset($packagedResults[$class])) {
+						$packagedResults[$class] = [];
+					}
+					$packagedResults[$class][] = $results;
+				break;
+			}
+		}
+
+		return $packagedResults;
+	}
+
+	/**
+	 * Reduces the results of multiple XDebug code coverage runs into a single 2D array of the
+	 * aggregate line coverage density per file.
+	 *
+	 * @param array $runs An array containing multiple runs of raw XDebug coverage data, where
+	 *              each array key is a file name, and its value is XDebug&#039;s coverage
+	 *              data for that file.
+	 * @param array $classMap An optional map with class names as array keys and corresponding file
+	 *              names as values. Used to filter the returned results, and will cause the array
+	 *              keys of the results to be class names instead of file names.
+	 * @return array
+	 */
+	protected static function _density($runs, $classMap = []) {
+		$results = [];
+
+		foreach ($runs as $run) {
+			foreach ($run as $file =&gt; $coverage) {
+				if ($classMap) {
+					if (!$class = array_search($file, $classMap)) {
+						continue;
+					}
+					$file = $class;
+				}
+				if (!isset($results[$file])) {
+					$results[$file] = [];
+				}
+				$coverage = array_filter($coverage, function($line) { return ($line === 1); });
+
+				foreach ($coverage as $line =&gt; $isCovered) {
+					if (!isset($results[$file][$line])) {
+						$results[$file][$line] = 0;
+					}
+					$results[$file][$line]++;
+				}
+			}
+		}
+		return $results;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

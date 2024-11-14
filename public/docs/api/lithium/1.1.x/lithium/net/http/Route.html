@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\net\http\Route – Framework API v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../versions.html">Versions</a><a href="../../../../../../../present.html">Presentations</a><a href="../../../../../../../support.html">Community</a><a href="../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../net.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">net</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../http.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">http</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Route</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../http.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Route::__construct().html">__construct()</a>												<li class="method protected">
+				<a href="./Route::_init().html">_init()</a>												<li class="method public">
+				<a href="./Route::parse().html">parse()</a>												<li class="method public">
+				<a href="./Route::match().html">match()</a>												<li class="method public">
+				<a href="./Route::canContinue().html">canContinue()</a>												<li class="method protected">
+				<a href="./Route::_matchMethod().html">_matchMethod()</a>												<li class="method protected">
+				<a href="./Route::_matchKeys().html">_matchKeys()</a>												<li class="method protected">
+				<a href="./Route::_write().html">_write()</a>												<li class="method public">
+				<a href="./Route::export().html">export()</a>												<li class="method public">
+				<a href="./Route::compile().html">compile()</a>												<li class="method protected">
+				<a href="./Route::_regex().html">_regex()</a>												<li class="method public inherited">
+				<a href="../../core/Object::invokeMethod().html">invokeMethod()</a>												<li class="method public inherited">
+				<a href="../../core/Object::__set_state().html">__set_state()</a>												<li class="method public inherited">
+				<a href="../../core/Object::respondsTo().html">respondsTo()</a>												<li class="method protected inherited">
+				<a href="../../core/Object::_instance().html">_instance()</a>												<li class="method protected inherited">
+				<a href="../../core/Object::_parents().html">_parents()</a>												<li class="method protected inherited">
+				<a href="../../core/Object::_stop().html">_stop()</a>												<li class="method public deprecated inherited">
+				<a href="../../core/Object::applyFilter().html">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="../../core/Object::_filter().html">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./Route::$_template.html">$_template</a>												<li class="property protected">
+				<a href="./Route::$_pattern.html">$_pattern</a>												<li class="property protected">
+				<a href="./Route::$_keys.html">$_keys</a>												<li class="property protected">
+				<a href="./Route::$_params.html">$_params</a>												<li class="property protected">
+				<a href="./Route::$_match.html">$_match</a>												<li class="property protected">
+				<a href="./Route::$_meta.html">$_meta</a>												<li class="property protected">
+				<a href="./Route::$_defaults.html">$_defaults</a>												<li class="property protected">
+				<a href="./Route::$_subPatterns.html">$_subPatterns</a>												<li class="property protected">
+				<a href="./Route::$_persist.html">$_persist</a>												<li class="property protected">
+				<a href="./Route::$_handler.html">$_handler</a>												<li class="property protected">
+				<a href="./Route::$_formatters.html">$_formatters</a>												<li class="property protected">
+				<a href="./Route::$_autoConfig.html">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="../../core/Object::$_config.html">$_config</a>												<li class="property protected inherited">
+				<a href="../../core/Object::$_parents.html">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="../../core/Object::$_methodFilters.html">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../net.html" class="symbol-segment">net</a>\<a href="../http.html" class="symbol-segment">http</a>\Route		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../../core/Object.html" class="extends__symbol">lithium\core\Object</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The <code>Route</code> class represents a single URL pattern which is matched against incoming requests, in
+order to determine the correct controller and action that an HTTP request should be dispatched
+to.</p>
+					</div>
+				
+									<div class="description">
+						<p>Typically, <code>Route</code> objects are created and handled through the <code>Router</code> class, as follows.
+When connecting a route, a <code>Route</code> object is instantiated behind the scenes, and added
+to the <code>Router</code>'s collection.</p>
+<pre><code class="language-php">Router::connect("/{:controller}/{:action}");
+</code></pre>
+<p>This following matches a set of parameters against all <code>Route</code> objects contained in Router, and
+if a match is found, returns a string URL with parameters inserted into the URL pattern.</p>
+<pre><code class="language-php">Router::match(["controller" =&gt; "users", "action" =&gt; "login"]); // returns "/users/login"
+</code></pre>
+<p>For more advanced routing, however, you can directly instantiate a <code>Route</code> object, a subclass,
+or any class that implements <code>parse()</code> and <code>match()</code> (see the documentation for each individual
+method) and configure it manually -- if, for example, you want the route to match different
+incoming URLs than it generates.</p>
+<pre><code class="language-php">$route = new Route([
+       'template' =&gt; '/users/{:user}',
+       'pattern' =&gt; '@^/u(?:sers)?(?:/(?P&lt;user&gt;[^\/]+))$@',
+       'params' =&gt; ['controller' =&gt; 'users', 'action' =&gt; 'index'],
+       'match' =&gt; ['controller' =&gt; 'users', 'action' =&gt; 'index'],
+       'defaults' =&gt; ['controller' =&gt; 'users'],
+       'keys' =&gt; ['user' =&gt; 'user'],
+       'options' =&gt; ['compile' =&gt; false, 'wrap' =&gt; false]
+]);
+
+Router::connect($route); // this will match '/users/&lt;username&gt;' or '/u/&lt;username&gt;'.
+</code></pre>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="./Route::compile().html">lithium\net\http\Route::compile()</a>									<li><a href="Router.html">lithium\net\http\Router</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Route extends \lithium\core\Object {
+
+	/**
+	 * The URL template string that the route matches, i.e.
+	 * `&#039;/admin/{:controller}/{:id:\d+}/{:args}&#039;`.
+	 *
+	 * This string can contain any combination of...
+	 *
+	 * 1. fixed elements, i.e. `&#039;/admin&#039;`
+	 * 2. plain capture elements, i.e. `&#039;/{:controller}&#039;`
+	 * 3. capture elements paired with regular expressions, i.e. `&#039;/{:id:\d+}&#039;`
+	 * 4. capture elements paired with named regular expression patterns, `&#039;/{:id:ID}&#039;`
+	 * 5. the speciall wildcard capture element `&#039;{:args}&#039;`
+	 *
+	 * @var string
+	 */
+	protected $_template = &#039;&#039;;
+
+	/**
+	 * The regular expression used to match URLs.
+	 *
+	 * This regular expression is typically _compiled_ down from the higher-level syntax used in
+	 * `$_template`, but can be set manually with compilation turned off in the constructor for
+	 * extra control or if you are using pre-compiled `Route` objects.
+	 *
+	 * @var string
+	 * @see lithium\net\http\Route::$_template
+	 * @see lithium\net\http\Route::__construct()
+	 */
+	protected $_pattern = &#039;&#039;;
+
+	/**
+	 * An array of route parameter names (i.e. `{:foo}`) that appear in the URL template.
+	 *
+	 * @var array
+	 * @see lithium\net\http\Route::$_template
+	 */
+	protected $_keys = [];
+
+	/**
+	 * An array of key/value pairs representing the parameters of the route. For keys which match
+	 * parameters present in the route template, the corresponding values match the default values
+	 * of those parameters. Specifying a default value for a template parameter makes that
+	 * parameter optional. Any other pairs specified must match exactly when doing a reverse lookup
+	 * in order for the route to match.
+	 *
+	 * @var array
+	 */
+	protected $_params = [];
+
+	/**
+	 * The array of values that appear in the second parameter of `Router::connect()`, which are
+	 * **not** present in the URL template. When matching a route, these parameters must appear
+	 * **exactly** as specified here.
+	 *
+	 * @var array
+	 */
+	protected $_match = [];
+
+	/**
+	 * An array of metadata parameters which must be present in the request in order for the route
+	 * to match.
+	 *
+	 * @var array
+	 */
+	protected $_meta = [];
+
+	/**
+	 * The default values for the keys present in the URL template.
+	 *
+	 * @var array
+	 * @see lithium\net\http\Route::$_template
+	 * @see lithium\net\http\Route::$_keys
+	 */
+	protected $_defaults = [];
+
+	/**
+	 * An array of regular expression patterns used in route matching.
+	 *
+	 * @var array
+	 */
+	protected $_subPatterns = [];
+
+	/**
+	 * An array of parameter names which will persist by default when generating URLs. By default,
+	 * the `&#039;controller&#039;` parameter is set to persist, which means that the controller name matched
+	 * for a given request will be used to generate all URLs for that request, unless the
+	 * `&#039;controller&#039;` parameter is specified in that URL with another value.
+	 *
+	 * @var array
+	 */
+	protected $_persist = [];
+
+	/**
+	 * Contains a function which will be executed if this route is matched. The function takes the
+	 * instance of the associated `Request` object, and the array of matched route parameters, and
+	 * must return either the parameters array (which may be modified by the handler) or a
+	 * `Response` object, in which case the response will be returned directly. This may be used to
+	 * handle redirects, or simple API services.
+	 *
+	 * ```
+	 * new Route([
+	 *     &#039;template&#039; =&gt; &#039;/photos/{:id:[0-9]+}.jpg&#039;,
+	 *     &#039;handler&#039; =&gt; function($request) {
+	 *         return new Response([
+	 *             &#039;headers&#039; =&gt; [&#039;Content-type&#039; =&gt; &#039;image/jpeg&#039;],
+	 *             &#039;body&#039; =&gt; Photos::first($request-&gt;id)-&gt;bytes()
+	 *         ]);
+	 *     }
+	 * }];
+	 * ```
+	 *
+	 * @see lithium\net\http\Route::parse()
+	 * @see lithium\net\http\Response
+	 * @var callable
+	 */
+	protected $_handler = null;
+
+	/**
+	 * Array of closures used to format route parameters when compiling URLs.
+	 *
+	 * @see lithium\net\http\Router::formatters()
+	 * @var array
+	 */
+	protected $_formatters = [];
+
+	/**
+	 * Auto configuration properties. Also used as the list of properties to return when exporting
+	 * this `Route` object to an array.
+	 *
+	 * @see lithium\net\http\Route::export()
+	 * @var array
+	 */
+	protected $_autoConfig = [
+		&#039;template&#039;, &#039;pattern&#039;, &#039;params&#039;, &#039;match&#039;, &#039;meta&#039;,
+		&#039;keys&#039;, &#039;defaults&#039;, &#039;subPatterns&#039;, &#039;persist&#039;, &#039;handler&#039;
+	];
+
+	/**
+	 * Constructor.
+	 *
+	 * @param array $config Available configuration options are:
+	 *         - `&#039;params&#039;` _array_
+	 *         - `&#039;template&#039;` _string_
+	 *         - `&#039;pattern&#039;` _string_
+	 *         - `&#039;match&#039;` _array_
+	 *         - `&#039;meta&#039;` _array_
+	 *         - `&#039;defaults&#039;` _array_
+	 *         - `&#039;keys&#039;` _array_
+	 *         - `&#039;persist&#039;` _array_
+	 *         - `&#039;handler&#039;` _callable_
+	 *         - `&#039;continue&#039;` _boolean_
+	 *         - `&#039;modifiers&#039;` _array_
+	 *         - `&#039;formatters&#039;` _array_
+	 *         - `&#039;unicode&#039;` _boolean_
+	 * @return void
+	 */
+	public function __construct(array $config = []) {
+		$defaults = [
+			&#039;params&#039;   =&gt; [],
+			&#039;template&#039; =&gt; &#039;/&#039;,
+			&#039;pattern&#039;  =&gt; &#039;&#039;,
+			&#039;match&#039;    =&gt; [],
+			&#039;meta&#039;     =&gt; [],
+			&#039;defaults&#039; =&gt; [],
+			&#039;keys&#039;     =&gt; [],
+			&#039;persist&#039;  =&gt; [],
+			&#039;handler&#039;  =&gt; null,
+			&#039;continue&#039; =&gt; false,
+			&#039;modifiers&#039; =&gt; [],
+			&#039;formatters&#039; =&gt; [],
+			&#039;unicode&#039;  =&gt; true
+		];
+		parent::__construct($config + $defaults);
+	}
+
+	protected function _init() {
+		parent::_init();
+
+		if (!$this-&gt;_config[&#039;continue&#039;] &amp;&amp; strpos($this-&gt;_template, &#039;{:action:&#039;) === false) {
+			$this-&gt;_params += [&#039;action&#039; =&gt; &#039;index&#039;];
+		}
+		if (!$this-&gt;_pattern) {
+			$this-&gt;compile();
+		}
+		if (isset($this-&gt;_keys[&#039;controller&#039;]) || isset($this-&gt;_params[&#039;controller&#039;])) {
+			$this-&gt;_persist = $this-&gt;_persist ?: [&#039;controller&#039;];
+		}
+	}
+
+	/**
+	 * Attempts to parse a request object and determine its execution details.
+	 *
+	 * @see lithium\net\http\Request
+	 * @see lithium\net\http\Request::$params
+	 * @see lithium\net\http\Route::$_handler
+	 * @param \lithium\net\http\Request $request A request object containing the details of
+	 *        the request to be routed.
+	 * @param array $options Used to determine the operation of the method, and override certain
+	 *              values in the `Request` object:
+	 *              - `&#039;url&#039;` _string_: If present, will be used to match in place of the `$url`
+	 *                 property of `$request`.
+	 * @return object|boolean If this route matches `$request`, returns the request with
+	 *         execution details attached to it (inside `Request::$params`). Alternatively when
+	 *         a route handler function was used, returns the result of its invocation. Returns
+	 *         `false` if the route never matched.
+	 */
+	public function parse($request, array $options = []) {
+		$defaults = [&#039;url&#039; =&gt; $request-&gt;url];
+		$options += $defaults;
+		$url = &#039;/&#039; . trim($options[&#039;url&#039;], &#039;/&#039;);
+		$pattern = $this-&gt;_pattern;
+
+		if (!preg_match($pattern, $url, $match)) {
+			return false;
+		}
+		foreach ($this-&gt;_meta as $key =&gt; $compare) {
+			$value = $request-&gt;get($key);
+
+			if (!($compare == $value || (is_array($compare) &amp;&amp; in_array($value, $compare)))) {
+				return false;
+			}
+		}
+		foreach ($this-&gt;_config[&#039;modifiers&#039;] as $key =&gt; $modifier) {
+			if (isset($match[$key])) {
+				$match[$key] = $modifier($match[$key]);
+			}
+		}
+
+		$result = array_intersect_key($match + [&#039;args&#039; =&gt; []], $this-&gt;_keys);
+		foreach ($result as $key =&gt; $value) {
+			if ($value === &#039;&#039;) {
+				unset($result[$key]);
+			}
+		}
+		$result += $this-&gt;_params + $this-&gt;_defaults;
+		$request-&gt;params = $result + (array) $request-&gt;params;
+		$request-&gt;persist = array_unique(array_merge($request-&gt;persist, $this-&gt;_persist));
+
+		if ($this-&gt;_handler) {
+			$handler = $this-&gt;_handler;
+			return $handler($request);
+		}
+		return $request;
+	}
+
+	/**
+	 * Matches a set of parameters against the route, and returns a URL string
+	 * if the route matches the parameters.
+	 *
+	 * @param array $options An array of parameters.
+	 * @return string|boolean URL string on success, else `false` if the route didn&#039;t match.
+	 */
+	public function match(array $options = []) {
+		$defaults = [&#039;action&#039; =&gt; &#039;index&#039;, &#039;http:method&#039; =&gt; &#039;GET&#039;];
+		$query = null;
+
+		if (!$this-&gt;_config[&#039;continue&#039;]) {
+			$options += $defaults;
+
+			if (isset($options[&#039;?&#039;])) {
+				$query = $options[&#039;?&#039;];
+				$query = &#039;?&#039; . (is_array($query) ? http_build_query($query) : $query);
+				unset($options[&#039;?&#039;]);
+			}
+		}
+		if (!$options = $this-&gt;_matchMethod($options)) {
+			return false;
+		}
+		if (!$options = $this-&gt;_matchKeys($options)) {
+			return false;
+		}
+		foreach ($options as $key =&gt; $value) {
+			if (isset($this-&gt;_config[&#039;formatters&#039;][$key])) {
+				$options[$key] = $this-&gt;_config[&#039;formatters&#039;][$key]($value);
+			}
+		}
+		foreach ($this-&gt;_subPatterns as $key =&gt; $pattern) {
+			if (isset($options[$key]) &amp;&amp; !preg_match(&quot;/^{$pattern}$/&quot;, $options[$key])) {
+				return false;
+			}
+		}
+		$defaults = $this-&gt;_defaults + $defaults;
+
+		if ($this-&gt;_config[&#039;continue&#039;]) {
+			return $this-&gt;_write([&#039;args&#039; =&gt; &#039;{:args}&#039;] + $options, $this-&gt;_defaults);
+		}
+		return $this-&gt;_write($options, $defaults + [&#039;args&#039; =&gt; &#039;&#039;]) . $query;
+	}
+
+	/**
+	 * Returns a boolean value indicating whether this is a continuation route. If `true`, this
+	 * route will allow incoming requests to &quot;fall through&quot; to other routes, aggregating parameters
+	 * for both this route and any subsequent routes.
+	 *
+	 * @return boolean Returns the value of `$_config[&#039;continue&#039;]`.
+	 */
+	public function canContinue() {
+		return $this-&gt;_config[&#039;continue&#039;];
+	}
+
+	/**
+	 * Helper used by `Route::match()` which check if the required http method is compatible
+	 * with the route.
+	 *
+	 * @see lithium\net\http\Route::match()
+	 * @param array $options An array of URL parameters.
+	 * @return mixed On success, returns an updated array of options, On failure, returns `false`.
+	 */
+	protected function _matchMethod($options) {
+		$isMatch = (
+			!isset($this-&gt;_meta[&#039;http:method&#039;]) ||
+			$options[&#039;http:method&#039;] === $this-&gt;_meta[&#039;http:method&#039;]
+		);
+		if (!$isMatch) {
+			return false;
+		}
+		unset($options[&#039;http:method&#039;]);
+		return $options;
+	}
+
+	/**
+	 * A helper method used by `match()` to verify that options required to match this route are
+	 * present in a URL array.
+	 *
+	 * @see lithium\net\http\Route::match()
+	 * @param array $options An array of URL parameters.
+	 * @return mixed On success, returns an updated array of options, merged with defaults. On
+	 *         failure, returns `false`.
+	 */
+	protected function _matchKeys($options) {
+		$args = [&#039;args&#039; =&gt; &#039;args&#039;];
+
+		$scope = [];
+		if (!empty($options[&#039;scope&#039;])) {
+			$scope = (array) $options[&#039;scope&#039;] + [&#039;params&#039; =&gt; []];
+			$scope = array_flip($scope[&#039;params&#039;]);
+		}
+		unset($options[&#039;scope&#039;]);
+
+		if (array_intersect_key($options, $this-&gt;_match) != $this-&gt;_match) {
+			return false;
+		}
+		if ($this-&gt;_config[&#039;continue&#039;]) {
+			if (array_intersect_key($this-&gt;_keys, $options + $args) != $this-&gt;_keys) {
+				return false;
+			}
+		} else {
+			if (array_diff_key($options, $this-&gt;_match + $this-&gt;_keys + $scope)) {
+				return false;
+			}
+		}
+		$options += $this-&gt;_defaults;
+		$base = $this-&gt;_keys + $args;
+		$match = array_intersect_key($this-&gt;_keys, $options) + $args;
+		sort($base);
+		sort($match);
+
+		if ($base !== $match) {
+			return false;
+		}
+		return $options;
+	}
+
+	/**
+	 * Writes a set of URL options to this route&#039;s template string.
+	 *
+	 * @param array $options The options to write to this route, with defaults pre-merged.
+	 * @param array $defaults The default template options for this route (contains hard-coded
+	 *        default values).
+	 * @return string Returns the route template string with option values inserted.
+	 */
+	protected function _write($options, $defaults) {
+		$template = $this-&gt;_template;
+		$trimmed = true;
+		$options += [&#039;args&#039; =&gt; &#039;&#039;];
+
+		foreach (array_reverse($this-&gt;_keys, true) as $key) {
+			$value =&amp; $options[$key];
+			$pattern = isset($this-&gt;_subPatterns[$key]) ? &quot;:{$this-&gt;_subPatterns[$key]}&quot; : &#039;&#039;;
+			$rpl = &quot;{:{$key}{$pattern}}&quot;;
+			$len = strlen($rpl) * -1;
+
+			if ($trimmed &amp;&amp; isset($defaults[$key]) &amp;&amp; $value == $defaults[$key]) {
+				if (substr($template, $len) == $rpl) {
+					$template = rtrim(substr($template, 0, $len), &#039;/&#039;);
+					continue;
+				}
+			}
+			if ($value === null) {
+				$template = str_replace(&quot;/{$rpl}&quot;, &#039;&#039;, $template);
+				continue;
+			}
+			if ($key !== &#039;args&#039;) {
+				$trimmed = false;
+			}
+			$template = str_replace($rpl, $value, $template);
+		}
+		return $template ?: &#039;/&#039;;
+	}
+
+	/**
+	 * Exports the properties that make up the route to an array, for debugging, caching or
+	 * introspection purposes.
+	 *
+	 * @return array An array containing the properties of the route object, such as URL templates
+	 *         and parameter lists.
+	 */
+	public function export() {
+		$result = [];
+
+		foreach ($this-&gt;_autoConfig as $key) {
+			if ($key === &#039;formatters&#039;) {
+				continue;
+			}
+			$result[$key] = $this-&gt;{&#039;_&#039; . $key};
+		}
+		return $result;
+	}
+
+	/**
+	 * Compiles URL templates into regular expression patterns for matching against request URLs,
+	 * and extracts template parameters into match-parameter arrays.
+	 *
+	 * @return void
+	 */
+	public function compile() {
+		foreach ($this-&gt;_params as $key =&gt; $value) {
+			if (!strpos($key, &#039;:&#039;)) {
+				continue;
+			}
+			unset($this-&gt;_params[$key]);
+			$this-&gt;_meta[$key] = $value;
+		}
+
+		$this-&gt;_match = $this-&gt;_params;
+
+		if ($this-&gt;_template === &#039;/&#039; || $this-&gt;_template === &#039;&#039;) {
+			$this-&gt;_pattern = &#039;@^/*$@&#039;;
+			return;
+		}
+		$this-&gt;_pattern = &quot;@^{$this-&gt;_template}\$@&quot;;
+		$match = &#039;@([/.])?\{:([^:}]+):?((?:[^{]+?(?:\{[0-9,]+\})?)*?)\}@S&#039;;
+
+		if ($this-&gt;_config[&#039;unicode&#039;]) {
+			$this-&gt;_pattern .= &#039;u&#039;;
+		}
+		preg_match_all($match, $this-&gt;_pattern, $m);
+
+		if (!$tokens = $m[0]) {
+			return;
+		}
+		$slashes = $m[1];
+		$params = $m[2];
+		$regexs = $m[3];
+		unset($m);
+		$this-&gt;_keys = [];
+
+		foreach ($params as $i =&gt; $param) {
+			$this-&gt;_keys[$param] = $param;
+			$this-&gt;_pattern = $this-&gt;_regex($regexs[$i], $param, $tokens[$i], $slashes[$i]);
+		}
+		$this-&gt;_defaults += array_intersect_key($this-&gt;_params, $this-&gt;_keys);
+		$this-&gt;_match = array_diff_key($this-&gt;_params, $this-&gt;_defaults);
+	}
+
+	/**
+	 * Generates a sub-expression capture group for a route regex, using an optional user-supplied
+	 * matching pattern.
+	 *
+	 * @param string $regex An optional user-supplied match pattern. If a route is defined like
+	 *               `&quot;/{:id:\d+}&quot;`, then the value will be `&quot;\d+&quot;`.
+	 * @param string $param The parameter name which the capture group is assigned to, i.e.
+	 *               `&#039;controller&#039;`, `&#039;id&#039;` or `&#039;args&#039;`.
+	 * @param string $token The full token representing a matched element in a route template, i.e.
+	 *               `&#039;/{:action}&#039;`, `&#039;/{:path:js|css}&#039;`, or `&#039;.{:type}&#039;`.
+	 * @param string $prefix The prefix character that separates the parameter from the other
+	 *               elements of the route. Usually `&#039;.&#039;` or `&#039;/&#039;`.
+	 * @return string Returns the full route template, with the value of `$token` replaced with a
+	 *         generated regex capture group.
+	 */
+	protected function _regex($regex, $param, $token, $prefix) {
+		if ($regex) {
+			$this-&gt;_subPatterns[$param] = $regex;
+		} elseif ($param == &#039;args&#039;) {
+			$regex = &#039;.*&#039;;
+		} else {
+			$regex = &#039;[^\/]+&#039;;
+		}
+
+		$req = $param === &#039;args&#039; || array_key_exists($param, $this-&gt;_params) ? &#039;?&#039; : &#039;&#039;;
+
+		if ($prefix === &#039;/&#039;) {
+			$pattern = &quot;(?:/(?P&lt;{$param}&gt;{$regex}){$req}){$req}&quot;;
+		} elseif ($prefix === &#039;.&#039;) {
+			$pattern = &quot;\\.(?P&lt;{$param}&gt;{$regex}){$req}&quot;;
+		} else {
+			$pattern = &quot;(?P&lt;{$param}&gt;{$regex}){$req}&quot;;
+		}
+		return str_replace($token, $pattern, $this-&gt;_pattern);
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

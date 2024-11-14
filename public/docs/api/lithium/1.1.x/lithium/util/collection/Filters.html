@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\util\collection\Filters – Framework API v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../versions.html">Versions</a><a href="../../../../../../../present.html">Presentations</a><a href="../../../../../../../support.html">Community</a><a href="../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../util.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">util</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../collection.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">collection</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Filters</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../collection.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public deprecated">
+				<a href="./Filters::apply().html">apply()</a>												<li class="method public deprecated">
+				<a href="./Filters::hasApplied().html">hasApplied()</a>												<li class="method public deprecated">
+				<a href="./Filters::run().html">run()</a>												<li class="method public deprecated">
+				<a href="./Filters::next().html">next()</a>												<li class="method public deprecated">
+				<a href="./Filters::method().html">method()</a>												<li class="method public inherited">
+				<a href="../Collection::formats().html">formats()</a>												<li class="method protected inherited">
+				<a href="../Collection::_init().html">_init()</a>												<li class="method public inherited">
+				<a href="../Collection::invoke().html">invoke()</a>												<li class="method public inherited">
+				<a href="../Collection::__call().html">__call()</a>												<li class="method public inherited">
+				<a href="../Collection::respondsTo().html">respondsTo()</a>												<li class="method public inherited">
+				<a href="../Collection::to().html">to()</a>												<li class="method protected inherited">
+				<a href="../Collection::_to().html">_to()</a>												<li class="method public inherited">
+				<a href="../Collection::find().html">find()</a>												<li class="method public inherited">
+				<a href="../Collection::first().html">first()</a>												<li class="method public inherited">
+				<a href="../Collection::each().html">each()</a>												<li class="method public inherited">
+				<a href="../Collection::map().html">map()</a>												<li class="method public inherited">
+				<a href="../Collection::reduce().html">reduce()</a>												<li class="method public inherited">
+				<a href="../Collection::sort().html">sort()</a>												<li class="method public inherited">
+				<a href="../Collection::offsetExists().html">offsetExists()</a>												<li class="method public inherited">
+				<a href="../Collection::offsetGet().html">offsetGet()</a>												<li class="method public inherited">
+				<a href="../Collection::offsetSet().html">offsetSet()</a>												<li class="method public inherited">
+				<a href="../Collection::offsetUnset().html">offsetUnset()</a>												<li class="method public inherited">
+				<a href="../Collection::rewind().html">rewind()</a>												<li class="method public inherited">
+				<a href="../Collection::end().html">end()</a>												<li class="method public inherited">
+				<a href="../Collection::valid().html">valid()</a>												<li class="method public inherited">
+				<a href="../Collection::current().html">current()</a>												<li class="method public inherited">
+				<a href="../Collection::key().html">key()</a>												<li class="method public inherited">
+				<a href="../Collection::prev().html">prev()</a>												<li class="method public inherited">
+				<a href="../Collection::append().html">append()</a>												<li class="method public inherited">
+				<a href="../Collection::count().html">count()</a>												<li class="method public inherited">
+				<a href="../Collection::keys().html">keys()</a>												<li class="method public inherited">
+				<a href="../Collection::toArray().html">toArray()</a>												<li class="method public inherited">
+				<a href="../../core/Object::__construct().html">__construct()</a>												<li class="method public inherited">
+				<a href="../../core/Object::invokeMethod().html">invokeMethod()</a>												<li class="method public inherited">
+				<a href="../../core/Object::__set_state().html">__set_state()</a>												<li class="method protected inherited">
+				<a href="../../core/Object::_instance().html">_instance()</a>												<li class="method protected inherited">
+				<a href="../../core/Object::_parents().html">_parents()</a>												<li class="method protected inherited">
+				<a href="../../core/Object::_stop().html">_stop()</a>												<li class="method public deprecated inherited">
+				<a href="../../core/Object::applyFilter().html">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="../../core/Object::_filter().html">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected deprecated">
+				<a href="./Filters::$_lazyFilters.html">$_lazyFilters</a>												<li class="property protected deprecated">
+				<a href="./Filters::$_autoConfig.html">$_autoConfig</a>												<li class="property protected deprecated">
+				<a href="./Filters::$_class.html">$_class</a>												<li class="property protected deprecated">
+				<a href="./Filters::$_method.html">$_method</a>												<li class="property protected inherited">
+				<a href="../Collection::$_formats.html">$_formats</a>												<li class="property protected inherited">
+				<a href="../../data/Collection::$_data.html">$_data</a>												<li class="property protected inherited">
+				<a href="../../core/Object::$_config.html">$_config</a>												<li class="property protected inherited">
+				<a href="../../core/Object::$_parents.html">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="../../core/Object::$_methodFilters.html">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../util.html" class="symbol-segment">util</a>\<a href="../collection.html" class="symbol-segment">collection</a>\Filters		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../Collection.html" class="extends__symbol">lithium\util\Collection</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+								<section class="deprecated">
+									Replaced by `\lithium\aop\Filters` and `\lithium\aop\Chain`.							</section>
+			
+			<section>
+									<div class="summary">
+						<p>The <code>Filters</code> class is the basis of Lithium's method filtering system: an efficient way to enable
+event-driven communication between classes without tight coupling and without depending on a
+centralized publish/subscribe system.</p>
+					</div>
+				
+									<div class="description">
+						<p>In Lithium itself, when creating a method that can be filtered, a method is implemented as
+a closure and is passed to either <code>Object::_filter()</code> or <code>StaticObject::_filter()</code>. Each
+object internally maintains its own list of filters, which are applied in these methods and
+passed to <code>Filters::run()</code>.</p>
+<p>When implementing a custom filter system outside of Lithium, you can create your own list of
+filters, and pass it to <code>$options['data']</code> in the <code>run()</code> method.</p>
+<p>When creating a filter to apply to a method, you need the name of the method you want to call,
+along with a <strong>closure</strong>, that defines what you want the filter to do.  All filters take the same
+3 parameters: <code>$self</code>,<code>$params</code>, and <code>$chain</code>.</p>
+<ul>
+<li><p><code>$self</code>: If the filter is applied on an object instance, then <code>$self</code> will be that instance. If
+applied to a static class, then <code>$self</code> will be a string containing the fully-namespaced class
+name.</p>
+</li>
+<li><p><code>$params</code>: Contains an associative array of the parameters that are passed into the method. You
+can modify or inspect these parameters before allowing the method to continue.</p>
+</li>
+<li><p><code>$chain</code>: Finally, <code>$chain</code> contains the list of filters in line to be executed (as an
+instance of the <code>Filters</code> class).  At the bottom of <code>$chain</code> is the method itself.  This is why
+most filters contain a line that looks like this:</p>
+</li>
+</ul>
+<pre><code class="language-php">return $chain-&gt;next($self, $params, $chain);
+</code></pre>
+<p>This passes control to the next filter in the chain, and finally, to the method itself.  This
+allows you to interact with the return value as well as the parameters.</p>
+<p>Within the framework, you can call <code>applyFilter()</code> on any object (static or instantiated) and
+pass the name of the method you would like to filter, along with the filter itself. For example:</p>
+<pre><code class="language-php">use lithium\action\Dispatcher;
+
+Dispatcher::applyFilter('run', function($self, $params, $chain) {
+	// Custom pre-dispatch logic goes here
+	$response = $chain-&gt;next($self, $params, $chain);
+
+	// $response now contains a Response object with the result of the dispatched request,
+	// and can be modified as appropriate
+	// ...
+	return $response;
+});
+</code></pre>
+<p>The logic in the closure will now be executed on every call to <code>Dispatcher::run()</code>, and
+<code>$response</code> will always be modified by any custom logic present before being returned from
+<code>run()</code>.</p>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="./Filters::run().html">lithium\util\collection\Filters::run()</a>									<li><a href="../../core/Object::_filter().html">lithium\core\Object::_filter()</a>									<li><a href="../../core/StaticObject::_filter().html">lithium\core\StaticObject::_filter()</a>									<li><a href="../../core/Object::applyFilter().html">lithium\core\Object::applyFilter()</a>									<li><a href="../../core/StaticObject::applyFilter().html">lithium\core\StaticObject::applyFilter()</a>								</ul>
+			</section>
+			
+						<section id="links">
+				<h3 class="h-beta">Links</h3>
+				<ul class="links">
+									<li><a href="http://php.net/functions.anonymous.php" target="new">http://php.net/functions.anonymous.php</a>								</ul>
+			</section>
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Filters extends \lithium\util\Collection {
+
+	/**
+	 * An array of filters indexed by class and method name, stored so that they can be lazily
+	 * applied to classes which are not loaded yet.
+	 *
+	 * @deprecated
+	 * @var array
+	 */
+	protected static $_lazyFilters = [];
+
+	/**
+	 * This is the list of configuration settings that will be automatically applied to the
+	 * properties of each `Filters` instance.
+	 *
+	 * @deprecated
+	 * @var array
+	 */
+	protected $_autoConfig = [&#039;data&#039;, &#039;class&#039;, &#039;method&#039;];
+
+	/**
+	 * The fully-namespaced class name of the class containing the method being filtered.
+	 *
+	 * @deprecated
+	 * @see lithium\util\collection\Filters::method()
+	 * @var string
+	 */
+	protected $_class = null;
+
+	/**
+	 * The name of the method being filtered by the current instance of `Filters`.
+	 *
+	 * @deprecated
+	 * @see lithium\util\collection\Filters::method()
+	 * @var string
+	 */
+	protected $_method = null;
+
+	/**
+	 * Lazily applies a filter to a method of a static class.
+	 *
+	 * This method is useful if you want to apply a filter inside a global bootstrap file to a
+	 * static class which may or may not be loaded during every request, or which may be loaded
+	 * lazily elsewhere in your application. If the class is already loaded, the filter will be
+	 * applied immediately.
+	 *
+	 * However, if the class has not been loaded, the filter will be stored and applied to the class
+	 * the first time the method specified in `$method` is called. This works for any class which
+	 * extends `StaticObject`.
+	 *
+	 * @deprecated Forwards to new implementation.
+	 * @see lithium\core\StaticObject
+	 * @param string $class The fully namespaced name of a **static** class to which the filter will
+	 *               be applied. The class name specified in `$class` **must** extend
+	 *               `StaticObject`, or else statically implement the `applyFilter()` method.
+	 * @param string $method The method to which the filter will be applied.
+	 * @param \Closure $filter The filter to apply to the class method.
+	 * @return void
+	 */
+	public static function apply($class, $method, $filter) {
+		$message  = &#039;`\lithium\util\collection\Filters::apply()` has been deprecated &#039;;
+		$message .= &#039;in favor of `\lithium\aop\Filters::apply()`&#039;;
+		trigger_error($message, E_USER_DEPRECATED);
+
+		NewFilters::apply($class, $method, $filter);
+	}
+
+	/**
+	 * Checks to see if the given class / method has any filters which have been applied lazily,
+	 * and not yet attached.
+	 *
+	 * If a filter has been lazily applied (using `Filters::apply()`) to a class which is/was not
+	 * yet loaded, checks to see if the filter is still being held, or has been applied. The filter
+	 * will not be applied until the method being filtered has been called.
+	 *
+	 * @deprecated Now always returns `false`.
+	 * @see lithium\util\collection\Filters::apply()
+	 * @param string $class Fully-namespaced class name.
+	 * @param string $method Method name.
+	 * @return boolean
+	 */
+	public static function hasApplied($class, $method) {
+		$message = &#039;`\lithium\util\collection\Filters::hasApplied()` has been deprecated.&#039;;
+		trigger_error($message, E_USER_DEPRECATED);
+
+		return false;
+	}
+
+	/**
+	 * Collects a set of filters to iterate. Creates a filter chain for the given class/method,
+	 * executes it, and returns the value.
+	 *
+	 * @deprecated Forwards to new implementation.
+	 * @param mixed $class The class for which this filter chain is being created. If this is the
+	 *        result of a static method call, `$class` should be a string. Otherwise, it should
+	 *        be the instance of the object making the call.
+	 * @param array $params An associative array of the given method&#039;s parameters.
+	 * @param array $options The configuration options with which to create the filter chain.
+	 *        Mainly, these options allow the `Filters` object to be queried for details such as
+	 *        which class / method initiated it. Available keys:
+	 *        - `&#039;class&#039;`: The name of the class that initiated the filter chain.
+	 *        - `&#039;method&#039;`: The name of the method that initiated the filter chain.
+	 *        - `&#039;data&#039;` _array_: An array of callable objects (usually closures) to be iterated
+	 *          through. By default, execution will be nested such that the first item will be
+	 *          executed first, and will be the last to return.
+	 * @return Returns the value returned by the first closure in `$options[&#039;data`]`.
+	 */
+	public static function run($class, $params, array $options = []) {
+		$message  = &#039;`\lithium\util\collection\Filters::run()` has been deprecated &#039;;
+		$message .= &#039;in favor of `\lithium\aop\Filters::run()`&#039;;
+		trigger_error($message, E_USER_DEPRECATED);
+
+		$defaults = [&#039;class&#039; =&gt; null, &#039;method&#039; =&gt; null, &#039;data&#039; =&gt; []];
+		$options += $defaults;
+
+		$callback = array_pop($options[&#039;data&#039;]);
+
+		foreach ($options[&#039;data&#039;] as $filter) {
+			NewFilters::apply($class, $options[&#039;method&#039;], $filter);
+		}
+		return NewFilters::run($class, $options[&#039;method&#039;], $params, $callback);
+	}
+
+	/**
+	 * Provides short-hand convenience syntax for filter chaining.
+	 *
+	 * @deprecated Not used here anymore.
+	 * @see lithium\core\Object::applyFilter()
+	 * @see lithium\core\Object::_filter()
+	 * @param object $self The object instance that owns the filtered method.
+	 * @param array $params An associative array containing the parameters passed to the filtered
+	 *              method.
+	 * @param array $chain The Filters object instance containing this chain of filters.
+	 * @return mixed Returns the return value of the next filter in the chain.
+	 */
+	public function next(/* $self, $params, $chain */) {
+		if (func_num_args() !== 3) {
+			trigger_error(&#039;Missing argument/s.&#039;, E_USER_WARNING);
+			return;
+		}
+		list($self, $params, $chain) = func_get_args();
+
+		$message  = &#039;`\lithium\util\collection\Filters::next()` has been deprecated &#039;;
+		$message .= &#039;in favor of `\lithium\aop\Chain::next()`&#039;;
+		trigger_error($message, E_USER_DEPRECATED);
+
+		if (empty($self) || empty($chain)) {
+			return parent::next();
+		}
+		$next = parent::next();
+		return $next($self, $params, $chain);
+	}
+
+	/**
+	 * Gets the method name associated with this filter chain.  This is the method being filtered.
+	 *
+	 * @deprecated Not used here anymore.
+	 * @param boolean $full Whether to return the method name including the class name or not.
+	 * @return string
+	 */
+	public function method($full = false) {
+		$message  = &#039;`\lithium\util\collection\Filters::method()` has been deprecated &#039;;
+		$message .= &#039;in favor of `\lithium\aop\Chain::method()`&#039;;
+		trigger_error($message, E_USER_DEPRECATED);
+
+		return $full ? $this-&gt;_class . &#039;::&#039; . $this-&gt;_method : $this-&gt;_method;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

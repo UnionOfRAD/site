@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\test\filter\Complexity – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.3.x/lithium/test" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">test</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.3.x/lithium/test/filter" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">filter</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Complexity</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.3.x/lithium/test/filter" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/test/filter/Complexity::apply()">apply()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/test/filter/Complexity::analyze()">analyze()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/test/filter/Complexity::collect()">collect()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::respondsTo()">respondsTo()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::invokeMethod()">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::_instance()">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::_stop()">_stop()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::_parents()">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::applyFilter()">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::_filter()">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/test/filter/Complexity::$_include">$_include</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::$_parents">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::$_methodFilters">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.3.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.3.x/lithium/test" class="symbol-segment">test</a>\<a href="/docs/api/lithium/1.3.x/lithium/test/filter" class="symbol-segment">filter</a>\Complexity		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.3.x/lithium/test/Filter" class="extends__symbol">lithium\test\Filter</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Calculates the cyclomatic complexity of class methods, and shows worst-offenders and statistics.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Complexity extends \lithium\test\Filter {
+
+	/**
+	 * The list of tokens which represent the starting point of a code branch.
+	 */
+	protected static $_include = [
+		&#039;T_CASE&#039;, &#039;T_CATCH&#039;, &#039;T_IF&#039;, &#039;T_FOR&#039;,
+		&#039;T_FOREACH&#039;, &#039;T_WHILE&#039;, &#039;T_DO&#039;, &#039;T_ELSEIF&#039;
+	];
+
+	/**
+	 * Takes an instance of an object (usually a Collection object) containing test
+	 * instances. Introspects the test subject classes to extract cyclomatic complexity data.
+	 *
+	 * @param object $report Instance of Report which is calling apply.
+	 * @param \lithium\util\Collection $tests The tests to apply this filter on.
+	 * @param array $options Additional options to overwrite dependencies.
+	 *                       - `&#039;classes&#039;` _array_: Overwrite default classes array.
+	 * @return object Returns the instance of `$tests`.
+	 */
+	public static function apply($report, $tests, array $options = []) {
+		$results = [];
+		foreach ($tests-&gt;invoke(&#039;subject&#039;) as $class) {
+			$results[$class] = [];
+
+			if (!$methods = Inspector::methods($class, &#039;ranges&#039;, [&#039;public&#039; =&gt; false])) {
+				continue;
+			}
+			foreach ($methods as $method =&gt; $lines) {
+				$lines = Inspector::lines($class, $lines);
+				$branches = Parser::tokenize(join(&quot;\n&quot;, (array) $lines), [
+					&#039;include&#039; =&gt; static::$_include
+				]);
+				$results[$class][$method] = count($branches) + 1;
+				$report-&gt;collect(__CLASS__, $results);
+			}
+		}
+		return $tests;
+	}
+
+	/**
+	 * Analyzes the results of a test run and returns the result of the analysis.
+	 *
+	 * @param object $report The report instance running this filter and aggregating results
+	 * @param array $options Not used.
+	 * @return array The results of the analysis.
+	 */
+	public static function analyze($report, array $options = []) {
+		$filterResults = static::collect($report-&gt;results[&#039;filters&#039;][__CLASS__]);
+		$metrics = [&#039;max&#039; =&gt; [], &#039;class&#039; =&gt; []];
+
+		foreach ($filterResults as $class =&gt; $methods) {
+			if (!$methods) {
+				continue;
+			}
+			$metrics[&#039;class&#039;][$class] = array_sum($methods) / count($methods);
+
+			foreach ($methods as $method =&gt; $count) {
+				$metrics[&#039;max&#039;][&quot;{$class}::{$method}()&quot;] = $count;
+			}
+		}
+
+		arsort($metrics[&#039;max&#039;]);
+		arsort($metrics[&#039;class&#039;]);
+		return $metrics;
+	}
+
+	/**
+	 * Collects raw data aggregated in Report and prepares it for analysis
+	 *
+	 * @param array $filterResults The results of the filter on the test run.
+	 * @return array The packaged results.
+	 */
+	public static function collect($filterResults) {
+		$packagedResults = [];
+
+		foreach ($filterResults as $result) {
+			foreach ($result as $class =&gt; $method) {
+				if (!isset($packagedResults[$class])) {
+					$packagedResults[$class] = [];
+				}
+				$classResult = (array) $result[$class];
+				$packagedResults[$class] = array_merge($classResult, $packagedResults[$class]);
+			}
+		}
+
+		return $packagedResults;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

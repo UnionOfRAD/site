@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\aop\Chain – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.3.x/lithium/aop" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">aop</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Chain</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.3.x/lithium/aop" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/aop/Chain::__construct()">__construct()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/aop/Chain::run()">run()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/aop/Chain::__invoke()">__invoke()</a>												<li class="method public deprecated">
+				<a href="/docs/api/lithium/1.3.x/lithium/aop/Chain::next()">next()</a>												<li class="method public deprecated">
+				<a href="/docs/api/lithium/1.3.x/lithium/aop/Chain::method()">method()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/aop/Chain::_bcFilters()">_bcFilters()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/aop/Chain::_bcNext()">_bcNext()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/aop/Chain::$_filters">$_filters</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/aop/Chain::$_implementation">$_implementation</a>												<li class="property protected deprecated">
+				<a href="/docs/api/lithium/1.3.x/lithium/aop/Chain::$_class">$_class</a>												<li class="property protected deprecated">
+				<a href="/docs/api/lithium/1.3.x/lithium/aop/Chain::$_method">$_method</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.3.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.3.x/lithium/aop" class="symbol-segment">aop</a>\Chain		</h1>
+
+		<section class="under">
+															<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The <code>Chain</code> class represents a collection of callables, called filters.
+Instances contain a list of filters in line to be executed. It is often
+used in conjunction with the <code>Filters</code> class.</p>
+					</div>
+				
+									<div class="description">
+						<p>Filters wrap around each other and then finally around the implementation.
+While the first added filter is called with the input first, and last in
+receiving the result.</p>
+<pre><code class="language-asciiart">       │                ▲
+       │                │
+┌──────┼────────────────┼──────┐
+│      │    Filter 1    │      │
+│      │                │      │
+│ ┌────┼────────────────┼────┐ │
+│ │    │    Filter 2    │    │ │
+│ │    │                │    │ │
+│ │┌───┼────────────────┼───┐│ │
+│ ││   │ Implementation │   ││ │
+│ ││   ▼                │   ││ │
+│ ││                        ││ │
+│ │└────────────────────────┘│ │
+│ └──────────────────────────┘ │
+└──────────────────────────────┘
+</code></pre>
+<p>Filters executed inside the chain receive two parameters, the named
+parameters and the instance of the chain itself. Filters may <em>advance the
+chain</em> by one <code>$next($params)</code> anywhere inside their function body. Filters
+can interrupt the chain by returning without advancing the chain.</p>
+<p>An example filter modifying the named parameters before advancing the chain.</p>
+<pre><code class="language-php">function($params, $next) {
+    $params['foo'] = 'bar';
+    return $next($params);
+}
+</code></pre>
+<p>This class separates concerns as follows. It is context-less and knows
+nothing about the class/method it filters. This is the task of the <code>Filters</code>
+manager class. Concepts of <em>filter</em> and <em>implementation</em> are clearly
+separated, too. Filters take two arguments, the implementation one. The
+implementation does not know about it being part of the <code>Chain</code> and has no
+access to it.</p>
+					</div>
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Chain {
+
+	/**
+	 * An array of callables.
+	 *
+	 * @var array
+	 */
+	protected $_filters = [];
+
+	/**
+	 * The current implementation.
+	 *
+	 * @see lithium\aop\Chain::run()
+	 * @var callable
+	 */
+	protected $_implementation = null;
+
+	/**
+	 * Constructor.
+	 *
+	 * @param array $config Class configuration parameters The available options are:
+	 *         - `&#039;filters&#039;` _array_
+	 *         - `&#039;class&#039;` _array_: Deprecated. Here for BC.
+	 *         - `&#039;method&#039;` _array_: Depreacted. Here for BC.
+	 * @return void
+	 */
+	public function __construct(array $config = []) {
+		$config += [
+			&#039;filters&#039; =&gt; [],
+			&#039;class&#039; =&gt; null,
+			&#039;method&#039; =&gt; null
+		];
+		$this-&gt;_filters = $config[&#039;filters&#039;];
+		$this-&gt;_class = $config[&#039;class&#039;];
+		$this-&gt;_method = $config[&#039;method&#039;];
+
+		$this-&gt;_bcFilters();
+	}
+
+	/**
+	 * Runs the chain causing any queued callables and finally the
+	 * implementation to be executed.
+	 *
+	 * Before each run the implementation is made available to
+	 * `Chain::__invoke()` and the chain rewinded, after each run the
+	 * implementation is unset.
+	 *
+	 * An example implementation which is bound to an instance receives exactly
+	 * one argument (the named parameters).
+	 * ```
+	 * function($params) {
+	 *     $foo = $this-&gt;_bar;
+	 *     return $foo . &#039;baz&#039;;
+	 * }
+	 * ```
+	 *
+	 * @param array $params An array of named parameters.
+	 * @param callable $implementation
+	 * @return mixed The end result of the chain.
+	 */
+	public function run(array $params, $implementation) {
+		$this-&gt;_implementation = $implementation;
+
+		$filter = reset($this-&gt;_filters);
+		$result = $filter($params, $this);
+
+		$this-&gt;_implementation = null;
+		return $result;
+	}
+
+	/**
+	 * Advances the chain by one and executes the next filter in line. This
+	 * method is usually accessed from within a filter function.
+	 *
+	 * This method is implemented as a magic method as it allows use to hide the
+	 * fact that the second parameter passed to filters is a rich object. Making
+	 * the single purpose (next) very clear.
+	 *
+	 * A filter function using `$next` inside its function body to advance the
+	 * chain.
+	 * ```
+	 * function($params, $next) {
+	 *     return $next($params);
+	 * }
+	 * ```
+	 *
+	 * @see lithium\aop\Chain::next()
+	 * @param array $params An array of named parameters.
+	 * @return mixed The return value of the next filter. If there is no
+	 *         next filter, the return value of the implementation.
+	 */
+	public function __invoke(array $params) {
+		if (($filter = next($this-&gt;_filters)) !== false) {
+			return $filter($params, $this);
+		}
+
+		$implementation = $this-&gt;_implementation;
+		return $implementation($params);
+	}
+
+	/* Deprecated / BC */
+
+	/**
+	 * The fully-namespaced class name of the class or an instance of a
+	 * class containing the method being filtered.
+	 *
+	 * @deprecated
+	 * @see lithium\aop\Chain::method()
+	 * @var string|object
+	 */
+	protected $_class = null;
+
+	/**
+	 * The name of the method being filtered.
+	 *
+	 * @deprecated
+	 * @see lithium\aop\Chain::method()
+	 * @var string
+	 */
+	protected $_method = null;
+
+	/**
+	 * Advances the chain by one and executes the next filter in line.
+	 * This method is usually accessed from within a filter function.
+	 *
+	 * ```
+	 * function($params, $chain) {
+	 *     return $chain-&gt;next($params);
+	 * }
+	 * ```
+	 *
+	 * @deprecated
+	 * @param array $params An array of named parameters.
+	 * @return mixed The return value of the next filter. If there is no
+	 *         next filter, the return value of the implementation.
+	 */
+	public function next(/* array */ $params) {
+		$message = &#039;`$chain-&gt;next()` has been deprecated in favor of `$chain($params)`.&#039;;
+		trigger_error($message, E_USER_DEPRECATED);
+
+		return $this($this-&gt;_bcNext(func_get_args()));
+	}
+
+	/**
+	 * Gets the method name associated with this filter chain. This is
+	 * the method being filtered.
+	 *
+	 * @deprecated
+	 * @param boolean $full Whether to include the class name, defaults to `false`.
+	 * @return string When $full is `true` returns a string with pattern
+	 *        `&lt;CLASS&gt;::&lt;METHOD&gt;`, else returns just the method name.
+	 */
+	public function method($full = false) {
+		$message = &#039;`$chain-&gt;method()` has been deprecated.&#039;;
+		trigger_error($message, E_USER_DEPRECATED);
+
+		$class = is_string($this-&gt;_class) ? $this-&gt;_class : get_class($this-&gt;_class);
+		return $full ? $class . &#039;::&#039; . $this-&gt;_method : $this-&gt;_method;
+	}
+
+	protected function _bcFilters() {
+		foreach ($this-&gt;_filters as &amp;$filter) {
+			$reflect = new \ReflectionFunction($filter);
+
+			if ($reflect-&gt;getNumberOfParameters() &gt; 2) {
+				$message  = &#039;Old style filter function in file &#039; . $reflect-&gt;getFileName() . &#039; &#039;;
+				$message .= &#039;on line &#039; . $reflect-&gt;getStartLine() . &#039;. &#039;;
+				$message .= &#039;The signature for filter functions has changed. It is now &#039;;
+				$message .= &#039;`($params, $next)` instead of the old `($self, $params, $chain)`. &#039;;
+				$message .= &#039;Instead of `$self` use `$this` or `static`.&#039;;
+				trigger_error($message, E_USER_DEPRECATED);
+
+				$filter = function($params, $chain) use ($filter) {
+					return $filter($this-&gt;_class, $params, $chain);
+				};
+			}
+		}
+	}
+
+	protected function _bcNext($args) {
+		if (isset($args[1])) {
+			$message  = &#039;`$chain-&gt;next($s, $p, $c)` signature changed. &#039;;
+			$message .= &#039;Please use `$next($params)` instead.&#039;;
+			trigger_error($message, E_USER_DEPRECATED);
+
+			return $args[1];
+		}
+		return $args[0];
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

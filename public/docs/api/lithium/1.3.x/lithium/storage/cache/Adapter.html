@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\storage\cache\Adapter – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../versions.html">Versions</a><a href="../../../../../../../present.html">Presentations</a><a href="../../../../../../../support.html">Community</a><a href="../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../storage.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">storage</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../cache.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">cache</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Adapter</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../cache.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Adapter::key().html">key()</a>												<li class="method public">
+				<a href="./Adapter::write().html">write()</a>												<li class="method public">
+				<a href="./Adapter::read().html">read()</a>												<li class="method public">
+				<a href="./Adapter::delete().html">delete()</a>												<li class="method public">
+				<a href="./Adapter::decrement().html">decrement()</a>												<li class="method public">
+				<a href="./Adapter::increment().html">increment()</a>												<li class="method public">
+				<a href="./Adapter::clear().html">clear()</a>												<li class="method public">
+				<a href="./Adapter::clean().html">clean()</a>												<li class="method public">
+				<a href="./Adapter::enabled().html">enabled()</a>												<li class="method protected">
+				<a href="./Adapter::_addScopePrefix().html">_addScopePrefix()</a>												<li class="method protected">
+				<a href="./Adapter::_removeScopePrefix().html">_removeScopePrefix()</a>												<li class="method public inherited">
+				<a href="../../core/ObjectDeprecated::__construct().html">__construct()</a>												<li class="method protected inherited">
+				<a href="../../core/ObjectDeprecated::_init().html">_init()</a>												<li class="method public deprecated inherited">
+				<a href="../../core/ObjectDeprecated::__set_state().html">__set_state()</a>												<li class="method public deprecated inherited">
+				<a href="../../core/ObjectDeprecated::respondsTo().html">respondsTo()</a>												<li class="method public deprecated inherited">
+				<a href="../../core/ObjectDeprecated::invokeMethod().html">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::_instance().html">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::_stop().html">_stop()</a>												<li class="method protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::_parents().html">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="../../core/ObjectDeprecated::applyFilter().html">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::_filter().html">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected inherited">
+				<a href="../../core/ObjectDeprecated::$_config.html">$_config</a>												<li class="property protected inherited">
+				<a href="../../core/ObjectDeprecated::$_autoConfig.html">$_autoConfig</a>												<li class="property protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::$_parents.html">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::$_methodFilters.html">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../storage.html" class="symbol-segment">storage</a>\<a href="../cache.html" class="symbol-segment">cache</a>\Adapter		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../../core/ObjectDeprecated.html" class="extends__symbol">lithium\core\ObjectDeprecated</a>									</div>
+									<div class="tags">
+									<span class="tag">abstract</span>
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>This is the foundation class for all cache adapters.</p>
+					</div>
+				
+									<div class="description">
+						<p>Each adapter provides a consistent interface for the basic cache operations of <code>write</code>, <code>read</code>,
+<code>delete</code>, <code>increment</code> and <code>decrement</code>  which can always be <em>used interchangeably</em> between and
+must be implemented by all adapters.</p>
+<p>Functionality for <code>clear</code>, <code>clean</code>  may or may not be implemented by an adapter. Calling a
+method that is not implemented will simply return <code>false</code>.</p>
+<p>An adapter may provide access to additional methods. It's always possible to call them directly.
+This allows a very wide range of flexibility, at the cost of portability.</p>
+<pre><code class="language-php">Cache::adapter('default')-&gt;methodName($argument);
+</code></pre>
+<p>It is not guaranteed that all operations are atomic, but adapters will try to perform atomic
+operations wherever possible. If you rely on atomicity of operations you must choose
+an appropriate adapter that explitcly supports these.</p>
+<p>Adapters may handle serialization and/or multi-keys natively others only synthetically.</p>
+					</div>
+							</section>
+
+			
+			
+			
+			
+			
+						<section id="subclasses" class="section">
+				<h3 class="h-beta">Subclasses</h3>
+				<ul class="subclasses">
+											<li><a href="adapter/Apc.html">lithium\storage\cache\adapter\Apc</a>											<li><a href="adapter/File.html">lithium\storage\cache\adapter\File</a>											<li><a href="adapter/Memcache.html">lithium\storage\cache\adapter\Memcache</a>											<li><a href="adapter/Memory.html">lithium\storage\cache\adapter\Memory</a>											<li><a href="adapter/Redis.html">lithium\storage\cache\adapter\Redis</a>											<li><a href="adapter/XCache.html">lithium\storage\cache\adapter\XCache</a>									</ul>
+			</section>
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">abstract class Adapter extends \lithium\core\ObjectDeprecated {
+
+	/**
+	 * Generates safe cache keys.
+	 *
+	 * @param array $keys The original keys.
+	 * @return array Keys modified and safe to use with adapter.
+	 */
+	public function key(array $keys) {
+		return $keys;
+	}
+
+	/**
+	 * Write values to the cache. All items to be cached will receive an
+	 * expiration time of `$expiry`.
+	 *
+	 * @param array $keys Key/value pairs with keys to uniquely identify the to-be-cached item.
+	 * @param string|integer $expiry A `strtotime()` compatible cache time or TTL in seconds.
+	 *                       To persist an item use `\lithium\storage\Cache::PERSIST`.
+	 * @return boolean `true` on successful write, `false` otherwise.
+	 */
+	abstract public function write(array $keys, $expiry = null);
+
+	/**
+	 * Read values from the cache. Will attempt to return an array of data
+	 * containing key/value pairs of the requested data.
+	 *
+	 * @param array $keys Keys to uniquely identify the cached items.
+	 * @return array Cached values keyed by cache keys on successful read,
+	 *               keys which could not be read will not be included in
+	 *               the results array.
+	 */
+	abstract public function read(array $keys);
+
+	/**
+	 * Will attempt to remove specified keys from the user space cache.
+	 *
+	 * @param array $keys Keys to uniquely identify the cached items.
+	 * @return boolean `true` on successful delete, `false` otherwise.
+	 */
+	abstract public function delete(array $keys);
+
+	/**
+	 * Performs a decrement operation on specified numeric cache item.
+	 *
+	 * @param string $key Key of numeric cache item to decrement.
+	 * @param integer $offset Offset to decrement - defaults to `1`.
+	 * @return integer|boolean The item&#039;s new value on successful decrement, else `false`.
+	 */
+	abstract public function decrement($key, $offset = 1);
+
+	/**
+	 * Performs an increment operation on specified numeric cache item.
+	 *
+	 * @param string $key Key of numeric cache item to increment.
+	 * @param integer $offset Offset to increment - defaults to `1`.
+	 * @return integer|boolean The item&#039;s new value on successful increment, else `false`.
+	 */
+	abstract public function increment($key, $offset = 1);
+
+	/**
+	 * Clears entire cache by flushing it. All cache keys using the
+	 * configuration but *without* honoring the scope are removed.
+	 *
+	 * @return boolean `true` on successful clearing, `false` if failed partially or entirely.
+	 */
+	public function clear() {
+		return false;
+	}
+
+	/**
+	 * Perform garbage collection.
+	 *
+	 * @return boolean `true` on successful clean, `false` otherwise.
+	 */
+	public function clean() {
+		return false;
+	}
+
+	/**
+	 * Determines if an adapter is available for usage and all
+	 * preconditions are met (i.e. extension installed).
+	 *
+	 * Override to check for preconditions.
+	 *
+	 * @return boolean `true` if enabled, `false` otherwise.
+	 */
+	public static function enabled() {
+		return true;
+	}
+
+	/**
+	 * Adds scope prefix to keys using separator.
+	 *
+	 * @param string $scope Scope to use when prefixing.
+	 * @param array $keys Array of keys either with or without mapping to values.
+	 * @param string $separator String to use when separating scope from key.
+	 * @return array Prefixed keys array.
+	 */
+	protected function _addScopePrefix($scope, array $keys, $separator = &#039;:&#039;) {
+		$results = [];
+		$isMapped = !is_int(key($keys));
+
+		foreach ($keys as $key =&gt; $value) {
+			if ($isMapped) {
+				$results[&quot;{$scope}{$separator}{$key}&quot;] = $value;
+			} else {
+				$results[$key] = &quot;{$scope}{$separator}{$value}&quot;;
+			}
+		}
+		return $results;
+	}
+
+	/**
+	 * Removes scope prefix from keys.
+	 *
+	 * @param string $scope Scope initially used when prefixing.
+	 * @param array $keys Array of keys mapping to values.
+	 * @param string $separator Separator used when prefix keys initially.
+	 * @return array Keys array with prefix removed from each key.
+	 */
+	protected function _removeScopePrefix($scope, array $data, $separator = &#039;:&#039;) {
+		$results = [];
+		$prefix = strlen(&quot;{$scope}{$separator}&quot;);
+
+		foreach ($data as $key =&gt; $value) {
+			$results[substr($key, $prefix)] = $value;
+		}
+		return $results;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

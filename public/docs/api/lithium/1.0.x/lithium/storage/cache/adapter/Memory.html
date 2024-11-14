@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\storage\cache\adapter\Memory – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../../versions.html">Versions</a><a href="../../../../../../../../present.html">Presentations</a><a href="../../../../../../../../support.html">Community</a><a href="../../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../../storage.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">storage</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../../cache.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">cache</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="../adapter.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">adapter</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Memory</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../adapter.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Memory::__get().html">__get()</a>												<li class="method public">
+				<a href="./Memory::read().html">read()</a>												<li class="method public">
+				<a href="./Memory::write().html">write()</a>												<li class="method public">
+				<a href="./Memory::delete().html">delete()</a>												<li class="method public">
+				<a href="./Memory::decrement().html">decrement()</a>												<li class="method public">
+				<a href="./Memory::increment().html">increment()</a>												<li class="method public">
+				<a href="./Memory::clear().html">clear()</a>												<li class="method public inherited">
+				<a href="../Adapter::clean().html">clean()</a>												<li class="method public inherited">
+				<a href="../Adapter::enabled().html">enabled()</a>												<li class="method protected inherited">
+				<a href="../Adapter::_addScopePrefix().html">_addScopePrefix()</a>												<li class="method protected inherited">
+				<a href="../Adapter::_removeScopePrefix().html">_removeScopePrefix()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::__construct()">__construct()</a>												<li class="method protected inherited">
+				<a href="../../../core/Object::_init().html">_init()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::applyFilter()">applyFilter()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::invokeMethod()">invokeMethod()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::__set_state()">__set_state()</a>												<li class="method public inherited">
+				<a href="../../../core/Object::respondsTo().html">respondsTo()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_instance()">_instance()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_filter()">_filter()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_parents()">_parents()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_stop()">_stop()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./Memory::$_cache.html">$_cache</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_config">$_config</a>												<li class="property protected inherited">
+				<a href="../../../core/Object::$_autoConfig.html">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_methodFilters">$_methodFilters</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_parents">$_parents</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../../storage.html" class="symbol-segment">storage</a>\<a href="../../cache.html" class="symbol-segment">cache</a>\<a href="../adapter.html" class="symbol-segment">adapter</a>\Memory		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../Adapter.html" class="extends__symbol">lithium\storage\cache\Adapter</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>A minimal in-memory cache.</p>
+					</div>
+				
+									<div class="description">
+						<p>This cache adapter is best suited for generic memoization of data, and should not be used
+for for anything that must persist longer than the current request cycle.</p>
+<p>This adapter has no external dependencies. Operations in read/write/delete are atomic
+for single-keys only. Operations increment/decrement are atomic and clearing the cache
+is supported.</p>
+<p>Real persistence of cached items is <em>not</em> provided. Mulit-key operations and serialization
+are not natively supported. However serialization will seldomly be needed. This cache adapter
+does not implement any expiry-based cache invalidation logic, as the cached data will only
+persist for the lifetime of the current request.</p>
+<p>A simple configuration can be accomplished as follows:</p>
+<pre><code class="language-php">Cache::config(array(
+    'default' =&gt; array('adapter' =&gt; 'Memory')
+));
+</code></pre>
+					</div>
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Memory extends \lithium\storage\cache\Adapter {
+
+	/**
+	 * Array used to store cached data by this adapter
+	 *
+	 * @var array
+	 */
+	protected $_cache = array();
+
+	/**
+	 * Magic method to provide an accessor (getter) to protected class variables.
+	 *
+	 * @param string $variable The variable requested.
+	 * @return mixed Variable if it exists, null otherwise.
+	 */
+	public function __get($variable) {
+		if (isset($this-&gt;{&quot;_$variable&quot;})) {
+			return $this-&gt;{&quot;_$variable&quot;};
+		}
+	}
+
+	/**
+	 * Read values from the cache. Will attempt to return an array of data
+	 * containing key/value pairs of the requested data.
+	 *
+	 * @param array $keys Keys to uniquely identify the cached items.
+	 * @return array Cached values keyed by cache keys on successful read,
+	 *               keys which could not be read will not be included in
+	 *               the results array.
+	 */
+	public function read(array $keys) {
+		$results = array();
+
+		foreach ($keys as $key) {
+			if (array_key_exists($key, $this-&gt;_cache)) {
+				$results[$key] = $this-&gt;_cache[$key];
+			}
+		}
+		return $results;
+	}
+
+	/**
+	 * Write values to the cache.
+	 *
+	 * @param array $keys Key/value pairs with keys to uniquely identify the to-be-cached item.
+	 * @param mixed $data The value to be cached.
+	 * @param null|string $expiry Unused.
+	 * @return boolean `true` on successful write, `false` otherwise.
+	 */
+	public function write(array $keys, $expiry = null) {
+		foreach ($keys as $key =&gt; &amp;$value) {
+			$this-&gt;_cache[$key] = $value;
+		}
+		return true;
+	}
+
+	/**
+	 * Will attempt to remove specified keys from the user space cache.
+	 *
+	 * @param array $keys Keys to uniquely identify the cached items.
+	 * @return boolean `true` on successful delete, `false` otherwise.
+	 */
+	public function delete(array $keys) {
+		foreach ($keys as $key) {
+			if (!isset($this-&gt;_cache[$key])) {
+				return false;
+			}
+			unset($this-&gt;_cache[$key]);
+		}
+		return true;
+	}
+
+	/**
+	 * Performs a decrement operation on specified numeric cache item.
+	 *
+	 * @param string $key Key of numeric cache item to decrement.
+	 * @param integer $offset Offset to decrement - defaults to `1`.
+	 * @return integer|boolean The item&#039;s new value on successful decrement, else `false`.
+	 */
+	public function decrement($key, $offset = 1) {
+		if (!array_key_exists($key, $this-&gt;_cache)) {
+			return false;
+		}
+		return $this-&gt;_cache[$key] -= $offset;
+	}
+
+	/**
+	 * Performs an increment operation on specified numeric cache item.
+	 *
+	 * @param string $key Key of numeric cache item to increment.
+	 * @param integer $offset Offset to increment - defaults to `1`.
+	 * @return integer|boolean The item&#039;s new value on successful increment, else `false`.
+	 */
+	public function increment($key, $offset = 1) {
+		if (!array_key_exists($key, $this-&gt;_cache)) {
+			return false;
+		}
+		return $this-&gt;_cache[$key] += $offset;
+	}
+
+	/**
+	 * Clears entire cache by flushing it. All cache keys using the
+	 * configuration but *without* honoring the scope are removed.
+	 *
+	 * The operation will continue to remove keys even if removing
+	 * one single key fails, clearing thoroughly as possible. In any case
+	 * this method will return `true`.
+	 *
+	 * @return boolean Always returns `true`.
+	 */
+	public function clear() {
+		foreach ($this-&gt;_cache as $key =&gt; &amp;$value) {
+			unset($this-&gt;_cache[$key]);
+		}
+		return true;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

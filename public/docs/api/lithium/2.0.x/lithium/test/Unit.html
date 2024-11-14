@@ -1,0 +1,2154 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\test\Unit – Framework API v2.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (2.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../test.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">test</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Unit</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../test.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Unit::get().html">get()</a>												<li class="method public">
+				<a href="./Unit::setUp().html">setUp()</a>												<li class="method public">
+				<a href="./Unit::tearDown().html">tearDown()</a>												<li class="method public">
+				<a href="./Unit::skip().html">skip()</a>												<li class="method public">
+				<a href="./Unit::skipIf().html">skipIf()</a>												<li class="method public">
+				<a href="./Unit::subject().html">subject()</a>												<li class="method public">
+				<a href="./Unit::methods().html">methods()</a>												<li class="method public">
+				<a href="./Unit::results().html">results()</a>												<li class="method public">
+				<a href="./Unit::run().html">run()</a>												<li class="method public">
+				<a href="./Unit::assert().html">assert()</a>												<li class="method public">
+				<a href="./Unit::fail().html">fail()</a>												<li class="method public">
+				<a href="./Unit::assertEqual().html">assertEqual()</a>												<li class="method public">
+				<a href="./Unit::assertNotEqual().html">assertNotEqual()</a>												<li class="method public">
+				<a href="./Unit::assertIdentical().html">assertIdentical()</a>												<li class="method public">
+				<a href="./Unit::assertNotIdentical().html">assertNotIdentical()</a>												<li class="method public">
+				<a href="./Unit::assertTrue().html">assertTrue()</a>												<li class="method public">
+				<a href="./Unit::assertFalse().html">assertFalse()</a>												<li class="method public">
+				<a href="./Unit::assertNull().html">assertNull()</a>												<li class="method public">
+				<a href="./Unit::assertNotNull().html">assertNotNull()</a>												<li class="method public">
+				<a href="./Unit::assertEmpty().html">assertEmpty()</a>												<li class="method public">
+				<a href="./Unit::assertNotEmpty().html">assertNotEmpty()</a>												<li class="method public">
+				<a href="./Unit::assertException().html">assertException()</a>												<li class="method public">
+				<a href="./Unit::assertNotException().html">assertNotException()</a>												<li class="method public">
+				<a href="./Unit::assertPattern().html">assertPattern()</a>												<li class="method public">
+				<a href="./Unit::assertNotPattern().html">assertNotPattern()</a>												<li class="method public">
+				<a href="./Unit::assertStringMatchesFormat().html">assertStringMatchesFormat()</a>												<li class="method public">
+				<a href="./Unit::assertStringNotMatchesFormat().html">assertStringNotMatchesFormat()</a>												<li class="method public">
+				<a href="./Unit::assertStringEndsWith().html">assertStringEndsWith()</a>												<li class="method public">
+				<a href="./Unit::assertStringStartsWith().html">assertStringStartsWith()</a>												<li class="method public">
+				<a href="./Unit::assertTags().html">assertTags()</a>												<li class="method public">
+				<a href="./Unit::assertCookie().html">assertCookie()</a>												<li class="method public">
+				<a href="./Unit::assertNoCookie().html">assertNoCookie()</a>												<li class="method protected">
+				<a href="./Unit::_cookieMatch().html">_cookieMatch()</a>												<li class="method public">
+				<a href="./Unit::assertCount().html">assertCount()</a>												<li class="method public">
+				<a href="./Unit::assertNotCount().html">assertNotCount()</a>												<li class="method public">
+				<a href="./Unit::assertArrayHasKey().html">assertArrayHasKey()</a>												<li class="method public">
+				<a href="./Unit::assertArrayNotHasKey().html">assertArrayNotHasKey()</a>												<li class="method public">
+				<a href="./Unit::assertContains().html">assertContains()</a>												<li class="method public">
+				<a href="./Unit::assertNotContains().html">assertNotContains()</a>												<li class="method public">
+				<a href="./Unit::assertContainsOnly().html">assertContainsOnly()</a>												<li class="method public">
+				<a href="./Unit::assertNotContainsOnly().html">assertNotContainsOnly()</a>												<li class="method public">
+				<a href="./Unit::assertContainsOnlyInstancesOf().html">assertContainsOnlyInstancesOf()</a>												<li class="method public">
+				<a href="./Unit::assertGreaterThan().html">assertGreaterThan()</a>												<li class="method public">
+				<a href="./Unit::assertGreaterThanOrEqual().html">assertGreaterThanOrEqual()</a>												<li class="method public">
+				<a href="./Unit::assertLessThan().html">assertLessThan()</a>												<li class="method public">
+				<a href="./Unit::assertLessThanOrEqual().html">assertLessThanOrEqual()</a>												<li class="method public">
+				<a href="./Unit::assertInstanceOf().html">assertInstanceOf()</a>												<li class="method public">
+				<a href="./Unit::assertNotInstanceOf().html">assertNotInstanceOf()</a>												<li class="method public">
+				<a href="./Unit::assertInternalType().html">assertInternalType()</a>												<li class="method public">
+				<a href="./Unit::assertNotInternalType().html">assertNotInternalType()</a>												<li class="method public">
+				<a href="./Unit::assertFileEquals().html">assertFileEquals()</a>												<li class="method public">
+				<a href="./Unit::assertFileNotEquals().html">assertFileNotEquals()</a>												<li class="method public">
+				<a href="./Unit::assertFileExists().html">assertFileExists()</a>												<li class="method public">
+				<a href="./Unit::assertFileNotExists().html">assertFileNotExists()</a>												<li class="method public">
+				<a href="./Unit::assertClassHasAttribute().html">assertClassHasAttribute()</a>												<li class="method public">
+				<a href="./Unit::assertClassNotHasAttribute().html">assertClassNotHasAttribute()</a>												<li class="method public">
+				<a href="./Unit::assertClassHasStaticAttribute().html">assertClassHasStaticAttribute()</a>												<li class="method public">
+				<a href="./Unit::assertClassNotHasStaticAttribute().html">assertClassNotHasStaticAttribute()</a>												<li class="method public">
+				<a href="./Unit::assertObjectHasAttribute().html">assertObjectHasAttribute()</a>												<li class="method public">
+				<a href="./Unit::assertObjectNotHasAttribute().html">assertObjectNotHasAttribute()</a>												<li class="method protected">
+				<a href="./Unit::_result().html">_result()</a>												<li class="method protected">
+				<a href="./Unit::_runTestMethod().html">_runTestMethod()</a>												<li class="method protected">
+				<a href="./Unit::_handleException().html">_handleException()</a>												<li class="method protected">
+				<a href="./Unit::_reportException().html">_reportException()</a>												<li class="method protected">
+				<a href="./Unit::_compare().html">_compare()</a>												<li class="method protected">
+				<a href="./Unit::_message().html">_message()</a>												<li class="method protected">
+				<a href="./Unit::_arrayPermute().html">_arrayPermute()</a>												<li class="method protected">
+				<a href="./Unit::_cleanUp().html">_cleanUp()</a>												<li class="method protected">
+				<a href="./Unit::_normalizeLineEndings().html">_normalizeLineEndings()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./Unit::$_reporter.html">$_reporter</a>												<li class="property protected">
+				<a href="./Unit::$_results.html">$_results</a>												<li class="property protected">
+				<a href="./Unit::$_internalTypes.html">$_internalTypes</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../test.html" class="symbol-segment">test</a>\Unit		</h1>
+
+		<section class="under">
+														<div class="extends">
+					<span class="extends__title">Uses</span>
+											AutoConfigurable									</div>
+																<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>This is the base class for all test cases. Test are performed using an assertion method.
+If the assertion is correct, the test passes, otherwise it fails. Most assertions take an
+expected result, a received result, and a message (to describe the failure) as parameters.</p>
+					</div>
+				
+									<div class="description">
+						<p>Unit tests are used to check a small unit of functionality, such as if a method returns an
+expected result for a known input, or whether an adapter can successfully open a connection.</p>
+<p>Available assertions are (see <code>assert&lt;assertion-name&gt;</code> methods for details): Equal, False,
+Identical, NoPattern, NotEqual, Null, Pattern, Tags, True.</p>
+<p>If an assertion is expected to produce an exception, <code>assertException()</code> should be used.</p>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="./Unit::assertException().html">lithium\test\Unit::assertException()</a>								</ul>
+			</section>
+			
+			
+						<section id="subclasses" class="section">
+				<h3 class="h-beta">Subclasses</h3>
+				<ul class="subclasses">
+											<li><a href="Integration.html">lithium\test\Integration</a>									</ul>
+			</section>
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Unit {
+
+	use AutoConfigurable;
+
+	/**
+	 * The Reference to a test reporter class.
+	 *
+	 * @var object
+	 */
+	protected $_reporter = null;
+
+	/**
+	 * The list of test results.
+	 *
+	 * @var string
+	 */
+	protected $_results = [];
+
+	/**
+	 * Internal types and how to test for them
+	 *
+	 * @var array
+	 */
+	protected static $_internalTypes = [
+		&#039;array&#039; =&gt; &#039;is_array&#039;,
+		&#039;bool&#039; =&gt; &#039;is_bool&#039;,
+		&#039;boolean&#039; =&gt; &#039;is_bool&#039;,
+		&#039;callable&#039; =&gt; &#039;is_callable&#039;,
+		&#039;double&#039; =&gt; &#039;is_double&#039;,
+		&#039;float&#039; =&gt; &#039;is_float&#039;,
+		&#039;int&#039; =&gt; &#039;is_int&#039;,
+		&#039;integer&#039; =&gt; &#039;is_integer&#039;,
+		&#039;long&#039; =&gt; &#039;is_long&#039;,
+		&#039;null&#039; =&gt; &#039;is_null&#039;,
+		&#039;numeric&#039; =&gt; &#039;is_numeric&#039;,
+		&#039;object&#039; =&gt; &#039;is_object&#039;,
+		&#039;real&#039; =&gt; &#039;is_real&#039;,
+		&#039;resource&#039; =&gt; &#039;is_resource&#039;,
+		&#039;scalar&#039; =&gt; &#039;is_scalar&#039;,
+		&#039;string&#039; =&gt; &#039;is_string&#039;
+	];
+
+	/**
+	 * Finds the test case for the corresponding class name.
+	 *
+	 * @param string $class A fully-namespaced class reference for which to find a test case.
+	 * @return string Returns the class name of a test case for `$class`, or `null` if none exists.
+	 */
+	public static function get($class) {
+		$parts = explode(&#039;\\&#039;, $class);
+
+		$library = array_shift($parts);
+		$name = array_pop($parts);
+		$type = &#039;tests.cases.&#039; . implode(&#039;.&#039;, $parts);
+
+		return Libraries::locate($type, $name, compact(&#039;library&#039;));
+	}
+
+	/**
+	 * Setup method run before every test method. Override in subclasses.
+	 *
+	 * @return void
+	 */
+	public function setUp() {}
+
+	/**
+	 * Teardown method run after every test method. Override in subclasses.
+	 *
+	 * @return void
+	 */
+	public function tearDown() {}
+
+	/**
+	 * Subclasses should use this method to set conditions that, if failed, terminate further
+	 * testing.
+	 *
+	 * For example:
+	 * ```
+	 * public function skip() {
+	 *     $connection = Connections::get(&#039;test&#039;, [&#039;config&#039; =&gt; true]);
+	 *     $this-&gt;skipIf(!$connection, &#039;Test database is unavailable.&#039;);
+	 * }
+	 * ```
+	 */
+	public function skip() {}
+
+	/**
+	 * Skips test(s) if the condition is met.
+	 *
+	 * When used within a subclass&#039; `skip` method, all tests are ignored if the condition is
+	 * met, otherwise processing continues as normal. For other methods, only the remainder of
+	 * the method is skipped, when the condition is met.
+	 *
+	 * @throws Exception
+	 * @param boolean $condition
+	 * @param string|boolean $message Message to pass if the condition is met.
+	 * @return mixed
+	 */
+	public function skipIf($condition, $message = false) {
+		if ($condition) {
+			throw new Exception(is_string($message) ? $message : null);
+		}
+	}
+
+	/**
+	 * Returns the class name that is the subject under test for this test case.
+	 *
+	 * @return string
+	 */
+	public function subject() {
+		return preg_replace(&#039;/Test$/&#039;, &#039;&#039;, str_replace(&#039;tests\\cases\\&#039;, &#039;&#039;, get_class($this)));
+	}
+
+	/**
+	 * Return test methods to run.
+	 *
+	 * @return array
+	 */
+	public function methods() {
+		return array_values(preg_grep(&#039;/^test/&#039;, get_class_methods($this)));
+	}
+
+	/**
+	 * Returns the current results.
+	 *
+	 * @return array The Results... currently.
+	 */
+	public function results() {
+		return $this-&gt;_results;
+	}
+
+	/**
+	 * Runs the test methods in this test case, with the given options.
+	 *
+	 * Installs a temporary error handler that will convert regular errors to
+	 * exceptions in order to make both errors and exceptions be handled
+	 * in a unified way. ErrorExceptions created like this, will get the
+	 * error&#039;s code as their severity. As this comes closest to their meaning.
+	 *
+	 * The error handler honors the PHP `error_level` and will not convert errors
+	 * to exceptions if they are masked by the `error_level`. This allows test
+	 * methods to run assertions against i.e. deprecated functions. Usually
+	 * the error_level is set by the test runner so that all errors are converted.
+	 *
+	 * @link http://php.net/manual/function.error-reporting.php
+	 * @param array $options The options to use when running the test. Available options are:
+	 *             - `&#039;methods&#039;`: An arbitrary array of method names to execute. If
+	 *                unspecified, all methods starting with &#039;test&#039; are run.
+	 *             - `&#039;reporter&#039;`: A closure which gets called after each test result,
+	 *                which may modify the results presented.
+	 *             - `&#039;handler&#039;`: A closure which gets registered as the temporary error handler.
+	 * @return array
+	 */
+	public function run(array $options = []) {
+		$defaults = [
+			&#039;methods&#039; =&gt; $this-&gt;methods(),
+			&#039;reporter&#039; =&gt; $this-&gt;_reporter,
+			&#039;handler&#039; =&gt; function($code, $message, $file = null, $line = null) {
+				if (error_reporting() &amp; $code) {
+					throw new ErrorException($message, 0, $code, $file, $line);
+				}
+			}
+		];
+		$options += $defaults;
+		$this-&gt;_results = [];
+		$this-&gt;_reporter = $options[&#039;reporter&#039;];
+
+		try {
+			$this-&gt;skip();
+		} catch (Throwable $e) {
+			$this-&gt;_handleException($e);
+			return $this-&gt;_results;
+		}
+
+		set_error_handler($options[&#039;handler&#039;]);
+		foreach ($options[&#039;methods&#039;] as $method) {
+			if ($this-&gt;_runTestMethod($method, $options) === false) {
+				break;
+			}
+		}
+		restore_error_handler();
+		return $this-&gt;_results;
+	}
+
+	/**
+	 * General assert method used by others for common output.
+	 *
+	 * @param boolean $expression
+	 * @param string|boolean $message The message to output. If the message is not a string,
+	 *        then it will be converted to &#039;{:message}&#039;. Use &#039;{:message}&#039; in the string and it
+	 *        will use the `$data` to format the message with `Text::insert()`.
+	 * @param array $data
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assert($expression, $message = false, $data = []) {
+		if (!is_string($message)) {
+			$message = &#039;{:message}&#039;;
+		}
+		if (strpos($message, &quot;{:message}&quot;) !== false) {
+			$params = $data;
+			$params[&#039;message&#039;] = $this-&gt;_message($params);
+			$message = Text::insert($message, $params);
+		}
+		$trace = Debugger::trace([
+			&#039;start&#039; =&gt; 1, &#039;depth&#039; =&gt; 4, &#039;format&#039; =&gt; &#039;array&#039;, &#039;closures&#039; =&gt; !$expression
+		]);
+		$methods = $this-&gt;methods();
+		$i = 1;
+
+		while ($i &lt; count($trace)) {
+			if (in_array($trace[$i][&#039;function&#039;], $methods) &amp;&amp; $trace[$i - 1][&#039;object&#039;] == $this) {
+				break;
+			}
+			$i++;
+		}
+		$class = isset($trace[$i - 1][&#039;object&#039;]) ? get_class($trace[$i - 1][&#039;object&#039;]) : null;
+		$method = isset($trace[$i]) ? $trace[$i][&#039;function&#039;] : $trace[$i - 1][&#039;function&#039;];
+
+		$result = compact(&#039;class&#039;, &#039;method&#039;, &#039;message&#039;, &#039;data&#039;) + [
+			&#039;file&#039;      =&gt; $trace[$i - 1][&#039;file&#039;],
+			&#039;line&#039;      =&gt; $trace[$i - 1][&#039;line&#039;],
+			&#039;assertion&#039; =&gt; $trace[$i - 1][&#039;function&#039;]
+		];
+		$this-&gt;_result($expression ? &#039;pass&#039; : &#039;fail&#039;, $result);
+		return $expression;
+	}
+
+	/**
+	 * Generates a failed test with the given message.
+	 *
+	 * @param string $message
+	 */
+	public function fail($message = false) {
+		$this-&gt;assert(false, $message);
+	}
+
+	/**
+	 * Assert that the actual result is equal, but not neccessarily identical, to the expected
+	 * result.
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param mixed $expected
+	 * @param mixed $result
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertEqual($expected, $result, $message = &#039;{:message}&#039;) {
+		list($expected, $result) = $this-&gt;_normalizeLineEndings($expected, $result);
+		$data = ($expected != $result) ? $this-&gt;_compare(&#039;equal&#039;, $expected, $result) : null;
+		return $this-&gt;assert($expected == $result, $message, $data);
+	}
+
+	/**
+	 * Assert that the actual result and the expected result are *not* equal to each other.
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param mixed $expected
+	 * @param mixed $result
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertNotEqual($expected, $result, $message = &#039;{:message}&#039;) {
+		list($expected, $result) = $this-&gt;_normalizeLineEndings($expected, $result);
+		return $this-&gt;assert($result != $expected, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+	}
+
+	/**
+	 * Assert that the actual result and the expected result are identical using a strict
+	 * comparison.
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param mixed $expected
+	 * @param mixed $result
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertIdentical($expected, $result, $message = &#039;{:message}&#039;) {
+		$data = ($expected !== $result) ? $this-&gt;_compare(&#039;identical&#039;, $expected, $result) : null;
+		return $this-&gt;assert($expected === $result, $message, $data);
+	}
+
+	/**
+	 * Assert that the actual result and the expected result are *not* identical using a strict
+	 * comparison.
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param mixed $expected
+	 * @param mixed $result
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertNotIdentical($expected, $result, $message = &#039;{:message}&#039;) {
+		return $this-&gt;assert($expected !== $result, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+	}
+
+	/**
+	 * Assert that the result is strictly `true`.
+	 *
+	 * ```
+	 * $this-&gt;assertTrue(true, &#039;Boolean true&#039;); // succeeds
+	 * $this-&gt;assertTrue(&#039;false&#039;, &#039;String has content&#039;); // fails
+	 * $this-&gt;assertTrue(10, &#039;Non-Zero value&#039;); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param mixed $result
+	 * @param string $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertTrue($result, $message = &#039;{:message}&#039;) {
+		$expected = true;
+		return $this-&gt;assert($result === $expected, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+	}
+
+	/**
+	 * Assert that the result strictly is `false`.
+	 *
+	 * ```
+	 * $this-&gt;assertFalse(false, &#039;Boolean false&#039;); // succeeds
+	 * $this-&gt;assertFalse(&#039;&#039;, &#039;String is empty&#039;); // fails
+	 * $this-&gt;assertFalse(0, &#039;Zero value&#039;); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param mixed $result
+	 * @param string $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertFalse($result, $message = &#039;{:message}&#039;) {
+		$expected = false;
+		return $this-&gt;assert($result === $expected, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+	}
+
+	/**
+	 * Assert that the result is strictly `null`.
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param mixed $result
+	 * @param string $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertNull($result, $message = &#039;{:message}&#039;) {
+		$expected = null;
+		return $this-&gt;assert($result === null, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+	}
+
+	/**
+	 * Assert that the result is *not* strictly `null`.
+	 *
+	 * ```
+	 * $this-&gt;assertNotNull(1); // succeeds
+	 * $this-&gt;assertNotNull(null); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param mixed $result
+	 * @param string $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertNotNull($actual, $message = &#039;{:message}&#039;) {
+		return $this-&gt;assert($actual !== null, $message, [
+			&#039;expected&#039; =&gt; null,
+			&#039;actual&#039; =&gt; gettype($actual)
+		]);
+	}
+
+	/**
+	 * Assert that given result is empty.
+	 *
+	 * ```
+	 * $this-&gt;assertEmpty(&#039;&#039;); // succeeds
+	 * $this-&gt;assertEmpty(0); // succeeds
+	 * $this-&gt;assertEmpty(0.0); // succeeds
+	 * $this-&gt;assertEmpty(&#039;0&#039;); // succeeds
+	 * $this-&gt;assertEmpty(null); // succeeds
+	 * $this-&gt;assertEmpty(false); // succeeds
+	 * $this-&gt;assertEmpty([]); // succeeds
+	 * $this-&gt;assertEmpty(1); // fails
+	 * ```
+	 *
+	 * @link http://php.net/empty
+	 * @see lithium\test\Unit::assert()
+	 * @param string $actual
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertEmpty($actual, $message = &#039;{:message}&#039;) {
+		return $this-&gt;assert(empty($actual), $message, [
+			&#039;expected&#039; =&gt; $actual,
+			&#039;result&#039; =&gt; empty($actual)
+		]);
+	}
+
+	/**
+	 * Assert that given result is *not* empty.
+	 *
+	 * ```
+	 * $this-&gt;assertNotEmpty(1); // succeeds
+	 * $this-&gt;assertNotEmpty([]); // fails
+	 * ```
+	 *
+	 * @link http://php.net/empty
+	 * @see lithium\test\Unit::assert()
+	 * @param string $actual
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertNotEmpty($actual, $message = &#039;{:message}&#039;) {
+		return $this-&gt;assert(!empty($actual), $message, [
+			&#039;expected&#039; =&gt; $actual,
+			&#039;result&#039; =&gt; !empty($actual)
+		]);
+	}
+
+	/**
+	 * Assert that the code passed in a closure throws an exception or raises a PHP error. The
+	 * first argument to this method specifies which class name or message the exception must
+	 * have in order to make the assertion successful.
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param mixed $expected A string indicating what the error text is expected to be.  This can
+	 *              be an exact string, a /-delimited regular expression, or true, indicating that
+	 *              any error text is acceptable.
+	 * @param \Closure $closure A closure containing the code that should throw the exception.
+	 * @param string $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertException($expected, $closure, $message = &#039;{:message}&#039;) {
+		$result = null;
+
+		try {
+			$closure();
+			$message = sprintf(&#039;An exception &quot;%s&quot; was expected but not thrown.&#039;, $expected);
+			return $this-&gt;assert(false, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+		} catch (Throwable $e) {
+			// fallthrough
+		}
+		$class = get_class($e);
+		$eMessage = $e-&gt;getMessage();
+
+		if (get_class($e) === $expected) {
+			$result = $class;
+			return $this-&gt;assert(true, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+		}
+		if ($eMessage === $expected) {
+			$result = $eMessage;
+			return $this-&gt;assert(true, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+		}
+		if (Validator::isRegex($expected) &amp;&amp; preg_match($expected, $eMessage)) {
+			$result = $eMessage;
+			return $this-&gt;assert(true, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+		}
+
+		$message = sprintf(
+			&#039;Exception &quot;%s&quot; was expected. Exception &quot;%s&quot; with message &quot;%s&quot; was thrown instead.&#039;,
+			$expected, get_class($e), $eMessage
+		);
+		return $this-&gt;assert(false, $message);
+	}
+
+	/**
+	 * Assert that the code passed in a closure does not throw an exception matching the passed
+	 * expected exception.
+	 *
+	 * The value passed to `exepected` is either an exception class name or the expected message.
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param mixed $expected A string indicating what the error text is not expected to be. This
+	 *              can be an exact string, a /-delimited regular expression, or true, indicating
+	 *              that any error text is acceptable.
+	 * @param \Closure $closure A closure containing the code that should throw the exception.
+	 * @param string $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertNotException($expected, $closure, $message = &#039;{:message}&#039;) {
+		$result = null;
+
+		try {
+			$closure();
+		} catch (Exception $e) {
+			$class = get_class($e);
+			$eMessage = $e-&gt;getMessage();
+			if (is_a($e, $expected)) {
+				$result = $class;
+				return $this-&gt;assert(false, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+			}
+			if ($eMessage === $expected) {
+				$result = $eMessage;
+				return $this-&gt;assert(false, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+			}
+			if (Validator::isRegex($expected) &amp;&amp; preg_match($expected, $eMessage)) {
+				$result = $eMessage;
+				return $this-&gt;assert(false, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+			}
+		}
+		$message = sprintf(&#039;Exception &quot;%s&quot; was not expected.&#039;, $expected);
+		return $this-&gt;assert(true, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+	}
+
+	/**
+	 * Assert that the regular expression `$expected` is matched in the result.
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param mixed $expected
+	 * @param mixed $result
+	 * @param string $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertPattern($expected, $result, $message = &#039;{:message}&#039;) {
+		list($expected, $result) = $this-&gt;_normalizeLineEndings($expected, $result);
+		$params = compact(&#039;expected&#039;, &#039;result&#039;);
+		return $this-&gt;assert(!!preg_match($expected, $result), $message, $params);
+	}
+
+	/**
+	 * Assert that the regular expression `$expected` is *not* matched in the result.
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param mixed $expected
+	 * @param mixed $result
+	 * @param string $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertNotPattern($expected, $result, $message = &#039;{:message}&#039;) {
+		list($expected, $result) = $this-&gt;_normalizeLineEndings($expected, $result);
+		$params = compact(&#039;expected&#039;, &#039;result&#039;);
+		return $this-&gt;assert(!preg_match($expected, $result ?? &#039;&#039;), $message, $params);
+	}
+
+	/**
+	 * Assert that given value matches the `sprintf` format.
+	 *
+	 * ```
+	 * $this-&gt;assertStringMatchesFormat(&#039;%d&#039;, &#039;10&#039;); // succeeds
+	 * $this-&gt;assertStringMatchesFormat(&#039;%d&#039;, &#039;10.555&#039;); // fails
+	 * ```
+	 *
+	 * @link http://php.net/sprintf
+	 * @link http://php.net/sscanf
+	 * @see lithium\test\Unit::assert()
+	 * @param string $expected Expected format using sscanf&#039;s format.
+	 * @param string $actual
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertStringMatchesFormat($expected, $actual, $message = &#039;{:message}&#039;) {
+		$result = sscanf($actual, $expected);
+		return $this-&gt;assert($result[0] == $actual, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+	}
+
+	/**
+	 * Assert that given value does *not* matche the `sprintf` format.
+	 *
+	 * ```
+	 * $this-&gt;assertStringNotMatchesFormat(&#039;%d&#039;, &#039;10.555&#039;); // succeeds
+	 * $this-&gt;assertStringNotMatchesFormat(&#039;%d&#039;, &#039;10&#039;); // fails
+	 * ```
+	 *
+	 * @link http://php.net/sprintf
+	 * @link http://php.net/sscanf
+	 * @see lithium\test\Unit::assert()
+	 * @param string $expected Expected format using sscanf&#039;s format.
+	 * @param string $actual
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertStringNotMatchesFormat($expected, $actual, $message = &#039;{:message}&#039;) {
+		$result = sscanf($actual, $expected);
+		return $this-&gt;assert($result[0] != $actual, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+	}
+
+	/**
+	 * Assert given result string has given suffix.
+	 *
+	 * ```
+	 * $this-&gt;assertStringEndsWith(&#039;bar&#039;, &#039;foobar&#039;); // succeeds
+	 * $this-&gt;assertStringEndsWith(&#039;foo&#039;, &#039;foobar&#039;); // fails
+	 * ```
+	 *
+	 * @param string $expected The suffix to check for.
+	 * @param string $actual
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertStringEndsWith($expected, $actual, $message = &#039;{:message}&#039;) {
+		return $this-&gt;assert(preg_match(&quot;/$expected$/&quot;, $actual, $matches) === 1, $message, [
+			&#039;expected&#039; =&gt; $expected,
+			&#039;result&#039; =&gt; $actual
+		]);
+	}
+
+	/**
+	 * Assert given result string has given prefix.
+	 *
+	 * ```
+	 * $this-&gt;assertStringStartsWith(&#039;foo&#039;, &#039;foobar&#039;); // succeeds
+	 * $this-&gt;assertStringStartsWith(&#039;bar&#039;, &#039;foobar&#039;); // fails
+	 * ```
+	 *
+	 * @param string $expected The prefix to check for.
+	 * @param string $actual
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertStringStartsWith($expected, $actual, $message = &#039;{:message}&#039;) {
+		return $this-&gt;assert(preg_match(&quot;/^$expected/&quot;, $actual, $matches) === 1, $message, [
+			&#039;expected&#039; =&gt; $expected,
+			&#039;result&#039; =&gt; $actual
+		]);
+	}
+
+	/**
+	 * Takes an array $expected and generates a regex from it to match the provided $string.
+	 * Samples for $expected:
+	 *
+	 * Checks for an input tag with a name attribute (contains any non-empty value) and an id
+	 * attribute that contains &#039;my-input&#039;:
+	 * ```
+	 *     [&#039;input&#039; =&gt; [&#039;name&#039;, &#039;id&#039; =&gt; &#039;my-input&#039;]]
+	 * ```
+	 *
+	 * Checks for two p elements with some text in them:
+	 * ```
+	 * [
+	 *     [&#039;p&#039; =&gt; true],
+	 *     &#039;textA&#039;,
+	 *     &#039;/p&#039;,
+	 *     [&#039;p&#039; =&gt; true],
+	 *     &#039;textB&#039;,
+	 *     &#039;/p&#039;
+	 * ]
+	 * ```
+	 *
+	 * You can also specify a pattern expression as part of the attribute values, or the tag
+	 * being defined, if you prepend the value with preg: and enclose it with slashes, like so:
+	 * ```
+	 * [
+	 *     [&#039;input&#039; =&gt; [&#039;name&#039;, &#039;id&#039; =&gt; &#039;preg:/FieldName\d+/&#039;]],
+	 *     &#039;preg:/My\s+field/&#039;
+	 * ]
+	 * ```
+	 *
+	 * Important: This function is very forgiving about whitespace and also accepts any
+	 * permutation of attribute order. It will also allow whitespaces between specified tags.
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param string $string An HTML/XHTML/XML string
+	 * @param array $expected An array, see above
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertTags($string, $expected) {
+		$regex = [];
+		$normalized = [];
+
+		foreach ((array) $expected as $key =&gt; $val) {
+			if (!is_numeric($key)) {
+				$normalized[] = [$key =&gt; $val];
+			} else {
+				$normalized[] = $val;
+			}
+		}
+		$i = 0;
+
+		foreach ($normalized as $tags) {
+			$i++;
+			if (is_string($tags) &amp;&amp; $tags[0] === &#039;&lt;&#039;) {
+				$tags = [substr($tags, 1) =&gt; []];
+			} elseif (is_string($tags)) {
+				$tagsTrimmed = preg_replace(&#039;/\s+/m&#039;, &#039;&#039;, $tags);
+
+				if (preg_match(&#039;/^\*?\//&#039;, $tags, $match) &amp;&amp; $tagsTrimmed !== &#039;//&#039;) {
+					$prefix = [null, null];
+
+					if ($match[0] === &#039;*/&#039;) {
+						$prefix = [&#039;Anything, &#039;, &#039;.*?&#039;];
+					}
+					$regex[] = [
+						sprintf(&#039;%sClose %s tag&#039;, $prefix[0], substr($tags, strlen($match[0]))),
+						sprintf(&#039;%s&lt;[\s]*\/[\s]*%s[\s]*&gt;[\n\r]*&#039;, $prefix[1], substr(
+							$tags, strlen($match[0])
+						)),
+						$i
+					];
+					continue;
+				}
+
+				if (!empty($tags) &amp;&amp; preg_match(&#039;/^regex\:\/(.+)\/$/i&#039;, $tags, $matches)) {
+					$tags = $matches[1];
+					$type = &#039;Regex matches&#039;;
+				} else {
+					$tags = preg_quote($tags, &#039;/&#039;);
+					$type = &#039;Text equals&#039;;
+				}
+				$regex[] = [sprintf(&#039;%s &quot;%s&quot;&#039;, $type, $tags), $tags, $i];
+				continue;
+			}
+			foreach ($tags as $tag =&gt; $attributes) {
+				$regex[] = [
+					sprintf(&#039;Open %s tag&#039;, $tag),
+					sprintf(&#039;[\s]*&lt;%s&#039;, preg_quote($tag, &#039;/&#039;)),
+					$i
+				];
+				if ($attributes === true) {
+					$attributes = [];
+				}
+				$attrs = [];
+				$explanations = [];
+
+				foreach ($attributes as $attr =&gt; $val) {
+					if (is_numeric($attr) &amp;&amp; preg_match(&#039;/^regex\:\/(.+)\/$/i&#039;, $val, $matches)) {
+						$attrs[] = $matches[1];
+						$explanations[] = sprintf(&#039;Regex &quot;%s&quot; matches&#039;, $matches[1]);
+						continue;
+					} else {
+						$quotes = &#039;&quot;&#039;;
+
+						if (is_numeric($attr)) {
+							$attr = $val;
+							$val = &#039;.+?&#039;;
+							$explanations[] = sprintf(&#039;Attribute &quot;%s&quot; present&#039;, $attr);
+						} elseif (
+							!empty($val) &amp;&amp; preg_match(&#039;/^regex\:\/(.+)\/$/i&#039;, $val, $matches)
+						) {
+							$quotes = &#039;&quot;?&#039;;
+							$val = $matches[1];
+							$explanations[] = sprintf(&#039;Attribute &quot;%s&quot; matches &quot;%s&quot;&#039;, $attr, $val);
+						} else {
+							$explanations[] = sprintf(&#039;Attribute &quot;%s&quot; == &quot;%s&quot;&#039;, $attr, $val);
+							$val = preg_quote($val, &#039;/&#039;);
+						}
+						$attrs[] = &#039;[\s]+&#039; . preg_quote($attr, &#039;/&#039;) . &quot;={$quotes}{$val}{$quotes}&quot;;
+					}
+				}
+				if ($attrs) {
+					$permutations = $this-&gt;_arrayPermute($attrs);
+					$permutationTokens = [];
+					foreach ($permutations as $permutation) {
+						$permutationTokens[] = join(&#039;&#039;, $permutation);
+					}
+					$regex[] = [
+						sprintf(&#039;%s&#039;, join(&#039;, &#039;, $explanations)),
+						$permutationTokens,
+						$i
+					];
+				}
+				$regex[] = [sprintf(&#039;End %s tag&#039;, $tag), &#039;[\s]*\/?[\s]*&gt;[\n\r]*&#039;, $i];
+			}
+		}
+
+		foreach ($regex as $i =&gt; $assertation) {
+			list($description, $expressions, $itemNum) = $assertation;
+			$matches = false;
+
+			foreach ((array) $expressions as $expression) {
+				if (preg_match(sprintf(&#039;/^%s/s&#039;, $expression), $string, $match)) {
+					$matches = true;
+					$string = substr($string, strlen($match[0]));
+					break;
+				}
+			}
+
+			if (!$matches) {
+				$this-&gt;assert(false, sprintf(
+					&#039;- Item #%d / regex #%d failed: %s&#039;, $itemNum, $i, $description
+				));
+				return false;
+			}
+		}
+		return $this-&gt;assert(true);
+	}
+
+	/**
+	 * Assert Cookie data is properly set in headers.
+	 *
+	 * The value passed to `exepected` is an array of the cookie data, with at least the key and
+	 * value expected, but can support any of the following keys:
+	 * 	- `key`: the expected key
+	 * 	- `value`: the expected value
+	 * 	- `path`: optionally specifiy a path
+	 * 	- `name`: optionally specify the cookie name
+	 * 	- `expires`: optionally assert a specific expire time
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param array $expected
+	 * @param array $headers When empty, value of `headers_list()` is used.
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertCookie($expected, $headers = null) {
+		$result = null;
+		$matched = $this-&gt;_cookieMatch($expected, $headers);
+		if (!$matched[&#039;match&#039;]) {
+			$message = sprintf(&#039;%s - Cookie not found in headers.&#039;, $matched[&#039;pattern&#039;]);
+			return $this-&gt;assert(false, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+		}
+		return $this-&gt;assert(true, &#039;%s&#039;);
+	}
+
+	/**
+	 * Assert Cookie data is *not* set in headers.
+	 *
+	 * The value passed to `expected` is an array of the cookie data, with at least the key and
+	 * value expected, but can support any of the following keys:
+	 * 	- `key`: the expected key
+	 * 	- `value`: the expected value
+	 * 	- `path`: optionally specify a path
+	 * 	- `name`: optionally specify the cookie name
+	 * 	- `expires`: optionally assert a specific expire time
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param array $expected
+	 * @param array $headers When empty, value of `headers_list()` is used.
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertNoCookie($expected, $headers = null) {
+		$matched = $this-&gt;_cookieMatch($expected, $headers);
+		if ($matched[&#039;match&#039;]) {
+			$message = sprintf(&#039;%s - Cookie found in headers.&#039;, $matched[&#039;pattern&#039;]);
+			return $this-&gt;assert(false, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+		}
+		return $this-&gt;assert(true, &#039;%s&#039;);
+	}
+
+	/**
+	 * Match an `$expected` cookie with the given headers. If no headers are provided, then
+	 * the value of `headers_list()` will be used.
+	 *
+	 * @param array $expected
+	 * @param array $headers When empty, value of `headers_list()` will be used.
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	protected function _cookieMatch($expected, $headers) {
+		$defaults = [&#039;path&#039; =&gt; &#039;/&#039;, &#039;name&#039; =&gt; &#039;[\w.-]+&#039;];
+		$expected += $defaults;
+
+		$headers = ($headers) ?: headers_list();
+		$value = preg_quote(rawurlencode($expected[&#039;value&#039;]), &#039;/&#039;);
+
+		$key = explode(&#039;.&#039;, $expected[&#039;key&#039;]);
+		$key = (count($key) === 1) ? &#039;[&#039; . current($key) . &#039;]&#039; : (&#039;[&#039; . join(&#039;][&#039;, $key) . &#039;]&#039;);
+		$key = preg_quote($key, &#039;/&#039;);
+
+		if (isset($expected[&#039;expires&#039;])) {
+			$expectedExpires = strtotime($expected[&#039;expires&#039;]);
+
+			$expires = gmdate(&#039;D, d[\- ]M[\- ]Y&#039;, $expectedExpires);
+			$expires .= &#039; &#039; . gmdate(&#039;H:i:s&#039;, $expectedExpires) . &#039; GMT&#039;;
+			$maxAge = $expectedExpires - time();
+		} else {
+			$expires = &#039;(?:.+?)&#039;;
+			$maxAge = &#039;([0-9]+)&#039;;
+		}
+		$path = preg_quote($expected[&#039;path&#039;], &#039;/&#039;);
+		$pattern  = &quot;/^Set-Cookie:\s{$expected[&#039;name&#039;]}{$key}={$value};&quot;;
+		$pattern .= &quot;\sexpires={$expires};&quot;;
+		$pattern .= &quot;\sMax-Age={$maxAge};&quot;;
+		$pattern .= &quot;\spath={$path}/&quot;;
+		$match = false;
+
+		foreach ($headers as $header) {
+			if (preg_match($pattern, $header)) {
+				$match = true;
+				continue;
+			}
+		}
+		return compact(&#039;match&#039;, &#039;pattern&#039;);
+	}
+
+	/**
+	 * Assert that the passed result array has expected number of elements.
+	 *
+	 * ```
+	 * $this-&gt;assertCount(1, [&#039;foo&#039;]); // succeeds
+	 * $this-&gt;assertCount(2, [&#039;foo&#039;, &#039;bar&#039;, &#039;bar&#039;]); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param integer $expected
+	 * @param array $array
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertCount($expected, $array, $message = &#039;{:message}&#039;) {
+		return $this-&gt;assert($expected === ($result = count($array)), $message, [
+			&#039;expected&#039; =&gt; $expected,
+			&#039;result&#039; =&gt; $result
+		]);
+	}
+
+	/**
+	 * Assert that the passed result array has *not* the expected number of elements.
+	 *
+	 * ```
+	 * $this-&gt;assertNotCount(2, [&#039;foo&#039;, &#039;bar&#039;, &#039;bar&#039;]); // succeeds
+	 * $this-&gt;assertNotCount(1, [&#039;foo&#039;]); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param integer $expected
+	 * @param array $array
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertNotCount($expected, $array, $message = &#039;{:message}&#039;) {
+		return $this-&gt;assert($expected !== ($result = count($array)), $message, [
+			&#039;expected&#039; =&gt; $expected,
+			&#039;result&#039; =&gt; $result
+		]);
+	}
+
+	/**
+	 * Assert that the result array has given key.
+	 *
+	 * ```
+	 * $this-&gt;assertArrayHasKey(&#039;bar&#039;, [&#039;bar&#039; =&gt; &#039;baz&#039;]); // succeeds
+	 * $this-&gt;assertArrayHasKey(&#039;foo&#039;, [&#039;bar&#039; =&gt; &#039;baz&#039;]); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param mixed $expected
+	 * @param array $array
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertArrayHasKey($key, $array, $message = &#039;{:message}&#039;) {
+		if (is_object($array) &amp;&amp; $array instanceof \ArrayAccess) {
+			$result = isset($array[$key]);
+		} else {
+			$result = array_key_exists($key, $array);
+		}
+
+		return $this-&gt;assert($result, $message, [
+			&#039;expected&#039; =&gt; $key,
+			&#039;result&#039; =&gt; $array
+		]);
+	}
+
+	/**
+	 * Assert that the result array does *not* have given key.
+	 *
+	 * ```
+	 * $this-&gt;assertArrayNotHasKey(&#039;foo&#039;, [&#039;bar&#039; =&gt; &#039;baz&#039;]); // succeeds
+	 * $this-&gt;assertArrayNotHasKey(&#039;bar&#039;, [&#039;bar&#039; =&gt; &#039;baz&#039;]); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param mixed $expected
+	 * @param array $array
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertArrayNotHasKey($key, $array, $message = &#039;{:message}&#039;) {
+		if (is_object($array) &amp;&amp; $array instanceof \ArrayAccess) {
+			$result = isset($array[$key]);
+		} else {
+			$result = array_key_exists($key, $array);
+		}
+
+		return $this-&gt;assert(!$result, $message, [
+			&#039;expected&#039; =&gt; $key,
+			&#039;result&#039; =&gt; $array
+		]);
+	}
+
+	/**
+	 * Assert that `$haystack` contains `$needle` as a value.
+	 *
+	 * ```
+	 * $this-&gt;assertContains(&#039;foo&#039;, [&#039;foo&#039;, &#039;bar&#039;, &#039;baz&#039;]); // succeeds
+	 * $this-&gt;assertContains(4, [1,2,3]); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param string $needle   The needle you are looking for.
+	 * @param mixed $haystack An array, iterable object, or string.
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertContains($needle, $haystack, $message = &#039;{:message}&#039;) {
+		if (is_string($haystack)) {
+			return $this-&gt;assert(strpos($haystack, $needle) !== false, $message, [
+				&#039;expected&#039; =&gt; $needle,
+				&#039;result&#039; =&gt; $haystack
+			]);
+		}
+		foreach ($haystack as $key =&gt; $value) {
+			if ($value === $needle) {
+				return $this-&gt;assert(true, $message, [
+					&#039;expected&#039; =&gt; $needle,
+					&#039;result&#039; =&gt; $haystack
+				]);
+			}
+		}
+		return $this-&gt;assert(false, $message, [
+			&#039;expected&#039; =&gt; $needle,
+			&#039;result&#039; =&gt; $haystack
+		]);
+	}
+
+	/**
+	 * Assert that `$haystack` does *not* contain `$needle` as a value.
+	 *
+	 * ```
+	 * $this-&gt;assertNotContains(4, [1,2,3]); // succeeds
+	 * $this-&gt;assertNotContains(&#039;foo&#039;, [&#039;foo&#039;, &#039;bar&#039;, &#039;baz&#039;]); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param string $needle   The needle you are looking for.
+	 * @param miexed $haystack Array or iterable object or a string.
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertNotContains($needle, $haystack, $message = &#039;{:message}&#039;) {
+		if (is_string($haystack)) {
+			return $this-&gt;assert(strpos($haystack, $needle) === false, $message, [
+				&#039;expected&#039; =&gt; $needle,
+				&#039;result&#039; =&gt; $haystack
+			]);
+		}
+		foreach ($haystack as $key =&gt; $value) {
+			if ($value === $needle) {
+				return $this-&gt;assert(false, $message, [
+					&#039;expected&#039; =&gt; $needle,
+					&#039;result&#039; =&gt; $haystack
+				]);
+			}
+		}
+		return $this-&gt;assert(true, $message, [
+			&#039;expected&#039; =&gt; $needle,
+			&#039;result&#039; =&gt; $haystack
+		]);
+	}
+
+	/**
+	 * Assert that `$haystack` does only contain item of given type.
+	 *
+	 * ```
+	 * $this-&gt;assertContainsOnly(&#039;integer&#039;, [1,2,3]); // succeeds
+	 * $this-&gt;assertContainsOnly(&#039;integer&#039;, [&#039;foo&#039;, &#039;bar&#039;, &#039;baz&#039;]); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::$_internalTypes
+	 * @see lithium\test\Unit::assert()
+	 * @param string $type
+	 * @param array|object $haystack Array or iterable object.
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertContainsOnly($type, $haystack, $message = &#039;{:message}&#039;) {
+		$method = static::$_internalTypes[$type];
+		foreach ($haystack as $key =&gt; $value) {
+			if (!$method($value)) {
+				return $this-&gt;assert(false, $message, [
+					&#039;expected&#039; =&gt; $type,
+					&#039;result&#039; =&gt; $haystack
+				]);
+			}
+		}
+		return $this-&gt;assert(true, $message, [
+			&#039;expected&#039; =&gt; $type,
+			&#039;result&#039; =&gt; $haystack
+		]);
+	}
+
+	/**
+	 * Assert that `$haystack` hasn&#039;t any items of given type.
+	 *
+	 * ```
+	 * $this-&gt;assertNotContainsOnly(&#039;integer&#039;, [&#039;foo&#039;, &#039;bar&#039;, &#039;baz&#039;]); // succeeds
+	 * $this-&gt;assertNotContainsOnly(&#039;integer&#039;, [1,2,3]); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::$_internalTypes
+	 * @see lithium\test\Unit::assert()
+	 * @param string $type
+	 * @param array|object $haystack Array or iterable object.
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertNotContainsOnly($type, $haystack, $message = &#039;{:message}&#039;) {
+		$method = static::$_internalTypes[$type];
+		foreach ($haystack as $key =&gt; $value) {
+			if (!$method($value)) {
+				return $this-&gt;assert(true, $message, [
+					&#039;expected&#039; =&gt; $type,
+					&#039;result&#039; =&gt; $haystack
+				]);
+			}
+		}
+		return $this-&gt;assert(false, $message, [
+			&#039;expected&#039; =&gt; $type,
+			&#039;result&#039; =&gt; $haystack
+		]);
+	}
+
+	/**
+	 * Assert that `$haystack` contains only instances of given class.
+	 *
+	 * ```
+	 * $this-&gt;assertContainsOnlyInstancesOf(&#039;stdClass&#039;, [new \stdClass]); // succeeds
+	 * $this-&gt;assertContainsOnlyInstancesOf(&#039;stdClass&#039;, [new \lithium\test\Unit]); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param string $class
+	 * @param array|object $haystack Array or iterable object.
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertContainsOnlyInstancesOf($class, $haystack, $message = &#039;{:message}&#039;) {
+		$result = [];
+		foreach ($haystack as $key =&gt; &amp;$value) {
+			if (!is_a($value, $class)) {
+				$result[$key] =&amp; $value;
+				break;
+			}
+		}
+		return $this-&gt;assert(empty($result), $message, [
+			&#039;expected&#039; =&gt; $class,
+			&#039;result&#039; =&gt; $result
+		]);
+	}
+
+	/**
+	 * Assert that `$expected` is greater than `$actual`.
+	 *
+	 * ```
+	 * $this-&gt;assertGreaterThan(5, 3); // succeeds
+	 * $this-&gt;assertGreaterThan(3, 5); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param float|integer $expected
+	 * @param float|integer $actual
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertGreaterThan($expected, $actual, $message = &#039;{:message}&#039;) {
+		return $this-&gt;assert($expected &gt; $actual, $message, [
+			&#039;expected&#039; =&gt; $expected,
+			&#039;result&#039; =&gt; $actual
+		]);
+	}
+
+	/**
+	 * Assert that `$expected` is greater than or equal to `$actual`.
+	 *
+	 * ```
+	 * $this-&gt;assertGreaterThanOrEqual(5, 5); // succeeds
+	 * $this-&gt;assertGreaterThanOrEqual(3, 5); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param float|integer $expected
+	 * @param float|integer $actual
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertGreaterThanOrEqual($expected, $actual, $message = &#039;{:message}&#039;) {
+		return $this-&gt;assert($expected &gt;= $actual, $message, [
+			&#039;expected&#039; =&gt; $expected,
+			&#039;result&#039; =&gt; $actual
+		]);
+	}
+
+	/**
+	 * Assert that `$expected` is less than `$actual`.
+	 *
+	 * ```
+	 * $this-&gt;assertLessThan(3, 5); // succeeds
+	 * $this-&gt;assertLessThan(5, 3); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param float|integer $expected
+	 * @param float|integer $actual
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertLessThan($expected, $actual, $message = &#039;{:message}&#039;) {
+		return $this-&gt;assert($expected &lt; $actual, $message, [
+			&#039;expected&#039; =&gt; $expected,
+			&#039;result&#039; =&gt; $actual
+		]);
+	}
+
+	/**
+	 * Assert that `$expected` is less than or equal to `$actual`.
+	 *
+	 * ```
+	 * $this-&gt;assertLessThanOrEqual(5, 5); // succeeds
+	 * $this-&gt;assertLessThanOrEqual(5, 3); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param float|integer $expected
+	 * @param float|integer $actual
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertLessThanOrEqual($expected, $actual, $message = &#039;{:message}&#039;) {
+		return $this-&gt;assert($expected &lt;= $actual, $message, [
+			&#039;expected&#039; =&gt; $expected,
+			&#039;result&#039; =&gt; $actual
+		]);
+	}
+
+	/**
+	 * Assert that `$actual` is an instance of `$expected`.
+	 *
+	 * ```
+	 * $this-&gt;assertInstanceOf(&#039;stdClass&#039;, new stdClass); // succeeds
+	 * $this-&gt;assertInstanceOf(&#039;ReflectionClass&#039;, new stdClass); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param string $expected Fully namespaced expected class.
+	 * @param object $actual Object you are testing.
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertInstanceOf($expected, $actual, $message = &#039;{:message}&#039;) {
+		return $this-&gt;assert(is_a($actual, $expected), $message, [
+			&#039;expected&#039; =&gt; $expected,
+			&#039;result&#039; =&gt; get_class($actual)
+		]);
+	}
+
+	/**
+	 * Assert that `$actual` is *not* an instance of `$expected`.
+	 *
+	 * ```
+	 * $this-&gt;assertNotInstanceOf(&#039;ReflectionClass&#039;, new stdClass); // succeeds
+	 * $this-&gt;assertNotInstanceOf(&#039;stdClass&#039;, new stdClass); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param string $expected Fully namespaced expected class.
+	 * @param object $actual Object you are testing.
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertNotInstanceOf($expected, $actual, $message = &#039;{:message}&#039;) {
+		return $this-&gt;assert(!is_a($actual, $expected), $message, [
+			&#039;expected&#039; =&gt; $expected,
+			&#039;result&#039; =&gt; is_object($actual) ? get_class($actual) : gettype($actual),
+		]);
+	}
+
+	/**
+	 * Assert that `$actual` is of given type.
+	 *
+	 * ```
+	 * $this-&gt;assertInternalType(&#039;string&#039;, &#039;foobar&#039;); // succeeds
+	 * $this-&gt;assertInternalType(&#039;integer&#039;, &#039;foobar&#039;); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::$_internalTypes
+	 * @see lithium\test\Unit::assert()
+	 * @param string $expected Internal type.
+	 * @param object $actual Object you are testing.
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertInternalType($expected, $actual, $message = &#039;{:message}&#039;) {
+		$method = static::$_internalTypes[$expected];
+		return $this-&gt;assert($method($actual), $message, [
+			&#039;expected&#039; =&gt; $expected,
+			&#039;result&#039; =&gt; gettype($actual)
+		]);
+	}
+
+	/**
+	 * Assert that `$actual` is *not* of given type.
+	 *
+	 * ```
+	 * $this-&gt;assertNotInternalType(&#039;integer&#039;, &#039;foobar&#039;); // succeeds
+	 * $this-&gt;assertNotInternalType(&#039;string&#039;, &#039;foobar&#039;); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::$_internalTypes
+	 * @see lithium\test\Unit::assert()
+	 * @param string $expected Internal type.
+	 * @param object $actual Object you are testing.
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertNotInternalType($expected, $actual, $message = &#039;{:message}&#039;) {
+		$method = static::$_internalTypes[$expected];
+		return $this-&gt;assert(!$method($actual), $message, [
+			&#039;expected&#039; =&gt; $expected,
+			&#039;result&#039; =&gt; gettype($actual)
+		]);
+	}
+
+	/**
+	 * Assert that the file contents of `$expected` are equal to the contents of `$actual`.
+	 *
+	 * ```
+	 * $this-&gt;assertFileEquals(&#039;/tmp/foo.txt&#039;, &#039;/tmp/foo.txt&#039;); // succeeds
+	 * $this-&gt;assertFileEquals(&#039;/tmp/foo.txt&#039;, &#039;/tmp/bar.txt&#039;); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param string $expected Absolute path to the expected file.
+	 * @param string $actual Absolute path to the actual file.
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertFileEquals($expected, $actual, $message = &#039;{:message}&#039;) {
+		$expected = md5_file($expected);
+		$result = md5_file($actual);
+		return $this-&gt;assert($expected === $result, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+	}
+
+	/**
+	 * Assert that the file contents of `$expected` are *not* equal to the contents of `$actual`.
+	 *
+	 * ```
+	 * $this-&gt;assertFileNotEquals(&#039;/tmp/foo.txt&#039;, &#039;/tmp/bar.txt&#039;); // succeeds
+	 * $this-&gt;assertFileNotEquals(&#039;/tmp/foo.txt&#039;, &#039;/tmp/foo.txt&#039;); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param string $expected Absolute path to the expected file.
+	 * @param string $actual Absolute path to the actual file.
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertFileNotEquals($expected, $actual, $message = &#039;{:message}&#039;) {
+		$expected = md5_file($expected);
+		$result = md5_file($actual);
+		return $this-&gt;assert($expected !== $result, $message, compact(&#039;expected&#039;, &#039;result&#039;));
+	}
+
+	/**
+	 * Assert that a file exists.
+	 *
+	 * ```
+	 * $this-&gt;assertFileExists(__FILE__); // succeeds
+	 * $this-&gt;assertFileExists(&#039;/tmp/bar.txt&#039;); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param string $actual Absolute path to the actual file.
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertFileExists($actual, $message = &#039;{:message}&#039;) {
+		return $this-&gt;assert(file_exists($actual), $message, [
+			&#039;expected&#039; =&gt; $actual,
+			&#039;result&#039; =&gt; file_exists($actual)
+		]);
+	}
+
+	/**
+	 * Assert that a file does *not* exist.
+	 *
+	 * ```
+	 * $this-&gt;assertFileNotExists(&#039;/tmp/bar.txt&#039;); // succeeds
+	 * $this-&gt;assertFileNotExists(__FILE__); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param string $actual Absolute path to the actual file.
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertFileNotExists($actual, $message = &#039;{:message}&#039;) {
+		return $this-&gt;assert(!file_exists($actual), $message, [
+			&#039;expected&#039; =&gt; $actual,
+			&#039;result&#039; =&gt; !file_exists($actual)
+		]);
+	}
+
+	/**
+	 * Assert that a class has a given attribute.
+	 *
+	 * ```
+	 * $this-&gt;assertClassHasAttribute(&#039;__construct&#039;, &#039;ReflectionClass&#039;); // succeeds
+	 * $this-&gt;assertClassHasAttribute(&#039;name&#039;, &#039;ReflectionClass&#039;); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @see lithium\test\Unit::assertObjectHasAttribute()
+	 * @throws InvalidArgumentException When $class does not exist.
+	 * @param mixed $attributeName
+	 * @param string $class
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertClassHasAttribute($attributeName, $class, $message = &#039;{:message}&#039;) {
+		if (!is_string($class)) {
+			throw new InvalidArgumentException(&#039;Argument $class must be a string&#039;);
+		}
+		$object = new ReflectionClass($class);
+		return $this-&gt;assert($object-&gt;hasProperty($attributeName), $message, [
+			&#039;expected&#039; =&gt; $attributeName,
+			&#039;result&#039; =&gt; $object-&gt;getProperties()
+		]);
+	}
+
+	/**
+	 * Assert that a class does *not* have a given attribute.
+	 *
+	 * ```
+	 * $this-&gt;assertClassNotHasAttribute(&#039;name&#039;, &#039;ReflectionClass&#039;); // succeeds
+	 * $this-&gt;assertClassNotHasAttribute(&#039;__construct&#039;, &#039;ReflectionClass&#039;); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @see lithium\test\Unit::assertObjectHasAttribute()
+	 * @throws InvalidArgumentException When $class does not exist.
+	 * @param mixed $attributeName
+	 * @param string $class
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertClassNotHasAttribute($attributeName, $class, $message = &#039;{:message}&#039;) {
+		if (!is_string($class)) {
+			throw new InvalidArgumentException(&#039;Argument $class must be a string.&#039;);
+		}
+		$object = new ReflectionClass($class);
+		return $this-&gt;assert(!$object-&gt;hasProperty($attributeName), $message, [
+			&#039;expected&#039; =&gt; $attributeName,
+			&#039;result&#039; =&gt; $object-&gt;getProperties()
+		]);
+	}
+
+	/**
+	 * Assert that a class does have a given _static_ attribute.
+	 *
+	 * ```
+	 * $this-&gt;assertClassHasStaticAttribute(&#039;_methodFilters&#039;, &#039;\my_app\SomeClass&#039;);
+	 * $this-&gt;assertClassHasStaticAttribute(&#039;foobar&#039;, &#039;\my_app\SomeClass&#039;);
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param mixed $attributeName
+	 * @param string $class
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertClassHasStaticAttribute($attributeName, $class, $message = &#039;{:message}&#039;) {
+		$object = new ReflectionClass($class);
+
+		if ($object-&gt;hasProperty($attributeName)) {
+			$attribute = $object-&gt;getProperty($attributeName);
+
+			return $this-&gt;assert($attribute-&gt;isStatic(), $message, [
+				&#039;expected&#039; =&gt; $attributeName,
+				&#039;result&#039; =&gt; $object-&gt;getProperties()
+			]);
+		}
+		return $this-&gt;assert(false, $message, [
+			&#039;expected&#039; =&gt; $attributeName,
+			&#039;result&#039; =&gt; $object-&gt;getProperties()
+		]);
+	}
+
+	/**
+	 * Assert that a class does *not* have a given _static_ attribute.
+	 *
+	 * ```
+	 * $this-&gt;assertClassNotHasStaticAttribute(&#039;foobar&#039;, &#039;\my_app\SomeClass&#039;);
+	 * $this-&gt;assertClassNotHasStaticAttribute(&#039;_methodFilters&#039;, &#039;\my_app\SomeClass&#039;);
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @param mixed $attributeName
+	 * @param string $class
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertClassNotHasStaticAttribute($attrName, $class, $message = &#039;{:message}&#039;) {
+		$object = new ReflectionClass($class);
+
+		if ($object-&gt;hasProperty($attrName)) {
+			$attribute = $object-&gt;getProperty($attrName);
+
+			return $this-&gt;assert(!$attribute-&gt;isStatic(), $message, [
+				&#039;expected&#039; =&gt; $attrName,
+				&#039;result&#039; =&gt; $object-&gt;getProperties()
+			]);
+		}
+		return $this-&gt;assert(true, $message, [
+			&#039;expected&#039; =&gt; $attrName,
+			&#039;result&#039; =&gt; $object-&gt;getProperties()
+		]);
+	}
+
+	/**
+	 * Assert that `$object` has given attribute.
+	 *
+	 * ```
+	 * $this-&gt;assertObjectHasAttribute(&#039;__construct&#039;, &#039;ReflectionClass&#039;); // succeeds
+	 * $this-&gt;assertObjectHasAttribute(&#039;name&#039;, &#039;ReflectionClass&#039;); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @throws InvalidArgumentException When $object is not an object.
+	 * @param string $attributeName
+	 * @param string $object
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertObjectHasAttribute($attributeName, $object, $message = &#039;{:message}&#039;) {
+		if (!is_object($object)) {
+			throw new InvalidArgumentException(&#039;Second argument $object must be an object.&#039;);
+		}
+		$object = new ReflectionClass($object);
+		return $this-&gt;assert($object-&gt;hasProperty($attributeName), $message, [
+			&#039;expected&#039; =&gt; $attributeName,
+			&#039;result&#039; =&gt; $object-&gt;getProperties()
+		]);
+	}
+
+	/**
+	 * Assert that `$object` does *not* have given attribute.
+	 *
+	 * ```
+	 * $this-&gt;assertObjectNotHasAttribute(&#039;name&#039;, &#039;ReflectionClass&#039;); // succeeds
+	 * $this-&gt;assertObjectNotHasAttribute(&#039;__construct&#039;, &#039;ReflectionClass&#039;); // fails
+	 * ```
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @throws InvalidArgumentException When $object is not an object.
+	 * @param string $attributeName
+	 * @param string $object
+	 * @param string|boolean $message
+	 * @return boolean `true` if the assertion succeeded, `false` otherwise.
+	 */
+	public function assertObjectNotHasAttribute($attributeName, $object, $message = &#039;{:message}&#039;) {
+		if (!is_object($object)) {
+			throw new InvalidArgumentException(&#039;Second argument $object must be an object&#039;);
+		}
+		$object = new ReflectionClass($object);
+		return $this-&gt;assert(!$object-&gt;hasProperty($attributeName), $message, [
+			&#039;expected&#039; =&gt; $attributeName,
+			&#039;result&#039; =&gt; $object-&gt;getProperties()
+		]);
+	}
+
+	/**
+	 * Reports test result messages.
+	 *
+	 * @param string $type The type of result being reported.  Can be `&#039;pass&#039;`, `&#039;fail&#039;`, `&#039;skip&#039;`
+	 *               or `&#039;exception&#039;`.
+	 * @param array $info An array of information about the test result. At a minimum, this should
+	 *              contain a `&#039;message&#039;` key. Other possible keys are `&#039;file&#039;`, `&#039;line&#039;`,
+	 *              `&#039;class&#039;`, `&#039;method&#039;`, `&#039;assertion&#039;` and `&#039;data&#039;`.
+	 * @param array $options Currently unimplemented.
+	 * @return void
+	 */
+	protected function _result($type, $info, array $options = []) {
+		$info = ([&#039;result&#039; =&gt; $type] + $info);
+		$defaults = [];
+		$options += $defaults;
+		if ($this-&gt;_reporter) {
+			$filtered = $this-&gt;_reporter-&gt;__invoke($info);
+			$info = is_array($filtered) ? $filtered : $info;
+		}
+		$this-&gt;_results[] = $info;
+	}
+
+	/**
+	 * Runs an individual test method, collecting results and catching exceptions along the way.
+	 *
+	 * @param string $method The name of the test method to run.
+	 * @param array $options
+	 * @return mixed
+	 * @filter Executes filters applied to this class&#039; run method.
+	 */
+	protected function _runTestMethod($method, $options) {
+		try {
+			$this-&gt;setUp();
+		} catch (Throwable $e) {
+			$this-&gt;_handleException($e, __LINE__ - 2);
+			return $this-&gt;_results;
+		}
+		$params = compact(&#039;options&#039;, &#039;method&#039;);
+
+		$passed = Filters::run($this, &#039;run&#039;, $params, function($params) {
+			try {
+				$method = $params[&#039;method&#039;];
+				$lineFlag = __LINE__ + 1;
+				$this-&gt;{$method}();
+			} catch (Throwable $e) {
+				$this-&gt;_handleException($e);
+			}
+		});
+		try {
+			$this-&gt;tearDown();
+		} catch (Throwable $e) {
+			$this-&gt;_handleException($e, __LINE__ - 2);
+		}
+		return $passed;
+	}
+
+	/**
+	 * Normalizes `Exception` objects and PHP error data into a single array format
+	 * then the error data is logged to the test results.
+	 *
+	 * @see lithium\test\Unit::_reportException()
+	 * @param mixed $exception An `Exception` object instance, or an array containing the following
+	 *              keys: `&#039;name&#039;`,` &#039;message&#039;`, `&#039;file&#039;`, `&#039;line&#039;`, `&#039;trace&#039;` (in
+	 *              `debug_backtrace()` format) and optionally `&#039;code&#039;` (error code number)
+	 *              and `&#039;context&#039;` (an array of variables relevant to the scope of where the
+	 *              error occurred).
+	 * @param integer $lineFlag A flag used for determining the relevant scope of the call stack.
+	 *                Set to the line number where test methods are called.
+	 * @return void
+	 */
+	protected function _handleException($exception, $lineFlag = null) {
+		$data = $exception;
+
+		if (is_object($exception)) {
+			$data = [&#039;name&#039; =&gt; get_class($exception)];
+
+			foreach ([&#039;message&#039;, &#039;file&#039;, &#039;line&#039;, &#039;trace&#039;, &#039;code&#039;] as $key) {
+				$method = &#039;get&#039; . ucfirst($key);
+				$data[$key] = $exception-&gt;{$method}();
+			}
+
+			if ($exception instanceof ErrorException) {
+				$mapSeverity = function($severity) {
+					foreach (get_defined_constants(true)[&#039;Core&#039;] as $constant =&gt; $value) {
+						if (substr($constant, 0, 2) === &#039;E_&#039; &amp;&amp; $value === $severity) {
+							return $constant;
+						}
+					}
+					return &#039;E_UNKNOWN&#039;;
+				};
+				$data[&#039;code&#039;] = $mapSeverity($exception-&gt;getSeverity());
+			}
+
+			$ref = $exception-&gt;getTrace();
+			$ref = $ref[0] + [&#039;class&#039; =&gt; null];
+
+			if ($ref[&#039;class&#039;] === __CLASS__ &amp;&amp; $ref[&#039;function&#039;] === &#039;skipIf&#039;) {
+				return $this-&gt;_result(&#039;skip&#039;, $data);
+			}
+		}
+		return $this-&gt;_reportException($data, $lineFlag);
+	}
+
+	/**
+	 * Convert an exception object to an exception result array for test reporting.
+	 *
+	 * @param array $exception The exception data to report on. Statistics are gathered and
+	 *               added to the reporting stack contained in `Unit::$_results`.
+	 * @param string $lineFlag
+	 * @return void
+	 * @todo Refactor so that reporters handle trace formatting.
+	 */
+	protected function _reportException($exception, $lineFlag = null) {
+		$message = $exception[&#039;message&#039;];
+		$initFrame = current($exception[&#039;trace&#039;]) + [&#039;class&#039; =&gt; &#039;-&#039;, &#039;function&#039; =&gt; &#039;-&#039;];
+
+		foreach ($exception[&#039;trace&#039;] as $frame) {
+			if (isset($scopedFrame)) {
+				break;
+			}
+			if (!class_exists(&#039;lithium\analysis\Inspector&#039;)) {
+				continue;
+			}
+			if (isset($frame[&#039;class&#039;]) &amp;&amp; in_array($frame[&#039;class&#039;], Inspector::parents($this))) {
+				$scopedFrame = $frame;
+			}
+		}
+		if (class_exists(&#039;lithium\analysis\Debugger&#039;)) {
+			$exception[&#039;trace&#039;] = Debugger::trace([
+				&#039;trace&#039;        =&gt; $exception[&#039;trace&#039;],
+				&#039;format&#039;       =&gt; &#039;{:functionRef}, line {:line}&#039;,
+				&#039;includeScope&#039; =&gt; false,
+				&#039;scope&#039;        =&gt; array_filter([
+					&#039;functionRef&#039; =&gt; __NAMESPACE__ . &#039;\{closure}&#039;,
+					&#039;line&#039;        =&gt; $lineFlag
+				])
+			]);
+		}
+		$this-&gt;_result(&#039;exception&#039;, $exception + [
+			&#039;class&#039;     =&gt; $initFrame[&#039;class&#039;],
+			&#039;method&#039;    =&gt; $initFrame[&#039;function&#039;]
+		]);
+	}
+
+	/**
+	 * Compare the expected with the result.  If `$result` is null `$expected` equals `$type`
+	 * and `$result` equals `$expected`.
+	 *
+	 * @param string $type The type of comparison either `&#039;identical&#039;` or `&#039;equal&#039;` (default).
+	 * @param mixed $expected The expected value.
+	 * @param mixed $result An optional result value, defaults to `null`
+	 * @param string $trace An optional trace used internally to track arrays and objects,
+	 *               defaults to `null`.
+	 * @return array Data with the keys `trace&#039;`, `&#039;expected&#039;` and `&#039;result&#039;`.
+	 */
+	protected function _compare($type, $expected, $result = null, $trace = null) {
+		$compareTypes = function($expected, $result, $trace) {
+			$types = [&#039;expected&#039; =&gt; gettype($expected), &#039;result&#039; =&gt; gettype($result)];
+
+			if ($types[&#039;expected&#039;] !== $types[&#039;result&#039;]) {
+				$expected = trim(&quot;({$types[&#039;expected&#039;]}) &quot; . print_r($expected, true));
+				$result = trim(&quot;({$types[&#039;result&#039;]}) &quot; . print_r($result, true));
+				return compact(&#039;trace&#039;, &#039;expected&#039;, &#039;result&#039;);
+			}
+		};
+		if ($types = $compareTypes($expected, $result, $trace)) {
+			return $types;
+		}
+		$data = [];
+
+		if (!is_scalar($expected)) {
+			foreach ($expected as $key =&gt; $value) {
+				$newTrace = &quot;{$trace}[{$key}]&quot;;
+				$isObject = false;
+
+				if (is_object($expected)) {
+					$isObject = true;
+					$expected = (array) $expected;
+					$result = (array) $result;
+				}
+				if (!array_key_exists($key, $result)) {
+					$trace = (!$key) ? null : $newTrace;
+					$expected = (!$key) ? $expected : $value;
+					$result = ($key) ? null : $result;
+					return compact(&#039;trace&#039;, &#039;expected&#039;, &#039;result&#039;);
+				}
+				$check = $result[$key];
+
+				if ($isObject) {
+					$newTrace = ($trace) ? &quot;{$trace}-&gt;{$key}&quot; : $key;
+					$expected = (object) $expected;
+					$result = (object) $result;
+				}
+				if ($type === &#039;identical&#039;) {
+					if ($value === $check) {
+						if ($types = $compareTypes($value, $check, $trace)) {
+							return $types;
+						}
+						continue;
+					}
+					if ($check === []) {
+						$trace = $newTrace;
+						return compact(&#039;trace&#039;, &#039;expected&#039;, &#039;result&#039;);
+					}
+					if (is_string($check)) {
+						$trace = $newTrace;
+						$expected = $value;
+						$result = $check;
+						return compact(&#039;trace&#039;, &#039;expected&#039;, &#039;result&#039;);
+					}
+				} else {
+					if ($value == $check) {
+						if ($types = $compareTypes($value, $check, $trace)) {
+							return $types;
+						}
+						continue;
+					}
+					if (!is_array($value)) {
+						$trace = $newTrace;
+						return compact(&#039;trace&#039;, &#039;expected&#039;, &#039;result&#039;);
+					}
+				}
+				$compare = $this-&gt;_compare($type, $value, $check, $newTrace);
+
+				if ($compare !== true) {
+					$data[] = $compare;
+				}
+			}
+			if (!empty($data)) {
+				return $data;
+			}
+		} elseif (!is_scalar($result)) {
+			$data = $this-&gt;_compare($type, $result, $expected);
+
+			if (!empty($data)) {
+				return [
+					&#039;trace&#039; =&gt; $data[&#039;trace&#039;],
+					&#039;expected&#039; =&gt; $data[&#039;result&#039;],
+					&#039;result&#039; =&gt; $data[&#039;expected&#039;]
+				];
+			}
+		}
+		if ((($type === &#039;identical&#039;) ? $expected === $result : $expected == $result)) {
+			if ($types = $compareTypes($expected, $result, $trace)) {
+				return $types;
+			}
+			return true;
+		}
+		return compact(&#039;trace&#039;, &#039;expected&#039;, &#039;result&#039;);
+	}
+
+	/**
+	 * Returns a basic message for the data returned from `_result()`.
+	 *
+	 * @see lithium\test\Unit::assert()
+	 * @see lithium\test\Unit::_result()
+	 * @param array $data The data to use for creating the message.
+	 * @param string $message The string prepended to the generate message in the current scope.
+	 * @return string
+	 */
+	protected function _message(&amp;$data = [], $message =  null) {
+		if (!empty($data[0])) {
+			foreach ($data as $key =&gt; $value) {
+				$message = (!empty($data[$key][0])) ? $message : null;
+				$message .= $this-&gt;_message($value, $message);
+				unset($data[$key]);
+			}
+			return $message;
+		}
+		$defaults = [&#039;trace&#039; =&gt; null, &#039;expected&#039; =&gt; null, &#039;result&#039; =&gt; null];
+		$data = (array) $data + $defaults;
+
+		$message = null;
+		if (!empty($data[&#039;trace&#039;])) {
+			$message = sprintf(&quot;trace: %s\n&quot;, $data[&#039;trace&#039;]);
+		}
+		if (is_object($data[&#039;expected&#039;])) {
+			$data[&#039;expected&#039;] = get_object_vars($data[&#039;expected&#039;]);
+		}
+		if (is_object($data[&#039;result&#039;])) {
+			$data[&#039;result&#039;] = get_object_vars($data[&#039;result&#039;]);
+		}
+		return $message . sprintf(&quot;expected: %s\nresult: %s\n&quot;,
+			print_r($data[&#039;expected&#039;], true),
+			print_r($data[&#039;result&#039;], true)
+		);
+	}
+
+	/**
+	 * Generates all permutation of an array $items and returns them in a new array.
+	 *
+	 * @param array $items An array of items
+	 * @param array $perms
+	 * @return array
+	 */
+	protected function _arrayPermute($items, $perms = []) {
+		static $permuted;
+
+		if (empty($perms)) {
+			$permuted = [];
+		}
+
+		if (empty($items)) {
+			$permuted[] = $perms;
+			return;
+		}
+		$numItems = count($items) - 1;
+
+		for ($i = $numItems; $i &gt;= 0; --$i) {
+			$newItems = $items;
+			$newPerms = $perms;
+			list($tmp) = array_splice($newItems, $i, 1);
+			array_unshift($newPerms, $tmp);
+			$this-&gt;_arrayPermute($newItems, $newPerms);
+		}
+		return $permuted;
+	}
+
+	/**
+	 * Removes everything from `resources/tmp/tests` directory. Call from inside of your test
+	 * method or `tearDown()`.
+	 *
+	 * Uses `DIRECTORY_SEPARATOR` as `getPathname()` is used in a a direct string comparison.
+	 * The method may contain slashes and backslashes.
+	 *
+	 * If the file to unlink is readonly, it throws a exception (Permission denied) on Windows.
+	 * So, the file is checked before an unlink is tried. (this will make the tests run slower
+	 * but is prefered over a if (!unlink { chmod; unlink }.
+	 * http://stringoftheseus.com/blog/2010/12/22/php-unlink-permisssion-denied-error-on-windows/
+	 *
+	 * @param string $path Path to directory with contents to remove. If first
+	 *        character is NOT a slash (`/`) or a Windows drive letter (`C:`)
+	 *        prepends `Libraries::get(true, &#039;resources&#039;)/tmp/`.
+	 * @return void
+	 */
+	protected function _cleanUp($path = null) {
+		$resources = Libraries::get(true, &#039;resources&#039;);
+		$path = $path ?: $resources . &#039;/tmp/tests&#039;;
+		$path = preg_match(&#039;/^\w:|^\//&#039;, $path) ? $path : $resources . &#039;/tmp/&#039; . $path;
+
+		if (!is_dir($path)) {
+			return;
+		}
+		$dirs = new RecursiveDirectoryIterator($path);
+		$iterator = new RecursiveIteratorIterator($dirs, RecursiveIteratorIterator::CHILD_FIRST);
+
+		foreach ($iterator as $item) {
+			$empty = $item-&gt;getPathname() === $path . DIRECTORY_SEPARATOR . &#039;empty&#039;;
+
+			if ($empty || $iterator-&gt;isDot()) {
+				continue;
+			}
+			if ($item-&gt;isDir()) {
+				rmdir($item-&gt;getPathname());
+				continue;
+			}
+			if (!$item-&gt;isWritable()) {
+				chmod($item-&gt;getPathname(), 0777);
+			}
+			unlink($item-&gt;getPathname());
+		}
+	}
+
+	/**
+	 * Fixes some issues regarding the used EOL character(s).
+	 *
+	 * On linux EOL is LF, on Windows it is normally CRLF, but the latter may depend also
+	 * on the git config core.autocrlf setting. As some tests use heredoc style (&lt;&lt;&lt;) to
+	 * specify multiline expectations, this EOL issue may cause tests to fail only because
+	 * of a difference in EOL&#039;s used.
+	 *
+	 * in `assertEqual`, `assertNotEqual`,`` assertPattern` and `assertNotPattern` this
+	 * function is called to get rid of any EOL differences.
+	 *
+	 * @param mixed $expected
+	 * @param mixed $result
+	 * @return array Array with the normalized elements i.e. `[$expected, $result]`.
+	 */
+	protected function _normalizeLineEndings($expected, $result) {
+		if (is_string($expected) &amp;&amp; is_string($result)) {
+			$expected = preg_replace(&#039;/\r\n/&#039;, &quot;\n&quot;, $expected);
+			$result = preg_replace(&#039;/\r\n/&#039;, &quot;\n&quot;, $result);
+		}
+		return [$expected, $result];
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

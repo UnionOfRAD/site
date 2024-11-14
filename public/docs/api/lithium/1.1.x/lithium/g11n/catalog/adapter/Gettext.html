@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\g11n\catalog\adapter\Gettext – Framework API v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../../versions.html">Versions</a><a href="../../../../../../../../present.html">Presentations</a><a href="../../../../../../../../support.html">Community</a><a href="../../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../../g11n.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">g11n</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../../catalog.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">catalog</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="../adapter.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">adapter</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Gettext</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../adapter.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Gettext::__construct().html">__construct()</a>												<li class="method protected">
+				<a href="./Gettext::_init().html">_init()</a>												<li class="method public">
+				<a href="./Gettext::read().html">read()</a>												<li class="method public">
+				<a href="./Gettext::write().html">write()</a>												<li class="method protected">
+				<a href="./Gettext::_files().html">_files()</a>												<li class="method protected">
+				<a href="./Gettext::_parsePo().html">_parsePo()</a>												<li class="method protected">
+				<a href="./Gettext::_parsePot().html">_parsePot()</a>												<li class="method protected">
+				<a href="./Gettext::_parseMo().html">_parseMo()</a>												<li class="method protected">
+				<a href="./Gettext::_readLong().html">_readLong()</a>												<li class="method protected">
+				<a href="./Gettext::_compilePo().html">_compilePo()</a>												<li class="method protected">
+				<a href="./Gettext::_compilePot().html">_compilePot()</a>												<li class="method protected">
+				<a href="./Gettext::_compileMo().html">_compileMo()</a>												<li class="method protected">
+				<a href="./Gettext::_prepareForWrite().html">_prepareForWrite()</a>												<li class="method protected">
+				<a href="./Gettext::_merge().html">_merge()</a>												<li class="method public inherited">
+				<a href="../../../core/Object::invokeMethod().html">invokeMethod()</a>												<li class="method public inherited">
+				<a href="../../../core/Object::__set_state().html">__set_state()</a>												<li class="method public inherited">
+				<a href="../../../core/Object::respondsTo().html">respondsTo()</a>												<li class="method protected inherited">
+				<a href="../../../core/Object::_instance().html">_instance()</a>												<li class="method protected inherited">
+				<a href="../../../core/Object::_parents().html">_parents()</a>												<li class="method protected inherited">
+				<a href="../../../core/Object::_stop().html">_stop()</a>												<li class="method public deprecated inherited">
+				<a href="../../../core/Object::applyFilter().html">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="../../../core/Object::_filter().html">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected inherited">
+				<a href="../../../core/Object::$_config.html">$_config</a>												<li class="property protected inherited">
+				<a href="../../../core/Object::$_autoConfig.html">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="../../../core/Object::$_parents.html">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="../../../core/Object::$_methodFilters.html">$_methodFilters</a>							</ul>
+								<h3 class="h-gamma">Constants</h3>
+			<ul>
+												<li class="constant ">
+				<a href="./Gettext::MO_LITTLE_ENDIAN_MAGIC.html">MO_LITTLE_ENDIAN_MAGIC</a>												<li class="constant ">
+				<a href="./Gettext::MO_BIG_ENDIAN_MAGIC.html">MO_BIG_ENDIAN_MAGIC</a>												<li class="constant ">
+				<a href="./Gettext::MO_HEADER_SIZE.html">MO_HEADER_SIZE</a>							</ul>
+			</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../../g11n.html" class="symbol-segment">g11n</a>\<a href="../../catalog.html" class="symbol-segment">catalog</a>\<a href="../adapter.html" class="symbol-segment">adapter</a>\Gettext		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../Adapter.html" class="extends__symbol">lithium\g11n\catalog\Adapter</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The <code>Gettext</code> class is an adapter for reading and writing PO and MO files without the
+requirement of having the gettext extension enabled or installed. Moreover it doesn't
+require the usage of the non thread safe <code>setlocale()</code>.</p>
+					</div>
+				
+									<div class="description">
+						<p>The adapter works with the directory structure below. The example shows the structure
+for the directory as given by the <code>'path'</code> configuration setting. It closely ressembles
+the standard gettext directory structure with a few slight adjustments to the way
+templates are being named.</p>
+<pre><code class="language-asciiart">resources/g11n/po
+├── &lt;locale&gt;
+|   ├── LC_MESSAGES
+|   |   ├── default.po
+|   |   ├── default.mo
+|   |   ├── &lt;scope&gt;.po
+|   |   └── &lt;scope&gt;.mo
+|   ├── LC_VALIDATION
+|   |   └── ...
+|   └── ...
+├── &lt;locale&gt;
+|   └── ...
+├── message_default.pot
+├── message_&lt;scope&gt;.pot
+├── validation_default.pot
+├── validation_&lt;scope&gt;.pot
+└── ...
+</code></pre>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="../../Locale.html">lithium\g11n\Locale</a>								</ul>
+			</section>
+			
+						<section id="links">
+				<h3 class="h-beta">Links</h3>
+				<ul class="links">
+									<li><a href="http://php.net/setlocale" target="new">PHP Manual: setlocale()</a>									<li><a href="http://www.gnu.org/software/gettext/manual/gettext.html" target="new">GNU Gettext Utilities</a>								</ul>
+			</section>
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Gettext extends \lithium\g11n\catalog\Adapter {
+
+	/**
+	 * Magic used for validating the format of a MO file as well as
+	 * detecting if the machine used to create that file was little endian.
+	 *
+	 * @see lithium\g11n\catalog\adapter\Gettext::_parseMo()
+	 * @var float
+	 */
+	const MO_LITTLE_ENDIAN_MAGIC = 0x950412de;
+
+	/**
+	 * Magic used for validating the format of a MO file as well as
+	 * detecting if the machine used to create that file was big endian.
+	 *
+	 * @see lithium\g11n\catalog\adapter\Gettext::_parseMo()
+	 * @var float
+	 */
+	const MO_BIG_ENDIAN_MAGIC = 0xde120495;
+
+	/**
+	 * The size of the header of a MO file in bytes.
+	 *
+	 * @see lithium\g11n\catalog\adapter\Gettext::_parseMo()
+	 * @var integer Number of bytes.
+	 */
+	const MO_HEADER_SIZE = 28;
+
+	/**
+	 * Constructor.
+	 *
+	 * @param array $config Available configuration options are:
+	 *        - `&#039;path&#039;`: The path to the directory holding the data.
+	 * @return void
+	 */
+	public function __construct(array $config = []) {
+		$defaults = [&#039;path&#039; =&gt; null];
+		parent::__construct($config + $defaults);
+	}
+
+	/**
+	 * Initializer.  Checks if the configured path exists.
+	 *
+	 * @return void
+	 * @throws ConfigException
+	 */
+	protected function _init() {
+		parent::_init();
+		if (!is_dir($this-&gt;_config[&#039;path&#039;])) {
+			$message = &quot;Gettext directory does not exist at path `{$this-&gt;_config[&#039;path&#039;]}`.&quot;;
+			throw new ConfigException($message);
+		}
+	}
+
+	/**
+	 * Reads data.
+	 *
+	 * MO files are preferred over PO files when existent.
+	 *
+	 * @see lithium\g11n\catalog\adapter\Gettext::_files()
+	 * @param string $category A category.
+	 * @param string $locale A locale identifier.
+	 * @param string $scope The scope for the current operation.
+	 * @return array
+	 */
+	public function read($category, $locale, $scope) {
+		$files = $this-&gt;_files($category, $locale, $scope);
+
+		foreach ($files as $file) {
+			$method = &#039;_parse&#039; . ucfirst(pathinfo($file, PATHINFO_EXTENSION));
+
+			if (!file_exists($file) || !is_readable($file)) {
+				continue;
+			}
+			$stream = fopen($file, &#039;rb&#039;);
+			$data = $this-&gt;{$method}($stream);
+			fclose($stream);
+
+			if ($data) {
+				$data[&#039;pluralRule&#039;] = [
+					&#039;id&#039; =&gt; &#039;pluralRule&#039;,
+					&#039;translated&#039; =&gt; function($count) {
+						return $count !== 1;
+					}
+				];
+				return $data;
+			}
+		}
+	}
+
+	/**
+	 * Writes data.
+	 *
+	 * @param string $category A category.
+	 * @param string $locale A locale identifier.
+	 * @param string $scope The scope for the current operation.
+	 * @param array $data The data to write.
+	 * @return boolean
+	 */
+	public function write($category, $locale, $scope, array $data) {
+		$files = $this-&gt;_files($category, $locale, $scope);
+
+		foreach ($files as $file) {
+			$method = &#039;_compile&#039; . ucfirst(pathinfo($file, PATHINFO_EXTENSION));
+
+			if (!$stream = fopen($file, &#039;wb&#039;)) {
+				return false;
+			}
+			$this-&gt;{$method}($stream, $data);
+			fclose($stream);
+		}
+		return true;
+	}
+
+	/**
+	 * Returns absolute paths to files according to configuration.
+	 *
+	 * @param string $category
+	 * @param string $locale
+	 * @param string $scope
+	 * @return array
+	 */
+	protected function _files($category, $locale, $scope) {
+		$path = $this-&gt;_config[&#039;path&#039;];
+		$scope = $scope ?: &#039;default&#039;;
+
+		if (($pos = strpos($category, &#039;Template&#039;)) !== false) {
+			$category = substr($category, 0, $pos);
+			return [&quot;{$path}/{$category}_{$scope}.pot&quot;];
+		}
+
+		if ($category === &#039;message&#039;) {
+			$category = &#039;messages&#039;;
+		}
+		$category = strtoupper($category);
+
+		return [
+			&quot;{$path}/{$locale}/LC_{$category}/{$scope}.mo&quot;,
+			&quot;{$path}/{$locale}/LC_{$category}/{$scope}.po&quot;
+		];
+	}
+
+	/**
+	 * Parses portable object (PO) format.
+	 *
+	 * This parser sacrifices some features of the reference implementation the
+	 * differences to that implementation are as follows.
+	 * - No support for comments spanning multiple lines.
+	 * - Translator and extracted comments are treated as being the same type.
+	 * - Message IDs are allowed to have other encodings as just US-ASCII.
+	 *
+	 * Items with an empty id are ignored. For more information see `_merge()`.
+	 *
+	 * @param resource $stream
+	 * @return array
+	 */
+	protected function _parsePo($stream) {
+		$defaults = [
+			&#039;ids&#039; =&gt; [],
+			&#039;translated&#039; =&gt; null,
+			&#039;flags&#039; =&gt; [],
+			&#039;comments&#039; =&gt; [],
+			&#039;occurrences&#039; =&gt; [],
+			&#039;context&#039; =&gt; null
+		];
+		$data = [];
+		$item = $defaults;
+
+		while ($line = fgets($stream)) {
+			$line = trim($line);
+
+			if ($line === &#039;&#039;) {
+				$data = $this-&gt;_merge($data, $item);
+				$item = $defaults;
+			} elseif (substr($line, 0, 3) === &#039;#~ &#039;) {
+				$item[&#039;flags&#039;][&#039;obsolete&#039;] = true;
+			} elseif (substr($line, 0, 3) === &#039;#, &#039;) {
+				$item[&#039;flags&#039;][substr($line, 3)] = true;
+			} elseif (substr($line, 0, 3) === &#039;#: &#039;) {
+				$item[&#039;occurrences&#039;][] = [
+					&#039;file&#039; =&gt; strtok(substr($line, 3), &#039;:&#039;),
+					&#039;line&#039; =&gt; strtok(&#039;:&#039;)
+				];
+			} elseif (substr($line, 0, 3) === &#039;#. &#039;) {
+				$item[&#039;comments&#039;][] = substr($line, 3);
+			} elseif ($line[0] === &#039;#&#039;) {
+				$item[&#039;comments&#039;][] = ltrim(substr($line, 1));
+			} elseif (substr($line, 0, 7) === &#039;msgid &quot;&#039;) {
+				$item[&#039;ids&#039;][&#039;singular&#039;] = substr($line, 7, -1);
+			} elseif (substr($line, 0, 9) === &#039;msgctxt &quot;&#039;) {
+				$item[&#039;context&#039;] = substr($line, 9, -1);
+			} elseif (substr($line, 0, 8) === &#039;msgstr &quot;&#039;) {
+				$item[&#039;translated&#039;] = substr($line, 8, -1);
+			} elseif ($line[0] === &#039;&quot;&#039;) {
+				$continues = isset($item[&#039;translated&#039;]) ? &#039;translated&#039; : &#039;ids&#039;;
+
+				if (is_array($item[$continues])) {
+					end($item[$continues]);
+					$item[$continues][key($item[$continues])] .= substr($line, 1, -1);
+				} else {
+					$item[$continues] .= substr($line, 1, -1);
+				}
+			} elseif (substr($line, 0, 14) === &#039;msgid_plural &quot;&#039;) {
+				$item[&#039;ids&#039;][&#039;plural&#039;] = substr($line, 14, -1);
+			} elseif (substr($line, 0, 7) === &#039;msgstr[&#039;) {
+				$item[&#039;translated&#039;][(integer) substr($line, 7, 1)] = substr($line, 11, -1);
+			}
+		}
+		return $this-&gt;_merge($data, $item);
+	}
+
+	/**
+	 * Parses portable object template (POT) format.
+	 *
+	 * @param resource $stream
+	 * @return array
+	 */
+	protected function _parsePot($stream) {
+		return $this-&gt;_parsePo($stream);
+	}
+
+	/**
+	 * Parses machine object (MO) format, independent of the machine&#039;s endian it
+	 * was created on. Both 32bit and 64bit systems are supported.
+	 *
+	 * @link https://www.gnu.org/software/gettext/manual/html_node/MO-Files.html
+	 * @param resource $stream
+	 * @return array
+	 * @throws RangeException If stream content has an invalid format.
+	 */
+	protected function _parseMo($stream) {
+		$stat = fstat($stream);
+
+		if ($stat[&#039;size&#039;] &lt; static::MO_HEADER_SIZE) {
+			throw new RangeException(&quot;MO stream content has an invalid format.&quot;);
+		}
+		$magic = unpack(&#039;V1&#039;, fread($stream, 4));
+		$magic = hexdec(substr(dechex(current($magic)), -8));
+
+		if ($magic == static::MO_LITTLE_ENDIAN_MAGIC) {
+			$isBigEndian = false;
+		} elseif ($magic == static::MO_BIG_ENDIAN_MAGIC) {
+			$isBigEndian = true;
+		} else {
+			throw new RangeException(&quot;MO stream content has an invalid format.&quot;);
+		}
+
+		$header = [
+			&#039;formatRevision&#039; =&gt; null,
+			&#039;count&#039; =&gt; null,
+			&#039;offsetId&#039; =&gt; null,
+			&#039;offsetTranslated&#039; =&gt; null,
+			&#039;sizeHashes&#039; =&gt; null,
+			&#039;offsetHashes&#039; =&gt; null
+		];
+		foreach ($header as &amp;$value) {
+			$value = $this-&gt;_readLong($stream, $isBigEndian);
+		}
+		extract($header);
+		$data = [];
+
+		for ($i = 0; $i &lt; $count; $i++) {
+			$singularId = $pluralId = null;
+			$translated = null;
+			$context = null;
+
+			fseek($stream, $offsetId + $i * 8);
+
+			$length = $this-&gt;_readLong($stream, $isBigEndian);
+			$offset = $this-&gt;_readLong($stream, $isBigEndian);
+
+			if ($length &lt; 1) {
+				continue;
+			}
+
+			fseek($stream, $offset);
+			$singularId = fread($stream, $length);
+
+			if (strpos($singularId, &quot;\000&quot;) !== false) {
+				list($singularId, $pluralId) = explode(&quot;\000&quot;, $singularId);
+			}
+
+			if (strpos($singularId, &quot;\004&quot;) !== false) {
+				list($context, $singularId) = explode(&quot;\004&quot;, $singularId);
+			}
+
+			fseek($stream, $offsetTranslated + $i * 8);
+			$length = $this-&gt;_readLong($stream, $isBigEndian);
+			$offset = $this-&gt;_readLong($stream, $isBigEndian);
+
+			fseek($stream, $offset);
+			$translated = fread($stream, $length);
+
+			if (strpos($translated, &quot;\000&quot;) !== false) {
+				$translated = explode(&quot;\000&quot;, $translated);
+			}
+
+			$ids = [&#039;singular&#039; =&gt; $singularId, &#039;plural&#039; =&gt; $pluralId];
+			$data = $this-&gt;_merge($data, compact(&#039;ids&#039;, &#039;translated&#039;, &#039;context&#039;));
+		}
+		return $data;
+	}
+
+	/**
+	 * Reads an unsigned long from stream respecting endianess.
+	 *
+	 * @param resource $stream
+	 * @param boolean $isBigEndian
+	 * @return integer
+	 */
+	protected function _readLong($stream, $isBigEndian) {
+		$result = unpack($isBigEndian ? &#039;N1&#039; : &#039;V1&#039;, fread($stream, 4));
+		$result = current($result);
+		return (integer) substr($result, -8);
+	}
+
+	/**
+	 * Compiles data into portable object (PO) format.
+	 *
+	 * To improve portability accross libraries the header is generated according
+	 * to the format of the output of `xgettext`. This means using the same names for
+	 * placeholders as well as including an empty entry. The empty entry at the
+	 * beginning aids in parsing the file as it _attracts_ the preceding comments and
+	 * following metadata when parsed which could otherwise be mistaken as a continued
+	 * translation. The only difference in the header format is the initial header which
+	 * just features one line of text.
+	 *
+	 * @param resource $stream
+	 * @param array $data
+	 * @return boolean
+	 */
+	protected function _compilePo($stream, array $data) {
+		$output[] = &#039;# This file is distributed under the same license as the PACKAGE package.&#039;;
+		$output[] = &#039;#&#039;;
+		$output[] = &#039;msgctxt &quot;&quot;&#039;;
+		$output[] = &#039;msgid &quot;&quot;&#039;;
+		$output[] = &#039;msgstr &quot;&quot;&#039;;
+		$output[] = &#039;&quot;Project-Id-Version: PACKAGE VERSION\n&quot;&#039;;
+		$output[] = &#039;&quot;POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n&quot;&#039;;
+		$output[] = &#039;&quot;PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n&quot;&#039;;
+		$output[] = &#039;&quot;Last-Translator: FULL NAME &lt;EMAIL@ADDRESS&gt;\n&quot;&#039;;
+		$output[] = &#039;&quot;Language-Team: LANGUAGE &lt;EMAIL@ADDRESS&gt;\n&quot;&#039;;
+		$output[] = &#039;&quot;MIME-Version: 1.0\n&quot;&#039;;
+		$output[] = &#039;&quot;Content-Type: text/plain; charset=UTF-8\n&quot;&#039;;
+		$output[] = &#039;&quot;Content-Transfer-Encoding: 8bit\n&quot;&#039;;
+		$output[] = &#039;&quot;Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n&quot;&#039;;
+		$output[] = &#039;&#039;;
+		$output = implode(&quot;\n&quot;, $output) . &quot;\n&quot;;
+		fwrite($stream, $output);
+
+		foreach ($data as $key =&gt; $item) {
+			$output = [];
+			$item = $this-&gt;_prepareForWrite($item);
+
+			foreach ($item[&#039;occurrences&#039;] as $occurrence) {
+				$output[] = &quot;#: {$occurrence[&#039;file&#039;]}:{$occurrence[&#039;line&#039;]}&quot;;
+			}
+			foreach ($item[&#039;comments&#039;] as $comment) {
+				$output[] = &quot;#. {$comment}&quot;;
+			}
+			foreach ($item[&#039;flags&#039;] as $flag =&gt; $value) {
+				$output[] = &quot;#, {$flag}&quot;;
+			}
+
+			if (isset($item[&#039;context&#039;])) {
+				$output[] = &quot;msgctxt \&quot;{$item[&#039;context&#039;]}\&quot;&quot;;
+			}
+			$output[] = &quot;msgid \&quot;{$item[&#039;ids&#039;][&#039;singular&#039;]}\&quot;&quot;;
+
+			if (isset($item[&#039;ids&#039;][&#039;plural&#039;])) {
+				$output[] = &quot;msgid_plural \&quot;{$item[&#039;ids&#039;][&#039;plural&#039;]}\&quot;&quot;;
+
+				foreach ((array) $item[&#039;translated&#039;] ?: [null, null] as $key =&gt; $value) {
+					$output[] = &quot;msgstr[{$key}] \&quot;{$value}\&quot;&quot;;
+				}
+			} else {
+				if (is_array($item[&#039;translated&#039;])) {
+					$item[&#039;translated&#039;] = array_pop($item[&#039;translated&#039;]);
+				}
+				$output[] = &quot;msgstr \&quot;{$item[&#039;translated&#039;]}\&quot;&quot;;
+			}
+			$output[] = &#039;&#039;;
+			$output = implode(&quot;\n&quot;, $output) . &quot;\n&quot;;
+			fwrite($stream, $output);
+		}
+		return true;
+	}
+
+	/**
+	 * Compiles data into portable object template (POT) format.
+	 *
+	 * @param resource $stream
+	 * @param array $data
+	 * @return boolean Success.
+	 */
+	protected function _compilePot($stream, array $data) {
+		return $this-&gt;_compilePo($stream, $data);
+	}
+
+	/**
+	 * Compiles data into machine object (MO) format.
+	 *
+	 * @param resource $stream
+	 * @param array $data
+	 * @return void
+	 * @todo Determine if needed and implement compiler.
+	 */
+	protected function _compileMo($stream, array $data) {}
+
+	/**
+	 * Prepares an item before it is being written and escapes fields.
+	 *
+	 * All characters from \000 to \037 (this includes new line and tab characters)
+	 * as well as the backslash (`\`) and the double quote (`&quot;`) are escaped.
+	 *
+	 * Literal Windows CRLFs (`\r\n`) are converted to LFs (`\n`) to improve cross platform
+	 * compatibility. Escaped single quotes (`&#039;`) are unescaped as they should not need to be.
+	 * Double escaped characters are maintained and not escaped once again.
+	 *
+	 * @link http://www.asciitable.com
+	 * @see lithium\g11n\catalog\Adapter::_prepareForWrite()
+	 * @param array $item
+	 * @return array
+	 */
+	protected function _prepareForWrite(array $item) {
+		$filter = function ($value) use (&amp;$filter) {
+			if (is_array($value)) {
+				return array_map($filter, $value);
+			}
+			$value = strtr($value, [&quot;\\&#039;&quot; =&gt; &quot;&#039;&quot;, &quot;\\\\&quot; =&gt; &quot;\\&quot;, &quot;\r\n&quot; =&gt; &quot;\n&quot;]);
+			$value = addcslashes($value, &quot;\0..\37\\\&quot;&quot;);
+			return $value;
+		};
+		$fields = [&#039;id&#039;, &#039;ids&#039;, &#039;translated&#039;, &#039;context&#039;];
+
+		foreach ($fields as $field) {
+			if (isset($item[$field])) {
+				$item[$field] = $filter($item[$field]);
+			}
+		}
+		if (!isset($item[&#039;ids&#039;][&#039;singular&#039;])) {
+			$item[&#039;ids&#039;][&#039;singular&#039;] = $item[&#039;id&#039;];
+		}
+		$path = Libraries::get(true, &#039;path&#039;);
+		if (isset($item[&#039;occurrences&#039;])) {
+			foreach ($item[&#039;occurrences&#039;] as &amp;$occurrence) {
+				$occurrence[&#039;file&#039;] = str_replace($path, &#039;&#039;, $occurrence[&#039;file&#039;]);
+			}
+		}
+		return parent::_prepareForWrite($item);
+	}
+
+	/**
+	 * Merges an item into given data and unescapes fields.
+	 *
+	 * Please note that items with an id containing exclusively whitespace characters
+	 * or are empty are **not** being merged. Whitespace characters are space, tab, vertical
+	 * tab, line feed, carriage return and form feed.
+	 *
+	 * @see lithium\g11n\catalog\Adapter::_merge()
+	 * @param array $data Data to merge item into.
+	 * @param array $item Item to merge into $data.
+	 * @return array The merged data.
+	 */
+	protected function _merge(array $data, array $item) {
+		$filter = function ($value) use (&amp;$filter) {
+			if (is_array($value)) {
+				return array_map($filter, $value);
+			}
+			return stripcslashes($value);
+		};
+		$fields = [&#039;id&#039;, &#039;ids&#039;, &#039;translated&#039;, &#039;context&#039;];
+
+		foreach ($fields as $field) {
+			if (isset($item[$field])) {
+				$item[$field] = $filter($item[$field]);
+			}
+		}
+		if (isset($item[&#039;ids&#039;][&#039;singular&#039;])) {
+			$item[&#039;id&#039;] = $item[&#039;ids&#039;][&#039;singular&#039;];
+		}
+		if (empty($item[&#039;id&#039;]) || ctype_space($item[&#039;id&#039;])) {
+			return $data;
+		}
+		return parent::_merge($data, $item);
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

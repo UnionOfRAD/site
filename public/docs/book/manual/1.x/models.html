@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Models – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../docs.html" class="active">Documentation</a><a href="../../../../versions.html">Versions</a><a href="../../../../present.html">Presentations</a><a href="../../../../support.html">Community</a><a href="../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Models</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="common-tasks.html" class="">Common Tasks</a><ul><li><a href="common-tasks/logging.html" class="">Logging</a><li><a href="common-tasks/plugins.html" class="">Plugins</a><li><a href="common-tasks/error-handling.html" class="">Error Handling</a><li><a href="common-tasks/caching.html" class="">Caching</a><li><a href="common-tasks/filters.html" class="">Filters</a><li><a href="common-tasks/etags.html" class="">Etags</a><li><a href="common-tasks/globalization.html" class="">Globalization</a><li><a href="common-tasks/simple-authentication.html" class="">Simple Authentication</a><li><a href="common-tasks/simple-auth-user.html" class="">Simple Auth User</a><li><a href="common-tasks/console-applications.html" class="">Console Applications</a></ul><li><a href="appendices.html" class="">Appendices</a><ul><li><a href="appendices/faqs.html" class="">FAQs</a><li><a href="appendices/using-in-other-applications.html" class="">Using In Other Applications</a></ul><li><a href="quickstart.html" class="">Quickstart</a><li><a href="controllers.html" class="">Controllers</a><ul><li><a href="controllers/actions.html" class="">Actions</a><li><a href="controllers/flow-control.html" class="">Flow Control</a><li><a href="controllers/parameters.html" class="">Parameters</a><li><a href="controllers/type-rendering-detection.html" class="">Type Rendering Detection</a><li><a href="controllers/routing.html" class="">Routing</a></ul><li><a href="installation.html" class="">Installation</a><ul><li><a href="installation/requirements.html" class="">Requirements</a><li><a href="installation/troubleshooting.html" class="">Troubleshooting</a><li><a href="installation/web-servers.html" class="">Web Servers</a></ul><li><a href="architecture.html" class="">Architecture</a><ul><li><a href="architecture/file-structure.html" class="">File Structure</a><li><a href="architecture/response-lifecycle.html" class="">Response Lifecycle</a><li><a href="architecture/aop.html" class="">AOP</a><li><a href="architecture/mvc.html" class="">MVC</a><li><a href="architecture/objects.html" class="">Objects</a></ul><li><a href="quality-code.html" class="">Quality Code</a><ul><li><a href="quality-code/fixtures.html" class="">Fixtures</a><li><a href="quality-code/analysis.html" class="">Analysis</a><li><a href="../../../manual/quality-code/testing.wiki.html" class="">Testing</a><li><a href="quality-code/security.html" class="">Security</a></ul><li><a href="configuration.html" class="">Configuration</a><ul><li><a href="configuration/environment.html" class="">Environment</a><li><a href="configuration/bootstrapping.html" class="">Bootstrapping</a><li><a href="configuration/third-party-libraries.html" class="">Third Party Libraries</a></ul><li><a href="views.html" class="">Views</a><ul><li><a href="views/layouts.html" class="">Layouts</a><li><a href="views/elements.html" class="">Elements</a><li><a href="views/helpers.html" class="">Helpers</a><li><a href="views/static-content.html" class="">Static Content</a><li><a href="views/auto-escaping.html" class="">Auto Escaping</a></ul><li><a href="models.html" class="active">Models</a><ul><li><a href="models/mongodb.html" class="">Mongodb</a><li><a href="models/meta.html" class="">Meta</a><li><a href="models/relationships.html" class="">Relationships</a><li><a href="models/saving.html" class="">Saving</a><li><a href="models/using-data-sources.html" class="">Using Data Sources</a><li><a href="models/adding-functions.html" class="">Adding Functions</a><li><a href="models/data-mutation.html" class="">Data Mutation</a><li><a href="models/connections.html" class="">Connections</a><li><a href="models/creating-data-sources.html" class="">Creating Data Sources</a><li><a href="models/querying.html" class="">Querying</a><li><a href="models/validation.html" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="models" class="anchor" href="models.html#models">Models</a></h1>
+<p>Models play a key role in nearly every web application. Their main purpose is to abstract business logic and database operations from higher levels (controllers and views). They also act as a gatekeeper and—if properly implemented—make sure that only valid and allowed data gets passed through them. Models in li3 have three main purposes:</p>
+<ol>
+<li>Provide an abstraction layer to the underlying data source(s)</li>
+<li>Perform common data operations (like <a href="models/querying.html">fetching</a> and <a href="models/saving.html">storing</a> data)</li>
+<li>Help with <a href="models/validation.html">validating</a> data.</li>
+</ol>
+<p>Also, li3 makes it easy to extend models so that they fit your application's needs. Thanks to the nifty autoloading mechanism, models are lazy-loaded and are only initialized when you need them. In the next sections you will learn how to use models and perform common operations on them. Later sections will provide you with a more detailed look on models like <a href="models/relationships.html">relationships</a> between them and how to <a href="http://li3.me/docs/book/manual/1.x/models/adding-functions-to-models">extend models</a> to fit your application's needs.</p>
+<p>The <code>Model</code> class is the starting point for the domain logic of your application.  Models are tasked with providing meaning to otherwise raw and unprocessed data (e.g. user profile).  Models expose a consistent and unified API to interact with an underlying datasource (e.g. MongoDB, CouchDB, MySQL) for operations such as querying, saving, updating and deleting data from the persistent storage.</p>
+<div class="note note-info">
+	As the framework is capable of working with document oriented data sources as it is with relational databases, we use the term <em>entity</em> to refer to what might be considered a document in one data source type or a record/row in another type.
+</div>
+<p>Models allow you to interact with your data in two fundamentally different ways: <a href="models/querying.html">querying</a> and <a href="models/data-mutation.html">data mutation</a> (saving/updating/deleting). All query-related operations may be done through the static <code>find()</code> method, along with some additional utility methods provided for convenience. Classes extending the <code>Model</code> class should, conventionally, be named as plural, CamelCase and be placed in the <code>models</code> directory. i.e. a posts model would be <code>model/Posts.php</code>.</p>
+<h2><a id="where-to-go-next" class="anchor" href="models.html#where-to-go-next">Where To Go Next</a></h2>
+<p>Read the section below on how to <em>create a model</em> first, then continue with a quick look into the basics of creating <a href="models/connections.html">connections</a>, creating/updating/deleting entites in <a href="models/data-mutation.html">data mutation</a>, persisting entities by <a href="models/saving.html">saving</a> them to the datastore. Finally <a href="models/querying.html">querying</a> shows how to get all the precious data back.</p>
+<h2><a id="creating-a-model" class="anchor" href="models.html#creating-a-model">Creating a Model</a></h2>
+<p>li3 provides you with a general-purpose class that all your models should extend. You can find the <code>Model</code> class in the <code>lithium\data</code> namespace. If you do nothing more than extend it, you instantly get a bunch of functionality that covers basic CRUD as well as more complex tasks.</p>
+<p>Let's say you want to store and manage blog posts in your database. According to our conventions, you create a new file called <code>Posts.php</code> in <code>models</code>. The basic structure looks like this:</p>
+<pre><code class="language-php">namespace app\models;
+
+class Posts extends \lithium\data\Model {}
+</code></pre>
+<div class="note note-hint">
+	li3 also allows model creation via the console:  You can enter <code>li3 create model Posts</code> into the command line (assuming you have configured the command line for use) and the code above will automatically be created in a file called <code>\app\models\Posts.php</code>.
+</div>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\analysis\logger\adapter\Growl – Framework API v1.2.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.2.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.2.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.2.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.2.x/lithium/analysis" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">analysis</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">logger</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">adapter</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Growl</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter/Growl::__construct()">__construct()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter/Growl::write()">write()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter/Growl::notify()">notify()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter/Growl::_register()">_register()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter/Growl::_connection()">_connection()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter/Growl::_send()">_send()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter/Growl::__destruct()">__destruct()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ObjectDeprecated::_init()">_init()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ObjectDeprecated::__set_state()">__set_state()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ObjectDeprecated::respondsTo()">respondsTo()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ObjectDeprecated::invokeMethod()">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ObjectDeprecated::_instance()">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ObjectDeprecated::_stop()">_stop()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ObjectDeprecated::_parents()">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ObjectDeprecated::applyFilter()">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ObjectDeprecated::_filter()">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter/Growl::$_priorities">$_priorities</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter/Growl::$_connection">$_connection</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter/Growl::$_registered">$_registered</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter/Growl::$_autoConfig">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ObjectDeprecated::$_config">$_config</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ObjectDeprecated::$_parents">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ObjectDeprecated::$_methodFilters">$_methodFilters</a>							</ul>
+								<h3 class="h-gamma">Constants</h3>
+			<ul>
+												<li class="constant ">
+				<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter/Growl::PROTOCOL_VERSION">PROTOCOL_VERSION</a>												<li class="constant ">
+				<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter/Growl::TYPE_REG">TYPE_REG</a>												<li class="constant ">
+				<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter/Growl::TYPE_NOTIFY">TYPE_NOTIFY</a>							</ul>
+			</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.2.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.2.x/lithium/analysis" class="symbol-segment">analysis</a>\<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger" class="symbol-segment">logger</a>\<a href="/docs/api/lithium/1.2.x/lithium/analysis/logger/adapter" class="symbol-segment">adapter</a>\Growl		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.2.x/lithium/core/ObjectDeprecated" class="extends__symbol">lithium\core\ObjectDeprecated</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The <code>Growl</code> logger implements support for the Growl notification system for Mac OS X.
+Writing to this logger will display small, customizable status messages on the screen.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+			
+						<section id="links">
+				<h3 class="h-beta">Links</h3>
+				<ul class="links">
+									<li><a href="http://growl.info" target="new">http://growl.info</a>								</ul>
+			</section>
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Growl extends \lithium\core\ObjectDeprecated {
+
+	/**
+	 * Array that maps `Logger` message priority names to Growl-compatible priority levels.
+	 *
+	 * @var array
+	 */
+	protected $_priorities = [
+		&#039;emergency&#039; =&gt; 2,
+		&#039;alert&#039;     =&gt; 1,
+		&#039;critical&#039;  =&gt; 1,
+		&#039;error&#039;     =&gt; 1,
+		&#039;warning&#039;   =&gt; 0,
+		&#039;notice&#039;    =&gt; -1,
+		&#039;info&#039;      =&gt; -2,
+		&#039;debug&#039;     =&gt; -2
+	];
+
+	/**
+	 * The Growl protocol version used to send messages.
+	 */
+	const PROTOCOL_VERSION = 1;
+
+	/**
+	 * There are two types of messages sent to Growl: one to register applications, and one to send
+	 * notifications. This type registers the application with Growl&#039;s settings.
+	 */
+	const TYPE_REG = 0;
+
+	/**
+	 * This message type is for sending notifications to Growl.
+	 */
+	const TYPE_NOTIFY = 1;
+
+	/**
+	 * Holds the connection resource used to send messages to Growl.
+	 *
+	 * @var resource
+	 */
+	protected $_connection = null;
+
+	/**
+	 * Flag indicating whether the logger has successfully registered with the Growl server.
+	 * Registration only needs to happen once, but may fail for several reasons, including inability
+	 * to connect to the server, or the server requires a password which has not been specified.
+	 *
+	 * @var boolean
+	 */
+	protected $_registered = false;
+
+	/**
+	 * Allow the Growl connection resource to be auto-configured from constructor parameters.
+	 *
+	 * @var array
+	 */
+	protected $_autoConfig = [&#039;connection&#039;, &#039;registered&#039;];
+
+	/**
+	 * Constructor. Growl logger constructor. Accepts an array of settings which are merged
+	 * with the default settings and used to create the connection and handle notifications.
+	 *
+	 * @see lithium\analysis\Logger::write()
+	 * @param array $config The settings to configure the logger. Available settings are as follows:
+	 *        - `&#039;name`&#039; _string_: The name of the application as it should appear in Growl&#039;s
+	 *          system settings. Defaults to the directory name containing your application.
+	 *        - `&#039;host&#039;` _string_: The Growl host with which to communicate, usually your
+	 *          local machine. Use this setting to send notifications to another machine on
+	 *          the network. Defaults to `&#039;127.0.0.1&#039;`.
+	 *        - `&#039;port&#039;` _integer_: Port of the host machine. Defaults to the standard Growl
+	 *          port, `9887`.
+	 *        - `&#039;password&#039;` _string_: Only required if the host machine requires a password.
+	 *          If notification or registration fails, check this against the host machine&#039;s
+	 *          Growl settings.
+	 *        - &#039;`protocol&#039;` _string_: Protocol to use when opening socket communication to
+	 *          Growl. Defaults to `&#039;udp&#039;`.
+	 *        - `&#039;title&#039;` _string_: The default title to display when showing Growl messages.
+	 *          The default value is the same as `&#039;name&#039;`, but can be changed on a per-message
+	 *          basis by specifying a `&#039;title&#039;` key in the `$options` parameter of
+	 *          `Logger::write()`.
+	 *        - `&#039;notification&#039;` _array_: A list of message types you wish to register with
+	 *          Growl to be able to send. Defaults to `array(&#039;Errors&#039;, &#039;Messages&#039;)`.
+	 * @return void
+	 */
+	public function __construct(array $config = []) {
+		$name = basename(Libraries::get(true, &#039;path&#039;));
+
+		$defaults = compact(&#039;name&#039;) + [
+			&#039;host&#039;     =&gt; &#039;127.0.0.1&#039;,
+			&#039;port&#039;     =&gt; 9887,
+			&#039;password&#039; =&gt; null,
+			&#039;protocol&#039; =&gt; &#039;udp&#039;,
+			&#039;title&#039;    =&gt; Inflector::humanize($name),
+			&#039;notifications&#039; =&gt; [&#039;Errors&#039;, &#039;Messages&#039;],
+			&#039;registered&#039; =&gt; false
+		];
+		parent::__construct($config + $defaults);
+	}
+
+	/**
+	 * Writes `$message` to a new Growl notification.
+	 *
+	 * @param string $priority The `Logger`-based priority of the message. This value is mapped
+	 *               to a Growl-specific priority value if possible.
+	 * @param string $message Message to be shown.
+	 * @param array $options Any options that are passed to the `notify()` method. See the
+	 *              `$options` parameter of `notify()`.
+	 * @return \Closure Function returning boolean `true` on successful write, `false` otherwise.
+	 */
+	public function write($priority, $message, array $options = []) {
+		return function($params) {
+			$priority = 0;
+			$options = $params[&#039;options&#039;];
+
+			if (isset($options[&#039;priority&#039;]) &amp;&amp; isset($this-&gt;_priorities[$options[&#039;priority&#039;]])) {
+				$priority = $this-&gt;_priorities[$options[&#039;priority&#039;]];
+			}
+			return $this-&gt;notify($params[&#039;message&#039;], compact(&#039;priority&#039;) + $options);
+		};
+	}
+
+	/**
+	 * Posts a new notification to the Growl server.
+	 *
+	 * @param string $description Message to be displayed.
+	 * @param array $options Options consists of:
+	 *        -&#039;title&#039;: The title of the displayed notification. Displays the
+	 *         name of the application&#039;s parent folder by default.
+	 * @return boolean Always returns `true`.
+	 */
+	public function notify($description = &#039;&#039;, $options = []) {
+		$this-&gt;_register();
+
+		$defaults = [&#039;sticky&#039; =&gt; false, &#039;priority&#039; =&gt; 0, &#039;type&#039; =&gt; &#039;Messages&#039;];
+		$options += $defaults + [&#039;title&#039; =&gt; $this-&gt;_config[&#039;title&#039;]];
+		$type = $options[&#039;type&#039;];
+		$title = $options[&#039;title&#039;];
+
+		$message = compact(&#039;type&#039;, &#039;title&#039;, &#039;description&#039;) + [&#039;app&#039; =&gt; $this-&gt;_config[&#039;name&#039;]];
+		$message = array_map(&#039;utf8_encode&#039;, $message);
+
+		$flags = ($options[&#039;priority&#039;] &amp; 7) * 2;
+		$flags = ($options[&#039;priority&#039;] &lt; 0) ? $flags |= 8 : $flags;
+		$flags = ($options[&#039;sticky&#039;]) ? $flags | 256 : $flags;
+
+		$params = [&#039;c2n5&#039;, static::PROTOCOL_VERSION, static::TYPE_NOTIFY, $flags];
+		$lengths = array_map(&#039;strlen&#039;, $message);
+
+		$data = call_user_func_array(&#039;pack&#039;, array_merge($params, $lengths));
+		$data .= join(&#039;&#039;, $message);
+		$data .= pack(&#039;H32&#039;, md5($data . $this-&gt;_config[&#039;password&#039;]));
+
+		$this-&gt;_send($data);
+		return true;
+	}
+
+	/**
+	 * Growl server connection registration and initialization.
+	 *
+	 * @return boolean True
+	 */
+	protected function _register() {
+		if ($this-&gt;_registered) {
+			return true;
+		}
+		$ct = count($this-&gt;_config[&#039;notifications&#039;]);
+		$app = utf8_encode($this-&gt;_config[&#039;name&#039;]);
+		$nameEnc = $defaultEnc = &#039;&#039;;
+
+		foreach ($this-&gt;_config[&#039;notifications&#039;] as $i =&gt; $name) {
+			$name = utf8_encode($name);
+			$nameEnc .= pack(&#039;n&#039;, strlen($name)) . $name;
+			$defaultEnc .= pack(&#039;c&#039;, $i);
+		}
+		$data = pack(&#039;c2nc2&#039;, static::PROTOCOL_VERSION, static::TYPE_REG, strlen($app), $ct, $ct);
+		$data .= $app . $nameEnc . $defaultEnc;
+		$checksum = pack(&#039;H32&#039;, md5($data . $this-&gt;_config[&#039;password&#039;]));
+		$data .= $checksum;
+
+		$this-&gt;_send($data);
+		return $this-&gt;_registered = true;
+	}
+
+	/**
+	 * Creates a connection to the Growl server using the protocol, host and port configurations
+	 * specified in the constructor.
+	 *
+	 * @return resource Returns a connection resource created by `fsockopen()`.
+	 */
+	protected function _connection() {
+		if ($this-&gt;_connection) {
+			return $this-&gt;_connection;
+		}
+		$host = &quot;{$this-&gt;_config[&#039;protocol&#039;]}://{$this-&gt;_config[&#039;host&#039;]}&quot;;
+
+		if ($this-&gt;_connection = fsockopen($host, $this-&gt;_config[&#039;port&#039;], $message, $code)) {
+			return $this-&gt;_connection;
+		}
+		throw new NetworkException(&quot;Growl connection failed: (`{$code}`) `{$message}`.&quot;);
+	}
+
+	/**
+	 * Sends binary data to the Growl server.
+	 *
+	 * @throws NetworkException Throws an exception if the server connection could not be written
+	 *         to.
+	 * @param string $data The raw binary data to send to the Growl server.
+	 * @return boolean Always returns `true`.
+	 */
+	protected function _send($data) {
+		if (fwrite($this-&gt;_connection(), $data, strlen($data)) === false) {
+			throw new NetworkException(&#039;Could not send registration to Growl Server.&#039;);
+		}
+		return true;
+	}
+
+	/**
+	 * Destructor. Closes and releases the socket connection to Growl.
+	 *
+	 * @return void
+	 */
+	public function __destruct() {
+		if (is_resource($this-&gt;_connection)) {
+			fclose($this-&gt;_connection);
+			unset($this-&gt;_connection);
+		}
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

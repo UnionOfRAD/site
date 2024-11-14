@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>LSR 0 Coding – Specifications v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../docs.html" class="active">Documentation</a><a href="../../../versions.html">Versions</a><a href="../../../present.html">Presentations</a><a href="../../../support.html">Community</a><a href="../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../book/specs/1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Specifications (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../book/specs/1.x/accepted.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Accepted</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">LSR 0 Coding</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="../../book/specs/1.x/draft.html" class="">Drafts</a><ul><li><a href="../../book/specs/1.x/draft/caching.html" class="">Caching</a><li><a href="../../book/specs/1.x/draft/ajax.html" class="">Ajax</a><li><a href="../../book/specs/1.x/draft/logging.html" class="">Logging</a><li><a href="../../book/specs/1.x/draft/formulas.html" class="">Formulas</a><li><a href="../../book/specs/1.x/draft/translating.html" class="">Translating</a><li><a href="../../book/specs/1.x/draft/documentation.html" class="">Documentation</a><li><a href="../../book/specs/1.x/draft/visual-identity.html" class="">Visual Identity</a><li><a href="../../book/specs/1.x/draft/error-handling.html" class="">Error Handling</a><li><a href="../../book/specs/1.x/draft/access.html" class="">Access</a><li><a href="../../book/specs/1.x/draft/globalization.html" class="">Globalization</a></ul><li><a href="../../book/specs/1.x/accepted.html" class="">Accepted</a><ul><li><a href="LSR-1-documenting.md.html" class="">LSR 1 Documenting</a><li><a href="LSR-2-testing.md.html" class="">LSR 2 Testing</a><li><a href="LSR-0-coding.md.html" class="active">LSR 0 Coding</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="lsr-0-coding" class="anchor" href="LSR-0-coding.md.html#lsr-0-coding">LSR-0 Coding</a></h1>
+<h2><a id="abstract" class="anchor" href="LSR-0-coding.md.html#abstract">Abstract</a></h2>
+<p>li3 core developers use the following coding standards. We suggest you follow the same standards when developing li3 applications and plugins.</p>
+<p>There are some tools which help you keeping in line with the standards. We make use of the <code>Syntax</code> command which comes with the <a href="http://github.com/UnionOfRAD/li3_quality">QA plugin for li3</a>.</p>
+<h2><a id="files" class="anchor" href="LSR-0-coding.md.html#files">Files</a></h2>
+<p>File names should be created with <em>CamelCase</em> (according to the class they contain).</p>
+<p>PHP files (files with the php suffix), should not have any whitespaces before or after the opening and closing php tag. The closing tag is preceded by an empty line.</p>
+<p>The closing php tag must always be on the last line of the file. The closing php tag is <strong>not terminated</strong> with a newline character. File <strong>encoding is UTF-8</strong>. The default permissions for folders are octal 0755, for files octal 0644.<sup>? partially</sup> Only if the file must be executable (i.e. from console) use octal 0744 for files.</p>
+<h3><a id="lines" class="anchor" href="LSR-0-coding.md.html#lines">Lines</a></h3>
+<p>Lines must not exceed a limit of <strong>100 characters</strong>. The soft limit is 80 characters. Both limits include indentation.</p>
+<p>Lines should not have any trailing whitespace characters.</p>
+<h3><a id="php-tags" class="anchor" href="LSR-0-coding.md.html#php-tags">PHP tags</a></h3>
+<p>Always use long open tags:</p>
+<pre><code class="language-php">&lt;?php
+</code></pre>
+<p>Never use short open tags:</p>
+<pre><code class="language-php">&lt;?
+</code></pre>
+<p>Well, unless you are in a view and want the variable data to be automatically escaped. See the li3 <a href="../../lithium/template.html">template namespace documentation</a> for more information on this exception.</p>
+<pre><code class="language-php">&lt;?=$post-&gt;title;?&gt;
+</code></pre>
+<p>Always include a closing tag:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace lithium\util;
+
+class Foo {
+    // ...
+}
+
+?&gt;
+</code></pre>
+<h2><a id="indentation" class="anchor" href="LSR-0-coding.md.html#indentation">Indentation</a></h2>
+<p><strong>One tab</strong> will be used for indentation. So, indentation should look like this:</p>
+<pre><code class="language-php">&lt;?php
+// Base level
+	// Level 1
+		// Level 2
+	// Level 1
+// Base level
+?&gt;
+</code></pre>
+<p>Indentation is <strong>always symmetrical</strong>. Any opening syntax construct that begins on a new line should be matched with a closing construct (that also begins on a new line) indented at the same level.  Any lines enclosed by a beginning and ending construct should be indented exactly one tab in from the enclosing lines. If the contents of an enclosure are broken out over multiple lines, then no enclosed elements should be on the same line as the enclosing structures.</p>
+<pre><code class="language-php">// Bad.
+// (1) Array elements are indented too far.
+// (2) Closing parenthesis aren't on their own line.
+// (3) The first array element doesn't break to its own line.
+// (4) Either no space or too many spaces between key name and arrows.
+$params = array_merge($params, ['controller'=&gt; $params['plugin'],
+			'action'=&gt; $params['controller'],
+			'pass'   =&gt; array_merge($pass, $params['pass']),
+			'named'=&gt; array_merge($named, $params['named'])]);
+
+// Good.
+$params = array_merge($params, [
+	'controller' =&gt; $params['plugin'],
+	'action' =&gt; $params['controller'],
+	'pass' =&gt; array_merge($pass, $params['pass']),
+	'named' =&gt; array_merge($named, $params['named'])
+]);
+
+// Bad (if any array elements have their own line, all should).
+$params = ['controller'=&gt; $params['plugin'],
+	'action'=&gt; $params['controller'],
+	'pass' =&gt; $params['pass']
+];
+
+// Good.
+$params = [
+	'controller' =&gt; $params['plugin'],
+	'action' =&gt; $params['controller'],
+	'pass' =&gt; $params['pass']
+];
+
+// Also okay, since the whole structure is defined on one line.
+$params = ['controller' =&gt; $params['plugin'], 'action' =&gt; $params['controller'], 'pass' =&gt; $params['pass']];
+</code></pre>
+<h2><a id="operators" class="anchor" href="LSR-0-coding.md.html#operators">Operators</a></h2>
+<p>All <a href="http://php.net/manual/en/language.operators.php">operators </a> must be surrounded by spaces.</p>
+<pre><code class="language-php">$x = $y;
+'x' . 'y';
+$x || $y;
+$x ?: $y;
+$x ? $x : $y;
+$x += $y;
+$x - $y;
+$x - 23;
+function($x, $y = null) {};
+</code></pre>
+<p>However there are a few exceptions to the spacing rule:</p>
+<ol>
+<li>Increment and decrement operators must be directly followed by or following the variable.</li>
+<li>The exclamation mark must be directly followed by the variable.</li>
+<li>Colons appearing as part of a case condition must have no spaces surrounding them.</li>
+<li>Labels must have no spaces surrounding them.</li>
+<li>Negative <strong>literal</strong> integers or floats must have the minus sign directly attached.</li>
+<li>Minus signs involved in negations of i.e. variables can be spaced or directly attached.</li>
+</ol>
+<pre><code class="language-php">$x--;
+$x++;
+!$x;
+-23;
+- $x;
+-$x;
+case 'x':
+:x
+</code></pre>
+<p>In order to increase readability of the code it is allowed to use spaces <strong>or</strong> tabs before operators in certain cases.</p>
+<ol>
+<li>Multiple function calls.</li>
+<li>Concatenating a long message.</li>
+</ol>
+<pre><code class="language-php">$those    = examples($are);
+$the      = best($ones);
+
+$message  = 'this message is spread over ';
+$message .= 'multiple lines.';
+</code></pre>
+<h2><a id="control-structures" class="anchor" href="LSR-0-coding.md.html#control-structures">Control Structures</a></h2>
+<p>Control structures are for example <code>if</code>, <code>for</code>, <code>foreach</code>, <code>while</code>, <code>switch</code> etc. Below, an example with <code>if</code>:</p>
+<pre><code class="language-php">if (($a == $b) || ($a == c)) {
+	// Action 1.
+} elseif (!($c == $d) &amp;&amp; ($a == $b)) {
+	// Action 2.
+} else {
+	// Default action.
+}
+</code></pre>
+<p>In the control structures there should be <strong>1 (one) space before</strong> the first parenthesis and <strong>1 (one) space between</strong> the last parenthesis and the opening bracket.</p>
+<p><strong>Always use curly brackets</strong> in control structures, even if they are not needed. They increase the readability of the code, and they give you fewer logical errors.</p>
+<p>Opening curly brackets should be placed on the same line as the control structure.  Closing curly brackets should be placed on new lines, and they should have same indentation level as the control structure. The statement included in curly brackets should begin on a new line, and code contained within it should gain a new level of indentation.</p>
+<pre><code class="language-php">// Bad - no brackets, badly placed statement.
+if ($foo == $bar) $foo++;
+
+// Bad - no brackets.
+if ($foo == $bar)
+	$foo++;
+
+// Good.
+if ($foo == $bar) {
+	$foo++;
+}
+</code></pre>
+<p>Instead of complex <code>elseif</code> constructs consider using stacked <code>if</code>s.</p>
+<pre><code class="language-php">if ($foo == $bar) {
+	// Action 1.
+}
+if ($foo == 'bar') {
+	// Action 2.
+}
+</code></pre>
+<h3><a id="switch-statements" class="anchor" href="LSR-0-coding.md.html#switch-statements">Switch Statements</a></h3>
+<p>The control portions of switch blocks should follow a consistent indent pattern, such that the closing <code>break</code> statement should be indented to the <strong>same level</strong> as the corresponding opening <code>case</code> statement.</p>
+<pre><code class="language-php">switch ($foo) {
+	case "first":
+		// Do something.
+	break;
+	case "second":
+		// Do something.
+	break;
+	case "third":
+	case "fourth":
+		// Do another thing.
+		return $bar;
+}
+</code></pre>
+<p>Return statements should always be indented one level greater than their corresponding <code>case</code> statements, even if the <code>return</code> is the last statement in the block.</p>
+<h3><a id="ternary-operator" class="anchor" href="LSR-0-coding.md.html#ternary-operator">Ternary Operator</a></h3>
+<p>Ternary operators (<code>?:</code>) should only be used to set default values for variables or array keys which may be undefined or empty, or for simple true/false comparisons, and must fit on one line of code.  if a ternary exceeds these constraints, it should be broken out into a full <code>if</code> block.</p>
+<p>Parentheses <em>may</em> be added to the conditional expression or entire ternary statement for clarity.</p>
+<h2><a id="variables" class="anchor" href="LSR-0-coding.md.html#variables">Variables</a></h2>
+<p>Variable names should be as descriptive as possible, but also as short as possible. Normal variables should start with a lowercase letter, and should be written in [wiki:CamelBack camelBack] in case of multiple words. Note that even variables containing objects must <strong>not</strong> start with a capital letter.</p>
+<pre><code class="language-php">$user = 'John';
+$users = ['John', 'Hans', 'Arne'];
+
+$dispatcher = new Dispatcher();
+</code></pre>
+<p>Array keys used in <code>$options</code>/results arrays should be formatted according to the same rules as properties/variables.</p>
+<h2><a id="arrays" class="anchor" href="LSR-0-coding.md.html#arrays">Arrays</a></h2>
+<p>Short array syntax is preferred <code>[]</code> over the long array syntax <code>array()</code>.</p>
+<h2><a id="constants" class="anchor" href="LSR-0-coding.md.html#constants">Constants</a></h2>
+<p>Constants should be defined in capital letters. If a constant name consists of multiple words, they should be separated by an underscore character.</p>
+<pre><code class="language-php">define('FOO', 1);
+define('FOO_BAR_BAZ', 2);
+</code></pre>
+<h2><a id="casts" class="anchor" href="LSR-0-coding.md.html#casts">Casts</a></h2>
+<p>Casts must not have any whitespace inside the cast, must only use long type names and be <strong>separated by one space</strong> from the following variable or value.</p>
+<pre><code class="language-php">// Bad.
+(bool) $result;
+( boolean ) $result;
+(boolean)$result;
+(boolean)  $result;
+
+// Good.
+(boolean) $result;
+(integer) $value;
+</code></pre>
+<h2><a id="functions" class="anchor" href="LSR-0-coding.md.html#functions">Functions</a></h2>
+<p>Function names should be written in <em>camelBack</em>.</p>
+<pre><code class="language-php">function longFunctionName() {
+    // ...
+}
+</code></pre>
+<p>Functions should be called <strong>without space</strong> between function's name and starting bracket. There should be <strong>one space</strong> between every parameter of a function call.</p>
+<pre><code class="language-php">$var = foo($bar, $bar2, $bar3);
+</code></pre>
+<p>Example of a function definition:</p>
+<pre><code class="language-php">function someFunction($arg1, $arg2 = '') {
+	if ($foo == $bar) {
+		$foo++;
+	}
+	return $bar;
+}
+</code></pre>
+<p>Parameters with a default value, should be placed last in function definition. Try to <strong>make your functions return something</strong>, at least <code>true</code> or <code>false</code> - so it can be determined whether the function call was successful.</p>
+<pre><code class="language-php">function connection(&amp;$dsn, $persistent = false) {
+	if (is_array($dns)) {
+		$dnsInfo = &amp;$dns;
+	} else {
+		$dnsInfo = BD::parseDNS(dns);
+	}
+
+	if (!($dnsInfo) || !($dnsInfo['phpType'])) {
+		return $this-&gt;addError();
+	}
+	return true;
+}
+</code></pre>
+<p>Functions without body content should be written like so.</p>
+<pre><code class="language-php">function connection(&amp;$dsn, $persistent = false) {}
+</code></pre>
+<h2><a id="namespaces" class="anchor" href="LSR-0-coding.md.html#namespaces">Namespaces</a></h2>
+<p>The namespace  declaration must appear directly after the opening php tag, separated by an empty line. Any static dependencies <strong>appear as one block</strong> after the namespace declaration, separated by an empty line.</p>
+<pre><code class="language-php">&lt;?php
+
+namespace lithium\util;
+
+use Exception;
+use lithium\util\Inflector;
+</code></pre>
+<h3><a id="singularity" class="anchor" href="LSR-0-coding.md.html#singularity">Singularity</a></h3>
+<p>Namespaces should be written in lowercase singular form, example:</p>
+<pre><code class="language-php">// Bad.
+namespace lithium\data\sources;
+
+// Good.
+namespace lithium\data\source;
+</code></pre>
+<p>There are a few exceptions to the singularity rule:</p>
+<ul>
+<li><code>tests\cases</code>,</li>
+<li><code>app\*</code> (e.g., <code>app\extensions</code>)</li>
+<li><code>&lt;plugin&gt;\*</code> (e.g., <code>myplugin\extensions</code>)</li>
+</ul>
+<h2><a id="classes" class="anchor" href="LSR-0-coding.md.html#classes">Classes</a></h2>
+<h3><a id="name" class="anchor" href="LSR-0-coding.md.html#name">Name</a></h3>
+<p>Class names should be written in <em>CamelCase</em>, for example:</p>
+<pre><code class="language-php">class Foo {
+     // ...
+}
+</code></pre>
+<p>Class names should always be singular nouns, i.e. <code>Dispatcher</code>, <code>PagesController</code> or <code>Environment</code>, unless they are <strong>collection</strong> classes.</p>
+<h3><a id="member-visibility" class="anchor" href="LSR-0-coding.md.html#member-visibility">Member Visibility</a></h3>
+<p>All methods and properties must have  a visibility operator. The <code>var</code> operator is forbidden.</p>
+<p>A <strong>protected</strong> method or variable name start with a single underscore ("<code>_</code>").</p>
+<pre><code class="language-php">class Foo {
+	protected $_iAmAProtectedVariable;
+
+	protected function _iAmAProtectedMethod() {
+		// ...
+	}
+}
+</code></pre>
+<p>A private method or variables: <strong>This is a framework, it should be extensible.</strong>  As such, there's no reason to ever use private methods or variables.</p>
+<h3><a id="anatomy" class="anchor" href="LSR-0-coding.md.html#anatomy">Anatomy</a></h3>
+<p>This defines the basic anatomy of a li3 class, by the numbers:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace my\package; // (1)
+
+use my\package\util\Foo; // (2)
+use my\package\util\Bar;
+
+class AwesomeSocket extends \lithium\core\Object { // (3)
+
+	protected $_classes = [ // (4)
+		'query' =&gt; 'lithium\model\Query',
+		'record' =&gt; 'lithium\model\Record'
+	];
+
+	public function __construct($config = []) { // (5)
+		// Minimum class bootstrap logic here...
+		parent::__construct($config);
+	}
+
+	protected function _init() { // (6)
+		// Any additional bootstrap logic here...
+	}
+}
+
+?&gt;
+</code></pre>
+<h4><a id="legend" class="anchor" href="LSR-0-coding.md.html#legend">Legend</a></h4>
+<ol>
+<li><strong>Namespaces</strong>: classes should always begin with a namespace definition.  This definition should always be preceded by a single newline, and as always, all PHP blocks should begin with a full <code>&lt;?php</code> long tag.</li>
+<li><strong>Static dependencies</strong>: any basic, unchangeable utility classes which this class depends on or otherwise references should go here.  Class references should be fully resolved but must not have a leading backslash (<code>\</code>).</li>
+<li><strong>Class definition</strong>: this is the only place where classes may be used without being referenced or imported elsewhere (i.e. neither statically nor dynamically).  As with static dependencies, the parent class reference should be fully resolved.</li>
+<li><strong>Dynamic dependencies</strong>: any classes on which this class depends that can be changed through configuration.  These may be classes that this class instantiates, or that are used statically.  Keys of this array should be the name of the class dependency in camelBack format, and the value should be a fully-namespaced class reference.</li>
+<li><strong>Constructor</strong>: constructors must always accept exactly one parameter, which must be an array.  Only required class bootstrapping code should be put here.  This makes classes easier to test.  For static classes, this should be replaced with <code>public static function __init()</code>, which takes no parameters.  This method is called when the class is first loaded into memory.</li>
+<li><strong>Initializer</strong>: any additional class bootstrapping code goes here.  This method is automatically called by <code>Object::__construct()</code>, which may be disabled by passing <code>'init' =&gt; false</code> to <code>parent::__construct()</code>.</li>
+</ol>
+<h3><a id="methods" class="anchor" href="LSR-0-coding.md.html#methods">Methods</a></h3>
+<p>A common method grammar and vocabulary should be adhered to as much as possible, and concise, memorable method names should be used in all other cases.  Prefixes and suffixes like <code>get*</code> and <code>set*</code> should always be avoided.  Method names should always communicate exactly what they do, without containing any redundancies, particularly with respect to the class name, i.e. <code>Dispatcher::dispatch()</code> (wrong).  Where possible, method names should also communicate whether the method is a "sub-routine" (performs an action) or a "pure function" (returns a value), for example:</p>
+<ul>
+<li><code>run()</code> (sub-routine)</li>
+<li><code>find()</code> (function)</li>
+<li><code>set()</code> (sub-routine)</li>
+<li><code>value()</code> (function)</li>
+</ul>
+<p>If a function has a reciprocal sub-routine (or vice-versa), they should be combined where possible, using an optional parameter to differentiate.  The basic pattern is as follows:</p>
+<pre><code class="language-php">	public function value($value = null) {
+		if ($value === null) {
+			return $this-&gt;value;
+		}
+		$this-&gt;value = $value;
+	}
+</code></pre>
+<h2><a id="traits" class="anchor" href="LSR-0-coding.md.html#traits">Traits</a></h2>
+<h3><a id="name" class="anchor" href="LSR-0-coding.md.html#name">Name</a></h3>
+<p>Trait names should be written in <em>CamelCase</em>, for example:</p>
+<pre><code class="language-php">trait Respondable {
+     // ...
+}
+</code></pre>
+<p>Trait names should always be named adjectives, i.e. <code>Respondable</code>, <code>Sluggable</code> or <code>Filterable</code>. The name must <strong>not</strong> be suffixed with the word <code>Trait</code>.</p>
+<h2><a id="importing-including" class="anchor" href="LSR-0-coding.md.html#importing-including">Importing/Including</a></h2>
+<h3><a id="including" class="anchor" href="LSR-0-coding.md.html#including">Including</a></h3>
+<p>When including files with classes or libraries, use only and always the <a href="http://php.net/require_once">require_once</a> function. Don't use brackets with the include statements as they are language constructs.</p>
+<h3><a id="importing" class="anchor" href="LSR-0-coding.md.html#importing">Importing</a></h3>
+<p>When importing classes, names should never be aliased unless absolutely necessary to avoid collision.</p>
+<ul>
+<li>Good: <code>use lithium\util\Inflector;</code></li>
+<li>Bad: <code>use lithium\util\Inflector as Inflector;</code></li>
+</ul>
+<p>Except for the <code>extends</code> part of the class declaration, all namespaced class references should never be used inline in code.  Instead, the reference should be declared at the top of the class.</p>
+<pre><code class="language-php">// Good.
+class Bar extends \lithium\Foo {
+	// ...
+}
+
+// Good.
+class Baz extends \lithium\core\Object {
+	// ...
+	$bar = new Bar();
+	// ...
+}
+
+// Bad.
+class Baz extends lithium\core\Object {
+	// ...
+	$bar = new lithium\foo\Bar();
+	// ...
+}
+</code></pre>
+<p>Names appearing after the <code>use</code> keyword are always fully qualified but must not have a leading backslash.</p>
+<ul>
+<li>Good: <code>use lithium\util\Inflector;</code></li>
+<li>Bad: <code>use \lithium\util\Inflector;</code></li>
+</ul>
+<h3><a id="errors-and-exceptions" class="anchor" href="LSR-0-coding.md.html#errors-and-exceptions">Errors and Exceptions</a></h3>
+<p>Exceptions must not be used for flow control (they're quite expensive as are errors, a stack trace must be generated).</p>
+<p>Use exceptions only if the situation is really exceptional and doesn't occur under <strong>normal</strong> conditions (i.e. trying to read a file and file does not exist/is not readable).</p>
+<p>Use <a href="http://php.net/manual/en/spl.exceptions.php">SPL exceptions</a> or those provided by li3.</p>
+<h4><a id="messages" class="anchor" href="LSR-0-coding.md.html#messages">Messages</a></h4>
+<p>Error and Exceptions messages roughly follow the code documenting standard. The following two sections are cited from that standard and especially apply.</p>
+<p>All documentation must be written in English and must follow the basic rules of punctuation. <strong>Sentences usually end with a period.</strong> Sentences are separated by one space from each other. The first letter of a word must be capitalized if it's the beginning of a sentence, following a period or exclamation mark.</p>
+<p>Markdown syntax can be used in all docblocks [here: messages, the author]. As a rule of thumb you should wrap in single backticks if you're talking about code. Please note that <code>null</code>, <code>false</code> and <code>true</code> must always be wrapped in single backticks.</p>
+<p>As in other places variables which appear in strings where they get expanded must be wrapped in curly braces. Those variables are most often good candidates for also getting wrapped in backticks.</p>
+<p>Sometimes a variable within a message may contain no content at all (in the event of an error condition that's possible). In order to still get meaningful messages places where dynamic content is inserted must be preceded by a term describing the type of content to be inserted.</p>
+<p>The message <strong>must not</strong> include the method/class name.</p>
+<p>Examples of <strong>good</strong> exception messages:</p>
+<pre><code class="language-php">"Could not write template `{$template}` to cache."
+"Entity `{$entity}` not found."
+"Rule `{$rule}` is not a validation rule."
+'Could not route request.'
+</code></pre>
+<p>Examples of <strong>bad</strong> exception messages:</p>
+<pre><code class="language-php">"Could not write template {$template} to cache." // Literal not marked as such.
+"Could not write template '{$template}' to cache." // Using ticks instead of backticks.
+"`{$entity}` not found." // `$entity` may be empty.
+</code></pre>
+<h3><a id="amended" class="anchor" href="LSR-0-coding.md.html#amended">Amended</a></h3>
+<ul>
+<li>Added rule for trait names, December 2016</li>
+<li>Short array syntax is now preferred, June 2016</li>
+</ul>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>li3_behaviors – li₃ Behaviors v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../docs.html" class="active">Documentation</a><a href="../../../../versions.html">Versions</a><a href="../../../../present.html">Presentations</a><a href="../../../../support.html">Community</a><a href="../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="li3_behaviors.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃ Behaviors (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">li3_behaviors</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+	
+						<h3 class="h-gamma">Namespaces</h3>
+			<ul>
+												<li class="namespace">
+				<a href="li3_behaviors/data.html">data</a>							</ul>
+												
+										</nav>
+	<div class="body">
+			<section>
+			<h2><a id="about" class="anchor" href="li3_behaviors.html#about">About</a></h2>
+<p>This library provides base classes for implementing model behaviors.
+Model behaviors provide a simple way to extend models. This pattern allow
+common logic to be encapsulated inside behaviors for keeping models light
+and composed only by its own business logic.</p>
+<p>The goal of this project is to work out and finalize a model behavior
+implementation that in the future can be integrated into Lithium. We
+are depending on PHP &gt;= 5.4 here as we want to use new features like
+traits and short array syntax.</p>
+<p>It's assumed that the effort of finalizing an implementation will take as long
+as it takes Lithium to move further to a future version that will then also depend
+on 5.4. Alternatively the <code>Behaviors</code> implementation can be folded into the
+<code>Model</code> and long array syntax be used. This would make an earlier merge
+into core possible.</p>
+<p><em>Please note that this project is still in its alpha phase and implementation
+details may change without any deprecation notices.</em> Still we'll try to keep
+this as stable as possible.</p>
+<p>If you'd like to contribute then adding tests would be very welcome as this
+project lacks decent ones currently.</p>
+<h2><a id="requirements" class="anchor" href="li3_behaviors.html#requirements">Requirements</a></h2>
+<p>Lithium and PHP 5.4.</p>
+<h2><a id="usage" class="anchor" href="li3_behaviors.html#usage">Usage</a></h2>
+<h3><a id="managing-and-loading-behaviors" class="anchor" href="li3_behaviors.html#managing-and-loading-behaviors">Managing and Loading Behaviors</a></h3>
+<p>First to add the ability of using behaviors in a model, use
+the behaviors trait in your model. After that define all behaviors you
+plan to use in the <code>$_actsAs</code> property of the model class.</p>
+<pre><code class="language-php">// ...
+class Posts extends \lithium\data\Model {
+
+   use li3_behaviors\data\model\Behaviors;
+
+   protected static $_actsAs = [
+       'Sluggable' =&gt; ['field' =&gt; 'slug', 'label' =&gt; 'title']
+   ];
+
+   // ...
+</code></pre>
+<p>The behaviors trait also makes some static methods available in the model,
+which allows to manage behaviors as follows.</p>
+<pre><code class="language-php">// Bind the sluggable behavior with configuration.
+Posts::bindBehavior('Sluggable', ['field' =&gt; 'slug', 'label' =&gt; 'title']);
+
+// Accessing configuration.
+Posts::behavior('Sluggable')-&gt;config();
+Posts::behavior('Sluggable')-&gt;config('field');
+
+// Updating configuration.
+Posts::behavior('Sluggable')-&gt;config('field', 'alt');
+
+// Unbinding it again.
+Posts::unbindBehavior('Sluggable');
+</code></pre>
+<h3><a id="creating-a-behavior" class="anchor" href="li3_behaviors.html#creating-a-behavior">Creating a Behavior</a></h3>
+<p>Now that we are able to load and manage behaviors we can create our own
+behavior which must extend the <code>Behavior</code> base class. In the following example
+we create a <code>Sluggable</code> behavior in <code>extensions/data/behavior/Sluggable.php</code>.</p>
+<pre><code class="language-php">
+namespace app\extensions\data\behavior;
+
+use lithium\util\Inflector;
+
+class Sluggable extends \li3_behaviors\data\model\Behavior {
+
+	protected static $_defaults = [
+		'field' =&gt; 'slug',
+		'label' =&gt; 'title'
+	];
+
+	protected static function _filters($model, $behavior) {
+		$model::applyFilter('save', function($self, $params, $chain) use ($behavior) {
+			$params['data'][$behavior-&gt;config('field')] = static::_generate(
+				$params['data'][$behavior-&gt;config('label')]
+			);
+			return $chain-&gt;next($self, $params, $chain);
+		});
+	}
+
+	protected static function _generate($value) {
+		return strtolower(Inflector::slug($value));
+	}
+}
+</code></pre>
+<h3><a id="behavior-configuration" class="anchor" href="li3_behaviors.html#behavior-configuration">Behavior Configuration</a></h3>
+<p>The configuration of each behavior can be accessed from within the
+behavior via <code>config()</code>. By default configuration for the behavior will
+be set automatically using the user provided configuration from the <code>$_actsAs</code>
+property of the model and the defaults provided in the behavior as <code>$_defaults</code>.</p>
+<p>The defaults are merged with the provided configuration using simple array
+addition (<code>$config += $defaults</code>). If you want to change the way configuration
+is merged read further.</p>
+<h4><a id="providing-custom-configuration-logic" class="anchor" href="li3_behaviors.html#providing-custom-configuration-logic">Providing Custom Configuration Logic</a></h4>
+<p>Behaviors often come with different requirements towards configuration.
+In some cases just a 1-dimensional array needs to be merged in other cases
+nested multi-dimensional arrays must be merged
+or even normalized in a custom way.</p>
+<p>That's why merging the defaults with the provided configuration can be
+controlled easily by yourself - the implementer. By default we do a simple
+one-dimensional merge adding defaults and configuration to eachother. To
+control configuration merging overwrite the <code>_config()</code> method of the base
+class.</p>
+<p>In the following example we will normalize certain configuration options
+while merging with the behavior's defaults.</p>
+<pre><code class="language-php">// ...
+
+class Serializable extends \li3_behaviors\data\model\Behavior {
+
+	protected static $_defaults = [
+		'fields' =&gt; []
+	];
+
+	protected static function _config($model, $behavior, $config, $defaults) {
+		$config += $defaults;
+		$config['fields'] = Set::normalize($config['fields']);
+
+		foreach ($config['fields'] as $field =&gt; &amp;$pass) {
+			if (!$pass) {
+				$pass = 'json';
+			}
+		}
+		return $config;
+	}
+
+	// ...
+</code></pre>
+<p>The <code>_config()</code> method gets the configuration and the defaults as defined in <code>$_defaults</code> as
+the 3rd and 4th parameters. The method must finally return the configuration that should
+be used for the behavior instance.</p>
+<h3><a id="exposing-static-methods-to-the-model" class="anchor" href="li3_behaviors.html#exposing-static-methods-to-the-model">Exposing Static Methods to the Model</a></h3>
+<p>Any public static method present in the behavior is automically exposed on the model. This
+allows for adding methods to the model easily. Each static method that is exposed gets
+the name of the current model class as its first and the instance of the behavior as a second
+parameter.</p>
+<p>This is usefull if you i.e. need to query the model for results or when you want to retrieve
+configuration from the behavior.</p>
+<p>The example below shows how we expose a token generation method to the model.</p>
+<pre><code class="language-php">// ...
+
+class TokenGenerator extends \li3_behaviors\data\model\Behavior {
+
+	protected static $_defaults = [
+		'short' =&gt; false
+	];
+
+	// Generates a random token either short (8 chars) or long (16 chars) and
+	// returns it. Default expiration is one year.
+	public static function token($model, $behavior) {
+		$token = substr(md5(String::random(32)), 0, $behavior-&gt;config('short') ? 8 : 16);
+		$expires = date('Y-m-d H:i:s', strtotime('+1 year'));
+
+		return compact('token', 'expires');
+	}
+
+	// ...
+</code></pre>
+<h3><a id="exposing-instance-methods-to-the-model" class="anchor" href="li3_behaviors.html#exposing-instance-methods-to-the-model">Exposing Instance Methods to the Model</a></h3>
+<p>Analog to exposing static methods, instance methods can also be exposed to the model easily. Any concrete
+method implemented in the behavior will be exposed. Each behavior method will in addition to the <code>$entity</code>
+parameter also receive the name of the model and an instance of the behavior as a second parameter i.e. to access configuration.</p>
+<pre><code class="language-php">// ...
+
+class Publishable extends \li3_behaviors\data\model\Behavior {
+
+	protected static $_defaults = [
+		'field' =&gt; 'is_published'
+	];
+
+	public function publish($model, $behavior, $entity) {
+		$field = $behavior-&gt;config('field');
+		$entity-&gt;{$field} = true;
+	}
+
+	// ...
+</code></pre>
+<h4><a id="dynamically-adding-model-instance-methods" class="anchor" href="li3_behaviors.html#dynamically-adding-model-instance-methods">Dynamically Adding Model Instance Methods</a></h4>
+<p>Sometimes you need to dynamically add methods to a model instance. I.e. when a field
+name of a behavior is user configurable and needs to be added as a method on the entity.</p>
+<p>This can be achived by overwriting the <code>_methods()</code> method and returning an array
+of methods keyed by their alias on the model instance.</p>
+<pre><code class="language-php">// ...
+
+class Taggable extends \li3_behaviors\data\model\Behavior {
+    // ...
+
+	protected static function _methods($model, $behavior) {
+		return [
+			$behavior-&gt;config('field') =&gt; function() { /* ... */  }
+		]
+	}
+
+	// ...
+</code></pre>
+<p>The above exemplaric behavior would then enable the following
+methods on each entity returned from the model.</p>
+<pre><code class="language-php">Posts::bindBehavior('Taggable', ['field' =&gt; 'taxonomy']);
+$item = Posts::create();
+$item-&gt;taxonomy();
+</code></pre>
+<h3><a id="attaching-filters-to-the-model" class="anchor" href="li3_behaviors.html#attaching-filters-to-the-model">Attaching Filters to the Model</a></h3>
+<p>To modify existing model methods, filters should be used. If your behavior
+needs to use filters a good place to attach them is the behavior's <code>_filters()</code>
+method. Overwrite it to attach filters to the model during initialization phase.</p>
+<pre><code class="language-php">// ...
+
+class Timestamp extends \li3_behaviors\data\model\Behavior {
+	// ...
+
+	protected static function _filters($model, $behavior) {
+		$model::applyFilter('save', function($self, $params, $chain) use ($behavior) {
+			$params['data'] = static::_timestamp($behavior, $params['entity'], $params['data']);
+
+			return $chain-&gt;next($self, $params, $chain);
+		});
+	}
+
+	protected static function _timestamp($behavior, $entity, $data) {
+		// ...
+	}
+
+	// ...
+</code></pre>
+<h3><a id="attaching-finders-to-the-model" class="anchor" href="li3_behaviors.html#attaching-finders-to-the-model">Attaching Finders to the Model</a></h3>
+<p>To add finders to the model's find method, finders should be used. If your behavior
+needs to use finders a good place to attach them is the behavior's <code>_finders()</code>
+method. Overwrite it to add finders to the model during initialization phase.</p>
+<pre><code class="language-php">// ...
+
+class Taggable extends \li3_behaviors\data\model\Behavior {
+	// ...
+
+	protected static function _finders($model, $behavior) {
+		$model::finder('tag', function($self, $params, $chain) use ($behavior) {
+			// ...
+			return $chain-&gt;next($self, $params, $chain);
+		});
+	}
+
+	// ...
+</code></pre>
+<h2><a id="credits-for-previous-implementations" class="anchor" href="li3_behaviors.html#credits-for-previous-implementations">Credits for previous Implementations</a></h2>
+<ul>
+<li>Nate Abele, <a href="https://github.com/nateabele/li3_behaviors">https://github.com/nateabele/li3_behaviors</a></li>
+<li>Simon Jaillet, <a href="https://github.com/jails/li3_behaviors">https://github.com/jails/li3_behaviors</a></li>
+</ul>
+		</section>
+		</div>
+			<hr class="section-separator lightblue">
+		<section class="ns-summary">
+								<h2 class="h-beta">Classes</h2>
+			<ul>
+												<li class="class">
+				<a href="li3_behaviors/data/model/Behavior.html">li3_behaviors\data\model\Behavior</a>							</ul>
+											<h2 class="h-beta">Traits</h2>
+			<ul>
+												<li class="trait">
+				<a href="li3_behaviors/data/model/Behaviors.html">li3_behaviors\data\model\Behaviors</a>							</ul>
+												</section>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

@@ -1,0 +1,975 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\action\Request – Framework API v2.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (2.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../action.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">action</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Request</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../action.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Request::__construct().html">__construct()</a>												<li class="method protected">
+				<a href="./Request::_init().html">_init()</a>												<li class="method public">
+				<a href="./Request::__get().html">__get()</a>												<li class="method public">
+				<a href="./Request::__isset().html">__isset()</a>												<li class="method public">
+				<a href="./Request::env.html">env()</a>												<li class="method public">
+				<a href="./Request::accepts().html">accepts()</a>												<li class="method protected">
+				<a href="./Request::_parseAccept().html">_parseAccept()</a>												<li class="method public">
+				<a href="./Request::get().html">get()</a>												<li class="method public">
+				<a href="./Request::is().html">is()</a>												<li class="method public">
+				<a href="./Request::type().html">type()</a>												<li class="method public">
+				<a href="./Request::detect().html">detect()</a>												<li class="method public">
+				<a href="./Request::referer().html">referer()</a>												<li class="method public">
+				<a href="./Request::to().html">to()</a>												<li class="method public">
+				<a href="./Request::locale().html">locale()</a>												<li class="method protected">
+				<a href="./Request::_base().html">_base()</a>												<li class="method protected">
+				<a href="./Request::_url().html">_url()</a>												<li class="method protected">
+				<a href="./Request::_parseFiles().html">_parseFiles()</a>												<li class="method public inherited">
+				<a href="../net/http/Request::body().html">body()</a>												<li class="method public inherited">
+				<a href="../net/http/Request::cookies().html">cookies()</a>												<li class="method protected inherited">
+				<a href="../net/http/Request::_cookies().html">_cookies()</a>												<li class="method protected inherited">
+				<a href="../net/http/Request::_parseCookies().html">_parseCookies()</a>												<li class="method public inherited">
+				<a href="../net/http/Request::queryString().html">queryString()</a>												<li class="method public inherited">
+				<a href="../net/http/Request::__toString().html">__toString()</a>												<li class="method public inherited">
+				<a href="../net/http/Message::headers().html">headers()</a>												<li class="method protected inherited">
+				<a href="../net/http/Message::_encode().html">_encode()</a>												<li class="method protected inherited">
+				<a href="../net/http/Message::_decode().html">_decode()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property public">
+				<a href="./Request::$url.html">$url</a>												<li class="property public">
+				<a href="./Request::$params.html">$params</a>												<li class="property public">
+				<a href="./Request::$persist.html">$persist</a>												<li class="property public">
+				<a href="./Request::$data.html">$data</a>												<li class="property public">
+				<a href="./Request::$query.html">$query</a>												<li class="property protected">
+				<a href="./Request::$_base.html">$_base</a>												<li class="property protected">
+				<a href="./Request::$_computed.html">$_computed</a>												<li class="property protected">
+				<a href="./Request::$_env.html">$_env</a>												<li class="property protected">
+				<a href="./Request::$_stream.html">$_stream</a>												<li class="property protected">
+				<a href="./Request::$_detectors.html">$_detectors</a>												<li class="property protected">
+				<a href="./Request::$_autoConfig.html">$_autoConfig</a>												<li class="property protected">
+				<a href="./Request::$_accept.html">$_accept</a>												<li class="property protected">
+				<a href="./Request::$_locale.html">$_locale</a>												<li class="property public inherited">
+				<a href="../net/http/Request::$method.html">$method</a>												<li class="property public inherited">
+				<a href="../net/http/Request::$auth.html">$auth</a>												<li class="property public inherited">
+				<a href="../net/http/Request::$cookies.html">$cookies</a>												<li class="property protected inherited">
+				<a href="../net/http/Request::$_formats.html">$_formats</a>												<li class="property public inherited">
+				<a href="../net/http/Message::$protocol.html">$protocol</a>												<li class="property public inherited">
+				<a href="../net/http/Message::$version.html">$version</a>												<li class="property public inherited">
+				<a href="../net/http/Message::$headers.html">$headers</a>												<li class="property protected inherited">
+				<a href="../net/http/Message::$_type.html">$_type</a>												<li class="property protected inherited">
+				<a href="../net/http/Message::$_classes.html">$_classes</a>												<li class="property public inherited">
+				<a href="../net/Message::$scheme.html">$scheme</a>												<li class="property public inherited">
+				<a href="../net/Message::$host.html">$host</a>												<li class="property public inherited">
+				<a href="../net/Message::$port.html">$port</a>												<li class="property public inherited">
+				<a href="../net/Message::$username.html">$username</a>												<li class="property public inherited">
+				<a href="../net/Message::$password.html">$password</a>												<li class="property public inherited">
+				<a href="../net/Message::$path.html">$path</a>												<li class="property public inherited">
+				<a href="../net/Message::$body.html">$body</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../action.html" class="symbol-segment">action</a>\Request		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../net/http/Request.html" class="extends__symbol">lithium\net\http\Request</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>A <code>Request</code> object is passed into the <code>Dispatcher</code>, and is responsible for identifying and
+storing all the information about an HTTP request made to an application,  including status,
+headers, and any GET, POST or PUT data, as well as any data returned from the
+<code>Router</code>, after the <code>Request</code> object has been matched against a <code>Route</code>. Includes a property
+accessor method (<code>__get()</code>) which allows any parameters returned from routing to be accessed as
+properties of the <code>Request</code> object.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="Dispatcher.html">lithium\action\Dispatcher</a>									<li><a href="Controller.html">lithium\action\Controller</a>									<li><a href="../net/http/Router.html">lithium\net\http\Router</a>									<li><a href="../net/http/Route.html">lithium\net\http\Route</a>									<li><a href="./Request::__get().html">lithium\action\Request::__get()</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Request extends \lithium\net\http\Request {
+
+	/**
+	 * Current url of request.
+	 *
+	 * @var string
+	 */
+	public $url = null;
+
+	/**
+	 * Params for request.
+	 *
+	 * @var array
+	 */
+	public $params = [];
+
+	/**
+	 * Route parameters that should persist when generating URLs in this request context.
+	 *
+	 * @var array
+	 */
+	public $persist = [];
+
+	/**
+	 * Data found in the HTTP request body, most often populated by `$_POST` and `$_FILES`.
+	 *
+	 * @var array
+	 */
+	public $data = [];
+
+	/**
+	 * Key/value pairs found encoded in the request URL after &#039;?&#039;, populated by `$_GET`.
+	 *
+	 * @var array
+	 */
+	public $query = [];
+
+	/**
+	 * Base path.
+	 *
+	 * @var string
+	 */
+	protected $_base = null;
+
+	/**
+	 * Computed environment variables for the request. Retrieved with env().
+	 *
+	 * @var array
+	 * @see lithium\action\Request::env()
+	 */
+	protected $_computed = [];
+
+	/**
+	 * Holds the server globals &amp; environment variables.
+	 *
+	 * @var array
+	 */
+	protected $_env = [];
+
+	/**
+	 * If POST, PUT or PATCH data is coming from an input stream (rather than `$_POST`),
+	 * this specified where to read it from.
+	 *
+	 * @see lithium\action\Request::_init()
+	 * @var resource
+	 */
+	protected $_stream = null;
+
+	/**
+	 * Options used to detect features of the request, using `is()`. For example:
+	 *
+	 * ``` embed:lithium\tests\cases\action\RequestTest::testRequestTypeIsMobile(4-4) ```
+	 *
+	 * Custom detectors can be added using `detect()`.
+	 *
+	 * @see lithium\action\Request::is()
+	 * @see lithium\action\Request::detect()
+	 * @var array
+	 */
+	protected $_detectors = [
+		&#039;mobile&#039;  =&gt; [&#039;HTTP_USER_AGENT&#039;, null],
+		&#039;ajax&#039;    =&gt; [&#039;HTTP_X_REQUESTED_WITH&#039;, &#039;XMLHttpRequest&#039;],
+		&#039;flash&#039;   =&gt; [&#039;HTTP_USER_AGENT&#039;, &#039;Shockwave Flash&#039;],
+		&#039;ssl&#039;     =&gt; &#039;HTTPS&#039;,
+		&#039;dnt&#039;     =&gt; [&#039;HTTP_DNT&#039;, &#039;1&#039;],
+		&#039;get&#039;     =&gt; [&#039;REQUEST_METHOD&#039;, &#039;GET&#039;],
+		&#039;post&#039;    =&gt; [&#039;REQUEST_METHOD&#039;, &#039;POST&#039;],
+		&#039;patch&#039;   =&gt; [&#039;REQUEST_METHOD&#039;, &#039;PATCH&#039;],
+		&#039;put&#039;     =&gt; [&#039;REQUEST_METHOD&#039;, &#039;PUT&#039;],
+		&#039;delete&#039;  =&gt; [&#039;REQUEST_METHOD&#039;, &#039;DELETE&#039;],
+		&#039;head&#039;    =&gt; [&#039;REQUEST_METHOD&#039;, &#039;HEAD&#039;],
+		&#039;options&#039; =&gt; [&#039;REQUEST_METHOD&#039;, &#039;OPTIONS&#039;]
+	];
+
+	/**
+	 * Auto configuration properties.
+	 *
+	 * @var array
+	 */
+	protected $_autoConfig = [
+		&#039;classes&#039; =&gt; &#039;merge&#039;, &#039;detectors&#039; =&gt; &#039;merge&#039;, &#039;type&#039;, &#039;stream&#039;
+	];
+
+	/**
+	 * Contains an array of content-types, sorted by quality (the priority which the browser
+	 * requests each type).
+	 *
+	 * @var array
+	 */
+	protected $_accept = [];
+
+	/**
+	 * Holds the value of the current locale, set through the `locale()` method.
+	 *
+	 * @var string
+	 */
+	protected $_locale = null;
+
+	/**
+	 * Constructor. Adds config values to the public properties when a new object is created,
+	 * pulling request data from superglobals if `globals` is set to `true`.
+	 *
+	 * Normalizes casing of request headers.
+	 *
+	 * @see lithium\net\http\Request::__construct()
+	 * @see lithium\net\http\Message::__construct()
+	 * @see lithium\net\Message::__construct()
+	 * @param array $config The available configuration options are the following. Further
+	 *        options are inherited from the parent classes.
+	 *        - `&#039;base&#039;` _string_: Defaults to `null`.
+	 *        - `&#039;url&#039;` _string_: Defaults to `null`.
+	 *        - `&#039;data&#039;` _array_: Additional data to use when initializing
+	 *          the request. Defaults to `[]`.
+	 *        - `&#039;stream&#039;` _resource_: Stream to read from in order to get the message
+	 *          body when method is POST, PUT or PATCH and data is empty. When not provided
+	 *          `php://input` will be used for reading.
+	 *        - `&#039;env&#039;` _array_: Defaults to `[]`.
+	 *        - `&#039;globals&#039;` _boolean_: Use global variables for populating
+	 *          the request&#039;s environment and data; defaults to `true`.
+	 *        - `&#039;drain&#039;` _boolean_: Enables/disables automatic reading of streams.
+	 *          Defaults to `true`. Disable when you&#039;re dealing with large binary
+	 *          payloads. Note that this will also disable automatic content decoding
+	 *          of stream data.
+	 * @return void
+	 */
+	public function __construct(array $config = []) {
+		$defaults = [
+			&#039;base&#039; =&gt; null,
+			&#039;url&#039; =&gt; null,
+			&#039;env&#039; =&gt; [],
+			&#039;data&#039; =&gt; [],
+			&#039;stream&#039; =&gt; null,
+			&#039;globals&#039; =&gt; true,
+			&#039;drain&#039; =&gt; true,
+			&#039;query&#039; =&gt; [],
+			&#039;headers&#039; =&gt; []
+		];
+		$config += $defaults;
+
+		if ($config[&#039;globals&#039;]) {
+			if (isset($_SERVER)) {
+				$config[&#039;env&#039;] += $_SERVER;
+			}
+			if (isset($_ENV)) {
+				$config[&#039;env&#039;] += $_ENV;
+			}
+			if (isset($_GET)) {
+				$config[&#039;query&#039;] += $_GET;
+			}
+			if (isset($_POST)) {
+				$config[&#039;data&#039;] += $_POST;
+			}
+		}
+		$this-&gt;_env = $config[&#039;env&#039;];
+
+		if (!isset($config[&#039;host&#039;])) {
+			$config[&#039;host&#039;] = $this-&gt;env(&#039;HTTP_HOST&#039;);
+		}
+		if (!isset($config[&#039;protocol&#039;])) {
+			$config[&#039;protocol&#039;] = $this-&gt;env(&#039;SERVER_PROTOCOL&#039;);
+		}
+		if ($config[&#039;protocol&#039;] &amp;&amp; strpos($config[&#039;protocol&#039;], &#039;/&#039;)) {
+			list($scheme, $version) = explode(&#039;/&#039;, $config[&#039;protocol&#039;]);
+
+			if (!isset($config[&#039;scheme&#039;])) {
+				$config[&#039;scheme&#039;] = strtolower($scheme) . ($this-&gt;env(&#039;HTTPS&#039;) ? &#039;s&#039; : &#039;&#039;);
+			}
+			if (!isset($config[&#039;version&#039;])) {
+				$config[&#039;version&#039;] = $version;
+			}
+		}
+		$this-&gt;_base = $this-&gt;_base($config[&#039;base&#039;]);
+		$this-&gt;url = $this-&gt;_url($config[&#039;url&#039;]);
+
+		$config[&#039;headers&#039;] += [
+			&#039;Content-Type&#039; =&gt; $this-&gt;env(&#039;CONTENT_TYPE&#039;),
+			&#039;Content-Length&#039; =&gt; $this-&gt;env(&#039;CONTENT_LENGTH&#039;)
+		];
+
+		foreach ($this-&gt;_env as $name =&gt; $value) {
+			if ($name[0] === &#039;H&#039; &amp;&amp; strpos($name, &#039;HTTP_&#039;) === 0) {
+				$name = str_replace(&#039;_&#039;, &#039; &#039;, substr($name, 5));
+				$name = str_replace(&#039; &#039;, &#039;-&#039;, ucwords(strtolower($name)));
+				$config[&#039;headers&#039;] += [$name =&gt; $value];
+			}
+		}
+
+		parent::__construct($config);
+	}
+
+	/**
+	 * Initializes request object by setting up mobile detectors, determining method and
+	 * populating the data property either by using i.e. form data or reading from STDIN in
+	 * case binary data is streamed. Will merge any files posted in forms with parsed data.
+	 *
+	 * @see lithium\action\Request::_parseFiles()
+	 */
+	protected function _init() {
+		parent::_init();
+
+		$mobile = [
+			&#039;iPhone&#039;, &#039;MIDP&#039;, &#039;AvantGo&#039;, &#039;BlackBerry&#039;, &#039;J2ME&#039;, &#039;Opera Mini&#039;, &#039;DoCoMo&#039;, &#039;NetFront&#039;,
+			&#039;Nokia&#039;, &#039;PalmOS&#039;, &#039;PalmSource&#039;, &#039;portalmmm&#039;, &#039;Plucker&#039;, &#039;ReqwirelessWeb&#039;, &#039;iPod&#039;,
+			&#039;SonyEricsson&#039;, &#039;Symbian&#039;, &#039;UP\.Browser&#039;, &#039;Windows CE&#039;, &#039;Xiino&#039;, &#039;Android&#039;
+		];
+		if (!empty($this-&gt;_config[&#039;detectors&#039;][&#039;mobile&#039;][1])) {
+			$mobile = array_merge($mobile, (array) $this-&gt;_config[&#039;detectors&#039;][&#039;mobile&#039;][1]);
+		}
+		$this-&gt;_detectors[&#039;mobile&#039;][1] = $mobile;
+
+		$this-&gt;data = (array) $this-&gt;_config[&#039;data&#039;];
+
+		if (isset($this-&gt;data[&#039;_method&#039;])) {
+			$this-&gt;_computed[&#039;HTTP_X_HTTP_METHOD_OVERRIDE&#039;] = strtoupper($this-&gt;data[&#039;_method&#039;]);
+			unset($this-&gt;data[&#039;_method&#039;]);
+		}
+		$type = $this-&gt;type($this-&gt;_config[&#039;type&#039;] ?: $this-&gt;env(&#039;CONTENT_TYPE&#039;));
+		$this-&gt;method = strtoupper($this-&gt;env(&#039;REQUEST_METHOD&#039;));
+		$hasBody = in_array($this-&gt;method, [&#039;POST&#039;, &#039;PUT&#039;, &#039;PATCH&#039;]);
+
+		if ($this-&gt;_config[&#039;drain&#039;] &amp;&amp; !$this-&gt;body &amp;&amp; $hasBody &amp;&amp; $type !== &#039;html&#039;) {
+			$this-&gt;_stream = $this-&gt;_stream ?: fopen(&#039;php://input&#039;, &#039;r&#039;);
+			$this-&gt;body = stream_get_contents($this-&gt;_stream);
+			fclose($this-&gt;_stream);
+		}
+		if (!$this-&gt;data &amp;&amp; $this-&gt;body) {
+			$this-&gt;data = $this-&gt;body(null, [&#039;decode&#039; =&gt; true, &#039;encode&#039; =&gt; false]);
+		}
+		$this-&gt;body = $this-&gt;data;
+
+		if ($this-&gt;_config[&#039;globals&#039;] &amp;&amp; !empty($_FILES)) {
+			$this-&gt;data = Set::merge($this-&gt;data, $this-&gt;_parseFiles($_FILES));
+		}
+	}
+
+	/**
+	 * Allows request parameters to be accessed as object properties, i.e. `$this-&gt;request-&gt;action`
+	 * instead of `$this-&gt;request-&gt;params[&#039;action&#039;]`.
+	 *
+	 * @see lithium\action\Request::$params
+	 * @param string $name The property name/parameter key to return.
+	 * @return mixed Returns the value of `$params[$name]` if it is set, otherwise returns null.
+	 */
+	public function __get($name) {
+		if (isset($this-&gt;params[$name])) {
+			return $this-&gt;params[$name];
+		}
+	}
+
+	/**
+	 * Allows request parameters to be checked using short-hand notation. See the `__get()` method
+	 * for more details.
+	 *
+	 * @see lithium\action\Request::__get()
+	 * @param string $name The name of the request parameter to check.
+	 * @return boolean Returns true if the key in `$name` is set in the `$params` array, otherwise
+	 *         `false`.
+	 */
+	public function __isset($name) {
+		return isset($this-&gt;params[$name]);
+	}
+
+	/**
+	 * Queries PHP&#039;s environment settings, and provides an abstraction for standardizing expected
+	 * environment values across varying platforms, as well as specify custom environment flags.
+	 *
+	 * Defines an artificial `&#039;PLATFORM&#039;` environment variable as either `&#039;IIS&#039;`, `&#039;CGI&#039;`
+	 * or `null` to allow checking for the SAPI in a normalized way.
+	 *
+	 * @param string $key The environment variable required.
+	 * @return string The requested variables value.
+	 * @todo Refactor to lazy-load environment settings
+	 */
+	public function env($key) {
+		if (array_key_exists($key, $this-&gt;_computed)) {
+			return $this-&gt;_computed[$key];
+		}
+		$val = null;
+
+		if (!empty($this-&gt;_env[$key])) {
+			$val = $this-&gt;_env[$key];
+			if ($key !== &#039;REMOTE_ADDR&#039; &amp;&amp; $key !== &#039;HTTPS&#039; &amp;&amp; $key !== &#039;REQUEST_METHOD&#039;) {
+				return $this-&gt;_computed[$key] = $val;
+			}
+		}
+		switch ($key) {
+			case &#039;BASE&#039;:
+			case &#039;base&#039;:
+				$val = $this-&gt;_base($this-&gt;_config[&#039;base&#039;]);
+			break;
+			case &#039;HTTP_HOST&#039;:
+				$val = &#039;localhost&#039;;
+			break;
+			case &#039;SERVER_PROTOCOL&#039;:
+				$val = &#039;HTTP/1.1&#039;;
+			break;
+			case &#039;REQUEST_METHOD&#039;:
+				if ($this-&gt;env(&#039;HTTP_X_HTTP_METHOD_OVERRIDE&#039;)) {
+					$val = $this-&gt;env(&#039;HTTP_X_HTTP_METHOD_OVERRIDE&#039;);
+				} elseif (isset($this-&gt;_env[&#039;REQUEST_METHOD&#039;])) {
+					$val = $this-&gt;_env[&#039;REQUEST_METHOD&#039;];
+				} else {
+					$val = &#039;GET&#039;;
+				}
+			break;
+			case &#039;CONTENT_TYPE&#039;:
+				$val = &#039;text/html&#039;;
+			break;
+			case &#039;PLATFORM&#039;:
+				$envs = [&#039;isapi&#039; =&gt; &#039;IIS&#039;, &#039;cgi&#039; =&gt; &#039;CGI&#039;, &#039;cgi-fcgi&#039; =&gt; &#039;CGI&#039;];
+				$val = isset($envs[PHP_SAPI]) ? $envs[PHP_SAPI] : null;
+			break;
+			case &#039;REMOTE_ADDR&#039;:
+				$https = [
+					&#039;HTTP_X_FORWARDED_FOR&#039;,
+					&#039;HTTP_PC_REMOTE_ADDR&#039;,
+					&#039;HTTP_X_REAL_IP&#039;
+				];
+				foreach ($https as $altKey) {
+					if ($addr = $this-&gt;env($altKey)) {
+						list($val) = explode(&#039;, &#039;, $addr);
+						break;
+					}
+				}
+			break;
+			case &#039;SCRIPT_NAME&#039;:
+				if ($this-&gt;env(&#039;PLATFORM&#039;) === &#039;CGI&#039;) {
+					return $this-&gt;env(&#039;SCRIPT_URL&#039;);
+				}
+				$val = null;
+			break;
+			case &#039;HTTPS&#039;:
+				if (isset($this-&gt;_env[&#039;SCRIPT_URI&#039;])) {
+					$val = strpos($this-&gt;_env[&#039;SCRIPT_URI&#039;], &#039;https://&#039;) === 0;
+				} elseif (isset($this-&gt;_env[&#039;HTTPS&#039;])) {
+					$val = (!empty($this-&gt;_env[&#039;HTTPS&#039;]) &amp;&amp; $this-&gt;_env[&#039;HTTPS&#039;] !== &#039;off&#039;);
+				} else {
+					$val = false;
+				}
+			break;
+			case &#039;SERVER_ADDR&#039;:
+				if (empty($this-&gt;_env[&#039;SERVER_ADDR&#039;]) &amp;&amp; !empty($this-&gt;_env[&#039;LOCAL_ADDR&#039;])) {
+					$val = $this-&gt;_env[&#039;LOCAL_ADDR&#039;];
+				} elseif (isset($this-&gt;_env[&#039;SERVER_ADDR&#039;])) {
+					$val = $this-&gt;_env[&#039;SERVER_ADDR&#039;];
+				}
+			break;
+			case &#039;SCRIPT_FILENAME&#039;:
+				if ($this-&gt;env(&#039;PLATFORM&#039;) === &#039;IIS&#039;) {
+					$val = str_replace(&#039;\\\\&#039;, &#039;\\&#039;, $this-&gt;env(&#039;PATH_TRANSLATED&#039;));
+				} elseif (isset($this-&gt;_env[&#039;DOCUMENT_ROOT&#039;]) &amp;&amp; isset($this-&gt;_env[&#039;PHP_SELF&#039;])) {
+					$val = $this-&gt;_env[&#039;DOCUMENT_ROOT&#039;] . $this-&gt;_env[&#039;PHP_SELF&#039;];
+				}
+			break;
+			case &#039;DOCUMENT_ROOT&#039;:
+				$fileName = $this-&gt;env(&#039;SCRIPT_FILENAME&#039;);
+				$offset = (!strpos($this-&gt;env(&#039;SCRIPT_NAME&#039;), &#039;.php&#039;)) ? 4 : 0;
+				$offset = strlen($fileName) - (strlen($this-&gt;env(&#039;SCRIPT_NAME&#039;)) + $offset);
+				$val = substr($fileName, 0, $offset);
+			break;
+			case &#039;PHP_SELF&#039;:
+				$val = &#039;/&#039;;
+			break;
+			case &#039;CGI&#039;:
+			case &#039;CGI_MODE&#039;:
+				$val = $this-&gt;env(&#039;PLATFORM&#039;) === &#039;CGI&#039;;
+			break;
+			case &#039;HTTP_BASE&#039;:
+				$val = preg_replace(&#039;/^([^.])*/i&#039;, &quot;&quot;, $this-&gt;env(&#039;HTTP_HOST&#039;));
+			break;
+			case &#039;PHP_AUTH_USER&#039;:
+			case &#039;PHP_AUTH_PW&#039;:
+			case &#039;PHP_AUTH_DIGEST&#039;:
+				if (!$header = $this-&gt;env(&#039;HTTP_AUTHORIZATION&#039;)) {
+					if (!$header = $this-&gt;env(&#039;REDIRECT_HTTP_AUTHORIZATION&#039;)) {
+						return $this-&gt;_computed[$key] = $val;
+					}
+				}
+				if (stripos($header, &#039;basic&#039;) === 0) {
+					$decoded = base64_decode(substr($header, strlen(&#039;basic &#039;)));
+
+					if (strpos($decoded, &#039;:&#039;) !== false) {
+						list($user, $password) = explode(&#039;:&#039;, $decoded, 2);
+
+						$this-&gt;_computed[&#039;PHP_AUTH_USER&#039;] = $user;
+						$this-&gt;_computed[&#039;PHP_AUTH_PW&#039;] = $password;
+						return $this-&gt;_computed[$key];
+					}
+				} elseif (stripos($header, &#039;digest&#039;) === 0) {
+					return $this-&gt;_computed[$key] = substr($header, strlen(&#039;digest &#039;));
+				}
+			default:
+				$val = array_key_exists($key, $this-&gt;_env) ? $this-&gt;_env[$key] : $val;
+			break;
+		}
+		return $this-&gt;_computed[$key] = $val;
+	}
+
+	/**
+	 * Returns information about the type of content that the client is requesting.
+	 *
+	 * This method may work different then you might think. This is a _convenience_ method
+	 * working exclusively with short type names it knows about. Only those types will be
+	 * matched. You can tell this method about more types via `Media::type()`.
+	 *
+	 * Note: In case negotiation fails, `&#039;html&#039;` is used as a fallback type.
+	 *
+	 * @see lithium\net\http\Media::negotiate()
+	 * @param boolean|string $type Optionally a type name i.e. `&#039;json&#039;` or `true`.
+	 *        1. If not specified, returns the media type name that the client prefers, using
+	 *           a potentially set `type` param, then content negotiation and that fails,
+	 *           ultimately falling back and returning the string `&#039;html&#039;`.
+	 *        2. If a media type name (string) is passed, returns `true` or `false`, indicating
+	 *           whether or not that type is accepted by the client at all.
+	 *        3. If `true`, returns the raw content types from the `Accept` header, parsed into
+	 *           an array and sorted by client preference.
+	 * @return string|boolean|array Returns a type name (i.e. &#039;json&#039;`) or a
+	 *         boolean or an array, depending on the value of `$type`.
+	 */
+	public function accepts($type = null) {
+		$media = $this-&gt;_classes[&#039;media&#039;];
+
+		if ($type === true) {
+			return $this-&gt;_accept ?: ($this-&gt;_accept = $this-&gt;_parseAccept());
+		}
+		if ($type) {
+			return ($media::negotiate($this) ?: &#039;html&#039;) === $type;
+		}
+		if (isset($this-&gt;params[&#039;type&#039;])) {
+			return $this-&gt;params[&#039;type&#039;];
+		}
+		return $media::negotiate($this) ?: &#039;html&#039;;
+	}
+
+	/**
+	 * Parses the `HTTP_ACCEPT` information the requesting client sends, and converts
+	 * that data to an array for consumption by the rest of the framework.
+	 *
+	 * @return array All the types of content the client can accept.
+	 */
+	protected function _parseAccept() {
+		$accept = $this-&gt;env(&#039;HTTP_ACCEPT&#039;);
+		$accept = ($accept &amp;&amp; preg_match(&#039;/[a-z,-]/i&#039;, $accept)) ? explode(&#039;,&#039;, $accept) : [&#039;text/html&#039;];
+
+		foreach (array_reverse($accept) as $i =&gt; $type) {
+			unset($accept[$i]);
+			list($type, $q) = (explode(&#039;;q=&#039;, $type, 2) + [$type, 1.0 + $i / 100]);
+			$accept[$type] = ($type === &#039;*/*&#039;) ? 0.1 : floatval($q);
+		}
+		arsort($accept, SORT_NUMERIC);
+
+		if (isset($accept[&#039;application/xhtml+xml&#039;]) &amp;&amp; $accept[&#039;application/xhtml+xml&#039;] &gt;= 1) {
+			unset($accept[&#039;application/xml&#039;]);
+		}
+		$media = $this-&gt;_classes[&#039;media&#039;];
+
+		if (isset($this-&gt;params[&#039;type&#039;]) &amp;&amp; ($handler = $media::type($this-&gt;params[&#039;type&#039;]))) {
+			if (isset($handler[&#039;content&#039;])) {
+				$type = (array) $handler[&#039;content&#039;];
+				$accept = [current($type) =&gt; 1] + $accept;
+			}
+		}
+		return array_keys($accept);
+	}
+
+	/**
+	 * This method allows easy extraction of any request data using a prefixed key syntax. By
+	 * passing keys in the form of `&#039;prefix:key&#039;`, it is possible to query different information of
+	 * various different types, including GET and POST data, and server environment variables. The
+	 * full list of prefixes is as follows:
+	 *
+	 * - `&#039;data&#039;`: Retrieves values from POST data.
+	 * - `&#039;params&#039;`: Retrieves query parameters returned from the routing system.
+	 * - `&#039;query&#039;`: Retrieves values from GET data.
+	 * - `&#039;env&#039;`: Retrieves values from the server or environment, such as `&#039;env:https&#039;`, or custom
+	 *   environment values, like `&#039;env:base&#039;`. See the `env()` method for more info.
+	 * - `&#039;http&#039;`: Retrieves header values (i.e. `&#039;http:accept&#039;`), or the HTTP request method (i.e.
+	 *   `&#039;http:method&#039;`).
+	 *
+	 * This method is used in several different places in the framework in order to provide the
+	 * ability to act conditionally on different aspects of the request. See `Media::type()` (the
+	 * section on content negotiation) and the routing system for more information.
+	 *
+	 *  _Note_: All keys should be _lower-cased_, even when getting HTTP headers.
+	 *
+	 * @see lithium\action\Request::env()
+	 * @see lithium\net\http\Media::type()
+	 * @see lithium\net\http\Router
+	 * @param string $key A prefixed key indicating what part of the request data the requested
+	 *        value should come from, and the name of the value to retrieve, in lower case.
+	 * @return string Returns the value of a GET, POST, routing or environment variable, or an
+	 *         HTTP header or method name.
+	 */
+	public function get($key) {
+		list($var, $key) = explode(&#039;:&#039;, $key);
+
+		switch (true) {
+			case in_array($var, [&#039;params&#039;, &#039;data&#039;, &#039;query&#039;]):
+				return isset($this-&gt;{$var}[$key]) ? $this-&gt;{$var}[$key] : null;
+			case ($var === &#039;env&#039;):
+				return $this-&gt;env(strtoupper($key));
+			case ($var === &#039;http&#039; &amp;&amp; $key === &#039;method&#039;):
+				return $this-&gt;env(&#039;REQUEST_METHOD&#039;);
+			case ($var === &#039;http&#039;):
+				return $this-&gt;env(&#039;HTTP_&#039; . strtoupper($key));
+		}
+	}
+
+	/**
+	 * Provides a simple syntax for making assertions about the properties of a request.
+	 * By default, the `Request` object is configured with several different types of assertions,
+	 * which are individually known as _detectors_. Detectors are invoked by calling the `is()` and
+	 * passing the name of the detector flag, i.e. `$request-&gt;is(&#039;&lt;name&gt;&#039;)`, which returns `true` or
+	 * `false`, depending on whether or not the the properties (usually headers or data) contained
+	 * in the request match the detector. The default detectors include the following:
+	 *
+	 * - `&#039;mobile&#039;`: Uses a regular expression to match common mobile browser user agents.
+	 * - `&#039;ajax&#039;`: Checks to see if the `X-Requested-With` header is present, and matches the value
+	 *    `&#039;XMLHttpRequest&#039;`.
+	 * - `&#039;flash&#039;`: Checks to see if the user agent is `&#039;Shockwave Flash&#039;`.
+	 * - `&#039;ssl&#039;`: Verifies that the request is SSL-secured.
+	 * - `&#039;get&#039;` / `&#039;post&#039;` / `&#039;put&#039;` / `&#039;delete&#039;` / `&#039;head&#039;` / `&#039;options&#039;`: Checks that the HTTP
+	 *   request method matches the one specified.
+	 *
+	 * In addition to the above, this method also accepts media type names (see `Media::type()`) to
+	 * make assertions against the format of the request body (for POST or PUT requests), i.e.
+	 * `$request-&gt;is(&#039;json&#039;)`. This will return `true` if the client has made a POST request with
+	 * JSON data.
+	 *
+	 * For information about adding custom detectors or overriding the ones in the core, see the
+	 * `detect()` method.
+	 *
+	 * While these detectors are useful in controllers or other similar contexts, they&#039;re also
+	 * useful when performing _content negotiation_, which is the process of modifying the response
+	 * format to suit the client (see the `&#039;conditions&#039;` field of the `$options` parameter in
+	 * `Media::type()`).
+	 *
+	 * @see lithium\action\Request::detect()
+	 * @see lithium\net\http\Media::type()
+	 * @param string $flag The name of the flag to check, which should be the name of a valid
+	 *        detector (that is either built-in or defined with `detect()`).
+	 * @return boolean Returns `true` if the detector check succeeds (see the details for the
+	 *         built-in detectors above, or `detect()`), otherwise `false`.
+	 */
+	public function is($flag) {
+		$media = $this-&gt;_classes[&#039;media&#039;];
+
+		if (!isset($this-&gt;_detectors[$flag])) {
+			if (!in_array($flag, $media::types())) {
+				return false;
+			}
+			return $this-&gt;type() === $flag;
+		}
+		$detector = $this-&gt;_detectors[$flag];
+
+		if (!is_array($detector) &amp;&amp; is_callable($detector)) {
+			return $detector($this);
+		}
+		if (!is_array($detector)) {
+			return (boolean) $this-&gt;env($detector);
+		}
+		list($key, $check) = $detector + [&#039;&#039;, &#039;&#039;];
+
+		if (is_array($check)) {
+			$check = &#039;/&#039; . join(&#039;|&#039;, $check) . &#039;/i&#039;;
+		}
+		if (Validator::isRegex($check)) {
+			return (boolean) preg_match($check, $this-&gt;env($key));
+		}
+		return ($this-&gt;env($key) === $check);
+	}
+
+	/**
+	 * Sets/Gets the content type. If `&#039;type&#039;` is null, the method will attempt to determine the
+	 * type from the params, then from the environment setting
+	 *
+	 * @param string $type a full content type i.e. `&#039;application/json&#039;` or simple name `&#039;json&#039;`
+	 * @return string A simple content type name, i.e. `&#039;html&#039;`, `&#039;xml&#039;`, `&#039;json&#039;`, etc., depending
+	 *         on the content type of the request.
+	 */
+	public function type($type = null) {
+		if (!$type &amp;&amp; !empty($this-&gt;params[&#039;type&#039;])) {
+			$type = $this-&gt;params[&#039;type&#039;];
+		}
+		return parent::type($type);
+	}
+
+	/**
+	 * Creates a _detector_ used with `Request::is()`.  A detector is a boolean check that is
+	 * created to determine something about a request.
+	 *
+	 * A detector check can be either an exact string match or a regular expression match against a
+	 * header or environment variable. A detector check can also be a closure that accepts the
+	 * `Request` object instance as a parameter.
+	 *
+	 * For example, to detect whether a request is from an iPhone, you can do the following:
+	 * ``` embed:lithium\tests\cases\action\RequestTest::testDetect(11-12) ```
+	 *
+	 * @see lithium\action\Request::is()
+	 * @param string $flag The name of the detector check. Used in subsequent calls to `Request::is()`.
+	 * @param mixed $detector Detectors can be specified in four different ways:
+	 *        - The name of an HTTP header or environment variable. If a string, calling the detector
+	 *          will check that the header or environment variable exists and is set to a non-empty
+	 *          value.
+	 *        - A two-element array containing a header/environment variable name, and a value to match
+	 *          against. The second element of the array must be an exact match to the header or
+	 *          variable value.
+	 *        - A two-element array containing a header/environment variable name, and a regular
+	 *          expression that matches against the value, as in the example above.
+	 *        - A closure which accepts an instance of the `Request` object and returns a boolean
+	 *          value.
+	 * @return void
+	 */
+	public function detect($flag, $detector = null) {
+		if (is_array($flag)) {
+			$this-&gt;_detectors = $flag + $this-&gt;_detectors;
+		} else {
+			$this-&gt;_detectors[$flag] = $detector;
+		}
+	}
+
+	/**
+	 * Gets the referring URL of this request.
+	 *
+	 * @param string $default Default URL to use if HTTP_REFERER cannot be read from headers.
+	 * @param boolean $local If true, restrict referring URLs to local server.
+	 * @return string Referring URL.
+	 */
+	public function referer($default = null, $local = false) {
+		if ($ref = $this-&gt;env(&#039;HTTP_REFERER&#039;)) {
+			if (!$local) {
+				return $ref;
+			}
+			$url = parse_url($ref) + [&#039;path&#039; =&gt; &#039;&#039;];
+			if (empty($url[&#039;host&#039;]) || $url[&#039;host&#039;] === $this-&gt;env(&#039;HTTP_HOST&#039;)) {
+				$ref = $url[&#039;path&#039;];
+				if (!empty($url[&#039;query&#039;])) {
+					$ref .= &#039;?&#039; . $url[&#039;query&#039;];
+				}
+				if (!empty($url[&#039;fragment&#039;])) {
+					$ref .= &#039;#&#039; . $url[&#039;fragment&#039;];
+				}
+				return $ref;
+			}
+		}
+		return ($default !== null) ? $default : &#039;/&#039;;
+	}
+
+	/**
+	 * Overrides `lithium\net\http\Request::to()` to provide the correct options for generating
+	 * URLs. For information about this method, see the parent implementation.
+	 *
+	 * @see lithium\net\http\Request::to()
+	 * @param string $format The format to convert to.
+	 * @param array $options Override options.
+	 * @return mixed The return value type depends on `$format`.
+	 */
+	public function to($format, array $options = []) {
+		$defaults = [
+			&#039;path&#039; =&gt; $this-&gt;env(&#039;base&#039;) . &#039;/&#039; . $this-&gt;url
+		];
+		return parent::to($format, $options + $defaults);
+	}
+
+	/**
+	 * Sets or returns the current locale string. For more information, see
+	 * &quot;[Globalization](http://li3.me/docs/book/manual/1.x/common-tasks/globalization)&quot; in the manual.
+	 *
+	 * @param string $locale An optional locale string like `&#039;en&#039;`, `&#039;en_US&#039;` or `&#039;de_DE&#039;`. If
+	 *        specified, will overwrite the existing locale.
+	 * @return string Returns the currently set locale string.
+	 */
+	public function locale($locale = null) {
+		if ($locale) {
+			$this-&gt;_locale = $locale;
+		}
+		if ($this-&gt;_locale) {
+			return $this-&gt;_locale;
+		}
+		if (isset($this-&gt;params[&#039;locale&#039;])) {
+			return $this-&gt;params[&#039;locale&#039;];
+		}
+	}
+
+	/**
+	 * Find the base path of the current request.
+	 *
+	 * @param string $base The base path. If `null`, `&#039;PHP_SELF&#039;` will be used instead.
+	 * @return string
+	 */
+	protected function _base($base = null) {
+		if ($base === null) {
+			$base = preg_replace(&#039;/[^\/]+$/&#039;, &#039;&#039;, $this-&gt;env(&#039;PHP_SELF&#039;));
+		}
+		$base = trim(str_replace([&quot;/app/webroot&quot;, &#039;/webroot&#039;], &#039;&#039;, $base), &#039;/&#039;);
+		return $base ? &#039;/&#039; . $base : &#039;&#039;;
+	}
+
+	/**
+	 * Extract the url from `REQUEST_URI` &amp;&amp; `PHP_SELF` environment variables.
+	 *
+	 * @param  string The base url If `null`, environment variables will be used instead.
+	 * @return string
+	 */
+	protected function _url($url = null) {
+		if ($url !== null) {
+			return &#039;/&#039; . trim($url, &#039;/&#039;);
+		} elseif ($uri = $this-&gt;env(&#039;REQUEST_URI&#039;)) {
+			list($uri) = explode(&#039;?&#039;, $uri, 2);
+			$base = &#039;/^&#039; . preg_quote($this-&gt;_base, &#039;/&#039;) . &#039;/&#039;;
+			return &#039;/&#039; . trim(preg_replace($base, &#039;&#039;, $uri), &#039;/&#039;) ?: &#039;/&#039;;
+		}
+		return &#039;/&#039;;
+	}
+
+	/**
+	 * Normalizes the data from the `$_FILES` superglobal.
+	 *
+	 * @param array $data Data as formatted in the `$_FILES` superglobal.
+	 * @return array Normalized data.
+	 */
+	protected function _parseFiles($data) {
+		$result = [];
+
+		$normalize = function($key, $value) use ($result, &amp;$normalize){
+			foreach ($value as $param =&gt; $content) {
+				foreach ($content as $num =&gt; $val) {
+					if (is_numeric($num)) {
+						$result[$key][$num][$param] = $val;
+						continue;
+					}
+					if (is_array($val)) {
+						foreach ($val as $next =&gt; $one) {
+							$result[$key][$num][$next][$param] = $one;
+						}
+						continue;
+					}
+					$result[$key][$num][$param] = $val;
+				}
+			}
+			return $result;
+		};
+		foreach ($data as $key =&gt; $value) {
+			if (isset($value[&#039;name&#039;])) {
+				if (is_string($value[&#039;name&#039;])) {
+					$result[$key] = $value;
+					continue;
+				}
+				if (is_array($value[&#039;name&#039;])) {
+					$result += $normalize($key, $value);
+				}
+			}
+		}
+		return $result;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

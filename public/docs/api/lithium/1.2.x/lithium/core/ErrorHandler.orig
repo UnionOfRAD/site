@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\core\ErrorHandler – Framework API v1.2.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.2.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.2.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.2.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.2.x/lithium/core" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">core</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">ErrorHandler</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.2.x/lithium/core" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ErrorHandler::config()">config()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ErrorHandler::run()">run()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ErrorHandler::isRunning()">isRunning()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ErrorHandler::stop()">stop()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ErrorHandler::reset()">reset()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ErrorHandler::handle()">handle()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ErrorHandler::_origin()">_origin()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ErrorHandler::apply()">apply()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ErrorHandler::matches()">matches()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ErrorHandler::trace()">trace()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ErrorHandler::_stop()">_stop()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::respondsTo()">respondsTo()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::invokeMethod()">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::_instance()">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::_parents()">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::applyFilter()">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::_filter()">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ErrorHandler::$_config">$_config</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ErrorHandler::$_checks">$_checks</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ErrorHandler::$_exceptionHandler">$_exceptionHandler</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ErrorHandler::$_isRunning">$_isRunning</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/ErrorHandler::$_runOptions">$_runOptions</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::$_parents">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::$_methodFilters">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.2.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.2.x/lithium/core" class="symbol-segment">core</a>\ErrorHandler		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated" class="extends__symbol">lithium\core\StaticObjectDeprecated</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The <code>ErrorHandler</code> class allows PHP errors and exceptions to be handled in a uniform way. Using
+the <code>ErrorHandler</code>'s configuration, it is possible to have very broad but very tight control
+over error handling in your application.</p>
+					</div>
+				
+									<div class="description">
+						<pre><code class="language-php">
+Using a series of cascading rules and handlers, it is possible to capture and handle very
+specific errors and exceptions.
+</code></pre>
+					</div>
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class ErrorHandler extends \lithium\core\StaticObjectDeprecated {
+
+	/**
+	 * Configuration parameters.
+	 *
+	 * @var array Config params
+	 */
+	protected static $_config = [];
+
+	/**
+	 * Types of checks available for sorting &amp; parsing errors/exceptions.
+	 * Default checks are for `code`, `stack` and `message`.
+	 *
+	 * @var array Array of checks represented as closures, indexed by name.
+	 */
+	protected static $_checks = [];
+
+	/**
+	 * Currently registered exception handler.
+	 *
+	 * @var \Closure Closure representing exception handler.
+	 */
+	protected static $_exceptionHandler = null;
+
+	/**
+	 * State of error/exception handling.
+	 *
+	 * @var boolean True if custom error/exception handlers have been registered, false
+	 *      otherwise.
+	 */
+	protected static $_isRunning = false;
+
+	protected static $_runOptions = [];
+
+	/**
+	 * Configure the `ErrorHandler`.
+	 *
+	 * @param array $config Configuration directives.
+	 * @return Current configuration set.
+	 */
+	public static function config($config = []) {
+		return (static::$_config = array_merge($config, static::$_config));
+	}
+
+	/**
+	 * Register error and exception handlers.
+	 *
+	 * This method (`ErrorHandler::run()`) needs to be called as early as possible in the bootstrap
+	 * cycle; immediately after `require`-ing `bootstrap/libraries.php` is your best bet.
+	 *
+	 * @param array $config The configuration with which to start the error handler. Available
+	 *              options include:
+	 *              - `&#039;trapErrors&#039;` _boolean_: Defaults to `false`. If set to `true`, PHP errors
+	 *                will be caught by `ErrorHandler` and handled in-place. Execution will resume
+	 *                in the same context in which the error occurred.
+	 *              - `&#039;convertErrors&#039;` _boolean_: Defaults to `true`, and specifies that all PHP
+	 *                errors should be converted to `ErrorException`s and thrown from the point
+	 *                where the error occurred. The exception will be caught at the first point in
+	 *                the stack trace inside a matching `try`/`catch` block, or that has a matching
+	 *                error handler applied using the `apply()` method.
+	 */
+	public static function run(array $config = []) {
+		$defaults = [&#039;trapErrors&#039; =&gt; false, &#039;convertErrors&#039; =&gt; true];
+
+		if (static::$_isRunning) {
+			return;
+		}
+		static::$_isRunning = true;
+		static::$_runOptions = $config + $defaults;
+
+		$trap = function($code, $message, $file, $line = 0, $context = null) {
+			$trace = debug_backtrace();
+			$trace = array_slice($trace, 1, count($trace));
+			static::handle(compact(&#039;code&#039;, &#039;message&#039;, &#039;file&#039;, &#039;line&#039;, &#039;trace&#039;, &#039;context&#039;));
+		};
+
+		$convert = function($code, $message, $file, $line = 0, $context = null) {
+			throw new ErrorException($message, 500, $code, $file, $line);
+		};
+
+		if (static::$_runOptions[&#039;trapErrors&#039;]) {
+			set_error_handler($trap);
+		} elseif (static::$_runOptions[&#039;convertErrors&#039;]) {
+			set_error_handler($convert);
+		}
+		set_exception_handler(static::$_exceptionHandler);
+	}
+
+	/**
+	 * Returns the state of the `ErrorHandler`, indicating whether or not custom error/exception
+	 * handers have been regsitered.
+	 */
+	public static function isRunning() {
+		return static::$_isRunning;
+	}
+
+	/**
+	 * Unooks `ErrorHandler`&#039;s exception and error handlers, and restores PHP&#039;s defaults. May have
+	 * unexpected results if it is not matched with a prior call to `run()`, or if other error
+	 * handlers are set after a call to `run()`.
+	 */
+	public static function stop() {
+		restore_error_handler();
+		restore_exception_handler();
+		static::$_isRunning = false;
+	}
+
+	/**
+	 * Setup basic error handling checks/types, as well as register the error and exception
+	 * handlers and wipes out all configuration and resets the error handler to its initial state
+	 * when loaded. Mainly used for testing.
+	 */
+	public static function reset() {
+		static::$_config = [];
+		static::$_checks = [];
+		static::$_exceptionHandler = null;
+		static::$_checks = [
+			&#039;type&#039;  =&gt; function($config, $info) {
+				return (boolean) array_filter((array) $config[&#039;type&#039;], function($type) use ($info) {
+					return $type === $info[&#039;type&#039;] || is_subclass_of($info[&#039;type&#039;], $type);
+				});
+			},
+			&#039;code&#039; =&gt; function($config, $info) {
+				return ($config[&#039;code&#039;] &amp; $info[&#039;code&#039;]);
+			},
+			&#039;stack&#039; =&gt; function($config, $info) {
+				return (boolean) array_intersect((array) $config[&#039;stack&#039;], $info[&#039;stack&#039;]);
+			},
+			&#039;message&#039; =&gt; function($config, $info) {
+				return preg_match($config[&#039;message&#039;], $info[&#039;message&#039;]);
+			}
+		];
+		static::$_exceptionHandler = function($exception, $return = false) {
+			if (ob_get_length()) {
+				ob_end_clean();
+			}
+			$info = compact(&#039;exception&#039;) + [
+				&#039;type&#039; =&gt; get_class($exception),
+				&#039;stack&#039; =&gt; static::trace($exception-&gt;getTrace())
+			];
+			foreach ([&#039;message&#039;, &#039;file&#039;, &#039;line&#039;, &#039;trace&#039;] as $key) {
+				$method = &#039;get&#039; . ucfirst($key);
+				$info[$key] = $exception-&gt;{$method}();
+			}
+			return $return ? $info : static::handle($info);
+		};
+	}
+
+	/**
+	 * Receives the handled errors and exceptions that have been caught, and processes them
+	 * in a normalized manner.
+	 *
+	 * @param object|array $info
+	 * @param array $scope
+	 * @return boolean True if successfully handled, false otherwise.
+	 */
+	public static function handle($info, $scope = []) {
+		$checks = static::$_checks;
+		$rules = $scope ?: static::$_config;
+		$handler = static::$_exceptionHandler;
+		$info = is_object($info) ? $handler($info, true) : $info;
+
+		$defaults = [
+			&#039;type&#039; =&gt; null, &#039;code&#039; =&gt; 0, &#039;message&#039; =&gt; null, &#039;file&#039; =&gt; null, &#039;line&#039; =&gt; 0,
+			&#039;trace&#039; =&gt; [], &#039;context&#039; =&gt; null, &#039;exception&#039; =&gt; null
+		];
+		$info = (array) $info + $defaults;
+
+		$info[&#039;stack&#039;] = static::trace($info[&#039;trace&#039;]);
+		$info[&#039;origin&#039;] = static::_origin($info[&#039;trace&#039;]);
+
+		foreach ($rules as $config) {
+			foreach (array_keys($config) as $key) {
+				if ($key === &#039;conditions&#039; || $key === &#039;scope&#039; || $key === &#039;handler&#039;) {
+					continue;
+				}
+				if (!isset($info[$key]) || !isset($checks[$key])) {
+					continue 2;
+				}
+				if (($check = $checks[$key]) &amp;&amp; !$check($config, $info)) {
+					continue 2;
+				}
+			}
+			if (!isset($config[&#039;handler&#039;])) {
+				return false;
+			}
+			if ((isset($config[&#039;conditions&#039;]) &amp;&amp; $call = $config[&#039;conditions&#039;]) &amp;&amp; !$call($info)) {
+				return false;
+			}
+			if ((isset($config[&#039;scope&#039;])) &amp;&amp; static::handle($info, $config[&#039;scope&#039;]) !== false) {
+				return true;
+			}
+			$handler = $config[&#039;handler&#039;];
+			return $handler($info) !== false;
+		}
+		return false;
+	}
+
+	/**
+	 * Determine frame from the stack trace where the error/exception was first generated.
+	 *
+	 * @param array $stack Stack trace from error/exception that was produced.
+	 * @return string Class where error/exception was generated.
+	 */
+	protected static function _origin(array $stack) {
+		foreach ($stack as $frame) {
+			if (isset($frame[&#039;class&#039;])) {
+				return trim($frame[&#039;class&#039;], &#039;\\&#039;);
+			}
+		}
+	}
+
+	public static function apply($object, array $conditions, $handler) {
+		$conditions = $conditions ?: [&#039;type&#039; =&gt; &#039;Exception&#039;];
+		list($class, $method) = is_string($object) ? explode(&#039;::&#039;, $object) : $object;
+
+		Filters::apply($class, $method, function($params, $next) use ($conditions, $handler) {
+			$wrap = static::$_exceptionHandler;
+
+			try {
+				return $next($params);
+			} catch (Exception $e) {
+				if (!static::matches($e, $conditions)) {
+					throw $e;
+				}
+				return $handler($wrap($e, true), $params);
+			}
+		});
+	}
+
+	public static function matches($info, $conditions) {
+		$checks = static::$_checks;
+		$handler = static::$_exceptionHandler;
+		$info = is_object($info) ? $handler($info, true) : $info;
+
+		foreach (array_keys($conditions) as $key) {
+			if ($key === &#039;conditions&#039; || $key === &#039;scope&#039; || $key === &#039;handler&#039;) {
+				continue;
+			}
+			if (!isset($info[$key]) || !isset($checks[$key])) {
+				return false;
+			}
+			if (($check = $checks[$key]) &amp;&amp; !$check($conditions, $info)) {
+				return false;
+			}
+		}
+		if ((isset($config[&#039;conditions&#039;]) &amp;&amp; $call = $config[&#039;conditions&#039;]) &amp;&amp; !$call($info)) {
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * Trim down a typical stack trace to class &amp; method calls.
+	 *
+	 * @param array $stack A `debug_backtrace()`-compatible stack trace output.
+	 * @return array Returns a flat stack array containing class and method references.
+	 */
+	public static function trace(array $stack) {
+		$result = [];
+
+		foreach ($stack as $frame) {
+			if (isset($frame[&#039;function&#039;])) {
+				if (isset($frame[&#039;class&#039;])) {
+					$result[] = trim($frame[&#039;class&#039;], &#039;\\&#039;) . &#039;::&#039; . $frame[&#039;function&#039;];
+				} else {
+					$result[] = $frame[&#039;function&#039;];
+				}
+			}
+		}
+		return $result;
+	}
+
+	/**
+	 * Exit immediately. Primarily used for overrides during testing.
+	 *
+	 * @param integer|string $status integer range 0 to 254, string printed on exit
+	 * @return void
+	 */
+	protected static function _stop($status = 0) {
+		exit($status);
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

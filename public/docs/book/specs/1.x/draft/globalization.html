@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Globalization – Specifications v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../docs.html" class="active">Documentation</a><a href="../../../../../versions.html">Versions</a><a href="../../../../../present.html">Presentations</a><a href="../../../../../support.html">Community</a><a href="../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Specifications (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../draft.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Drafts</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Globalization</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="../draft.html" class="">Drafts</a><ul><li><a href="caching.html" class="">Caching</a><li><a href="ajax.html" class="">Ajax</a><li><a href="logging.html" class="">Logging</a><li><a href="formulas.html" class="">Formulas</a><li><a href="translating.html" class="">Translating</a><li><a href="documentation.html" class="">Documentation</a><li><a href="visual-identity.html" class="">Visual Identity</a><li><a href="error-handling.html" class="">Error Handling</a><li><a href="access.html" class="">Access</a><li><a href="globalization.html" class="active">Globalization</a></ul><li><a href="../accepted.html" class="">Accepted</a><ul><li><a href="../../../../specs/accepted/LSR-1-documenting.md.html" class="">LSR 1 Documenting</a><li><a href="../../../../specs/accepted/LSR-2-testing.md.html" class="">LSR 2 Testing</a><li><a href="../../../../specs/accepted/LSR-0-coding.md.html" class="">LSR 0 Coding</a></ul></ul>	</nav>
+	<div class="body">
+		<h2><a id="abstract" class="anchor" href="globalization.html#abstract">Abstract</a></h2>
+<p>Globalization (a term for the combination of internationalization and localization and abbreviated to <em>g11n</em>) makes it possible to adapt software to different languages, scripts and regional differences. This document describes the approach li3 takes towards globalizing software.</p>
+<h2><a id="introduction" class="anchor" href="globalization.html#introduction">Introduction</a></h2>
+<p>G11n takes advantage of the updated structures and paradigms in li3. It's built-in right from the start and the whole framework is developed with it's requirement in mind. G11n consists of related data, translation of static messages and dynamic content, formatting of numbers, dates and currencies, specific validation rules, setting and parsing locale identifiers. The functionality required to allow for full g11n are kept in dedicated namespaces and classes.</p>
+<h3><a id="terms" class="anchor" href="globalization.html#terms">Terms</a></h3>
+<h4><a id="globalization" class="anchor" href="globalization.html#globalization">Globalization</a></h4>
+<p>This specification proposes the term globalization (g11n) as the combination of internationalization and localization. This eases the communication and doesn't require someone to learn two different definitions without any pragmatic use. Please also see the <a href="https://secure.wikimedia.org/wikipedia/en/wiki/G11n">article on g11n at Wikipedia</a>.</p>
+<h4><a id="locale" class="anchor" href="globalization.html#locale">Locale</a></h4>
+<p>The locale (here: <em>locale identifier</em>) is used to distinguish among different sets of common preferences. The identifier used by li3 is based in it's structure upon <a href="http://www.unicode.org/reports/tr35/tr35-12.html#Identifiers">Unicode's language identifier</a> and is compliant to <a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</a>. A list of all valid locales can be found at the <a href="http://www.iana.org/assignments/language-subtag-registry">BCP47 Registry</a>.</p>
+<p><code>language[_Script][_TERRITORY][_VARIANT]</code></p>
+<ul>
+<li><p><code>language</code>
+The spoken language, here represented by an ISO 639-1 code, where not available ISO 639-3 and ISO 639-5 codes are allowed too) tag. The tag should be lowercased and is required.</p>
+</li>
+<li><p><code>Script</code>
+The tag should have it's first character capitalized, all others lowercased. The tag is optional.</p>
+</li>
+<li><p><code>TERRITORY</code>
+A geographical area, here represented by an ISO 3166-1 code. Should be all uppercased and is optional.</p>
+</li>
+<li><p><code>VARIANT</code>
+Should be all uppercased and is optional.</p>
+</li>
+</ul>
+<p>Tags are joined together by underscores.</p>
+<h4><a id="time-zone" class="anchor" href="globalization.html#time-zone">Time Zone</a></h4>
+<p>Time zones are represented by time zone codes. See <a href="http://php.net/timezones">http://php.net/timezones</a> for list of all valid time zones codes. Where multiple codes for one time zone exist (i.e. <code>UTC</code> and <code>Etc/UTC</code>) the most specific one is used.</p>
+<h4><a id="currency" class="anchor" href="globalization.html#currency">Currency</a></h4>
+<p>n/a</p>
+<h2><a id="identifying-setting-and-passing-locale-settings" class="anchor" href="globalization.html#identifying-setting-and-passing-locale-settings">Identifying, Setting and Passing Locale Settings</a></h2>
+<p>The settings for the current locale, time zone and currency are kept as environment settings. This allows for <em>centrally</em> switching, <em>transparently</em> setting and retrieving g11n related settings. This way it is always clear what the effective locale is. Globalized output is <em>consistent</em>.</p>
+<p>The environment settings are:</p>
+<ul>
+<li><code>g11n.locale</code> The effective locale. Defaults to <code>en</code>.</li>
+<li><code>g11n.acceptedLocales</code> Locales accepted by the client. Defaults to <code>array('en')</code>.</li>
+<li><code>g11n.availableLocales</code> Application locales available. Defaults to <code>array('en')</code>.</li>
+<li><code>g11n.timezone</code> The effective time zone. Defaults to <code>Etc/UTC</code>.</li>
+<li><code>g11n.currency</code> The effective currency. Defaults to <code>USD</code>.</li>
+</ul>
+<p>The <em>effective locale</em> (which ends up in <code>g11n.locale</code>) depends on the availability of globalized application content and the locale preferred by the client. This is how it is negotiated: If the preferred locale is available, the effective locale has been determined. If it's not, the next locale accepted by the client is being tried to match against the available ones. If none of the accepted locales matches, the default locale is being used.</p>
+<p>But how do you identify the preferred locale(s)? You can either retrieve the locale from the name of the resource (i.e. the url) or from information provided by the client. In order to keep the identification process <em>as transparent as possible</em> it is recommended to first try identification by resource name and than fall back to identification by client supported information.</p>
+<p><strong>Note</strong>: <em>Brad Fults has <a href="http://h3h.net/2007/01/designing-urls-for-multilingual-web-sites/">a post</a>  on all the different approaches and their pros and cons. See also <a href="http://code.cakephp.org/tickets/view/100">this related RFC ticket</a>.</em></p>
+<p>Resource identifiers for content globalized for different locales should reflect that difference. It is therefore recommended to indicate this by adding the locale to the respective resource identifiers (i.e. urls). These are 5 different approaches for embedding the locale into the resource:</p>
+<ul>
+<li>Modified directory structure aka Prefixed route: <code>http://example.org/fr/posts/add</code></li>
+<li>Locale in querystring <code>http://example.org/posts/add?l=fr</code></li>
+<li>Locale as named parameter <code>http://example.org/posts/add/locale:fr</code></li>
+<li>Country-specific TLD: <code>http://example.fr/posts/add</code></li>
+<li>Locale-specific sub-domains: <code>http://fr.example.org/posts/add</code></li>
+</ul>
+<p>Sometimes it's necessary to retrieve the preferred locale from the client directly. This could be used in the case other techniques to determine the effective locale fail.</p>
+<p>If we've got a HTTP request information can be easily parsed from the <code>Accept-Language</code> header. It's also possible to use a database resolving IP addresses to locales or using - if existent - the locale provided in a profile. For console requests the preferred locale can be retrieved by means of environments settings.</p>
+<h4><a id="use-cases" class="anchor" href="globalization.html#use-cases">Use Cases</a></h4>
+<ol>
+<li>A site is made available for different locales. Search engines should be able to index content for each locale easily.</li>
+<li>Gerald gives Emily an url, Emily expects the same content Gerald gets when pointing her browser to that url.</li>
+<li>A client without a profile (therefore without any explicit preference) uses an url which does not contain any locale information but expects the content to be globalized.</li>
+<li>A client issues a console request and wants to get globalized console output.</li>
+</ol>
+<h2><a id="data" class="anchor" href="globalization.html#data">Data</a></h2>
+<p>G11n data is not just translated messages, it's validation rules, formats and a lot more, too. Data is grouped into 4 different kinds of categories: <em>inflection</em>, validation_, <em>message</em> and <em>list</em>.</p>
+<p>Generally speaking is the g11n catalog class allowing us to retrieve and store globalized data, providing low-level functionality to other classes. It's interface is similar to classes like Session or Cache and like those extensible through adapters.</p>
+<p>We need to deal with different kinds of sources for this data, but we don't want differing results depending on the adapter in use. This is why results are kept in a neutral interchangeable format. You can rely on getting the same format of obtained results independent from the adapter they're coming from.</p>
+<p>The class is able to <strong>aggregate</strong> data from different sources which allows to complement sparse data. Not all categories must be supported by an individual adapter.</p>
+<pre><code class="language-php">// Configures the runtime source.
+Catalog::config(['runtime' =&gt; ['adapter' =&gt; 'Memory']]);
+
+$data = '/[0-9]{5}/'
+Catalog::write('validation.postalCode', 'de_DE', $data, ['name' =&gt; 'runtime']);
+
+// Reads from all configured sources
+Catalog::read('validation.postalCode', 'en_US');
+
+// Reads from just the runtime source.
+Catalog::read('validation.postalCode', 'en_US', ['name' =&gt; 'runtime']);
+</code></pre>
+<p>Several adapters are available:</p>
+<p>The <strong>gettext adapter</strong> reads and writes PO and MO files. The current implementation of gettext is not thread safe. This PHP only implementation is thread safe and allows reading binary MO files independent of the machine's endian it was created on. Both 32bit and 64bit systems are supported. Also see the <a href="http://groups.google.com/group/cake-php/msg/926e556c5c751a5c">this post to the mailinglist</a> for more information.</p>
+<p><strong>Note</strong>: Full context support is coming in POEdit 1.5 according to <a href="http://www.poedit.net/trac/ticket/148">this ticket</a>.</p>
+<p>The <strong>cldr adapter</strong> reads from the <a href="http://cldr.unicode.org/">Common Locale Data Repository</a> maintained by the Unicode Consortium. Writing and deleting is not supported. The data is not shipped with the framework. The data is licensed under the <a href="http://unicode.org/copyright.html#Exhibit1">CLDR License</a>.</p>
+<p>The <strong>memory adapter</strong> allows for writing and reading runtime data and is also good for testing.</p>
+<p>The <strong>code adapter</strong> reads (extracts) message ids for creating message catalog templates from source code. PHP is supported through a parser using the built-in tokenizer but future support for other formats (i.e. JavaScript) is possible too.</p>
+<p>Nearly all adapters require a path to a directory containing globalized data. Data is - by convention - being stored in the following locations:</p>
+<ul>
+<li><code>libraries/lithium/g11n/resources[/{cldr,po}]</code></li>
+<li><code>app/resources/g11n[/{cldr,po}]</code></li>
+<li><code>app/plugins/PLUGIN/resources/g11n[/{cldr,po}]</code></li>
+</ul>
+<p>Data can either be stored directly below <code>resources/g11n</code> or in a subdirectory where adapters expect a <code>cldr</code> subdirectory to contain data for the CLDR and <code>po</code> to contain files for usage with gettext.</p>
+<h4><a id="use-cases" class="anchor" href="globalization.html#use-cases">Use Cases</a></h4>
+<ol>
+<li>Norman is migrating code. He wants to keep the format i.e. translated messages are stored in because the translation team is used to this format.</li>
+<li>In order to cut down time needed for supporting a set of locales, data available through the CLDR should be used.</li>
+<li>The catalog class needs to be tested.</li>
+<li>A plugin provides g11n data.</li>
+<li>One application has with multiple, different sources of data. The PO format is used for translation whereas other data is available through the CLDR.</li>
+<li>Other classes in a framework need for i.e. rules for a specific locale.</li>
+<li>John wrote a small application and thinks keeping translation in an extra format would be too much.</li>
+</ol>
+<h2><a id="translation-of-static-messages" class="anchor" href="globalization.html#translation-of-static-messages">Translation of Static Messages</a></h2>
+<p>Marking messages as translatable is done by using <code>$t()</code> and <code>$tn()</code> which are short-hands to <code>Message::translate()</code> with the addition of setting a default fallback message.</p>
+<pre><code class="language-php">$t('Look!');
+$tn('book', 'books', ['count' =&gt; 3]);
+</code></pre>
+<p>The functions can be retrieved through <code>Message::shortHands()</code>. To make them available in all templates you can use a filter to add those as content filters.</p>
+<pre><code class="language-php">extract(Message::shortHands());
+$bar = $t('Look!');
+</code></pre>
+<h3><a id="best-practices" class="anchor" href="globalization.html#best-practices">Best Practices</a></h3>
+<p>Since the marked messages will later be translated by others it is important to keep a few best practices in mind.</p>
+<ol>
+<li>Use entire English sentences (as it gives context).</li>
+<li>Split paragraphs into multiple messages.</li>
+<li>Instead of string concatenation utilize <code>String::insert()</code>-style format strings.</li>
+<li>Avoid to embed markup into the messages.</li>
+<li>Do not escape i.e. quotation marks where possible.</li>
+</ol>
+<h3><a id="placeholders" class="anchor" href="globalization.html#placeholders">Placeholders</a></h3>
+<p>When marking messages you can use standard <code>String::insert()</code>-style replacement.</p>
+<pre><code class="language-php">$t('Look! A {:color} bird!', ['color' =&gt; $t('red')]);
+</code></pre>
+<h3><a id="plurals" class="anchor" href="globalization.html#plurals">Plurals</a></h3>
+<p>n/a</p>
+<h3><a id="scope" class="anchor" href="globalization.html#scope">Scope</a></h3>
+<p>n/a</p>
+<h3><a id="ambiguous-meaning" class="anchor" href="globalization.html#ambiguous-meaning">Ambiguous Meaning</a></h3>
+<p>Especially very short messages have an ambiguous meaning. To aid translators determining the correct translation for a message there should be enough context given for the message. The easiest way is - if possible - to embed the context into the message itself or you can use the <em>context</em> option.</p>
+<pre><code class="language-php">$t('manual'); // bad
+$t('Read the manual.'); // good
+$t('manual', ['context' =&gt; 'the installation manual']); // good alternative
+</code></pre>
+<p><strong>Note</strong>: The context option is not yet implemented.</p>
+<h3><a id="no-operation" class="anchor" href="globalization.html#no-operation">No Operation</a></h3>
+<p>Passing the <code>'noop'</code> option to <code>Message::translate()</code> will result in the default being returned. Since the short-hand translation functions use <code>translate()</code> internally you can use the option to  just mark a string for translation without it being translated during runtime.</p>
+<pre><code class="language-php">$t('foo', ['noop' =&gt; true]);
+$tn('foo', 'bar', ['noop' =&gt; true]); // we don't need to pass `'count'` in this case
+</code></pre>
+<pre><code class="language-php">// File: a.php
+$t('foo', ['noop' =&gt; true]); // the extractor picks up `foo`
+
+// File: b.php
+$section = 'foo';
+$t($section);
+</code></pre>
+<h3><a id="knock-out" class="anchor" href="globalization.html#knock-out">Knock Out</a></h3>
+<p>If you're using templates which use the short-hand translation functions, but don't want to do any globalization you can disable the lookup of translations by using a filter. Keep in mind that you still need to include the functions as you otherwise would get missing function errors.</p>
+<pre><code class="language-php">Message::applyFilter('_translated', function($self, $params, $chain) {
+	return null;
+});
+</code></pre>
+<h3><a id="templates-extraction" class="anchor" href="globalization.html#templates-extraction">Templates, Extraction</a></h3>
+<p>Marked messages are extracted by using the g11n command. This allows for extracting messages and comments from source files, creating and updating files containing message templates, creating and updating files containing translated messages and compilation of those.</p>
+<h4><a id="use-cases" class="anchor" href="globalization.html#use-cases">Use Cases</a></h4>
+<ol>
+<li><p>John is working alone and is ready to deploy a small application. The last thing to do is checking if all translation are correct. He finds one incorrect message id after the other and needs to reextract and update the message template very often.</p>
+</li>
+<li><p>A message has multiple translations depending on it's context.</p>
+</li>
+</ol>
+<h2><a id="translation-of-dynamic-content" class="anchor" href="globalization.html#translation-of-dynamic-content">Translation of Dynamic Content</a></h2>
+<p>n/a</p>
+<h4><a id="use-cases" class="anchor" href="globalization.html#use-cases">Use Cases</a></h4>
+<p>n/a</p>
+<h2><a id="formatting-of-numbers-dates-and-currencies" class="anchor" href="globalization.html#formatting-of-numbers-dates-and-currencies">Formatting of Numbers, Dates and Currencies</a></h2>
+<h4><a id="implementation-details" class="anchor" href="globalization.html#implementation-details">Implementation Details</a></h4>
+<p>As with PHP 5.3 the [intl extension] ships with PHP (but need to be enabled due to dependencies on ICU) formatting is going to be implemented utilizing parts of functionality the extension exposes.</p>
+<p>It is assumed that if a user is in the need of such a specific functionality she/he is willing to install the ext. Installing the extension is not considered to be a barrier for this group of users.</p>
+<p>Core formatting is going to be supported through two new classes within the <code>lihtium\g11n</code> namespace: <code>Number</code>
+ and <code>Date</code> class.</p>
+<p>The main purpose of the formatters is that on the one hand being able to transform numbers and dates into a locale specific format and on the other hand normalizing such numbers and dates (i.e. for storing them in a database).</p>
+<p>While the formatting would be logically be put into a helper (within the view layer), the normalization part would take place within the model layer. This needs some sort of discussion.</p>
+<p>Recent experiments with the intl extension have proven differing results across systems. Keeping this in mind the following roadmap is suggested:</p>
+<ol>
+<li><code>Number</code> class with unit tests.</li>
+<li><code>Number</code> integration tests.</li>
+<li>Discussion: Are the inconsistencies neglectable?</li>
+<li><code>Date</code> class with unit tests.</li>
+<li><code>Date</code> integration tests.</li>
+<li>Refine <code>Number</code> and <code>Date</code> APIs</li>
+<li>Discussion: How do formatting classes integrate with the framework?</li>
+<li>Discussion: On which layer should formatting/normalization occur?</li>
+</ol>
+<p>Iterate/Rewrite/throw away code as necessary.</p>
+<p>For the <code>Number</code> class a skeleton alongside a handful of tests already exists. These should be seen as starting point on how the API could look like. The API of the class takes cues from the existing <a href="../../../../lithium/g11n/Locale.html">Locale class</a> which itself also provides symmetric methods (i.e. compose/decompose).</p>
+<p><a href="http://pastium.org/view/51256ecfad542a34b663c8ce17bb6377">Skeleton Number</a>
+<a href="http://pastium.org/view/1b5a202e09a041d79d5eaa8843de1bd1">Skeleton NumberTest</a></p>
+<p><a href="http://php.net/manual/en/class.numberformatter.php">Intl's NumberFormatter</a>
+<a href="http://php.net/manual/en/class.intldateformatter.php">Intl's DateFormatter</a></p>
+<h4><a id="use-cases" class="anchor" href="globalization.html#use-cases">Use Cases</a></h4>
+<p><strong>Emily</strong> has an images table with a title column and width and height columns where the length of each image should be stored in centimeter with a precision of 2. She now wants to display a nice table in the index view the decimal values formatted according to the users locale.</p>
+<pre><code class="language-php">foreach ($this-&gt;data['Image'] as $item) {
+        echo $number-&gt;format($item['width'], ['places' =&gt; 2]) . ' cm';
+}
+</code></pre>
+<p>Emily wants the users of the site to be able to add new images. She creates a form in the add view.</p>
+<pre><code class="language-php">echo $form-&gt;input('title');
+echo $form-&gt;input('width', ['after' =&gt; 'cm'];
+</code></pre>
+<p>Now Horst from Germany starts to fill out the form.  He enters the title <code>Grosses Bild</code> and the width for the image <code>1,20</code>. Now Tom from the United States starts to fill out the form. He enters the title <code>Large Image</code> and the width <code>1.20</code>. Both expect the form to submit successfully and that the value <code>1.2</code> is stored in the db.</p>
+<p><strong>Jonathan</strong> just finished the blog tutorial and wants the created time for his blog post to be displayed according to the currently selected language.</p>
+<pre><code class="language-php">echo $time-&gt;nice($this-&gt;data['Post']['created']);
+</code></pre>
+<p>He may also choose to disable automatic formatting because his blog is in english only.</p>
+<pre><code class="language-php">echo $time-&gt;nice($this-&gt;data['Post']['created'], ['language' =&gt; 'en']);
+</code></pre>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

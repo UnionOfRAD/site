@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\action\Request::env() – Framework API v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../action.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">action</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="Request.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Request</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">env()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="Request.html" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../action.html" class="symbol-segment">action</a>\<a href="Request.html" class="symbol-segment">Request</a>::env()		</h1>
+
+		<section class="under">
+															<div class="tags">
+													<span class="tag public">public</span>
+												<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Queries PHP's environment settings, and provides an abstraction for standardizing expected
+environment values across varying platforms, as well as specify custom environment flags.</p>
+					</div>
+				
+									<div class="description">
+						<p>Defines an artificial <code>'PLATFORM'</code> environment variable as either <code>'IIS'</code>, <code>'CGI'</code>
+or <code>null</code> to allow checking for the SAPI in a normalized way.</p>
+					</div>
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">string</span>
+							<code class="name">$key</code>
+															<span class="parameter">
+									<p>The environment variable required.</p>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">string</span>
+									<span class="return">
+						<p>The requested variables value.</p>
+					</span>
+							</section>
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public function env($key) {
+		if (array_key_exists($key, $this-&gt;_computed)) {
+			return $this-&gt;_computed[$key];
+		}
+		$val = null;
+
+		if (!empty($this-&gt;_env[$key])) {
+			$val = $this-&gt;_env[$key];
+			if ($key !== &#039;REMOTE_ADDR&#039; &amp;&amp; $key !== &#039;HTTPS&#039; &amp;&amp; $key !== &#039;REQUEST_METHOD&#039;) {
+				return $this-&gt;_computed[$key] = $val;
+			}
+		}
+		switch ($key) {
+			case &#039;BASE&#039;:
+			case &#039;base&#039;:
+				$val = $this-&gt;_base($this-&gt;_config[&#039;base&#039;]);
+			break;
+			case &#039;HTTP_HOST&#039;:
+				$val = &#039;localhost&#039;;
+			break;
+			case &#039;SERVER_PROTOCOL&#039;:
+				$val = &#039;HTTP/1.1&#039;;
+			break;
+			case &#039;REQUEST_METHOD&#039;:
+				if ($this-&gt;env(&#039;HTTP_X_HTTP_METHOD_OVERRIDE&#039;)) {
+					$val = $this-&gt;env(&#039;HTTP_X_HTTP_METHOD_OVERRIDE&#039;);
+				} elseif (isset($this-&gt;_env[&#039;REQUEST_METHOD&#039;])) {
+					$val = $this-&gt;_env[&#039;REQUEST_METHOD&#039;];
+				} else {
+					$val = &#039;GET&#039;;
+				}
+			break;
+			case &#039;CONTENT_TYPE&#039;:
+				$val = &#039;text/html&#039;;
+			break;
+			case &#039;PLATFORM&#039;:
+				$envs = [&#039;isapi&#039; =&gt; &#039;IIS&#039;, &#039;cgi&#039; =&gt; &#039;CGI&#039;, &#039;cgi-fcgi&#039; =&gt; &#039;CGI&#039;];
+				$val = isset($envs[PHP_SAPI]) ? $envs[PHP_SAPI] : null;
+			break;
+			case &#039;REMOTE_ADDR&#039;:
+				$https = [
+					&#039;HTTP_X_FORWARDED_FOR&#039;,
+					&#039;HTTP_PC_REMOTE_ADDR&#039;,
+					&#039;HTTP_X_REAL_IP&#039;
+				];
+				foreach ($https as $altKey) {
+					if ($addr = $this-&gt;env($altKey)) {
+						list($val) = explode(&#039;, &#039;, $addr);
+						break;
+					}
+				}
+			break;
+			case &#039;SCRIPT_NAME&#039;:
+				if ($this-&gt;env(&#039;PLATFORM&#039;) === &#039;CGI&#039;) {
+					return $this-&gt;env(&#039;SCRIPT_URL&#039;);
+				}
+				$val = null;
+			break;
+			case &#039;HTTPS&#039;:
+				if (isset($this-&gt;_env[&#039;SCRIPT_URI&#039;])) {
+					$val = strpos($this-&gt;_env[&#039;SCRIPT_URI&#039;], &#039;https://&#039;) === 0;
+				} elseif (isset($this-&gt;_env[&#039;HTTPS&#039;])) {
+					$val = (!empty($this-&gt;_env[&#039;HTTPS&#039;]) &amp;&amp; $this-&gt;_env[&#039;HTTPS&#039;] !== &#039;off&#039;);
+				} else {
+					$val = false;
+				}
+			break;
+			case &#039;SERVER_ADDR&#039;:
+				if (empty($this-&gt;_env[&#039;SERVER_ADDR&#039;]) &amp;&amp; !empty($this-&gt;_env[&#039;LOCAL_ADDR&#039;])) {
+					$val = $this-&gt;_env[&#039;LOCAL_ADDR&#039;];
+				} elseif (isset($this-&gt;_env[&#039;SERVER_ADDR&#039;])) {
+					$val = $this-&gt;_env[&#039;SERVER_ADDR&#039;];
+				}
+			break;
+			case &#039;SCRIPT_FILENAME&#039;:
+				if ($this-&gt;env(&#039;PLATFORM&#039;) === &#039;IIS&#039;) {
+					$val = str_replace(&#039;\\\\&#039;, &#039;\\&#039;, $this-&gt;env(&#039;PATH_TRANSLATED&#039;));
+				} elseif (isset($this-&gt;_env[&#039;DOCUMENT_ROOT&#039;]) &amp;&amp; isset($this-&gt;_env[&#039;PHP_SELF&#039;])) {
+					$val = $this-&gt;_env[&#039;DOCUMENT_ROOT&#039;] . $this-&gt;_env[&#039;PHP_SELF&#039;];
+				}
+			break;
+			case &#039;DOCUMENT_ROOT&#039;:
+				$fileName = $this-&gt;env(&#039;SCRIPT_FILENAME&#039;);
+				$offset = (!strpos($this-&gt;env(&#039;SCRIPT_NAME&#039;), &#039;.php&#039;)) ? 4 : 0;
+				$offset = strlen($fileName) - (strlen($this-&gt;env(&#039;SCRIPT_NAME&#039;)) + $offset);
+				$val = substr($fileName, 0, $offset);
+			break;
+			case &#039;PHP_SELF&#039;:
+				$val = &#039;/&#039;;
+			break;
+			case &#039;CGI&#039;:
+			case &#039;CGI_MODE&#039;:
+				$val = $this-&gt;env(&#039;PLATFORM&#039;) === &#039;CGI&#039;;
+			break;
+			case &#039;HTTP_BASE&#039;:
+				$val = preg_replace(&#039;/^([^.])*/i&#039;, null, $this-&gt;env(&#039;HTTP_HOST&#039;));
+			break;
+			case &#039;PHP_AUTH_USER&#039;:
+			case &#039;PHP_AUTH_PW&#039;:
+			case &#039;PHP_AUTH_DIGEST&#039;:
+				if (!$header = $this-&gt;env(&#039;HTTP_AUTHORIZATION&#039;)) {
+					if (!$header = $this-&gt;env(&#039;REDIRECT_HTTP_AUTHORIZATION&#039;)) {
+						return $this-&gt;_computed[$key] = $val;
+					}
+				}
+				if (stripos($header, &#039;basic&#039;) === 0) {
+					$decoded = base64_decode(substr($header, strlen(&#039;basic &#039;)));
+
+					if (strpos($decoded, &#039;:&#039;) !== false) {
+						list($user, $password) = explode(&#039;:&#039;, $decoded, 2);
+
+						$this-&gt;_computed[&#039;PHP_AUTH_USER&#039;] = $user;
+						$this-&gt;_computed[&#039;PHP_AUTH_PW&#039;] = $password;
+						return $this-&gt;_computed[$key];
+					}
+				} elseif (stripos($header, &#039;digest&#039;) === 0) {
+					return $this-&gt;_computed[$key] = substr($header, strlen(&#039;digest &#039;));
+				}
+			default:
+				$val = array_key_exists($key, $this-&gt;_env) ? $this-&gt;_env[$key] : $val;
+			break;
+		}
+		return $this-&gt;_computed[$key] = $val;
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

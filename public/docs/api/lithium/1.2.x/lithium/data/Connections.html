@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\data\Connections – Framework API v1.2.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.2.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../data.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">data</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Connections</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../data.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Connections::add().html">add()</a>												<li class="method public">
+				<a href="./Connections::remove().html">remove()</a>												<li class="method public">
+				<a href="./Connections::get().html">get()</a>												<li class="method protected">
+				<a href="./Connections::_class().html">_class()</a>												<li class="method public inherited">
+				<a href="../storage/Cache::config().html">config()</a>												<li class="method public inherited">
+				<a href="../core/Adaptable::reset().html">reset()</a>												<li class="method public inherited">
+				<a href="../storage/Cache::adapter().html">adapter()</a>												<li class="method public inherited">
+				<a href="../core/Adaptable::strategies().html">strategies()</a>												<li class="method public inherited">
+				<a href="../core/Adaptable::applyStrategies().html">applyStrategies()</a>												<li class="method public inherited">
+				<a href="../core/Adaptable::enabled().html">enabled()</a>												<li class="method protected inherited">
+				<a href="../core/Adaptable::_initAdapter().html">_initAdapter()</a>												<li class="method protected inherited">
+				<a href="../core/Adaptable::_strategy().html">_strategy()</a>												<li class="method protected inherited">
+				<a href="../core/Adaptable::_locate().html">_locate()</a>												<li class="method protected inherited">
+				<a href="../core/Adaptable::_config().html">_config()</a>												<li class="method protected deprecated inherited">
+				<a href="../core/Adaptable::_initConfig().html">_initConfig()</a>												<li class="method public deprecated inherited">
+				<a href="../core/StaticObjectDeprecated::respondsTo().html">respondsTo()</a>												<li class="method public deprecated inherited">
+				<a href="../core/StaticObjectDeprecated::invokeMethod().html">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="../core/StaticObjectDeprecated::_instance().html">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="../core/StaticObjectDeprecated::_stop().html">_stop()</a>												<li class="method protected deprecated inherited">
+				<a href="../core/StaticObjectDeprecated::_parents().html">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="../core/StaticObjectDeprecated::applyFilter().html">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="../core/StaticObjectDeprecated::_filter().html">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./Connections::$_configurations.html">$_configurations</a>												<li class="property protected">
+				<a href="./Connections::$_adapters.html">$_adapters</a>												<li class="property protected inherited">
+				<a href="../core/Adaptable::$_strategies.html">$_strategies</a>												<li class="property protected deprecated inherited">
+				<a href="../core/StaticObjectDeprecated::$_parents.html">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="../core/StaticObjectDeprecated::$_methodFilters.html">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../data.html" class="symbol-segment">data</a>\Connections		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../core/Adaptable.html" class="extends__symbol">lithium\core\Adaptable</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The <code>Connections</code> class manages a list of named configurations that connect to external
+resources. Connections are usually comprised of a type (i.e. <code>'database'</code> or <code>'http'</code>), a
+reference to an adapter class (i.e. <code>'MySql'</code> or <code>'CouchDb'</code>), and authentication credentials.</p>
+					</div>
+				
+									<div class="description">
+						<p>While connections can be added and removed dynamically during the course of your application
+(using <code>Connections::add()</code>), it is most typical to define all connections at once, in
+<code>config/bootstrap/connections.php</code>.</p>
+<p>The <code>Connections</code> class handles adapter classes efficiently by only loading adapter classes and
+creating instances when they are requested (using <code>Connections::get()</code>).</p>
+<p>Adapters are usually subclasses of <code>lithium\data\Source</code>.</p>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="Source.html">lithium\data\Source</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Connections extends \lithium\core\Adaptable {
+
+	/**
+	 * A Collection of the configurations you add through Connections::add().
+	 *
+	 * @var `lithium\util\Collection`
+	 */
+	protected static $_configurations = [];
+
+	/**
+	 * Libraries::locate() compatible path to adapters for this class.
+	 *
+	 * @var string Dot-delimited path.
+	 */
+	protected static $_adapters = &#039;data.source&#039;;
+
+	/**
+	 * Add connection configurations to your app in `config/bootstrap/connections.php`
+	 *
+	 * For example:
+	 * ```
+	 * Connections::add(&#039;default&#039;, [
+	 *	&#039;type&#039; =&gt; &#039;database&#039;,
+	 *	&#039;adapter&#039; =&gt; &#039;MySql&#039;,
+	 *	&#039;host&#039; =&gt; &#039;localhost&#039;,
+	 *	&#039;login&#039; =&gt; &#039;root&#039;,
+	 *	&#039;password&#039; =&gt; &#039;&#039;,
+	 *	&#039;database&#039; =&gt; &#039;my_blog&#039;
+	 * ]);
+	 * ```
+	 *
+	 * or
+	 *
+	 * ```
+	 * Connections::add(&#039;couch&#039;, [
+	 *	&#039;type&#039; =&gt; &#039;http&#039;,
+	 *	&#039;adapter&#039; =&gt; &#039;CouchDb&#039;,
+	 *	&#039;host&#039; =&gt; &#039;127.0.0.1&#039;,
+	 *	&#039;port&#039; =&gt; 5984
+	 * ]);
+	 * ```
+	 *
+	 * or
+	 *
+	 * ```
+	 * Connections::add(&#039;mongo&#039;, [
+	 *	&#039;type&#039; =&gt; &#039;MongoDb&#039;,
+	 *	&#039;database&#039; =&gt; &#039;my_app&#039;
+	 * ]);
+	 * ```
+	 *
+	 * @see lithium\data\Model::$_meta
+	 * @param string $name The name by which this connection is referenced. Use this name to
+	 *        retrieve the connection again using `Connections::get()`, or to bind a model to it
+	 *        using `Model::$_meta[&#039;connection&#039;]`.
+	 * @param array $config Contains all additional configuration information used by the
+	 *        connection, including the name of the adapter class where applicable (i.e. `MySql`),
+	 *        and typcially the server host/socket to connect to, the name of the database or
+	 *        other entity to use. Each adapter has its own specific configuration settings for
+	 *        handling things like connection persistence, data encoding, etc. See the
+	 *        individual adapter or data source class for more information on what configuration
+	 *        settings it supports. Basic / required options supported are:
+	 *        - `&#039;type&#039;` _string_: The type of data source that defines this connection; typically a
+	 *          class or namespace name. Relational database data sources, use `&#039;database&#039;`, while
+	 *          CouchDB and other HTTP-related data sources use `&#039;http&#039;`, etc. For classes which
+	 *          directly extend `lithium\data\Source`, and do not use an adapter, simply use the
+	 *          name of the class, i.e. `&#039;MongoDb&#039;`.
+	 *        - `&#039;adapter&#039;` _string_: For `type`s such as `&#039;database&#039;` which are adapter-driven,
+	 *          provides the name of the adapter associated with this configuration.
+	 * @return array Returns the final post-processed connection information, as stored in the
+	 *         internal configuration array used by `Connections`.
+	 */
+	public static function add($name, array $config = []) {
+		$defaults = [
+			&#039;type&#039;     =&gt; null,
+			&#039;adapter&#039;  =&gt; null
+		];
+		return static::$_configurations[$name] = $config + $defaults;
+	}
+
+	/**
+	 * Removing a configuration.
+	 *
+	 * @param string $name The name by which this connection is referenced.
+	 */
+	public static function remove($name) {
+		unset(static::$_configurations[$name]);
+	}
+
+	/**
+	 * Read the configuration or access the connections you have set up.
+	 *
+	 * Usage:
+	 * ```
+	 * // Gets the names of all available configurations
+	 * $configurations = Connections::get();
+	 *
+	 * // Gets the configuration array for the connection named &#039;db&#039;
+	 * $config = Connections::get(&#039;db&#039;, [&#039;config&#039; =&gt; true]);
+	 *
+	 * // Gets the instance of the connection object, configured with the settings defined for
+	 * // this object in Connections::add()
+	 * $dbConnection = Connections::get(&#039;db&#039;);
+	 *
+	 * // Gets the connection object, but only if it has already been built.
+	 * // Otherwise returns null.
+	 * $dbConnection = Connections::get(&#039;db&#039;, [&#039;autoCreate&#039; =&gt; false]);
+	 * ```
+	 *
+	 * @param string $name The name of the connection to get, as defined in the first parameter of
+	 *        `add()`, when the connection was initially created.
+	 * @param array $options Options to use when returning the connection:
+	 *        - `&#039;autoCreate&#039;`: If `false`, the connection object is only returned if it has
+	 *          already been instantiated by a previous call.
+	 *        - `&#039;config&#039;`: If `true`, returns an array representing the connection&#039;s internal
+	 *          configuration, instead of the connection itself.
+	 * @return mixed A configured instance of the connection, or an array of the configuration used.
+	 */
+	public static function get($name = null, array $options = []) {
+		static $mockAdapter;
+
+		$defaults = [&#039;config&#039; =&gt; false, &#039;autoCreate&#039; =&gt; true];
+		$options += $defaults;
+
+		if ($name === false) {
+			if (!$mockAdapter) {
+				$class = Libraries::locate(&#039;data.source&#039;, &#039;Mock&#039;);
+				$mockAdapter = new $class();
+			}
+			return $mockAdapter;
+		}
+
+		if (!$name) {
+			return array_keys(static::$_configurations);
+		}
+
+		if (!isset(static::$_configurations[$name])) {
+			return null;
+		}
+		if ($options[&#039;config&#039;]) {
+			return static::_config($name);
+		}
+		$settings = static::$_configurations[$name];
+
+		if (!isset($settings[0][&#039;object&#039;]) &amp;&amp; !$options[&#039;autoCreate&#039;]) {
+			return null;
+		}
+		return static::adapter($name);
+	}
+
+	/**
+	 * Constructs a data source or adapter object instance from a configuration array.
+	 *
+	 * @param array $config
+	 * @param array $paths
+	 * @return object
+	 */
+	protected static function _class($config, $paths = []) {
+		if (!$config[&#039;adapter&#039;]) {
+			$config[&#039;adapter&#039;] = $config[&#039;type&#039;];
+		} else {
+			$paths = array_merge([&quot;adapter.data.source.{$config[&#039;type&#039;]}&quot;], (array) $paths);
+		}
+		return parent::_class($config, $paths);
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

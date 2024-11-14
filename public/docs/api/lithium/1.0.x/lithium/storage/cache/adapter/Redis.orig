@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\storage\cache\adapter\Redis – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.0.x/lithium/storage" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">storage</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.0.x/lithium/storage/cache" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">cache</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">adapter</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Redis</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter/Redis::__construct()">__construct()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter/Redis::_init()">_init()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter/Redis::__call()">__call()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter/Redis::respondsTo()">respondsTo()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter/Redis::_formatHost()">_formatHost()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter/Redis::write()">write()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter/Redis::read()">read()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter/Redis::delete()">delete()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter/Redis::decrement()">decrement()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter/Redis::increment()">increment()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter/Redis::clear()">clear()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter/Redis::enabled()">enabled()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/Adapter::clean()">clean()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/Adapter::_addScopePrefix()">_addScopePrefix()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/Adapter::_removeScopePrefix()">_removeScopePrefix()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::applyFilter()">applyFilter()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::invokeMethod()">invokeMethod()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::__set_state()">__set_state()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_instance()">_instance()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_filter()">_filter()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_parents()">_parents()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_stop()">_stop()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property public">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter/Redis::$connection">$connection</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::$_config">$_config</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::$_autoConfig">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::$_methodFilters">$_methodFilters</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::$_parents">$_parents</a>							</ul>
+								<h3 class="h-gamma">Constants</h3>
+			<ul>
+												<li class="constant ">
+				<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter/Redis::CONN_DEFAULT_PORT">CONN_DEFAULT_PORT</a>							</ul>
+			</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.0.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.0.x/lithium/storage" class="symbol-segment">storage</a>\<a href="/docs/api/lithium/1.0.x/lithium/storage/cache" class="symbol-segment">cache</a>\<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/adapter" class="symbol-segment">adapter</a>\Redis		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.0.x/lithium/storage/cache/Adapter" class="extends__symbol">lithium\storage\cache\Adapter</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>A Redis cache adapter implementation using <code>phpredis</code>.</p>
+					</div>
+				
+									<div class="description">
+						<p>This adapter does not aim to provide a full implementation of the Redis API, but rather
+only a subset of its features that are useful in the context of a semi-persistent cache.</p>
+<p>This adapter depends on the <code>phpredis</code> PHP extension and on a running
+instance of Redis server being available.</p>
+<p>This adapter natively handles atomic multi-key reads/writes/deletes and supports atomic
+increment/decrement operations as well as clearing the entire cache. Scope support is
+natively available. Delegation of method calls to the connection object is available.</p>
+<p>Serialization of values is not handled natively, the <code>Serializer</code> strategy must be used
+if you plan to store non-scalar values or need to keep type on values. Full cached item
+persistence is not guaranteed it depends on the how the Redis server is actually configured
+and accessed.</p>
+<p>A simple configuration can be accomplished as follows:</p>
+<pre><code class="language-php">Cache::config(array(
+    'cache-config-name' =&gt; array(
+        'adapter' =&gt; 'Redis',
+        'host' =&gt; '127.0.0.1:6379',
+        'strategies =&gt; array('Serializer')
+    )
+));
+</code></pre>
+<p>The <code>'host'</code> key accepts a string argument in the format of ip:port where
+the Redis server can be found.</p>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="/docs/api/lithium/1.0.x/lithium/storage/Cache::key()">lithium\storage\Cache::key()</a>									<li><a href="/docs/api/lithium/1.0.x/lithium/storage/Cache::adapter()">lithium\storage\Cache::adapter()</a>								</ul>
+			</section>
+			
+						<section id="links">
+				<h3 class="h-beta">Links</h3>
+				<ul class="links">
+									<li><a href="https://github.com/nicolasff/phpredis" target="new">https://github.com/nicolasff/phpredis</a>								</ul>
+			</section>
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Redis extends \lithium\storage\cache\Adapter {
+
+	/**
+	 * The default port used to connect to Redis servers, if none is specified.
+	 */
+	const CONN_DEFAULT_PORT = 6379;
+
+	/**
+	 * Redis object instance used by this adapter.
+	 *
+	 * @var object Redis object
+	 */
+	public $connection;
+
+	/**
+	 * Constructor.
+	 *
+	 * @todo Implement configurable &amp; optional authentication
+	 * @see lithium\storage\Cache::config()
+	 * @see lithium\storage\cache\adapter\Redis::write()
+	 * @param array $config Configuration for this cache adapter. These settings are queryable
+	 *        through `Cache::config(&#039;name&#039;)`. The available options are as follows:
+	 *        - `&#039;scope&#039;` _string_: Scope which will prefix keys; per default not set.
+	 *        - `&#039;expiry&#039;` _mixed_: The default expiration time for cache values, if no value
+	 *          is otherwise set. Can be either a `strtotime()` compatible tring or TTL in
+	 *          seconds. To indicate items should not expire use `Cache::PERSIST`. Defaults
+	 *          to `+1 hour`.
+	 *        - `&#039;host&#039;` _string_: A string in the form of `&#039;host:port&#039;` indicating the Redis server
+	 *          to connect to. Defaults to `&#039;127.0.0.1:6379&#039;`.
+	 *        - `&#039;persistent&#039;` _boolean_: Indicates whether the adapter should use a persistent
+	 *          connection when attempting to connect to the Redis server. If `true`, it will
+	 *          attempt to reuse an existing connection when connecting, and the connection will
+	 *          not close when the request is terminated. Defaults to `false`.
+	 * @return void
+	 */
+	public function __construct(array $config = array()) {
+		$defaults = array(
+			&#039;host&#039; =&gt; &#039;127.0.0.1:6379&#039;,
+			&#039;scope&#039; =&gt; null,
+			&#039;expiry&#039; =&gt; &#039;+1 hour&#039;,
+			&#039;persistent&#039; =&gt; false
+		);
+		parent::__construct($config + $defaults);
+	}
+
+	/**
+	 * Initialize the Redis connection object, connect to the Redis server and sets
+	 * prefix using the scope if provided.
+	 *
+	 * @return void
+	 */
+	protected function _init() {
+		if (!$this-&gt;connection) {
+			$this-&gt;connection = new RedisCore();
+		}
+		list($address, $port) = $this-&gt;_formatHost($this-&gt;_config[&#039;host&#039;]);
+		$method = $this-&gt;_config[&#039;persistent&#039;] ? &#039;pconnect&#039; : &#039;connect&#039;;
+		if ($port) {
+			$this-&gt;connection-&gt;{$method}($address, $port);
+		} else {
+			$this-&gt;connection-&gt;{$method}($address);
+		}
+
+		if ($this-&gt;_config[&#039;scope&#039;]) {
+			$this-&gt;connection-&gt;setOption(RedisCore::OPT_PREFIX, &quot;{$this-&gt;_config[&#039;scope&#039;]}:&quot;);
+		}
+	}
+
+	/**
+	 * Dispatches a not-found method to the connection object. That way, one can
+	 * easily use a custom method on the adapter. If you want to know, what methods
+	 * are available, have a look at the documentation of phpredis.
+	 *
+	 * ```
+	 * Cache::adapter(&#039;redis&#039;)-&gt;methodName($argument);
+	 * ```
+	 *
+	 * One use-case might be to query possible keys, e.g.
+	 *
+	 * ```
+	 * Cache::adapter(&#039;redis&#039;)-&gt;keys(&#039;*&#039;);
+	 * ```
+	 *
+	 * @link https://github.com/nicolasff/phpredis
+	 * @param string $method Name of the method to call.
+	 * @param array $params Parameter list to use when calling $method.
+	 * @return mixed Returns the result of the method call.
+	 */
+	public function __call($method, $params = array()) {
+		return call_user_func_array(array(&amp;$this-&gt;connection, $method), $params);
+	}
+
+	/**
+	 * Determines if a given method can be called.
+	 *
+	 * @param string $method Name of the method.
+	 * @param boolean $internal Provide `true` to perform check from inside the
+	 *                class/object. When `false` checks also for public visibility;
+	 *                defaults to `false`.
+	 * @return boolean Returns `true` if the method can be called, `false` otherwise.
+	 */
+	public function respondsTo($method, $internal = false) {
+		if (parent::respondsTo($method, $internal)) {
+			return true;
+		}
+		return is_callable(array($this-&gt;connection, $method));
+	}
+
+	/**
+	 * Formats standard `&#039;host:port&#039;` or `&#039;/path/to/socket&#039;` strings
+	 *
+	 * @param mixed $host A host string in `&#039;host:port&#039;` or `&#039;/path/to/socket&#039;` format
+	 * @return array Returns an array of `Redis` connection definitions.
+	 */
+	protected function _formatHost($host) {
+		if (strpos($host, &#039;:&#039;) &gt; 0) {
+			list($address, $port) = explode(&#039;:&#039;, $host);
+		} else {
+			$address = $host;
+			$port = strpos($host, &#039;/&#039;) === 0 ? null : self::CONN_DEFAULT_PORT;
+		}
+		return array($address, $port);
+	}
+
+	/**
+	 * Write values to the cache. All items to be cached will receive an
+	 * expiration time of `$expiry`.
+	 *
+	 * @param array $keys Key/value pairs with keys to uniquely identify the to-be-cached item.
+	 * @param string|integer $expiry A `strtotime()` compatible cache time or TTL in seconds.
+	 *                       To persist an item use `\lithium\storage\Cache::PERSIST`.
+	 * @return boolean `true` on successful write, `false` otherwise.
+	 */
+	public function write(array $keys, $expiry = null) {
+		$expiry = $expiry || $expiry === Cache::PERSIST ? $expiry : $this-&gt;_config[&#039;expiry&#039;];
+
+		if (!$expiry || $expiry === Cache::PERSIST) {
+			$ttl = null;
+		} elseif (is_int($expiry)) {
+			$ttl = $expiry;
+		} else {
+			$ttl = strtotime($expiry) - time();
+		}
+
+		if (count($keys) &gt; 1) {
+			if (!$ttl) {
+				return $this-&gt;connection-&gt;mset($keys);
+			}
+			$transaction = $this-&gt;connection-&gt;multi();
+
+			foreach ($keys as $key =&gt; $value) {
+				if (!$this-&gt;connection-&gt;setex($key, $ttl, $value)) {
+					$transaction-&gt;discard();
+					return false;
+				}
+			}
+			return $transaction-&gt;exec() === array_fill(0, count($keys), true);
+		}
+		$key = key($keys);
+		$value = current($keys);
+
+		if (!$ttl) {
+			return $this-&gt;connection-&gt;set($key, $value);
+		}
+		return $this-&gt;connection-&gt;setex($key, $ttl, $value);
+	}
+
+	/**
+	 * Read values from the cache. Will attempt to return an array of data
+	 * containing key/value pairs of the requested data.
+	 *
+	 * @param array $keys Keys to uniquely identify the cached items.
+	 * @return array Cached values keyed by cache keys on successful read,
+	 *               keys which could not be read will not be included in
+	 *               the results array.
+	 */
+	public function read(array $keys) {
+		if (count($keys) &gt; 1) {
+			$results = array();
+			$data = $this-&gt;connection-&gt;mGet($keys);
+
+			foreach ($data as $key =&gt; $item) {
+				$key = $keys[$key];
+
+				if ($item === false &amp;&amp; !$connection-&gt;exists($key)) {
+					continue;
+				}
+				$results[$key] = $item;
+			}
+			return $results;
+		}
+		$result = $this-&gt;connection-&gt;get($key = current($keys));
+		return $result === false ? array() : array($key =&gt; $result);
+	}
+
+	/**
+	 * Will attempt to remove specified keys from the user space cache.
+	 *
+	 * @param array $keys Keys to uniquely identify the cached items.
+	 * @return boolean `true` on successful delete, `false` otherwise.
+	 */
+	public function delete(array $keys) {
+		return (boolean) $this-&gt;connection-&gt;delete($keys);
+	}
+
+	/**
+	 * Performs an atomic decrement operation on specified numeric cache item.
+	 *
+	 * Note that if the value of the specified key is *not* an integer, the decrement
+	 * operation will have no effect whatsoever. Redis chooses to not typecast values
+	 * to integers when performing an atomic decrement operation.
+	 *
+	 * @param string $key Key of numeric cache item to decrement.
+	 * @param integer $offset Offset to decrement - defaults to `1`.
+	 * @return integer|boolean The item&#039;s new value on successful decrement, else `false`.
+	 */
+	public function decrement($key, $offset = 1) {
+		return $this-&gt;connection-&gt;decr($key, $offset);
+	}
+
+	/**
+	 * Performs an atomic increment operation on specified numeric cache item.
+	 *
+	 * Note that if the value of the specified key is *not* an integer, the increment
+	 * operation will have no effect whatsoever. Redis chooses to not typecast values
+	 * to integers when performing an atomic increment operation.
+	 *
+	 * @param string $key Key of numeric cache item to increment.
+	 * @param integer $offset Offset to increment - defaults to `1`.
+	 * @return integer|boolean The item&#039;s new value on successful increment, else `false`.
+	 */
+	public function increment($key, $offset = 1) {
+		return $this-&gt;connection-&gt;incr($key, $offset);
+	}
+
+	/**
+	 * Clears entire database by flushing it. All cache keys using the
+	 * configuration but *without* honoring the scope are removed.
+	 *
+	 * The behavior and result when removing a single key
+	 * during this process fails is unknown.
+	 *
+	 * @return boolean `true` on successful clearing, `false` otherwise.
+	 */
+	public function clear() {
+		return $this-&gt;connection-&gt;flushdb();
+	}
+
+	/**
+	 * Determines if the Redis extension has been installed and
+	 * that there is a Redis server available.
+	 *
+	 * @return boolean Returns `true` if the Redis extension is enabled, `false` otherwise.
+	 */
+	public static function enabled() {
+		return extension_loaded(&#039;redis&#039;);
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

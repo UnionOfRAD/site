@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\g11n\Locale – Framework API v2.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/2.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (2.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/2.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/2.0.x/lithium/g11n" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">g11n</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Locale</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/2.0.x/lithium/g11n" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/2.0.x/lithium/g11n/Locale::__callStatic()">__callStatic()</a>												<li class="method public">
+				<a href="/docs/api/lithium/2.0.x/lithium/g11n/Locale::compose()">compose()</a>												<li class="method public">
+				<a href="/docs/api/lithium/2.0.x/lithium/g11n/Locale::decompose()">decompose()</a>												<li class="method public">
+				<a href="/docs/api/lithium/2.0.x/lithium/g11n/Locale::canonicalize()">canonicalize()</a>												<li class="method public">
+				<a href="/docs/api/lithium/2.0.x/lithium/g11n/Locale::cascade()">cascade()</a>												<li class="method public">
+				<a href="/docs/api/lithium/2.0.x/lithium/g11n/Locale::lookup()">lookup()</a>												<li class="method public">
+				<a href="/docs/api/lithium/2.0.x/lithium/g11n/Locale::preferred()">preferred()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/2.0.x/lithium/g11n/Locale::_preferredAction()">_preferredAction()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/2.0.x/lithium/g11n/Locale::_preferredConsole()">_preferredConsole()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="/docs/api/lithium/2.0.x/lithium/g11n/Locale::$_tags">$_tags</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/2.0.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/2.0.x/lithium/g11n" class="symbol-segment">g11n</a>\Locale		</h1>
+
+		<section class="under">
+															<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The <code>Locale</code> class provides methods to deal with locale identifiers.  The locale
+(here: <em>locale identifier</em>) is used to distinguish among different sets of common
+preferences.</p>
+					</div>
+				
+									<div class="description">
+						<p>In order to avoid unnecessary overhead all methods throughout the framework accepting
+a locale require it to be well-formed according to the structure laid out below. For
+assuring the correct format use <code>Locale::canonicalize()</code> once on the locale.</p>
+<p>However the methods within this class will also work with not-so-well-formed locales.
+They accept both underscores and hyphens as separators between and don't care about the
+case of the individual tags.</p>
+<p>The identifier used by Lithium is based in its structure upon Unicode's
+language identifier and is compliant to BCP 47.</p>
+<p><code>language[_Script][_TERRITORY][_VARIANT]</code></p>
+<ul>
+<li><code>language</code> The spoken language, here represented by an ISO 639-1 code,
+where not available ISO 639-3 and ISO 639-5 codes are allowed too) tag.
+The tag should  be lower-cased and is required.</li>
+<li><code>Script</code> The tag should have its first character capitalized, all others
+lower-cased. The tag is optional.</li>
+<li><code>TERRITORY</code> A geographical area, here represented by an ISO 3166-1 code.
+Should be all upper-cased and is optional.</li>
+<li><code>VARIANT</code> Should be all upper-cased and is optional.</li>
+</ul>
+					</div>
+							</section>
+
+			
+			
+			
+			
+						<section id="links">
+				<h3 class="h-beta">Links</h3>
+				<ul class="links">
+									<li><a href="http://www.unicode.org/reports/tr35/tr35-12.html#Identifiers" target="new">http://www.unicode.org/reports/tr35/tr35-12.html#Identifiers</a>									<li><a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt" target="new">http://www.rfc-editor.org/rfc/bcp/bcp47.txt</a>									<li><a href="http://www.iana.org/assignments/language-subtag-registry" target="new">http://www.iana.org/assignments/language-subtag-registry</a>								</ul>
+			</section>
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Locale {
+
+	/**
+	 * Properties for locale tags.
+	 *
+	 * @var array
+	 */
+	protected static $_tags = [
+		&#039;language&#039; =&gt; [&#039;formatter&#039; =&gt; &#039;strtolower&#039;],
+		&#039;script&#039; =&gt; [&#039;formatter&#039; =&gt; [&#039;strtolower&#039;, &#039;ucfirst&#039;]],
+		&#039;territory&#039; =&gt; [&#039;formatter&#039; =&gt; &#039;strtoupper&#039;],
+		&#039;variant&#039; =&gt; [&#039;formatter&#039; =&gt; &#039;strtoupper&#039;]
+	];
+
+	/**
+	 * Magic method enabling `language`, `script`, `territory` and `variant`
+	 * methods to parse and retrieve individual tags from a locale.
+	 *
+	 * ```
+	 * Locale::language(&#039;en_US&#039;); // returns &#039;en&#039;
+	 * Locale::territory(&#039;en_US&#039;); // returns &#039;US&#039;
+	 * ```
+	 *
+	 * @see lithium\g11n\Locale::$_tags
+	 * @see lithium\g11n\Locale::decompose()
+	 * @param string $method
+	 * @param array $params
+	 * @return mixed
+	 */
+	public static function __callStatic($method, $params = []) {
+		$tags = static::decompose(current($params));
+
+		if (!isset(static::$_tags[$method])) {
+			throw new BadMethodCallException(&quot;Invalid locale tag `{$method}`.&quot;);
+		}
+		return isset($tags[$method]) ? $tags[$method] : null;
+	}
+
+	/**
+	 * Composes a locale from locale tags.  This is the pendant to `Locale::decompose()`.
+	 *
+	 * @param array $tags An array as obtained from `Locale::decompose()`.
+	 * @return string A locale with tags separated by underscores or `null`
+	 *         if none of the passed tags could be used to compose a locale.
+	 */
+	public static function compose($tags) {
+		$result = [];
+
+		foreach (static::$_tags as $name =&gt; $tag) {
+			if (isset($tags[$name])) {
+				$result[] = $tags[$name];
+			}
+		}
+		if ($result) {
+			return implode(&#039;_&#039;, $result);
+		}
+	}
+
+	/**
+	 * Parses a locale into locale tags.  This is the pendant to `Locale::compose()``.
+	 *
+	 * @param string $locale A locale in an arbitrary form (i.e. `&#039;en_US&#039;` or `&#039;EN-US&#039;`).
+	 * @return array Parsed language, script, territory and variant tags.
+	 * @throws InvalidArgumentException
+	 */
+	public static function decompose($locale) {
+		$regex  = &#039;(?P&lt;language&gt;[a-z]{2,3})&#039;;
+		$regex .= &#039;(?:[_-](?P&lt;script&gt;[a-z]{4}))?&#039;;
+		$regex .= &#039;(?:[_-](?P&lt;territory&gt;[a-z]{2}))?&#039;;
+		$regex .= &#039;(?:[_-](?P&lt;variant&gt;[a-z]{5,}))?&#039;;
+
+		if (!preg_match(&quot;/^{$regex}$/i&quot;, $locale, $matches)) {
+			throw new InvalidArgumentException(&quot;Locale `{$locale}` could not be parsed.&quot;);
+		}
+		return array_filter(array_intersect_key($matches, static::$_tags));
+	}
+
+	/**
+	 * Returns a locale in its canonical form with tags formatted properly.
+	 *
+	 * @param string $locale A locale in an arbitrary form (i.e. `&#039;ZH-HANS-HK_REVISED&#039;`).
+	 * @return string A locale in its canonical form (i.e. `&#039;zh_Hans_HK_REVISED&#039;`).
+	 */
+	public static function canonicalize($locale) {
+		$tags = static::decompose($locale);
+
+		foreach ($tags as $name =&gt; &amp;$tag) {
+			foreach ((array) static::$_tags[$name][&#039;formatter&#039;] as $formatter) {
+				$tag = $formatter($tag);
+			}
+		}
+		return static::compose($tags);
+	}
+
+	/**
+	 * Cascades a locale.
+	 *
+	 * Usage:
+	 * ```
+	 * Locale::cascade(&#039;en_US&#039;);
+	 * // returns [&#039;en_US&#039;, &#039;en&#039;, &#039;root&#039;]
+	 *
+	 * Locale::cascade(&#039;zh_Hans_HK_REVISED&#039;);
+	 * // returns [&#039;zh_Hans_HK_REVISED&#039;, &#039;zh_Hans_HK&#039;, &#039;zh_Hans&#039;, &#039;zh&#039;, &#039;root&#039;]
+	 * ```
+	 *
+	 * @link http://www.unicode.org/reports/tr35/tr35-13.html#Locale_Inheritance
+	 * @param string $locale A locale in an arbitrary form (i.e. `&#039;en_US&#039;` or `&#039;EN-US&#039;`).
+	 * @return array Indexed array of locales (starting with the most specific one).
+	 */
+	public static function cascade($locale) {
+		$locales[] = $locale;
+
+		if ($locale === &#039;root&#039;) {
+			return $locales;
+		}
+		$tags = static::decompose($locale);
+
+		while (count($tags) &gt; 1) {
+			array_pop($tags);
+			$locales[] = static::compose($tags);
+		}
+		$locales[] = &#039;root&#039;;
+		return $locales;
+	}
+
+	/**
+	 * Searches an array of locales for the best match to a locale. The locale
+	 * is iteratively simplified until either it matches one of the locales
+	 * in the list or the locale can&#039;t be further simplified.
+	 *
+	 * This method partially implements the lookup matching scheme as described
+	 * in RFC 4647, section 3.4 and thus does not strictly conform to the
+	 * specification.
+	 *
+	 * Differences to specification:
+	 * - No support for wildcards in the to-be-matched locales.
+	 * - No support for locales with private subtags.
+	 * - No support for a default return value.
+	 * - Passed locales are required to be in canonical form (i.e. `&#039;ja_JP&#039;`).
+	 *
+	 * @link http://www.ietf.org/rfc/rfc4647.txt
+	 * @param array $locales Locales to match against `$locale`.
+	 * @param string $locale A locale in its canonical form (i.e. `&#039;zh_Hans_HK_REVISED&#039;`).
+	 * @return string The matched locale.
+	 */
+	public static function lookup($locales, $locale) {
+		$tags = static::decompose($locale);
+
+		while (($count = count($tags)) &gt; 0) {
+			if (($key = array_search(static::compose($tags), $locales)) !== false) {
+				return $locales[$key];
+			}
+			if ($count === 1) {
+				foreach ($locales as $current) {
+					if (strpos($current, current($tags) . &#039;_&#039;) === 0) {
+						return $current;
+					}
+				}
+			}
+			if (($key = array_search(static::compose($tags), $locales)) !== false) {
+				return $locales[$key];
+			}
+			array_pop($tags);
+		}
+	}
+
+	/**
+	 * Determines the preferred locale from a request or array. Optionally negotiates
+	 * the preferred locale with available locales.
+	 *
+	 * @see lithium\g11n\Locale::_preferredAction()
+	 * @see lithium\g11n\Locale::_preferredConsole()
+	 * @see lithium\g11n\Locale::lookup()
+	 * @param object|array $request An action or console request object or an array of locales.
+	 * @param array $available A list of locales to negotiate the preferred locale with.
+	 * @return string The preferred locale in its canonical form (i.e. `&#039;fr_CA&#039;`).
+	 * @todo Rewrite this to remove hard-coded class names.
+	 */
+	public static function preferred($request, $available = null) {
+		if (is_array($request)) {
+			$result = $request;
+		} elseif ($request instanceof ActionRequest) {
+			$result = static::_preferredAction($request);
+		} elseif ($request instanceof ConsoleRequest) {
+			$result = static::_preferredConsole($request);
+		} else {
+			return null;
+		}
+		if (!$available) {
+			return array_shift($result);
+		}
+		foreach ((array) $result as $locale) {
+			if ($match = static::lookup($available, $locale)) {
+				return $match;
+			}
+		}
+	}
+
+	/**
+	 * Detects preferred locales from an action request by looking at the
+	 * `&#039;Accept-Language&#039;` header as described by RFC 2616, section 14.4.
+	 *
+	 * @link http://www.ietf.org/rfc/rfc2616.txt
+	 * @param \lithium\action\Request $request
+	 * @return array Preferred locales in their canonical form (i.e. `&#039;fr_CA&#039;`).
+	 */
+	protected static function _preferredAction($request) {
+		$result = [];
+		$regex  = &quot;/^\s*(?P&lt;locale&gt;\w\w(?:[-]\w\w)?)(?:;q=(?P&lt;quality&gt;(0|1|0\.\d+)))?\s*$/&quot;;
+
+		foreach (explode(&#039;,&#039;, $request-&gt;env(&#039;HTTP_ACCEPT_LANGUAGE&#039;)) as $part) {
+			if (preg_match($regex, $part, $matches)) {
+				$locale = static::canonicalize($matches[&#039;locale&#039;]);
+				$quality = isset($matches[&#039;quality&#039;]) ? $matches[&#039;quality&#039;] : 1;
+				$result[$quality][] = $locale;
+			}
+		}
+		krsort($result);
+
+		return array_reduce($result, function($carry, $item) {
+			return array_merge($carry, array_values($item));
+		}, []);
+	}
+
+	/**
+	 * Detects preferred locales from a console request by looking at certain
+	 * environment variables. The environment variables may be present or not
+	 * depending on your system. If multiple variables are present the following
+	 * hierarchy is used: `&#039;LANGUAGE&#039;`,  `&#039;LC_ALL&#039;`, `&#039;LANG&#039;`.
+	 *
+	 * The locales of the `&#039;LC_ALL&#039;` and the `&#039;LANG&#039;` are formatted according
+	 * to the posix standard: `language(_territory)(.encoding)(@modifier)`.
+	 * Locales having such a format are automatically canonicalized and transformed
+	 * into the `Locale` class&#039; format.
+	 *
+	 * @link http://www.linux.com/archive/feature/53781
+	 * @param \lithium\console\Request $request
+	 * @return array Preferred locales in their canonical form (i.e. `&#039;fr_CA&#039;`).
+	 */
+	protected static function _preferredConsole($request) {
+		$regex = &#039;(?P&lt;locale&gt;[\w\_]+)(\.|@|$)+&#039;;
+		$result = [];
+
+		if ($value = $request-&gt;env(&#039;LANGUAGE&#039;)) {
+			return explode(&#039;:&#039;, $value);
+		}
+		foreach ([&#039;LC_ALL&#039;, &#039;LANG&#039;] as $variable) {
+			$value = $request-&gt;env($variable);
+
+			if (!$value || $value === &#039;C&#039; || $value === &#039;POSIX&#039;) {
+				continue;
+			}
+			if (preg_match(&quot;/{$regex}/&quot;, $value, $matches)) {
+				return (array) $matches[&#039;locale&#039;];
+			}
+		}
+		return $result;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

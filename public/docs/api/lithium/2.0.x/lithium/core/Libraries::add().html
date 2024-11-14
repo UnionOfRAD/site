@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\core\Libraries::add() – Framework API v2.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (2.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../core.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">core</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="Libraries.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Libraries</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">add()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="Libraries.html" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../core.html" class="symbol-segment">core</a>\<a href="Libraries.html" class="symbol-segment">Libraries</a>::add()		</h1>
+
+		<section class="under">
+															<div class="tags">
+													<span class="tag public">public</span>
+													<span class="tag">static</span>
+								<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Adds a class library from which files can be loaded.</p>
+					</div>
+				
+									<div class="description">
+						<p>The <code>add()</code> method registers a named library configuration to your application, and is used
+to allow the framework to auto-load classes on an as-needed basis.</p>
+<h3><a id="adding-libraries-to-your-application" class="anchor" href="./Libraries::add().html#adding-libraries-to-your-application">Adding libraries to your application</a></h3>
+<p>In Lithium, libraries represent the broadest unit of class organization in an application,
+and <em>everything</em> is a library; this includes your application, and the Lithium framework
+itself. Libraries can also be other frameworks, like Solar, Zend Framework or PEAR, or
+Lithium plugins, which are simply libraries that follow the same organizational standards
+as Lithium applications.</p>
+<p>By convention, libraries are placed in the <code>libraries</code> directory inside your application, or
+the root <code>libraries</code> directory at the top level of the default distribution (i.e. the one
+that contains the <code>lithium</code> directory), however, you can change this on a case-by-case basis
+using the <code>'path'</code> key to specify an absolute path to the library's directory.</p>
+					</div>
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">string</span>
+							<code class="name">$name</code>
+															<span class="parameter">
+									<p>Library name, i.e. <code>'app'</code>, <code>'lithium'</code>, <code>'pear'</code> or <code>'aura'</code>.</p>
+								</span>
+													</li>
+											<li>
+							<span class="type">array</span>
+							<code class="name">$config</code>
+															<span class="parameter">
+									<p>Specifies where the library is in the filesystem, and how classes
+should be loaded from it.  Allowed keys are:</p>
+<ul>
+<li><code>'bootstrap'</code> <em>mixed</em>: A file path (relative to <code>'path'</code>) to a bootstrap script that
+should be run when the library is added, or <code>true</code> to use the default bootstrap
+path, i.e. <code>config/bootstrap.php</code>.</li>
+<li><code>'defer'</code> <em>boolean</em>: If <code>true</code>, indicates that, when locating classes, this library
+should defer to other libraries in order of preference.</li>
+<li><code>'includePath'</code> <em>mixed</em>: If <code>true</code>, appends the absolutely-resolved value of
+<code>'path'</code> to the PHP include path. If a string, the value is appended to PHP's.</li>
+<li><code>'loader'</code>: An auto-loader method associated with the library, if any.</li>
+<li><code>'path'</code>: The directory containing the library.</li>
+<li><code>'prefix'</code> <em>string</em>: The class prefix this library uses, i.e. <code>'lithium\'</code>,
+<code>'Zend_'</code> or <code>'Solar_'</code>. If the library has no global prefix, set to <code>false</code>.</li>
+<li><code>'suffix'</code> <em>string</em>: Gets appended to the end of the file name. For example, most
+libraries end classes in <code>'.php'</code>, but some use <code>'.class.php'</code>, or <code>'.inc.php'</code>.</li>
+<li><code>'transform'</code> <em>\Closure</em>: Defines a custom way to transform a class name into its
+corresponding file path.  Accepts either an array of two strings which are
+interpreted as the pattern and replacement for a regex, or an anonymous function,
+which receives the class name and library configuration arrays as parameters, and
+returns the full physical file path as output.</li>
+<li><code>'resources'</code> <em>string</em>: If this is the default library, this maybe set to the
+absolute path to the write-enabled application resources directory, which is used
+for caching, log files, uploads, etc.</li>
+</ul>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">array</span>
+									<span class="return">
+						<p>Returns the resulting set of options created for this library.</p>
+					</span>
+							</section>
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public static function add($name, array $config = []) {
+		$defaults = [
+			&#039;name&#039; =&gt; $name,
+			&#039;path&#039; =&gt; null,
+			&#039;prefix&#039; =&gt; $name . &quot;\\&quot;,
+			&#039;suffix&#039; =&gt; &#039;.php&#039;,
+			&#039;loader&#039; =&gt; null,
+			&#039;includePath&#039; =&gt; false,
+			&#039;transform&#039; =&gt; null,
+			&#039;bootstrap&#039; =&gt; true,
+			&#039;defer&#039; =&gt; false,
+			&#039;default&#039; =&gt; false
+		];
+		if ($name === &#039;lithium&#039;) {
+			$defaults[&#039;defer&#039;] = true;
+			$defaults[&#039;bootstrap&#039;] = false;
+			$defaults[&#039;path&#039;] = dirname(__DIR__);
+			$defaults[&#039;loader&#039;] = &#039;lithium\core\Libraries::load&#039;;
+		}
+		if (isset($config[&#039;default&#039;]) &amp;&amp; $config[&#039;default&#039;]) {
+			static::$_default = $name;
+			$defaults[&#039;path&#039;] = LITHIUM_APP_PATH;
+			$defaults[&#039;bootstrap&#039;] = false;
+			$defaults[&#039;resources&#039;] = LITHIUM_APP_PATH . &#039;/resources&#039;;
+		}
+		$config += $defaults;
+
+		if (!$config[&#039;path&#039;]) {
+			if (!$config[&#039;path&#039;] = static::_locatePath(&#039;libraries&#039;, compact(&#039;name&#039;))) {
+				throw new ConfigException(&quot;Library `{$name}` not found.&quot;);
+			}
+		}
+		$config[&#039;path&#039;] = str_replace(&#039;\\&#039;, &#039;/&#039;, $config[&#039;path&#039;]);
+		static::_configure(static::$_configurations[$name] = $config);
+		return $config;
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

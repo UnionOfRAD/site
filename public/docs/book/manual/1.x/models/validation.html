@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Validation – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../docs.html" class="active">Documentation</a><a href="../../../../../versions.html">Versions</a><a href="../../../../../present.html">Presentations</a><a href="../../../../../support.html">Community</a><a href="../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../models.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Models</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Validation</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="../common-tasks.html" class="">Common Tasks</a><ul><li><a href="../common-tasks/logging.html" class="">Logging</a><li><a href="../common-tasks/plugins.html" class="">Plugins</a><li><a href="../common-tasks/error-handling.html" class="">Error Handling</a><li><a href="../common-tasks/caching.html" class="">Caching</a><li><a href="../common-tasks/filters.html" class="">Filters</a><li><a href="../common-tasks/etags.html" class="">Etags</a><li><a href="../common-tasks/globalization.html" class="">Globalization</a><li><a href="../common-tasks/simple-authentication.html" class="">Simple Authentication</a><li><a href="../common-tasks/simple-auth-user.html" class="">Simple Auth User</a><li><a href="../common-tasks/console-applications.html" class="">Console Applications</a></ul><li><a href="../appendices.html" class="">Appendices</a><ul><li><a href="../appendices/faqs.html" class="">FAQs</a><li><a href="../appendices/using-in-other-applications.html" class="">Using In Other Applications</a></ul><li><a href="../quickstart.html" class="">Quickstart</a><li><a href="../controllers.html" class="">Controllers</a><ul><li><a href="../controllers/actions.html" class="">Actions</a><li><a href="../controllers/flow-control.html" class="">Flow Control</a><li><a href="../controllers/parameters.html" class="">Parameters</a><li><a href="../controllers/type-rendering-detection.html" class="">Type Rendering Detection</a><li><a href="../controllers/routing.html" class="">Routing</a></ul><li><a href="../installation.html" class="">Installation</a><ul><li><a href="../installation/requirements.html" class="">Requirements</a><li><a href="../installation/troubleshooting.html" class="">Troubleshooting</a><li><a href="../installation/web-servers.html" class="">Web Servers</a></ul><li><a href="../architecture.html" class="">Architecture</a><ul><li><a href="../architecture/file-structure.html" class="">File Structure</a><li><a href="../architecture/response-lifecycle.html" class="">Response Lifecycle</a><li><a href="../architecture/aop.html" class="">AOP</a><li><a href="../architecture/mvc.html" class="">MVC</a><li><a href="../architecture/objects.html" class="">Objects</a></ul><li><a href="../quality-code.html" class="">Quality Code</a><ul><li><a href="../quality-code/fixtures.html" class="">Fixtures</a><li><a href="../quality-code/analysis.html" class="">Analysis</a><li><a href="../../../../manual/quality-code/testing.wiki.html" class="">Testing</a><li><a href="../quality-code/security.html" class="">Security</a></ul><li><a href="../configuration.html" class="">Configuration</a><ul><li><a href="../configuration/environment.html" class="">Environment</a><li><a href="../configuration/bootstrapping.html" class="">Bootstrapping</a><li><a href="../configuration/third-party-libraries.html" class="">Third Party Libraries</a></ul><li><a href="../views.html" class="">Views</a><ul><li><a href="../views/layouts.html" class="">Layouts</a><li><a href="../views/elements.html" class="">Elements</a><li><a href="../views/helpers.html" class="">Helpers</a><li><a href="../views/static-content.html" class="">Static Content</a><li><a href="../views/auto-escaping.html" class="">Auto Escaping</a></ul><li><a href="../models.html" class="">Models</a><ul><li><a href="mongodb.html" class="">Mongodb</a><li><a href="meta.html" class="">Meta</a><li><a href="relationships.html" class="">Relationships</a><li><a href="saving.html" class="">Saving</a><li><a href="using-data-sources.html" class="">Using Data Sources</a><li><a href="adding-functions.html" class="">Adding Functions</a><li><a href="data-mutation.html" class="">Data Mutation</a><li><a href="connections.html" class="">Connections</a><li><a href="creating-data-sources.html" class="">Creating Data Sources</a><li><a href="querying.html" class="">Querying</a><li><a href="validation.html" class="active">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="validation" class="anchor" href="validation.html#validation">Validation</a></h1>
+<p>This section focuses on validation in the model layer, as well as covering the core utility class <code>Validator</code>.</p>
+<p>Part of a model's responsibility in an MVC application is to be the gatekeeper for the data it handles. While a great deal of a model's functionality deals with fetching and relating data, validation is an important part in describing the business logic and keeping your data clean and secure.</p>
+<h2><a id="basic-validation" class="anchor" href="validation.html#basic-validation">Basic Validation</a></h2>
+<p>Validation is done by defining a special property on the model object called <code>$validates</code>. When calling <code>validates()</code> on an entity the framework inspects this property and validates data to be saved against this set of rules.</p>
+<p>Because it's likely the most common case, we'll start with a simple model data validation example based around an HTML form. Let's consider an application that handles user registration. We'll define a <code>Users</code> model and create some simple validation logic in order to make sure submitted user information is complete and in the correct form.</p>
+<h3><a id="defining-validation-rules" class="anchor" href="validation.html#defining-validation-rules">Defining Validation Rules</a></h3>
+<p>Let's create a simple <code>Users</code> model, and begin with the definition of a few simple validation rules.</p>
+<pre><code class="language-php">namespace app\models;
+
+class Users extends lithium\data\Model {
+
+	public $validates = [
+		'name' =&gt; [
+			[
+				'notEmpty',
+				'required' =&gt; true,
+				'message' =&gt; 'Please supply a name.'
+			]
+		],
+		'password' =&gt; [
+			[
+				'notEmpty',
+				'required' =&gt; true,
+				'message' =&gt; 'Please supply a password.'
+			]
+		]
+	];
+}
+</code></pre>
+<div class="note note-info">
+Note that these are application-level validation rules, and do not interact with any rules or constraints defined in your data source. If such constraints fail, an exception will be thrown by the database layer. Validation checks run only against the rules defined in application code.
+</div>
+<p>This initial example shows how rules are defined. First, each set of rules is keyed by the model field name. Each field is then assigned an array of rules, where the first value is the name of the rule, and the subsequent keys define additional information about each rule.</p>
+<p>In addition to the rule name, there are a number of special keys you can use to modify a rule:</p>
+<ul>
+<li><code>message</code>: The error message displayed if this rule fails.</li>
+<li><code>required</code> (boolean): Specifies that data for this field <em>must</em> be submitted in order to validate. Defaults to <code>true</code>.</li>
+<li><code>skipEmpty</code> (boolean): Causes the rule to be skipped if the value is null or empty. Defaults to <code>false</code>.</li>
+<li><code>format</code>: The name of the rule format required to validate the data, or <code>any</code> or <code>all</code>.</li>
+</ul>
+<p>You may also declare multiple rules per field. Here, we add two additional rules to the name field in order to ensure names are alphanumeric and have a minimum and maximum length.</p>
+<pre><code class="language-php">namespace app\models;
+
+class Users extends lithium\data\Model {
+
+	public $validates = [
+		'name' =&gt; [
+			[
+				'notEmpty',
+				'message' =&gt; 'Please supply a name.'
+			],
+			[
+				'alphaNumeric',
+				'message' =&gt; 'A name may only contain letters and numbers.'
+			],
+			[
+				'lengthBetween', 'min' =&gt; 7, 'max' =&gt; 23,
+				'message' =&gt; 'Must be between 7 and 23 characters long.'
+			]
+		],
+		'password' =&gt; [
+			[
+				'notEmpty',
+				'message' =&gt; 'Please supply a password.'
+			]
+		]
+	];
+}
+</code></pre>
+<div class="note note-hint">
+	For a complete list of built-in validation rules, see the <a href="../../../../api/lithium/latest:1.x/lithium/util/Validator.html"><code>Validator</code> API</a>.
+</div>
+<h3><a id="form-validation" class="anchor" href="validation.html#form-validation">Form Validation</a></h3>
+<p>Here's a simple form we might use to collect user data. This would be contained in <code>views/users/add.html.php</code>.</p>
+<pre><code class="language-php">&lt;?= $this-&gt;form-&gt;create($user) ?&gt;
+	&lt;?= $this-&gt;form-&gt;field('name') ?&gt;
+	&lt;?= $this-&gt;form-&gt;field('password') ?&gt;
+	&lt;?= $this-&gt;form-&gt;submit('save user') ?&gt;
+&lt;?= $this-&gt;form-&gt;end() ?&gt;
+</code></pre>
+<p>By using the <code>Form</code> helper and binding our user entity to it, we gain the additional benefit that later validation errors are handled and - should some exist - displayed automatically for us.</p>
+<h3><a id="handling-validation-in-the-controller" class="anchor" href="validation.html#handling-validation-in-the-controller">Handling Validation in the Controller</a></h3>
+<p>Once that data is submitted through the form to the controller, we handle it in our controller action.</p>
+<pre><code class="language-php">namespace app\controllers;
+
+use app\models\Users;
+
+class UsersController extends lithium\action\Controller {
+
+	public function add() {
+		if ($this-&gt;request-&gt;data) {
+			$user = Users::create($this-&gt;request-&gt;data);
+
+			if ($user-&gt;save()) {
+				$this-&gt;redirect('/users/home');
+			}
+		}
+	}
+}
+</code></pre>
+<p>If there's submitted data to this action, we create a new user with it. If a save is successful, we redirect to a landing page. The <strong>implicit logic</strong> here is that validation rules are checked, and <code>save()</code> returns a <code>false</code> if any rules fail.</p>
+<p>Since the action's view contains the HTML form we just built using the <code>Form</code> helper, if there are any validation problems, the HTML form is rendered again, this time with the errors displayed inline.</p>
+<h2><a id="advanced-validation" class="anchor" href="validation.html#advanced-validation">Advanced Validation</a></h2>
+<h3><a id="explicit-validation" class="anchor" href="validation.html#explicit-validation">Explicit Validation</a></h3>
+<p>As shown in our example above <code>save()</code> will implictly validate the data prior saving. If you'd like
+to validate data explictly you'd use the entities <code>validate()</code> method. That method takes 2 parameters.</p>
+<p>The <code>$entity</code> parameter specifies the model entity to validate, which is typically either a <code>Record</code> or <code>Document</code> object. In the  example below, the <code>$entity</code> parameter is equal to the <code>$post</code> object instance.</p>
+<p>The <code>`$options</code> parameter has the following settable elements:</p>
+<ul>
+<li><code>'rules'</code> <em>array</em>: If specified, this array will <em>replace</em> the default validation rules defined in <code>$validates</code>.</li>
+<li><code>'events'</code> <em>mixed</em>: A string or array defining one or more validation <em>events</em>. Events are different contexts in which data events can occur, and correspond to the optional <code>'on'</code> key in validation rules. For example, by default, <code>'events'</code> is set to either <code>'create'</code> or <code>'update'</code>, depending on whether <code>$entity</code> already exists. Then, individual rules can specify <code>'on' =&gt; 'create'</code> or <code>'on' =&gt; 'update'</code> to only be applied at certain times. Using this parameter, you can set up custom events in your rules as well, such as <code>'on' =&gt; 'login'</code>. Note that when defining validation rules, the <code>'on'</code> key can also be an array of multiple events.</li>
+</ul>
+<pre><code class="language-php">$post = Posts::create($data);
+
+if ($success = $post-&gt;validates()) {
+	// ...
+	$post-&gt;save(null, ['validate' =&gt; false]);
+}
+</code></pre>
+<p>This method uses the <code>Validator</code> class to perform data validation. An array representation of the entity object to be tested is passed to the <code>check()</code> method, along with the model's validation rules. Any rules defined in the <code>Validator</code> class can be used to validate fields.</p>
+<div class="note note-hint">
+	When validation fails any validation errors get attached to the entity.
+</div>
+<h3><a id="accessing-validation-errors" class="anchor" href="validation.html#accessing-validation-errors">Accessing Validation Errors</a></h3>
+<p>If you need to know about model validation problems before the application renders the view, you can inspect errors on the <code>Entity</code> object you're working with. Get the last errors by calling <code>errors()</code>:</p>
+<pre><code class="language-php">// ...
+	public function add() {
+		if ($this-&gt;request-&gt;data) {
+			$user = Users::create($this-&gt;request-&gt;data);
+			$user-&gt;save();
+			$errors = $user-&gt;errors();
+
+			// Redirect or perform other logic here
+			// based on contents of $errors.
+		}
+	}
+// ...
+</code></pre>
+<h3><a id="invalidating-manually" class="anchor" href="validation.html#invalidating-manually">Invalidating Manually</a></h3>
+<p>You can also manually invalidate model fields by calling <code>errors()</code> and supplying key/value pairs to denote problems. While you'll usually want to create custom rules (covered next), this is sometimes a helpful trick to use in model filters, etc.</p>
+<pre><code class="language-php">$user-&gt;errors('name', 'This name is too funny.');
+</code></pre>
+<h3><a id="creating-custom-rules" class="anchor" href="validation.html#creating-custom-rules">Creating Custom Rules</a></h3>
+<p>While the validator features a number of handy rules, you'll inevitably want to create your own validation rules. This done (at runtime) by calling <code>Validator::add()</code> to specify new rule logic.</p>
+<p>The simplest form of rule addition is by Regular Expression:</p>
+<pre><code class="language-php">Validator::add('zeroToNine', '/^[0-9]$/');
+</code></pre>
+<p>If you need more than pattern recognition, you can also supply rules as anonymous functions:</p>
+<pre><code class="language-php">Validator::add('nameTaken' function($value) {
+	$result = Users::findByName($value);
+	return count($result) &gt; 0;
+});
+</code></pre>
+<p>Once a rule as been defined, it can be referenced by name in a model <code>$validates</code> property or direct use of the <code>Validator</code> class magic methods:</p>
+<pre><code class="language-php">Validator::add('zeroToNine', '/^[0-9]$/');
+Validator::isZeroToNine('7');
+</code></pre>
+<h3><a id="named-validation-rules" class="anchor" href="validation.html#named-validation-rules">Named Validation Rules</a></h3>
+<div class="note note-version">This feature is available with version 1.1.</div>
+<p>Validation rules inside the model can be optionally defined as <em>named</em> rules. This changes the format
+of the data <code>Model::errors()</code> returns and allows you to determine which exact rule failed.</p>
+<pre><code class="language-php">namespace app\models;
+
+class Users extends lithium\data\Model {
+
+	public $validates = [
+		'name' =&gt; [
+			'foo' =&gt; [
+				'notEmpty'
+				'message' =&gt; 'Must not be empty.'
+				// ...
+			],
+			'bar' =&gt; [
+				// ...
+			]
+		]
+	];
+}
+</code></pre>
+<pre><code class="language-php">$user-&gt;validate();
+$user-&gt;errors(); // Returns:
+// [
+//     'name' =&gt; [
+//         'foo' =&gt; 'Must not be empty'
+//     ]
+// ]
+</code></pre>
+<h3><a id="providing-custom-validation-messages-in-the-template" class="anchor" href="validation.html#providing-custom-validation-messages-in-the-template">Providing Custom Validation Messages in the Template</a></h3>
+<div class="note note-version">This feature is available with version 1.1.</div>
+<p>In order to make use of this feature, you must use <em>named validation rules</em>.</p>
+<p>This allows easier translation of messages and customization in case there is no
+control over the model (i.e. developing a "theme" for a customer without touching
+the data layer).</p>
+<p>Also some might prefer to provide messages in the template, as one could argue
+they are part of the presenation layer.</p>
+<pre><code class="language-php">$this-&gt;form-&gt;field('name', [
+	'error' =&gt; [
+		'foo' =&gt; 'Please please do not leave empty :]'
+	]
+));
+</code></pre>
+<p>Once a <code>'default'</code> key is set for the custom messages, it'll be used for any unmatched
+validation errors.</p>
+<pre><code class="language-php">$this-&gt;form-&gt;field('name', [
+	'error' =&gt; [
+		'default' =&gt; 'Something is wrong in this field.'
+		'foo' =&gt; 'Please please do not leave empty :]'
+	]
+));
+</code></pre>
+<div class="note note-info">
+	When there's no default message given, messages defined in the model
+	may be rendered.
+</div>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

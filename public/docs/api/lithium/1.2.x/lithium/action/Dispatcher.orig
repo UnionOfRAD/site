@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\action\Dispatcher – Framework API v1.2.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.2.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.2.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.2.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.2.x/lithium/action" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">action</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Dispatcher</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.2.x/lithium/action" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/action/Dispatcher::config()">config()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/action/Dispatcher::run()">run()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/action/Dispatcher::applyRules()">applyRules()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/action/Dispatcher::_callable()">_callable()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/action/Dispatcher::_call()">_call()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::respondsTo()">respondsTo()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::invokeMethod()">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::_instance()">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::_stop()">_stop()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::_parents()">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::applyFilter()">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::_filter()">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/action/Dispatcher::$_classes">$_classes</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/action/Dispatcher::$_rules">$_rules</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::$_parents">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::$_methodFilters">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.2.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.2.x/lithium/action" class="symbol-segment">action</a>\Dispatcher		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated" class="extends__symbol">lithium\core\StaticObjectDeprecated</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p><code>Dispatcher</code> is the outermost layer of the framework, responsible for both receiving the initial
+HTTP request and sending back a response at the end of the request's life cycle.</p>
+					</div>
+				
+									<div class="description">
+						<p>After either receiving or instantiating a <code>Request</code> object instance, the <code>Dispatcher</code> passes that
+instance to the <code>Router</code>, which produces the parameters necessary to dispatch the request
+(unless no route matches, in which case an exception is thrown).</p>
+<p>Using these parameters, the <code>Dispatcher</code> loads and instantiates the correct <code>Controller</code> object,
+and passes it the <code>Request</code> object instance. The <code>Controller</code> returns a <code>Response</code> object to the
+<code>Dispatcher</code>, where the headers and content are rendered and sent to the browser.</p>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="/docs/api/lithium/1.2.x/lithium/net/http/Router">lithium\net\http\Router</a>									<li><a href="/docs/api/lithium/1.2.x/lithium/action/Request">lithium\action\Request</a>									<li><a href="/docs/api/lithium/1.2.x/lithium/action/Response">lithium\action\Response</a>									<li><a href="/docs/api/lithium/1.2.x/lithium/action/Controller">lithium\action\Controller</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Dispatcher extends \lithium\core\StaticObjectDeprecated {
+
+	/**
+	 * Fully-namespaced router class reference.  Class must implement a `parse()` method,
+	 * which must return an array with (at a minimum) &#039;controller&#039; and &#039;action&#039; keys.
+	 *
+	 * @see lithium\net\http\Router::parse()
+	 * @var array
+	 */
+	protected static $_classes = [
+		&#039;router&#039; =&gt; &#039;lithium\net\http\Router&#039;
+	];
+
+	/**
+	 * Contains pre-process format strings for changing Dispatcher&#039;s behavior based on `&#039;rules&#039;`.
+	 *
+	 * Each key in the array represents a &#039;rule&#039;; if a key that matches the rule is present
+	 * (and not empty) in a route, (i.e. the result of `Router::parse()`) then the rule&#039;s
+	 * value will be applied to the route before it is dispatched. When applying a rule, any
+	 * array elements of the flag which are present in the route will be modified using a
+	 * `Text::insert()`-formatted string. Alternatively, a callback can be used to do custom
+	 * transformations other than the default `Text::insert()`.
+	 *
+	 * For example, to implement action prefixes (i.e. `admin_index`), set a rule named
+	 * `&#039;admin&#039;`, with a value array containing a modifier key for the `action` element of
+	 * a route, i.e.: `array(&#039;action&#039; =&gt; &#039;admin_{:action}&#039;)`. Now, if the `&#039;admin&#039;` key is
+	 * present and not empty in the parameters returned from routing, the value of `&#039;action&#039;`
+	 * will be rewritten per the settings in the rule:
+	 * ```
+	 * Dispatcher::config([
+	 *	&#039;rules&#039; =&gt; [
+	 *		&#039;admin&#039; =&gt; &#039;admin_{:action}&#039;
+	 *	]
+	 * ]);
+	 * ```
+	 *
+	 * The following example shows two rules that continuously or independently transform the
+	 * action parameter in order to allow any variations i.e. `&#039;admin_index&#039;`, `&#039;api_index&#039;`
+	 * and `&#039;admin_api_index&#039;`.
+	 * ```
+	 * // ...
+	 *		&#039;api&#039; =&gt; &#039;api_{:action}&#039;,
+	 *		&#039;admin&#039; =&gt; &#039;admin_{:action}&#039;
+	 * // ...
+	 * ```
+	 *
+	 * Here&#039;s another example. To support normalizing actions, set a rule named `&#039;action&#039;` with
+	 * a value array containing a callback that uses `Inflector` to camelize the
+	 * action:
+	 * ```
+	 * // ...
+	 *		&#039;action&#039; =&gt; [&#039;action&#039; =&gt; function($params) {
+	 *			return Inflector::camelize(strtolower($params[&#039;action&#039;]), false);
+	 *		}]
+	 * // ...
+	 * ```
+	 *
+	 * The entires rules can become a callback as well:
+	 * ```
+	 * Dispatcher::config([
+	 *	&#039;rules&#039; =&gt; function($params) {
+	 *		// ...
+	 *	}
+	 * ]);
+	 * ```
+	 *
+	 * @see lithium\action\Dispatcher::config()
+	 * @see lithium\util\Text::insert()
+	 * @see lithium\util\Inflector
+	 * @var array
+	 */
+	protected static $_rules = [];
+
+	/**
+	 * Used to set configuration parameters for the `Dispatcher`.
+	 *
+	 * @see lithium\action\Dispatcher::$_rules
+	 * @param array $config Possible key settings are `&#039;classes&#039;` which sets the class dependencies
+	 *              for `Dispatcher` (i.e. `&#039;request&#039;` or `&#039;router&#039;`) and `&#039;rules&#039;`, which sets the
+	 *              pre-processing rules for routing parameters. For more information on the
+	 *              `&#039;rules&#039;` setting, see the `$_rules` property.
+	 * @return array If no parameters are passed, returns an associative array with the current
+	 *         configuration, otherwise returns `null`.
+	 */
+	public static function config(array $config = []) {
+		if (!$config) {
+			return [&#039;rules&#039; =&gt; static::$_rules];
+		}
+
+		foreach ($config as $key =&gt; $val) {
+			$key = &quot;_{$key}&quot;;
+			if (!is_array($val)) {
+				static::${$key} = $val;
+				continue;
+			}
+			if (isset(static::${$key})) {
+				static::${$key} = $val + static::${$key};
+			}
+		}
+	}
+
+	/**
+	 * Dispatches a request based on a request object (an instance or subclass of
+	 * `lithium\net\http\Request`).
+	 *
+	 * @see lithium\action\Request
+	 * @see lithium\action\Response
+	 * @param object $request An instance of a request object (usually `lithium\action\Request`)
+	 *               with HTTP request information.
+	 * @param array $options
+	 * @return mixed Returns the value returned from the callable object retrieved from
+	 *         `Dispatcher::_callable()`, which is either a string or an instance of
+	 *         `lithium\action\Response`.
+	 * @filter Allows to perform actions very early or late in the request.
+	 */
+	public static function run($request, array $options = []) {
+		$params = compact(&#039;request&#039;, &#039;options&#039;);
+
+		return Filters::run(get_called_class(), __FUNCTION__, $params, function($params) {
+			$router = static::$_classes[&#039;router&#039;];
+
+			$request = $params[&#039;request&#039;];
+			$options = $params[&#039;options&#039;];
+
+			if (($result = $router::process($request)) instanceof Response) {
+				return $result;
+			}
+			$params = static::applyRules($result-&gt;params);
+
+			if (!$params) {
+				throw new DispatchException(&#039;Could not route request.&#039;);
+			}
+			$callable = static::_callable($result, $params, $options);
+			return static::_call($callable, $result, $params);
+		});
+	}
+
+	/**
+	 * Attempts to apply a set of formatting rules from `$_rules` to a `$params` array, where each
+	 * formatting rule is applied if the key of the rule in `$_rules` is present and not empty in
+	 * `$params`.  Also performs sanity checking against `$params` to ensure that no value
+	 * matching a rule is present unless the rule check passes.
+	 *
+	 * @param array $params An array of route parameters to which rules will be applied.
+	 * @return array Returns the `$params` array with formatting rules applied to array values.
+	 */
+	public static function applyRules(&amp;$params) {
+		$values = [];
+		$rules = static::$_rules;
+
+		if (!$params) {
+			return false;
+		}
+
+		if (isset($params[&#039;controller&#039;]) &amp;&amp; is_string($params[&#039;controller&#039;])) {
+			$controller = $params[&#039;controller&#039;];
+
+			if (strpos($controller, &#039;.&#039;) !== false) {
+				list($library, $controller) = explode(&#039;.&#039;, $controller);
+				$controller = $library . &#039;.&#039; . Inflector::camelize($controller);
+				$params += compact(&#039;library&#039;);
+			} elseif (strpos($controller, &#039;\\&#039;) === false) {
+				$controller = Inflector::camelize($controller);
+
+				if (isset($params[&#039;library&#039;])) {
+					$controller = &quot;{$params[&#039;library&#039;]}.{$controller}&quot;;
+				}
+			}
+			$values = compact(&#039;controller&#039;);
+		}
+		$values += $params;
+
+		if (is_callable($rules)) {
+			$rules = $rules($params);
+		}
+		foreach ($rules as $rule =&gt; $value) {
+			if (!isset($values[$rule])) {
+				continue;
+			}
+			foreach ($value as $k =&gt; $v) {
+				if (is_callable($v)) {
+					$values[$k] = $v($values);
+					continue;
+				}
+				$match = preg_replace(&#039;/\{:\w+\}/&#039;, &#039;@&#039;, $v);
+				$match = preg_replace(&#039;/@/&#039;, &#039;.+&#039;, preg_quote($match, &#039;/&#039;));
+
+				if (preg_match(&#039;/&#039; . $match . &#039;/i&#039;, $values[$k])) {
+					continue;
+				}
+				$values[$k] = Text::insert($v, $values);
+			}
+		}
+		return $values;
+	}
+
+	/**
+	 * Accepts parameters generated by the `Router` class in `Dispatcher::run()`, and produces a
+	 * callable controller object. By default, this method uses the `&#039;controller&#039;` path lookup
+	 * configuration in `Libraries::locate()` to return a callable object.
+	 *
+	 * @param object $request The instance of the `Request` class either passed into or generated by
+	 *               `Dispatcher::run()`.
+	 * @param array $params The parameter array generated by routing the request.
+	 * @param array $options Not currently implemented.
+	 * @return object Returns a callable object which the request will be routed to.
+	 * @filter
+	 */
+	protected static function _callable($request, $params, $options) {
+		$params = compact(&#039;request&#039;, &#039;params&#039;, &#039;options&#039;);
+
+		return Filters::run(get_called_class(), __FUNCTION__, $params, function($params) {
+			$options = [&#039;request&#039; =&gt; $params[&#039;request&#039;]] + $params[&#039;options&#039;];
+			$controller = $params[&#039;params&#039;][&#039;controller&#039;];
+
+			try {
+				return Libraries::instance(&#039;controllers&#039;, $controller, $options);
+			} catch (ClassNotFoundException $e) {
+				throw new DispatchException(&quot;Controller `{$controller}` not found.&quot;, null, $e);
+			}
+		});
+	}
+
+	/**
+	 * Invokes the callable object returned by `_callable()`, and returns the results, usually a
+	 * `Response` object instance.
+	 *
+	 * @see lithium\action
+	 * @param object $callable Typically a closure or instance of `lithium\action\Controller`.
+	 * @param object $request An instance of `lithium\action\Request`.
+	 * @param array $params An array of parameters to pass to `$callable`, along with `$request`.
+	 * @return mixed Returns the return value of `$callable`, usually an instance of
+	 *         `lithium\action\Response`.
+	 * @throws lithium\action\DispatchException Throws an exception if `$callable` is not a
+	 *         `Closure`, or does not declare the PHP magic `__invoke()` method.
+	 * @filter
+	 */
+	protected static function _call($callable, $request, $params) {
+		$params = compact(&#039;callable&#039;, &#039;request&#039;, &#039;params&#039;);
+		return Filters::run(get_called_class(), __FUNCTION__, $params, function($params) {
+			if (is_callable($callable = $params[&#039;callable&#039;])) {
+				return $callable($params[&#039;request&#039;], $params[&#039;params&#039;]);
+			}
+			throw new DispatchException(&#039;Result not callable.&#039;);
+		});
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

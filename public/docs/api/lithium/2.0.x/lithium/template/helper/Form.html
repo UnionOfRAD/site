@@ -1,0 +1,1100 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\template\helper\Form – Framework API v2.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../versions.html">Versions</a><a href="../../../../../../../present.html">Presentations</a><a href="../../../../../../../support.html">Community</a><a href="../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (2.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../template.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">template</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../helper.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">helper</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Form</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../helper.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Form::__construct().html">__construct()</a>												<li class="method protected">
+				<a href="./Form::_init().html">_init()</a>												<li class="method public">
+				<a href="./Form::config().html">config()</a>												<li class="method public">
+				<a href="./Form::create().html">create()</a>												<li class="method public">
+				<a href="./Form::end().html">end()</a>												<li class="method public">
+				<a href="./Form::binding().html">binding()</a>												<li class="method public">
+				<a href="./Form::__call().html">__call()</a>												<li class="method public">
+				<a href="./Form::field().html">field()</a>												<li class="method protected">
+				<a href="./Form::_fields().html">_fields()</a>												<li class="method public">
+				<a href="./Form::button().html">button()</a>												<li class="method public">
+				<a href="./Form::submit().html">submit()</a>												<li class="method public">
+				<a href="./Form::textarea().html">textarea()</a>												<li class="method public">
+				<a href="./Form::text().html">text()</a>												<li class="method protected">
+				<a href="./Form::_datalist().html">_datalist()</a>												<li class="method public">
+				<a href="./Form::select().html">select()</a>												<li class="method protected">
+				<a href="./Form::_selectOptions().html">_selectOptions()</a>												<li class="method public">
+				<a href="./Form::checkbox().html">checkbox()</a>												<li class="method public">
+				<a href="./Form::radio().html">radio()</a>												<li class="method public">
+				<a href="./Form::password().html">password()</a>												<li class="method public">
+				<a href="./Form::hidden().html">hidden()</a>												<li class="method public">
+				<a href="./Form::label().html">label()</a>												<li class="method public">
+				<a href="./Form::error().html">error()</a>												<li class="method protected">
+				<a href="./Form::_defaults().html">_defaults()</a>												<li class="method protected">
+				<a href="./Form::_generators().html">_generators()</a>												<li class="method public inherited">
+				<a href="../Helper::escape().html">escape()</a>												<li class="method public inherited">
+				<a href="../Helper::attributes().html">attributes()</a>												<li class="method protected inherited">
+				<a href="../Helper::_attribute().html">_attribute()</a>												<li class="method protected inherited">
+				<a href="../Helper::_options().html">_options()</a>												<li class="method protected inherited">
+				<a href="../Helper::_render().html">_render()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./Form::$_strings.html">$_strings</a>												<li class="property protected">
+				<a href="./Form::$_templateMap.html">$_templateMap</a>												<li class="property protected">
+				<a href="./Form::$_binding.html">$_binding</a>												<li class="property protected">
+				<a href="./Form::$_bindingOptions.html">$_bindingOptions</a>												<li class="property public inherited">
+				<a href="../Helper::$contentMap.html">$contentMap</a>												<li class="property protected inherited">
+				<a href="../Helper::$_context.html">$_context</a>												<li class="property protected inherited">
+				<a href="../Helper::$_classes.html">$_classes</a>												<li class="property protected inherited">
+				<a href="../Helper::$_autoConfig.html">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="../Helper::$_minimized.html">$_minimized</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../template.html" class="symbol-segment">template</a>\<a href="../helper.html" class="symbol-segment">helper</a>\Form		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../Helper.html" class="extends__symbol">lithium\template\Helper</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>A helper class to facilitate generating, processing and securing HTML forms. By default, <code>Form</code>
+will simply generate HTML forms and widgets, but by creating a form with a <em>binding object</em>,
+the helper can pre-fill form input values, render error messages, and introspect column types.</p>
+					</div>
+				
+									<div class="description">
+						<p>For example, assuming you have created a <code>Posts</code> model in your application:</p>
+<p>In controller code:</p>
+<pre><code class="language-php">use app\models\Posts;
+$post = Posts::find(1);
+return compact('post');
+</code></pre>
+<p>In view code:</p>
+<pre><code class="language-php">&lt;?= $this-&gt;form-&gt;create($post) ?&gt; // Echoes a &lt;form&gt; tag and binds the helper to $post
+&lt;?= $this-&gt;form-&gt;text('title') ?&gt; // Echoes an &lt;input /&gt; element, pre-filled with $post's title
+&lt;?= $this-&gt;form-&gt;submit('Update') ?&gt; // Echoes a submit button with the title 'Update'
+&lt;?= $this-&gt;form-&gt;end() ?&gt; // Echoes a &lt;/form&gt; tag &amp; unbinds the form
+</code></pre>
+					</div>
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Form extends \lithium\template\Helper {
+
+	/**
+	 * String templates used by this helper.
+	 *
+	 * @var array
+	 */
+	protected $_strings = [
+		&#039;button&#039;         =&gt; &#039;&lt;button{:options}&gt;{:title}&lt;/button&gt;&#039;,
+		&#039;checkbox&#039;       =&gt; &#039;&lt;input type=&quot;checkbox&quot; name=&quot;{:name}&quot;{:options} /&gt;&#039;,
+		&#039;checkbox-multi&#039; =&gt; &#039;&lt;input type=&quot;checkbox&quot; name=&quot;{:name}[]&quot;{:options} /&gt;&#039;,
+		&#039;checkbox-multi-group&#039; =&gt; &#039;{:raw}&#039;,
+		&#039;error&#039;          =&gt; &#039;&lt;div{:options}&gt;{:content}&lt;/div&gt;&#039;,
+		&#039;errors&#039;         =&gt; &#039;{:raw}&#039;,
+		&#039;input&#039;          =&gt; &#039;&lt;input type=&quot;{:type}&quot; name=&quot;{:name}&quot;{:options} /&gt;&#039;,
+		&#039;file&#039;           =&gt; &#039;&lt;input type=&quot;file&quot; name=&quot;{:name}&quot;{:options} /&gt;&#039;,
+		&#039;form&#039;           =&gt; &#039;&lt;form action=&quot;{:url}&quot;{:options}&gt;{:append}&#039;,
+		&#039;form-end&#039;       =&gt; &#039;&lt;/form&gt;&#039;,
+		&#039;hidden&#039;         =&gt; &#039;&lt;input type=&quot;hidden&quot; name=&quot;{:name}&quot;{:options} /&gt;&#039;,
+		&#039;field&#039;          =&gt; &#039;&lt;div{:wrap}&gt;{:label}{:input}{:datalist}{:error}&lt;/div&gt;&#039;,
+		&#039;field-checkbox&#039; =&gt; &#039;&lt;div{:wrap}&gt;{:input}{:label}{:error}&lt;/div&gt;&#039;,
+		&#039;field-radio&#039;    =&gt; &#039;&lt;div{:wrap}&gt;{:input}{:label}{:error}&lt;/div&gt;&#039;,
+		&#039;label&#039;          =&gt; &#039;&lt;label for=&quot;{:id}&quot;{:options}&gt;{:title}&lt;/label&gt;&#039;,
+		&#039;legend&#039;         =&gt; &#039;&lt;legend&gt;{:content}&lt;/legend&gt;&#039;,
+		&#039;option-group&#039;   =&gt; &#039;&lt;optgroup label=&quot;{:label}&quot;{:options}&gt;{:raw}&lt;/optgroup&gt;&#039;,
+		&#039;password&#039;       =&gt; &#039;&lt;input type=&quot;password&quot; name=&quot;{:name}&quot;{:options} /&gt;&#039;,
+		&#039;radio&#039;          =&gt; &#039;&lt;input type=&quot;radio&quot; name=&quot;{:name}&quot;{:options} /&gt;&#039;,
+		&#039;select&#039;         =&gt; &#039;&lt;select name=&quot;{:name}&quot;{:options}&gt;{:raw}&lt;/select&gt;&#039;,
+		&#039;select-empty&#039;   =&gt; &#039;&lt;option value=&quot;&quot;{:options}&gt;&amp;nbsp;&lt;/option&gt;&#039;,
+		&#039;select-multi&#039;   =&gt; &#039;&lt;select name=&quot;{:name}[]&quot;{:options}&gt;{:raw}&lt;/select&gt;&#039;,
+		&#039;select-option&#039;  =&gt; &#039;&lt;option value=&quot;{:value}&quot;{:options}&gt;{:title}&lt;/option&gt;&#039;,
+		&#039;submit&#039;         =&gt; &#039;&lt;input type=&quot;submit&quot; value=&quot;{:title}&quot;{:options} /&gt;&#039;,
+		&#039;submit-image&#039;   =&gt; &#039;&lt;input type=&quot;image&quot; src=&quot;{:url}&quot;{:options} /&gt;&#039;,
+		&#039;text&#039;           =&gt; &#039;&lt;input type=&quot;text&quot; name=&quot;{:name}&quot;{:options} /&gt;&#039;,
+		&#039;textarea&#039;       =&gt; &#039;&lt;textarea name=&quot;{:name}&quot;{:options}&gt;{:value}&lt;/textarea&gt;&#039;,
+		&#039;fieldset&#039;       =&gt; &#039;&lt;fieldset{:options}&gt;&lt;legend&gt;{:content}&lt;/legend&gt;{:raw}&lt;/fieldset&gt;&#039;,
+		&#039;datalist&#039;       =&gt; &#039;&lt;datalist{:options}&gt;{:raw}&lt;/datalist&gt;&#039;,
+		&#039;datalist-option&#039; =&gt; &#039;&lt;option value=&quot;{:value}&quot;&gt;&lt;/option&gt;&#039;
+	];
+
+	/**
+	 * Maps method names to template string names, allowing the default template strings to be set
+	 * permanently on a per-method basis.
+	 *
+	 * For example, if all text input fields should be wrapped in `&lt;span /&gt;` tags, you can configure
+	 * the template string mappings per the following:
+	 *
+	 * ```
+	 * $this-&gt;form-&gt;config([&#039;templates&#039; =&gt; [
+	 * 	&#039;text&#039; =&gt; &#039;&lt;span&gt;&lt;input type=&quot;text&quot; name=&quot;{:name}&quot;{:options} /&gt;&lt;/span&gt;&#039;
+	 * ]]);
+	 * ```
+	 *
+	 * Alternatively, you can re-map one type as another. This is useful if, for example, you
+	 * include your own helper with custom form template strings which do not match the default
+	 * template string names.
+	 *
+	 * ```
+	 * // Renders all password fields as text fields
+	 * $this-&gt;form-&gt;config([&#039;templates&#039; =&gt; [&#039;password&#039; =&gt; &#039;text&#039;]]);
+	 * ```
+	 *
+	 * @var array
+	 * @see lithium\template\helper\Form::config()
+	 */
+	protected $_templateMap = [
+		&#039;create&#039; =&gt; &#039;form&#039;,
+		&#039;end&#039; =&gt; &#039;form-end&#039;
+	];
+
+	/**
+	 * The data object or list of data objects to which the current form is bound. In order to
+	 * be a custom data object, a class must implement the following methods:
+	 *
+	 * - schema(): Returns an array defining the objects fields and their data types.
+	 * - data(): Returns an associative array of the data that this object represents.
+	 * - errors(): Returns an associate array of validation errors for the current data set, where
+	 *             the keys match keys from `schema()`, and the values are either strings (in cases
+	 *             where a field only has one error) or an array (in case of multiple errors),
+	 *
+	 * For an example of how to implement these methods, see the `lithium\data\Entity` object.
+	 *
+	 * @see lithium\data\Entity
+	 * @see lithium\data\Collection
+	 * @see lithium\template\helper\Form::create()
+	 * @var mixed A single data object, a `Collection` of multiple data objects, or an array of data
+	 *      objects/`Collection`s.
+	 */
+	protected $_binding = null;
+
+	/**
+	 * Array of options used to create the form to which `$_binding` is currently bound.
+	 * Overwritten when `end()` is called.
+	 *
+	 * @var array
+	 */
+	protected $_bindingOptions = [];
+
+	/**
+	 * Constructor.
+	 *
+	 * @param array $config Configuration options.
+	 * @return void
+	 */
+	public function __construct(array $config = []) {
+		$defaults = [
+			&#039;base&#039; =&gt; [],
+			&#039;text&#039; =&gt; [],
+			&#039;textarea&#039; =&gt; [],
+			&#039;select&#039; =&gt; [&#039;multiple&#039; =&gt; false],
+			&#039;attributes&#039; =&gt; [
+				&#039;id&#039; =&gt; function($method, $name, $options) {
+					if (in_array($method, [&#039;create&#039;, &#039;end&#039;, &#039;label&#039;, &#039;error&#039;])) {
+						return;
+					}
+					if (!$name || ($method === &#039;hidden&#039; &amp;&amp; $name === &#039;_method&#039;)) {
+						return;
+					}
+					$info = $this-&gt;binding($name);
+					$model = $info-&gt;class;
+					$id = Inflector::camelize(Inflector::slug($info-&gt;name));
+					return $model ? basename(str_replace(&#039;\\&#039;, &#039;/&#039;, $model)) . $id : $id;
+				},
+				&#039;name&#039; =&gt; function($method, $name, $options) {
+					if (!strpos($name ?? &#039;&#039;, &#039;.&#039;)) {
+						return $name;
+					}
+					$name = explode(&#039;.&#039;, $name);
+					$first = array_shift($name);
+					return $first . &#039;[&#039; . join(&#039;][&#039;, $name) . &#039;]&#039;;
+				}
+			],
+			&#039;binding&#039; =&gt; function($object, $name = null) {
+				$result = compact(&#039;name&#039;) + [
+					&#039;data&#039; =&gt; null, &#039;errors&#039; =&gt; null, &#039;class&#039; =&gt; null
+				];
+
+				if (is_object($object)) {
+					$result = compact(&#039;name&#039;) + [
+						&#039;data&#039;   =&gt; $object-&gt;data($name),
+						&#039;errors&#039; =&gt; $object-&gt;errors($name),
+						&#039;class&#039;  =&gt; $object-&gt;model()
+					];
+				}
+				return (object) $result;
+			}
+		];
+		parent::__construct(Set::merge($defaults, $config));
+	}
+
+	/**
+	 * Object initializer. Adds a content handler for the `wrap` key in the `field()` method, which
+	 * converts an array of properties to an attribute string.
+	 *
+	 * @return void
+	 */
+	protected function _init() {
+		parent::_init();
+
+		if ($this-&gt;_context) {
+			$this-&gt;_context-&gt;handlers([&#039;wrap&#039; =&gt; &#039;attributes&#039;]);
+		}
+	}
+
+	/**
+	 * Allows you to configure a default set of options which are included on a per-method basis,
+	 * and configure method template overrides.
+	 *
+	 * To force all `&lt;label /&gt;` elements to have a default `class` attribute value of `&quot;foo&quot;`,
+	 * simply do the following:
+	 *
+	 * ```
+	 * $this-&gt;form-&gt;config([&#039;label&#039; =&gt; [&#039;class&#039; =&gt; &#039;foo&#039;]]);
+	 * ```
+	 *
+	 * Note that this can be overridden on a case-by-case basis, and when overriding, values are
+	 * not merged or combined. Therefore, if you wanted a particular `&lt;label /&gt;` to have both `foo`
+	 * and `bar` as classes, you would have to specify `&#039;class&#039; =&gt; &#039;foo bar&#039;`.
+	 *
+	 * You can also use this method to change the string template that a method uses to render its
+	 * content. For example, the default template for rendering a checkbox is
+	 * `&#039;&lt;input type=&quot;checkbox&quot; name=&quot;{:name}&quot;{:options} /&gt;&#039;`. However, suppose you implemented your
+	 * own custom UI elements, and you wanted to change the markup used, you could do the following:
+	 *
+	 * ```
+	 * $this-&gt;form-&gt;config([&#039;templates&#039; =&gt; [
+	 * 	&#039;checkbox&#039; =&gt; &#039;&lt;div id=&quot;{:name}&quot; class=&quot;ui-checkbox-element&quot;{:options}&gt;&lt;/div&gt;&#039;
+	 * ]]);
+	 * ```
+	 *
+	 * Now, for any calls to `$this-&gt;form-&gt;checkbox()`, your custom markup template will be applied.
+	 * This works for any `Form` method that renders HTML elements.
+	 *
+	 * @see lithium\template\helper\Form::$_templateMap
+	 * @param array $config An associative array where the keys are `Form` method names (or
+	 *        `&#039;templates&#039;`, to include a template-overriding sub-array), and the
+	 *        values are arrays of configuration options to be included in the `$options`
+	 *        parameter of each method specified.
+	 * @return array Returns an array containing the currently set per-method configurations, and
+	 *         an array of the currently set template overrides (in the `&#039;templates&#039;` array key).
+	 */
+	public function config(array $config = []) {
+		if (!$config) {
+			$keys = [&#039;base&#039; =&gt; &#039;&#039;, &#039;text&#039; =&gt; &#039;&#039;, &#039;textarea&#039; =&gt; &#039;&#039;, &#039;attributes&#039; =&gt; &#039;&#039;];
+			return [&#039;templates&#039; =&gt; $this-&gt;_templateMap] + array_intersect_key(
+				$this-&gt;_config, $keys
+			);
+		}
+		if (isset($config[&#039;templates&#039;])) {
+			$this-&gt;_templateMap = $config[&#039;templates&#039;] + $this-&gt;_templateMap;
+			unset($config[&#039;templates&#039;]);
+		}
+		return ($this-&gt;_config = Set::merge($this-&gt;_config, $config)) + [
+			&#039;templates&#039; =&gt; $this-&gt;_templateMap
+		];
+	}
+
+	/**
+	 * Creates an HTML form, and optionally binds it to a data object which contains information on
+	 * how to render form fields, any data to pre-populate the form with, and any validation errors.
+	 * Typically, a data object will be a `Record` object returned from a `Model`, but you can
+	 * define your own custom objects as well. For more information on custom data objects, see
+	 * `lithium\template\helper\Form::$_binding`.
+	 *
+	 * @see lithium\template\helper\Form::$_binding
+	 * @see lithium\data\Entity
+	 * @param mixed $bindings List of objects, or the object to bind the form to. This is usually
+	 *        an instance of `Record` or `Document`, or some other class that extends
+	 *        `lithium\data\Entity`.
+	 * @param array $options Other parameters for creating the form. Available options are:
+	 *        - `&#039;url&#039;` _mixed_: A string URL or URL array parameters defining where in the
+	 *          application the form should be submitted to.
+	 *        - `&#039;action&#039;` _string_: This is a shortcut to be used if you wish to only
+	 *          specify the name of the action to submit to, and use the default URL
+	 *          parameters (i.e. the current controller, etc.) for generating the remainder
+	 *          of the URL. Ignored if the `&#039;url&#039;` key is set.
+	 *        - `&#039;type&#039;` _string_: Currently the only valid option is `&#039;file&#039;`. Set this if
+	 *          the form will be used for file uploads.
+	 *        - `&#039;method&#039;` _string_: Represents the HTTP method with which the form will be
+	 *          submitted (`&#039;get&#039;`, `&#039;post&#039;`, `&#039;put&#039;` or `&#039;delete&#039;`). If `&#039;put&#039;` or
+	 *          `&#039;delete&#039;`, the request method is simulated using a hidden input field.
+	 * @return string Returns a `&lt;form /&gt;` open tag with the `action` attribute defined by either
+	 *         the `&#039;action&#039;` or `&#039;url&#039;` options (defaulting to the current page if none is
+	 *         specified), the HTTP method is defined by the `&#039;method&#039;` option, and any HTML
+	 *         attributes passed in `$options`.
+	 * @filter
+	 */
+	public function create($bindings = null, array $options = []) {
+		$request = $this-&gt;_context ? $this-&gt;_context-&gt;request() : null;
+		$binding = is_array($bindings) ? reset($bindings) : $bindings;
+
+		$defaults = [
+			&#039;url&#039; =&gt; $request ? $request-&gt;params : [],
+			&#039;type&#039; =&gt; null,
+			&#039;action&#039; =&gt; null,
+			&#039;method&#039; =&gt; $binding ? ($binding-&gt;exists() ? &#039;put&#039; : &#039;post&#039;) : &#039;post&#039;
+		];
+
+		list(, $options, $tpl) = $this-&gt;_defaults(__FUNCTION__, null, $options);
+		list($scope, $options) = $this-&gt;_options($defaults, $options);
+
+		$params = compact(&#039;scope&#039;, &#039;options&#039;, &#039;bindings&#039;);
+		$extra = [&#039;method&#039; =&gt; __METHOD__] + compact(&#039;tpl&#039;, &#039;defaults&#039;);
+
+		return Filters::run($this, __FUNCTION__, $params, function($params) use ($extra) {
+			$scope = $params[&#039;scope&#039;];
+			$options = $params[&#039;options&#039;];
+			$this-&gt;_binding = $params[&#039;bindings&#039;];
+			$append = null;
+			$scope[&#039;method&#039;] = strtolower($scope[&#039;method&#039;]);
+
+			if ($scope[&#039;type&#039;] === &#039;file&#039;) {
+				if ($scope[&#039;method&#039;] === &#039;get&#039;) {
+					$scope[&#039;method&#039;] = &#039;post&#039;;
+				}
+				$options[&#039;enctype&#039;] = &#039;multipart/form-data&#039;;
+			}
+
+			if (!($scope[&#039;method&#039;] === &#039;get&#039; || $scope[&#039;method&#039;] === &#039;post&#039;)) {
+				$append = $this-&gt;hidden(&#039;_method&#039;, [&#039;value&#039; =&gt; strtoupper($scope[&#039;method&#039;])]);
+				$scope[&#039;method&#039;] = &#039;post&#039;;
+			}
+
+			$url = $scope[&#039;action&#039;] ? [&#039;action&#039; =&gt; $scope[&#039;action&#039;]] : $scope[&#039;url&#039;];
+			$options[&#039;method&#039;] = strtolower($scope[&#039;method&#039;]);
+			$this-&gt;_bindingOptions = $scope + $options;
+
+			return $this-&gt;_render($extra[&#039;method&#039;], $extra[&#039;tpl&#039;],
+				compact(&#039;url&#039;, &#039;options&#039;, &#039;append&#039;)
+			);
+		});
+	}
+
+	/**
+	 * Echoes a closing `&lt;/form&gt;` tag and unbinds the `Form` helper from any `Record` or `Document`
+	 * object used to generate the corresponding form.
+	 *
+	 * @return string Returns a closing `&lt;/form&gt;` tag.
+	 * @filter
+	 */
+	public function end() {
+		list(, $options, $template) = $this-&gt;_defaults(__FUNCTION__, null, []);
+		$params = compact(&#039;options&#039;, &#039;template&#039;);
+
+		$result = Filters::run($this, __FUNCTION__, $params, function($params) {
+			$this-&gt;_bindingOptions = [];
+			return $this-&gt;_render(&#039;end&#039;, $params[&#039;template&#039;], []);
+		});
+		unset($this-&gt;_binding);
+		$this-&gt;_binding = null;
+		return $result;
+	}
+
+	/**
+	 * Returns the entity that the `Form` helper is currently bound to.
+	 *
+	 * @see lithium\template\helper\Form::$_binding
+	 * @param string $name If specified, match this field name against the list of bindings
+	 * @param string $key If $name specified, where to store relevant $_binding key
+	 * @return object Returns an object, usually an instance of `lithium\data\Entity`.
+	 */
+	public function binding($name = null) {
+		if (!$this-&gt;_binding) {
+			return $this-&gt;_config[&#039;binding&#039;](null, $name);
+		}
+
+		$binding = $this-&gt;_binding;
+		$model = null;
+		$key = $name;
+
+		if (is_array($binding)) {
+			switch (true) {
+				case strpos($name, &#039;.&#039;):
+					list($model, $key) = explode(&#039;.&#039;, $name, 2);
+					$binding = isset($binding[$model]) ? $binding[$model] : reset($binding);
+				break;
+				case isset($binding[$name]):
+					$binding = $binding[$name];
+					$key = null;
+				break;
+				default:
+					$binding = reset($binding);
+				break;
+			}
+		}
+		return $key ? $this-&gt;_config[&#039;binding&#039;]($binding, $key) : $binding;
+	}
+
+	/**
+	 * Implements alternative input types as method calls against `Form` helper. Enables the
+	 * generation of HTML5 input types and other custom input types:
+	 *
+	 * ``` embed:lithium\tests\cases\template\helper\FormTest::testCustomInputTypes(1-2) ```
+	 *
+	 * @param string $type The method called, which represents the `type` attribute of the
+	 *        `&lt;input /&gt;` tag.
+	 * @param array $params An array of method parameters passed to the method call. The first
+	 *        element should be the name of the input field, and the second should be an array
+	 *        of element attributes.
+	 * @return string Returns an `&lt;input /&gt;` tag of the type specified in `$type`.
+	 */
+	public function __call($type, array $params = []) {
+		$params += [null, []];
+		list($name, $options) = $params;
+		list($name, $options, $template) = $this-&gt;_defaults($type, $name, $options);
+		$template = $this-&gt;_context-&gt;strings($template) ? $template : &#039;input&#039;;
+		return $this-&gt;_render($type, $template, compact(&#039;type&#039;, &#039;name&#039;, &#039;options&#039;));
+	}
+
+	/**
+	 * Generates a form field with a label, input, and error message (if applicable), all contained
+	 * within a wrapping element.
+	 *
+	 * ```
+	 *  echo $this-&gt;form-&gt;field(&#039;name&#039;);
+	 *  echo $this-&gt;form-&gt;field(&#039;present&#039;, [&#039;type&#039; =&gt; &#039;checkbox&#039;]);
+	 *  echo $this-&gt;form-&gt;field([&#039;email&#039; =&gt; &#039;Enter a valid email&#039;]);
+	 *  echo $this-&gt;form-&gt;field([&#039;name&#039;,&#039;email&#039;,&#039;phone&#039;], [&#039;div&#039; =&gt; false]);
+	 * ```
+	 *
+	 * @param mixed $name The name of the field to render. If the form was bound to an object
+	 *        passed in `create()`, `$name` should be the name of a field in that object.
+	 *        Otherwise, can be any arbitrary field name, as it will appear in POST data.
+	 *        Alternatively supply an array of fields that will use the same options
+	 *        [$field1 =&gt; $label1, $field2, $field3 =&gt; $label3]
+	 * @param array $options Rendering options for the form field. The available options are as
+	 *        follows:
+	 *        - `&#039;label&#039;` _mixed_: A string or array defining the label text and / or
+	 *          parameters. By default, the label text is a human-friendly version of `$name`.
+	 *          However, you can specify the label manually as a string, or both the label
+	 *          text and options as an array, i.e.:
+	 *          `[&#039;Your Label Title&#039; =&gt; [&#039;class&#039; =&gt; &#039;foo&#039;, &#039;other&#039; =&gt; &#039;options&#039;]]`.
+	 *        - `&#039;type&#039;` _string_: The type of form field to render. Available default options
+	 *          are: `&#039;text&#039;`, `&#039;textarea&#039;`, `&#039;select&#039;`, `&#039;checkbox&#039;`, `&#039;password&#039;` or
+	 *          `&#039;hidden&#039;`, as well as any arbitrary type (i.e. HTML5 form fields).
+	 *        - `&#039;template&#039;` _string_: Defaults to `&#039;template&#039;`, but can be set to any named
+	 *          template string, or an arbitrary HTML fragment. For example, to change the
+	 *          default wrapper tag from `&lt;div /&gt;` to `&lt;li /&gt;`, you can pass the following:
+	 *          `&#039;&lt;li{:wrap}&gt;{:label}{:input}{:error}&lt;/li&gt;&#039;`.
+	 *        - `&#039;wrap&#039;` _array_: An array of HTML attributes which will be embedded in the
+	 *          wrapper tag.
+	 *        - `list` _array|string_: If `&#039;type&#039;` is set to `&#039;select&#039;`, `&#039;list&#039;` is an array of
+	 *          key/value pairs representing the `$list` parameter of the `select()` method.
+	 *          If `&#039;type&#039;` is set to `&#039;text&#039;`, `&#039;list&#039;` is used to render/reference a corresponding
+	 *          `&lt;datalist&gt;` element. It then can either be an array of option values or
+	 *          a string to reference an existing `&lt;datalist&gt;`.
+	 *        - `error` _array|string|boolean_: Allows to control rendering of error messages.
+	 *          By setting this option to `false` any messages are disabled. When an array
+	 *          mapping failed rule names to messages, will use these alternative message
+	 *          instead of the ones provided when the validation was originally defined (i.e
+	 *          inside the model). The array may contain a `&#039;default&#039;` key which value will
+	 *          be used as a fallback message. In absence of a default message, the original
+	 *          messages get rendered instead. When providing a string it will be used for
+	 *          any error messages.
+	 * @return string Returns a form input (the input type is based on the `&#039;type&#039;` option), with
+	 *         label and error message, wrapped in a `&lt;div /&gt;` element.
+	 */
+	public function field($name, array $options = []) {
+		if (is_array($name)) {
+			return $this-&gt;_fields($name, $options);
+		}
+		$method = __FUNCTION__;
+		if (isset($options[&#039;type&#039;]) &amp;&amp; !empty($this-&gt;_config[&#039;field-&#039; . $options[&#039;type&#039;]])) {
+			$method = &#039;field-&#039; . $options[&#039;type&#039;];
+		}
+		list(, $options, $template) = $this-&gt;_defaults($method, $name, $options);
+		$defaults = [
+			&#039;label&#039; =&gt; null,
+			&#039;type&#039; =&gt; isset($options[&#039;list&#039;]) ? &#039;select&#039; : &#039;text&#039;,
+			&#039;template&#039; =&gt; $template,
+			&#039;wrap&#039; =&gt; [],
+			&#039;list&#039; =&gt; null,
+			&#039;error&#039; =&gt; []
+		];
+		list($options, $field) = $this-&gt;_options($defaults, $options);
+
+		$label = $input = null;
+		$wrap = $options[&#039;wrap&#039;];
+		$type = $options[&#039;type&#039;];
+		$list = $options[&#039;list&#039;];
+		$error = $options[&#039;error&#039;];
+		$template = $options[&#039;template&#039;];
+		$notText = $template === &#039;field&#039; &amp;&amp; $type !== &#039;text&#039;;
+
+		if ($notText &amp;&amp; $this-&gt;_context-&gt;strings(&#039;field-&#039; . $type)) {
+			$template = &#039;field-&#039; . $type;
+		}
+		if (($options[&#039;label&#039;] === null || $options[&#039;label&#039;]) &amp;&amp; $options[&#039;type&#039;] !== &#039;hidden&#039;) {
+			if (!$options[&#039;label&#039;]) {
+				$options[&#039;label&#039;] = Inflector::humanize(preg_replace(&#039;/[\[\]\.]/&#039;, &#039;_&#039;, $name));
+			}
+			$label = $this-&gt;label(isset($options[&#039;id&#039;]) ? $options[&#039;id&#039;] : &#039;&#039;, $options[&#039;label&#039;]);
+		}
+
+		$datalist = null;
+		if ($type === &#039;text&#039; &amp;&amp; $list) {
+			if (is_array($list)) {
+				list($list, $datalist) = $this-&gt;_datalist($list, $options);
+			}
+			$field[&#039;list&#039;] = $list;
+		}
+
+		$call = ($type === &#039;select&#039;) ? [$name, $list, $field] : [$name, $field];
+		$input = call_user_func_array([$this, $type], $call);
+
+		if ($error !== false &amp;&amp; $this-&gt;_binding) {
+			$error = $this-&gt;error($name, null, [&#039;messages&#039; =&gt; $error]);
+		} else {
+			$error = null;
+		}
+		return $this-&gt;_render(__METHOD__, $template, compact(
+			&#039;wrap&#039;, &#039;label&#039;, &#039;input&#039;, &#039;datalist&#039;, &#039;error&#039;
+		));
+	}
+
+	/**
+	 * Helper method used by `Form::field()` for iterating over an array of multiple fields.
+	 *
+	 * @see lithium\template\helper\Form::field()
+	 * @param array $fields An array of fields to render.
+	 * @param array $options The array of options to apply to all fields in the `$fields` array. See
+	 *        the `$options` parameter of the `field` method for more information.
+	 * @return string Returns the fields rendered by `field()`, each separated by a newline.
+	 */
+	protected function _fields(array $fields, array $options = []) {
+		$result = [];
+
+		foreach ($fields as $field =&gt; $label) {
+			if (is_numeric($field)) {
+				$result[] = $this-&gt;field($label, $options);
+			} else {
+				$result[] = $this-&gt;field($field, compact(&#039;label&#039;) + $options);
+			}
+		}
+		return join(&quot;\n&quot;, $result);
+	}
+
+	/**
+	 * Generates an HTML button `&lt;button&gt;&lt;/button&gt;`.
+	 *
+	 * @param string $title The title of the button.
+	 * @param array $options Any options passed are converted to HTML attributes within the
+	 *        `&lt;button&gt;&lt;/button&gt;` tag.
+	 * @return string Returns a `&lt;button&gt;&lt;/button&gt;` tag with the given title and HTML attributes.
+	 */
+	public function button($title = null, array $options = []) {
+		$defaults = [&#039;escape&#039; =&gt; true];
+		list($scope, $options) = $this-&gt;_options($defaults, $options);
+		list($title, $options, $template) = $this-&gt;_defaults(__METHOD__, $title, $options);
+
+		$arguments = compact(&#039;title&#039;, &#039;options&#039;);
+		return $this-&gt;_render(__METHOD__, &#039;button&#039;, $arguments, $scope);
+	}
+
+	/**
+	 * Generates an HTML `&lt;input type=&quot;submit&quot; /&gt;` object.
+	 *
+	 * @param string $title The title of the submit button.
+	 * @param array $options Any options passed are converted to HTML attributes within the
+	 *        `&lt;input /&gt;` tag.
+	 * @return string Returns a submit `&lt;input /&gt;` tag with the given title and HTML attributes.
+	 */
+	public function submit($title = null, array $options = []) {
+		list($name, $options, $template) = $this-&gt;_defaults(__FUNCTION__, null, $options);
+		return $this-&gt;_render(__METHOD__, $template, compact(&#039;title&#039;, &#039;options&#039;));
+	}
+
+	/**
+	 * Generates an HTML `&lt;textarea&gt;...&lt;/textarea&gt;` object.
+	 *
+	 * @param string $name The name of the field.
+	 * @param array $options The options to be used when generating the `&lt;textarea /&gt;` tag pair,
+	 *        which are as follows:
+	 *        - `&#039;value&#039;` _string_: The content value of the field.
+	 *        - Any other options specified are rendered as HTML attributes of the element.
+	 * @return string Returns a `&lt;textarea&gt;` tag with the given name and HTML attributes.
+	 */
+	public function textarea($name, array $options = []) {
+		list($name, $options, $template) = $this-&gt;_defaults(__FUNCTION__, $name, $options);
+		list($scope, $options) = $this-&gt;_options([&#039;value&#039; =&gt; null], $options);
+		$value = isset($scope[&#039;value&#039;]) ? $scope[&#039;value&#039;] : &#039;&#039;;
+		return $this-&gt;_render(__METHOD__, $template, compact(&#039;name&#039;, &#039;options&#039;, &#039;value&#039;));
+	}
+
+	/**
+	 * Generates an HTML `&lt;input type=&quot;text&quot; /&gt;` object.
+	 *
+	 * @param string $name The name of the field.
+	 * @param array $options All options passed are rendered as HTML attributes.
+	 * @return string Returns a `&lt;input /&gt;` tag with the given name and HTML attributes.
+	 */
+	public function text($name, array $options = []) {
+		list($name, $options, $template) = $this-&gt;_defaults(__FUNCTION__, $name, $options);
+		return $this-&gt;_render(__METHOD__, $template, compact(&#039;name&#039;, &#039;options&#039;));
+	}
+
+	/**
+	 * Generates an HTML `&lt;datalist&gt;&lt;/datalist&gt;` object with `&lt;option&gt;` elements.
+	 *
+	 * @link https://www.w3.org/wiki/HTML/Elements/datalist
+	 * @param array $list Valuues, which will be used to render the options of the datalist.
+	 * @param array $scope An array of options passed to the parent scope.
+	 * @return string Returns a `&lt;datalist&gt;` tag with `&lt;option&gt;` elements.
+	 */
+	protected function _datalist(array $list, array $scope) {
+		$options = [];
+
+		if (isset($scope[&#039;id&#039;])) {
+			$id = $options[&#039;id&#039;] = $scope[&#039;id&#039;] . &#039;List&#039;;
+		}
+		$raw = array_reduce($list, function($carry, $value) {
+			return $carry .= $this-&gt;_render(__METHOD__, &#039;datalist-option&#039;, compact(&#039;value&#039;));
+		}, &#039;&#039;);
+
+		return [
+			isset($options[&#039;id&#039;]) ? $options[&#039;id&#039;] : null,
+			$this-&gt;_render(__METHOD__, &#039;datalist&#039;, compact(&#039;options&#039;, &#039;raw&#039;))
+		];
+	}
+
+	/**
+	 * Generates a `&lt;select /&gt;` list using the `$list` parameter for the `&lt;option /&gt;` tags. The
+	 * default selection will be set to the value of `$options[&#039;value&#039;]`, if specified.
+	 *
+	 * For example:
+	 * ```
+	 * $this-&gt;form-&gt;select(&#039;colors&#039;, [1 =&gt; &#039;red&#039;, 2 =&gt; &#039;green&#039;, 3 =&gt; &#039;blue&#039;], [
+	 * 	&#039;id&#039; =&gt; &#039;Colors&#039;, &#039;value&#039; =&gt; 2
+	 * ]);
+	 * // Renders a &#039;&lt;select /&gt;&#039; list with options &#039;red&#039;, &#039;green&#039; and &#039;blue&#039;, with the &#039;green&#039;
+	 * // option as the selection
+	 * ```
+	 *
+	 * @param string $name The `name` attribute of the `&lt;select /&gt;` element.
+	 * @param array $list An associative array of key/value pairs, which will be used to render the
+	 *        list of options.
+	 * @param array $options Any HTML attributes that should be associated with the `&lt;select /&gt;`
+	 *        element. If the `&#039;value&#039;` key is set, this will be the value of the option
+	 *        that is selected by default.
+	 * @return string Returns an HTML `&lt;select /&gt;` element.
+	 */
+	public function select($name, $list = [], array $options = []) {
+		$defaults = [&#039;empty&#039; =&gt; false, &#039;value&#039; =&gt; null];
+		list($name, $options, $template) = $this-&gt;_defaults(__FUNCTION__, $name, $options);
+		list($scope, $options) = $this-&gt;_options($defaults, $options);
+
+		if ($scope[&#039;empty&#039;]) {
+			$list = [&#039;&#039; =&gt; ($scope[&#039;empty&#039;] === true) ? &#039;&#039; : $scope[&#039;empty&#039;]] + $list;
+		}
+		if ($template === __FUNCTION__ &amp;&amp; $scope[&#039;multiple&#039;]) {
+			$template = &#039;select-multi&#039;;
+		}
+		$raw = $this-&gt;_selectOptions($list, $scope);
+		return $this-&gt;_render(__METHOD__, $template, compact(&#039;name&#039;, &#039;options&#039;, &#039;raw&#039;));
+	}
+
+	/**
+	 * Generator method used by `select()` to produce `&lt;option /&gt;` and `&lt;optgroup /&gt;` elements.
+	 * Generally, this method should not need to be called directly, but through `select()`.
+	 *
+	 * @param array $list Either a flat key/value array of select menu options, or an array which
+	 *        contains key/value elements and/or elements where the keys are `&lt;optgroup /&gt;`
+	 *        titles and the values are sub-arrays of key/value pairs representing nested
+	 *        `&lt;option /&gt;` elements.
+	 * @param array $scope An array of options passed to the parent scope, including the currently
+	 *        selected value of the associated form element.
+	 * @return string Returns a string of `&lt;option /&gt;` and (optionally) `&lt;optgroup /&gt;` tags to be
+	 *         embedded in a select element.
+	 */
+	protected function _selectOptions(array $list, array $scope) {
+		$result = &quot;&quot;;
+
+		foreach ($list as $value =&gt; $title) {
+			if (is_array($title)) {
+				$label = $value;
+				$options = [];
+
+				$raw = $this-&gt;_selectOptions($title, $scope);
+				$params = compact(&#039;label&#039;, &#039;options&#039;, &#039;raw&#039;);
+				$result .= $this-&gt;_render(&#039;select&#039;, &#039;option-group&#039;, $params);
+				continue;
+			}
+			$selected = (
+				(is_array($scope[&#039;value&#039;]) &amp;&amp; in_array($value, $scope[&#039;value&#039;])) ||
+				($scope[&#039;empty&#039;] &amp;&amp; empty($scope[&#039;value&#039;]) &amp;&amp; $value === &#039;&#039;) ||
+				(is_scalar($scope[&#039;value&#039;]) &amp;&amp; ((string) $scope[&#039;value&#039;] === (string) $value))
+			);
+			$options = $selected ? [&#039;selected&#039; =&gt; true] : [];
+			$params = compact(&#039;value&#039;, &#039;title&#039;, &#039;options&#039;);
+			$result .= $this-&gt;_render(&#039;select&#039;, &#039;select-option&#039;,  $params);
+		}
+		return $result;
+	}
+
+	/**
+	 * Generates an HTML `&lt;input type=&quot;checkbox&quot; /&gt;` object.
+	 *
+	 * @param string $name The name of the field.
+	 * @param array $options Options to be used when generating the checkbox `&lt;input /&gt;` element:
+	 *        - `&#039;checked&#039;` _boolean_: Whether or not the field should be checked by default.
+	 *        - `&#039;value&#039;` _mixed_: if specified, it will be used as the &#039;value&#039; html
+	 *          attribute and no hidden input field will be added.
+	 *        - Any other options specified are rendered as HTML attributes of the element.
+	 * @return string Returns a `&lt;input /&gt;` tag with the given name and HTML attributes.
+	 */
+	public function checkbox($name, array $options = []) {
+		$defaults = [&#039;value&#039; =&gt; &#039;1&#039;, &#039;hidden&#039; =&gt; true];
+		$options += $defaults;
+		$default = $options[&#039;value&#039;];
+		$key = $name;
+		$out = &#039;&#039;;
+
+		list($name, $options, $template) = $this-&gt;_defaults(__FUNCTION__, $name, $options);
+		list($scope, $options) = $this-&gt;_options($defaults, $options);
+
+		if (!isset($options[&#039;checked&#039;])) {
+			$options[&#039;checked&#039;] = ($this-&gt;binding($key)-&gt;data == $default);
+		}
+		if ($scope[&#039;hidden&#039;]) {
+			$out = $this-&gt;hidden($name, [&#039;value&#039; =&gt; &#039;&#039;, &#039;id&#039; =&gt; false]);
+		}
+		$options[&#039;value&#039;] = $scope[&#039;value&#039;];
+		return $out . $this-&gt;_render(__METHOD__, $template, compact(&#039;name&#039;, &#039;options&#039;));
+	}
+
+	/**
+	 * Generates an HTML `&lt;input type=&quot;radio&quot; /&gt;` object.
+	 *
+	 * @param string $name The name of the field
+	 * @param array $options All options to be used when generating the radio `&lt;input /&gt;` element:
+	 *        - `&#039;checked&#039;` _boolean_: Whether or not the field should be selected by default.
+	 *        - `&#039;value&#039;` _mixed_: if specified, it will be used as the &#039;value&#039; html
+	 *          attribute. Defaults to `1`
+	 *        - Any other options specified are rendered as HTML attributes of the element.
+	 * @return string Returns a `&lt;input /&gt;` tag with the given name and attributes
+	 */
+	public function radio($name, array $options = []) {
+		$defaults = [&#039;value&#039; =&gt; &#039;1&#039;];
+		$options += $defaults;
+		$default = $options[&#039;value&#039;];
+		$key = $name;
+
+		list($name, $options, $template) = $this-&gt;_defaults(__FUNCTION__, $name, $options);
+		list($scope, $options) = $this-&gt;_options($defaults, $options);
+
+		if (!isset($options[&#039;checked&#039;])) {
+			$options[&#039;checked&#039;] = ($this-&gt;binding($key)-&gt;data == $default);
+		}
+
+		$options[&#039;value&#039;] = $scope[&#039;value&#039;];
+		return $this-&gt;_render(__METHOD__, $template, compact(&#039;name&#039;, &#039;options&#039;));
+	}
+
+	/**
+	 * Generates an HTML `&lt;input type=&quot;password&quot; /&gt;` object.
+	 *
+	 * @param string $name The name of the field.
+	 * @param array $options An array of HTML attributes with which the field should be rendered.
+	 * @return string Returns a `&lt;input /&gt;` tag with the given name and HTML attributes.
+	 */
+	public function password($name, array $options = []) {
+		list($name, $options, $template) = $this-&gt;_defaults(__FUNCTION__, $name, $options);
+		unset($options[&#039;value&#039;]);
+		return $this-&gt;_render(__METHOD__, $template, compact(&#039;name&#039;, &#039;options&#039;));
+	}
+
+	/**
+	 * Generates an HTML `&lt;input type=&quot;hidden&quot; /&gt;` object.
+	 *
+	 * @param string $name The name of the field.
+	 * @param array $options An array of HTML attributes with which the field should be rendered.
+	 * @return string Returns a `&lt;input /&gt;` tag with the given name and HTML attributes.
+	 */
+	public function hidden($name, array $options = []) {
+		list($name, $options, $template) = $this-&gt;_defaults(__FUNCTION__, $name, $options);
+		return $this-&gt;_render(__METHOD__, $template, compact(&#039;name&#039;, &#039;options&#039;));
+	}
+
+	/**
+	 * Generates an HTML `&lt;label&gt;&lt;/label&gt;` object.
+	 *
+	 * @param string $id The DOM ID of the field that the label is for.
+	 * @param string $title The content inside the `&lt;label&gt;&lt;/label&gt;` object.
+	 * @param array $options Besides HTML attributes, this parameter allows one additional flag:
+	 *        - `&#039;escape&#039;` _boolean_: Defaults to `true`. Indicates whether the title of the
+	 *          label should be escaped. If `false`, it will be treated as raw HTML.
+	 * @return string Returns a `&lt;label&gt;` tag for the name and with HTML attributes.
+	 */
+	public function label($id, $title = null, array $options = []) {
+		$defaults = [&#039;escape&#039; =&gt; true];
+
+		if (is_array($title)) {
+			$options = current($title);
+			$title = key($title);
+		}
+		$title = $title ?: Inflector::humanize(str_replace(&#039;.&#039;, &#039;_&#039;, $id));
+
+		list($name, $options, $template) = $this-&gt;_defaults(__FUNCTION__, $id, $options);
+		list($scope, $options) = $this-&gt;_options($defaults, $options);
+
+		if (strpos($id, &#039;.&#039;)) {
+			$generator = $this-&gt;_config[&#039;attributes&#039;][&#039;id&#039;];
+			$id = $generator(__METHOD__, $id, $options);
+		}
+		return $this-&gt;_render(__METHOD__, $template, compact(&#039;id&#039;, &#039;title&#039;, &#039;options&#039;), $scope);
+	}
+
+	/**
+	 * Generates an error message for a field which is part of an object bound to a form in
+	 * `create()`.
+	 *
+	 * @param string $name The name of the field for which to render an error.
+	 * @param mixed $key If more than one error is present for `$name`, a key may be specified.
+	 *        If `$key` is not set in the array of errors, or if `$key` is `true`, the first
+	 *        available error is used.
+	 * @param array $options Any rendering options or HTML attributes to be used when rendering
+	 *        the error.
+	 * @return string Returns a rendered error message based on the `&#039;error&#039;` string template.
+	 */
+	public function error($name, $key = null, array $options = []) {
+		$defaults = [&#039;class&#039; =&gt; &#039;error&#039;, &#039;messages&#039; =&gt; []];
+		list(, $options, $template) = $this-&gt;_defaults(__FUNCTION__, $name, $options);
+		$options += $defaults;
+
+		if (is_array($options[&#039;messages&#039;])) {
+			$messages = $options[&#039;messages&#039;] + [&#039;default&#039; =&gt; null];
+		} else {
+			$messages = [&#039;default&#039; =&gt; $options[&#039;messages&#039;]];
+		}
+		unset($options[&#039;messages&#039;]);
+
+		$params = compact(&#039;name&#039;, &#039;key&#039;, &#039;messages&#039;, &#039;options&#039;, &#039;template&#039;);
+
+		return Filters::run($this, __FUNCTION__, $params, function($params) {
+			$options = $params[&#039;options&#039;];
+			$template = $params[&#039;template&#039;];
+			$messages = $params[&#039;messages&#039;];
+
+			if (isset($options[&#039;value&#039;])) {
+				unset($options[&#039;value&#039;]);
+			}
+			if (!$content = $this-&gt;binding($params[&#039;name&#039;])-&gt;errors) {
+				return null;
+			}
+			$result = &#039;&#039;;
+
+			if (!is_array($content)) {
+				return $this-&gt;_render(__METHOD__, $template, compact(&#039;content&#039;, &#039;options&#039;));
+			}
+			$errors = $content;
+
+			if ($params[&#039;key&#039;] === null) {
+				foreach ($errors as $rule =&gt; $content) {
+					if (isset($messages[$rule])) {
+						$content = $messages[$rule];
+					} elseif ($messages[&#039;default&#039;]) {
+						$content = $messages[&#039;default&#039;];
+					}
+					$result .= $this-&gt;_render(__METHOD__, $template, compact(&#039;content&#039;, &#039;options&#039;));
+				}
+				return $result;
+			}
+
+			$key = $params[&#039;key&#039;];
+			$content = !isset($errors[$key]) || $key === true ? reset($errors) : $errors[$key];
+			return $this-&gt;_render(__METHOD__, $template, compact(&#039;content&#039;, &#039;options&#039;));
+		});
+	}
+
+	/**
+	 * Builds the defaults array for a method by name, according to the config.
+	 *
+	 * @param string $method The name of the method to create defaults for.
+	 * @param string $name The `$name` supplied to the original method.
+	 * @param string $options `$options` from the original method.
+	 * @return array Defaults array contents.
+	 */
+	protected function _defaults($method, $name, $options) {
+		$params = compact(&#039;method&#039;, &#039;name&#039;, &#039;options&#039;);
+
+		return Filters::run($this, __FUNCTION__, $params, function($params) {
+			$method = $params[&#039;method&#039;];
+			$name = $params[&#039;name&#039;];
+			$options = $params[&#039;options&#039;];
+
+			$methodConfig = isset($this-&gt;_config[$method]) ? $this-&gt;_config[$method] : [];
+			$options += $methodConfig + $this-&gt;_config[&#039;base&#039;];
+			$options = $this-&gt;_generators($method, $name, $options);
+
+			$hasValue = (
+				(!isset($options[&#039;value&#039;]) || $options[&#039;value&#039;] === null) &amp;&amp;
+				$name &amp;&amp; $value = $this-&gt;binding($name)-&gt;data
+			);
+			$isZero = (isset($value) &amp;&amp; ($value === 0 || $value === &quot;0&quot;));
+
+			if ($hasValue || $isZero) {
+				$options[&#039;value&#039;] = $value;
+			}
+			if (isset($options[&#039;value&#039;]) &amp;&amp; !$isZero) {
+				$isZero = ($options[&#039;value&#039;] === 0 || $options[&#039;value&#039;] === &quot;0&quot;);
+			}
+			if (isset($options[&#039;default&#039;]) &amp;&amp; empty($options[&#039;value&#039;]) &amp;&amp; !$isZero) {
+				$options[&#039;value&#039;] = $options[&#039;default&#039;];
+			}
+			unset($options[&#039;default&#039;]);
+
+			$generator = $this-&gt;_config[&#039;attributes&#039;][&#039;name&#039;];
+			$name = $generator($method, $name, $options);
+
+			$tplKey = isset($options[&#039;template&#039;]) ? $options[&#039;template&#039;] : $method;
+			$template = isset($this-&gt;_templateMap[$tplKey]) ? $this-&gt;_templateMap[$tplKey] : $tplKey;
+			return [$name, $options, $template];
+		});
+	}
+
+	/**
+	 * Iterates over the configured attribute generators, and modifies the settings for a tag.
+	 *
+	 * @param string $method The name of the helper method which was called, i.e. `&#039;text&#039;`,
+	 *        `&#039;select&#039;`, etc.
+	 * @param string $name The name of the field whose attributes are being generated. Some helper
+	 *        methods, such as `create()` and `end()`, are not field-based, and therefore
+	 *        will have no name.
+	 * @param array $options The options and HTML attributes that will be used to generate the
+	 *        helper output.
+	 * @return array Returns the value of the `$options` array, modified by the attribute generators
+	 *         added in the `&#039;attributes&#039;` key of the helper&#039;s configuration. Note that if a
+	 *         generator is present for a field whose value is `false`, that field will be removed
+	 *         from the array.
+	 */
+	protected function _generators($method, $name, $options) {
+		foreach ($this-&gt;_config[&#039;attributes&#039;] as $key =&gt; $generator) {
+			if ($key === &#039;name&#039;) {
+				continue;
+			}
+			if ($generator &amp;&amp; !isset($options[$key])) {
+				if (($attr = $generator($method, $name, $options)) !== null) {
+					$options[$key] = $attr;
+				}
+				continue;
+			}
+			if ($generator &amp;&amp; $options[$key] === false) {
+				unset($options[$key]);
+			}
+		}
+		return $options;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\analysis\logger\adapter\File – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.0.x/lithium/analysis" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">analysis</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.0.x/lithium/analysis/logger" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">logger</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="/docs/api/lithium/1.0.x/lithium/analysis/logger/adapter" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">adapter</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">File</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.0.x/lithium/analysis/logger/adapter" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/analysis/logger/adapter/File::__construct()">__construct()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/analysis/logger/adapter/File::write()">write()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_init()">_init()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::applyFilter()">applyFilter()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::invokeMethod()">invokeMethod()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::__set_state()">__set_state()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::respondsTo()">respondsTo()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_instance()">_instance()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_filter()">_filter()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_parents()">_parents()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_stop()">_stop()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::$_config">$_config</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::$_autoConfig">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::$_methodFilters">$_methodFilters</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::$_parents">$_parents</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.0.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.0.x/lithium/analysis" class="symbol-segment">analysis</a>\<a href="/docs/api/lithium/1.0.x/lithium/analysis/logger" class="symbol-segment">logger</a>\<a href="/docs/api/lithium/1.0.x/lithium/analysis/logger/adapter" class="symbol-segment">adapter</a>\File		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.0.x/lithium/core/Object" class="extends__symbol">lithium\core\Object</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>A simple log adapter that writes messages to files. By default, messages are written to
+<code>resources/tmp/logs/&lt;type&gt;.log</code>, where <code>&lt;type&gt;</code> is the log message priority level.</p>
+					</div>
+				
+									<div class="description">
+						<pre><code class="language-php">use lithium\analysis\Logger;
+
+Logger::config(array(
+	'simple' =&gt; array('adapter' =&gt; 'File')
+));
+Logger::write('debug', 'Something happened!');
+</code></pre>
+<p>This will cause the message and the timestamp of the log event to be written to
+<code>resources/tmp/logs/debug.log</code>. For available configuration options for this adapter, see
+the <code>__construct()</code> method.</p>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="/docs/api/lithium/1.0.x/lithium/analysis/logger/adapter/File::__construct()">lithium\analysis\logger\adapter\File::__construct()</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class File extends \lithium\core\Object {
+
+	/**
+	 * Constructor.
+	 *
+	 * @see lithium\util\String::insert()
+	 * @param array $config Settings used to configure the adapter. Available options:
+	 *        - `&#039;path&#039;` _string_: The directory to write log files to. Defaults to
+	 *          `&lt;app&gt;/resources/tmp/logs`.
+	 *        - `&#039;timestamp&#039;` _string_: The `date()`-compatible timestamp format. Defaults to
+	 *          `&#039;Y-m-d H:i:s&#039;`.
+	 *        - `&#039;file&#039;` _\Closure_: A closure which accepts two parameters: an array
+	 *          containing the current log message details, and an array containing the `File`
+	 *          adapter&#039;s current configuration. It must then return a file name to write the
+	 *          log message to. The default will produce a log file name corresponding to the
+	 *          priority of the log message, i.e. `&quot;debug.log&quot;` or `&quot;alert.log&quot;`.
+	 *        - `&#039;format&#039;` _string_: A `String::insert()`-compatible string that specifies how
+	 *          the log message should be formatted. The default format is
+	 *          `&quot;{:timestamp} {:message}\n&quot;`.
+	 * @return void
+	 */
+	public function __construct(array $config = array()) {
+		$defaults = array(
+			&#039;path&#039; =&gt; Libraries::get(true, &#039;resources&#039;) . &#039;/tmp/logs&#039;,
+			&#039;timestamp&#039; =&gt; &#039;Y-m-d H:i:s&#039;,
+			&#039;file&#039; =&gt; function($data, $config) { return &quot;{$data[&#039;priority&#039;]}.log&quot;; },
+			&#039;format&#039; =&gt; &quot;{:timestamp} {:message}\n&quot;
+		);
+		parent::__construct($config + $defaults);
+	}
+
+	/**
+	 * Appends a message to a log file.
+	 *
+	 * @see lithium\analysis\Logger::$_priorities
+	 * @param string $priority The message priority. See `Logger::$_priorities`.
+	 * @param string $message The message to write to the log.
+	 * @return \Closure Function returning boolean `true` on successful write, `false` otherwise.
+	 */
+	public function write($priority, $message) {
+		$config = $this-&gt;_config;
+
+		return function($self, $params) use (&amp;$config) {
+			$path = $config[&#039;path&#039;] . &#039;/&#039; . $config[&#039;file&#039;]($params, $config);
+			$params[&#039;timestamp&#039;] = date($config[&#039;timestamp&#039;]);
+			$message = String::insert($config[&#039;format&#039;], $params);
+			return file_put_contents($path, $message, FILE_APPEND);
+		};
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

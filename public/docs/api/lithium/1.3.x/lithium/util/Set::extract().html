@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\util\Set::extract() – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../util.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">util</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="Set.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Set</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">extract()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="Set.html" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../util.html" class="symbol-segment">util</a>\<a href="Set.html" class="symbol-segment">Set</a>::extract()		</h1>
+
+		<section class="under">
+															<div class="tags">
+													<span class="tag public">public</span>
+													<span class="tag">static</span>
+								<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Implements partial support for XPath 2.0.</p>
+					</div>
+				
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">array</span>
+							<code class="name">$data</code>
+															<span class="parameter">
+									<p>An array of data to extract from.</p>
+								</span>
+													</li>
+											<li>
+							<span class="type">string</span>
+							<code class="name">$path</code>
+															<span class="parameter">
+									<p>An absolute XPath 2.0 path. Only absolute paths starting with a
+single slash are supported right now. Implemented selectors:</p>
+<ul>
+<li><code>'/User/id'</code>: Similar to the classic {n}.User.id.</li>
+<li><code>'/User[2]/name'</code>: Selects the name of the second User.</li>
+<li><code>'/User[id&gt;2]'</code>: Selects all Users with an id &gt; 2.</li>
+<li><code>'/User[id&gt;2][&lt;5]'</code>: Selects all Users with an id &gt; 2 but &lt; 5.</li>
+<li><code>'/Post/Comment[author_name=John]/../name'</code>: Selects the name of
+all posts that have at least one comment written by John.</li>
+<li><code>'/Posts[name]'</code>: Selects all Posts that have a <code>'name'</code> key.</li>
+<li><code>'/Comment/.[1]'</code>: Selects the contents of the first comment.</li>
+<li><code>'/Comment/.[:last]'</code>: Selects the last comment.</li>
+<li><code>'/Comment/.[:first]'</code>: Selects the first comment.</li>
+<li><code>'/Comment[text=/lithium/i]</code>': Selects the all comments that have
+a text matching the regex <code>/lithium/i</code>.</li>
+<li><code>'/Comment/@*'</code>: Selects all key names of all comments.</li>
+</ul>
+								</span>
+													</li>
+											<li>
+							<span class="type">array</span>
+							<code class="name">$options</code>
+															<span class="parameter">
+									<p>Currently only supports <code>'flatten'</code> which can be
+disabled for higher XPath-ness.</p>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">array</span>
+									<span class="return">
+						<p>An array of matched items.</p>
+					</span>
+							</section>
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public static function extract(array $data, $path = null, array $options = []) {
+		$defaults = [&#039;flatten&#039; =&gt; true];
+		$options += $defaults;
+
+		if (!$options[&#039;flatten&#039;]) {
+			$message = &#039;Non-flatten mode in `Set::extract()` has been deprecated.&#039;;
+			trigger_error($message, E_USER_DEPRECATED);
+		}
+
+		if (!$data) {
+			return [];
+		}
+		if ($path === &#039;/&#039;) {
+			return array_filter($data, function($data) {
+				return ($data === 0 || $data === &#039;0&#039; || !empty($data));
+			});
+		}
+		$contexts = $data;
+
+		if (!isset($contexts[0])) {
+			$contexts = [$data];
+		}
+
+		$tokens = array_slice(preg_split(&#039;/(?&lt;!=)\/(?![a-z-]*\])/&#039;, $path), 1);
+
+		do {
+			$token = array_shift($tokens);
+			$conditions = false;
+
+			if (preg_match_all(&#039;/\[([^=]+=\/[^\/]+\/|[^\]]+)\]/&#039;, $token, $m)) {
+				$conditions = $m[1];
+				$token = substr($token, 0, strpos($token, &#039;[&#039;));
+			}
+			$matches = [];
+
+			foreach ($contexts as $key =&gt; $context) {
+				if (!isset($context[&#039;trace&#039;])) {
+					$context = [&#039;trace&#039; =&gt; [null], &#039;item&#039; =&gt; $context, &#039;key&#039; =&gt; $key];
+				}
+				if ($token === &#039;..&#039;) {
+					if (count($context[&#039;trace&#039;]) === 1) {
+						$context[&#039;trace&#039;][] = $context[&#039;key&#039;];
+					}
+
+					array_pop($context[&#039;trace&#039;]);
+					$parent = join(&#039;/&#039;, $context[&#039;trace&#039;]);
+					$context[&#039;item&#039;] = static::extract($data, $parent);
+					array_pop($context[&#039;trace&#039;]);
+					$context[&#039;item&#039;] = array_shift($context[&#039;item&#039;]);
+					$matches[] = $context;
+					continue;
+				}
+				$match = false;
+
+				if ($token === &#039;@*&#039; &amp;&amp; is_array($context[&#039;item&#039;])) {
+					$matches[] = [
+						&#039;trace&#039; =&gt; array_merge($context[&#039;trace&#039;], (array) $key),
+						&#039;key&#039; =&gt; $key,
+						&#039;item&#039; =&gt; array_keys($context[&#039;item&#039;])
+					];
+				} elseif (is_array($context[&#039;item&#039;]) &amp;&amp; isset($context[&#039;item&#039;][$token])) {
+					$items = $context[&#039;item&#039;][$token];
+					if (!is_array($items)) {
+						$items = [$items];
+					} elseif (!isset($items[0])) {
+						$current = current($items);
+						if ((is_array($current) &amp;&amp; count($items) &lt;= 1) || !is_array($current)) {
+							$items = [$items];
+						}
+					}
+
+					foreach ($items as $key =&gt; $item) {
+						$ctext = [$context[&#039;key&#039;]];
+						if (!is_numeric($key)) {
+							$ctext[] = $token;
+							$token = array_shift($tokens);
+							if (isset($items[$token])) {
+								$ctext[] = $token;
+								$item = $items[$token];
+								$matches[] = [
+									&#039;trace&#039; =&gt; array_merge($context[&#039;trace&#039;], $ctext),
+									&#039;key&#039; =&gt; $key,
+									&#039;item&#039; =&gt; $item
+								];
+								break;
+							} else {
+								array_unshift($tokens, $token);
+							}
+						} else {
+							$ctext[] = $token;
+						}
+
+						$matches[] = [
+							&#039;trace&#039; =&gt; array_merge($context[&#039;trace&#039;], $ctext),
+							&#039;key&#039; =&gt; $key,
+							&#039;item&#039; =&gt; $item
+						];
+					}
+				} elseif (
+					$key === $token || (is_numeric($token) &amp;&amp; $key == $token) || $token === &#039;.&#039;
+				) {
+					$context[&#039;trace&#039;][] = $key;
+					$matches[] = [
+						&#039;trace&#039; =&gt; $context[&#039;trace&#039;],
+						&#039;key&#039; =&gt; $key,
+						&#039;item&#039; =&gt; $context[&#039;item&#039;]
+					];
+				}
+			}
+			if ($conditions) {
+				foreach ($conditions as $condition) {
+					$filtered = [];
+					$length = count($matches);
+
+					foreach ($matches as $i =&gt; $match) {
+						if (static::matches($match[&#039;item&#039;], [$condition], $i + 1, $length)) {
+							$filtered[] = $match;
+						}
+					}
+					$matches = $filtered;
+				}
+			}
+			$contexts = $matches;
+
+			if (empty($tokens)) {
+				break;
+			}
+		} while (true);
+
+		$r = [];
+
+		foreach ($matches as $match) {
+			$key = array_pop($match[&#039;trace&#039;]);
+			$condition = (!is_int($key) &amp;&amp; $key !== null);
+			if ((!$options[&#039;flatten&#039;] || is_array($match[&#039;item&#039;])) &amp;&amp; $condition) {
+				$r[] = [$key =&gt; $match[&#039;item&#039;]];
+			} else {
+				$r[] = $match[&#039;item&#039;];
+			}
+		}
+		return $r;
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

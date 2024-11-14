@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Views – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../docs.html" class="active">Documentation</a><a href="../../../../versions.html">Versions</a><a href="../../../../present.html">Presentations</a><a href="../../../../support.html">Community</a><a href="../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Views</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="common-tasks.html" class="">Common Tasks</a><ul><li><a href="common-tasks/logging.html" class="">Logging</a><li><a href="common-tasks/plugins.html" class="">Plugins</a><li><a href="common-tasks/error-handling.html" class="">Error Handling</a><li><a href="common-tasks/caching.html" class="">Caching</a><li><a href="common-tasks/filters.html" class="">Filters</a><li><a href="common-tasks/etags.html" class="">Etags</a><li><a href="common-tasks/globalization.html" class="">Globalization</a><li><a href="common-tasks/simple-authentication.html" class="">Simple Authentication</a><li><a href="common-tasks/simple-auth-user.html" class="">Simple Auth User</a><li><a href="common-tasks/console-applications.html" class="">Console Applications</a></ul><li><a href="appendices.html" class="">Appendices</a><ul><li><a href="appendices/faqs.html" class="">FAQs</a><li><a href="appendices/using-in-other-applications.html" class="">Using In Other Applications</a></ul><li><a href="quickstart.html" class="">Quickstart</a><li><a href="controllers.html" class="">Controllers</a><ul><li><a href="controllers/actions.html" class="">Actions</a><li><a href="controllers/flow-control.html" class="">Flow Control</a><li><a href="controllers/parameters.html" class="">Parameters</a><li><a href="controllers/type-rendering-detection.html" class="">Type Rendering Detection</a><li><a href="controllers/routing.html" class="">Routing</a></ul><li><a href="installation.html" class="">Installation</a><ul><li><a href="installation/requirements.html" class="">Requirements</a><li><a href="installation/troubleshooting.html" class="">Troubleshooting</a><li><a href="installation/web-servers.html" class="">Web Servers</a></ul><li><a href="architecture.html" class="">Architecture</a><ul><li><a href="architecture/file-structure.html" class="">File Structure</a><li><a href="architecture/response-lifecycle.html" class="">Response Lifecycle</a><li><a href="architecture/aop.html" class="">AOP</a><li><a href="architecture/mvc.html" class="">MVC</a><li><a href="architecture/objects.html" class="">Objects</a></ul><li><a href="quality-code.html" class="">Quality Code</a><ul><li><a href="quality-code/fixtures.html" class="">Fixtures</a><li><a href="quality-code/analysis.html" class="">Analysis</a><li><a href="../../../manual/quality-code/testing.wiki.html" class="">Testing</a><li><a href="quality-code/security.html" class="">Security</a></ul><li><a href="configuration.html" class="">Configuration</a><ul><li><a href="configuration/environment.html" class="">Environment</a><li><a href="configuration/bootstrapping.html" class="">Bootstrapping</a><li><a href="configuration/third-party-libraries.html" class="">Third Party Libraries</a></ul><li><a href="views.html" class="active">Views</a><ul><li><a href="views/layouts.html" class="">Layouts</a><li><a href="views/elements.html" class="">Elements</a><li><a href="views/helpers.html" class="">Helpers</a><li><a href="views/static-content.html" class="">Static Content</a><li><a href="views/auto-escaping.html" class="">Auto Escaping</a></ul><li><a href="models.html" class="">Models</a><ul><li><a href="models/mongodb.html" class="">Mongodb</a><li><a href="models/meta.html" class="">Meta</a><li><a href="models/relationships.html" class="">Relationships</a><li><a href="models/saving.html" class="">Saving</a><li><a href="models/using-data-sources.html" class="">Using Data Sources</a><li><a href="models/adding-functions.html" class="">Adding Functions</a><li><a href="models/data-mutation.html" class="">Data Mutation</a><li><a href="models/connections.html" class="">Connections</a><li><a href="models/creating-data-sources.html" class="">Creating Data Sources</a><li><a href="models/querying.html" class="">Querying</a><li><a href="models/validation.html" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="views" class="anchor" href="views.html#views">Views</a></h1>
+<p>As one of the three pillars of the Model-View-Controller design pattern, the <code>View</code> class (along with other supporting classes) is responsible for taking the data passed from the request and/or controller, inserting this into the requested template/layout, and then returning the fully rendered content.</p>
+<p>Unless otherwise specified, each controller action method results in a rendered view (usually as HTML). View names and locations are determined by convention, according the controller and action names involved. The basic pattern is that views are organized inside <code>views/{controller name}</code>, with each template named <code>{action name}.{media}.php</code>. For example:</p>
+<ul>
+<li><code>UsersController::login()</code> --&gt; <code>views/users/login.html.php</code></li>
+<li><code>NewsItemsController::viewAll()</code> --&gt; <code>views/news_items/view_all.html.php</code></li>
+</ul>
+<h2><a id="accessing-view-variables" class="anchor" href="views.html#accessing-view-variables">Accessing View Variables</a></h2>
+<p>Controller-layer data is made available to the template by means of view variables. The names of these variables and their contents depends on how they were passed along by the controller. As covered in the Controller guide, view variables are populated by the use of the <code>set()</code> method, or by returning associative arrays from your controller action methods.</p>
+<p>Keys in those arrays determine the names of the view variables. The following lines of code placed in a controller action method all result in a view variable named <code>$foo</code> with the contents <code>"bar"</code>:</p>
+<pre><code class="language-php">$this-&gt;set(['foo' =&gt; 'bar']);
+
+// -- or --
+
+$foo = 'bar';
+$this-&gt;set(compact('foo'));
+
+// -- or --
+
+return ['foo' =&gt; 'bar'];
+
+// -- or --
+
+$foo = 'bar';
+return compact('foo');
+</code></pre>
+<p>Once this has been done in the controller, you can access the data like so:</p>
+<pre><code class="language-php">&lt;p&gt;Spit out data like this: &lt;?= $foo ?&gt;&lt;/p&gt;
+</code></pre>
+<p>li3 templates are just PHP, so feel free to toss in conditionals, loops and other presentation-based logic as needed.</p>
+<h2><a id="auto-escaping" class="anchor" href="views.html#auto-escaping">Auto-Escaping</a></h2>
+<p>You might have noticed that the above example uses the short tag syntax to output the contents of a view variable. This syntax is a bit misleading, as li3 does not depend on or use short tags: this output behavior works a bit differently from how it seems.</p>
+<p>When the view layer is rendered, each template is processed by a tokenizer before it is compiled into its final form. During this step something like this:</p>
+<pre><code class="language-php">&lt;?= $variable ?&gt;
+</code></pre>
+<p>Is translated into something like this:</p>
+<pre><code class="language-php">&lt;?php echo $h($variable) ?&gt;
+</code></pre>
+<p>The <code>$h()</code> function you see used there escapes HTML. To make a long story short, this mechanism provides an easy way for you to make sure all dynamically-generated data is safely landing in your HTML template.</p>
+<p>We highly recommend using the <code>&lt;?= ... ?&gt;</code> syntax in your views, as it aids greatly in hardening your application against cross-site scripting (and related) attack techniques.</p>
+<p> <em>Note:</em> One exception to this rule is when a line of template code references the <code>$this</code> object. In those cases, output is written directly to the template, rather than being filtered through <code>$h()</code>. This is so that content from helpers is not double-escaped. As such, the following two statements are equivalent:</p>
+<pre><code class="language-php">&lt;?= $this-&gt;form-&gt;create() ?&gt;
+
+&lt;?php echo $this-&gt;form-&gt;create() ?&gt;
+</code></pre>
+<p>This is an important consideration when accessing properties and methods from the template renderer. If you intend to echo content directly from <code>$this</code> which is not coming from a helper (this is not a common occurence), you must manually escape it, like so:</p>
+<pre><code class="language-php">&lt;?php echo $h($this-&gt;foo) ?&gt;
+</code></pre>
+<h2><a id="layouts-amp-elements" class="anchor" href="views.html#layouts-amp-elements">Layouts &amp; Elements</a></h2>
+<p>Because different components of the view layer are often reused, li3 includes the common functionality of wrapping view templates inside of layouts and including small, re-usable view components called 'elements' inside of views. Unless otherwise configured, elements are defined in <code>views/elements</code>.</p>
+<p><code>$this-&gt;_render()</code> is used within the views to include elements. Any variables passed from the controller to the parent view are also available in the element.  The third argument of <code>$this-&gt;_render()</code> can be used to pass additional variables.</p>
+<pre><code class="language-php">// renders views/elements/nav.html.php
+echo $this-&gt;_render('element', 'nav');
+
+// pass additional variables to the element
+echo $this-&gt;_render('element', 'nav', [
+  'some' =&gt; 'additional',
+  'vars' =&gt; 'available',
+  'in' =&gt; 'nav.html.php'
+]);
+</code></pre>
+<p>Layouts contain the header and footer of a rendered view, and are defined in <code>views/layouts</code>. Unless otherwise directed, li3 will wrap a view's template with the layout defined in <code>views/layouts/default.{type}.php</code>.</p>
+<pre><code class="language-php">namespace app\controllers;
+
+class MyController extends \lithium\action\Controller {
+
+  /**
+   * Overriding the layout for all actions in this controller
+   *
+   * @var array
+   */
+  protected $_render = [
+    'layout' =&gt; 'yourLayoutName'
+  ];
+
+  /**
+   * This action uses another layout which is located
+   * at `views/layouts/anotherLayout.html.php` by default.
+   * @return array
+   */
+  public function someAction() {
+    $this-&gt;_render['layout'] = 'anotherLayout';
+  }
+}
+</code></pre>
+<p>Layouts should call <code>&lt;?= $this-&gt;content() ?&gt;</code> to render the content of the inner view template in the desired location.</p>
+<h3><a id="output-handlers" class="anchor" href="views.html#output-handlers">Output Handlers</a></h3>
+<p>In the view rendering context, you'll have a number of different tools at your disposal. Besides PHP itself, the view layer features a number of handlers you can use to print out information in templates.</p>
+<p>If you're in the view layer, <code>$this</code> refers to the current <code>Renderer</code> adapter. Renderers are used to process different types of templates. The default renderer that ships with li3 is the <code>File</code> renderer, which handles plain PHP files (you can also write your own renderers if you wish to use a custom templating engine). When a renderer is initialized it sets up a number of handlers to help you output content in your views. li3's default view renderer features these handlers:</p>
+<ul>
+<li><code>$this-&gt;url()</code>: Used for reverse routing lookups in views. For example:</li>
+</ul>
+<pre><code class="language-php">$this-&gt;url(['Posts::view', 'id' =&gt; 13]);
+// Returns the URL for the matching route, e.g. '/posts/view/13'
+</code></pre>
+<p> The <code>url()</code> output handler is a friendly wrapper for <a href="../../../api/lithium/latest:1.x/lithium/net/http/Router::match.html"><code>Router::match()</code></a>, and automatically passes some contextual parameters behind-the-scenes.</p>
+<ul>
+<li><code>$this-&gt;path()</code>: This handler generates asset paths to physical files. This is especially helpful for applications that will live at different parts of the domain during its lifecycle.</li>
+</ul>
+<pre><code class="language-php">$this-&gt;path('videos/funny_cats.flv');
+
+// If we're running at http://example.com/lithium/, this will return:
+// /lithium/videos/funny_cats.flv
+
+// If we're running at http://example.com/, this will return:
+// /videos/funny_cats.flv
+</code></pre>
+<p>Like <code>url()</code>, this handler is a wrapper for another class method, <a href="../../../api/lithium/latest:1.x/lithium/net/http/Media::asset.html"><code>Media::asset()</code></a>. Therefore, options that this method accepts can be passed to <code>path()</code> as well. For example, if you want to verify that the asset exists before returning the path, you can do the following:</p>
+<pre><code class="language-php">// Returns the path if the file exists, otherwise false.
+$path = $this-&gt;path('files/download_835.pdf', ['check' =&gt; true]);
+</code></pre>
+<p>You can also add a timestamp to the end of the URL, which is useful for working with browser caches:</p>
+<pre><code class="language-php">// Returns i.e. '&lt;app path&gt;/css/application.css?1290108597'
+$style = $this-&gt;path('css/application.css', ['timestamp' =&gt; true]);
+</code></pre>
+<p>See the <code>$options</code> parameter of <code>Media::asset()</code> for more information.</p>
+<ul>
+<li><p><code>$this-&gt;content()</code>: Prints out the content of the template to be rendered. This is really a requirement for most layouts.</p>
+</li>
+<li><p><code>$this-&gt;title()</code>: Prints out the title of the current template. If an argument is supplied, it sets the title for the current template.</p>
+</li>
+</ul>
+<pre><code class="language-php">// In your view:
+&lt;?php $this-&gt;title('Home') ?&gt;
+
+// In your layout:
+&lt;title&gt;My Awesome Application: &lt;?= $this-&gt;title() ?&gt;&lt;/title&gt;
+</code></pre>
+<ul>
+<li><code>$this-&gt;scripts()</code>: Prints out the scripts specified for the current template. Usually, this is used by the <a href="../../../api/lithium/latest:1.x/lithium/template/helper/Html::script.html"><code>script()</code> method of the <code>Html</code> helper</a> when the <code>'inline'</code> option is set to <code>false</code>. However, you can append tags manually as well:</li>
+</ul>
+<pre><code class="language-php">// In your view:
+&lt;?php
+$this-&gt;scripts('&lt;script src="https://example.org/js/jquery.min.js"&gt;&lt;/script&gt;');
+$this-&gt;scripts('&lt;script src="https://example.org/js/jquery-ui.min.js"&gt;&lt;/script&gt;')
+?&gt;
+
+// In your layout:
+&lt;head&gt;
+ &lt;?= $this-&gt;scripts() ?&gt;
+&lt;/head&gt;
+</code></pre>
+<p> In particular, this is useful when page-specific scripts are created inline in the page, and you'd like to place them in the <code>&lt;head /&gt;</code> along with your other scripts:</p>
+<pre><code class="language-php">&lt;?php ob_start() ?&gt;
+&lt;script type="text/javascript"&gt;
+$(document).ready(function() {
+	// Do work here...
+});
+&lt;/script&gt;
+&lt;?php $this-&gt;scripts(ob_get_clean()) ?&gt;
+</code></pre>
+<ul>
+<li><code>$this-&gt;styles()</code>: Much the same as <code>scripts()</code> above, the <code>styles()</code> handler acts as a repository for any page-specific style sheets to be included in the layout. While primarily used by the <a href="../../../api/lithium/latest:1.x/lithium/template/helper/Html::style.html"><code>style()</code> method of the <code>Html</code> helper</a> (again, see the <code>'inline'</code> option), it may be used manually as well:</li>
+</ul>
+<pre><code class="language-php">// In your view:
+&lt;?php
+ $this-&gt;styles('&lt;link rel="stylesheet" type="text/css" href="/reset.css" /&gt;');
+ $this-&gt;styles('&lt;link rel="stylesheet" type="text/css" href="/users.css" /&gt;')
+?&gt;
+
+// In your layout:
+&lt;head&gt;
+  &lt;?= $this-&gt;styles() ?&gt;
+&lt;/head&gt;
+</code></pre>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

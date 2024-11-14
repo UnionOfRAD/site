@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\storage\session\strategy\Encrypt – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../../versions.html">Versions</a><a href="../../../../../../../../present.html">Presentations</a><a href="../../../../../../../../support.html">Community</a><a href="../../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../../storage.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">storage</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../../session.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">session</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="../strategy.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">strategy</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Encrypt</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../strategy.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Encrypt::__construct().html">__construct()</a>												<li class="method public">
+				<a href="./Encrypt::read().html">read()</a>												<li class="method public">
+				<a href="./Encrypt::write().html">write()</a>												<li class="method public">
+				<a href="./Encrypt::delete().html">delete()</a>												<li class="method protected">
+				<a href="./Encrypt::_encrypt().html">_encrypt()</a>												<li class="method protected">
+				<a href="./Encrypt::_decrypt().html">_decrypt()</a>												<li class="method public">
+				<a href="./Encrypt::enabled().html">enabled()</a>												<li class="method protected">
+				<a href="./Encrypt::_hashSecret().html">_hashSecret()</a>												<li class="method protected">
+				<a href="./Encrypt::_vector().html">_vector()</a>												<li class="method protected">
+				<a href="./Encrypt::_vectorSize().html">_vectorSize()</a>												<li class="method protected deprecated">
+				<a href="./Encrypt::_mcrypt().html">_mcrypt()</a>												<li class="method public deprecated">
+				<a href="./Encrypt::__destruct().html">__destruct()</a>												<li class="method protected deprecated">
+				<a href="./Encrypt::_bcEncrypt().html">_bcEncrypt()</a>												<li class="method protected deprecated">
+				<a href="./Encrypt::_bcDecrypt().html">_bcDecrypt()</a>												<li class="method protected deprecated">
+				<a href="./Encrypt::_bcHashSecret().html">_bcHashSecret()</a>												<li class="method protected deprecated">
+				<a href="./Encrypt::_bcVector().html">_bcVector()</a>												<li class="method protected deprecated">
+				<a href="./Encrypt::_bcVectorSize().html">_bcVectorSize()</a>												<li class="method protected inherited">
+				<a href="../../../core/ObjectDeprecated::_init().html">_init()</a>												<li class="method public deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::__set_state().html">__set_state()</a>												<li class="method public deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::respondsTo().html">respondsTo()</a>												<li class="method public deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::invokeMethod().html">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::_instance().html">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::_stop().html">_stop()</a>												<li class="method protected deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::_parents().html">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::applyFilter().html">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::_filter().html">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./Encrypt::$_defaults.html">$_defaults</a>												<li class="property protected deprecated">
+				<a href="./Encrypt::$_mcrypt.html">$_mcrypt</a>												<li class="property protected deprecated">
+				<a href="./Encrypt::$_mcryptResource.html">$_mcryptResource</a>												<li class="property protected inherited">
+				<a href="../../../core/ObjectDeprecated::$_config.html">$_config</a>												<li class="property protected inherited">
+				<a href="../../../core/ObjectDeprecated::$_autoConfig.html">$_autoConfig</a>												<li class="property protected deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::$_parents.html">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::$_methodFilters.html">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../../storage.html" class="symbol-segment">storage</a>\<a href="../../session.html" class="symbol-segment">session</a>\<a href="../strategy.html" class="symbol-segment">strategy</a>\Encrypt		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../../../core/ObjectDeprecated.html" class="extends__symbol">lithium\core\ObjectDeprecated</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>This strategy allows you to encrypt your <code>Session</code> and / or <code>Cookie</code> data so that it
+is not stored in cleartext on the client side. You must provide a secret key, otherwise
+an exception is raised.</p>
+					</div>
+				
+									<div class="description">
+						<p>To use this class, you need to have the <code>openssl</code> extension enabled.</p>
+<p>Example configuration:</p>
+<pre><code class="language-php">Session::config(['default' =&gt; [
+   'adapter' =&gt; 'Cookie',
+   'strategies' =&gt; ['Encrypt' =&gt; ['secret' =&gt; 'f00bar$l1thium']]
+]]);
+</code></pre>
+<p>By default, this strategy uses the AES algorithm in the CBC mode. This means that an
+initialization vector has to be generated and transported with the payload data. This
+is done transparently, but you may want to keep this in mind (the ECB mode doesn't require
+an initialization vector but is not recommended to use as it's insecure).</p>
+<p>Please keep in mind that it is generally not a good idea to store sensitive information in
+cookies (or generally on the client side) and this class is no exception to the rule. It allows
+you to store client side data in a more secure way, but 100% security can't be achieved.</p>
+<p>Also note that if you provide a secret that is shorter than the maximum key length of the
+algorithm used, the secret will be hashed to make it more secure. This also means that if you
+want to use your own hashing algorithm, make sure it has the maximum key length of the algorithm
+used. See the <code>Encrypt::_hashSecret()</code> method for more information on this.</p>
+<h2><a id="legacy-mode" class="anchor" href="Encrypt.html#legacy-mode">Legacy Mode</a></h2>
+<p>This class previously used the now deprecated <code>mcrypt</code> extension and has been migrated
+to use of the <code>openssl</code> extension for better support and performance. For backwards
+compatibility reasons this class supports a <em>legacy</em> mode in which <code>mcrypt</code> will be
+used. The class will switch to legacy mode whenever it is not possible to use openssl
+as a drop in.</p>
+<p>First, legacy mode will be triggered when the <code>openssl</code> extension is not available.</p>
+<p>Second, previously overriding the default cipher and mode were possible (see example
+below). As we only support AES-256 in CBC mode (equals <code>mcrypt</code>'s RIJNDAEL_128 with
+MODE_CBC) with the <code>openssl</code> extension, overrding the defaults will trigger legacy
+mode.</p>
+<pre><code class="language-php">Session::config(['default' =&gt; [
+    'adapter' =&gt; 'Cookie',
+    'strategies' =&gt; ['Encrypt' =&gt; [
+        'cipher' =&gt; MCRYPT_RIJNDAEL_256,
+        'mode' =&gt; MCRYPT_MODE_ECB, // Don't use ECB when you don't have to!
+        'secret' =&gt; 'f00bar$l1thium'
+    ]]
+]]);
+</code></pre>
+					</div>
+							</section>
+
+			
+			
+			
+			
+						<section id="links">
+				<h3 class="h-beta">Links</h3>
+				<ul class="links">
+									<li><a href="http://php.net/book.openssl.php" target="new">http://php.net/book.openssl.php</a>									<li><a href="http://php.net/book.mcrypt.php" target="new">The mcrypt extension.</a>									<li><a href="http://php.net/mcrypt.ciphers.php" target="new">List of supported ciphers.</a>									<li><a href="http://php.net/mcrypt.constants.php" target="new">List of supported modes.</a>								</ul>
+			</section>
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Encrypt extends \lithium\core\ObjectDeprecated {
+
+	/**
+	 * Default configuration.
+	 */
+	protected $_defaults = [
+		&#039;secret&#039; =&gt; null
+	];
+
+	/**
+	 * Constructor.
+	 *
+	 * @param array $config Configuration array.
+	 * @return void
+	 */
+	public function __construct(array $config = []) {
+		if (!isset($config[&#039;secret&#039;])) {
+			throw new ConfigException(&#039;Encrypt strategy requires a secret key.&#039;);
+		}
+
+		if ($this-&gt;_mcrypt = $this-&gt;_mcrypt($config)) {
+			if (!extension_loaded(&#039;mcrypt&#039;)) {
+				throw new ConfigException(&#039;The mcrypt extension is not installed or enabled.&#039;);
+			}
+			parent::__construct($config + $this-&gt;_defaults + [
+				&#039;cipher&#039; =&gt; MCRYPT_RIJNDAEL_128,
+				&#039;mode&#039; =&gt; MCRYPT_MODE_CBC
+			]);
+			$this-&gt;_mcryptResource = mcrypt_module_open(
+				$this-&gt;_config[&#039;cipher&#039;], &#039;&#039;, $this-&gt;_config[&#039;mode&#039;], &#039;&#039;
+			);
+		} else {
+			if (!extension_loaded(&#039;openssl&#039;)) {
+				throw new ConfigException(&#039;The `openssl` extension is not installed or enabled.&#039;);
+			}
+			parent::__construct($config + $this-&gt;_defaults);
+		}
+	}
+
+	/**
+	 * Read encryption method.
+	 *
+	 * @param array $data the Data being read.
+	 * @param array $options Options for this method.
+	 * @return mixed Returns the decrypted data after it was read.
+	 */
+	public function read($data, array $options = []) {
+		$class = $options[&#039;class&#039;];
+
+		$encrypted = $class::read(null, [&#039;strategies&#039; =&gt; false]);
+		$key = isset($options[&#039;key&#039;]) ? $options[&#039;key&#039;] : null;
+
+		if (!isset($encrypted[&#039;__encrypted&#039;]) || !$encrypted[&#039;__encrypted&#039;]) {
+			return isset($encrypted[$key]) ? $encrypted[$key] : null;
+		}
+
+		if ($this-&gt;_mcrypt) {
+			$current = $this-&gt;_bcDecrypt($encrypted[&#039;__encrypted&#039;]);
+		} else {
+			$current = $this-&gt;_decrypt($encrypted[&#039;__encrypted&#039;]);
+		}
+
+		if ($key) {
+			return isset($current[$key]) ? $current[$key] : null;
+		}
+		return $current;
+	}
+
+	/**
+	 * Write encryption method.
+	 *
+	 * @param mixed $data The data to be encrypted.
+	 * @param array $options Options for this method.
+	 * @return string Returns the encrypted data that was written.
+	 */
+	public function write($data, array $options = []) {
+		$class = $options[&#039;class&#039;];
+
+		$futureData = $this-&gt;read(null, [&#039;key&#039; =&gt; null] + $options) ?: [];
+		$futureData = [$options[&#039;key&#039;] =&gt; $data] + $futureData;
+
+		$payload = null;
+
+		if (!empty($futureData)) {
+			if ($this-&gt;_mcrypt) {
+				$payload = $this-&gt;_bcEncrypt($futureData);
+			} else {
+				$payload = $this-&gt;_encrypt($futureData);
+			}
+		}
+
+		$class::write(&#039;__encrypted&#039;, $payload, [&#039;strategies&#039; =&gt; false] + $options);
+		return $payload;
+	}
+
+	/**
+	 * Delete encryption method.
+	 *
+	 * @param mixed $data The data to be encrypted.
+	 * @param array $options Options for this method.
+	 * @return string Returns the deleted data in cleartext.
+	 */
+	public function delete($data, array $options = []) {
+		$class = $options[&#039;class&#039;];
+
+		$futureData = $this-&gt;read(null, [&#039;key&#039; =&gt; null] + $options) ?: [];
+		unset($futureData[$options[&#039;key&#039;]]);
+
+		$payload = null;
+
+		if (!empty($futureData)) {
+			if ($this-&gt;_mcrypt) {
+				$payload = $this-&gt;_bcEncrypt($futureData);
+			} else {
+				$payload = $this-&gt;_encrypt($futureData);
+			}
+		}
+
+		$class::write(&#039;__encrypted&#039;, $payload, [&#039;strategies&#039; =&gt; false] + $options);
+		return $data;
+	}
+
+	/**
+	 * Serialize and encrypt a given data array.
+	 *
+	 * @param array $decrypted The cleartext data to be encrypted.
+	 * @return string A Base64 encoded and encrypted string.
+	 */
+	protected function _encrypt($decrypted = []) {
+		$encrypted = openssl_encrypt(
+			serialize($decrypted),
+			&#039;aes-256-cbc&#039;,
+			$this-&gt;_hashSecret($this-&gt;_config[&#039;secret&#039;]),
+			OPENSSL_RAW_DATA,
+			$vector = $this-&gt;_vector()
+		);
+		return base64_encode($encrypted) . base64_encode($vector);
+	}
+
+	/**
+	 * Decrypt and unserialize a previously encrypted string.
+	 *
+	 * @param string $encrypted The base64 encoded and encrypted string.
+	 * @return array The cleartext data.
+	 */
+	protected function _decrypt($encrypted) {
+		$secret = $this-&gt;_hashSecret($this-&gt;_config[&#039;secret&#039;]);
+
+		$vectorSize = strlen(base64_encode(str_repeat(&#039; &#039;, $this-&gt;_vectorSize())));
+		$vector = base64_decode(substr($encrypted, -$vectorSize));
+		$data = base64_decode(substr($encrypted, 0, -$vectorSize));
+
+		$decrypted = openssl_decrypt(
+			$data,
+			&#039;aes-256-cbc&#039;,
+			$secret,
+			OPENSSL_RAW_DATA|OPENSSL_ZERO_PADDING,
+			$vector
+		);
+		return unserialize(trim($decrypted));
+	}
+
+	/**
+	 * Determines if the `mcrypt` or `openssl` extension has been installed.
+	 *
+	 * @return boolean `true` if enabled, `false` otherwise.
+	 */
+	public static function enabled() {
+		return extension_loaded(&#039;openssl&#039;) || extension_loaded(&#039;mcrypt&#039;);
+	}
+
+	/**
+	 * Hashes the given secret to make harder to detect.
+	 *
+	 * This method figures out the appropriate key size for the chosen encryption algorithm and
+	 * then hashes the given key accordingly. Note that if the key has already the needed length,
+	 * it is considered to be hashed (secure) already and is therefore not hashed again. This lets
+	 * you change the hashing method in your own code if you like.
+	 *
+	 * The default `aes-256-cbc` key should be 32 byte long `sha256` is used as the
+	 * hashing algorithm. If the key size is shorter than the one generated by `sha256`,
+	 * the first n bytes will be used.
+	 *
+	 * @param string $key The possibly too weak key.
+	 * @return string The hashed (raw) key.
+	 */
+	protected function _hashSecret($key) {
+		if (strlen($key) &gt;= 32) {
+			return $key;
+		}
+		return substr(hash(&#039;sha256&#039;, $key, true), 0, 32);
+	}
+
+	/**
+	 * Generates an initialization vector.
+	 *
+	 * @return string Returns an initialization vector.
+	 */
+	protected function _vector() {
+		return Random::generate($this-&gt;_vectorSize());
+	}
+
+	/**
+	 * Returns the vector size.
+	 *
+	 * @return integer The vector size in bytes.
+	 */
+	protected function _vectorSize() {
+		return openssl_cipher_iv_length(&#039;aes-256-cbc&#039;);
+	}
+
+	/* Deprecated / BC */
+
+	/**
+	 * Indicates if we are in legacy / BC mode and the class is using the mcrypt extension
+	 * or we are able to use the openssl extension.
+	 *
+	 * @deprecated
+	 */
+	protected $_mcrypt = false;
+
+	/**
+	 * Holds the mcrypt crypto resource after initialization, when in legacy mode.
+	 *
+	 * @deprecated
+	 */
+	protected $_mcryptResource = null;
+
+	/**
+	 * Checks for legacy mode.
+	 *
+	 * @deprecated
+	 * @param array $config
+	 * @return boolean
+	 */
+	protected function _mcrypt(array $config) {
+		if (isset($config[&#039;cipher&#039;]) || isset($config[&#039;mode&#039;])) {
+			$message  = &quot;You&#039;ve selected a non-default cipher and/or mode configuration. &quot;;
+			$message .= &quot;The Encrypt strategy is now in legacy mode and will use the &quot;;
+			$message .= &quot;deprecated mcrypt extension. To disable legacy mode, use the strategy &quot;;
+			$message .= &quot;with default configuration.&quot;;
+			trigger_error($message, E_USER_DEPRECATED);
+
+			return true;
+		}
+		if (!extension_loaded(&#039;openssl&#039;)) {
+			$message .= &quot;The Encrypt strategy is now in legacy mode and will use the &quot;;
+			$message .= &quot;deprecated mcrypt extension. To disable legacy mode, install the &quot;;
+			$message .= &quot;openssl extension.&quot;;
+			trigger_error($message, E_USER_DEPRECATED);
+
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Destructor. Closes the crypto resource when it is no longer needed.
+	 *
+	 * @deprecated
+	 * @return void
+	 */
+	public function __destruct() {
+		if (is_resource($this-&gt;_mcryptResource)) {
+			mcrypt_module_close($this-&gt;_mcryptResource);
+		}
+	}
+
+	/**
+	 * Serialize and encrypt a given data array.
+	 *
+	 * @deprecated
+	 * @param array $decrypted The cleartext data to be encrypted.
+	 * @return string A Base64 encoded and encrypted string.
+	 */
+	protected function _bcEncrypt($decrypted = []) {
+		$vector = $this-&gt;_bcVector();
+		$secret = $this-&gt;_bcHashSecret($this-&gt;_config[&#039;secret&#039;]);
+
+		mcrypt_generic_init($this-&gt;_mcryptResource, $secret, $vector);
+		$encrypted = mcrypt_generic($this-&gt;_mcryptResource, serialize($decrypted));
+		mcrypt_generic_deinit($this-&gt;_mcryptResource);
+
+		return base64_encode($encrypted) . base64_encode($vector);
+	}
+
+	/**
+	 * Decrypt and unserialize a previously encrypted string.
+	 *
+	 * @deprecated
+	 * @param string $encrypted The base64 encoded and encrypted string.
+	 * @return array The cleartext data.
+	 */
+	protected function _bcDecrypt($encrypted) {
+		$secret = $this-&gt;_hashSecret($this-&gt;_config[&#039;secret&#039;]);
+
+		$vectorSize = strlen(base64_encode(str_repeat(&quot; &quot;, $this-&gt;_bcVectorSize())));
+		$vector = base64_decode(substr($encrypted, -$vectorSize));
+		$data = base64_decode(substr($encrypted, 0, -$vectorSize));
+
+		mcrypt_generic_init($this-&gt;_mcryptResource, $secret, $vector);
+		$decrypted = mdecrypt_generic($this-&gt;_mcryptResource, $data);
+		mcrypt_generic_deinit($this-&gt;_mcryptResource);
+
+		return unserialize(trim($decrypted));
+	}
+
+	/**
+	 * Hashes the given secret to make harder to detect.
+	 *
+	 * This method figures out the appropriate key size for the chosen encryption algorithm and
+	 * then hashes the given key accordingly. Note that if the key has already the needed length,
+	 * it is considered to be hashed (secure) already and is therefore not hashed again. This lets
+	 * you change the hashing method in your own code if you like.
+	 *
+	 * The default `MCRYPT_RIJNDAEL_128` key should be 32 byte long `sha256` is used
+	 * as the hashing algorithm. If the key size is shorter than the one generated by
+	 * `sha256`, the first n bytes will be used.
+	 *
+	 * @deprecated
+	 * @link http://php.net/function.mcrypt-enc-get-key-size.php
+	 * @param string $key The possibly too weak key.
+	 * @return string The hashed (raw) key.
+	 */
+	protected function _bcHashSecret($key) {
+		$size = mcrypt_enc_get_key_size($this-&gt;_mcryptResource);
+
+		if (strlen($key) &gt;= $size) {
+			return $key;
+		}
+		return substr(hash(&#039;sha256&#039;, $key, true), 0, $size);
+	}
+
+	/**
+	 * Generates an initialization vector.
+	 *
+	 * @deprecated
+	 * @link http://php.net/function.mcrypt-create-iv.php
+	 * @return string Returns an initialization vector.
+	 */
+	protected function _bcVector() {
+		return mcrypt_create_iv($this-&gt;_bcVectorSize(), MCRYPT_DEV_URANDOM);
+	}
+
+	/**
+	 * Returns the vector size vor a given cipher and mode.
+	 *
+	 * @deprecated
+	 * @link http://php.net/function.mcrypt-enc-get-iv-size.php
+	 * @return number The vector size.
+	 */
+	protected function _bcVectorSize() {
+		return mcrypt_enc_get_iv_size($this-&gt;_mcryptResource);
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

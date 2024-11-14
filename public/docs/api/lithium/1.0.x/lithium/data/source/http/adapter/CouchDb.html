@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\data\source\http\adapter\CouchDb – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../../../versions.html">Versions</a><a href="../../../../../../../../../present.html">Presentations</a><a href="../../../../../../../../../support.html">Community</a><a href="../../../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../../../data.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">data</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../../../source.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">source</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="../../http.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">http</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<a href="../adapter.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">adapter</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="8" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">CouchDb</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../adapter.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./CouchDb::__construct().html">__construct()</a>												<li class="method protected">
+				<a href="./CouchDb::_init().html">_init()</a>												<li class="method public">
+				<a href="./CouchDb::__destruct().html">__destruct()</a>												<li class="method public">
+				<a href="./CouchDb::configureClass().html">configureClass()</a>												<li class="method public">
+				<a href="./CouchDb::__call().html">__call()</a>												<li class="method public">
+				<a href="./CouchDb::respondsTo().html">respondsTo()</a>												<li class="method public">
+				<a href="./CouchDb::sources().html">sources()</a>												<li class="method public">
+				<a href="./CouchDb::describe().html">describe()</a>												<li class="method public">
+				<a href="./CouchDb::name().html">name()</a>												<li class="method public">
+				<a href="./CouchDb::create().html">create()</a>												<li class="method public">
+				<a href="./CouchDb::read().html">read()</a>												<li class="method public">
+				<a href="./CouchDb::update().html">update()</a>												<li class="method protected">
+				<a href="./CouchDb::_autoBuild().html">_autoBuild()</a>												<li class="method public">
+				<a href="./CouchDb::delete().html">delete()</a>												<li class="method public">
+				<a href="./CouchDb::calculation().html">calculation()</a>												<li class="method public">
+				<a href="./CouchDb::item().html">item()</a>												<li class="method public">
+				<a href="./CouchDb::conditions().html">conditions()</a>												<li class="method public">
+				<a href="./CouchDb::fields().html">fields()</a>												<li class="method public">
+				<a href="./CouchDb::limit().html">limit()</a>												<li class="method public">
+				<a href="./CouchDb::order().html">order()</a>												<li class="method public">
+				<a href="./CouchDb::enabled().html">enabled()</a>												<li class="method protected">
+				<a href="./CouchDb::_format().html">_format()</a>												<li class="method public inherited">
+				<a href="../../Http::__get().html">__get()</a>												<li class="method public inherited">
+				<a href="../../Http::send().html">send()</a>												<li class="method public inherited">
+				<a href="../../Http::connect().html">connect()</a>												<li class="method public inherited">
+				<a href="../../Http::disconnect().html">disconnect()</a>												<li class="method public inherited">
+				<a href="../../Http::relationship().html">relationship()</a>												<li class="method public inherited">
+				<a href="../../../Source::isConnected().html">isConnected()</a>												<li class="method public inherited">
+				<a href="../../../Source::methods().html">methods()</a>												<li class="method public inherited">
+				<a href="../../../Source::applyStrategy().html">applyStrategy()</a>												<li class="method public inherited">
+				<a href="../../../Source::relationFieldName().html">relationFieldName()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::applyFilter()">applyFilter()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::invokeMethod()">invokeMethod()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::__set_state()">__set_state()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_instance()">_instance()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_filter()">_filter()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_parents()">_parents()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_stop()">_stop()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./CouchDb::$_iterator.html">$_iterator</a>												<li class="property protected">
+				<a href="./CouchDb::$_db.html">$_db</a>												<li class="property protected">
+				<a href="./CouchDb::$_classes.html">$_classes</a>												<li class="property protected">
+				<a href="./CouchDb::$_handlers.html">$_handlers</a>												<li class="property public inherited">
+				<a href="../../Http::$connection.html">$connection</a>												<li class="property protected inherited">
+				<a href="../../Http::$_autoConfig.html">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="../../Http::$_isConnected.html">$_isConnected</a>												<li class="property protected inherited">
+				<a href="../../Http::$_methods.html">$_methods</a>												<li class="property protected inherited">
+				<a href="../../../Source::$_cachedMethods.html">$_cachedMethods</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_config">$_config</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_methodFilters">$_methodFilters</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_parents">$_parents</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../../../data.html" class="symbol-segment">data</a>\<a href="../../../source.html" class="symbol-segment">source</a>\<a href="../../http.html" class="symbol-segment">http</a>\<a href="../adapter.html" class="symbol-segment">adapter</a>\CouchDb		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../../Http.html" class="extends__symbol">lithium\data\source\Http</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>A data source adapter which allows you to connect to Apache CouchDB.</p>
+					</div>
+				
+									<div class="description">
+						<p>By default, it will attempt to connect to the CouchDB running on <code>localhost</code> on port
+5984 using HTTP version 1.0.</p>
+					</div>
+							</section>
+
+			
+			
+			
+			
+						<section id="links">
+				<h3 class="h-beta">Links</h3>
+				<ul class="links">
+									<li><a href="http://couchdb.apache.org" target="new">http://couchdb.apache.org</a>								</ul>
+			</section>
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class CouchDb extends \lithium\data\source\Http {
+
+	/**
+	 * Increment value of current result set loop
+	 * used by `result` to handle rows of json responses.
+	 *
+	 * @var string
+	 */
+	protected $_iterator = 0;
+
+	/**
+	 * True if Database exists.
+	 *
+	 * @var boolean
+	 */
+	protected $_db = false;
+
+	/**
+	 * Classes used by `CouchDb`.
+	 *
+	 * @var array
+	 */
+	protected $_classes = array(
+		&#039;service&#039; =&gt; &#039;lithium\net\http\Service&#039;,
+		&#039;entity&#039;  =&gt; &#039;lithium\data\entity\Document&#039;,
+		&#039;set&#039;     =&gt; &#039;lithium\data\collection\DocumentSet&#039;,
+		&#039;schema&#039;  =&gt; &#039;lithium\data\DocumentSchema&#039;
+	);
+
+	protected $_handlers = array();
+
+	/**
+	 * Constructor.
+	 *
+	 * @param array $config Available configuration options are:
+	 *        - `&#039;port&#039;` _integer_
+	 *        - `&#039;version&#039;` _integer_
+	 *        - `&#039;database&#039;` _string_
+	 * @return void
+	 */
+	public function __construct(array $config = array()) {
+		$defaults = array(&#039;port&#039; =&gt; 5984, &#039;version&#039; =&gt; 1, &#039;database&#039; =&gt; null);
+		parent::__construct($config + $defaults);
+	}
+
+	protected function _init() {
+		parent::_init();
+		$this-&gt;_handlers += array(
+			&#039;integer&#039; =&gt; function($v) { return (integer) $v; },
+			&#039;float&#039;   =&gt; function($v) { return (float) $v; },
+			&#039;boolean&#039; =&gt; function($v) { return (boolean) $v; }
+		);
+	}
+
+	/**
+	 * Destructor. Ensures that the server connection is closed and resources are freed when
+	 * the adapter instance is destroyed.
+	 *
+	 * @return void
+	 */
+	public function __destruct() {
+		if (!$this-&gt;_isConnected) {
+			return;
+		}
+		$this-&gt;disconnect();
+		$this-&gt;_db = false;
+		unset($this-&gt;connection);
+	}
+
+	/**
+	 * Configures a model class by setting the primary key to `&#039;id&#039;`, in keeping with CouchDb
+	 * conventions.
+	 *
+	 * @see lithium\data\Model::$_meta
+	 * @see lithium\data\Model::$_classes
+	 * @param string $class The fully-namespaced model class name to be configured.
+	 * @return Returns an array containing keys `&#039;classes&#039;` and `&#039;meta&#039;`, which will be merged with
+	 *         their respective properties in `Model`.
+	 */
+	public function configureClass($class) {
+		return array(
+			&#039;classes&#039; =&gt; $this-&gt;_classes,
+			&#039;meta&#039; =&gt; array(&#039;key&#039; =&gt; &#039;id&#039;, &#039;locked&#039; =&gt; false),
+			&#039;schema&#039; =&gt; array(
+				&#039;id&#039; =&gt; array(&#039;type&#039; =&gt; &#039;string&#039;),
+				&#039;rev&#039; =&gt; array(&#039;type&#039; =&gt; &#039;string&#039;)
+			)
+		);
+	}
+
+	/**
+	 * Magic for passing methods to http service.
+	 *
+	 * @param string $method
+	 * @param array $params
+	 * @return mixed
+	 */
+	public function __call($method, $params = array()) {
+		list($path, $data, $options) = ($params + array(&#039;/&#039;, array(), array()));
+		return json_decode($this-&gt;connection-&gt;{$method}($path, $data, $options));
+	}
+
+	/**
+	 * Determines if a given method can be called.
+	 *
+	 * @param string $method Name of the method.
+	 * @param boolean $internal Provide `true` to perform check from inside the
+	 *                class/object. When `false` checks also for public visibility;
+	 *                defaults to `false`.
+	 * @return boolean Returns `true` if the method can be called, `false` otherwise.
+	 */
+	public function respondsTo($method, $internal = false) {
+		$parentRespondsTo = parent::respondsTo($method, $internal);
+		return $parentRespondsTo || is_callable(array($this-&gt;connection, $method));
+	}
+
+	/**
+	 * Returns an array of object types accessible through this database.
+	 *
+	 * @param object $class
+	 * @return void
+	 */
+	public function sources($class = null) {}
+
+	/**
+	 * Describe database, create if it does not exist.
+	 *
+	 * @throws ConfigException
+	 * @param string $entity
+	 * @param array $schema Any schema data pre-defined by the model.
+	 * @param array $meta
+	 * @return lithium\data\Schema
+	 */
+	public function describe($entity, $schema = array(), array $meta = array()) {
+		$database = $this-&gt;_config[&#039;database&#039;];
+
+		if (!$this-&gt;_db) {
+			$result = $this-&gt;get($database);
+
+			if (isset($result-&gt;db_name)) {
+				$this-&gt;_db = true;
+			}
+			if (!$this-&gt;_db) {
+				if (isset($result-&gt;error)) {
+					if ($result-&gt;error === &#039;not_found&#039;) {
+						$result = $this-&gt;put($database);
+					}
+				}
+				if (isset($result-&gt;ok) || isset($result-&gt;db_name)) {
+					$this-&gt;_db = true;
+				}
+			}
+		}
+		if (!$this-&gt;_db) {
+			throw new ConfigException(&quot;Database `{$entity}` is not available.&quot;);
+		}
+		return $this-&gt;_instance(&#039;schema&#039;, array(array(&#039;fields&#039; =&gt; $schema)));
+	}
+
+	/**
+	 * Quotes identifiers.
+	 *
+	 * CouchDb does not need identifiers quoted, so this method simply returns the identifier.
+	 *
+	 * @param string $name The identifier to quote.
+	 * @return string The quoted identifier.
+	 */
+	public function name($name) {
+		return $name;
+	}
+
+	/**
+	 * Create new document.
+	 *
+	 * @param string $query
+	 * @param array $options
+	 * @return boolean
+	 * @filter
+	 */
+	public function create($query, array $options = array()) {
+		$defaults = array(&#039;model&#039; =&gt; $query-&gt;model());
+		$options += $defaults;
+		$params = compact(&#039;query&#039;, &#039;options&#039;);
+		$conn =&amp; $this-&gt;connection;
+		$config = $this-&gt;_config;
+
+		return $this-&gt;_filter(__METHOD__, $params, function($self, $params) use (&amp;$conn, $config) {
+			$request = array(&#039;type&#039; =&gt; &#039;json&#039;);
+			$query = $params[&#039;query&#039;];
+			$options = $params[&#039;options&#039;];
+			$data = $query-&gt;data();
+			$data += array(&#039;type&#039; =&gt; $options[&#039;model&#039;]::meta(&#039;source&#039;));
+
+			if (isset($data[&#039;id&#039;])) {
+				return $self-&gt;update($query, $options);
+			}
+
+			$retry = false;
+			do {
+				$result = $conn-&gt;post($config[&#039;database&#039;], $data, $request);
+				$result = is_string($result) ? json_decode($result, true) : $result;
+				$retry = $retry ? !$retry : $self-&gt;invokeMethod(&#039;_autoBuild&#039;, array($result));
+			} while ($retry);
+
+			if (isset($result[&#039;_id&#039;]) || (isset($result[&#039;ok&#039;]) &amp;&amp; $result[&#039;ok&#039;] === true)) {
+				$result = $self-&gt;invokeMethod(&#039;_format&#039;, array($result, $options));
+				$query-&gt;entity()-&gt;sync($result[&#039;id&#039;], $result);
+				return true;
+			}
+			return false;
+		});
+	}
+
+	/**
+	 * Read from document.
+	 *
+	 * @param string $query
+	 * @param array $options
+	 * @return object
+	 * @filter
+	 */
+	public function read($query, array $options = array()) {
+		$defaults = array(&#039;return&#039; =&gt; &#039;resource&#039;, &#039;model&#039; =&gt; $query-&gt;model());
+		$options += $defaults;
+		$params = compact(&#039;query&#039;, &#039;options&#039;);
+		$conn =&amp; $this-&gt;connection;
+		$config = $this-&gt;_config;
+
+		return $this-&gt;_filter(__METHOD__, $params, function($self, $params) use (&amp;$conn, $config) {
+			$query = $params[&#039;query&#039;];
+			$params = $query-&gt;export($self);
+
+			list($_path, $conditions) = (array) $params[&#039;conditions&#039;];
+			$model = $query-&gt;model();
+
+			if (empty($_path)) {
+				$_path = &#039;_all_docs&#039;;
+				$conditions[&#039;include_docs&#039;] = &#039;true&#039;;
+			}
+			$path = &quot;{$config[&#039;database&#039;]}/{$_path}&quot;;
+			$args = (array) $conditions + (array) $params[&#039;limit&#039;] + (array) $params[&#039;order&#039;];
+			$result = $conn-&gt;get($path, $args);
+			$result = is_string($result) ? json_decode($result, true) : $result;
+			$data = $stats = array();
+
+			if (isset($result[&#039;_id&#039;])) {
+				$data = array($result);
+			} elseif (isset($result[&#039;rows&#039;])) {
+				$data = $result[&#039;rows&#039;];
+				unset($result[&#039;rows&#039;]);
+				$stats = $result;
+			}
+			$stats += array(&#039;total_rows&#039; =&gt; null, &#039;offset&#039; =&gt; null);
+			$opts = compact(&#039;stats&#039;) + array(
+				&#039;class&#039; =&gt; &#039;set&#039;, &#039;exists&#039; =&gt; true, &#039;defaults&#039; =&gt; false
+			);
+
+			return $self-&gt;item($model, $data, $opts);
+		});
+	}
+
+	/**
+	 * Update document.
+	 *
+	 * @param string $query
+	 * @param array $options
+	 * @return boolean
+	 * @filter
+	 */
+	public function update($query, array $options = array()) {
+		$params = compact(&#039;query&#039;, &#039;options&#039;);
+		$conn =&amp; $this-&gt;connection;
+		$config = $this-&gt;_config;
+
+		return $this-&gt;_filter(__METHOD__, $params, function($self, $params) use (&amp;$conn, $config) {
+			$query = $params[&#039;query&#039;];
+			$options = $params[&#039;options&#039;];
+			$params = $query-&gt;export($self);
+
+			list($_path, $conditions) = (array) $params[&#039;conditions&#039;];
+			$data = $query-&gt;data();
+
+			foreach (array(&#039;id&#039;, &#039;rev&#039;) as $key) {
+				$data[&quot;_{$key}&quot;] = isset($data[$key]) ? (string) $data[$key] : null;
+				unset($data[$key]);
+			}
+			$data = (array) $conditions + array_filter((array) $data);
+
+			$retry = false;
+			do {
+				$result = $conn-&gt;put(&quot;{$config[&#039;database&#039;]}/{$_path}&quot;, $data, array(
+					&#039;type&#039; =&gt; &#039;json&#039;
+				));
+				$result = is_string($result) ? json_decode($result, true) : $result;
+				$retry = $retry ? !$retry : $self-&gt;invokeMethod(&#039;_autoBuild&#039;, array($result));
+			} while ($retry);
+			if (isset($result[&#039;_id&#039;]) || (isset($result[&#039;ok&#039;]) &amp;&amp; $result[&#039;ok&#039;] === true)) {
+				$result = $self-&gt;invokeMethod(&#039;_format&#039;, array($result, $options));
+				$query-&gt;entity()-&gt;sync($result[&#039;id&#039;], array(&#039;rev&#039; =&gt; $result[&#039;rev&#039;]));
+				return true;
+			}
+			if (isset($result[&#039;error&#039;])) {
+				$query-&gt;entity()-&gt;errors(array($result[&#039;error&#039;]));
+			}
+			return false;
+		});
+	}
+
+	/**
+	 * Helper used for auto building a CouchDB database.
+	 *
+	 * @param string $result A query result.
+	 */
+	protected function _autoBuild($result) {
+		$hasError = (
+			isset($result[&#039;error&#039;]) &amp;&amp;
+			isset($result[&#039;reason&#039;]) &amp;&amp;
+			$result[&#039;reason&#039;] === &quot;no_db_file&quot;
+		);
+		if ($hasError) {
+			$this-&gt;connection-&gt;put($this-&gt;_config[&#039;database&#039;]);
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Delete document.
+	 *
+	 * @param string $query
+	 * @param array $options
+	 * @return boolean
+	 * @filter
+	 */
+	public function delete($query, array $options = array()) {
+		$params = compact(&#039;query&#039;, &#039;options&#039;);
+		$conn =&amp; $this-&gt;connection;
+		$config = $this-&gt;_config;
+
+		return $this-&gt;_filter(__METHOD__, $params, function($self, $params) use (&amp;$conn, $config) {
+			$query = $params[&#039;query&#039;];
+			$params = $query-&gt;export($self);
+			list($_path, $conditions) = $params[&#039;conditions&#039;];
+			$data = $query-&gt;data();
+
+			if (!empty($data[&#039;rev&#039;])) {
+				$conditions[&#039;rev&#039;] = $data[&#039;rev&#039;];
+			}
+			$result = json_decode($conn-&gt;delete(&quot;{$config[&#039;database&#039;]}/{$_path}&quot;, $conditions));
+			$result = (isset($result-&gt;ok) &amp;&amp; $result-&gt;ok === true);
+
+			if ($query-&gt;entity()) {
+				$query-&gt;entity()-&gt;sync(null, array(), array(&#039;dematerialize&#039; =&gt; true));
+			}
+			return $result;
+		});
+	}
+
+	/**
+	 * Executes calculation-related queries, such as those required for `count`.
+	 *
+	 * @param string $type Only accepts `count`.
+	 * @param mixed $query The query to be executed.
+	 * @param array $options Optional arguments for the `read()` query that will be executed
+	 *        to obtain the calculation result.
+	 * @return integer Result of the calculation.
+	 */
+	public function calculation($type, $query, array $options = array()) {
+		switch ($type) {
+			case &#039;count&#039;:
+				return (integer) $this-&gt;read($query, $options)-&gt;stats(&#039;total_rows&#039;);
+			default:
+				return null;
+		}
+	}
+
+	/**
+	 * Returns a newly-created `Document` object, bound to a model and populated with default data
+	 * and options.
+	 *
+	 * @param string $model A fully-namespaced class name representing the model class to which the
+	 *               `Document` object will be bound.
+	 * @param array $data The default data with which the new `Document` should be populated.
+	 * @param array $options Any additional options to pass to the `Document`&#039;s constructor
+	 * @return object Returns a new, un-saved `Document` object bound to the model class specified
+	 *         in `$model`.
+	 */
+	public function item($model, array $data = array(), array $options = array()) {
+		$defaults = array(&#039;class&#039; =&gt; &#039;entity&#039;);
+		$options += $defaults;
+
+		if ($options[&#039;class&#039;] === &#039;entity&#039;) {
+			return $model::create($this-&gt;_format($data), $options);
+		}
+
+		foreach ($data as $key =&gt; $value) {
+			if (isset($value[&#039;doc&#039;])) {
+				$value = $value[&#039;doc&#039;];
+			}
+			if (isset($value[&#039;value&#039;])) {
+				$value = $value[&#039;value&#039;];
+			}
+			$data[$key] = $this-&gt;_format($value);
+		}
+		return $model::create($data, $options);
+	}
+
+	/**
+	 * Handle conditions.
+	 *
+	 * @param string $conditions
+	 * @param string $context
+	 * @return array
+	 */
+	public function conditions($conditions, $context) {
+		$path = null;
+		if (isset($conditions[&#039;design&#039;])) {
+			$paths = array(&#039;design&#039;, &#039;view&#039;);
+			foreach ($paths as $element) {
+				if (isset($conditions[$element])) {
+					$path .= &quot;_{$element}/{$conditions[$element]}/&quot;;
+					unset($conditions[$element]);
+				}
+			}
+		}
+		if (isset($conditions[&#039;id&#039;])) {
+			$path = &quot;{$conditions[&#039;id&#039;]}&quot;;
+			unset($conditions[&#039;id&#039;]);
+		}
+		if (isset($conditions[&#039;path&#039;])) {
+			$path = &quot;{$conditions[&#039;path&#039;]}&quot;;
+			unset($conditions[&#039;path&#039;]);
+		}
+		return array($path, $conditions);
+	}
+
+	/**
+	 * Fields for query.
+	 *
+	 * @param string $fields
+	 * @param string $context
+	 * @return array
+	 */
+	public function fields($fields, $context) {
+		return $fields ?: array();
+	}
+
+	/**
+	 * Limit for query.
+	 *
+	 * @param string $limit
+	 * @param string $context
+	 * @return array
+	 */
+	public function limit($limit, $context) {
+		return compact(&#039;limit&#039;) ?: array();
+	}
+
+	/**
+	 * Order for query.
+	 *
+	 * @param string $order
+	 * @param string $context
+	 * @return array
+	 */
+	public function order($order, $context) {
+		return (array) $order ?: array();
+	}
+
+	/**
+	 * With no parameter, always returns `true`, since CouchDB only depends on HTTP. With a
+	 * parameter, queries for a specific supported feature.
+	 *
+	 * @param string $feature Test for support for a specific feature, i.e. `&quot;transactions&quot;` or
+	 *               `&quot;arrays&quot;`.
+	 * @return boolean Returns `true` if the particular feature support is enabled, otherwise
+	 *         `false`.
+	 */
+	public static function enabled($feature = null) {
+		if (!$feature) {
+			return true;
+		}
+		$features = array(
+			&#039;arrays&#039; =&gt; true,
+			&#039;transactions&#039; =&gt; false,
+			&#039;booleans&#039; =&gt; true,
+			&#039;relationships&#039; =&gt; false,
+			&#039;schema&#039; =&gt; false,
+			&#039;sources&#039; =&gt; false
+		);
+		return isset($features[$feature]) ? $features[$feature] : null;
+	}
+
+	/**
+	 * Formats a CouchDb result set into a standard result to be passed to item.
+	 *
+	 * @param array $data data returned from query
+	 * @return array
+	 */
+	protected function _format(array $data) {
+		foreach (array(&#039;id&#039;, &#039;rev&#039;) as $key) {
+			if (isset($data[&quot;_{$key}&quot;])) {
+				$data[$key] = $data[&quot;_{$key}&quot;];
+				unset($data[&quot;_{$key}&quot;]);
+			}
+		}
+		return $data;
+	}
+
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

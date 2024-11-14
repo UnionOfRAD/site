@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Auto Escaping – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/book/manual/1.x" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/book/manual/1.x/views" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Views</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Auto Escaping</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="/docs/book/manual/1.x/common-tasks" class="">Common Tasks</a><ul><li><a href="/docs/book/manual/1.x/common-tasks/logging" class="">Logging</a><li><a href="/docs/book/manual/1.x/common-tasks/plugins" class="">Plugins</a><li><a href="/docs/book/manual/1.x/common-tasks/error-handling" class="">Error Handling</a><li><a href="/docs/book/manual/1.x/common-tasks/caching" class="">Caching</a><li><a href="/docs/book/manual/1.x/common-tasks/filters" class="">Filters</a><li><a href="/docs/book/manual/1.x/common-tasks/etags" class="">Etags</a><li><a href="/docs/book/manual/1.x/common-tasks/globalization" class="">Globalization</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-authentication" class="">Simple Authentication</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-auth-user" class="">Simple Auth User</a><li><a href="/docs/book/manual/1.x/common-tasks/console-applications" class="">Console Applications</a></ul><li><a href="/docs/book/manual/1.x/appendices" class="">Appendices</a><ul><li><a href="/docs/book/manual/1.x/appendices/faqs" class="">FAQs</a><li><a href="/docs/book/manual/1.x/appendices/using-in-other-applications" class="">Using In Other Applications</a></ul><li><a href="/docs/book/manual/1.x/quickstart" class="">Quickstart</a><li><a href="/docs/book/manual/1.x/controllers" class="">Controllers</a><ul><li><a href="/docs/book/manual/1.x/controllers/actions" class="">Actions</a><li><a href="/docs/book/manual/1.x/controllers/flow-control" class="">Flow Control</a><li><a href="/docs/book/manual/1.x/controllers/parameters" class="">Parameters</a><li><a href="/docs/book/manual/1.x/controllers/type-rendering-detection" class="">Type Rendering Detection</a><li><a href="/docs/book/manual/1.x/controllers/routing" class="">Routing</a></ul><li><a href="/docs/book/manual/1.x/installation" class="">Installation</a><ul><li><a href="/docs/book/manual/1.x/installation/requirements" class="">Requirements</a><li><a href="/docs/book/manual/1.x/installation/troubleshooting" class="">Troubleshooting</a><li><a href="/docs/book/manual/1.x/installation/web-servers" class="">Web Servers</a></ul><li><a href="/docs/book/manual/1.x/architecture" class="">Architecture</a><ul><li><a href="/docs/book/manual/1.x/architecture/file-structure" class="">File Structure</a><li><a href="/docs/book/manual/1.x/architecture/response-lifecycle" class="">Response Lifecycle</a><li><a href="/docs/book/manual/1.x/architecture/aop" class="">AOP</a><li><a href="/docs/book/manual/1.x/architecture/mvc" class="">MVC</a><li><a href="/docs/book/manual/1.x/architecture/objects" class="">Objects</a></ul><li><a href="/docs/book/manual/1.x/quality-code" class="">Quality Code</a><ul><li><a href="/docs/book/manual/1.x/quality-code/fixtures" class="">Fixtures</a><li><a href="/docs/book/manual/1.x/quality-code/analysis" class="">Analysis</a><li><a href="/docs/book/manual/1.x/quality-code/testing" class="">Testing</a><li><a href="/docs/book/manual/1.x/quality-code/security" class="">Security</a></ul><li><a href="/docs/book/manual/1.x/configuration" class="">Configuration</a><ul><li><a href="/docs/book/manual/1.x/configuration/environment" class="">Environment</a><li><a href="/docs/book/manual/1.x/configuration/bootstrapping" class="">Bootstrapping</a><li><a href="/docs/book/manual/1.x/configuration/third-party-libraries" class="">Third Party Libraries</a></ul><li><a href="/docs/book/manual/1.x/views" class="">Views</a><ul><li><a href="/docs/book/manual/1.x/views/layouts" class="">Layouts</a><li><a href="/docs/book/manual/1.x/views/elements" class="">Elements</a><li><a href="/docs/book/manual/1.x/views/helpers" class="">Helpers</a><li><a href="/docs/book/manual/1.x/views/static-content" class="">Static Content</a><li><a href="/docs/book/manual/1.x/views/auto-escaping" class="active">Auto Escaping</a></ul><li><a href="/docs/book/manual/1.x/models" class="">Models</a><ul><li><a href="/docs/book/manual/1.x/models/mongodb" class="">Mongodb</a><li><a href="/docs/book/manual/1.x/models/meta" class="">Meta</a><li><a href="/docs/book/manual/1.x/models/relationships" class="">Relationships</a><li><a href="/docs/book/manual/1.x/models/saving" class="">Saving</a><li><a href="/docs/book/manual/1.x/models/using-data-sources" class="">Using Data Sources</a><li><a href="/docs/book/manual/1.x/models/adding-functions" class="">Adding Functions</a><li><a href="/docs/book/manual/1.x/models/data-mutation" class="">Data Mutation</a><li><a href="/docs/book/manual/1.x/models/connections" class="">Connections</a><li><a href="/docs/book/manual/1.x/models/creating-data-sources" class="">Creating Data Sources</a><li><a href="/docs/book/manual/1.x/models/querying" class="">Querying</a><li><a href="/docs/book/manual/1.x/models/validation" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="auto-escaping" class="anchor" href="#auto-escaping">Auto-escaping</a></h1>
+<p>You might have noticed on other pages in the manual that li3 uses the short tag syntax to output the contents of a view variable. This syntax is a bit misleading, as li3 does not actually depend on or use short tags: this output behavior works a bit differently from how it seems.  The modified functionality is designed to save time and improve your application's security by escaping output.  Escaping output is a core strategy of defense in depth.</p>
+<p>When the view layer is rendered, each template is processed by a tokenizer before it is compiled into its final form. During this step something like this with "short tags":</p>
+<pre><code class="language-php">&lt;?= $variable ?&gt;
+</code></pre>
+<p>Is translated into something like this, which is properly escaped:</p>
+<pre><code class="language-php">&lt;?php echo $h($variable) ?&gt;
+</code></pre>
+<p>The <code>$h()</code> function is there to escape HTML output. This mechanism provides an easy and effective way to make sure all dynamically-generated data is displayed safely in your HTML template.</p>
+<p>We highly recommend using the <code>&lt;?= ... ?&gt;</code> syntax in your views, as it aids greatly in hardening your application against cross-site scripting (XSS) and related attack techniques.</p>
+<div class="note note-info">
+One exception to this rule is when a line of template code references the `$this` object. In those cases, output is written directly to the template, rather than being filtered through `$h()`. This is so that content from helpers is not double-escaped. As such, the following two statements are equivalent:
+</div>
+<pre><code class="language-php">&lt;?= $this-&gt;form-&gt;create() ?&gt;
+&lt;?php echo $this-&gt;form-&gt;create() ?&gt;
+</code></pre>
+<p>This is an important consideration when accessing properties and methods from the template renderer. If you intend to echo content directly from <code>$this</code> which is not coming from a helper (this is not a common occurence), you must manually escape it, like so:</p>
+<pre><code class="language-php">&lt;?php echo $h($this-&gt;foo) ?&gt;
+</code></pre>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

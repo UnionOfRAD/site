@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\net\http\Message – Framework API v1.2.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../versions.html">Versions</a><a href="../../../../../../../present.html">Presentations</a><a href="../../../../../../../support.html">Community</a><a href="../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.2.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../net.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">net</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../http.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">http</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Message</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../http.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Message::__construct().html">__construct()</a>												<li class="method public">
+				<a href="./Message::headers().html">headers()</a>												<li class="method public">
+				<a href="./Message::type().html">type()</a>												<li class="method public">
+				<a href="./Message::body().html">body()</a>												<li class="method protected">
+				<a href="./Message::_encode().html">_encode()</a>												<li class="method protected">
+				<a href="./Message::_decode().html">_decode()</a>												<li class="method public inherited">
+				<a href="../Message::to().html">to()</a>												<li class="method public inherited">
+				<a href="../Message::__toString().html">__toString()</a>												<li class="method protected inherited">
+				<a href="../../core/ObjectDeprecated::_init().html">_init()</a>												<li class="method public deprecated inherited">
+				<a href="../../core/ObjectDeprecated::__set_state().html">__set_state()</a>												<li class="method public deprecated inherited">
+				<a href="../../core/ObjectDeprecated::respondsTo().html">respondsTo()</a>												<li class="method public deprecated inherited">
+				<a href="../../core/ObjectDeprecated::invokeMethod().html">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::_instance().html">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::_stop().html">_stop()</a>												<li class="method protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::_parents().html">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="../../core/ObjectDeprecated::applyFilter().html">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::_filter().html">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property public">
+				<a href="./Message::$protocol.html">$protocol</a>												<li class="property public">
+				<a href="./Message::$version.html">$version</a>												<li class="property public">
+				<a href="./Message::$headers.html">$headers</a>												<li class="property protected">
+				<a href="./Message::$_type.html">$_type</a>												<li class="property protected">
+				<a href="./Message::$_classes.html">$_classes</a>												<li class="property public inherited">
+				<a href="../Message::$scheme.html">$scheme</a>												<li class="property public inherited">
+				<a href="../Message::$host.html">$host</a>												<li class="property public inherited">
+				<a href="../Message::$port.html">$port</a>												<li class="property public inherited">
+				<a href="../Message::$username.html">$username</a>												<li class="property public inherited">
+				<a href="../Message::$password.html">$password</a>												<li class="property public inherited">
+				<a href="../Message::$path.html">$path</a>												<li class="property public inherited">
+				<a href="../Message::$body.html">$body</a>												<li class="property protected inherited">
+				<a href="../../core/ObjectDeprecated::$_config.html">$_config</a>												<li class="property protected inherited">
+				<a href="../../core/ObjectDeprecated::$_autoConfig.html">$_autoConfig</a>												<li class="property protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::$_parents.html">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::$_methodFilters.html">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../net.html" class="symbol-segment">net</a>\<a href="../http.html" class="symbol-segment">http</a>\Message		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../Message.html" class="extends__symbol">lithium\net\Message</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Base class for <code>lithium\net\http\Request</code> and <code>lithium\net\http\Response</code>. Implements basic
+protocol handling for HTTP-based transactions.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+			
+			
+						<section id="subclasses" class="section">
+				<h3 class="h-beta">Subclasses</h3>
+				<ul class="subclasses">
+											<li><a href="Request.html">lithium\net\http\Request</a>											<li><a href="Response.html">lithium\net\http\Response</a>									</ul>
+			</section>
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Message extends \lithium\net\Message {
+
+	/**
+	 * The full protocol: HTTP/1.1
+	 *
+	 * @var string
+	 */
+	public $protocol = null;
+
+	/**
+	 * Specification version number
+	 *
+	 * @var string
+	 */
+	public $version = &#039;1.1&#039;;
+
+	/**
+	 * HTTP headers
+	 *
+	 * @var array
+	 */
+	public $headers = [];
+
+	/**
+	 * Content-Type
+	 *
+	 * @var string
+	 */
+	protected $_type = null;
+
+	/**
+	 * Classes used by `Message` and its subclasses.
+	 *
+	 * @var array
+	 */
+	protected $_classes = [
+		&#039;media&#039; =&gt; &#039;lithium\net\http\Media&#039;,
+		&#039;auth&#039; =&gt; &#039;lithium\net\http\Auth&#039;
+	];
+
+	/**
+	 * Constructor. Adds config values to the public properties when a new object is created.
+	 *
+	 * @see lithium\net\Message::__construct()
+	 * @param array $config The available configuration options are the following. Further
+	 *        options are inherited from the parent class.
+	 *        - `&#039;protocol&#039;` _string_: Defaults to `null`.
+	 *        - `&#039;version&#039;` _string_: Defaults to `&#039;1.1&#039;`.
+	 *        - `&#039;scheme&#039;` _string_: Overridden and defaulting to `&#039;http&#039;`.
+	 *        - `&#039;headers&#039;` _array_: Defaults to `array()`.
+	 * @return void
+	 */
+	public function __construct(array $config = []) {
+		$defaults = [
+			&#039;protocol&#039; =&gt; null,
+			&#039;version&#039; =&gt; &#039;1.1&#039;,
+			&#039;scheme&#039; =&gt; &#039;http&#039;,
+			&#039;headers&#039; =&gt; []
+		];
+		$config += $defaults;
+
+		foreach (array_intersect_key(array_filter($config), $defaults) as $key =&gt; $value) {
+			$this-&gt;{$key} = $value;
+		}
+		parent::__construct($config);
+
+		if (strpos($this-&gt;host, &#039;/&#039;) !== false) {
+			list($this-&gt;host, $this-&gt;path) = explode(&#039;/&#039;, $this-&gt;host, 2);
+		}
+		$this-&gt;path = str_replace(&#039;//&#039;, &#039;/&#039;, &quot;/{$this-&gt;path}&quot;);
+		$this-&gt;protocol = $this-&gt;protocol ?: &quot;HTTP/{$this-&gt;version}&quot;;
+	}
+
+	/**
+	 * Adds, gets or removes one or multiple headers at the same time.
+	 *
+	 * Header names are not normalized and their casing left untouched. When
+	 * headers are retrieved no sorting takes place. This behavior is inline
+	 * with the specification which states header names should be treated in
+	 * a case-insensitive way. Sorting is suggested but not required.
+	 *
+	 * ```
+	 * // Get single or multiple headers.
+	 * $request-&gt;headers(&#039;Content-Type&#039;); // returns &#039;text/plain&#039;
+	 * $request-&gt;headers(); // returns [&#039;Content-Type: text/plain&#039;, ... ]
+	 *
+	 * // Set single or multiple headers.
+	 * $request-&gt;headers(&#039;Content-Type&#039;, &#039;text/plain&#039;);
+	 * $request-&gt;headers([&#039;Content-Type&#039; =&gt; &#039;text/plain&#039;, ...]);
+	 *
+	 * // Alternatively use full header line.
+	 * $request-&gt;headers(&#039;Content-Type: text/plain&#039;);
+	 * $request-&gt;headers([&#039;Content-Type: text/plain&#039;, ...]);
+	 *
+	 * // Removing single or multiple headers.
+	 * $request-&gt;headers(&#039;Content-Type&#039;, false);
+	 * $request-&gt;headers([&#039;Content-Type&#039; =&gt; false, ...]);
+	 * ```
+	 *
+	 * Certain header fields support multiple values. These can be separated by
+	 * comma or alternatively the header repeated for each value in the list.
+	 *
+	 * When explicitly adding a value to an already existing header (that is when
+	 * $replace is `false`) an array with those values is kept/created internally.
+	 * Later when retrieving headers the header will be repeated for each value.
+	 *
+	 * Note: Multiple headers of the same name are only valid if the values of
+	 * that header can be separated by comma as defined in section 4.2 of RFC2616.
+	 *
+	 * ```
+	 * // Replace single or multiple headers
+	 * $request-&gt;headers(&#039;Cache-Control&#039;, &#039;no-store&#039;);
+	 * $request-&gt;headers([&#039;Cache-Control&#039; =&gt; &#039;public&#039;]);
+	 * $request-&gt;headers(&#039;Cache-Control&#039;); // returns &#039;public&#039;
+	 *
+	 * // Merging with existing array headers.
+	 * // Note that new elements are just appended and no sorting takes place.
+	 * $request-&gt;headers(&#039;Cache-Control&#039;, &#039;no-store&#039;);
+	 * $request-&gt;headers(&#039;Cache-Control&#039;, &#039;no-cache&#039;, false);
+	 * $request-&gt;headers();
+	 * // returns [&#039;Cache-Control: no-store&#039;, &#039;Cache-Control: no-cache&#039;]
+	 *
+	 * $request-&gt;headers(&#039;Cache-Control&#039;, &#039;no-store&#039;);
+	 * $request-&gt;headers(&#039;Cache-Control&#039;, [&#039;no-cache&#039;], false);
+	 * $request-&gt;headers();
+	 * // returns [&#039;Cache-Control: no-store&#039;, &#039;Cache-Control: no-cache&#039;]
+	 *
+	 * $request-&gt;headers(&#039;Cache-Control&#039;, &#039;max-age=0&#039;);
+	 * $request-&gt;headers(&#039;Cache-Control&#039;, &#039;no-store, no-cache&#039;);
+	 * $request-&gt;headers();
+	 * // returns [&#039;Cache-Control: no-store, no-cache&#039;]
+	 * ```
+	 *
+	 * @link http://www.ietf.org/rfc/rfc2616.txt Section 4.2 Message Headers
+	 * @param string|array $key A header name, a full header line (`&#039;&lt;key&gt;: &lt;value&gt;&#039;`), or an array
+	 *                      of headers to set in `key =&gt; value` form.
+	 * @param mixed $value A value to set if `$key` is a string.
+	 *              It can be an array to set multiple headers with the same key.
+	 *              If `null`, returns the value of the header corresponding to `$key`.
+	 *              If `false`, it unsets the header corresponding to `$key`.
+	 * @param boolean $replace Whether to override or add alongside any existing header with
+	 *                the same name.
+	 * @return mixed When called with just $key provided, the value of a single header or an array
+	 *         of values in case there is multiple headers with this key.
+	 *         When calling the method without any arguments, an array of compiled headers in the
+	 *         form `array(&#039;&lt;key&gt;: &lt;value&gt;&#039;, ...)` is returned. All set and replace operations
+	 *         return no value for performance reasons.
+	 */
+	public function headers($key = null, $value = null, $replace = true) {
+		if ($key === null &amp;&amp; $value === null) {
+			$headers = [];
+
+			foreach ($this-&gt;headers as $key =&gt; $value) {
+				if (is_scalar($value)) {
+					$headers[] = &quot;{$key}: {$value}&quot;;
+					continue;
+				}
+				foreach ($value as $val) {
+					$headers[] = &quot;{$key}: {$val}&quot;;
+				}
+			}
+			return $headers;
+		}
+		if ($value === null &amp;&amp; is_string($key) &amp;&amp; strpos($key, &#039;:&#039;) === false) {
+			return isset($this-&gt;headers[$key]) ? $this-&gt;headers[$key] : null;
+		}
+
+		if (is_string($key)) {
+			if (strpos($key, &#039;:&#039;) !== false &amp;&amp; preg_match(&#039;/(.*?):(.+)/&#039;, $key, $match)) {
+				$key = $match[1];
+				$value = trim($match[2]);
+			} elseif ($value === false) {
+				unset($this-&gt;headers[$key]);
+				return;
+			}
+			if ($replace || !isset($this-&gt;headers[$key])) {
+				$this-&gt;headers[$key] = $value;
+			} elseif ($value !== $this-&gt;headers[$key]) {
+				$this-&gt;headers[$key] = (array) $this-&gt;headers[$key];
+
+				if (is_string($value)) {
+					$this-&gt;headers[$key][] = $value;
+				} else {
+					$this-&gt;headers[$key] = array_merge($this-&gt;headers[$key], $value);
+				}
+			}
+		} else {
+			$replace = ($value === false) ? $value : $replace;
+
+			foreach ((array) $key as $header =&gt; $value) {
+				if (is_string($header)) {
+					$this-&gt;headers($header, $value, $replace);
+					continue;
+				}
+				$this-&gt;headers($value, null, $replace);
+			}
+		}
+	}
+
+	/**
+	 * Sets/gets the content type.
+	 *
+	 * @param string $type A full content type i.e. `&#039;application/json&#039;` or simple name `&#039;json&#039;`
+	 * @return string A simple content type name, i.e. `&#039;html&#039;`, `&#039;xml&#039;`, `&#039;json&#039;`, etc., depending
+	 *         on the content type of the request.
+	 */
+	public function type($type = null) {
+		if ($type === false) {
+			unset($this-&gt;headers[&#039;Content-Type&#039;]);
+			$this-&gt;_type = false;
+			return;
+		}
+		$media = $this-&gt;_classes[&#039;media&#039;];
+
+		if (!$type &amp;&amp; $this-&gt;_type) {
+			return $this-&gt;_type;
+		}
+		$headers = $this-&gt;headers + [&#039;Content-Type&#039; =&gt; null];
+		$type = $type ?: $headers[&#039;Content-Type&#039;];
+
+		if (!$type) {
+			return;
+		}
+		$header = $type;
+
+		if (!$data = $media::type($type)) {
+			$this-&gt;headers(&#039;Content-Type&#039;, $type);
+			return ($this-&gt;_type = $type);
+		}
+		if (is_string($data)) {
+			$type = $data;
+		} elseif (!empty($data[&#039;content&#039;])) {
+			$header = is_string($data[&#039;content&#039;]) ? $data[&#039;content&#039;] : reset($data[&#039;content&#039;]);
+		}
+		$this-&gt;headers(&#039;Content-Type&#039;, $header);
+		return ($this-&gt;_type = $type);
+	}
+
+	/**
+	 * Add data to and compile the HTTP message body, optionally encoding or decoding its parts
+	 * according to content type.
+	 *
+	 * @param mixed $data
+	 * @param array $options
+	 *        - `&#039;buffer&#039;` _integer_: split the body string
+	 *        - `&#039;encode&#039;` _boolean_: encode the body based on the content type
+	 *        - `&#039;decode&#039;` _boolean_: decode the body based on the content type
+	 * @return array
+	 */
+	public function body($data = null, $options = []) {
+		$default = [&#039;buffer&#039; =&gt; null, &#039;encode&#039; =&gt; false, &#039;decode&#039; =&gt; false];
+		$options += $default;
+
+		if ($data !== null) {
+			$this-&gt;body = array_merge((array) $this-&gt;body, (array) $data);
+		}
+		$body = $this-&gt;body;
+
+		if (empty($options[&#039;buffer&#039;]) &amp;&amp; $body === null) {
+			return &quot;&quot;;
+		}
+		if ($options[&#039;encode&#039;]) {
+			$body = $this-&gt;_encode($body);
+		}
+		$body = is_string($body) ? $body : join(&quot;\r\n&quot;, (array) $body);
+
+		if ($options[&#039;decode&#039;]) {
+			$body = $this-&gt;_decode($body);
+		}
+		return ($options[&#039;buffer&#039;]) ? str_split($body, $options[&#039;buffer&#039;]) : $body;
+	}
+
+	/**
+	 * Encode the body based on the content type
+	 *
+	 * @see lithium\net\http\Message::type()
+	 * @param mixed $body
+	 * @return string
+	 */
+	protected function _encode($body) {
+		$media = $this-&gt;_classes[&#039;media&#039;];
+
+		if ($media::type($this-&gt;_type)) {
+			$encoded = $media::encode($this-&gt;_type, $body);
+			$body = $encoded !== null ? $encoded : $body;
+		}
+		return $body;
+	}
+
+	/**
+	 * Decode the body based on the content type
+	 *
+	 * @see lithium\net\http\Message::type()
+	 * @param string $body
+	 * @return mixed
+	 */
+	protected function _decode($body) {
+		$media = $this-&gt;_classes[&#039;media&#039;];
+
+		if ($media::type($this-&gt;_type)) {
+			$decoded = $media::decode($this-&gt;_type, $body);
+			$body = $decoded !== null ? $decoded : $body;
+		}
+		return $body;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

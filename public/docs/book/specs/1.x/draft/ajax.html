@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Ajax – Specifications v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../docs.html" class="active">Documentation</a><a href="../../../../../versions.html">Versions</a><a href="../../../../../present.html">Presentations</a><a href="../../../../../support.html">Community</a><a href="../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Specifications (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../draft.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Drafts</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Ajax</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="../draft.html" class="">Drafts</a><ul><li><a href="caching.html" class="">Caching</a><li><a href="ajax.html" class="active">Ajax</a><li><a href="logging.html" class="">Logging</a><li><a href="formulas.html" class="">Formulas</a><li><a href="translating.html" class="">Translating</a><li><a href="documentation.html" class="">Documentation</a><li><a href="visual-identity.html" class="">Visual Identity</a><li><a href="error-handling.html" class="">Error Handling</a><li><a href="access.html" class="">Access</a><li><a href="globalization.html" class="">Globalization</a></ul><li><a href="../accepted.html" class="">Accepted</a><ul><li><a href="../../../../specs/accepted/LSR-1-documenting.md.html" class="">LSR 1 Documenting</a><li><a href="../../../../specs/accepted/LSR-2-testing.md.html" class="">LSR 2 Testing</a><li><a href="../../../../specs/accepted/LSR-0-coding.md.html" class="">LSR 0 Coding</a></ul></ul>	</nav>
+	<div class="body">
+		<h2><a id="abstract" class="anchor" href="ajax.html#abstract">Abstract</a></h2>
+<p>This document details common access patterns for Ajax requests, and examples of how each is accomplished using the framework. Please add any example access patterns not mentioned, as well as any best-practice examples of how to accomplish each one (there may be&mdash;and often is&mdash;more than one valid way). <em>Note that all examples assume jQuery.</em></p>
+<h2><a id="rendering-views-or-view-sub-sections" class="anchor" href="ajax.html#rendering-views-or-view-sub-sections">Rendering views or view sub-sections</a></h2>
+<p>In order to solve the problem of rendering pages differently in different contexts, without duplicating controller logic, it is beneficial to identify Ajax requests as a separate media type, such that they can be automatically rendered with different settings.</p>
+<p>The following example is useful when the template content used in an Ajax request is significantly different from the content for a normal request:</p>
+<p><strong>config/bootstrap/media.php</strong>:</p>
+<pre><code class="language-php">use lithium\net\http\Media;
+
+Media::type('ajax', ['application/xhtml+xml', 'text/html'], [
+        'view' =&gt; 'lithium\template\View',
+        'paths' =&gt; [
+                'template' =&gt; [
+                        '{:library}/views/{:controller}/{:template}.ajax.php',
+                        '{:library}/views/{:controller}/{:template}.html.php'
+                ],
+                'layout' =&gt; '{:library}/views/layouts/default.ajax.php'
+        ],
+        'conditions' =&gt; ['ajax' =&gt; true]
+]);
+</code></pre>
+<p>Setting <code>'conditions' =&gt; ['ajax' =&gt; true]</code> is the equivalent of calling <code>$this-&gt;request-&gt;is('ajax')</code> in the controller.</p>
+<p><strong>views/hello_world/test.ajax.php</strong>:</p>
+<pre><code class="language-php">&lt;?=$message; ?&gt; an &lt;strong&gt;Ajax&lt;/strong&gt; request.
+</code></pre>
+<p><strong>views/hello_world/test.html.php</strong>:</p>
+<pre><code class="language-php">&lt;script type="text/javascript"&gt;
+$(document).ready(function() {
+        $('a[target]').bind('click', function(e) {
+                $($(this).attr('target')).load(this.href);
+                e.preventDefault();
+        });
+});
+&lt;/script&gt;
+
+&lt;p&gt;
+        &lt;?=$message; ?&gt; a regular request.
+&lt;/p&gt;
+&lt;?=$this-&gt;html-&gt;link('Load...', 'HelloWorld::test', ['target' =&gt; 'p:first']); ?&gt;
+</code></pre>
+<p><strong>views/layouts/default.ajax.php</strong>:</p>
+<pre><code class="language-php">&lt;?=$this-&gt;content(); ?&gt;
+</code></pre>
+<p>Finally, don't forget to enable content negotiation for your controller(s):</p>
+<pre><code class="language-php">        protected function _init() {
+                $this-&gt;_render['negotiate'] = true;
+                parent::_init();
+        }
+</code></pre>
+<p>Viewing the page will produce a message from the standard template with a link that says <code>Load...</code>, and clicking this link will change the message in the <code>&lt;p /&gt;</code> element, which will be rendered with the alternate Ajax template.</p>
+<p>This setup also allows for no custom Ajax template, in which case rendering will fall back to the corresponding standard HTML template. This will render the page with no layout, allowing for an inline page refresh (assuming the default layout, this can be accomplished with <code>$("#content").load(this.href)</code>, or by setting the <code>target</code> attribute in the above example to <code>"#content"</code>).</p>
+<h2><a id="sending-amp-receiving-json-data" class="anchor" href="ajax.html#sending-amp-receiving-json-data">Sending &amp; receiving JSON data</a></h2>
+<p>...</p>
+<h2><a id="forms-integration" class="anchor" href="ajax.html#forms-integration">Forms integration</a></h2>
+<p>...</p>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

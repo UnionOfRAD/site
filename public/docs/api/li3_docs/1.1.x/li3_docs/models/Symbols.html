@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>li3_docs\models\Symbols – li₃ Docs v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../li3_docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃ Docs (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../li3_docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li3_docs</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../models.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">models</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Symbols</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../models.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Symbols::harvest().html">harvest()</a>												<li class="method protected">
+				<a href="./Symbols::_harvestMethods().html">_harvestMethods()</a>												<li class="method protected">
+				<a href="./Symbols::_harvestProperties().html">_harvestProperties()</a>												<li class="method protected">
+				<a href="./Symbols::_harvestClass().html">_harvestClass()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./Symbols::$_meta.html">$_meta</a>												<li class="property protected">
+				<a href="./Symbols::$_classes.html">$_classes</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../li3_docs.html" class="symbol-segment">li3_docs</a>\<a href="../models.html" class="symbol-segment">models</a>\Symbols		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											lithium\data\Model									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Symbols model. Each entity has following fields:
+id, name, type, class and description.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Symbols extends \lithium\data\Model {
+
+	protected $_meta = array(
+		&#039;connection&#039; =&gt; false
+	);
+
+	protected $_classes = array(
+		&#039;indexer&#039;   =&gt; &#039;li3_docs\extensions\docs\Indexer&#039;,
+		&#039;extractor&#039; =&gt; &#039;li3_docs\extensions\docs\Extractor&#039;
+	);
+
+	public static function harvest() {
+		$extractor = $this-&gt;_classes[&#039;extractor&#039;];
+		$results = array();
+
+		foreach (Libraries::get() as $library =&gt; $info) {
+			$libFiles = Libraries::find($library, array(
+				&#039;recursive&#039; =&gt; true,
+				&#039;exclude&#039; =&gt; &#039;/mocks|tests|libraries/&#039;
+			));
+			foreach ($libFiles as $file) {
+				$this-&gt;out(&quot;\n&quot; . $file);
+				$fileData = $extractor::get($library, $file);
+
+				$results = array_merge(
+					static::_harvestMethods($fileData),
+					static::_harvestProperties($fileData),
+					array(static::_harvestClass($fileData))
+				);
+			}
+		}
+		return new Collection(array(&#039;data&#039; =&gt; $results));
+	}
+
+	/**
+	 * Harvests method meta data from the specified file.
+	 *
+	 * @param string $fileData
+	 * @return array
+	 */
+	protected static function _harvestMethods($fileData) {
+		$results = array();
+
+		foreach ($fileData[&#039;methods&#039;] as $method) {
+			$results[] = static::create(array(
+				&#039;name&#039; =&gt; $method-&gt;name,
+				&#039;type&#039; =&gt; &#039;method&#039;,
+				&#039;class&#039; =&gt; $fileData[&#039;identifier&#039;],
+				&#039;description&#039; =&gt; $method-&gt;getDocComment()
+			));
+		}
+		return $results;
+	}
+
+	/**
+	 * Harvests class property data from the specified file.
+	 *
+	 * @param string $fileData
+	 * @return array
+	 */
+	protected static function _harvestProperties($fileData) {
+		$results = array();
+
+		foreach ($fileData[&#039;properties&#039;] as $property) {
+			$results[] = static::create(array(
+				&#039;name&#039; =&gt; $property[&#039;name&#039;],
+				&#039;type&#039; =&gt; &#039;property&#039;,
+				&#039;class&#039; =&gt; $fileData[&#039;identifier&#039;],
+				&#039;description&#039; =&gt; $property[&#039;docComment&#039;]
+			));
+		}
+		return $results;
+	}
+
+	/**
+	 * Harvests class information from the specified file.
+	 *
+	 * @param string $fileData
+	 * @return object
+	 */
+	protected static function _harvestClass($fileData) {
+		return static::create(array(
+			&#039;name&#039; =&gt; array_pop(explode(&quot;\\&quot;, $fileData[&#039;identifier&#039;])),
+			&#039;type&#039; =&gt; &#039;class&#039;,
+			&#039;class&#039; =&gt; $fileData[&#039;identifier&#039;],
+			&#039;description&#039; =&gt; $property[&#039;description&#039;]
+		));
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

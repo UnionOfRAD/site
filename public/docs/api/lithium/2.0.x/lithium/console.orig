@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\console – Framework API v2.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/2.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (2.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/2.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">console</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/2.0.x/lithium" rel="up">../</a>		</ul>
+	
+						<h3 class="h-gamma">Namespaces</h3>
+			<ul>
+												<li class="namespace">
+				<a href="/docs/api/lithium/2.0.x/lithium/console/command">command</a>							</ul>
+								<h3 class="h-gamma">Classes</h3>
+			<ul>
+												<li class="class">
+				<a href="/docs/api/lithium/2.0.x/lithium/console/Command">Command</a>												<li class="class">
+				<a href="/docs/api/lithium/2.0.x/lithium/console/Dispatcher">Dispatcher</a>												<li class="class">
+				<a href="/docs/api/lithium/2.0.x/lithium/console/Request">Request</a>												<li class="class">
+				<a href="/docs/api/lithium/2.0.x/lithium/console/Response">Response</a>												<li class="class">
+				<a href="/docs/api/lithium/2.0.x/lithium/console/Router">Router</a>							</ul>
+									
+										</nav>
+	<div class="body">
+			<section>
+			<h1><a id="console" class="anchor" href="#console">console</a></h1>
+<p>The console package contains a set of classes required to route and dispatch
+incoming console requests. Moreover it contains the console front-controller
+file (<code>lithium.php</code>) as well as wrappers for both *nix and Windows environments
+(<code>li3</code> and <code>li3.bat</code> respectively), allowing to easily invoke the
+console front-controller from the command line.</p>
+<p>A command is to the command line what an action controller is to the HTTP
+request/response flow. In that commands are quite similar to controllers.
+Commands don't leverage the full MVC as they don't utilize views, but
+directly interact with the user through <code>in()</code> and <code>out()</code>.</p>
+<p>li3 itself provides amongst others commands for creating new applications
+or parts thereof. However commands can also be provided through other libraries
+or by your application. Commands running in the application context will have
+complete access to your application. This is especially useful to reuse
+existing logic in an application's model when creating a command to be run as
+i.e. a cron-job.</p>
+<h2><a id="invoking-the-front-controller" class="anchor" href="#invoking-the-front-controller">Invoking the front-controller</a></h2>
+<p>You invoke the console front-controller through one of the wrappers provided, as shown below.
+The examples shown are relative to the root directory of a standard li3 distribution. The first
+is for users on a *nix command line the second for users on a Windows system.</p>
+<pre><code class="language-sh">libraries/lithium/console/li3
+libraries/lithium/console/li3.bat
+</code></pre>
+<p>Invoking the wrapper like that (without arguments) should give you a
+list of available commands.</p>
+<h2><a id="built-in-commands" class="anchor" href="#built-in-commands">Built-in commands</a></h2>
+<p>Using the commands which come with lithium is easy. Invoke the wrapper without
+any arguments to get a list of all available commands. Get a description about
+each command and the options and arguments it accepts or may require by using
+the <code>help</code> command.</p>
+<pre><code class="language-sh">li3 help
+li3 help create
+li3 help g11n
+</code></pre>
+<h2><a id="creating-custom-commands" class="anchor" href="#creating-custom-commands">Creating custom commands</a></h2>
+<p>Creating your own commands is very easy. A few fundamentals:</p>
+<ul>
+<li>All commands inherit from <code>lithium\console\Command</code>.</li>
+<li>Commands are normally placed in your application or library's <code>extensions/command</code> directory.</li>
+</ul>
+<p>Here's an example command:</p>
+<pre><code class="language-php">namespace app\extensions\command;
+
+class HelloWorld extends \lithium\console\Command {
+
+	public function run() {
+		$this-&gt;header('Welcome to the Hello World command!');
+		$this-&gt;out('Hello, World!');
+	}
+}
+</code></pre>
+<p>If you would like to try this command, create an application or use an existing
+application, place the command into the application's <code>extensions/commands</code>
+directory and save it as <code>HelloWorld.php</code>. After doing so open a shell and
+change directory to your application's directory and run the following command:</p>
+<pre><code class="language-sh">li3 hello_world
+</code></pre>
+<p>Although it's probably obvious, when this command runs it will output a nice
+header with the text <code>Welcome to the Hello World command!</code> and some regular
+text <code>Hello, World!</code> after it.</p>
+<p>The public method <code>run()</code> is called on your command instance every time your
+command has been requested to run. From this method you can add your own command
+logic.</p>
+<h3><a id="parsing-options-and-arguments" class="anchor" href="#parsing-options-and-arguments">Parsing options and arguments</a></h3>
+<p>Parsing options and arguments to commands should be simple. In fact, the
+parsing is already done for you.</p>
+<p>Short and long (GNU-style) options in the form of <code>-f</code>, <code>--foo</code>, <code>--foo-bar</code> and <code>--foo=bar</code>
+are automatically parsed and exposed to your command instance through its
+properties. XF68-style long options (i.e. <code>-foo</code>) are not supported by default
+but support can be added by extending the console router.</p>
+<p>Arguments are passed directly to the invoked method.</p>
+<p>Let's look at an example, going back to the <code>hello_world</code> command from earlier:</p>
+<pre><code class="language-php">namespace app\extensions\command;
+
+class HelloWorld extends \lithium\console\Command {
+
+	public $recipient;
+
+	public function run() {
+		$this-&gt;header('Welcome to the Hello World command!');
+		$this-&gt;out('Hello, ' . ($this-&gt;recipient ?: 'World') . '!');
+	}
+}
+</code></pre>
+<p>Notice the additional property <code>$recipient</code>? Great! Now when <code>--recipient</code> is
+passed to the <code>hello_world</code> command, the recipient property on your command
+instance will be set to whatever was passed into the command at runtime.</p>
+<p>Try it out with the following command:</p>
+<pre><code class="language-sh">li3 hello_world --recipient=AwesomeGuy
+</code></pre>
+<p>You should get a special greeting from our good old <code>hello_world</code> command.</p>
+		</section>
+		</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

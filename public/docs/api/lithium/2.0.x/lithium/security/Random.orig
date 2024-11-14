@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\security\Random – Framework API v2.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/2.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (2.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/2.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/2.0.x/lithium/security" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">security</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Random</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/2.0.x/lithium/security" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/2.0.x/lithium/security/Random::generate()">generate()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/2.0.x/lithium/security/Random::_source()">_source()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="/docs/api/lithium/2.0.x/lithium/security/Random::$_source">$_source</a>							</ul>
+								<h3 class="h-gamma">Constants</h3>
+			<ul>
+												<li class="constant ">
+				<a href="/docs/api/lithium/2.0.x/lithium/security/Random::ENCODE_BASE_64">ENCODE_BASE_64</a>							</ul>
+			</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/2.0.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/2.0.x/lithium/security" class="symbol-segment">security</a>\Random		</h1>
+
+		<section class="under">
+															<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>A cryptographically-strong random number generator, which allows to generate arbritrary
+length strings of bytes, usable for i.e. password salts, UUIDs, keys or initialization
+vectors (IVs). Random byte strings can be encoded using the base64-encoder for use with
+DES and XDES.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Random {
+
+	/**
+	 * Option flag for the encoder.
+	 *
+	 * @see lithium\security\Random::generate()
+	 */
+	const ENCODE_BASE_64 = 1;
+
+	/**
+	 * A callable which, given a number of bytes, returns that
+	 * amount of random bytes.
+	 *
+	 * @see lithium\security\Random::_source()
+	 * @var callable
+	 */
+	protected static $_source;
+
+	/**
+	 * Generates random bytes for use in UUIDs and password salts, using
+	 * a cryptographically strong random number generator source.
+	 *
+	 * ```
+	 * $bits = Random::generate(8); // 64 bits
+	 * $hex = bin2hex($bits); // [0-9a-f]+
+	 * ```
+	 *
+	 * Optionally base64-encodes the resulting random string per the following. The
+	 * alphabet used by `base64_encode()` is different than the one we should be using.
+	 * When considering the meaty part of the resulting string, however, a bijection
+	 * allows to go the from one to another. Given that we&#039;re working on random bytes, we
+	 * can use safely use `base64_encode()` without losing any entropy.
+	 *
+	 * @param integer $bytes The number of random bytes to generate.
+	 * @param array $options The options used when generating random bytes:
+	 *              - `&#039;encode&#039;` _integer_: If specified, and set to `Random::ENCODE_BASE_64`, the
+	 *                resulting value will be base64-encoded, per the note above.
+	 * @return string Returns (an encoded) string of random bytes.
+	 */
+	public static function generate($bytes, array $options = []) {
+		$defaults = [&#039;encode&#039; =&gt; null];
+		$options += $defaults;
+
+		$source = static::$_source ?: (static::$_source = static::_source());
+		$result = $source($bytes);
+
+		if ($options[&#039;encode&#039;] !== static::ENCODE_BASE_64) {
+			return $result;
+		}
+		return strtr(rtrim(base64_encode($result), &#039;=&#039;), &#039;+&#039;, &#039;.&#039;);
+	}
+
+	/**
+	 * Returns the best available random number generator source.
+	 *
+	 * The source of randomness used are as follows:
+	 *
+	 * 1. `random_bytes()`, available in PHP &gt;=7.0
+	 * 2. `random_bytes()`, available if the openssl extension is installed
+	 * 3. `mcrypt_create_iv()`, available if the mcrypt extensions is installed
+	 * 4. `/dev/urandom`, available on *nix
+	 * 5. `GetRandom()` through COM, available on Windows
+	 *
+	 * Note: Users restricting path access through the `open_basedir` INI setting,
+	 * will need to include `/dev/urandom` into the list of allowed paths, as this
+	 * method might read from it.
+	 *
+	 * @link http://php.net/random_bytes
+	 * @link http://php.net/mcrypt_create_iv
+	 * @link http://msdn.microsoft.com/en-us/library/aa388182%28VS.85%29.aspx?ppud=4
+	 * @link http://sockpuppet.org/blog/2014/02/25/safely-generate-random-numbers/
+	 * @see lithium\util\Random::$_source
+	 * @return callable Returns a closure containing a random number generator.
+	 */
+	protected static function _source() {
+		if (function_exists(&#039;random_bytes&#039;)) {
+			return function($bytes) {
+				return random_bytes($bytes);
+			};
+		}
+		if (function_exists(&#039;openssl_random_pseudo_bytes&#039;)) {
+			return function($bytes) {
+				return openssl_random_pseudo_bytes($bytes);
+			};
+		}
+		if (function_exists(&#039;mcrypt_create_iv&#039;)) {
+			return function($bytes) {
+				return mcrypt_create_iv($bytes, MCRYPT_DEV_URANDOM);
+			};
+		}
+		if (is_readable(&#039;/dev/urandom&#039;)) {
+			return function($bytes) {
+				$stream = fopen(&#039;/dev/urandom&#039;, &#039;rb&#039;);
+				$result = fread($stream, $bytes);
+				fclose($stream);
+
+				return $result;
+			};
+		}
+		if (class_exists(&#039;COM&#039;, false)) {
+			$com = new COM(&#039;CAPICOM.Utilities.1&#039;);
+
+			return function($bytes) use ($com) {
+				return base64_decode($com-&gt;GetRandom($bytes, 0));
+			};
+		}
+		throw new LogicException(&#039;No suitable strong random number generator source found.&#039;);
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

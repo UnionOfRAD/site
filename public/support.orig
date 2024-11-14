@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Participate – li3 PHP-Framework</title>
+			<meta name="description" content="li3 is not just a framework, but the embodiment of a community. This community is dedicated to open collaboration and friendly discourse, with the goal of producing better quality software.">
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/site.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default site">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support" class="active">Community</a><a href="/development">Development</a></nav>	</div>
+</header>						<div id="content">
+				<article class="use-section-spacing">
+	<h1 class="h-alpha">Participate</h1>
+
+	<nav class="aside aside-right sticky">
+		<h1 class="h-gamma">Contents</h1>
+		<ul>
+			<li><a href="#get-help">Get Help</a>			<li><a href="#elsewhere">Elsewhere</a>			<li><a href="#guidelines">Community Guidelines</a>	</nav>
+
+
+	<section>
+		<p>
+			li3 is not just a framework, but the embodiment of a community. This
+			community is dedicated to open collaboration and friendly discourse, with
+			the goal of producing better quality software.
+		</p>
+		<p>
+			Most importantly, you are invited to <em>participate</em>. As with any
+			communities there are some rules and conventions. In order for everyone
+			to have a productive and positive experience, we ask that every member
+			familiarizes themselves with the <a href="#guidelines">guidelines</a> below. We do not want to have
+			to tell you what would happen if the guidelines are not followed. ;-)
+		</p>
+	</section>
+	<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/ico/network.png" width="400" alt="" />	<div class="credit">
+		Graphic by Bruno Castro, CC BY 3.0
+	</div>
+
+	<hr class="section-separator">
+
+	<section id="get-help">
+		<h1 class="h-beta">Get Help</h1>
+
+		<p>
+			Currently the best place to get great support is Stack Overflow.
+			With over 200 questions already tagged, ask yours on
+			<a href="http://stackoverflow.com/questions/tagged/li3">stackoverflow.com</a>
+			and remember to <a href="http://stackoverflow.com/questions/tagged/li3">use the
+			<em>li3</em> tag</a>.
+		</p>
+		<p>
+			Members of the community and core team will regularly try to answer your questions.
+		</p>
+		<p>
+		Found a bug?
+		<a href="
+			https://github.com/UnionOfRAD/lithium/issues">Open a ticket in our issue tracker</a>.
+		</p>
+	</section>
+
+	<hr class="section-separator lightblue">
+
+	<section id="elsewhere">
+		<h1 class="h-beta">Elsewhere</h1>
+		<ul>
+			<li><a href="https://twitter.com/#!/UnionOfRAD">Union of RAD on Twitter</a></li>
+			<li><a href="https://twitter.com/#!/search?q=%23li3">Follow the #li3 hashtag on Twitter</a></li>
+			<li><a href="https://twitter.com/#!/UnionOfRAD/lithium">Union of RAD's li3 List</a></li>
+			<li><a href="http://www.reddit.com/r/li3/">Official li3 Reddit</a></li>
+		</ul>
+	</section>
+
+	<hr class="section-separator darkblue">
+
+	<section id="guidelines">
+		<h1 class="h-beta">Community Guidelines</h1>
+		<div class="body">
+			<p>
+				We deem these rules to be self evident, that all developers are created equal...please follow them in good faith. We'll all have a bit more radness as a result.
+			</p>
+			<h2 class="h-gamma">Respect</h2>
+			<p>
+				We all have day jobs, but we also enjoying helping others. <em>Respect each
+				other's time and ideas</em>. Try to give back more than you take.
+			</p>
+			<h2 class="h-gamma">Friendliness</h2>
+			<p>
+				Keeping a healthy attitude and friendly atmosphere will make the experience
+				enjoyable for all and will make sure that the people who are willing to
+				spend time helping others are not driven away.
+			</p>
+			<h2 class="h-gamma">Focus</h2>
+			<p>
+				Staying on topic will make sure that the discussion remains fruitful for
+				everyone and reduces the effort of finding useful information.
+			</p>
+			<h2 class="h-gamma">Questions</h2>
+			<p>
+				Be in the right place and direct questions at the group. Everyone is here
+				to help, so only talk to an individual when you have already engaged them
+				in the conversation. Private messages should only be used as a last resort.
+			</p>
+		</div>
+	</section>
+
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

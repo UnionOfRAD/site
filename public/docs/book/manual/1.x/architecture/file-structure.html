@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>File Structure – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../docs.html" class="active">Documentation</a><a href="../../../../../versions.html">Versions</a><a href="../../../../../present.html">Presentations</a><a href="../../../../../support.html">Community</a><a href="../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../architecture.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Architecture</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">File Structure</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="../common-tasks.html" class="">Common Tasks</a><ul><li><a href="../common-tasks/logging.html" class="">Logging</a><li><a href="../common-tasks/plugins.html" class="">Plugins</a><li><a href="../common-tasks/error-handling.html" class="">Error Handling</a><li><a href="../common-tasks/caching.html" class="">Caching</a><li><a href="../common-tasks/filters.html" class="">Filters</a><li><a href="../common-tasks/etags.html" class="">Etags</a><li><a href="../common-tasks/globalization.html" class="">Globalization</a><li><a href="../common-tasks/simple-authentication.html" class="">Simple Authentication</a><li><a href="../common-tasks/simple-auth-user.html" class="">Simple Auth User</a><li><a href="../common-tasks/console-applications.html" class="">Console Applications</a></ul><li><a href="../appendices.html" class="">Appendices</a><ul><li><a href="../appendices/faqs.html" class="">FAQs</a><li><a href="../appendices/using-in-other-applications.html" class="">Using In Other Applications</a></ul><li><a href="../quickstart.html" class="">Quickstart</a><li><a href="../controllers.html" class="">Controllers</a><ul><li><a href="../controllers/actions.html" class="">Actions</a><li><a href="../controllers/flow-control.html" class="">Flow Control</a><li><a href="../controllers/parameters.html" class="">Parameters</a><li><a href="../controllers/type-rendering-detection.html" class="">Type Rendering Detection</a><li><a href="../controllers/routing.html" class="">Routing</a></ul><li><a href="../installation.html" class="">Installation</a><ul><li><a href="../installation/requirements.html" class="">Requirements</a><li><a href="../installation/troubleshooting.html" class="">Troubleshooting</a><li><a href="../installation/web-servers.html" class="">Web Servers</a></ul><li><a href="../architecture.html" class="">Architecture</a><ul><li><a href="file-structure.html" class="active">File Structure</a><li><a href="response-lifecycle.html" class="">Response Lifecycle</a><li><a href="aop.html" class="">AOP</a><li><a href="mvc.html" class="">MVC</a><li><a href="objects.html" class="">Objects</a></ul><li><a href="../quality-code.html" class="">Quality Code</a><ul><li><a href="../quality-code/fixtures.html" class="">Fixtures</a><li><a href="../quality-code/analysis.html" class="">Analysis</a><li><a href="../../../../manual/quality-code/testing.wiki.html" class="">Testing</a><li><a href="../quality-code/security.html" class="">Security</a></ul><li><a href="../configuration.html" class="">Configuration</a><ul><li><a href="../configuration/environment.html" class="">Environment</a><li><a href="../configuration/bootstrapping.html" class="">Bootstrapping</a><li><a href="../configuration/third-party-libraries.html" class="">Third Party Libraries</a></ul><li><a href="../views.html" class="">Views</a><ul><li><a href="../views/layouts.html" class="">Layouts</a><li><a href="../views/elements.html" class="">Elements</a><li><a href="../views/helpers.html" class="">Helpers</a><li><a href="../views/static-content.html" class="">Static Content</a><li><a href="../views/auto-escaping.html" class="">Auto Escaping</a></ul><li><a href="../models.html" class="">Models</a><ul><li><a href="../models/mongodb.html" class="">Mongodb</a><li><a href="../models/meta.html" class="">Meta</a><li><a href="../models/relationships.html" class="">Relationships</a><li><a href="../models/saving.html" class="">Saving</a><li><a href="../models/using-data-sources.html" class="">Using Data Sources</a><li><a href="../models/adding-functions.html" class="">Adding Functions</a><li><a href="../models/data-mutation.html" class="">Data Mutation</a><li><a href="../models/connections.html" class="">Connections</a><li><a href="../models/creating-data-sources.html" class="">Creating Data Sources</a><li><a href="../models/querying.html" class="">Querying</a><li><a href="../models/validation.html" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="application-file-structure" class="anchor" href="file-structure.html#application-file-structure">Application File Structure</a></h1>
+<p>Before you get started with li3, it's important to know how your application's main folder is structured, and where everything should go. Clone yourself a copy of the main repo, and you'll find an app folder structure that contains:</p>
+<ul>
+<li><code>config</code></li>
+<li><code>controllers</code></li>
+<li><code>extensions</code></li>
+<li><code>libraries</code></li>
+<li><code>models</code></li>
+<li><code>resources</code></li>
+<li><code>tests</code></li>
+<li><code>views</code></li>
+<li><code>webroot</code></li>
+</ul>
+<p>Let's tackle each of these folders one-by-one, covering what each is used for, and how you can best organize your application.</p>
+<h2><a id="config" class="anchor" href="file-structure.html#config">Config</a></h2>
+<p>The <code>config</code> folder contains three main pieces: bootstrap files, your connections information, and your routes definitions.</p>
+<h3><a id="bootstrapping" class="anchor" href="file-structure.html#bootstrapping">Bootstrapping</a></h3>
+<p>The main bootstrap file in the config folder is <code>bootstrap.php</code>. This file is second file PHP will execute in any request cycle, and it loads up the li3 framework along with any other extras that you define there. As such, it's a great place to place initial application configuration.</p>
+<p>The best practice for bootstrapping parts of your application is by writing specific bootstrap files and placing them in <code>config/bootstrap/filename.php</code>. Once written, include the configuration into the main bootstrap file:</p>
+<pre><code class="language-php">// Adding my custom configuration or initialization...
+require __DIR__ . '/bootstrap/myconfig.php';
+</code></pre>
+<h3><a id="connections" class="anchor" href="file-structure.html#connections">Connections</a></h3>
+<p>The <code>connections.php</code> file in config lists the connections you have to external data resources, most often some type of database.</p>
+<p>Connections should be listed in this file, as calls to <code>Connections::add()</code>, like so:</p>
+<pre><code class="language-php">Connections::add('default', [
+    'type' =&gt; 'database',
+    'adapter' =&gt; 'MySql',
+    'host' =&gt; 'localhost',
+    'login' =&gt; 'root',
+    'password' =&gt; '',
+    'database' =&gt; 'my_blog'
+]);
+
+Connections::add('couch', [
+    'type' =&gt; 'http', 'adapter' =&gt; 'CouchDb', 'host' =&gt; '127.0.0.1', 'port' =&gt; 5984
+]);
+
+Connections::add('mongo', ['type' =&gt; 'MongoDb', 'database' =&gt; 'app']);
+</code></pre>
+<p>The particulars on the adapter will shape how the connection definition is put together, but this list should constitute what you've got in <code>connections.php</code>.</p>
+<h3><a id="routes" class="anchor" href="file-structure.html#routes">Routes</a></h3>
+<p>Routes definitions is how you inform the framework how URLs and bits of code match up. At the most basic level, it's how you tell li3 which controller should respond to a request to a given URL.</p>
+<p>For example, I could specify that any request  to <code>/login</code> is handled by <code>UsersController::login()</code> like this:</p>
+<pre><code class="language-php">Router::connect('/login', ['controller' =&gt; 'users', 'action' =&gt; 'login']);
+</code></pre>
+<p>More on routes later, but this file should house all such configuration information.</p>
+<h2><a id="controllers" class="anchor" href="file-structure.html#controllers">Controllers</a></h2>
+<p>Application controllers are housed here. Each controller is named in CamelCased, plural format (i.e. <code>PostsController.php</code>), and placed here.</p>
+<h2><a id="extensions" class="anchor" href="file-structure.html#extensions">Extensions</a></h2>
+<p>The extensions folder is meant to store extension classes that you've created for your application. Custom helpers, adapters, console commands and data classes.</p>
+<h3><a id="adapter" class="anchor" href="file-structure.html#adapter">Adapter</a></h3>
+<p>A number of li3 classes extend the <code>lithium\core\Adaptable</code> static class. This class allows you to take a number of different approaches and easily switch out implementations for an application task. Authentication, session handling, and caching are a few examples of li3 functionality that have been made adaptable.</p>
+<p>Custom application adapters should be placed in this folder, organized by subfolder. For example, if I created a custom adapter for the <code>Auth</code> class, based on my LDAP setup, I'd create the implementation in <code>/extensions/adapter/auth/Ldap.php</code>.</p>
+<h3><a id="command" class="anchor" href="file-structure.html#command">Command</a></h3>
+<p>Custom console applications are placed in <code>command</code>.  Commands you create should be built similar to those you see in <code>/lithium/console/command</code>.</p>
+<p>As an example, say I created a custom mailer queue, and I need to create a command to fill up the queue with announcement emails and trigger the send process. I'd create a new class called <code>QueueFiller</code> that extends <code>lithium\console\Command</code>, and place it in <code>extensions/command/QueueFiller.php</code>.</p>
+<p>Once there, running <code>li3 queue-filler</code> from the command line will trigger the logic I've written.</p>
+<h3><a id="data" class="anchor" href="file-structure.html#data">Data</a></h3>
+<p>Occasionally a new application will require custom data classes to work with a storage engine not already accommodated for by core classes.</p>
+<p>If you've got some proprietary database, and it's result objects or query structures are very customized, you'll extend the classes in the <code>lithium\data</code> namespace (i.e. <code>Source</code>, <code>source\Database</code> or <code>source\Http</code>) and place them here for use in your application.</p>
+<h3><a id="helper" class="anchor" href="file-structure.html#helper">Helper</a></h3>
+<p>Custom view helpers are common need. These classes should extend <code>lithium\template\Helper</code> and be placed in this folder.</p>
+<h2><a id="libraries" class="anchor" href="file-structure.html#libraries">Libraries</a></h2>
+<p>The <code>libraries</code> folder is meant to house entire li3 applications—or plugins—that your main application makes use of.</p>
+<p>Third-party, non-li3 libraries should be placed here as well. If you're integrating with Facebook, or using part of the Zend Framework in your application, place those files here as well.</p>
+<h2><a id="models" class="anchor" href="file-structure.html#models">Models</a></h2>
+<p>Application models are stored here, in CamelCased, plural naming format (i.e. <code>Posts.php</code>).</p>
+<h2><a id="resources" class="anchor" href="file-structure.html#resources">Resources</a></h2>
+<p>The resources folder is used by a li3 application as a non-web viewable storage place for application data. By default globalization files (such as <code>.po</code> string files) and temporary application files are stored there.</p>
+<p>As you build your application, the <code>resources</code> folder is a great place for other application data like custom cache files, SQLite databases, or a temporary spot for uploaded files.</p>
+<p>The <code>resources</code> is a place where the web server has write access, so make sure to keep that in mind when securing your application.</p>
+<h2><a id="tests" class="anchor" href="file-structure.html#tests">Tests</a></h2>
+<p>The <code>tests</code> folder is where the unit testing framework files for your application reside. The testing setup for li3 is covered elsewhere, but let's cover what ends up in each of the testing subfolders here.</p>
+<h3><a id="cases" class="anchor" href="file-structure.html#cases">Cases</a></h3>
+<p>All of the actual unit testing logic for the main MVC classes in the application go in the <code>cases</code> folder. Subfolders should already exist inside of <code>cases</code> to prompt you where each sort of test case should go.</p>
+<h3><a id="integration" class="anchor" href="file-structure.html#integration">Integration</a></h3>
+<p>Unit tests in the <code>integration</code> folder test the interaction between two or more classes, or abstract class implementations.</p>
+<h3><a id="mocks" class="anchor" href="file-structure.html#mocks">Mocks</a></h3>
+<p>Classes in <code>mocks</code> are used to facilitate certain unit tests. For example, if I'm testing a custom model I've created, I can create a new class in <code>mocks/data/MockSource.php</code> and use it in my model unit testing logic.</p>
+<p>It is recommend that you use subfolder organization that mimics your application's and li3's namespacing and folder structure.</p>
+<h2><a id="views" class="anchor" href="file-structure.html#views">Views</a></h2>
+<p>The <code>views</code> folder contains any pieces of view-level code in your application. The two main core folders here to note are <code>elements</code> and <code>layouts</code>. Other view folders here contain views organized by controller name.</p>
+<h3><a id="elements" class="anchor" href="file-structure.html#elements">Elements</a></h3>
+<p>Elements are small bits of view code that are used in multiple views. A common navigational element, menu, or form might end up as an element in this folder. Element files are suffixed with a compound extension: the first showing the type of view code, and the last as <code>.php</code>.</p>
+<p>Example element filenames might include <code>nav.html.php</code>, <code>animateLink.js.php</code>, or <code>header.xml.php</code>.</p>
+<h3><a id="layouts" class="anchor" href="file-structure.html#layouts">Layouts</a></h3>
+<p>Views (and the elements they may contain) are rendered inside of view layouts. The layouts for your application reside in this folder, named similar to elements.</p>
+<p>A layout named <code>default</code> will be used to render a view if none other has been specified by the controller.</p>
+<h3><a id="controller-view-folders" class="anchor" href="file-structure.html#controller-view-folders">Controller View Folders</a></h3>
+<p>Along with the <code>elements</code> and <code>layouts</code> folders, many other controller-specific view folders will reside here.</p>
+<p>One default example is the <code>pages</code> folder here that holds all the views for the core <code>PagesController</code>. As you create new controllers and views for your application, create new folders here, named after your controllers.</p>
+<h2><a id="webroot" class="anchor" href="file-structure.html#webroot">Webroot</a></h2>
+<p>The <code>webroot</code> folder of your application is (ideally) the only place in your application that is web-visible. The <code>index.php</code> file takes care of bootstrapping li3, and the rest of the folders and files here are used for static content delivery.</p>
+<p>Things like JavaScript files, images, Flash objects, and movies should end up here for easy access for your web server to deliver to the client.</p>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

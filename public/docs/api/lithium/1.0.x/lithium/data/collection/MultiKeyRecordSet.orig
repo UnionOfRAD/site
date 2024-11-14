@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\data\collection\MultiKeyRecordSet – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.0.x/lithium/data" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">data</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.0.x/lithium/data/collection" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">collection</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">MultiKeyRecordSet</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.0.x/lithium/data/collection" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method protected">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/MultiKeyRecordSet::_init()">_init()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/MultiKeyRecordSet::offsetExists()">offsetExists()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/MultiKeyRecordSet::offsetGet()">offsetGet()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/MultiKeyRecordSet::offsetUnset()">offsetUnset()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/MultiKeyRecordSet::key()">key()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/MultiKeyRecordSet::keys()">keys()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/MultiKeyRecordSet::to()">to()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/MultiKeyRecordSet::each()">each()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/MultiKeyRecordSet::find()">find()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/MultiKeyRecordSet::map()">map()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/MultiKeyRecordSet::_set()">_set()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/MultiKeyRecordSet::_keyIndex()">_keyIndex()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/RecordSet::_populate()">_populate()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/RecordSet::_mapRecord()">_mapRecord()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/RecordSet::_hydrateRecord()">_hydrateRecord()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/RecordSet::_columnMap()">_columnMap()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::__construct()">__construct()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::assignTo()">assignTo()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::model()">model()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::parent()">parent()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::exists()">exists()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::schema()">schema()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::set()">set()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::offsetSet()">offsetSet()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::rewind()">rewind()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::current()">current()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::next()">next()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::valid()">valid()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::first()">first()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::_filterFromArray()">_filterFromArray()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::meta()">meta()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::reduce()">reduce()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::sort()">sort()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::data()">data()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::result()">result()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::stats()">stats()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::close()">close()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::closed()">closed()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::__destruct()">__destruct()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::serialize()">serialize()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::unserialize()">unserialize()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/util/Collection::formats()">formats()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/util/Collection::invoke()">invoke()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/util/Collection::__call()">__call()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/util/Collection::respondsTo()">respondsTo()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/util/Collection::_to()">_to()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/util/Collection::end()">end()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/util/Collection::prev()">prev()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/util/Collection::append()">append()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/util/Collection::count()">count()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/util/Collection::toArray()">toArray()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::applyFilter()">applyFilter()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::invokeMethod()">invokeMethod()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::__set_state()">__set_state()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_instance()">_instance()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_filter()">_filter()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_parents()">_parents()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_stop()">_stop()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/MultiKeyRecordSet::$_index">$_index</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/MultiKeyRecordSet::$_columns">$_columns</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/RecordSet::$_dependencies">$_dependencies</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/RecordSet::$_relationships">$_relationships</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/RecordSet::$_keyIndex">$_keyIndex</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/collection/RecordSet::$_seen">$_seen</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::$_parent">$_parent</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::$_pathKey">$_pathKey</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::$_model">$_model</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::$_query">$_query</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::$_result">$_result</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::$_valid">$_valid</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::$_stats">$_stats</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::$_started">$_started</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::$_exists">$_exists</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::$_schema">$_schema</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::$_handlers">$_handlers</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/data/Collection::$_autoConfig">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/util/Collection::$_formats">$_formats</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/util/Collection::$_data">$_data</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::$_config">$_config</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::$_methodFilters">$_methodFilters</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::$_parents">$_parents</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.0.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.0.x/lithium/data" class="symbol-segment">data</a>\<a href="/docs/api/lithium/1.0.x/lithium/data/collection" class="symbol-segment">collection</a>\MultiKeyRecordSet		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.0.x/lithium/data/collection/RecordSet" class="extends__symbol">lithium\data\collection\RecordSet</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+				</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

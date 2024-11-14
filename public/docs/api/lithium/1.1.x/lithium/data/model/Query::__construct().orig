@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\data\model\Query::__construct() – Framework API v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.1.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.1.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.1.x/lithium/data" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">data</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.1.x/lithium/data/model" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">model</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="/docs/api/lithium/1.1.x/lithium/data/model/Query" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Query</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">__construct()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.1.x/lithium/data/model/Query" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.1.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.1.x/lithium/data" class="symbol-segment">data</a>\<a href="/docs/api/lithium/1.1.x/lithium/data/model" class="symbol-segment">model</a>\<a href="/docs/api/lithium/1.1.x/lithium/data/model/Query" class="symbol-segment">Query</a>::__construct()		</h1>
+
+		<section class="under">
+																<div class="extends">
+					<span class="extends__title">
+													Overrides
+											</span>
+					<a href="/docs/api/lithium/1.1.x/lithium/core/Object::__construct()" class="extends__symbol">lithium\core\Object::__construct()</a>				</div>
+						<div class="tags">
+													<span class="tag public">public</span>
+												<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Constructor, which initializes the default values this object supports. Even though only
+a specific list of configuration parameters is available by default, the <code>Query</code> object
+uses the <code>__call()</code> method to implement automatic getters and setters for any arbitrary
+piece of data.</p>
+					</div>
+				
+									<div class="description">
+						<p>This means that any information may be passed into the constructor may be used by the
+backend data source executing the query (or ignored, if support is not implemented).
+This is useful if, for example, you wish to extend a core data source and implement
+custom functionality.</p>
+					</div>
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">array</span>
+							<code class="name">$config</code>
+															<span class="parameter">
+									<p>Available configuration options are:</p>
+<ul>
+<li><code>'type'</code> <em>string</em>: The type of the query (<code>read</code>, <code>create</code>, <code>update</code>, <code>delete</code>).</li>
+<li><code>'mode'</code> <em>string</em>: <code>JOIN</code> mode for a join query.</li>
+<li><code>'entity'</code> <em>object</em>: The base entity to query on. If set <code>'model'</code> is optionnal.</li>
+<li><code>'model'</code> <em>string</em>: The base model to query on.</li>
+<li><code>'source'</code> <em>string</em>: The name of the table/collection. Unnecessary
+if <code>model</code> is set.</li>
+<li><code>'alias'</code> <em>string</em>: Alias for the source. Unnecessary if <code>model</code> is set.</li>
+<li><code>'schema'</code> <em>object</em>: A schema model. Unnecessary if <code>model</code> is set.</li>
+<li><code>'fields'</code> <em>array</em>: The fields to retreive.</li>
+<li><code>'conditions'</code> <em>array</em>: The conditions of the queries</li>
+<li><code>'having'</code> <em>array</em>: The having conditions of the queries</li>
+<li><code>'group'</code> <em>string</em>: The group by parameter.</li>
+<li><code>'order'</code> <em>string</em>: The order by parameter.</li>
+<li><code>'limit'</code> <em>string</em>: The limit parameter.</li>
+<li><code>'offset'</code> <em>string</em>: The offset of the <code>limit</code> options.</li>
+<li><code>'page'</code> <em>string</em>: Convenience parameter for setting the <code>offset</code>:
+<code>offset</code> = <code>page</code> * <code>limit</code>.</li>
+<li><code>'with'</code> <em>array</em>: Contain dependencies. Works only if <code>model</code> is set.</li>
+<li><code>'joins'</code> <em>array</em>: Contain manual join dependencies.</li>
+<li><code>'data'</code> <em>array</em>: Datas for update queries.</li>
+<li><code>'whitelist'</code> <em>array</em>: Allowed fields for updating queries.</li>
+<li><code>'calculate'</code> <em>string</em>: Alias name of the count.</li>
+<li><code>'comment'</code> <em>string</em>: Comment for the query.</li>
+<li><code>'map'</code> <em>object</em>: Unnecessary if <code>model</code> is set.</li>
+<li><code>'relationships'</code> <em>array</em>: Unnecessary if <code>model</code> is set.</li>
+</ul>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">void</span>
+							</section>
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public function __construct(array $config = []) {
+		$defaults = [
+			&#039;type&#039; =&gt; &#039;read&#039;,
+			&#039;mode&#039; =&gt; null,
+			&#039;model&#039; =&gt; null,
+			&#039;entity&#039; =&gt; null,
+			&#039;source&#039; =&gt; null,
+			&#039;alias&#039; =&gt; null,
+			&#039;fields&#039; =&gt; [],
+			&#039;conditions&#039; =&gt; [],
+			&#039;having&#039; =&gt; [],
+			&#039;group&#039; =&gt; null,
+			&#039;order&#039; =&gt; null,
+			&#039;limit&#039; =&gt; null,
+			&#039;offset&#039; =&gt; null,
+			&#039;page&#039; =&gt; null,
+			&#039;with&#039; =&gt; [],
+			&#039;joins&#039; =&gt; [],
+			&#039;data&#039; =&gt; [],
+			&#039;whitelist&#039; =&gt; [],
+			&#039;calculate&#039; =&gt; null,
+			&#039;schema&#039; =&gt; null,
+			&#039;comment&#039; =&gt; null,
+			&#039;map&#039; =&gt; [],
+			&#039;relationships&#039; =&gt; []
+		];
+		parent::__construct($config + $defaults);
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Routing – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/book/manual/1.x" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/book/manual/1.x/controllers" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Controllers</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Routing</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="/docs/book/manual/1.x/common-tasks" class="">Common Tasks</a><ul><li><a href="/docs/book/manual/1.x/common-tasks/logging" class="">Logging</a><li><a href="/docs/book/manual/1.x/common-tasks/plugins" class="">Plugins</a><li><a href="/docs/book/manual/1.x/common-tasks/error-handling" class="">Error Handling</a><li><a href="/docs/book/manual/1.x/common-tasks/caching" class="">Caching</a><li><a href="/docs/book/manual/1.x/common-tasks/filters" class="">Filters</a><li><a href="/docs/book/manual/1.x/common-tasks/etags" class="">Etags</a><li><a href="/docs/book/manual/1.x/common-tasks/globalization" class="">Globalization</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-authentication" class="">Simple Authentication</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-auth-user" class="">Simple Auth User</a><li><a href="/docs/book/manual/1.x/common-tasks/console-applications" class="">Console Applications</a></ul><li><a href="/docs/book/manual/1.x/appendices" class="">Appendices</a><ul><li><a href="/docs/book/manual/1.x/appendices/faqs" class="">FAQs</a><li><a href="/docs/book/manual/1.x/appendices/using-in-other-applications" class="">Using In Other Applications</a></ul><li><a href="/docs/book/manual/1.x/quickstart" class="">Quickstart</a><li><a href="/docs/book/manual/1.x/controllers" class="">Controllers</a><ul><li><a href="/docs/book/manual/1.x/controllers/actions" class="">Actions</a><li><a href="/docs/book/manual/1.x/controllers/flow-control" class="">Flow Control</a><li><a href="/docs/book/manual/1.x/controllers/parameters" class="">Parameters</a><li><a href="/docs/book/manual/1.x/controllers/type-rendering-detection" class="">Type Rendering Detection</a><li><a href="/docs/book/manual/1.x/controllers/routing" class="active">Routing</a></ul><li><a href="/docs/book/manual/1.x/installation" class="">Installation</a><ul><li><a href="/docs/book/manual/1.x/installation/requirements" class="">Requirements</a><li><a href="/docs/book/manual/1.x/installation/troubleshooting" class="">Troubleshooting</a><li><a href="/docs/book/manual/1.x/installation/web-servers" class="">Web Servers</a></ul><li><a href="/docs/book/manual/1.x/architecture" class="">Architecture</a><ul><li><a href="/docs/book/manual/1.x/architecture/file-structure" class="">File Structure</a><li><a href="/docs/book/manual/1.x/architecture/response-lifecycle" class="">Response Lifecycle</a><li><a href="/docs/book/manual/1.x/architecture/aop" class="">AOP</a><li><a href="/docs/book/manual/1.x/architecture/mvc" class="">MVC</a><li><a href="/docs/book/manual/1.x/architecture/objects" class="">Objects</a></ul><li><a href="/docs/book/manual/1.x/quality-code" class="">Quality Code</a><ul><li><a href="/docs/book/manual/1.x/quality-code/fixtures" class="">Fixtures</a><li><a href="/docs/book/manual/1.x/quality-code/analysis" class="">Analysis</a><li><a href="/docs/book/manual/1.x/quality-code/testing" class="">Testing</a><li><a href="/docs/book/manual/1.x/quality-code/security" class="">Security</a></ul><li><a href="/docs/book/manual/1.x/configuration" class="">Configuration</a><ul><li><a href="/docs/book/manual/1.x/configuration/environment" class="">Environment</a><li><a href="/docs/book/manual/1.x/configuration/bootstrapping" class="">Bootstrapping</a><li><a href="/docs/book/manual/1.x/configuration/third-party-libraries" class="">Third Party Libraries</a></ul><li><a href="/docs/book/manual/1.x/views" class="">Views</a><ul><li><a href="/docs/book/manual/1.x/views/layouts" class="">Layouts</a><li><a href="/docs/book/manual/1.x/views/elements" class="">Elements</a><li><a href="/docs/book/manual/1.x/views/helpers" class="">Helpers</a><li><a href="/docs/book/manual/1.x/views/static-content" class="">Static Content</a><li><a href="/docs/book/manual/1.x/views/auto-escaping" class="">Auto Escaping</a></ul><li><a href="/docs/book/manual/1.x/models" class="">Models</a><ul><li><a href="/docs/book/manual/1.x/models/mongodb" class="">Mongodb</a><li><a href="/docs/book/manual/1.x/models/meta" class="">Meta</a><li><a href="/docs/book/manual/1.x/models/relationships" class="">Relationships</a><li><a href="/docs/book/manual/1.x/models/saving" class="">Saving</a><li><a href="/docs/book/manual/1.x/models/using-data-sources" class="">Using Data Sources</a><li><a href="/docs/book/manual/1.x/models/adding-functions" class="">Adding Functions</a><li><a href="/docs/book/manual/1.x/models/data-mutation" class="">Data Mutation</a><li><a href="/docs/book/manual/1.x/models/connections" class="">Connections</a><li><a href="/docs/book/manual/1.x/models/creating-data-sources" class="">Creating Data Sources</a><li><a href="/docs/book/manual/1.x/models/querying" class="">Querying</a><li><a href="/docs/book/manual/1.x/models/validation" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="routing-http-requests" class="anchor" href="#routing-http-requests">Routing HTTP Requests</a></h1>
+<h2><a id="introduction" class="anchor" href="#introduction">Introduction</a></h2>
+<p>li3's routing allows developers to completely decouple the application's URLs from it's underlying structure. It works by creating a set of <code>Route</code> objects that tell li3 to respond to incoming requests, and which bits of code they relate to in your application. While this makes for great SEO and usability, it also keeps things nimble in respect to change.</p>
+<p>As such, the router has two main responsibilities. First, to determine the correct set of dispatch parameters based on an incoming request. Secondly, to generate URLs from a given set of parameters.</p>
+<p>Though this section's main focus is to show you how to create routes according your needs, we'll also cover how the router builds URLs based on parameters you supply.</p>
+<h2><a id="defining-routes" class="anchor" href="#defining-routes">Defining Routes</a></h2>
+<p>Defining routes is done in the application directory at <code>/config/routes.php</code>, by using the <code>Router::connect()</code> method to create <code>Route</code> objects that define URL-to-code mappings.</p>
+<div class="note note-info">
+	The router will match routes in the order they are defined. In other words, the first route that matches will be returned and used for dispatching.
+</div>
+<h3><a id="routing-definition-example" class="anchor" href="#routing-definition-example">Routing Definition Example</a></h3>
+<p>Let's start with a simple example: connecting a URL with a controller method:</p>
+<pre><code class="language-php">// The following lines are equivalent...
+Router::connect('/help', ['controller' =&gt; 'Users', 'action' =&gt; 'support']);
+Router::connect('/help', 'Users::support');
+</code></pre>
+<p>If your application was hosted at <a href="http://www.example.com">http://www.example.com</a>, requesting <a href="http://www.example.com/help">http://www.example.com/help</a> would show you the rendered results of the <code>support()</code> action of <code>UsersController</code> in your application.</p>
+<h3><a id="params-amp-regex" class="anchor" href="#params-amp-regex">Params &amp; Regex</a></h3>
+<p>While helpful, you'll quickly run into situations where something a bit more complex is needed. Most routes in an application include dynamic parameters that are handed to the controller. These parameters are marked in route definitions using the <code>{:paramname}</code> syntax. Consider the following example from an application that shows Basketball game rosters:</p>
+<pre><code class="language-php">Router::connect('/{:controller}/{:action}/{:gameId}/{:playerId}', 'Rosters::view');
+</code></pre>
+<p>This action forwards the users on to the <code>view()</code> method of <code>RostersController</code>, and sets the corresponding params on the request so they're available in the controller (<code>$this-&gt;request-&gt;params['gameId']</code> and <code>$this-&gt;request-&gt;params['playerId']</code>, in this case).</p>
+<p>Apart from allowing users to supply those values, you can also supply them statically in a route:</p>
+<pre><code class="language-php">Router::connect('/socks', ['Products::view', 'id' =&gt; 72739]);
+</code></pre>
+<p>In order to avoid overlapping cases and provide routing clarity, you can also specify a route parameter with an accompanying regular expression. Similarly defined routes use the <code>{:paramname:regex}</code> syntax. There are a few examples in the default <code>routes.php</code> file that ships with li3:</p>
+<pre><code class="language-php">Router::connect('/{:controller}/{:action}/{:id:\d+}');
+</code></pre>
+<p>Here, we're routing incoming requests along to their respective controllers and actions, but also tracking on a new parameter "id" if the URL ends with a numerical component. The regex here is important. If not defined, this route would also match <code>/products/viewCategory/electronics</code> if defined before another route that matches it better.</p>
+<h3><a id="default-parameters" class="anchor" href="#default-parameters">Default Parameters</a></h3>
+<p>There are a number of default parameters that li3 is aware of. As you build your routes, keep these routes in mind, as they're reserved for routing/dispatching purposes:</p>
+<pre><code>- `controller` : The name of the controller to dispatch.
+- `action` : The name of the action to call in the dispatched controller.
+- `type` : Used for media type routing (covered in the Controllers guide).
+- `args` : Used for continuation routes.
+</code></pre>
+<h3><a id="continuation-routes" class="anchor" href="#continuation-routes">Continuation Routes</a></h3>
+<p>Continuation routes are a new class of route definitions that wrap other routes. They're especially handy if you're used to using some sort of route prefixes to define a state in your application. Such uses may include:</p>
+<ul>
+<li>Localization</li>
+<li>Administrative sections of the application</li>
+<li>API endpoints</li>
+</ul>
+<p>This is done by using the special <code>{:args}</code> parameter and setting the <code>continue</code> parameter to <code>true</code>. Once this is defined, you can allow later routes to match as needed. Here's a simple example to wrap your application's URLs according to locale:</p>
+<pre><code class="language-php">Router::connect('/{:locale:en|de|it|jp}/{:args}', [], ['continue' =&gt; true]);
+</code></pre>
+<p>As you can see, this route tells li3 that routes that are prefixed with 'en', 'de', 'it', or 'jp' should set an additional <code>locale</code> request parameter then be passed back to the router for further matching. A few other examples:</p>
+<pre><code class="language-php">// API endpoint versioning (i.e. /v1/products/list.json)
+Router::connect('/{:version:v\d+}/{:args}', [], ['continue' =&gt; true]);
+
+// Admin routing...
+Router::connect('/admin/{:args}', [], ['continue' =&gt; true]);
+
+// For rendering all static pages...
+Router::connect('/pages/{:args}', 'Pages::view', ['continue' =&gt; true]);
+</code></pre>
+<h3><a id="route-matching" class="anchor" href="#route-matching">Route Matching</a></h3>
+<p>li3's router is also used in reverse: instead of turning URLs into parameters (controllers and actions, at least) it can also create application URLs based on supplied parameters based on the defined routes.</p>
+<p>Usually you'll be using this functionality without realizing it. For example, it's used by the <code>Html</code> helper in views to create links. Normally it's faster and easier to use the supplied helper functions. If however you're doing something in a layer that doesn't have easy access to this functionality, you can use the router directly.</p>
+<p>Full details are supplied in the API docs, but the basic idea is that you can use <code>Router::match()</code> to do this. Just supply a set of parameters, and the router will return a URL (if any) that matches that set of parameters:</p>
+<pre><code class="language-php">// Imagine this route has already been defined:
+Router::connect('/unicorns', 'Ponies::magic');
+
+Router::match(['controller' =&gt; 'Ponies', 'action' =&gt; 'magic']);
+// Returns '/unicorns'
+Router::match('Ponies::magic');
+// Also returns '/unicorns'
+</code></pre>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

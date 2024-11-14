@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>FAQs – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../docs.html" class="active">Documentation</a><a href="../../../../../versions.html">Versions</a><a href="../../../../../present.html">Presentations</a><a href="../../../../../support.html">Community</a><a href="../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../appendices.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Appendices</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">FAQs</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="../common-tasks.html" class="">Common Tasks</a><ul><li><a href="../common-tasks/logging.html" class="">Logging</a><li><a href="../common-tasks/plugins.html" class="">Plugins</a><li><a href="../common-tasks/error-handling.html" class="">Error Handling</a><li><a href="../common-tasks/caching.html" class="">Caching</a><li><a href="../common-tasks/filters.html" class="">Filters</a><li><a href="../common-tasks/etags.html" class="">Etags</a><li><a href="../common-tasks/globalization.html" class="">Globalization</a><li><a href="../common-tasks/simple-authentication.html" class="">Simple Authentication</a><li><a href="../common-tasks/simple-auth-user.html" class="">Simple Auth User</a><li><a href="../common-tasks/console-applications.html" class="">Console Applications</a></ul><li><a href="../appendices.html" class="">Appendices</a><ul><li><a href="faqs.html" class="active">FAQs</a><li><a href="using-in-other-applications.html" class="">Using In Other Applications</a></ul><li><a href="../quickstart.html" class="">Quickstart</a><li><a href="../controllers.html" class="">Controllers</a><ul><li><a href="../controllers/actions.html" class="">Actions</a><li><a href="../controllers/flow-control.html" class="">Flow Control</a><li><a href="../controllers/parameters.html" class="">Parameters</a><li><a href="../controllers/type-rendering-detection.html" class="">Type Rendering Detection</a><li><a href="../controllers/routing.html" class="">Routing</a></ul><li><a href="../installation.html" class="">Installation</a><ul><li><a href="../installation/requirements.html" class="">Requirements</a><li><a href="../installation/troubleshooting.html" class="">Troubleshooting</a><li><a href="../installation/web-servers.html" class="">Web Servers</a></ul><li><a href="../architecture.html" class="">Architecture</a><ul><li><a href="../architecture/file-structure.html" class="">File Structure</a><li><a href="../architecture/response-lifecycle.html" class="">Response Lifecycle</a><li><a href="../architecture/aop.html" class="">AOP</a><li><a href="../architecture/mvc.html" class="">MVC</a><li><a href="../architecture/objects.html" class="">Objects</a></ul><li><a href="../quality-code.html" class="">Quality Code</a><ul><li><a href="../quality-code/fixtures.html" class="">Fixtures</a><li><a href="../quality-code/analysis.html" class="">Analysis</a><li><a href="../../../../manual/quality-code/testing.wiki.html" class="">Testing</a><li><a href="../quality-code/security.html" class="">Security</a></ul><li><a href="../configuration.html" class="">Configuration</a><ul><li><a href="../configuration/environment.html" class="">Environment</a><li><a href="../configuration/bootstrapping.html" class="">Bootstrapping</a><li><a href="../configuration/third-party-libraries.html" class="">Third Party Libraries</a></ul><li><a href="../views.html" class="">Views</a><ul><li><a href="../views/layouts.html" class="">Layouts</a><li><a href="../views/elements.html" class="">Elements</a><li><a href="../views/helpers.html" class="">Helpers</a><li><a href="../views/static-content.html" class="">Static Content</a><li><a href="../views/auto-escaping.html" class="">Auto Escaping</a></ul><li><a href="../models.html" class="">Models</a><ul><li><a href="../models/mongodb.html" class="">Mongodb</a><li><a href="../models/meta.html" class="">Meta</a><li><a href="../models/relationships.html" class="">Relationships</a><li><a href="../models/saving.html" class="">Saving</a><li><a href="../models/using-data-sources.html" class="">Using Data Sources</a><li><a href="../models/adding-functions.html" class="">Adding Functions</a><li><a href="../models/data-mutation.html" class="">Data Mutation</a><li><a href="../models/connections.html" class="">Connections</a><li><a href="../models/creating-data-sources.html" class="">Creating Data Sources</a><li><a href="../models/querying.html" class="">Querying</a><li><a href="../models/validation.html" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="frequently-asked-questions" class="anchor" href="faqs.html#frequently-asked-questions">Frequently Asked Questions</a></h1>
+<h3><a id="php-short-tags-in-templates-haven-t-those-been-deprecated-for-like-ever" class="anchor" href="faqs.html#php-short-tags-in-templates-haven-t-those-been-deprecated-for-like-ever">PHP short tags in templates? Haven't those been deprecated for, like, ever?</a></h3>
+<p>You may have noticed that li3 templates use PHP short tags (i.e. <code>&lt;?=</code>). Don't worry though, these aren't actually interpreted by PHP. Instead, li3 uses an internal template compiler to change these tags into full <code>&lt;?php echo ... ?&gt;</code> statements, with the added benefit of automatic content escaping, so you don't have to think about XSS attacks. Also, the compiler is smart enough to recognize content coming from helpers, etc., so it won't double-escape. For more info, check out the documentation on <a href="../../../../api/lithium/latest:1.x/lithium/template.html">the templating system</a>.</p>
+<h3><a id="you-guys-use-statics-all-over-the-place-aren-t-those-really-hard-to-test" class="anchor" href="faqs.html#you-guys-use-statics-all-over-the-place-aren-t-those-really-hard-to-test">You guys use statics all over the place. Aren't those really hard to test?</a></h3>
+<p>Strictly speaking, statics are quite easy to test. li3 borrows several concepts from <em>functional programming</em> in order to ensure highly testable code throughout the entire framework, as well as applications built on top of it. In order to understand some of these concepts, first we have to define a few terms:</p>
+<p> <em>State</em>: An essential part of writing software, <a href="http://en.wikipedia.org/wiki/Program_state">Wikipedia defines state</a> as "a snapshot of the measure of various conditions in the system".  When developing PHP applications, this varies by context / scope: when the web server first loads up <code>index.php</code>, the state is defined by the data used to request the script, including GET or POST data, and any system information exposed in <code>$_SERVER</code> or <code>$_ENV</code>, as well as any other super-global variable. State can also include non-obvious things like the current date and time.  Within a method, the state consists of any parameters passed in, anything within the object to which the method is bound (i.e. <code>$this</code>), and any other data defined or made available in the global scope.</p>
+<p> <em>Side-effect</em>: A concept closely related to state, <em>side effects</em> are changes that a method or other routine makes to things outside its own scope. Side effects include things like changing the values of global variables, object properties (i.e. <code>$this</code>), modifying data in a database or filesystem, changing the value of a parameter passed by reference, or echoing output.</p>
+<p> <em>Mutability</em>: Mutability is the quality of something which is changeable. The basic incarnation of mutability in PHP is a variable or object property. By contrast, something which is <em>immutable</em> is not changeable, i.e. a global or class-level constant. Therefore, <em>mutable state</em> is an element of application state (see above) that can be changed. These changes are what produce side-effects. This may seem obvious, but becomes more important later on.</p>
+<p> <em>Referential transparency</em>: A quality of a method or function which prescribes that its return value can only be dependent on its parameters, and that it has no effect on the state of the program outside its own scope. Methods which are referentially transparent are very easy to test, since they do not require the setup of any outside state; a given set of parameters should always have the same outcome. Referentially transparent functions are also easy to cache, since multiple calls (with the same parameters) always return the same value. This process is known as <em>memoization</em>.</p>
+<p>Getting back to our discussion, the problems with testing statics that people typically refer to actually have to do with <em>mutable global state</em>, i.e. a static method that depends on some external (usually global) piece of information which is subject to change by outside forces. The epitome of this anti-pattern is the Singleton. The idea behind singletons is that you have one (and only one) globally-available instance of an object at any one time.</p>
+<p>The essential problem with this is that there's often no way to determine at any given time what the value of a singleton's attributes could be, because any part of your application has access to modify them. <strong>This exemplifies the root cause of almost all software logic bugs.</strong> The only solution is to design the singleton such that, once created, its attributes cannot be changed (i.e., make it <em>immutable</em>). Alternatively, re-design the affected architecture so that a singleton is not required.</p>
+<p>Fortunately, all static classes in li3 are either composed of <em>referentially transparent</em> methods, or methods whose usage patterns are oriented around <em>immutability</em>. Some examples of referentially transparent methods are <code>lithium\util\String::insert()</code>, which inserts values into a template string, or <code>lithium\util\Inflector::camelize()</code>, which produces a version of a word or phrase. These functions have no external side-effects, and produce predictable output based on their parameters.</p>
+<p>Examples of immutable static classes would be any class extends <a href="../../../../api/lithium/latest:1.x/lithium/core/Adaptable.html"><code>Adaptable</code></a>, i.e. <code>Cache</code>, <code>Connections</code>, etc. These classes model and provide access to system-level resources such as database connections, user sessions, and caching configurations. These classes are configured with information on how to access and operate on their respective resources using the <code>config()</code> method of each class. This happens once and only once, during the application's bootstrap process. Subsequent access to those classes (i.e. through the <code>adapter()</code> method) always returns the same adapter instance with the same attributes. This avoids the problem of having our application's state change out from under us.</p>
+<p>The other issue often referred to when testing statics is that they're difficult to mock, or replace dependencies. Consider the following:</p>
+<pre><code class="language-php">class A {
+    public static function foo() {
+        // return some calculated value
+    }
+}
+
+class B {
+    public static function bar() {
+        $result = A::foo();
+        // perform some calculation on $result
+        return $result;
+    }
+}
+</code></pre>
+<p>In this example, every call to <code>B::bar()</code> results in a call to <code>A::foo()</code>. It is impossible to test <code>B</code> in isolation, because it is impossible <em>not</em> to also call <code>A</code>. In PHP 5.2 and below, there was no solution to this. However, PHP 5.3 allows "dynamic" static method calls, which enable the following:</p>
+<pre><code class="language-php">class B {
+    public static function bar($dependency) {
+        $result = $dependency::foo();
+        // perform some calculation on $result
+        return $result;
+    }
+}
+</code></pre>
+<p>This allows <code>A</code> to be swapped out for another class, and makes <code>B</code> much easier to test, since <code>$dependency</code> can be the name of a mock class that can act as a control during testing. This also has the pleasant side-effect of making <code>B</code>'s design more flexible.</p>
+<p>li3 addresses this issue of dependencies in a uniform way, using the protected <code>$_classes</code> attribute. Consider the following snippet from the <code>lithium\action\Dispatcher</code> class:</p>
+<pre><code class="language-php">class Dispatcher {
+
+	// ...
+	protected static $_classes = [
+		'router' =&gt; 'lithium\net\http\Router'
+	];
+	// ...
+}
+</code></pre>
+<p>The <code>Dispatcher</code>'s dependencies may then be dynamically configured to use a different routing class with the <code>config()</code> method. Internally, calling the <code>Router</code> looks like this:</p>
+<pre><code class="language-php">$router = static::$_classes['router'];
+$result = $router::process($request);
+</code></pre>
+<p>Not all dependencies are configured this way, but it is the predominant convention throughout the framework. In almost all other cases, dependencies which cannot be changed are dependencies on utility methods, which are almost always referentially transparent. Because of this, these hard-coded dependencies add no difficulty or complexity in testing.</p>
+<h3><a id="why-are-there-libraries-folder-in-both-the-root-directory-and-the-app-directory" class="anchor" href="faqs.html#why-are-there-libraries-folder-in-both-the-root-directory-and-the-app-directory">Why are there 'libraries' folder in both the root directory and the app directory?</a></h3>
+<div class="note note-version">
+	More recent distributions don't have 2 libraries folders anymore.
+</div>
+<p>Some libraries are used by a single app or on an app-by-app basis. These apps store libraries in the <code>app/libraries</code> directory. Other libraries are shared by one or more apps. The <code>libraries</code> directory is provided to make administration of these libraries easier. There is also a (typically negligible) disk space savings as any given library isn't duplicated in the <code>app/libraries</code> directories for multiple applications.</p>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

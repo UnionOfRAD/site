@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Plugins – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../docs.html" class="active">Documentation</a><a href="../../../../../versions.html">Versions</a><a href="../../../../../present.html">Presentations</a><a href="../../../../../support.html">Community</a><a href="../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../common-tasks.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Common Tasks</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Plugins</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="../common-tasks.html" class="">Common Tasks</a><ul><li><a href="logging.html" class="">Logging</a><li><a href="plugins.html" class="active">Plugins</a><li><a href="error-handling.html" class="">Error Handling</a><li><a href="caching.html" class="">Caching</a><li><a href="filters.html" class="">Filters</a><li><a href="etags.html" class="">Etags</a><li><a href="globalization.html" class="">Globalization</a><li><a href="simple-authentication.html" class="">Simple Authentication</a><li><a href="simple-auth-user.html" class="">Simple Auth User</a><li><a href="console-applications.html" class="">Console Applications</a></ul><li><a href="../appendices.html" class="">Appendices</a><ul><li><a href="../appendices/faqs.html" class="">FAQs</a><li><a href="../appendices/using-in-other-applications.html" class="">Using In Other Applications</a></ul><li><a href="../quickstart.html" class="">Quickstart</a><li><a href="../controllers.html" class="">Controllers</a><ul><li><a href="../controllers/actions.html" class="">Actions</a><li><a href="../controllers/flow-control.html" class="">Flow Control</a><li><a href="../controllers/parameters.html" class="">Parameters</a><li><a href="../controllers/type-rendering-detection.html" class="">Type Rendering Detection</a><li><a href="../controllers/routing.html" class="">Routing</a></ul><li><a href="../installation.html" class="">Installation</a><ul><li><a href="../installation/requirements.html" class="">Requirements</a><li><a href="../installation/troubleshooting.html" class="">Troubleshooting</a><li><a href="../installation/web-servers.html" class="">Web Servers</a></ul><li><a href="../architecture.html" class="">Architecture</a><ul><li><a href="../architecture/file-structure.html" class="">File Structure</a><li><a href="../architecture/response-lifecycle.html" class="">Response Lifecycle</a><li><a href="../architecture/aop.html" class="">AOP</a><li><a href="../architecture/mvc.html" class="">MVC</a><li><a href="../architecture/objects.html" class="">Objects</a></ul><li><a href="../quality-code.html" class="">Quality Code</a><ul><li><a href="../quality-code/fixtures.html" class="">Fixtures</a><li><a href="../quality-code/analysis.html" class="">Analysis</a><li><a href="../../../../manual/quality-code/testing.wiki.html" class="">Testing</a><li><a href="../quality-code/security.html" class="">Security</a></ul><li><a href="../configuration.html" class="">Configuration</a><ul><li><a href="../configuration/environment.html" class="">Environment</a><li><a href="../configuration/bootstrapping.html" class="">Bootstrapping</a><li><a href="../configuration/third-party-libraries.html" class="">Third Party Libraries</a></ul><li><a href="../views.html" class="">Views</a><ul><li><a href="../views/layouts.html" class="">Layouts</a><li><a href="../views/elements.html" class="">Elements</a><li><a href="../views/helpers.html" class="">Helpers</a><li><a href="../views/static-content.html" class="">Static Content</a><li><a href="../views/auto-escaping.html" class="">Auto Escaping</a></ul><li><a href="../models.html" class="">Models</a><ul><li><a href="../models/mongodb.html" class="">Mongodb</a><li><a href="../models/meta.html" class="">Meta</a><li><a href="../models/relationships.html" class="">Relationships</a><li><a href="../models/saving.html" class="">Saving</a><li><a href="../models/using-data-sources.html" class="">Using Data Sources</a><li><a href="../models/adding-functions.html" class="">Adding Functions</a><li><a href="../models/data-mutation.html" class="">Data Mutation</a><li><a href="../models/connections.html" class="">Connections</a><li><a href="../models/creating-data-sources.html" class="">Creating Data Sources</a><li><a href="../models/querying.html" class="">Querying</a><li><a href="../models/validation.html" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="creating-a-plugin" class="anchor" href="plugins.html#creating-a-plugin">Creating a Plugin</a></h1>
+<p>If you've written a piece of functionality that you want to share among multiple applications, or distribute within the li3 community, you'll want to create a <em>plugin</em>. The good news is, if you've already created a li3 application, you're more than half way there.</p>
+<p>First, to understand how li3 deals with plugins, it's important to understand how it deals with <em>libraries</em>, so make sure you've read "<a href="../configuration/third-party-libraries.html">Working with 3rd Party Libraries</a>". In li3, everything is a library, including the li3 core, other frameworks, your application, and of course, plugins. By convention, plugins are simply libraries that conform to the same organizational conventions as a li3 application.</p>
+<h2><a id="requirements" class="anchor" href="plugins.html#requirements">Requirements</a></h2>
+<p>While there are very few (really no) <em>hard</em> requirements for li3 plugins, there are several very strong recommendations. First and foremost is that you follow the namespacing standards outlined in the <a href="../../../../api/lithium/latest:1.x/lithium/core/Libraries.html"><code>Libraries</code> class documentation</a>. Second, your plugin should include a <code>config</code> directory containing a <code>bootstrap.php</code> file. Finally, as mentioned above, it's best to conform to the same directory structure as a li3 application. And of course, classes must be namespaced accordingly, with the root namespace matching the name of the plugin. (An exception to this would be if you were using an organizational or vendor-level namespace within which your plugin lived, in which case the plugin's root namespace would look like <code>vendor\plugin_name</code>).</p>
+<h2><a id="what-can-plugins-include" class="anchor" href="plugins.html#what-can-plugins-include">What Can Plugins Include?</a></h2>
+<p>Because li3 treats everything as libraries, and because all libraries are essentially on the same playing field, a plugin can include anything. Any type of class or resource that could be included in the li3 core or in an application can be included in a plugin. This includes models, controllers, helpers, adapters, generic classes, even custom routes and web assets.</p>
+<p>Common examples of things to include in plugins are adapters for cache engines, databases or web services, or a collection of models to share between multiple applications that use the same data. Other plugins introduce new classes with new functionality which can have their own types of adapters, such as the <a href="https://github.com/tmaiaroto/li3_access"><code>li3_access</code> plugin</a>, which adds access control support. Some plugins, like <a href="https://github.com/UnionOfRAD/li3_twig"><code>li3_twig</code></a>, <a href="https://github.com/mariano/li3_doctrine2"><code>li3_doctrine</code></a> and <a href="https://github.com/UnionOfRAD/li3_queue"><code>li3_pdf</code></a>, wrap other libraries to provide tight integration with li3.</p>
+<h2><a id="creating-your-first-plugin" class="anchor" href="plugins.html#creating-your-first-plugin">Creating Your First Plugin</a></h2>
+<p>You can create a plugin simply by running the following from any directory, substituting <code>my</code> for whatever you want to call it. This creates a new plugin from li3's default plugin template.</p>
+<pre><code class="language-php">git clone https://github.com/UnionOfRAD/li3_plugin li3_my
+</code></pre>
+<h2><a id="installing-and-configuring" class="anchor" href="plugins.html#installing-and-configuring">Installing and Configuring</a></h2>
+<p>As with other libraries, plugins are installed in your local or system <code>libraries</code> directory by cloning, symlinking, etc. (Again, see "<a href="../configuration/third-party-libraries.html">Working with 3rd Party Libraries</a>"). An important thing to know when developing plugins is that when your library is registered through <a href="../../../../api/lithium/latest:1.x/lithium/core/Libraries::add().html"><code>Libraries::add()</code></a>, it can also be configured with custom settings.</p>
+<p>While <code>add()</code>'s <code>$config</code> parameter specifies several default configuration settings, it is also possible to pass any other arbitrary information that you may wish to use in your plugin. This data can then be retrieved within your plugin by calling <code>Libraries::get('plugin_name')</code> or <code>Libraries::get('plugin_name', 'key')</code>.</p>
+<h2><a id="routes-and-web-assets" class="anchor" href="plugins.html#routes-and-web-assets">Routes and Web Assets</a></h2>
+<p>As mentioned above, your plugin can also include custom routing and web assets. By default, these are both based on filters that are registered in the primary application's bootstrap files. To handle routing, you'll find a default filter in <code>config/bootstrap/action.php</code>, which iterates over all registered libraries in reverse order, looking for <code>config/routes.php</code> files to include. While the application can easily customize this behavior, by default, simply including <code>config/routes.php</code> in your plugin will automatically register your custom routes with the application.</p>
+<p>Likewise with static assets, such as JavaScript, images and CSS files, they are loaded from plugins using a filter which can be found in <code>config/bootstrap/media.php</code>. By default, this is commented out in the bootstrap of the primary application, so it should first be enabled. Then, assets can be loaded from the <code>webroot</code> directory of the plugin (this directory can be overridden by passing a custom value to the <code>'webroot'</code> key in <code>Libraries::add()</code>).</p>
+<p>While this works simply in development, the performance is not as good as direct filesystem access. In production, it's better to create a symlink from <code>libraries/plugin_name/webroot</code> to <code>webroot/plugin_name</code>.</p>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

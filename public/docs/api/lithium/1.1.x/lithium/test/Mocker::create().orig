@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\test\Mocker::create() – Framework API v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.1.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.1.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.1.x/lithium/test" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">test</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.1.x/lithium/test/Mocker" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Mocker</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">create()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.1.x/lithium/test/Mocker" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.1.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.1.x/lithium/test" class="symbol-segment">test</a>\<a href="/docs/api/lithium/1.1.x/lithium/test/Mocker" class="symbol-segment">Mocker</a>::create()		</h1>
+
+		<section class="under">
+															<div class="tags">
+													<span class="tag public">public</span>
+													<span class="tag">static</span>
+								<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The main entrance to create a new Mock class.</p>
+					</div>
+				
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">string</span>
+							<code class="name">$mockee</code>
+															<span class="parameter">
+									<p>The fully namespaced <code>\Mock</code> class</p>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">void</span>
+							</section>
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public static function create($mockee) {
+		if (!static::_validateMockee($mockee)) {
+			return;
+		}
+
+		$mocker = static::_mocker($mockee);
+		$isStatic = is_subclass_of($mocker, &#039;lithium\core\StaticObject&#039;);
+
+		$tokens = [
+			&#039;namespace&#039; =&gt; static::_namespace($mockee),
+			&#039;mocker&#039; =&gt; $mocker,
+			&#039;mockee&#039; =&gt; &#039;MockDelegate&#039;,
+			&#039;static&#039; =&gt; $isStatic ? &#039;static&#039; : &#039;&#039;,
+		];
+		$mockDelegate = static::_dynamicCode(&#039;mockDelegate&#039;, &#039;startClass&#039;, $tokens);
+		$mock = static::_dynamicCode(&#039;mock&#039;, &#039;startClass&#039;, $tokens);
+
+		$reflectedClass = new ReflectionClass($mocker);
+		$reflecedMethods = $reflectedClass-&gt;getMethods();
+		$getByReference = false;
+		$staticApplyFilter = true;
+		$constructor = false;
+		foreach ($reflecedMethods as $methodId =&gt; $method) {
+			if (!in_array($method-&gt;name, static::$_blackList)) {
+				$key = $method-&gt;isStatic() ? &#039;staticMethod&#039; : &#039;method&#039;;
+				if ($method-&gt;name === &#039;__construct&#039;) {
+					$key = &#039;constructor&#039;;
+					$constructor = true;
+				}
+				$docs = ReflectionMethod::export($mocker, $method-&gt;name, true);
+				if (preg_match(&#039;/&amp;&#039; . $method-&gt;name . &#039;/&#039;, $docs) === 1) {
+					continue;
+				}
+				$tokens = [
+					&#039;namespace&#039; =&gt; static::_namespace($mockee),
+					&#039;method&#039; =&gt; $method-&gt;name,
+					&#039;modifiers&#039; =&gt; static::_methodModifiers($method),
+					&#039;args&#039; =&gt; static::_methodParams($method),
+					&#039;stringArgs&#039; =&gt; static::_stringMethodParams($method),
+					&#039;mocker&#039; =&gt; $mocker,
+				];
+				$mockDelegate .= static::_dynamicCode(&#039;mockDelegate&#039;, $key, $tokens);
+				$mock .= static::_dynamicCode(&#039;mock&#039;, $key, $tokens);
+			} elseif ($method-&gt;name === &#039;__get&#039;) {
+				$docs = ReflectionMethod::export($mocker, &#039;__get&#039;, true);
+				$getByReference = preg_match(&#039;/&amp;__get/&#039;, $docs) === 1;
+			} elseif ($method-&gt;name === &#039;applyFilter&#039;) {
+				$staticApplyFilter = $method-&gt;isStatic();
+			}
+		}
+
+		if (!$constructor) {
+			$tokens = [
+				&#039;namespace&#039; =&gt; static::_namespace($mockee),
+				&#039;modifiers&#039; =&gt; &#039;public&#039;,
+				&#039;args&#039; =&gt; null,
+				&#039;stringArgs&#039; =&gt; &#039;array()&#039;,
+				&#039;mocker&#039; =&gt; $mocker,
+			];
+			$mock .= static::_dynamicCode(&#039;mock&#039;, &#039;constructor&#039;, $tokens);
+			$mockDelegate .= static::_dynamicCode(&#039;mockDelegate&#039;, &#039;constructor&#039;, $tokens);
+		}
+
+		$mockDelegate .= static::_dynamicCode(&#039;mockDelegate&#039;, &#039;endClass&#039;);
+		$mock .= static::_dynamicCode(&#039;mock&#039;, &#039;get&#039;, [
+			&#039;reference&#039; =&gt; $getByReference ? &#039;&amp;&#039; : &#039;&#039;,
+		]);
+		$mock .= static::_dynamicCode(&#039;mock&#039;, &#039;set&#039;);
+		$mock .= static::_dynamicCode(&#039;mock&#039;, &#039;isset&#039;);
+		$mock .= static::_dynamicCode(&#039;mock&#039;, &#039;unset&#039;);
+		$mock .= static::_dynamicCode(&#039;mock&#039;, &#039;applyFilter&#039;, [
+			&#039;static&#039; =&gt; $staticApplyFilter ? &#039;static&#039; : &#039;&#039;,
+		]);
+		$mock .= static::_dynamicCode(&#039;mock&#039;, &#039;destructor&#039;);
+		$mock .= static::_dynamicCode(&#039;mock&#039;, &#039;endClass&#039;);
+
+		eval($mockDelegate . $mock);
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

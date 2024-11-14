@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/*!
+  i3_docs Styles
+
+  Copyright (c) 2014 Union of RAD - All rights reserved.
+
+  The code is distributed under the terms of the BSD 3-clause
+  License. For the full license text see the LICENSE file.
+*/
+
+.li3-docs #content h2 {
+  margin-top: 60px;
+}
+.li3-docs #content h3 {
+  margin-top: 40px;
+}
+
+.li3-docs pre {
+  width: 120%;
+}
+
+.li3-docs p {
+  hyphens: auto;
+}
+.li3-docs code {
+  hyphens: none;
+}
+
+.li3-docs .nav-up {
+  font-weight: bold;
+}
+
+.li3-docs .body .deprecated,
+.li3-docs .body .note {
+  border-left: 8px solid #e8e8e8;
+  background: rgb(253,252,255);
+  margin-left: -23px;
+  margin-right: -15px;
+}
+.li3-docs .body .note pre {
+  width: auto;
+}
+
+.li3-docs .body .note-hint,
+.li3-docs .body .note-info,
+.li3-docs .body .note-caution,
+.li3-docs .body .note-version,
+.li3-docs .body .deprecated {
+  padding: 15px;
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+.li3-docs .body .note-hint {
+  border-color: #2F99A1;
+}
+.li3-docs .body .note-info {
+  border-color: #319931;
+}
+.li3-docs .body .deprecated,
+.li3-docs .body .note-caution {
+  border-color: #CB0532;
+}
+.li3-docs .body .note-version {
+  margin-top: 1em;
+  margin-bottom: .25em;
+  padding: 0 0 0 15px;
+  border-color: #180274;
+}
+
+/* --- Under Symbol name --- */
+.li3-docs .under {
+  margin: -1em 0 2em 0;
+}
+.li3-docs .under .extends {
+  margin-bottom: .5em;
+}
+.li3-docs .extends__title {
+  font-weight: bold;
+}
+.li3-docs .under .tag {
+  border: 1px solid black;
+  display: inline-block;
+  margin-right: 5px;
+  padding: 4px 10px;
+  font-weight: bold;
+}
+
+.li3-docs .type {
+  font-weight: bold;
+}
+.li3-docs .parameter ul {
+  list-style-type: disc;
+}
+.li3-docs .summary {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.li3-docs .return p,
+.li3-docs .parameter p {
+  margin-top: 0;
+}
+.li3-docs .parameter p + ul {
+  margin-top: -.5em;
+}
+.li3-docs .parameter ul p {
+  margin: 0;
+}
+
+.li3-docs #content img {
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  max-width: 90%;
+}
+
+.li3-docs #content > article.docs-index {
+  max-width: none;
+}
+
+/* ----- Aside Menu ----- */
+.li3-docs .aside .inherited a:not(:hover) {
+  color: blue;
+}
+.li3-docs .aside .deprecated a:not(:hover) {
+  text-decoration: line-through;
+}
+.li3-docs .aside .protected a:not(:hover) {
+  opacity: .5;
+}
+
+.li3-docs .body .anchor:hover:after {
+  display: inline-block;
+  content: "¶";
+  color: #2F99A1;
+  margin-left: 3px;
+}
+.li3-docs .ns-summary ul {
+  list-style: none;
+  padding-left: 0;
+}

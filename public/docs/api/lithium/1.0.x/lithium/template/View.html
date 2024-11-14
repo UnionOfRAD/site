@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\template\View – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="http://li3.me/index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="http://li3.me/docs.html" class="active">Documentation</a><a href="http://li3.me/versions.html">Versions</a><a href="http://li3.me/present.html">Presentations</a><a href="http://li3.me/support.html">Community</a><a href="http://li3.me/development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="http://li3.me/docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="http://li3.me/docs/api/lithium/1.0.x/lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="http://li3.me/docs/api/lithium/1.0.x/lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="http://li3.me/docs/lithium/template.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">template</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">View</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="http://li3.me/docs/lithium/template.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/View::__construct().html">__construct()</a>												<li class="method protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/View::_init().html">_init()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/View::render().html">render()</a>												<li class="method protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/View::_conditions().html">_conditions()</a>												<li class="method protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/View::_step().html">_step()</a>												<li class="method protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/View::_process().html">_process()</a>												<li class="method protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/View::_convertSteps().html">_convertSteps()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::applyFilter()">applyFilter()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::invokeMethod()">invokeMethod()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::__set_state()">__set_state()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::respondsTo().html">respondsTo()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_instance()">_instance()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_filter()">_filter()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_parents()">_parents()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_stop()">_stop()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/View::$outputFilters.html">$outputFilters</a>												<li class="property protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/View::$_request.html">$_request</a>												<li class="property protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/View::$_response.html">$_response</a>												<li class="property protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/View::$_loader.html">$_loader</a>												<li class="property protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/View::$_renderer.html">$_renderer</a>												<li class="property protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/View::$_adapters.html">$_adapters</a>												<li class="property protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/View::$_processes.html">$_processes</a>												<li class="property protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/View::$_steps.html">$_steps</a>												<li class="property protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/View::$_autoConfig.html">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_config">$_config</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_methodFilters">$_methodFilters</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_parents">$_parents</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="http://li3.me/docs/api/lithium/1.0.x/lithium.html" class="symbol-segment">lithium</a>\<a href="http://li3.me/docs/lithium/template.html" class="symbol-segment">template</a>\View		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object.html" class="extends__symbol">lithium\core\Object</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>As one of the three pillars of the Model-View-Controller design pattern, the <code>View</code> class
+(along with other supporting classes) is responsible for taking the data passed from the
+request and/or controller, inserting this into the requested template/layout, and then returning
+the rendered content.</p>
+					</div>
+				
+									<div class="description">
+						<p>The <code>View</code> class interacts with a variety of other classes in order to achieve maximum
+flexibility and configurability at all points in the view rendering and presentation
+process. The <code>Loader</code> class is tasked with locating and reading template files which are then
+passed to the <code>Renderer</code> adapter subclass.</p>
+<p>In the default configuration, the <code>File</code> adapter acts as both renderer and loader, loading files
+from paths defined in <em>process steps</em> (described below) and rendering them as plain PHP files,
+augmented with <a href="http://li3.me/docs/lithium/template.html">special syntax</a>.</p>
+<p>The <code>View</code> class operates on <em>processes</em>, which define the steps to render a completed view. For
+example, the default process, which renders a template wrapped in a layout, is comprised of two
+<em>steps</em>: the first step renders the main template and captures it to the rendering context, where
+it is embedded in the layout in the second step. See the <code>$_steps</code> and <code>$_processes</code> properties
+for more information.</p>
+<p>Using steps and processes, you can create rendering scenarios to suit very complex needs.</p>
+<p>By default, the <code>View</code> class is called during the course of the framework's dispatch cycle by the
+<code>Media</code> class. However, it is also possible to instantiate and call <code>View</code> directly, in cases
+where you wish to bypass all other parts of the framework and simply return rendered content.</p>
+<p>A simple example, using the <code>Simple</code> renderer/loader for string templates:</p>
+<pre><code class="language-php">$view = new View(array('loader' =&gt; 'Simple', 'renderer' =&gt; 'Simple'));
+echo $view-&gt;render('element', array('name' =&gt; "Robert"), array('element' =&gt; 'Hello, {:name}!'));
+
+// Output:
+"Hello, Robert!";
+</code></pre>
+<p><em>Note</em>: This is easily adapted for XML templating.</p>
+<p>Another example, this time of something that could be used in an application
+error handler:</p>
+<pre><code class="language-php">$view = new View(array(
+    'paths' =&gt; array(
+        'template' =&gt; '{:library}/views/errors/{:template}.{:type}.php',
+        'layout'   =&gt; '{:library}/views/layouts/{:layout}.{:type}.php',
+    )
+));
+
+$page = $View-&gt;render('all', array('content' =&gt; $info), array(
+    'template' =&gt; '404',
+    'layout' =&gt; 'error'
+));
+</code></pre>
+<p>To learn more about processes and process steps, see the <code>$_processes</code> and <code>$_steps</code> properties,
+respectively.</p>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/view/Renderer.html">lithium\template\view\Renderer</a>									<li><a href="http://li3.me/docs/api/lithium/1.0.x/lithium/template/view/adapter.html">lithium\template\view\adapter</a>									<li><a href="http://li3.me/docs/api/lithium/1.0.x/lithium/net/http/Media.html">lithium\net\http\Media</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class View extends \lithium\core\Object {
+
+	/**
+	 * Output filters for view rendering.
+	 *
+	 * @var array List of filters.
+	 */
+	public $outputFilters = array();
+
+	/**
+	 * Holds the details of the current request that originated the call to this view, if
+	 * applicable.  May be empty if this does not apply.  For example, if the View class is
+	 * created to render an email.
+	 *
+	 * @see lithium\action\Request
+	 * @var object `Request` object instance.
+	 */
+	protected $_request = null;
+
+	/**
+	 * Holds a reference to the `Response` object that will be returned at the end of the current
+	 * dispatch cycle. Allows headers and other response attributes to be assigned in the templating
+	 * layer.
+	 *
+	 * @see lithium\action\Response
+	 * @var object `Response` object instance.
+	 */
+	protected $_response = null;
+
+	/**
+	 * The object responsible for loading template files.
+	 *
+	 * @var object Loader object.
+	 */
+	protected $_loader = null;
+
+	/**
+	 * Object responsible for rendering output.
+	 *
+	 * @var object Renderer object.
+	 */
+	protected $_renderer = null;
+
+	/**
+	 * Path used to look up view loading and rendering adapters.
+	 *
+	 * @var string
+	 */
+	protected $_adapters = &#039;adapter.template.view&#039;;
+
+	/**
+	 * View processes are aggregated lists of steps taken to to create a complete, rendered view.
+	 * For example, the default process, `&#039;all&#039;`, renders a template, then renders a layout, using
+	 * the rendered template content. A process can be defined using one or more steps defined in
+	 * the `$_steps` property. Each process definition is a simple array of ordered values, where
+	 * each value is a key in the `$_steps` array.
+	 *
+	 * @see lithium\template\View::$_steps
+	 * @see lithium\template\View::render()
+	 * @var array
+	 */
+	protected $_processes = array(
+		&#039;all&#039; =&gt; array(&#039;template&#039;, &#039;layout&#039;),
+		&#039;template&#039; =&gt; array(&#039;template&#039;),
+		&#039;element&#039; =&gt; array(&#039;element&#039;)
+	);
+
+	/**
+	 * The list of available rendering steps. Each step contains instructions for how to render one
+	 * piece of a multi-step view rendering. The `View` class combines multiple steps into
+	 * _processes_ to create the final output.
+	 *
+	 * Each step is named by its key in the `$_steps` array, and can have the following options:
+	 *
+	 * - `&#039;path&#039;` _string_: Indicates the set of paths to use when loading templates.
+	 *
+	 * - `&#039;conditions&#039;` _mixed_: Make the step dependent on a value being present, or on some other
+	 *    arbitrary condition. If a `&#039;conditions&#039;` is a string, it indicates that a key with that
+	 *    name must be present in the `$options` passed to `render()`, and must be set to a
+	 *    non-empty value. If a closure, it will be executed with the rendering parameters, and must
+	 *    return `true` or `false`. In either case, if the condition is satisfied, the step is
+	 *    processed. Otherwise, it is skipped. See the `_conditions()` method for more information.
+	 *
+	 * - `&#039;capture&#039;` _array_: If specified, allows the results of this rendering step to be assigned
+	 *   to a template variable used in subsequent steps, or to the templating context for use in
+	 *   subsequent steps. If can be specified in the form of `array(&#039;context&#039; =&gt; &#039;&lt;var-name&gt;&#039;)` or
+	 *   `array(&#039;data&#039; =&gt; &#039;&lt;var-name&gt;&#039;)`. If the `&#039;context&#039;` key is used, the results are captured
+	 *   to the rendering context. Likewise with the `&#039;data&#039;` key, results are captured to a
+	 *   template variable.
+	 *
+	 * - `&#039;multi&#039;` _boolean_: If set to `true`, the rendering parameter matching the name of this
+	 *   step can be an array containing multiple values, in which case this step is executed
+	 *   multiple times, once for each value of the array.
+	 *
+	 * @see lithium\template\View::$_processes
+	 * @see lithium\template\View::render()
+	 * @var array
+	 */
+	protected $_steps = array(
+		&#039;template&#039; =&gt; array(&#039;path&#039; =&gt; &#039;template&#039;, &#039;capture&#039; =&gt; array(&#039;context&#039; =&gt; &#039;content&#039;)),
+		&#039;layout&#039; =&gt; array(
+			&#039;path&#039; =&gt; &#039;layout&#039;, &#039;conditions&#039; =&gt; &#039;layout&#039;, &#039;multi&#039; =&gt; true, &#039;capture&#039; =&gt; array(
+				&#039;context&#039; =&gt; &#039;content&#039;
+			)
+		),
+		&#039;element&#039; =&gt; array(&#039;path&#039; =&gt; &#039;element&#039;)
+	);
+
+	/**
+	 * Auto-configuration parameters.
+	 *
+	 * @var array Objects to auto-configure.
+	 */
+	protected $_autoConfig = array(
+		&#039;request&#039;, &#039;response&#039;, &#039;processes&#039; =&gt; &#039;merge&#039;, &#039;steps&#039; =&gt; &#039;merge&#039;
+	);
+
+	/**
+	 * Constructor.
+	 *
+	 * @see lithium\template\View::$_steps
+	 * @see lithium\template\View::$_processes
+	 * @param array $config Class configuration parameters The available options are:
+	 *         - `&#039;loader&#039;` _mixed_: Instance or name of the class used for locating and reading
+	 *           template content. Defaults to `File`, which reads template content from PHP files.
+	 *         - `&#039;renderer&#039;` _mixed_: Instance or name of the class that populates template
+	 *           content with the data passed in to the view layer, typically from a controller.
+	 *           Defaults to `&#039;File&#039;`, which executes templates as standard PHP files, using path
+	 *           information returned from the `loader` class. Both `loader` and `renderer`
+	 *           classes are looked up using the `&#039;adapter.template.view&#039;` path, which locates
+	 *           classes in the `extensions\adapter\template\view` sub-namespace of an application
+	 *           or plugin.
+	 *         - `&#039;request&#039;`: The `Request` object to be made available in the templates.
+	 *           Defaults to `null`.
+	 *         - `&#039;steps&#039;` _array_: The array of step configurations to add to the built-in
+	 *           configurations. Will be merged with the defaults, with any configurations passed
+	 *           in overwriting built-in steps. See the `$_steps` property for more information.
+	 *         - `&#039;processes&#039;` _array_: The array of process steps to add to the built-in
+	 *           configurations. Will be merged with the defaults, with any configurations passed
+	 *           in overwriting built-in processes. See the `$_processes` property for more
+	 *           information.
+	 *         - `&#039;outputFilters&#039;` _array_: An array of filters to be used when handling output. By
+	 *           default, the class is initialized with one filter, `h`, which is used in automatic
+	 *           output escaping.
+	 * @return void
+	 */
+	public function __construct(array $config = array()) {
+		$defaults = array(
+			&#039;request&#039; =&gt; null,
+			&#039;response&#039; =&gt; null,
+			&#039;loader&#039; =&gt; &#039;File&#039;,
+			&#039;renderer&#039; =&gt; &#039;File&#039;,
+			&#039;steps&#039; =&gt; array(),
+			&#039;processes&#039; =&gt; array(),
+			&#039;outputFilters&#039; =&gt; array()
+		);
+		parent::__construct($config + $defaults);
+	}
+
+	/**
+	 * Perform initialization of the View.
+	 *
+	 * Looks up and initializes loader and renderer classes, and initializes the output escape
+	 * handler, matching the encoding from the `Response` object.
+	 *
+	 * @return void
+	 */
+	protected function _init() {
+		parent::_init();
+
+		$encoding = &#039;UTF-8&#039;;
+
+		if ($this-&gt;_response) {
+			$encoding =&amp; $this-&gt;_response-&gt;encoding;
+		}
+		$h = function($data) use (&amp;$encoding) {
+			return htmlspecialchars((string) $data, ENT_QUOTES, $encoding);
+		};
+		$this-&gt;outputFilters += compact(&#039;h&#039;) + $this-&gt;_config[&#039;outputFilters&#039;];
+
+		foreach (array(&#039;loader&#039;, &#039;renderer&#039;) as $key) {
+			if (is_object($this-&gt;_config[$key])) {
+				$this-&gt;{&#039;_&#039; . $key} = $this-&gt;_config[$key];
+				continue;
+			}
+			$class = $this-&gt;_config[$key];
+			$config = array(&#039;view&#039; =&gt; $this) + $this-&gt;_config;
+			$this-&gt;{&#039;_&#039; . $key} = Libraries::instance($this-&gt;_adapters, $class, $config);
+		}
+	}
+
+	/**
+	 * Executes a named rendering process by running each process step in sequence and aggregating
+	 * the results. The `View` class comes with 3 built-in processes: `&#039;all&#039;`, `&#039;template&#039;`, and
+	 * `&#039;element&#039;`. The `&#039;all&#039;` process is the default two-step rendered view, where a template is
+	 * wrapped in a layout containing a header and footer.
+	 *
+	 * @see lithium\template\View::_conditions()
+	 * @see lithium\template\View::$_processes
+	 * @see lithium\template\View::$_steps
+	 * @param string $process A named set of rendering steps defined in the `$_processes` array.
+	 * @param array $data An associative array of data to be rendered in the set of templates.
+	 * @param array $options Options used when rendering. Available keys are as follows:
+	 *              - `&#039;type&#039;` _string_: The type of content to render. Defaults to `&#039;html&#039;`.
+	 *              - `&#039;layout&#039;` _string_: The name of the layout to use in the default two-step
+	 *                 rendering process. Defaults to `null`.
+	 *              - `&#039;template&#039;` _string_: The name of the template to render. Defaults to `null`.
+	 *              - `&#039;context&#039;` _array_: An associative array of information to inject into the
+	 *                 rendering context.
+	 *              - `&#039;paths&#039;` _array_: A nested array of paths to use for rendering steps. The
+	 *                top-level keys should match the `&#039;path&#039;` key in a step configuration (i.e.:
+	 *                `&#039;template&#039;`, `&#039;layout&#039;`, or `&#039;element&#039;`), and the second level is an array
+	 *                of path template strings to search (can be a string if there&#039;s only one path).
+	 *                These path strings generally take the following form:
+	 *                `&#039;{:library}/views/{:controller}/{:template}.{:type}.php&#039;`. These template
+	 *                strings are specific to the `File` loader, but can take any form useful to the
+	 *                template loader being used.
+	 * @return string Returns the result of the rendering process, typically by rendering a template
+	 *         first, then rendering a layout (using the default configuration of the `&#039;all&#039;`
+	 *         process).
+	 */
+	public function render($process, array $data = array(), array $options = array()) {
+		$defaults = array(
+			&#039;type&#039; =&gt; &#039;html&#039;,
+			&#039;layout&#039; =&gt; null,
+			&#039;template&#039; =&gt; null,
+			&#039;context&#039; =&gt; array(),
+			&#039;paths&#039; =&gt; array(),
+			&#039;data&#039; =&gt; array()
+		);
+		$options += $defaults;
+
+		$data += $options[&#039;data&#039;];
+		$paths = $options[&#039;paths&#039;];
+		unset($options[&#039;data&#039;], $options[&#039;paths&#039;]);
+		$params = array_filter($options, function($val) { return $val &amp;&amp; is_string($val); });
+		$result = null;
+
+		foreach ($this-&gt;_process($process, $params) as $name =&gt; $step) {
+			if (isset($paths[$name]) &amp;&amp; $paths[$name] === false) {
+				continue;
+			}
+			if (!$this-&gt;_conditions($step, $params, $data, $options)) {
+				continue;
+			}
+			if ($step[&#039;multi&#039;] &amp;&amp; isset($options[$name])) {
+				foreach ((array) $options[$name] as $value) {
+					$params[$name] = $value;
+					$result = $this-&gt;_step($step, $params, $data, $options);
+				}
+				continue;
+			}
+			$result = $this-&gt;_step((array) $step, $params, $data, $options);
+		}
+		return $result;
+	}
+
+	/**
+	 * Evaluates a step condition to determine if the step should be executed.
+	 *
+	 * @see lithium\template\View::$_steps
+	 * @param array $step The array of instructions that define a rendering step.
+	 * @param array $params The parameters associated with this rendering operation, as passed to
+	 *              `render()` (filtered from the `$options` parameter).
+	 * @param array $data The associative array of template variables passed to `render()`.
+	 * @param array $options The `$options` parameter, as passed to `render()`.
+	 * @return boolean Returns `true` if the step should be executed, or `false` if the step should
+	 *         be skipped. If the step array has a `&#039;conditions&#039;` key which is a string, it checks
+	 *         to see if the rendering options (`$options`) contain a key of the same name, and if
+	 *         that key evaluates to `true`. If `&#039;conditions&#039;` is a closure, that closure is
+	 *         executed with the rendering parameters (`$params`, `$data`, and `$options`), and the
+	 *         result is determined by the return value of the closure. If a step definition has no
+	 *         `&#039;conditions&#039;` key, it is always executed.
+	 */
+	protected function _conditions(array $step, array $params, array $data, array $options) {
+		if (!$conditions = $step[&#039;conditions&#039;]) {
+			return true;
+		}
+		$isCallable = is_callable($conditions) &amp;&amp; !is_string($conditions);
+		if ($isCallable &amp;&amp; !$conditions($params, $data, $options)) {
+			return false;
+		}
+		if (is_string($conditions) &amp;&amp; !(isset($options[$conditions]) &amp;&amp; $options[$conditions])) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * Performs a rendering step.
+	 *
+	 * @see lithium\template\view\adapter\File::template()
+	 * @see lithium\template\view\Renderer::render()
+	 * @see lithium\template\view\adapter\File::render()
+	 * @param array $step The array defining the step configuration to render.
+	 * @param array $params An associative array of string values used in the template lookup
+	 *              process. See the `$params` argument of `File::template()`.
+	 * @param array $data associative array for template data.
+	 * @param array $options An associative array of options to pass to the renderer. See the
+	 *              `$options` parameter of `Renderer::render()` or `File::render()`.
+	 * @return string
+	 * @filter
+	 */
+	protected function _step(array $step, array $params, array &amp;$data, array &amp;$options = array()) {
+		$step += array(&#039;path&#039; =&gt; null, &#039;capture&#039; =&gt; null);
+		$_renderer = $this-&gt;_renderer;
+		$_loader = $this-&gt;_loader;
+		$filters = $this-&gt;outputFilters;
+		$params = compact(&#039;step&#039;, &#039;params&#039;, &#039;options&#039;) + array(
+			&#039;data&#039; =&gt; $data + $filters,
+			&#039;loader&#039; =&gt; $_loader,
+			&#039;renderer&#039; =&gt; $_renderer
+		);
+
+		$filter = function($self, $params) {
+			$template = $params[&#039;loader&#039;]-&gt;template($params[&#039;step&#039;][&#039;path&#039;], $params[&#039;params&#039;]);
+			return $params[&#039;renderer&#039;]-&gt;render($template, $params[&#039;data&#039;], $params[&#039;options&#039;]);
+		};
+		$result = $this-&gt;_filter(__METHOD__, $params, $filter);
+
+		if (is_array($step[&#039;capture&#039;])) {
+			switch (key($step[&#039;capture&#039;])) {
+				case &#039;context&#039;:
+					$options[&#039;context&#039;][current($step[&#039;capture&#039;])] = $result;
+				break;
+				case &#039;data&#039;:
+					$data[current($step[&#039;capture&#039;])] = $result;
+				break;
+			}
+		}
+		return $result;
+	}
+
+	/**
+	 * Converts a process name to an array containing the rendering steps to be executed for each
+	 * process.
+	 *
+	 * @param string $process A named set of rendering steps.
+	 * @param array $params
+	 * @return array A 2-dimensional array that defines the rendering process. The first dimension
+	 *         is a numerically-indexed array containing each rendering step. The second dimension
+	 *         represents the parameters for each step.
+	 */
+	protected function _process($process, &amp;$params) {
+		$defaults = array(&#039;conditions&#039; =&gt; null, &#039;multi&#039; =&gt; false);
+
+		if (!is_array($process)) {
+			if (!isset($this-&gt;_processes[$process])) {
+				throw new TemplateException(&quot;Undefined rendering process &#039;{$process}&#039;.&quot;);
+			}
+			$process = $this-&gt;_processes[$process];
+		}
+		if (is_string(key($process))) {
+			return $this-&gt;_convertSteps($process, $params, $defaults);
+		}
+		$result = array();
+
+		foreach ($process as $step) {
+			if (is_array($step)) {
+				$result[] = $step + $defaults;
+				continue;
+			}
+			if (!isset($this-&gt;_steps[$step])) {
+				throw new TemplateException(&quot;Undefined rendering step &#039;{$step}&#039;.&quot;);
+			}
+			$result[$step] = $this-&gt;_steps[$step] + $defaults;
+		}
+		return $result;
+	}
+
+	/**
+	 * Handles API backward compatibility by converting an array-based rendering instruction passed
+	 * to `render()` as a process, to a set of rendering steps, rewriting any associated rendering
+	 * parameters as necessary.
+	 *
+	 * @param array $command A deprecated rendering instruction, i.e.
+	 *              `array(&#039;template&#039; =&gt; &#039;/path/to/template&#039;)`.
+	 * @param array $params The array of associated rendering parameters, passed by reference.
+	 * @param array $defaults Default step rendering options to be merged with the passed rendering
+	 *              instruction information.
+	 * @return array Returns a converted set of rendering steps, to be executed in `render()`.
+	 */
+	protected function _convertSteps(array $command, array &amp;$params, $defaults) {
+		if (count($command) === 1) {
+			$params[&#039;template&#039;] = current($command);
+			return array(array(&#039;path&#039; =&gt; key($command)) + $defaults);
+		}
+		return $command;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

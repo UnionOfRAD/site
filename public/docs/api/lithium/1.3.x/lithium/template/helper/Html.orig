@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\template\helper\Html – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.3.x/lithium/template" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">template</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.3.x/lithium/template/helper" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">helper</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Html</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.3.x/lithium/template/helper" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/helper/Html::charset()">charset()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/helper/Html::link()">link()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/helper/Html::script()">script()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/helper/Html::style()">style()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/helper/Html::head()">head()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/helper/Html::image()">image()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/helper/Html::_metaLink()">_metaLink()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/Helper::__construct()">__construct()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/Helper::_init()">_init()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/Helper::escape()">escape()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/Helper::attributes()">attributes()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/Helper::_attribute()">_attribute()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/Helper::_options()">_options()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/Helper::_render()">_render()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/Helper::_attributes()">_attributes()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::__set_state()">__set_state()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::respondsTo()">respondsTo()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::invokeMethod()">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_instance()">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_stop()">_stop()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_parents()">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::applyFilter()">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_filter()">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/helper/Html::$_strings">$_strings</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/helper/Html::$_metaLinks">$_metaLinks</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/helper/Html::$_metaList">$_metaList</a>												<li class="property public">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/helper/Html::$contentMap">$contentMap</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/Helper::$_context">$_context</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/Helper::$_classes">$_classes</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/Helper::$_autoConfig">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/template/Helper::$_minimized">$_minimized</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::$_config">$_config</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::$_parents">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::$_methodFilters">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.3.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.3.x/lithium/template" class="symbol-segment">template</a>\<a href="/docs/api/lithium/1.3.x/lithium/template/helper" class="symbol-segment">helper</a>\Html		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.3.x/lithium/template/Helper" class="extends__symbol">lithium\template\Helper</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>A template helper that assists in generating HTML content. Accessible in templates via
+<code>$this-&gt;html</code>, which will auto-load this helper into the rendering context. For examples of how
+to use this helper, see the documentation for a specific method. For a list of the
+template strings this helper uses, see the <code>$_strings</code> property.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Html extends \lithium\template\Helper {
+
+	/**
+	 * String templates used by this helper.
+	 *
+	 * @var array
+	 */
+	protected $_strings = [
+		&#039;block&#039;            =&gt; &#039;&lt;div{:options}&gt;{:content}&lt;/div&gt;&#039;,
+		&#039;block-end&#039;        =&gt; &#039;&lt;/div&gt;&#039;,
+		&#039;block-start&#039;      =&gt; &#039;&lt;div{:options}&gt;&#039;,
+		&#039;charset&#039;          =&gt; &#039;&lt;meta charset=&quot;{:encoding}&quot; /&gt;&#039;,
+		&#039;image&#039;            =&gt; &#039;&lt;img src=&quot;{:path}&quot;{:options} /&gt;&#039;,
+		&#039;js-block&#039;         =&gt; &#039;&lt;script{:options}&gt;{:content}&lt;/script&gt;&#039;,
+		&#039;js-end&#039;           =&gt; &#039;&lt;/script&gt;&#039;,
+		&#039;js-start&#039;         =&gt; &#039;&lt;script{:options}&gt;&#039;,
+		&#039;link&#039;             =&gt; &#039;&lt;a href=&quot;{:url}&quot;{:options}&gt;{:title}&lt;/a&gt;&#039;,
+		&#039;list&#039;             =&gt; &#039;&lt;ul{:options}&gt;{:content}&lt;/ul&gt;&#039;,
+		&#039;list-item&#039;        =&gt; &#039;&lt;li{:options}&gt;{:content}&lt;/li&gt;&#039;,
+		&#039;meta&#039;             =&gt; &#039;&lt;meta{:options}/&gt;&#039;,
+		&#039;meta-link&#039;        =&gt; &#039;&lt;link href=&quot;{:url}&quot;{:options} /&gt;&#039;,
+		&#039;para&#039;             =&gt; &#039;&lt;p{:options}&gt;{:content}&lt;/p&gt;&#039;,
+		&#039;para-start&#039;       =&gt; &#039;&lt;p{:options}&gt;&#039;,
+		&#039;script&#039;           =&gt; &#039;&lt;script src=&quot;{:path}&quot;{:options}&gt;&lt;/script&gt;&#039;,
+		&#039;style&#039;            =&gt; &#039;&lt;style{:options}&gt;{:content}&lt;/style&gt;&#039;,
+		&#039;style-import&#039;     =&gt; &#039;&lt;style{:options}&gt;@import url({:url});&lt;/style&gt;&#039;,
+		&#039;style-link&#039;       =&gt; &#039;&lt;link rel=&quot;{:type}&quot; href=&quot;{:path}&quot;{:options} /&gt;&#039;,
+		&#039;table-header&#039;     =&gt; &#039;&lt;th{:options}&gt;{:content}&lt;/th&gt;&#039;,
+		&#039;table-header-row&#039; =&gt; &#039;&lt;tr{:options}&gt;{:content}&lt;/tr&gt;&#039;,
+		&#039;table-cell&#039;       =&gt; &#039;&lt;td{:options}&gt;{:content}&lt;/td&gt;&#039;,
+		&#039;table-row&#039;        =&gt; &#039;&lt;tr{:options}&gt;{:content}&lt;/tr&gt;&#039;,
+		&#039;tag&#039;              =&gt; &#039;&lt;{:name}{:options}&gt;{:content}&lt;/{:name}&gt;&#039;,
+		&#039;tag-end&#039;          =&gt; &#039;&lt;/{:name}&gt;&#039;,
+		&#039;tag-start&#039;        =&gt; &#039;&lt;{:name}{:options}&gt;&#039;
+	];
+
+	/**
+	 * Data used for custom &lt;meta /&gt; links.
+	 *
+	 * @var array
+	 */
+	protected $_metaLinks = [
+		&#039;atom&#039; =&gt; [&#039;type&#039; =&gt; &#039;application/atom+xml&#039;, &#039;rel&#039; =&gt; &#039;alternate&#039;],
+		&#039;rss&#039;  =&gt; [&#039;type&#039; =&gt; &#039;application/rss+xml&#039;, &#039;rel&#039; =&gt; &#039;alternate&#039;],
+		&#039;icon&#039; =&gt; [&#039;type&#039; =&gt; &#039;image/x-icon&#039;, &#039;rel&#039; =&gt; &#039;icon&#039;]
+	];
+
+	/**
+	 * List of meta tags to cache and to output.
+	 *
+	 * @var array
+	 * @see lithium\template\helper\Html::meta()
+	 */
+	protected $_metaList = [];
+
+	/**
+	 * Used by output handlers to calculate asset paths in conjunction with the `Media` class.
+	 *
+	 * @var array
+	 * @see lithium\net\http\Media
+	 */
+	public $contentMap = [
+		&#039;script&#039; =&gt; &#039;js&#039;,
+		&#039;style&#039;  =&gt; &#039;css&#039;,
+		&#039;image&#039; =&gt; &#039;image&#039;,
+		&#039;_metaLink&#039; =&gt; &#039;generic&#039;
+	];
+
+	/**
+	 * Returns a charset meta-tag for declaring the encoding of the document.
+	 *
+	 * The terms character set (here: charset) and character encoding (here:
+	 * encoding) were historically synonymous. The terms now have related but
+	 * distinct meanings. Whenever possible Lithium tries to use precise
+	 * terminology. Since HTML uses the term `charset` we expose this method
+	 * under the exact same name. This caters to the expectation towards a HTML
+	 * helper. However the rest of the framework will use the term `encoding`
+	 * when talking about character encoding.
+	 *
+	 * It is suggested that uppercase letters should be used when specifying
+	 * the encoding. HTML specs don&#039;t require it to be uppercase and sites in
+	 * the wild most often use the lowercase variant. On the other hand must
+	 * XML parsers (those may not be relevant in this context anyway) not
+	 * support lowercase encodings. This and the fact that IANA lists only
+	 * encodings with uppercase characters led to the above suggestion.
+	 *
+	 * @see lithium\net\http\Response::$encoding
+	 * @link http://www.iana.org/assignments/character-sets
+	 * @param string $encoding The character encoding to be used in the meta tag.
+	 *               Defaults to the encoding of the `Response` object attached to the
+	 *               current context. The default encoding of that object is `UTF-8`.
+	 *               The string given here is not manipulated in any way, so that
+	 *               values are rendered literally. Also see above note about casing.
+	 * @return string A meta tag containing the specified encoding (literally).
+	 */
+	public function charset($encoding = null) {
+		if ($response = $this-&gt;_context-&gt;response()) {
+			$encoding = $encoding ?: $response-&gt;encoding;
+		}
+		return $this-&gt;_render(__METHOD__, &#039;charset&#039;, compact(&#039;encoding&#039;));
+	}
+
+	/**
+	 * Creates an HTML link (`&lt;a /&gt;`) or a document meta-link (`&lt;link /&gt;`).
+	 *
+	 * If `$url` starts with `&#039;http://&#039;` or `&#039;https://&#039;`, this is treated as an external link.
+	 * Otherwise, it is treated as a path to controller/action and parsed using
+	 * the `Router::match()` method (where `Router` is the routing class dependency specified by
+	 * the rendering context, i.e. `lithium\template\view\Renderer::$_classes`).
+	 *
+	 * If `$url` is empty, `$title` is used in its place.
+	 *
+	 * @param string $title The content to be wrapped by an `&lt;a /&gt;` tag,
+	 *               or the `title` attribute of a meta-link `&lt;link /&gt;`.
+	 * @param mixed $url Can be a string representing a URL relative to the base of your Lithium
+	 *              application, an external URL (starts with `&#039;http://&#039;` or `&#039;https://&#039;`), an
+	 *              anchor name starting with `&#039;#&#039;` (i.e. `&#039;#top&#039;`), or an array defining a set
+	 *              of request parameters that should be matched against a route in `Router`.
+	 * @param array $options The available options are:
+	 *              - `&#039;escape&#039;` _boolean_: Whether or not the title content should be escaped.
+	 *              Defaults to `true`.
+	 *              - `&#039;type&#039;` _string_: The meta-link type, which is looked up in
+	 *              `Html::$_metaLinks`. By default it accepts `atom`, `rss` and `icon`. If a `type`
+	 *              is specified, this method will render a document meta-link (`&lt;link /&gt;`),
+	 *              instead of an HTML link (`&lt;a /&gt;`).
+	 *              - any other options specified are rendered as HTML attributes of the element.
+	 * @return string Returns an `&lt;a /&gt;` or `&lt;link /&gt;` element.
+	 */
+	public function link($title, $url = null, array $options = []) {
+		$defaults = [&#039;escape&#039; =&gt; true, &#039;type&#039; =&gt; null];
+		list($scope, $options) = $this-&gt;_options($defaults, $options);
+
+		if (isset($scope[&#039;type&#039;]) &amp;&amp; $type = $scope[&#039;type&#039;]) {
+			$options += compact(&#039;title&#039;);
+			return $this-&gt;_metaLink($type, $url, $options);
+		}
+
+		$url = $url === null ? $title : $url;
+		return $this-&gt;_render(__METHOD__, &#039;link&#039;, compact(&#039;title&#039;, &#039;url&#039;, &#039;options&#039;), $scope);
+	}
+
+	/**
+	 * Returns a JavaScript include tag (`&lt;script /&gt;` element). If the filename is prefixed with
+	 * `&#039;/&#039;`, the path will be relative to the base path of your application.  Otherwise, the path
+	 * will be relative to your JavaScript path, usually `webroot/js`.
+	 *
+	 * @link http://li3.me/docs/book/manual/1.x/views/
+	 * @param mixed $path String The name of a JavaScript file, or an array of names.
+	 * @param array $options Available options are:
+	 *              - `&#039;inline&#039;` _boolean_: Whether or not the `&lt;script /&gt;` element should be output
+	 *              inline. When set to false, the `scripts()` handler prints out the script, and
+	 *              other specified scripts to be included in the layout. Defaults to `true`.
+	 *              This is useful when page-specific scripts are created inline in the page, and
+	 *              you&#039;d like to place them in the `&lt;head /&gt;` along with your other scripts.
+	 *              - any other options specified are rendered as HTML attributes of the element.
+	 * @return string
+	 * @filter
+	 */
+	public function script($path, array $options = []) {
+		$defaults = [&#039;inline&#039; =&gt; true];
+		list($scope, $options) = $this-&gt;_options($defaults, $options);
+
+		if (is_array($path)) {
+			foreach ($path as $i =&gt; $item) {
+				$path[$i] = $this-&gt;script($item, $scope);
+			}
+			return ($scope[&#039;inline&#039;]) ? join(&quot;\n\t&quot;, $path) . &quot;\n&quot; : null;
+		}
+		$m = __METHOD__;
+		$params = compact(&#039;path&#039;, &#039;options&#039;);
+
+		$script = Filters::run($this, __FUNCTION__, $params, function($params) use ($m) {
+			return $this-&gt;_render($m, &#039;script&#039;, $params);
+		});
+		if ($scope[&#039;inline&#039;]) {
+			return $script;
+		}
+		if ($this-&gt;_context) {
+			$this-&gt;_context-&gt;scripts($script);
+		}
+	}
+
+	/**
+	 * Creates a `&lt;link /&gt;` element for CSS stylesheets or a `&lt;style /&gt;` tag. If the filename is
+	 * prefixed with `&#039;/&#039;`, the path will be relative to the base path of your application.
+	 * Otherwise, the path will be relative to your stylesheets path, usually `webroot/css`.
+	 *
+	 * @param mixed $path The name of a CSS stylesheet in `webroot/css`, or an array
+	 *              containing names of CSS stylesheets in that directory.
+	 * @param array $options Available options are:
+	 *              - `&#039;inline&#039;` _boolean_: Whether or not the `&lt;style /&gt;` element should be output
+	 *              inline. When set to `false`, the `styles()` handler prints out the styles,
+	 *              and other specified styles to be included in the layout. Defaults to `true`.
+	 *              This is useful when page-specific styles are created inline in the page, and
+	 *              you&#039;d like to place them in the `&lt;head /&gt;` along with your other styles.
+	 *              - `&#039;type&#039;` _string_: By default, accepts `stylesheet` or `import`, which
+	 *              respectively correspond to `style-link` and `style-import` strings templates
+	 *              defined in `Html::$_strings`.
+	 *              - any other options specified are rendered as HTML attributes of the element.
+	 * @return string CSS &lt;link /&gt; or &lt;style /&gt; tag, depending on the type of link.
+	 * @filter
+	 */
+	public function style($path, array $options = []) {
+		$defaults = [&#039;type&#039; =&gt; &#039;stylesheet&#039;, &#039;inline&#039; =&gt; true];
+		list($scope, $options) = $this-&gt;_options($defaults, $options);
+
+		if (is_array($path)) {
+			foreach ($path as $i =&gt; $item) {
+				$path[$i] = $this-&gt;style($item, $scope);
+			}
+			return ($scope[&#039;inline&#039;]) ? join(&quot;\n\t&quot;, $path) . &quot;\n&quot; : null;
+		}
+		$m = __METHOD__;
+		$type = $scope[&#039;type&#039;];
+		$params = compact(&#039;type&#039;, &#039;path&#039;, &#039;options&#039;);
+
+		$style = Filters::run($this, __FUNCTION__, $params, function($params) use ($m) {
+			$template = ($params[&#039;type&#039;] === &#039;import&#039;) ? &#039;style-import&#039; : &#039;style-link&#039;;
+			return $this-&gt;_render($m, $template, $params);
+		});
+
+		if ($scope[&#039;inline&#039;]) {
+			return $style;
+		}
+		if ($this-&gt;_context) {
+			$this-&gt;_context-&gt;styles($style);
+		}
+	}
+
+	/**
+	 * Creates a tag for the `&lt;head&gt;` section of your document.
+	 *
+	 * If there is a rendering context, then it also pushes the resulting tag to it.
+	 *
+	 * The `$options` must match the named parameters from `$_strings` for the
+	 * given `$tag`.
+	 *
+	 * @param string $tag the name of a key in `$_strings`
+	 * @param array $options the options required by `$_strings[$tag]`
+	 * @return mixed a string if successful, otherwise `null`
+	 * @filter
+	 */
+	public function head($tag, array $options) {
+		if (!isset($this-&gt;_strings[$tag])) {
+			return null;
+		}
+		$m = __METHOD__;
+
+		$head = Filters::run($this, __FUNCTION__, $options, function($params) use ($m, $tag) {
+			return $this-&gt;_render($m, $tag, $params);
+		});
+		if ($this-&gt;_context) {
+			$this-&gt;_context-&gt;head($head);
+		}
+		return $head;
+	}
+
+	/**
+	 * Creates a formatted `&lt;img /&gt;` element.
+	 *
+	 * @param string $path Path to the image file. If the filename is prefixed with
+	 *               `&#039;/&#039;`, the path will be relative to the base path of your application.
+	 *               Otherwise the path will be relative to the images directory, usually
+	 *               `webroot/img/`. If the name starts with `&#039;http://&#039;`, this is treated
+	 *               as an external url used as the `src` attribute.
+	 * @param array $options Array of HTML attributes.
+	 * @return string Returns a formatted `&lt;img /&gt;` tag.
+	 * @filter
+	 */
+	public function image($path, array $options = []) {
+		$defaults = [&#039;alt&#039; =&gt; &#039;&#039;];
+		$options += $defaults;
+		$path = is_array($path) ? $this-&gt;_context-&gt;url($path) : $path;
+
+		$params = compact(&#039;path&#039;, &#039;options&#039;);
+		$m = __METHOD__;
+
+		return Filters::run($this, __FUNCTION__, $params, function($params) use ($m) {
+			return $this-&gt;_render($m, &#039;image&#039;, $params);
+		});
+	}
+
+	/**
+	 * Creates a link to an external resource.
+	 *
+	 * @param string $type The title of the external resource
+	 * @param mixed $url The address of the external resource or string for content attribute
+	 * @param array $options Other attributes for the generated tag. If the type attribute
+	 *              is &#039;html&#039;, &#039;rss&#039;, &#039;atom&#039;, or &#039;icon&#039;, the mime-type is returned.
+	 * @return string
+	 */
+	protected function _metaLink($type, $url = null, array $options = []) {
+		$options += isset($this-&gt;_metaLinks[$type]) ? $this-&gt;_metaLinks[$type] : [];
+
+		if ($type === &#039;icon&#039;) {
+			$url = $url ?: &#039;favicon.ico&#039;;
+			$standard = $this-&gt;_render(__METHOD__, &#039;meta-link&#039;, compact(&#039;url&#039;, &#039;options&#039;), [
+				&#039;handlers&#039; =&gt; [&#039;url&#039; =&gt; &#039;path&#039;]
+			]);
+			$options[&#039;rel&#039;] = &#039;shortcut icon&#039;;
+			$ieFix = $this-&gt;_render(__METHOD__, &#039;meta-link&#039;, compact(&#039;url&#039;, &#039;options&#039;), [
+				&#039;handlers&#039; =&gt; [&#039;url&#039; =&gt; &#039;path&#039;]
+			]);
+			return &quot;{$standard}\n\t{$ieFix}&quot;;
+		}
+		return $this-&gt;_render(__METHOD__, &#039;meta-link&#039;, compact(&#039;url&#039;, &#039;options&#039;), [
+			&#039;handlers&#039; =&gt; []
+		]);
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

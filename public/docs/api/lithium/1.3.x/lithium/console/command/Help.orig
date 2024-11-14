@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\console\command\Help – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.3.x/lithium/console" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">console</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.3.x/lithium/console/command" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">command</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Help</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.3.x/lithium/console/command" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/command/Help::run()">run()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/command/Help::api()">api()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/command/Help::_methods()">_methods()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/command/Help::_properties()">_properties()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/command/Help::_render()">_render()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/command/Help::_renderCommands()">_renderCommands()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/command/Help::_renderUsage()">_renderUsage()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/command/Help::_renderDescription()">_renderDescription()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/command/Help::_pad()">_pad()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::__construct()">__construct()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::_init()">_init()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::__invoke()">__invoke()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::_help()">_help()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::out()">out()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::error()">error()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::in()">in()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::header()">header()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::columns()">columns()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::nl()">nl()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::hr()">hr()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::clear()">clear()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::stop()">stop()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::_response()">_response()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::_stop()">_stop()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::__set_state()">__set_state()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::respondsTo()">respondsTo()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::invokeMethod()">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_instance()">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_parents()">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::applyFilter()">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_filter()">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::$request">$request</a>												<li class="property public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::$response">$response</a>												<li class="property public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::$silent">$silent</a>												<li class="property public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::$plain">$plain</a>												<li class="property public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::$help">$help</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::$_classes">$_classes</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/console/Command::$_autoConfig">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::$_config">$_config</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::$_parents">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::$_methodFilters">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.3.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.3.x/lithium/console" class="symbol-segment">console</a>\<a href="/docs/api/lithium/1.3.x/lithium/console/command" class="symbol-segment">command</a>\Help		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.3.x/lithium/console/Command" class="extends__symbol">lithium\console\Command</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Get information about a particular class including methods, properties,
+and descriptions.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Help extends \lithium\console\Command {
+
+	/**
+	 * Auto run the help command.
+	 *
+	 * @param string $command Name of the command to return help about.
+	 * @return boolean
+	 */
+	public function run($command = null) {
+		if (!$command) {
+			$this-&gt;_renderCommands();
+			return true;
+		}
+
+		if (!preg_match(&#039;/\\\\/&#039;, $command)) {
+			$command = Inflector::camelize($command);
+		}
+
+		if (!$class = Libraries::locate(&#039;command&#039;, $command)) {
+			$this-&gt;error(&quot;Command `{$command}` not found&quot;);
+			return false;
+		}
+
+		if (strpos($command, &#039;\\&#039;) !== false) {
+			$command = join(&#039;&#039;, array_slice(explode(&quot;\\&quot;, $command), -1));
+		}
+		$command = strtolower(Inflector::slug($command));
+
+		$run = null;
+		$methods = $this-&gt;_methods($class);
+		$properties = $this-&gt;_properties($class);
+		$info = Inspector::info($class);
+
+		$this-&gt;out(&#039;USAGE&#039;, &#039;heading&#039;);
+
+		if (isset($methods[&#039;run&#039;])) {
+			$run = $methods[&#039;run&#039;];
+			unset($methods[&#039;run&#039;]);
+			$this-&gt;_renderUsage($command, $run, $properties);
+		}
+		foreach ($methods as $method) {
+			$this-&gt;_renderUsage($command, $method);
+		}
+		$this-&gt;out();
+
+		if (!empty($info[&#039;description&#039;])) {
+			$this-&gt;nl();
+			$this-&gt;_renderDescription($info);
+			$this-&gt;nl();
+		}
+
+		if ($properties || $methods) {
+			$this-&gt;out(&#039;OPTIONS&#039;, &#039;heading&#039;);
+		}
+		if ($run) {
+			$this-&gt;_render($run[&#039;args&#039;]);
+		}
+		if ($methods) {
+			$this-&gt;_render($methods);
+		}
+		if ($properties) {
+			$this-&gt;_render($properties);
+		}
+		$this-&gt;out();
+		return true;
+	}
+
+	/**
+	 * Gets the API for the class.
+	 *
+	 * @param string $class fully namespaced class in dot notation.
+	 * @param string $type method|property
+	 * @param string $name the name of the method or property.
+	 * @return array
+	 */
+	public function api($class = null, $type = null, $name = null) {
+		$class = str_replace(&quot;.&quot;, &quot;\\&quot;, $class);
+
+		switch ($type) {
+			default:
+				$info = Inspector::info($class);
+				$result = [&#039;class&#039; =&gt; [
+					&#039;name&#039; =&gt; $info[&#039;shortName&#039;],
+					&#039;description&#039; =&gt; trim($info[&#039;description&#039;] . PHP_EOL . PHP_EOL . $info[&#039;text&#039;])
+				]];
+			break;
+			case &#039;method&#039;:
+				$result = $this-&gt;_methods($class, compact(&#039;name&#039;));
+			break;
+			case &#039;property&#039;:
+				$result = $this-&gt;_properties($class, compact(&#039;name&#039;));
+			break;
+		}
+		$this-&gt;_render($result);
+	}
+
+	/**
+	 * Get the methods for the class.
+	 *
+	 * @param string $class
+	 * @param array $options
+	 * @return array
+	 */
+	protected function _methods($class, $options = []) {
+		$defaults = [&#039;name&#039; =&gt; null];
+		$options += $defaults;
+
+		$map = function($item) {
+			if ($item-&gt;name[0] === &#039;_&#039;) {
+				return;
+			}
+			if ($setAccess = !$item-&gt;isPublic()) {
+				$item-&gt;setAccessible(true);
+			}
+			$args = [];
+
+			foreach ($item-&gt;getParameters() as $arg) {
+				$args[] = [
+					&#039;name&#039; =&gt; $arg-&gt;getName(),
+					&#039;optional&#039; =&gt; $arg-&gt;isOptional(),
+					&#039;description&#039; =&gt; null
+				];
+			}
+			$result = compact(&#039;args&#039;) + [
+				&#039;docComment&#039; =&gt; $item-&gt;getDocComment(),
+				&#039;name&#039; =&gt; $item-&gt;getName()
+			];
+			if ($setAccess) {
+				$item-&gt;setAccessible(false);
+			}
+			return $result;
+		};
+
+		$methods = Inspector::methods($class)-&gt;map($map, [&#039;collect&#039; =&gt; false]);
+		$results = [];
+
+		foreach (array_filter($methods) as $method) {
+			$comment = Docblock::comment($method[&#039;docComment&#039;]);
+
+			$name = $method[&#039;name&#039;];
+			$description = trim($comment[&#039;description&#039;] . PHP_EOL . $comment[&#039;text&#039;]);
+			$args = $method[&#039;args&#039;];
+			$return = null;
+
+			foreach ($args as &amp;$arg) {
+				if (isset($comment[&#039;tags&#039;][&#039;params&#039;][&#039;$&#039; . $arg[&#039;name&#039;]])) {
+					$arg[&#039;description&#039;] = $comment[&#039;tags&#039;][&#039;params&#039;][&#039;$&#039; . $arg[&#039;name&#039;]][&#039;text&#039;];
+				}
+				$arg[&#039;usage&#039;] = $arg[&#039;optional&#039;] ? &quot;[&lt;{$arg[&#039;name&#039;]}&gt;]&quot; : &quot;&lt;{$arg[&#039;name&#039;]}&gt;&quot;;
+			}
+			if (isset($comment[&#039;tags&#039;][&#039;return&#039;])) {
+				$return = trim(strtok($comment[&#039;tags&#039;][&#039;return&#039;], &#039; &#039;));
+			}
+			$results[$name] = compact(&#039;name&#039;, &#039;description&#039;, &#039;return&#039;, &#039;args&#039;);
+
+			if ($name &amp;&amp; $name == $options[&#039;name&#039;]) {
+				return [$name =&gt; $results[$name]];
+			}
+		}
+		return $results;
+	}
+
+	/**
+	 * Get the properties for the class.
+	 *
+	 * @param string $class
+	 * @param array $options
+	 * @return array
+	 */
+	protected function _properties($class, $options = []) {
+		$defaults = [&#039;name&#039; =&gt; null];
+		$options += $defaults;
+
+		$properties = Inspector::properties(new $class([&#039;init&#039; =&gt; false]), [&#039;self&#039; =&gt; false]);
+		$results = [];
+
+		foreach ($properties as &amp;$property) {
+			if ($property[&#039;name&#039;] === &#039;request&#039; || $property[&#039;name&#039;] === &#039;response&#039;) {
+				continue;
+			}
+			$name = str_replace(&#039;_&#039;, &#039;-&#039;, Inflector::underscore($property[&#039;name&#039;]));
+
+			$comment = Docblock::comment($property[&#039;docComment&#039;]);
+			$description = trim($comment[&#039;description&#039;]);
+			$type = isset($comment[&#039;tags&#039;][&#039;var&#039;]) ? strtok($comment[&#039;tags&#039;][&#039;var&#039;], &#039; &#039;) : null;
+
+			$usage = strlen($name) == 1 ? &quot;-{$name}&quot; : &quot;--{$name}&quot;;
+
+			if ($type != &#039;boolean&#039;) {
+				$usage .= &quot;=&lt;{$type}&gt;&quot;;
+			}
+			$usage = &quot;[{$usage}]&quot;;
+
+			$results[$name] = compact(&#039;name&#039;, &#039;description&#039;, &#039;type&#039;, &#039;usage&#039;);
+
+			if ($name == $options[&#039;name&#039;]) {
+				return [$name =&gt; $results[$name]];
+			}
+		}
+		return $results;
+	}
+
+	/**
+	 * Output the formatted properties or methods.
+	 *
+	 * @see lithium\console\command\Help::_properties()
+	 * @see lithium\console\command\Help::_methods()
+	 * @param array $params From `_properties()` or `_methods()`.
+	 * @return void
+	 */
+	protected function _render($params) {
+		foreach ($params as $name =&gt; $param) {
+			if ($name === &#039;run&#039; || empty($param[&#039;name&#039;])) {
+				continue;
+			}
+			$usage = (!empty($param[&#039;usage&#039;])) ? trim($param[&#039;usage&#039;], &#039; []&#039;) : $param[&#039;name&#039;];
+			$this-&gt;out($this-&gt;_pad($usage), &#039;option&#039;);
+
+			if ($param[&#039;description&#039;]) {
+				$this-&gt;out($this-&gt;_pad($param[&#039;description&#039;], 2));
+			}
+			$this-&gt;nl();
+		}
+	}
+
+	/**
+	 * Output the formatted available commands.
+	 *
+	 * @return void
+	 */
+	protected function _renderCommands() {
+		$commands = Libraries::locate(&#039;command&#039;, null, [&#039;recursive&#039; =&gt; false]);
+
+		foreach ($commands as $key =&gt; $command) {
+			$library = strtok($command, &#039;\\&#039;);
+
+			if (!$key || strtok($commands[$key - 1] , &#039;\\&#039;) != $library) {
+				$this-&gt;out(&quot;{:heading}COMMANDS{:end} {:blue}via {$library}{:end}&quot;);
+			}
+			$info = Inspector::info($command);
+			$name = strtolower(Inflector::slug($info[&#039;shortName&#039;]));
+
+			$this-&gt;out($this-&gt;_pad($name) , &#039;heading&#039;);
+			$this-&gt;out($this-&gt;_pad($info[&#039;description&#039;]), 2);
+		}
+
+		$message  = &#039;See `{:command}li3 help COMMAND{:end}`&#039;;
+		$message .= &#039; for more information on a specific command.&#039;;
+		$this-&gt;out($message, 2);
+	}
+
+	/**
+	 * Output the formatted usage.
+	 *
+	 * @see lithium\console\command\Help::_methods()
+	 * @see lithium\console\command\Help::_properties()
+	 * @param string $command The name of the command.
+	 * @param array $method Information about the method of the command to render usage for.
+	 * @param array $properties From `_properties()`.
+	 * @return void
+	 */
+	protected function _renderUsage($command, $method, $properties = []) {
+		$params = array_reduce($properties, function($a, $b) {
+			return &quot;{$a} {$b[&#039;usage&#039;]}&quot;;
+		});
+		$args = array_reduce($method[&#039;args&#039;], function($a, $b) {
+			return &quot;{$a} {$b[&#039;usage&#039;]}&quot;;
+		});
+		$format = &quot;{:command}li3 %s%s{:end}{:command}%s{:end}{:option}%s{:end}&quot;;
+		$name = $method[&#039;name&#039;] == &#039;run&#039; ? &#039;&#039; : &quot; {$method[&#039;name&#039;]}&quot;;
+		$this-&gt;out($this-&gt;_pad(sprintf($format, $command ?: &#039;COMMAND&#039;, $name, $params, $args)));
+	}
+
+	/**
+	 * Output the formatted command description.
+	 *
+	 * @param array $info Info from inspecting the class of the command.
+	 * @return void
+	 */
+	protected function _renderDescription($info) {
+		$this-&gt;out(&#039;DESCRIPTION&#039;, &#039;heading&#039;);
+		$break = PHP_EOL . PHP_EOL;
+		$description = trim(&quot;{$info[&#039;description&#039;]}{$break}{$info[&#039;text&#039;]}&quot;);
+		$this-&gt;out($this-&gt;_pad($description), 2);
+	}
+
+	/**
+	 * Add left padding for prettier display.
+	 *
+	 * @param string $message the text to render.
+	 * @param integer|string $level the level of indentation.
+	 * @return string
+	 */
+	protected function _pad($message, $level = 1) {
+		$padding = str_repeat(&#039; &#039;, $level * 4);
+		return $padding . str_replace(&quot;\n&quot;, &quot;\n{$padding}&quot;, $message);
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

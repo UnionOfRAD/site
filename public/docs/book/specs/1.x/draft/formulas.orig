@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Formulas – Specifications v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/book/specs/1.x" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Specifications (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/book/specs/1.x/draft" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Drafts</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Formulas</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="/docs/book/specs/1.x/draft" class="">Drafts</a><ul><li><a href="/docs/book/specs/1.x/draft/caching" class="">Caching</a><li><a href="/docs/book/specs/1.x/draft/ajax" class="">Ajax</a><li><a href="/docs/book/specs/1.x/draft/logging" class="">Logging</a><li><a href="/docs/book/specs/1.x/draft/formulas" class="active">Formulas</a><li><a href="/docs/book/specs/1.x/draft/translating" class="">Translating</a><li><a href="/docs/book/specs/1.x/draft/documentation" class="">Documentation</a><li><a href="/docs/book/specs/1.x/draft/visual-identity" class="">Visual Identity</a><li><a href="/docs/book/specs/1.x/draft/error-handling" class="">Error Handling</a><li><a href="/docs/book/specs/1.x/draft/access" class="">Access</a><li><a href="/docs/book/specs/1.x/draft/globalization" class="">Globalization</a></ul><li><a href="/docs/book/specs/1.x/accepted" class="">Accepted</a><ul><li><a href="/docs/book/specs/1.x/accepted/LSR-1-documenting" class="">LSR 1 Documenting</a><li><a href="/docs/book/specs/1.x/accepted/LSR-2-testing" class="">LSR 2 Testing</a><li><a href="/docs/book/specs/1.x/accepted/LSR-0-coding" class="">LSR 0 Coding</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="package-formulas" class="anchor" href="#package-formulas">Package Formulas</a></h1>
+<h2><a id="introduction" class="anchor" href="#introduction">Introduction</a></h2>
+<p>A <code>formula</code> defines the meta-data of a plugin which is distributed through the li3_lab plugin (and therefore through <a href="http://lab.li3.me">http://lab.li3.me</a>).</p>
+<p>It is stored in a JSON file inside the <code>li3_plugin/config/</code> directory (where <code>li3_plugin</code> is the name of your plugin). The lab will search for this file to read various information, including its dependencies. The lab also assists you in generating it (both online and from the command line).</p>
+<h2><a id="specification" class="anchor" href="#specification">Specification</a></h2>
+<p>This is a example formula:</p>
+<pre><code>{
+	"name": "li3_example",
+	"version": "1.0",
+	"summary": "a li3 plugin example",
+	"homepage": "http://github.com/gwoo/foo",
+	"bugs": "http://github.com/gwoo/foo/issues",
+	"maintainers":[
+		{ "name": "gwoo", "email": "gwoo@rad-dev.org", "website": "li3.rad-dev.org" }
+	],
+	"sources": [
+		"git": [ "git://rad-dev.org/li3_example.git" ],
+		"phar": [ "http://downloads.rad-dev.org/li3_example.phar.gz" ]
+	],
+	"requires": {
+		"li3_lab": { "version": "&gt;= 1.0" }
+	},
+	"suggests": {},
+	"tags": [ "lithium", "li3", "example", "awesomeness" ],
+	"commands": {
+		"install": ["install_command"], "update": ["update_command"], "remove": ["remove_command"]
+	}
+}
+</code></pre>
+<p>The following document discusses each of the fields in more detail.</p>
+<h3><a id="field-descriptions" class="anchor" href="#field-descriptions">Field Descriptions</a></h3>
+<p><strong>note that this is currently a work in progress, so feel free to propose modifications.</strong></p>
+<h4><a id="name" class="anchor" href="#name">name</a></h4>
+<ul>
+<li>Attribute: "name"</li>
+<li>Type: String</li>
+<li>Required: Yes</li>
+<li>Examples: "li3_foobar", "foobar", "a_cool_name"</li>
+<li>Description: The name of the plugin. Most of the plugins prefix their names with <code>li3_</code>, but this is not required. Please use only lower letters and underscores, but this is also not enforced.</li>
+</ul>
+<h4><a id="version" class="anchor" href="#version">version</a></h4>
+<ul>
+<li>Attribute: "version"</li>
+<li>Type: String</li>
+<li>Required: Yes</li>
+<li>Examples: "0.1", "1.0", "1.1-alpha"</li>
+<li>Description: This field defines the current version of the plugin. <strong>more info needs to be added on what version strings are allowed and how they are used.</strong></li>
+</ul>
+<h4><a id="summary" class="anchor" href="#summary">summary</a></h4>
+<ul>
+<li>Attribute: "summary"</li>
+<li>Type: String</li>
+<li>Required: Yes</li>
+<li>Examples: "A short description of this plugin."</li>
+<li>Description: Make sure to add a descriptive and short explanation of your plugin here. Ideally, it is one sentence long and describes the main purpose of the plugin.</li>
+</ul>
+<h4><a id="homepage" class="anchor" href="#homepage">homepage</a></h4>
+<ul>
+<li>Attribute: "homepage"</li>
+<li>Type: String</li>
+<li>Required: No</li>
+<li>Examples: "<a href="http://example.com">http://example.com</a>"</li>
+<li>Description: The URL to your plugin website, if there is one. You can also place the GitHub url in here if you like.</li>
+</ul>
+<h4><a id="bugs" class="anchor" href="#bugs">bugs</a></h4>
+<ul>
+<li>Attribute: "bugs"</li>
+<li>Type: String</li>
+<li>Required: No</li>
+<li>Examples: "<a href="http://example.com/bugs">http://example.com/bugs</a>"</li>
+<li>Description: The URL to your plugin bugtracker, if there is one. You can also place the GitHub Issues url in here if you like.</li>
+</ul>
+<h4><a id="maintainers" class="anchor" href="#maintainers">maintainers</a></h4>
+<ul>
+<li>Attribute: "maintainers"</li>
+<li>Type: Hash in Array</li>
+<li>Required: Yes</li>
+<li>Examples: { "name": "gwoo", "email": "gwoo@rad-dev.org", "website": "li3.rad-dev.org" }</li>
+<li>Description: Define one or more maintainers inside the array as a hash. Inside the hash, make at least sure that there is a name and a email field. The website is optional.</li>
+</ul>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Versions – li3 PHP-Framework</title>
+			<meta name="description" content="Version planning, with compatibility table and schedule.">
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/site.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default site">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs">Documentation</a><a href="/versions" class="active">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>						<div id="content">
+				<article class="use-section-spacing">
+	<h1 class="h-alpha">Versions</h1>
+	<section>
+		<h2 class="h-beta">Release History</h2>
+		<p>
+			This table lists all released versions up to the current date.
+			For compatibility, see the <em>Series Compatibility</em> section below.
+		</p>
+		<table>
+			<thead>
+				<tr>
+					<th>
+					<th>Series
+					<th>
+			</thead>
+			<tbody>
+						<tr>
+					<th>2.0.1					<td>2.0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v2.0.1" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v2.0.1/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/2.0.x/lithium">API documentation</a>												<tr>
+					<th>2.0.0					<td>2.0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v2.0.0" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v2.0.0/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/2.0.x/lithium">API documentation</a>												<tr>
+					<th>2.0.0-alpha					<td>2.0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v2.0.0-alpha" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v2.0.0-alpha/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/2.0.x/lithium">API documentation</a>												<tr>
+					<th>1.3.0					<td>					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.3.0" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.3.0/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.3.x/lithium">API documentation</a>												<tr>
+					<th>1.3.0-alpha					<td>					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.3.0-alpha" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.3.0-alpha/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.3.x/lithium">API documentation</a>												<tr>
+					<th>1.2.0					<td>1.2.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.2.0" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.2.0/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.2.x/lithium">API documentation</a>												<tr>
+					<th>1.2.0-rc					<td>1.2.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.2.0-rc" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.2.0-rc/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.2.x/lithium">API documentation</a>												<tr>
+					<th>1.2.0-beta					<td>1.2.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.2.0-beta" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.2.0-beta/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.2.x/lithium">API documentation</a>												<tr>
+					<th>1.2.0-alpha					<td>1.2.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.2.0-alpha" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.2.0-alpha/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.2.x/lithium">API documentation</a>												<tr>
+					<th>1.1.1					<td>1.1.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.1.1" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.1.1/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.1.x/lithium">API documentation</a>												<tr>
+					<th>1.1.0					<td>1.1.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.1.0" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.1.0/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.1.x/lithium">API documentation</a>												<tr>
+					<th>1.1.0-rc1					<td>1.1.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.1.0-rc1" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.1.0-rc1/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.1.x/lithium">API documentation</a>												<tr>
+					<th>1.1.0-beta					<td>1.1.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.1.0-beta" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.1.0-beta/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.1.x/lithium">API documentation</a>												<tr>
+					<th>1.0.3					<td>1.0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.0.3" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.0.3/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.0.x/lithium">API documentation</a>												<tr>
+					<th>1.0.2					<td>1.0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.0.2" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.0.2/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.0.x/lithium">API documentation</a>												<tr>
+					<th>1.0.1					<td>1.0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.0.1" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.0.1/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.0.x/lithium">API documentation</a>												<tr>
+					<th>1.0.0					<td>1.0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.0.0" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.0.0/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.0.x/lithium">API documentation</a>												<tr>
+					<th>1.0.0-rc4					<td>1.0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.0.0-rc4" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.0.0-rc4/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.0.x/lithium">API documentation</a>												<tr>
+					<th>1.0.0-rc3					<td>1.0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.0.0-rc3" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.0.0-rc3/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.0.x/lithium">API documentation</a>												<tr>
+					<th>1.0.0-rc2					<td>1.0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.0.0-rc2" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.0.0-rc2/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.0.x/lithium">API documentation</a>												<tr>
+					<th>1.0.0-rc1					<td>1.0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.0.0-rc1" target="new">source</a>													&nbsp;|&nbsp;
+							<a href="https://raw.githubusercontent.com/UnionOfRAD/lithium/v1.0.0-rc1/CHANGELOG.md" target="new">changelog</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.0.x/lithium">API documentation</a>												<tr>
+					<th>1.0.0-beta					<td>1.0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v1.0.0-beta" target="new">source</a>																			&nbsp;|&nbsp;
+							<a href="/docs/api/lithium/1.0.x/lithium">API documentation</a>												<tr>
+					<th>0.11.1					<td>0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v0.11.1" target="new">source</a>																		<tr>
+					<th>0.11.0					<td>0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v0.11.0" target="new">source</a>																		<tr>
+					<th>0.10.0					<td>0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v0.10.0" target="new">source</a>																		<tr>
+					<th>0.9.9					<td>0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v0.9.9" target="new">source</a>																		<tr>
+					<th>0.9.5					<td>0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v0.9.5" target="new">source</a>																		<tr>
+					<th>0.9.0					<td>0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v0.9.0" target="new">source</a>																		<tr>
+					<th>0.8.0					<td>0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v0.8.0" target="new">source</a>																		<tr>
+					<th>0.7.0					<td>0.x					<td>
+						<a href="https://github.com/UnionOfRAD/lithium/tree/v0.7.0" target="new">source</a>																	</tbody>
+		</table>
+	</section>
+	<section>
+		<h2 class="h-beta">Series Compatibility</h2>
+		<p>
+			Because the framework takes advantage of advanced language features, a recent PHP version
+			is required. The compatibility table below shows which framework version requires which PHP
+			version.
+		</p>
+		<p>
+			Beginning with the 1.0.0 release we'll be using <a href="http://semver.org">SemVer</a> for
+			versioning. We don't consider changes in the requirement of PHP versions a BC Break, as
+			long as the PHP version changes only in its minor.
+		</p>
+
+		<table>
+			<thead>
+				<tr>
+					<th>
+					<th>required PHP
+					<th>recommended PHP
+			</thead>
+			<tbody>
+						<tr>
+					<th>2.0.x										<td>~7.1.0 || ~7.2.0 || ~7.3.0					<td>7.3						<tr>
+					<th>1.2.x										<td>^5.6 || ~7.0.3 || ~7.1.0 || ~7.2.0 || ~7.3.0					<td>7.2						<tr>
+					<th>1.1.x										<td>^5.5.14 || ~7.0.3 || ~7.1.0					<td>7.1						<tr>
+					<th>1.0.x										<td>^5.3.6					<td>5.6						<tr>
+					<th>0.x										<td>^5.3.6					<td>5.4					</tbody>
+		</table>
+		<p>
+			<sup>+</sup> unreleased<br>
+			<span>^</span> <a href="https://getcomposer.org/doc/articles/versions.md#caret">always allow non-breaking updates</a>		</p>
+	</section>
+
+	<section>
+		<h2 class="h-beta">Supported Versions Schedule</h2>
+		<p>
+			Subject to changes, especially for things in the far future.
+			There will be an absolute minimum of 1 year support for each version.
+			Heavily used versions can get an extended lifetime. Still the overall
+			goal here is, allowing to evolve quick enough to keep up with changes
+			in the ecosystem.
+		</p>
+		<table class="supported-versions-table">
+			<thead>
+				<tr>
+					<td>
+					<td colspan="2">2014
+					<td colspan="2">2015
+					<td colspan="2">2016
+					<td colspan="2">2017
+					<td colspan="2">2018
+					<td colspan="2">2019
+					<td colspan="2">2020
+					<td colspan="2">2021
+			</thead>
+			<tbody>
+				<tr>
+					<td>0.11
+					<td colspan="2" class="sv--live">
+					<td colspan="2" class="sv--sec">
+				<tr>
+					<td>1.0
+					<td colspan="4" class="sv--pre">
+					<td colspan="3" class="sv--live">
+					<td colspan="1" class="sv--sec">
+				<tr>
+					<td>1.1
+					<td colspan="3">
+					<td colspan="3" class="sv--pre">
+					<td colspan="2" class="sv--live">
+					<td colspan="1" class="sv--sec">
+				<tr>
+					<td>1.2
+					<td colspan="6">
+					<td colspan="2" class="sv--pre">
+					<td colspan="2" class="sv--live">
+					<td colspan="1" class="sv--sec">
+				<tr>
+					<td>2.0
+					<td colspan="8">
+					<td colspan="2" class="sv--pre">
+					<td colspan="3" class="sv--live">
+					<td colspan="1" class="sv--sec">
+			</tbody>
+			<tfoot>
+				<tr>
+					<td class="sv--pre">
+					<td colspan="6">
+						&nbsp;pre release phase
+				<tr>
+					<td class="sv--live">
+					<td colspan="6">
+						&nbsp;active support
+				<tr>
+					<td class="sv--sec">
+					<td colspan="6">
+						&nbsp;security fixes only
+			</tfoot>
+		</table>
+	</section>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

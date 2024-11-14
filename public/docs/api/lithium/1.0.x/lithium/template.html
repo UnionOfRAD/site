@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\template – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="https://li3.me/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="https://li3.me/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="https://li3.me/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="https://li3.me/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="https://li3.me/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="https://li3.me/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="https://li3.me/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="https://li3.me/docs" class="active">Documentation</a><a href="https://li3.me/versions">Versions</a><a href="https://li3.me/present">Presentations</a><a href="https://li3.me/support">Community</a><a href="https://li3.me/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="https://li3.me/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="https://li3.me/docs/api/lithium/1.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="https://li3.me/docs/api/lithium/1.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">template</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="https://li3.me/docs/api/lithium/1.0.x/lithium" rel="up">../</a>		</ul>
+	
+						<h3 class="h-gamma">Namespaces</h3>
+			<ul>
+												<li class="namespace">
+				<a href="https://li3.me/docs/api/lithium/1.0.x/lithium/template/helper">helper</a>												<li class="namespace">
+				<a href="https://li3.me/docs/api/lithium/1.0.x/lithium/template/view">view</a>							</ul>
+								<h3 class="h-gamma">Classes</h3>
+			<ul>
+												<li class="class">
+				<a href="https://li3.me/docs/api/lithium/1.0.x/lithium/template/Helper">Helper</a>												<li class="class">
+				<a href="https://li3.me/docs/api/lithium/1.0.x/lithium/template/TemplateException">TemplateException</a>												<li class="class">
+				<a href="https://li3.me/docs/api/lithium/1.0.x/lithium/template/View">View</a>							</ul>
+									
+										</nav>
+	<div class="body">
+			<section>
+			<h1><a id="template" class="anchor" href="template.html#template">template</a></h1>
+<h2><a id="special-syntax" class="anchor" href="template.html#special-syntax">Special syntax</a></h2>
+<p>Views have a special syntax for outputting escaped text. The standard way to
+output escaped text in your views from li3 is as follows:</p>
+<pre><code class="language-php">&lt;?=$variable; ?&gt;
+</code></pre>
+<p>This is where a lot of confusion comes in, because it is commonly misunderstood
+that li3 depends on <code>short_open_tags</code>, however, that's not the case. The
+contents of a view are processed through a <a href="https://li3.me/docs/api/lithium/1.0.x/lithium/template/view/Compiler">tokenizer</a> before
+it is included by PHP. The file is then <code>compiled</code> into the final PHP+HTML (or whatever
+other content type that is requested), which is then passed off to be fully rendered
+by the two-step view to its final form.</p>
+<p>See the PHP <a href="http://php.net/manual/en/book.tokenizer.php">manual</a> to learn more about tokens.</p>
+<p>The stream wrapper reads the file and searches for anything that looks like
+<code>&lt;?=...?&gt;</code> and replaces it with <code>&lt;?php echo $h(...); ?&gt;</code>.</p>
+<p>The design decision behind using PHP's short echo syntax is because it's a
+familiar syntax and it helps developers focus more on what data <em>should not</em> be
+escaped vs. what data <em>needs</em> to be escaped.</p>
+<p>One special case situation to take <em>important</em> note of, is the use of
+<code>&lt;?=$this-&gt;foo(); ?&gt;</code>. In this scenario, the code is translated to
+<code>&lt;?php echo $this-&gt;foo(); ?&gt;</code> rather than being filtered through <code>$h()</code> as with
+the former explanation. When direct access to a method or property on <code>$this</code> is
+contained in the shorthands syntax, it will be output as normal without being
+filtered. This is to make it easier to work with helpers that return markup.</p>
+<p>An example would be something like:</p>
+<pre><code class="language-php">&lt;?=$this-&gt;form-&gt;create(); ?&gt;
+... my form here ...
+&lt;?=$this-&gt;form-&gt;end(); ?&gt;
+</code></pre>
+<p><strong>Note:</strong> <code>$h()</code> is the HTML escape function used in views.</p>
+<p><strong>Note:</strong> To output regular, unescaped text, use plain old <code>&lt;?php echo ...; ?&gt;</code>.</p>
+<p><strong>Other useful information:</strong></p>
+<ul>
+<li><a href="http://www.php.net/intro.stream">Introduction to PHP streams</a></li>
+<li><a href="http://www.php.net/stream.examples">Stream examples</a></li>
+</ul>
+<h2><a id="using-helpers" class="anchor" href="template.html#using-helpers">Using helpers</a></h2>
+<p>Helpers are lazy-loaded by the current renderer. To use a helper, you can
+reference it by its name like this:</p>
+<pre><code class="language-php">echo $this-&gt;html-&gt;link('Example', 'http://www.example.com');
+</code></pre>
+<p>In a template, <code>$this</code> refers to the <code>Renderer</code> object. By using <code>$this-&gt;html</code>
+for the first time, the renderer will create an instance of the helper and store
+it so that the next time the helper is invoked the renderer will not have to
+re-instantiate the helper.</p>
+<p>Using such an approach, helpers can easily be loaded as needed without any
+performance impact.</p>
+<p><strong>More info</strong></p>
+<ul>
+<li><a href="https://li3.me/docs/api/lithium/1.0.x/lithium/template/helper/Html">HTML helper</a></li>
+<li><a href="https://li3.me/docs/api/lithium/1.0.x/lithium/template/helper/Form">Form helper</a></li>
+<li><a href="https://li3.me/docs/api/lithium/1.0.x/lithium/template/Helper">Helper base class</a></li>
+</ul>
+<h2><a id="creating-custom-helpers" class="anchor" href="template.html#creating-custom-helpers">Creating custom helpers</a></h2>
+<p>You can also create your own custom helper very easily by extending the <code>Helper</code> base class, and
+placing your helper in the correct namespace. By default, helpers belong in the
+<code>&lt;library&gt;\extensions\helper</code> namespace, but this can be changed through configuration (see the
+<a href="https://li3.me/docs/api/lithium/1.0.x/lithium/core/Libraries">the <code>Libraries</code> class</a>). For example, consider the following class, saved as
+<code>extensions/helper/Custom.php</code>:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace app\extensions\helper;
+
+class Custom extends \lithium\template\Helper {
+
+	public function greeting($name) {
+		return "Hello {$name}!";
+	}
+}
+
+?&gt;
+</code></pre>
+<p>You can then use your helper in templates as follows:</p>
+<pre><code class="language-php">&lt;?=$this-&gt;custom-&gt;greeting('World'); ?&gt;
+</code></pre>
+<p>Your custom helper will then be auto-loaded into the templating engine from your application or a
+plugin.</p>
+<h2><a id="extending-core-helpers" class="anchor" href="template.html#extending-core-helpers">Extending core helpers</a></h2>
+<p>Because your application and plugins have a higher order-of-precedence than the li3 core,
+classes like helpers can be extended and replaced seamlessly, without any changes to your templates.</p>
+<p>For example, to add or replace methods in the <code>Form</code> helper, you can add the following to
+<code>extensions/helper/Form.php</code>:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace app\extensions\helper;
+
+class Form extends \lithium\template\helper\Form {
+
+	// Add or override Form helper methods
+}
+
+?&gt;
+</code></pre>
+<p>Your custom <code>Form</code> helper will now be invoked in all instances where <code>$this-&gt;form</code> is called in a
+template. For more information on the load order of classes, see
+<a href="https://li3.me/docs/api/lithium/1.0.x/lithium/core/Libraries::locate">the <code>locate()</code> method of the <code>Libraries</code> class</a></p>
+<h2><a id="rendering-elements" class="anchor" href="template.html#rendering-elements">Rendering elements</a></h2>
+<p>Elements are reusable view snippets that you can use in several views and layouts.
+You can reference it like so:</p>
+<pre><code class="language-php">echo $this-&gt;_render('element', 'menu');
+</code></pre>
+<p>Where <code>menu</code> is the name of your element file, in this example <code>views/elements/menu.html.php</code>.  When using <code>$this-&gt;_render()</code>, all of the variables set in the controller are available to the element template.  You can pass variables declared in the view or additional static content using the third parameter to <code>$this-&gt;_render()</code>:</p>
+<pre><code class="language-php">$var1 = 'something';
+echo $this-&gt;_render('element', 'menu', array(
+	'var1' =&gt; $var1,
+	'var2' =&gt; 'something else'
+));
+</code></pre>
+<p>If you need the element template to not have access to existing data passed to the parent template, use the alternate syntax that calls the <code>View</code> render method directly:</p>
+<pre><code class="language-php">echo $this-&gt;view()-&gt;render(
+	array('element' =&gt; 'menu'),
+	array('var1' =&gt; $var1, 'var2' =&gt; $var2)
+);
+</code></pre>
+<p><strong>More info</strong></p>
+<ul>
+<li><a href="https://li3.me/docs/api/lithium/1.0.x/lithium/template/View">View</a></li>
+<li><a href="https://li3.me/docs/api/lithium/1.0.x/lithium/template/view/Renderer">Renderer</a></li>
+<li><a href="https://li3.me/docs/api/lithium/1.0.x/lithium/template/view/adapter/File">File adapter</a></li>
+</ul>
+		</section>
+		</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="https://li3.me/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

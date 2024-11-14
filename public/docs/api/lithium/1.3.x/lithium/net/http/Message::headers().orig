@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\net\http\Message::headers() – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.3.x/lithium/net" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">net</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.3.x/lithium/net/http" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">http</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="/docs/api/lithium/1.3.x/lithium/net/http/Message" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Message</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">headers()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.3.x/lithium/net/http/Message" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.3.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.3.x/lithium/net" class="symbol-segment">net</a>\<a href="/docs/api/lithium/1.3.x/lithium/net/http" class="symbol-segment">http</a>\<a href="/docs/api/lithium/1.3.x/lithium/net/http/Message" class="symbol-segment">Message</a>::headers()		</h1>
+
+		<section class="under">
+															<div class="tags">
+													<span class="tag public">public</span>
+												<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Adds, gets or removes one or multiple headers at the same time.</p>
+					</div>
+				
+									<div class="description">
+						<p>Header names are not normalized and their casing left untouched. When
+headers are retrieved no sorting takes place. This behavior is inline
+with the specification which states header names should be treated in
+a case-insensitive way. Sorting is suggested but not required.</p>
+<pre><code class="language-php">// Get single or multiple headers.
+$request-&gt;headers('Content-Type'); // returns 'text/plain'
+$request-&gt;headers(); // returns ['Content-Type: text/plain', ... ]
+
+// Set single or multiple headers.
+$request-&gt;headers('Content-Type', 'text/plain');
+$request-&gt;headers(['Content-Type' =&gt; 'text/plain', ...]);
+
+// Alternatively use full header line.
+$request-&gt;headers('Content-Type: text/plain');
+$request-&gt;headers(['Content-Type: text/plain', ...]);
+
+// Removing single or multiple headers.
+$request-&gt;headers('Content-Type', false);
+$request-&gt;headers(['Content-Type' =&gt; false, ...]);
+</code></pre>
+<p>Certain header fields support multiple values. These can be separated by
+comma or alternatively the header repeated for each value in the list.</p>
+<p>When explicitly adding a value to an already existing header (that is when
+$replace is <code>false</code>) an array with those values is kept/created internally.
+Later when retrieving headers the header will be repeated for each value.</p>
+<p>Note: Multiple headers of the same name are only valid if the values of
+that header can be separated by comma as defined in section 4.2 of RFC2616.</p>
+<pre><code class="language-php">// Replace single or multiple headers
+$request-&gt;headers('Cache-Control', 'no-store');
+$request-&gt;headers(['Cache-Control' =&gt; 'public']);
+$request-&gt;headers('Cache-Control'); // returns 'public'
+
+// Merging with existing array headers.
+// Note that new elements are just appended and no sorting takes place.
+$request-&gt;headers('Cache-Control', 'no-store');
+$request-&gt;headers('Cache-Control', 'no-cache', false);
+$request-&gt;headers();
+// returns ['Cache-Control: no-store', 'Cache-Control: no-cache']
+
+$request-&gt;headers('Cache-Control', 'no-store');
+$request-&gt;headers('Cache-Control', ['no-cache'], false);
+$request-&gt;headers();
+// returns ['Cache-Control: no-store', 'Cache-Control: no-cache']
+
+$request-&gt;headers('Cache-Control', 'max-age=0');
+$request-&gt;headers('Cache-Control', 'no-store, no-cache');
+$request-&gt;headers();
+// returns ['Cache-Control: no-store, no-cache']
+</code></pre>
+					</div>
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">string|array</span>
+							<code class="name">$key</code>
+															<span class="parameter">
+									<p>A header name, a full header line (<code>'&lt;key&gt;: &lt;value&gt;'</code>), or an array
+of headers to set in <code>key =&gt; value</code> form.</p>
+								</span>
+													</li>
+											<li>
+							<span class="type">mixed</span>
+							<code class="name">$value</code>
+															<span class="parameter">
+									<p>A value to set if <code>$key</code> is a string.
+It can be an array to set multiple headers with the same key.
+If <code>null</code>, returns the value of the header corresponding to <code>$key</code>.
+If <code>false</code>, it unsets the header corresponding to <code>$key</code>.</p>
+								</span>
+													</li>
+											<li>
+							<span class="type">boolean</span>
+							<code class="name">$replace</code>
+															<span class="parameter">
+									<p>Whether to override or add alongside any existing header with
+the same name.</p>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">mixed</span>
+									<span class="return">
+						<p>When called with just $key provided, the value of a single header or an array
+of values in case there is multiple headers with this key.
+When calling the method without any arguments, an array of compiled headers in the
+form <code>array('&lt;key&gt;: &lt;value&gt;', ...)</code> is returned. All set and replace operations
+return no value for performance reasons.</p>
+					</span>
+							</section>
+			
+			
+			
+						<section id="links">
+				<h3 class="h-beta">Links</h3>
+				<ul class="links">
+									<li><a href="http://www.ietf.org/rfc/rfc2616.txt" target="new">Section 4.2 Message Headers</a>								</ul>
+			</section>
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public function headers($key = null, $value = null, $replace = true) {
+		if ($key === null &amp;&amp; $value === null) {
+			$headers = [];
+
+			foreach ($this-&gt;headers as $key =&gt; $value) {
+				if (is_scalar($value)) {
+					$headers[] = &quot;{$key}: {$value}&quot;;
+					continue;
+				}
+				foreach ($value as $val) {
+					$headers[] = &quot;{$key}: {$val}&quot;;
+				}
+			}
+			return $headers;
+		}
+		if ($value === null &amp;&amp; is_string($key) &amp;&amp; strpos($key, &#039;:&#039;) === false) {
+			return isset($this-&gt;headers[$key]) ? $this-&gt;headers[$key] : null;
+		}
+
+		if (is_string($key)) {
+			if (strpos($key, &#039;:&#039;) !== false &amp;&amp; preg_match(&#039;/(.*?):(.+)/&#039;, $key, $match)) {
+				$key = $match[1];
+				$value = trim($match[2]);
+			} elseif ($value === false) {
+				unset($this-&gt;headers[$key]);
+				return;
+			}
+			if ($replace || !isset($this-&gt;headers[$key])) {
+				$this-&gt;headers[$key] = $value;
+			} elseif ($value !== $this-&gt;headers[$key]) {
+				$this-&gt;headers[$key] = (array) $this-&gt;headers[$key];
+
+				if (is_string($value)) {
+					$this-&gt;headers[$key][] = $value;
+				} else {
+					$this-&gt;headers[$key] = array_merge($this-&gt;headers[$key], $value);
+				}
+			}
+		} else {
+			$replace = ($value === false) ? $value : $replace;
+
+			foreach ((array) $key as $header =&gt; $value) {
+				if (is_string($header)) {
+					$this-&gt;headers($header, $value, $replace);
+					continue;
+				}
+				$this-&gt;headers($value, null, $replace);
+			}
+		}
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\core\AutoConfigurable – Framework API v2.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (2.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../core.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">core</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">AutoConfigurable</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../core.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./AutoConfigurable::__construct().html">__construct()</a>												<li class="method protected">
+				<a href="./AutoConfigurable::_autoConfig().html">_autoConfig()</a>												<li class="method protected">
+				<a href="./AutoConfigurable::_autoInit().html">_autoInit()</a>												<li class="method protected">
+				<a href="./AutoConfigurable::_init().html">_init()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./AutoConfigurable::$_config.html">$_config</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../core.html" class="symbol-segment">core</a>\AutoConfigurable		</h1>
+
+		<section class="under">
+															<div class="tags">
+																<span class="tag">trait</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Provides methods to configure an object.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">trait AutoConfigurable {
+
+	/**
+	 * Stores configuration information for object instances at time of construction.
+	 *
+	 * @var array
+	 */
+	protected $_config = [];
+
+	/**
+	 * Default constructor implementation. Initializes class configuration (`$_config`), and
+	 * assigns object properties using the `_init()` method, unless otherwise specified by
+	 * configuration. See below for details.
+	 *
+	 * @see lithium\core\AutoConfigurable::$_config
+	 * @see lithium\core\AutoConfigurable::_init()
+	 * @param array $config The configuration options which will be assigned to the `$_config`
+	 *        property. This method accepts one configuration option:
+	 *        - `&#039;init&#039;` _boolean_: Controls constructor behavior for calling the `_init()`
+	 *          method. If `false`, the method is not called, otherwise it is. Defaults to `true`.
+	 * @return void
+	 */
+	public function __construct(array $config = []) {
+		$this-&gt;_autoConfig($config, isset($this-&gt;_autoConfig) ? $this-&gt;_autoConfig : []);
+		$this-&gt;_autoInit($config);
+	}
+
+	/**
+	 * Assigns configuration values to object properties.
+	 *
+	 * For example, given the following:
+	 * ```
+	 * class Bar {
+	 * 	protected $_foo;
+	 *
+	 * 	public function __construct(array $config = []) {
+	 *		$this-&gt;_autoConfig($config, [&#039;foo&#039;]);
+	 * 	}
+	 * }
+	 *
+	 * $instance = new Bar([&#039;foo&#039; =&gt; &#039;baz&#039;]);
+	 * ```
+	 *
+	 * The `foo` property would automatically be set to `&#039;baz&#039;`. If `foo` was an array,
+	 * `$auto` could be set to `[&#039;foo&#039; =&gt; &#039;merge&#039;]`, and the config value of `&#039;foo&#039;`
+	 * would be merged with the default value of the `foo` property and assigned to it.
+	 *
+	 * @param array $config
+	 * @param array $auto An array of values that should be processed. Each value should have
+	 *      a matching protected property (prefixed with `_`) defined in the class. If the
+	 *      property is an array, the property name should be the key and the value should
+	 *      be `&#039;merge&#039;`.
+	 * @return void
+	 */
+	protected function _autoConfig(array $config, array $auto) {
+		$this-&gt;_config = $config;
+
+		foreach ($auto as $key =&gt; $flag) {
+			if (!isset($config[$key]) &amp;&amp; !isset($config[$flag])) {
+				continue;
+			}
+			if ($flag === &#039;merge&#039;) {
+				$this-&gt;{&quot;_{$key}&quot;} = $config[$key] + $this-&gt;{&quot;_{$key}&quot;};
+			} else {
+				$this-&gt;{&quot;_$flag&quot;} = $config[$flag];
+			}
+		}
+	}
+
+	protected function _autoInit($config) {
+		if (!isset($config[AUTO_INIT_CLASS]) || $config[AUTO_INIT_CLASS] !== false) {
+			$this-&gt;_init();
+		}
+	}
+
+	/**
+	 * Empty `_init()` method, intended to be overridden if needed.
+	 *
+	 * @return void
+	 */
+	protected function _init() {}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

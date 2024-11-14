@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\data\source\database\adapter\PostgreSql – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.3.x/lithium/data" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">data</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.3.x/lithium/data/source" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">source</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="/docs/api/lithium/1.3.x/lithium/data/source/database" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">database</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">adapter</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="8" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">PostgreSql</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::enabled()">enabled()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::__construct()">__construct()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::_init()">_init()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::connect()">connect()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::sources()">sources()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::describe()">describe()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::searchPath()">searchPath()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::timezone()">timezone()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::encoding()">encoding()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::value()">value()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::error()">error()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::alias()">alias()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::conditions()">conditions()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::_execute()">_execute()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::_insertId()">_insertId()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::_column()">_column()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::_formatters()">_formatters()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::_buildColumn()">_buildColumn()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::_distinctExport()">_distinctExport()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::_queryExport()">_queryExport()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::disconnect()">disconnect()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::name()">name()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_splitFieldname()">_splitFieldname()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_fieldName()">_fieldName()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_cast()">_cast()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::create()">create()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::read()">read()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::update()">update()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::delete()">delete()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::calculation()">calculation()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::relationship()">relationship()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::methods()">methods()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::renderCommand()">renderCommand()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::schema()">schema()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_schema()">_schema()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::having()">having()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_conditions()">_conditions()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_processConditions()">_processConditions()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_processOperator()">_processOperator()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::fields()">fields()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_fields()">_fields()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_fieldsQuote()">_fieldsQuote()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_fieldsReturn()">_fieldsReturn()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_createFields()">_createFields()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_updateFields()">_updateFields()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::limit()">limit()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::joins()">joins()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::constraints()">constraints()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_constraints()">_constraints()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::order()">order()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::group()">group()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::comment()">comment()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::cast()">cast()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_operator()">_operator()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_entityName()">_entityName()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_introspectType()">_introspectType()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_toBoolean()">_toBoolean()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_error()">_error()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::applyStrategy()">applyStrategy()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::join()">join()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_aliasing()">_aliasing()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::on()">on()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_on()">_on()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_meta()">_meta()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_constraint()">_constraint()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::createSchema()">createSchema()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_buildMetas()">_buildMetas()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::_buildConstraints()">_buildConstraints()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::dropSchema()">dropSchema()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::column()">column()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/Source::__destruct()">__destruct()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/Source::isConnected()">isConnected()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/Source::configureClass()">configureClass()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/Source::relationFieldName()">relationFieldName()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::__set_state()">__set_state()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::respondsTo()">respondsTo()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::invokeMethod()">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_instance()">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_stop()">_stop()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_parents()">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::applyFilter()">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::_filter()">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::$_columns">$_columns</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::$_metas">$_metas</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::$_constraints">$_constraints</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::$_quotes">$_quotes</a>												<li class="property public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::$connection">$connection</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::$_strings">$_strings</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::$_classes">$_classes</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::$_operators">$_operators</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::$_constraintTypes">$_constraintTypes</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::$_strategies">$_strategies</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database::$_cachedNames">$_cachedNames</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/Source::$_autoConfig">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/Source::$_isConnected">$_isConnected</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/Source::$_cachedMethods">$_cachedMethods</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::$_config">$_config</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::$_parents">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/ObjectDeprecated::$_methodFilters">$_methodFilters</a>							</ul>
+								<h3 class="h-gamma">Constants</h3>
+			<ul>
+												<li class="constant ">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::DEFAULT_HOST">DEFAULT_HOST</a>												<li class="constant ">
+				<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::DEFAULT_PORT">DEFAULT_PORT</a>							</ul>
+			</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.3.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.3.x/lithium/data" class="symbol-segment">data</a>\<a href="/docs/api/lithium/1.3.x/lithium/data/source" class="symbol-segment">source</a>\<a href="/docs/api/lithium/1.3.x/lithium/data/source/database" class="symbol-segment">database</a>\<a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter" class="symbol-segment">adapter</a>\PostgreSql		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.3.x/lithium/data/source/Database" class="extends__symbol">lithium\data\source\Database</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>PostgreSQL database driver. Extends the <code>Database</code> class to implement the necessary
+SQL-formatting and resultset-fetching features for working with PostgreSQL databases.</p>
+					</div>
+				
+									<div class="description">
+						<ul>
+<li>Implements timezone support.</li>
+<li>Implements schema/searchPath support.</li>
+</ul>
+<p>For more information on configuring the database connection, see
+the <code>__construct()</code> method.</p>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::timezone()">lithium\data\source\database\adapter\PostgreSql::timezone()</a>									<li><a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::searchPath()">lithium\data\source\database\adapter\PostgreSql::searchPath()</a>									<li><a href="/docs/api/lithium/1.3.x/lithium/data/source/database/adapter/PostgreSql::__construct()">lithium\data\source\database\adapter\PostgreSql::__construct()</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class PostgreSql extends \lithium\data\source\Database {
+
+	/**
+	 * The default host used to connect to the server.
+	 */
+	const DEFAULT_HOST = &#039;localhost&#039;;
+
+	/**
+	 * The default port used to connect to the server.
+	 */
+	const DEFAULT_PORT = 5432;
+
+	/**
+	 * PostgreSQL column type definitions.
+	 *
+	 * @var array
+	 */
+	protected $_columns = [
+		&#039;id&#039; =&gt; [&#039;use&#039; =&gt; &#039;integer&#039;, &#039;increment&#039; =&gt; true],
+		&#039;string&#039; =&gt; [&#039;use&#039; =&gt; &#039;varchar&#039;, &#039;length&#039; =&gt; 255],
+		&#039;text&#039; =&gt; [&#039;use&#039; =&gt; &#039;text&#039;],
+		&#039;integer&#039; =&gt; [&#039;use&#039; =&gt; &#039;integer&#039;, &#039;formatter&#039; =&gt; &#039;intval&#039;],
+		&#039;float&#039; =&gt; [&#039;use&#039; =&gt; &#039;real&#039;, &#039;formatter&#039; =&gt; &#039;floatval&#039;],
+		&#039;datetime&#039; =&gt; [&#039;use&#039; =&gt; &#039;timestamp&#039;, &#039;format&#039; =&gt; &#039;Y-m-d H:i:s&#039;],
+		&#039;timestamp&#039; =&gt; [&#039;use&#039; =&gt; &#039;timestamp&#039;, &#039;format&#039; =&gt; &#039;Y-m-d H:i:s&#039;],
+		&#039;time&#039; =&gt; [&#039;use&#039; =&gt; &#039;time&#039;, &#039;format&#039; =&gt; &#039;H:i:s&#039;, &#039;formatter&#039; =&gt; &#039;date&#039;],
+		&#039;date&#039; =&gt; [&#039;use&#039; =&gt; &#039;date&#039;, &#039;format&#039; =&gt; &#039;Y-m-d&#039;, &#039;formatter&#039; =&gt; &#039;date&#039;],
+		&#039;binary&#039; =&gt; [&#039;use&#039; =&gt; &#039;bytea&#039;],
+		&#039;boolean&#039; =&gt; [&#039;use&#039; =&gt; &#039;boolean&#039;],
+		&#039;inet&#039; =&gt; [&#039;use&#039; =&gt; &#039;inet&#039;]
+	];
+
+	/**
+	 * Column/table metas
+	 * By default `&#039;escape&#039;` is false and &#039;join&#039; is `&#039; &#039;`
+	 *
+	 * @var array
+	 */
+	protected $_metas = [
+		&#039;table&#039; =&gt; [
+			&#039;tablespace&#039; =&gt; [&#039;keyword&#039; =&gt; &#039;TABLESPACE&#039;]
+		]
+	];
+
+	/**
+	 * Column contraints
+	 *
+	 * @var array
+	 */
+	protected $_constraints = [
+		&#039;primary&#039; =&gt; [&#039;template&#039; =&gt; &#039;PRIMARY KEY ({:column})&#039;],
+		&#039;foreign_key&#039; =&gt; [
+			&#039;template&#039; =&gt; &#039;FOREIGN KEY ({:column}) REFERENCES {:to} ({:toColumn}) {:on}&#039;
+		],
+		&#039;unique&#039; =&gt; [
+			&#039;template&#039; =&gt; &#039;UNIQUE {:index} ({:column})&#039;
+		],
+		&#039;check&#039; =&gt; [&#039;template&#039; =&gt; &#039;CHECK ({:expr})&#039;]
+	];
+
+	/**
+	 * Pair of opening and closing quote characters used for quoting identifiers in queries.
+	 *
+	 * @var array
+	 */
+	protected $_quotes = [&#039;&quot;&#039;, &#039;&quot;&#039;];
+
+	/**
+	 * Check for required PHP extension, or supported database feature.
+	 *
+	 * @param string $feature Test for support for a specific feature, i.e. `&quot;transactions&quot;` or
+	 *        `&quot;arrays&quot;`.
+	 * @return boolean Returns `true` if the particular feature (or if PostgreSQL) support is
+	 *         enabled, otherwise `false`.
+	 */
+	public static function enabled($feature = null) {
+		if (!$feature) {
+			return extension_loaded(&#039;pdo_pgsql&#039;);
+		}
+		$features = [
+			&#039;arrays&#039; =&gt; false,
+			&#039;transactions&#039; =&gt; true,
+			&#039;booleans&#039; =&gt; true,
+			&#039;schema&#039; =&gt; true,
+			&#039;relationships&#039; =&gt; true,
+			&#039;sources&#039; =&gt; true
+		];
+		return isset($features[$feature]) ? $features[$feature] : null;
+	}
+
+	/**
+	 * Constructor.
+	 *
+	 * @see lithium\data\source\Database::__construct()
+	 * @see lithium\data\Source::__construct()
+	 * @see lithium\data\Connections::add()
+	 * @param array $config The available configuration options are the following. Further
+	 *        options are inherited from the parent classes. Typically, these parameters are
+	 *        set in `Connections::add()`, when adding the adapter to the list of active
+	 *        connections.
+	 *        - `&#039;host&#039;` _string|boolean_: A string in the form of `&#039;&lt;host&gt;&#039;`, `&#039;&lt;host&gt;:&lt;port&gt;&#039;` or
+	 *          `&#039;:&lt;port&gt;&#039;` indicating the host and/or port to connect to. When one or both are
+	 *          not provided uses general server defaults.
+	 *          To use Unix sockets set this to `false`.
+	 *        - `&#039;schema&#039;` _string_: The name of the database schema to use. Defaults to `&#039;public&#039;`.
+	 *        - `&#039;timezone&#039;` _string_: The timezone to use. Defaults to `&#039;null&#039;`
+	 * @return void
+	 */
+	public function __construct(array $config = []) {
+		$defaults = [
+			&#039;host&#039; =&gt; static::DEFAULT_HOST . &#039;:&#039; . static::DEFAULT_PORT,
+			&#039;schema&#039; =&gt; &#039;public&#039;,
+			&#039;timezone&#039; =&gt; null
+		];
+		parent::__construct($config + $defaults);
+	}
+
+	/**
+	 * Initializer. Constructs a DSN from configuration.
+	 *
+	 * @return void
+	 */
+	protected function _init() {
+		if (!$this-&gt;_config[&#039;host&#039;] &amp;&amp; $this-&gt;_config[&#039;host&#039;] !== false) {
+			throw new ConfigException(&#039;No host configured.&#039;);
+		}
+
+		if ($this-&gt;_config[&#039;host&#039;] === false) {
+			$this-&gt;_config[&#039;dsn&#039;] = sprintf(
+				&#039;pgsql:dbname=%s&#039;,
+				$this-&gt;_config[&#039;database&#039;]
+			);
+		} else {
+			$host = HostString::parse($this-&gt;_config[&#039;host&#039;]) + [
+				&#039;host&#039; =&gt; static::DEFAULT_HOST,
+				&#039;port&#039; =&gt; static::DEFAULT_PORT
+			];
+			$this-&gt;_config[&#039;dsn&#039;] = sprintf(
+				&#039;pgsql:host=%s;port=%s;dbname=%s&#039;,
+				$host[&#039;host&#039;],
+				$host[&#039;port&#039;],
+				$this-&gt;_config[&#039;database&#039;]
+			);
+		}
+		parent::_init();
+	}
+
+	/**
+	 * Connects to the database by creating a PDO intance using the constructed DSN string.
+	 * Will set specific options on the connection as provided (timezone, schema).
+	 *
+	 * @see lithium\data\source\database\adapter\PostgreSql::timezone()
+	 * @return boolean Returns `true` if a database connection could be established,
+	 *         otherwise `false`.
+	 */
+	public function connect() {
+		if (!parent::connect()) {
+			return false;
+		}
+		if ($this-&gt;_config[&#039;schema&#039;]) {
+			$this-&gt;searchPath($this-&gt;_config[&#039;schema&#039;]);
+		}
+		if ($this-&gt;_config[&#039;timezone&#039;]) {
+			$this-&gt;timezone($this-&gt;_config[&#039;timezone&#039;]);
+		}
+		return true;
+	}
+
+	/**
+	 * Returns the list of tables in the currently-connected database.
+	 *
+	 * @param string $model The fully-name-spaced class name of the model object making the request.
+	 * @return array Returns an array of sources to which models can connect.
+	 * @filter
+	 */
+	public function sources($model = null) {
+		$params = compact(&#039;model&#039;);
+
+		return Filters::run($this, __FUNCTION__, $params, function($params) {
+			$schema = $this-&gt;connection-&gt;quote($this-&gt;_config[&#039;schema&#039;]);
+
+			$sql  = &quot;SELECT table_name as name FROM INFORMATION_SCHEMA.tables&quot;;
+			$sql .= &quot; WHERE table_schema = {$schema}&quot;;
+
+			if (!$result = $this-&gt;_execute($sql)) {
+				return null;
+			}
+			$sources = [];
+
+			foreach ($result as $row) {
+				$sources[] = $row[0];
+			}
+			return $sources;
+		});
+	}
+
+	/**
+	 * Gets the column schema for a given PostgreSQL table.
+	 *
+	 * @param mixed $entity Specifies the table name for which the schema should be returned, or
+	 *        the class name of the model object requesting the schema, in which case the model
+	 *        class will be queried for the correct table name.
+	 * @param array $fields Any schema data pre-defined by the model.
+	 * @param array $meta
+	 * @return array Returns an associative array describing the given table&#039;s schema, where the
+	 *         array keys are the available fields, and the values are arrays describing each
+	 *         field, containing the following keys:
+	 *         - `&#039;type&#039;`: The field type name
+	 * @filter
+	 */
+	public function describe($entity, $fields = [], array $meta = []) {
+		$schema = $this-&gt;_config[&#039;schema&#039;];
+		$params = compact(&#039;entity&#039;, &#039;meta&#039;, &#039;fields&#039;, &#039;schema&#039;);
+
+		return Filters::run($this, __FUNCTION__, $params, function($params) {
+			extract($params);
+
+			if ($fields) {
+				return Libraries::instance(null, &#039;schema&#039;, compact(&#039;fields&#039;), $this-&gt;_classes);
+			}
+			$name = $this-&gt;connection-&gt;quote($this-&gt;_entityName($entity));
+			$schema = $this-&gt;connection-&gt;quote($schema);
+
+			$sql  = &#039;SELECT &quot;column_name&quot; AS &quot;field&quot;, &quot;data_type&quot; AS &quot;type&quot;,	&#039;;
+			$sql .= &#039;&quot;is_nullable&quot; AS &quot;null&quot;, &quot;column_default&quot; AS &quot;default&quot;, &#039;;
+			$sql .= &#039;&quot;character_maximum_length&quot; AS &quot;char_length&quot; &#039;;
+			$sql .= &#039;FROM &quot;information_schema&quot;.&quot;columns&quot; WHERE &quot;table_name&quot; = &#039; . $name;
+			$sql .= &#039; AND table_schema = &#039; . $schema . &#039; ORDER BY &quot;ordinal_position&quot;&#039;;
+
+			$columns = $this-&gt;connection-&gt;query($sql)-&gt;fetchAll(PDO::FETCH_ASSOC);
+			$fields = [];
+
+			foreach ($columns as $column) {
+				$schema = $this-&gt;_column($column[&#039;type&#039;]);
+				$default = $column[&#039;default&#039;];
+
+				if (preg_match(&quot;/^&#039;(.*)&#039;::/&quot;, $default, $match)) {
+					$default = $match[1];
+				} elseif ($default === &#039;true&#039;) {
+					$default = true;
+				} elseif ($default === &#039;false&#039;) {
+					$default = false;
+				} else {
+					$default = null;
+				}
+				$fields[$column[&#039;field&#039;]] = $schema + [
+					&#039;null&#039;     =&gt; ($column[&#039;null&#039;] === &#039;YES&#039; ? true : false),
+					&#039;default&#039;  =&gt; $default
+				];
+				if ($fields[$column[&#039;field&#039;]][&#039;type&#039;] === &#039;string&#039;) {
+					$fields[$column[&#039;field&#039;]][&#039;length&#039;] = $column[&#039;char_length&#039;];
+				}
+			}
+			return Libraries::instance(null, &#039;schema&#039;, compact(&#039;fields&#039;), $this-&gt;_classes);
+		});
+	}
+
+	/**
+	 * Getter/Setter for the connection&#039;s search path.
+	 *
+	 * @param null|string $searchPath Either `null` to retrieve the current one, or
+	 *        a string to set the current one to.
+	 * @return string|boolean When $searchPath is `null` returns the current search path
+	 *         in effect, otherwise a boolean indicating if setting the search path
+	 *         succeeded or failed.
+	 */
+	public function searchPath($searchPath = null) {
+		if ($searchPath === null) {
+			return explode(&#039;,&#039;, $this-&gt;connection-&gt;query(&#039;SHOW search_path&#039;)-&gt;fetchColumn(1));
+		}
+		return $this-&gt;connection-&gt;exec(&quot;SET search_path TO {$searchPath}&quot;) !== false;
+	}
+
+	/**
+	 * Getter/Setter for the connection&#039;s timezone.
+	 *
+	 * @param null|string $timezone Either `null` to retrieve the current TZ, or
+	 *        a string to set the current TZ to.
+	 * @return string|boolean When $timezone is `null` returns the current TZ
+	 *         in effect, otherwise a boolean indicating if setting the TZ
+	 *         succeeded or failed.
+	 */
+	public function timezone($timezone = null) {
+		if ($timezone === null) {
+			return $this-&gt;connection-&gt;query(&#039;SHOW TIME ZONE&#039;)-&gt;fetchColumn();
+		}
+		return $this-&gt;connection-&gt;exec(&quot;SET TIME ZONE &#039;{$timezone}&#039;&quot;) !== false;
+	}
+
+	/**
+	 * Getter/Setter for the connection&#039;s encoding.
+	 *
+	 * PostgreSQL uses the string `UTF8` to identify the UTF-8 encoding. In general `UTF-8` is used
+	 * to identify that encoding. This methods allows both strings to be used for _setting_ the
+	 * encoding (in lower and uppercase, with or without dash) and will transparently convert
+	 * to PostgreSQL native format. When _getting_ the encoding, it is converted back into `UTF-8`.
+	 * So that this method should ever only return `UTF-8` when the encoding is used.
+	 *
+	 * @param null|string $encoding Either `null` to retrieve the current encoding, or
+	 *        a string to set the current encoding to. For UTF-8 accepts any permutation.
+	 * @return string|boolean When $encoding is `null` returns the current encoding
+	 *         in effect, otherwise a boolean indicating if setting the encoding
+	 *         succeeded or failed. Returns `&#039;UTF-8&#039;` when this encoding is used.
+	 */
+	public function encoding($encoding = null) {
+		if ($encoding === null) {
+			$encoding = $this-&gt;connection
+				-&gt;query(&#039;SHOW client_encoding&#039;)
+				-&gt;fetchColumn();
+
+			return $encoding === &#039;UTF8&#039; ? &#039;UTF-8&#039; : $encoding;
+		}
+		if (strcasecmp($encoding, &#039;utf-8&#039;) === 0 || strcasecmp($encoding, &#039;utf8&#039;) === 0) {
+			$encoding = &#039;UTF8&#039;;
+		}
+		return $this-&gt;connection-&gt;exec(&quot;SET NAMES &#039;{$encoding}&#039;&quot;) !== false;
+	}
+
+	/**
+	 * Converts a given value into the proper type based on a given schema definition.
+	 *
+	 * @see lithium\data\source\Database::schema()
+	 * @param mixed $value The value to be converted. Arrays will be recursively converted.
+	 * @param array $schema Formatted array from `lithium\data\source\Database::schema()`
+	 * @return mixed Value with converted type.
+	 */
+	public function value($value, array $schema = []) {
+		if (($result = parent::value($value, $schema)) !== null) {
+			return $result;
+		}
+		return $this-&gt;connection-&gt;quote((string) $value);
+	}
+
+	/**
+	 * Retrieves database error message and error code.
+	 *
+	 * @return array
+	 */
+	public function error() {
+		if ($error = $this-&gt;connection-&gt;errorInfo()) {
+			return [$error[1], $error[2]];
+		}
+		return null;
+	}
+
+	public function alias($alias, $context) {
+		if ($context-&gt;type() === &#039;update&#039; || $context-&gt;type() === &#039;delete&#039;) {
+			return;
+		}
+		return parent::alias($alias, $context);
+	}
+
+	/**
+	 * @todo Eventually, this will need to rewrite aliases for DELETE and UPDATE queries, same with
+	 *       order().
+	 * @param string $conditions
+	 * @param string $context
+	 * @param array $options
+	 * @return string
+	 */
+	public function conditions($conditions, $context, array $options = []) {
+		return parent::conditions($conditions, $context, $options);
+	}
+
+	/**
+	 * Execute a given query.
+	 *
+	 * @see lithium\data\source\Database::renderCommand()
+	 * @param string $sql The sql string to execute
+	 * @param array $options Available options:
+	 * @return \lithium\data\source\Result Returns a result object if the query was successful.
+	 * @filter
+	 */
+	protected function _execute($sql, array $options = []) {
+		$params = compact(&#039;sql&#039;, &#039;options&#039;);
+
+		return Filters::run($this, __FUNCTION__, $params, function($params) {
+			try {
+				$resource = $this-&gt;connection-&gt;query($params[&#039;sql&#039;]);
+			} catch (PDOException $e) {
+				$this-&gt;_error($params[&#039;sql&#039;]);
+			};
+			return Libraries::instance(null, &#039;result&#039;, compact(&#039;resource&#039;), $this-&gt;_classes);
+		});
+	}
+
+	/**
+	 * Gets the last auto-generated ID from the query that inserted a new record.
+	 *
+	 * @param object $query The `Query` object associated with the query which generated
+	 * @return mixed Returns the last inserted ID key for an auto-increment column or a column
+	 *         bound to a sequence.
+	 */
+	protected function _insertId($query) {
+		$model = $query-&gt;model();
+		$field = $model::key();
+		$source = $model::meta(&#039;source&#039;);
+		$sequence = &quot;{$source}_{$field}_seq&quot;;
+		$id = $this-&gt;connection-&gt;lastInsertId($sequence);
+		return ($id &amp;&amp; $id !== &#039;0&#039;) ? $id : null;
+	}
+
+	/**
+	 * Converts database-layer column types to basic types.
+	 *
+	 * @param string $real Real database-layer column type (i.e. `&quot;varchar(255)&quot;`)
+	 * @return array Column type (i.e. &quot;string&quot;) plus &#039;length&#039; when appropriate.
+	 */
+	protected function _column($real) {
+		if (is_array($real)) {
+			return $real[&#039;type&#039;] . (isset($real[&#039;length&#039;]) ? &quot;({$real[&#039;length&#039;]})&quot; : &#039;&#039;);
+		}
+
+		if (!preg_match(&#039;/(?P&lt;type&gt;\w+)(?:\((?P&lt;length&gt;[\d,]+)\))?/&#039;, $real, $column)) {
+			return $real;
+		}
+		$column = array_intersect_key($column, [&#039;type&#039; =&gt; null, &#039;length&#039; =&gt; null]);
+
+		if (isset($column[&#039;length&#039;]) &amp;&amp; $column[&#039;length&#039;]) {
+			$length = explode(&#039;,&#039;, $column[&#039;length&#039;]) + [null, null];
+			$column[&#039;length&#039;] = $length[0] ? (integer) $length[0] : null;
+			$length[1] ? $column[&#039;precision&#039;] = (integer) $length[1] : null;
+		}
+
+		switch (true) {
+			case in_array($column[&#039;type&#039;], [&#039;date&#039;, &#039;time&#039;, &#039;datetime&#039;]):
+				return $column;
+			case ($column[&#039;type&#039;] === &#039;timestamp&#039;):
+				$column[&#039;type&#039;] = &#039;datetime&#039;;
+			break;
+			case ($column[&#039;type&#039;] === &#039;tinyint&#039; &amp;&amp; $column[&#039;length&#039;] == &#039;1&#039;):
+			case ($column[&#039;type&#039;] === &#039;boolean&#039;):
+				return [&#039;type&#039; =&gt; &#039;boolean&#039;];
+			break;
+			case (strpos($column[&#039;type&#039;], &#039;int&#039;) !== false):
+				$column[&#039;type&#039;] = &#039;integer&#039;;
+			break;
+			case (strpos($column[&#039;type&#039;], &#039;char&#039;) !== false || $column[&#039;type&#039;] === &#039;tinytext&#039;):
+				$column[&#039;type&#039;] = &#039;string&#039;;
+			break;
+			case (strpos($column[&#039;type&#039;], &#039;text&#039;) !== false):
+				$column[&#039;type&#039;] = &#039;text&#039;;
+			break;
+			case (strpos($column[&#039;type&#039;], &#039;blob&#039;) !== false || $column[&#039;type&#039;] === &#039;binary&#039;):
+				$column[&#039;type&#039;] = &#039;binary&#039;;
+			break;
+			case preg_match(&#039;/float|double|decimal/&#039;, $column[&#039;type&#039;]):
+				$column[&#039;type&#039;] = &#039;float&#039;;
+			break;
+			default:
+				$column[&#039;type&#039;] = &#039;text&#039;;
+			break;
+		}
+		return $column;
+	}
+
+	/**
+	 * Provide an associative array of Closures to be used as the &quot;formatter&quot; key inside of the
+	 * `Database::$_columns` specification.
+	 *
+	 * @see lithium\data\source\Database::_formatters()
+	 */
+	protected function _formatters() {
+		$datetime = $timestamp = function($format, $value) {
+			if ($format &amp;&amp; (($time = strtotime($value)) !== false)) {
+				$val = date($format, $time);
+				if (!preg_match(&#039;/^&#039; . preg_quote($val) . &#039;\.\d+$/&#039;, $value)) {
+					$value = $val;
+				}
+			}
+			return $this-&gt;connection-&gt;quote($value);
+		};
+
+		return compact(&#039;datetime&#039;, &#039;timestamp&#039;) + [
+			&#039;boolean&#039; =&gt; function($value) {
+				return $this-&gt;connection-&gt;quote($value ? &#039;t&#039; : &#039;f&#039;);
+			}
+		] + parent::_formatters();
+	}
+
+	/**
+	 * Helper for `Database::column()`.
+	 *
+	 * @see lithium\data\source\Database::column()
+	 * @param array $field A field array.
+	 * @return string SQL column string.
+	 */
+	protected function _buildColumn($field) {
+		extract($field);
+
+		if ($type === &#039;float&#039; &amp;&amp; $precision) {
+			$use = &#039;numeric&#039;;
+		}
+
+		if ($precision) {
+			$precision = $use === &#039;numeric&#039; ? &quot;,{$precision}&quot; : &#039;&#039;;
+		}
+
+		$out = $this-&gt;name($name);
+
+		if (isset($increment) &amp;&amp; $increment) {
+			$out .= &#039; serial NOT NULL&#039;;
+		} else {
+			$out .= &#039; &#039; . $use;
+
+			if ($length &amp;&amp; preg_match(&#039;/char|numeric|interval|bit|time/&#039;,$use)) {
+				$out .= &quot;({$length}{$precision})&quot;;
+			}
+
+			$out .= is_bool($null) ? ($null ? &#039; NULL&#039; : &#039; NOT NULL&#039;) : &#039;&#039; ;
+			$out .= $default ? &#039; DEFAULT &#039; . $this-&gt;value($default, $field) : &#039;&#039;;
+		}
+
+		return $out;
+	}
+
+	/**
+	 * Helper method for `PostgreSql::_queryExport()` to export data
+	 * for use in distinct query.
+	 *
+	 * @see lithium\data\source\PostgreSql::_queryExport()
+	 * @param object $query The query object.
+	 * @return array Returns an array with the fields as the first
+	 *         value and the orders as the second value.
+	 */
+	protected function _distinctExport($query) {
+		$model = $query-&gt;model();
+		$orders = $query-&gt;order();
+		$result = [
+			&#039;fields&#039; =&gt; [],
+			&#039;orders&#039; =&gt; [],
+		];
+
+		if (is_string($orders)) {
+			$direction = &#039;ASC&#039;;
+			if (preg_match(&#039;/^(.*?)\s+((?:A|DE)SC)$/i&#039;, $orders, $match)) {
+				$orders = $match[1];
+				$direction = $match[2];
+			}
+			$orders = [$orders =&gt; $direction];
+		}
+
+		if (!is_array($orders)) {
+			return array_values($result);
+		}
+
+		foreach ($orders as $column =&gt; $dir) {
+			if (is_int($column)) {
+				$column = $dir;
+				$dir = &#039;ASC&#039;;
+			}
+
+			if ($model &amp;&amp; $model::schema($column)) {
+				$name = $this-&gt;name($query-&gt;alias()) . &#039;.&#039; . $this-&gt;name($column);
+				$alias = $this-&gt;name(&#039;_&#039; . $query-&gt;alias() . &#039;_&#039; . $column . &#039;_&#039;);
+			} else {
+				list($alias, $field) = $this-&gt;_splitFieldname($column);
+				$name = $this-&gt;name($column);
+				$alias = $this-&gt;name(&#039;_&#039; . $alias . &#039;_&#039; . $field . &#039;_&#039;);
+			}
+
+			$result[&#039;fields&#039;][] = &quot;{$name} AS {$alias}&quot;;
+			$result[&#039;orders&#039;][] = &quot;{$alias} {$dir}&quot;;
+		}
+		return array_values($result);
+	}
+
+	/**
+	 * Helper method for `Database::read()` to export query while handling additional joins
+	 * when using relationships and limited result sets. Filters conditions on subsequent
+	 * queries to just the ones applying to the relation.
+	 *
+	 * @see lithium\data\source\Database::read()
+	 * @param object $query The query object.
+	 * @return array The exported query returned by reference.
+	 */
+	protected function &amp;_queryExport($query) {
+		$data = $query-&gt;export($this);
+
+		if (!$query-&gt;limit() || !($model = $query-&gt;model())) {
+			return $data;
+		}
+
+		foreach ($query-&gt;relationships() as $relation) {
+			if ($relation[&#039;type&#039;] !== &#039;hasMany&#039;) {
+				continue;
+			}
+			$pk = $this-&gt;name($model::meta(&#039;name&#039;) . &#039;.&#039; . $model::key());
+
+			if ($query-&gt;order()) {
+				list($fields, $orders) = $this-&gt;_distinctExport($query);
+				array_unshift($fields, &quot;DISTINCT ON($pk) $pk AS _ID_&quot;);
+
+				$command = $this-&gt;renderCommand(&#039;read&#039;, [
+					&#039;limit&#039; =&gt; null, &#039;order&#039; =&gt; null,
+					&#039;fields&#039; =&gt; implode(&#039;, &#039;, $fields)
+				] + $data);
+				$command = rtrim($command, &#039;;&#039;);
+
+				$command = $this-&gt;renderCommand(&#039;read&#039;, [
+					&#039;source&#039; =&gt; &quot;( $command ) AS _TEMP_&quot;,
+					&#039;fields&#039; =&gt; &#039;_ID_&#039;,
+					&#039;order&#039; =&gt; &quot;ORDER BY &quot; . implode(&#039;, &#039;, $orders),
+					&#039;limit&#039; =&gt; $data[&#039;limit&#039;],
+				]);
+			} else {
+				$command = $this-&gt;renderCommand(&#039;read&#039;, [
+					&#039;fields&#039; =&gt; &quot;DISTINCT({$pk}) AS _ID_&quot;
+				] + $data);
+			}
+
+			$result = $this-&gt;_execute($command);
+			$ids = [];
+
+			foreach ($result as $row) {
+				$ids[] = $row[0];
+			}
+			if (!$ids) {
+				$data = null;
+				break;
+			}
+
+			$conditions = [];
+			$relations = array_keys($query-&gt;relationships());
+			$pattern = &#039;/^(&#039; . implode(&#039;|&#039;, $relations) . &#039;)\./&#039;;
+			foreach ($query-&gt;conditions() as $key =&gt; $value) {
+				if (preg_match($pattern, $key)) {
+					$conditions[$key] = $value;
+				}
+			}
+			$data[&#039;conditions&#039;] = $this-&gt;conditions(
+				[$pk =&gt; $ids] + $conditions, $query
+			);
+
+			$data[&#039;limit&#039;] = &#039;&#039;;
+			break;
+		}
+		return $data;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

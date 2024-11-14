@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\core\Object – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../core.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">core</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Object</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../core.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::__construct()">__construct()</a>												<li class="method protected">
+				<a href="./Object::_init().html">_init()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::applyFilter()">applyFilter()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::invokeMethod()">invokeMethod()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::__set_state()">__set_state()</a>												<li class="method public">
+				<a href="./Object::respondsTo().html">respondsTo()</a>												<li class="method protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_instance()">_instance()</a>												<li class="method protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_filter()">_filter()</a>												<li class="method protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_parents()">_parents()</a>												<li class="method protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_stop()">_stop()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_config">$_config</a>												<li class="property protected">
+				<a href="./Object::$_autoConfig.html">$_autoConfig</a>												<li class="property protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_methodFilters">$_methodFilters</a>												<li class="property protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_parents">$_parents</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../core.html" class="symbol-segment">core</a>\Object		</h1>
+
+		<section class="under">
+															<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Base class in Lithium's hierarchy, from which all concrete classes inherit. This class defines
+several conventions for how classes in Lithium should be structured:</p>
+					</div>
+				
+									<div class="description">
+						<ul>
+<li><strong>Universal constructor</strong>: Any class which defines a <code>__construct()</code> method should take
+exactly one parameter (<code>$config</code>), and that parameter should always be an array. Any settings
+passed to the constructor will be stored in the <code>$_config</code> property of the object.</li>
+<li><strong>Initialization / automatic configuration</strong>: After the constructor, the <code>_init()</code> method is
+called. This method can be used to initialize the object, keeping complex logic and
+high-overhead or difficult to test operations out of the constructor. This method is called
+automatically by <code>Object::__construct()</code>, but may be disabled by passing <code>'init' =&gt; false</code> to
+the constructor. The initializer is also used for automatically assigning object properties.
+See the documentation on the <code>_init()</code> method for more details.</li>
+<li><strong>Filters</strong>: The <code>Object</code> class implements two methods which allow an object to easily
+implement filterable methods. The <code>_filter()</code> method allows methods to be implemented as
+filterable, and the <code>applyFilter()</code> method allows filters to be wrapped around them.</li>
+<li><strong>Testing / misc.</strong>: The <code>__set_state()</code> method provides a default implementation of the PHP
+magic method (works with <code>var_export()</code>) which can instantiate an object with a static method
+call. Finally, the <code>_stop()</code> method may be used instead of <code>exit()</code>, as it can be overridden
+for testing purposes.</li>
+</ul>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="StaticObject.html">lithium\core\StaticObject</a>								</ul>
+			</section>
+			
+						<section id="links">
+				<h3 class="h-beta">Links</h3>
+				<ul class="links">
+									<li><a href="http://php.net/manual/en/language.oop5.magic.php#object.set-state" target="new">http://php.net/manual/en/language.oop5.magic.php#object.set-state</a>								</ul>
+			</section>
+			
+						<section id="subclasses" class="section">
+				<h3 class="h-beta">Subclasses</h3>
+				<ul class="subclasses">
+											<li><a href="../action/Controller.html">lithium\action\Controller</a>											<li><a href="../analysis/logger/adapter/Cache.html">lithium\analysis\logger\adapter\Cache</a>											<li><a href="../analysis/logger/adapter/File.html">lithium\analysis\logger\adapter\File</a>											<li><a href="../analysis/logger/adapter/FirePhp.html">lithium\analysis\logger\adapter\FirePhp</a>											<li><a href="../analysis/logger/adapter/Growl.html">lithium\analysis\logger\adapter\Growl</a>											<li><a href="../analysis/logger/adapter/Syslog.html">lithium\analysis\logger\adapter\Syslog</a>											<li><a href="../console/Command.html">lithium\console\Command</a>											<li><a href="../console/Request.html">lithium\console\Request</a>											<li><a href="../console/Response.html">lithium\console\Response</a>											<li><a href="../console/Router.html">lithium\console\Router</a>											<li><a href="Configuration.html">lithium\core\Configuration</a>											<li><a href="../data/Entity.html">lithium\data\Entity</a>											<li><a href="../data/Schema.html">lithium\data\Schema</a>											<li><a href="../data/Source.html">lithium\data\Source</a>											<li><a href="../data/model/Query.html">lithium\data\model\Query</a>											<li><a href="../data/model/Relationship.html">lithium\data\model\Relationship</a>											<li><a href="../data/source/Result.html">lithium\data\source\Result</a>											<li><a href="../g11n/catalog/Adapter.html">lithium\g11n\catalog\Adapter</a>											<li><a href="../g11n/multibyte/adapter/Iconv.html">lithium\g11n\multibyte\adapter\Iconv</a>											<li><a href="../g11n/multibyte/adapter/Intl.html">lithium\g11n\multibyte\adapter\Intl</a>											<li><a href="../g11n/multibyte/adapter/Mbstring.html">lithium\g11n\multibyte\adapter\Mbstring</a>											<li><a href="../net/Message.html">lithium\net\Message</a>											<li><a href="../net/Socket.html">lithium\net\Socket</a>											<li><a href="../net/http/Route.html">lithium\net\http\Route</a>											<li><a href="../net/http/Service.html">lithium\net\http\Service</a>											<li><a href="../security/auth/adapter/Form.html">lithium\security\auth\adapter\Form</a>											<li><a href="../security/auth/adapter/Http.html">lithium\security\auth\adapter\Http</a>											<li><a href="../storage/cache/Adapter.html">lithium\storage\cache\Adapter</a>											<li><a href="../storage/cache/strategy/Base64.html">lithium\storage\cache\strategy\Base64</a>											<li><a href="../storage/cache/strategy/Json.html">lithium\storage\cache\strategy\Json</a>											<li><a href="../storage/cache/strategy/Serializer.html">lithium\storage\cache\strategy\Serializer</a>											<li><a href="../storage/session/adapter/Cookie.html">lithium\storage\session\adapter\Cookie</a>											<li><a href="../storage/session/adapter/Memory.html">lithium\storage\session\adapter\Memory</a>											<li><a href="../storage/session/adapter/Php.html">lithium\storage\session\adapter\Php</a>											<li><a href="../storage/session/strategy/Encrypt.html">lithium\storage\session\strategy\Encrypt</a>											<li><a href="../storage/session/strategy/Hmac.html">lithium\storage\session\strategy\Hmac</a>											<li><a href="../template/Helper.html">lithium\template\Helper</a>											<li><a href="../template/View.html">lithium\template\View</a>											<li><a href="../template/view/Renderer.html">lithium\template\view\Renderer</a>											<li><a href="../test/Controller.html">lithium\test\Controller</a>											<li><a href="../test/MockerChain.html">lithium\test\MockerChain</a>											<li><a href="../test/Report.html">lithium\test\Report</a>											<li><a href="../../../../../lithium/test/Unit.html">lithium\test\Unit</a>											<li><a href="../util/Collection.html">lithium\util\Collection</a>									</ul>
+			</section>
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Object {
+
+	/**
+	 * Stores configuration information for object instances at time of construction.
+	 * **Do not override.** Pass any additional variables to `parent::__construct()`.
+	 *
+	 * @var array
+	 */
+	protected $_config = array();
+
+	/**
+	 * Holds an array of values that should be processed on initialization. Each value should have
+	 * a matching protected property (prefixed with `_`) defined in the class. If the property is
+	 * an array, the property name should be the key and the value should be `&#039;merge&#039;`. See the
+	 * `_init()` method for more details.
+	 *
+	 * @see lithium\core\Object::_init()
+	 * @var array
+	 */
+	protected $_autoConfig = array();
+
+	/**
+	 * Contains a 2-dimensional array of filters applied to this object&#039;s methods, indexed by method
+	 * name. See the associated methods for more details.
+	 *
+	 * @see lithium\core\Object::_filter()
+	 * @see lithium\core\Object::applyFilter()
+	 * @var array
+	 */
+	protected $_methodFilters = array();
+
+	/**
+	 * Parents of the current class.
+	 *
+	 * @see lithium\core\Object::_parents()
+	 * @var array
+	 */
+	protected static $_parents = array();
+
+	/**
+	 * Constructor. Initializes class configuration (`$_config`), and assigns object properties
+	 * using the `_init()` method, unless otherwise specified by configuration. See below for
+	 * details.
+	 *
+	 * @see lithium\core\Object::$_config
+	 * @see lithium\core\Object::_init()
+	 * @param array $config The configuration options which will be assigned to the `$_config`
+	 *        property. This method accepts one configuration option:
+	 *        - `&#039;init&#039;` _boolean_: Controls constructor behavior for calling the `_init()`
+	 *          method. If `false`, the method is not called, otherwise it is. Defaults to `true`.
+	 * @return void
+	 */
+	public function __construct(array $config = array()) {
+		$defaults = array(&#039;init&#039; =&gt; true);
+		$this-&gt;_config = $config + $defaults;
+
+		if ($this-&gt;_config[&#039;init&#039;]) {
+			$this-&gt;_init();
+		}
+	}
+
+	/**
+	 * Initializer function called by the constructor unless the constructor `&#039;init&#039;` flag is set
+	 * to `false`. May be used for testing purposes, where objects need to be manipulated in an
+	 * un-initialized state, or for high-overhead operations that require more control than the
+	 * constructor provides. Additionally, this method iterates over the `$_autoConfig` property
+	 * to automatically assign configuration settings to their corresponding properties.
+	 *
+	 * For example, given the following:
+	 * ```
+	 * class Bar extends \lithium\core\Object {
+	 * 	protected $_autoConfig = array(&#039;foo&#039;);
+	 * 	protected $_foo;
+	 * }
+	 *
+	 * $instance = new Bar(array(&#039;foo&#039; =&gt; &#039;value&#039;));
+	 * ```
+	 *
+	 * The `$_foo` property of `$instance` would automatically be set to `&#039;value&#039;`. If `$_foo` was
+	 * an array, `$_autoConfig` could be set to `array(&#039;foo&#039; =&gt; &#039;merge&#039;)`, and the constructor value
+	 * of `&#039;foo&#039;` would be merged with the default value of `$_foo` and assigned to it.
+	 *
+	 * @see lithium\core\Object::$_autoConfig
+	 * @return void
+	 */
+	protected function _init() {
+		foreach ($this-&gt;_autoConfig as $key =&gt; $flag) {
+			if (!isset($this-&gt;_config[$key]) &amp;&amp; !isset($this-&gt;_config[$flag])) {
+				continue;
+			}
+
+			if ($flag === &#039;merge&#039;) {
+				$this-&gt;{&quot;_{$key}&quot;} = $this-&gt;_config[$key] + $this-&gt;{&quot;_{$key}&quot;};
+			} else {
+				$this-&gt;{&quot;_$flag&quot;} = $this-&gt;_config[$flag];
+			}
+		}
+	}
+
+	/**
+	 * Apply a closure to a method of the current object instance.
+	 *
+	 * @see lithium\core\Object::_filter()
+	 * @see lithium\util\collection\Filters
+	 * @param mixed $method The name of the method to apply the closure to. Can either be a single
+	 *        method name as a string, or an array of method names. Can also be false to remove
+	 *        all filters on the current object.
+	 * @param \Closure $filter The closure that is used to filter the method(s), can also be false
+	 *        to remove all the current filters for the given method.
+	 * @return void
+	 */
+	public function applyFilter($method, $filter = null) {
+		if ($method === false) {
+			$this-&gt;_methodFilters = array();
+			return;
+		}
+		foreach ((array) $method as $m) {
+			if (!isset($this-&gt;_methodFilters[$m]) || $filter === false) {
+				$this-&gt;_methodFilters[$m] = array();
+			}
+			if ($filter !== false) {
+				$this-&gt;_methodFilters[$m][] = $filter;
+			}
+		}
+	}
+
+	/**
+	 * Calls a method on this object with the given parameters. Provides an OO wrapper
+	 * for call_user_func_array, and improves performance by using straight method calls
+	 * in most cases.
+	 *
+	 * @param string $method  Name of the method to call
+	 * @param array $params  Parameter list to use when calling $method
+	 * @return mixed  Returns the result of the method call
+	 */
+	public function invokeMethod($method, $params = array()) {
+		switch (count($params)) {
+			case 0:
+				return $this-&gt;{$method}();
+			case 1:
+				return $this-&gt;{$method}($params[0]);
+			case 2:
+				return $this-&gt;{$method}($params[0], $params[1]);
+			case 3:
+				return $this-&gt;{$method}($params[0], $params[1], $params[2]);
+			case 4:
+				return $this-&gt;{$method}($params[0], $params[1], $params[2], $params[3]);
+			case 5:
+				return $this-&gt;{$method}($params[0], $params[1], $params[2], $params[3], $params[4]);
+			default:
+				return call_user_func_array(array(&amp;$this, $method), $params);
+		}
+	}
+
+	/**
+	 * PHP magic method used in conjunction with `var_export()` to allow objects to be
+	 * re-instantiated with their pre-existing properties and values intact. This method can be
+	 * called statically on any class that extends `Object` to return an instance of it.
+	 *
+	 * @param array $data An array of properties and values with which to re-instantiate the object.
+	 *        These properties can be both public and protected.
+	 * @return object Returns an instance of the requested object with the given properties set.
+	 */
+	public static function __set_state($data) {
+		$class = get_called_class();
+		$object = new $class();
+
+		foreach ($data as $property =&gt; $value) {
+			$object-&gt;{$property} = $value;
+		}
+		return $object;
+	}
+
+	/**
+	 * Determines if a given method can be called.
+	 *
+	 * @param string $method Name of the method.
+	 * @param boolean $internal Provide `true` to perform check from inside the
+	 *                class/object. When `false` checks also for public visibility;
+	 *                defaults to `false`.
+	 * @return boolean Returns `true` if the method can be called, `false` otherwise.
+	 */
+	public function respondsTo($method, $internal = false) {
+		return Inspector::isCallable($this, $method, $internal);
+	}
+
+	/**
+	 * Returns an instance of a class with given `config`. The `name` could be a key from the
+	 * `classes` array, a fully-namespaced class name, or an object. Typically this method is used
+	 * in `_init` to create the dependencies used in the current class.
+	 *
+	 * @param string|object $name A `classes` key or fully-namespaced class name.
+	 * @param array $options The configuration passed to the constructor.
+	 * @return object
+	 */
+	protected function _instance($name, array $options = array()) {
+		if (is_string($name) &amp;&amp; isset($this-&gt;_classes[$name])) {
+			$name = $this-&gt;_classes[$name];
+		}
+		return Libraries::instance(null, $name, $options);
+	}
+
+	/**
+	 * Executes a set of filters against a method by taking a method&#039;s main implementation as a
+	 * callback, and iteratively wrapping the filters around it. This, along with the `Filters`
+	 * class, is the core of Lithium&#039;s filters system. This system allows you to &quot;reach into&quot; an
+	 * object&#039;s methods which are marked as _filterable_, and intercept calls to those methods,
+	 * optionally modifying parameters or return values.
+	 *
+	 * @see lithium\core\Object::applyFilter()
+	 * @see lithium\util\collection\Filters
+	 * @param string $method The name of the method being executed, usually the value of
+	 *               `__METHOD__`.
+	 * @param array $params An associative array containing all the parameters passed into
+	 *              the method.
+	 * @param \Closure $callback The method&#039;s implementation, wrapped in a closure.
+	 * @param array $filters Additional filters to apply to the method for this call only.
+	 * @return mixed Returns the return value of `$callback`, modified by any filters passed in
+	 *         `$filters` or applied with `applyFilter()`.
+	 */
+	protected function _filter($method, $params, $callback, $filters = array()) {
+		list($class, $method) = explode(&#039;::&#039;, $method);
+
+		if (empty($this-&gt;_methodFilters[$method]) &amp;&amp; empty($filters)) {
+			return $callback($this, $params, null);
+		}
+
+		$f = isset($this-&gt;_methodFilters[$method]) ? $this-&gt;_methodFilters[$method] : array();
+		$data = array_merge($f, $filters, array($callback));
+		return Filters::run($this, $params, compact(&#039;data&#039;, &#039;class&#039;, &#039;method&#039;));
+	}
+
+	/**
+	 * Gets and caches an array of the parent methods of a class.
+	 *
+	 * @return array Returns an array of parent classes for the current class.
+	 */
+	protected static function _parents() {
+		$class = get_called_class();
+
+		if (!isset(self::$_parents[$class])) {
+			self::$_parents[$class] = class_parents($class);
+		}
+		return self::$_parents[$class];
+	}
+
+	/**
+	 * Exit immediately. Primarily used for overrides during testing.
+	 *
+	 * @param integer|string $status integer range 0 to 254, string printed on exit
+	 * @return void
+	 */
+	protected function _stop($status = 0) {
+		exit($status);
+	}
+
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

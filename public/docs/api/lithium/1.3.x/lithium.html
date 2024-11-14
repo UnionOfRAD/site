@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../docs.html" class="active">Documentation</a><a href="../../../../versions.html">Versions</a><a href="../../../../present.html">Presentations</a><a href="../../../../support.html">Community</a><a href="../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">lithium</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+	
+						<h3 class="h-gamma">Namespaces</h3>
+			<ul>
+												<li class="namespace">
+				<a href="lithium/action.html">action</a>												<li class="namespace">
+				<a href="lithium/analysis.html">analysis</a>												<li class="namespace">
+				<a href="lithium/aop.html">aop</a>												<li class="namespace">
+				<a href="lithium/console.html">console</a>												<li class="namespace">
+				<a href="lithium/core.html">core</a>												<li class="namespace">
+				<a href="lithium/data.html">data</a>												<li class="namespace">
+				<a href="lithium/g11n.html">g11n</a>												<li class="namespace">
+				<a href="lithium/net.html">net</a>												<li class="namespace">
+				<a href="lithium/security.html">security</a>												<li class="namespace">
+				<a href="lithium/storage.html">storage</a>												<li class="namespace">
+				<a href="../latest:1.x/lithium/template.html">template</a>												<li class="namespace">
+				<a href="lithium/test.html">test</a>												<li class="namespace">
+				<a href="lithium/util.html">util</a>							</ul>
+												
+										</nav>
+	<div class="body">
+			<section>
+			<h1><a id="li" class="anchor" href="lithium.html#li">li₃</a></h1>
+<h3><a id="you-asked-for-a-better-framework-here-it-is" class="anchor" href="lithium.html#you-asked-for-a-better-framework-here-it-is">You asked for a better framework. Here it is.</a></h3>
+<p>li₃ is the fast, flexible and the most RAD development framework for PHP.</p>
+<h3><a id="a-framework-of-firsts" class="anchor" href="lithium.html#a-framework-of-firsts">A framework of firsts</a></h3>
+<p>li₃ is the first and only major PHP framework built from the ground up for PHP
+5.3+, and the first to break ground into major new technologies, including
+bridging the gap between relational and non-relational databases through a
+single, unified API.</p>
+<h3><a id="promiscuously-opinionated" class="anchor" href="lithium.html#promiscuously-opinionated">Promiscuously opinionated</a></h3>
+<p>Some frameworks give you a solid set of classes, but little or no default
+project organization, leaving you to fend for yourself on each project you
+create, and spend time wiring up framework classes that should just work
+together. Others provide you with great organizational conventions, but no way
+to break out of those conventions if you need to, and too often, no way to
+override or replace core framework classes.</p>
+<p>li₃ is the first framework to give you the best of both worlds, without
+compromising either. In fact, li₃'s API is intentionally designed to allow you
+to "grow out of" the framework and into your own custom code over the course of
+your application's lifecycle, if your needs require.</p>
+<h3><a id="technology" class="anchor" href="lithium.html#technology">Technology</a></h3>
+<p>li₃ takes full advantage of the latest PHP features, including
+namespaces, late static binding and closures. li₃'s innovative <a href="../latest:1.x/lithium/aop/Filters.html">method filter
+system</a> makes extensive use
+of closures and anonymous functions to allow application developers to "wrap"
+framework method calls, intercepting parameters before, and return values after.</p>
+<p>li₃ also complies with PSR-4, the PHP namespacing standard, allowing you to easily
+integrate other PHP standard libraries and frameworks with li₃ applications,
+and vice-versa.</p>
+<p>li₃ integrates the latest storage technologies, including MongoDB, CouchDB and
+Redis, with plugin support for Cassandra, ElasticSearch and others.</p>
+<h3><a id="flexibility" class="anchor" href="lithium.html#flexibility">Flexibility</a></h3>
+<p>li₃ gives you full control over your application, from filters to dynamically
+modify framework internals, to dynamic dependencies to extend and replace core
+classes with application or plugin classes, to heavy use of adapter-oriented
+configurations, to make it seamless to move between different technologies and
+options.</p>
+<p>Every component of the li₃ framework stack is replaceable through the
+robust plugin architecture. Swap out the default ORM / ODM implementation
+for <a href="https://github.com/mariano/li3_doctrine2/">Doctrine 2</a> or <a href="https://github.com/greut/li3_activerecord">PHP
+ActiveRecord</a>. Don't like
+the templating? Use <a href="https://github.com/UnionOfRAD/li3_twig">Twig</a>,
+<a href="https://github.com/bruensicke/li3_mustache">Mustache</a>, or roll your own.</p>
+<p>If you don't even need to write a full application, build a micro-app in a
+single file using the routing system, without giving up the maintainability of
+the framework's structure.</p>
+		</section>
+		</div>
+			<hr class="section-separator lightblue">
+		<section class="ns-summary">
+								<h2 class="h-beta">Classes</h2>
+			<ul>
+												<li class="class">
+				<a href="lithium/action/Controller.html">lithium\action\Controller</a>												<li class="class">
+				<a href="lithium/action/DispatchException.html">lithium\action\DispatchException</a>												<li class="class">
+				<a href="lithium/action/Dispatcher.html">lithium\action\Dispatcher</a>												<li class="class">
+				<a href="lithium/action/Request.html">lithium\action\Request</a>												<li class="class">
+				<a href="lithium/action/Response.html">lithium\action\Response</a>												<li class="class">
+				<a href="lithium/analysis/Debugger.html">lithium\analysis\Debugger</a>												<li class="class">
+				<a href="lithium/analysis/Docblock.html">lithium\analysis\Docblock</a>												<li class="class">
+				<a href="../latest:1.x/lithium/analysis/Inspector.html">lithium\analysis\Inspector</a>												<li class="class">
+				<a href="../latest:1.x/lithium/analysis/Logger.html">lithium\analysis\Logger</a>												<li class="class">
+				<a href="lithium/analysis/Parser.html">lithium\analysis\Parser</a>												<li class="class">
+				<a href="lithium/analysis/logger/adapter/Cache.html">lithium\analysis\logger\adapter\Cache</a>												<li class="class">
+				<a href="lithium/analysis/logger/adapter/File.html">lithium\analysis\logger\adapter\File</a>												<li class="class deprecated">
+				<a href="lithium/analysis/logger/adapter/FirePhp.html">lithium\analysis\logger\adapter\FirePhp</a>												<li class="class">
+				<a href="lithium/analysis/logger/adapter/Growl.html">lithium\analysis\logger\adapter\Growl</a>												<li class="class">
+				<a href="lithium/analysis/logger/adapter/Syslog.html">lithium\analysis\logger\adapter\Syslog</a>												<li class="class">
+				<a href="lithium/aop/Chain.html">lithium\aop\Chain</a>												<li class="class">
+				<a href="../latest:1.x/lithium/aop/Filters.html">lithium\aop\Filters</a>												<li class="class">
+				<a href="lithium/console/Command.html">lithium\console\Command</a>												<li class="class">
+				<a href="lithium/console/Dispatcher.html">lithium\console\Dispatcher</a>												<li class="class">
+				<a href="lithium/console/Request.html">lithium\console\Request</a>												<li class="class">
+				<a href="lithium/console/Response.html">lithium\console\Response</a>												<li class="class">
+				<a href="lithium/console/Router.html">lithium\console\Router</a>												<li class="class">
+				<a href="lithium/console/command/Create.html">lithium\console\command\Create</a>												<li class="class">
+				<a href="lithium/console/command/G11n.html">lithium\console\command\G11n</a>												<li class="class">
+				<a href="lithium/console/command/Help.html">lithium\console\command\Help</a>												<li class="class">
+				<a href="lithium/console/command/Route.html">lithium\console\command\Route</a>												<li class="class">
+				<a href="lithium/console/command/Test.html">lithium\console\command\Test</a>												<li class="class">
+				<a href="lithium/console/command/create/Controller.html">lithium\console\command\create\Controller</a>												<li class="class">
+				<a href="lithium/console/command/create/Mock.html">lithium\console\command\create\Mock</a>												<li class="class">
+				<a href="lithium/console/command/create/Model.html">lithium\console\command\create\Model</a>												<li class="class">
+				<a href="lithium/console/command/create/Test.html">lithium\console\command\create\Test</a>												<li class="class">
+				<a href="lithium/console/command/create/View.html">lithium\console\command\create\View</a>												<li class="class">
+				<a href="lithium/console/command/g11n/Extract.html">lithium\console\command\g11n\Extract</a>												<li class="class">
+				<a href="../latest:1.x/lithium/core/Adaptable.html">lithium\core\Adaptable</a>												<li class="class">
+				<a href="lithium/core/ClassNotFoundException.html">lithium\core\ClassNotFoundException</a>												<li class="class">
+				<a href="lithium/core/ConfigException.html">lithium\core\ConfigException</a>												<li class="class">
+				<a href="lithium/core/Configuration.html">lithium\core\Configuration</a>												<li class="class">
+				<a href="lithium/core/Environment.html">lithium\core\Environment</a>												<li class="class">
+				<a href="lithium/core/ErrorHandler.html">lithium\core\ErrorHandler</a>												<li class="class">
+				<a href="../latest:1.x/lithium/core/Libraries.html">lithium\core\Libraries</a>												<li class="class">
+				<a href="lithium/core/NetworkException.html">lithium\core\NetworkException</a>												<li class="class deprecated">
+				<a href="lithium/core/ObjectDeprecated.html">lithium\core\ObjectDeprecated</a>												<li class="class deprecated">
+				<a href="lithium/core/StaticObjectDeprecated.html">lithium\core\StaticObjectDeprecated</a>												<li class="class">
+				<a href="lithium/data/Collection.html">lithium\data\Collection</a>												<li class="class">
+				<a href="../latest:1.x/lithium/data/Connections.html">lithium\data\Connections</a>												<li class="class">
+				<a href="lithium/data/DocumentSchema.html">lithium\data\DocumentSchema</a>												<li class="class">
+				<a href="lithium/data/Entity.html">lithium\data\Entity</a>												<li class="class">
+				<a href="lithium/data/Model.html">lithium\data\Model</a>												<li class="class">
+				<a href="lithium/data/Schema.html">lithium\data\Schema</a>												<li class="class">
+				<a href="lithium/data/Source.html">lithium\data\Source</a>												<li class="class">
+				<a href="lithium/data/collection/DocumentSet.html">lithium\data\collection\DocumentSet</a>												<li class="class">
+				<a href="lithium/data/collection/MultiKeyRecordSet.html">lithium\data\collection\MultiKeyRecordSet</a>												<li class="class">
+				<a href="lithium/data/collection/RecordSet.html">lithium\data\collection\RecordSet</a>												<li class="class">
+				<a href="lithium/data/entity/Document.html">lithium\data\entity\Document</a>												<li class="class">
+				<a href="lithium/data/entity/Record.html">lithium\data\entity\Record</a>												<li class="class">
+				<a href="../latest:1.x/lithium/data/model/Query.html">lithium\data\model\Query</a>												<li class="class">
+				<a href="lithium/data/model/QueryException.html">lithium\data\model\QueryException</a>												<li class="class">
+				<a href="lithium/data/model/Relationship.html">lithium\data\model\Relationship</a>												<li class="class">
+				<a href="lithium/data/source/Database.html">lithium\data\source\Database</a>												<li class="class">
+				<a href="../latest:1.x/lithium/data/source/Http.html">lithium\data\source\Http</a>												<li class="class">
+				<a href="lithium/data/source/Mock.html">lithium\data\source\Mock</a>												<li class="class">
+				<a href="../latest:1.x/lithium/data/source/MongoDb.html">lithium\data\source\MongoDb</a>												<li class="class">
+				<a href="lithium/data/source/Result.html">lithium\data\source\Result</a>												<li class="class">
+				<a href="lithium/data/source/database/adapter/MySql.html">lithium\data\source\database\adapter\MySql</a>												<li class="class">
+				<a href="lithium/data/source/database/adapter/PostgreSql.html">lithium\data\source\database\adapter\PostgreSql</a>												<li class="class">
+				<a href="lithium/data/source/database/adapter/Sqlite3.html">lithium\data\source\database\adapter\Sqlite3</a>												<li class="class">
+				<a href="lithium/data/source/database/adapter/pdo/Result.html">lithium\data\source\database\adapter\pdo\Result</a>												<li class="class">
+				<a href="lithium/data/source/http/adapter/CouchDb.html">lithium\data\source\http\adapter\CouchDb</a>												<li class="class">
+				<a href="lithium/data/source/mongo_db/Exporter.html">lithium\data\source\mongo_db\Exporter</a>												<li class="class">
+				<a href="lithium/data/source/mongo_db/Result.html">lithium\data\source\mongo_db\Result</a>												<li class="class">
+				<a href="lithium/data/source/mongo_db/Schema.html">lithium\data\source\mongo_db\Schema</a>												<li class="class">
+				<a href="lithium/g11n/Catalog.html">lithium\g11n\Catalog</a>												<li class="class">
+				<a href="lithium/g11n/Locale.html">lithium\g11n\Locale</a>												<li class="class">
+				<a href="lithium/g11n/Message.html">lithium\g11n\Message</a>												<li class="class">
+				<a href="lithium/g11n/Multibyte.html">lithium\g11n\Multibyte</a>												<li class="class">
+				<a href="lithium/g11n/catalog/Adapter.html">lithium\g11n\catalog\Adapter</a>												<li class="class">
+				<a href="lithium/g11n/catalog/adapter/Code.html">lithium\g11n\catalog\adapter\Code</a>												<li class="class">
+				<a href="lithium/g11n/catalog/adapter/Gettext.html">lithium\g11n\catalog\adapter\Gettext</a>												<li class="class">
+				<a href="lithium/g11n/catalog/adapter/Memory.html">lithium\g11n\catalog\adapter\Memory</a>												<li class="class">
+				<a href="lithium/g11n/catalog/adapter/Php.html">lithium\g11n\catalog\adapter\Php</a>												<li class="class">
+				<a href="lithium/g11n/multibyte/adapter/Iconv.html">lithium\g11n\multibyte\adapter\Iconv</a>												<li class="class">
+				<a href="lithium/g11n/multibyte/adapter/Intl.html">lithium\g11n\multibyte\adapter\Intl</a>												<li class="class">
+				<a href="lithium/g11n/multibyte/adapter/Mbstring.html">lithium\g11n\multibyte\adapter\Mbstring</a>												<li class="class">
+				<a href="lithium/net/HostString.html">lithium\net\HostString</a>												<li class="class">
+				<a href="lithium/net/Message.html">lithium\net\Message</a>												<li class="class">
+				<a href="lithium/net/Socket.html">lithium\net\Socket</a>												<li class="class">
+				<a href="lithium/net/http/Auth.html">lithium\net\http\Auth</a>												<li class="class">
+				<a href="lithium/net/http/ClientMediaException.html">lithium\net\http\ClientMediaException</a>												<li class="class">
+				<a href="lithium/net/http/Media.html">lithium\net\http\Media</a>												<li class="class">
+				<a href="lithium/net/http/MediaException.html">lithium\net\http\MediaException</a>												<li class="class">
+				<a href="lithium/net/http/Message.html">lithium\net\http\Message</a>												<li class="class">
+				<a href="lithium/net/http/Request.html">lithium\net\http\Request</a>												<li class="class">
+				<a href="lithium/net/http/Response.html">lithium\net\http\Response</a>												<li class="class">
+				<a href="lithium/net/http/Route.html">lithium\net\http\Route</a>												<li class="class">
+				<a href="lithium/net/http/Router.html">lithium\net\http\Router</a>												<li class="class">
+				<a href="lithium/net/http/RoutingException.html">lithium\net\http\RoutingException</a>												<li class="class">
+				<a href="lithium/net/http/Service.html">lithium\net\http\Service</a>												<li class="class">
+				<a href="lithium/net/socket/Context.html">lithium\net\socket\Context</a>												<li class="class">
+				<a href="lithium/net/socket/Curl.html">lithium\net\socket\Curl</a>												<li class="class">
+				<a href="lithium/net/socket/Stream.html">lithium\net\socket\Stream</a>												<li class="class">
+				<a href="../latest:1.x/lithium/security/Auth.html">lithium\security\Auth</a>												<li class="class">
+				<a href="lithium/security/Hash.html">lithium\security\Hash</a>												<li class="class">
+				<a href="../latest:1.x/lithium/security/Password.html">lithium\security\Password</a>												<li class="class">
+				<a href="lithium/security/Random.html">lithium\security\Random</a>												<li class="class">
+				<a href="../latest:1.x/lithium/security/auth/adapter/Form.html">lithium\security\auth\adapter\Form</a>												<li class="class">
+				<a href="lithium/security/auth/adapter/Http.html">lithium\security\auth\adapter\Http</a>												<li class="class">
+				<a href="lithium/security/validation/FormSignature.html">lithium\security\validation\FormSignature</a>												<li class="class">
+				<a href="lithium/security/validation/RequestToken.html">lithium\security\validation\RequestToken</a>												<li class="class">
+				<a href="lithium/storage/Cache.html">lithium\storage\Cache</a>												<li class="class">
+				<a href="lithium/storage/Session.html">lithium\storage\Session</a>												<li class="class">
+				<a href="lithium/storage/cache/Adapter.html">lithium\storage\cache\Adapter</a>												<li class="class">
+				<a href="lithium/storage/cache/adapter/Apc.html">lithium\storage\cache\adapter\Apc</a>												<li class="class">
+				<a href="lithium/storage/cache/adapter/File.html">lithium\storage\cache\adapter\File</a>												<li class="class">
+				<a href="lithium/storage/cache/adapter/Memcache.html">lithium\storage\cache\adapter\Memcache</a>												<li class="class">
+				<a href="lithium/storage/cache/adapter/Memory.html">lithium\storage\cache\adapter\Memory</a>												<li class="class">
+				<a href="lithium/storage/cache/adapter/Redis.html">lithium\storage\cache\adapter\Redis</a>												<li class="class deprecated">
+				<a href="lithium/storage/cache/adapter/XCache.html">lithium\storage\cache\adapter\XCache</a>												<li class="class">
+				<a href="lithium/storage/cache/strategy/Base64.html">lithium\storage\cache\strategy\Base64</a>												<li class="class">
+				<a href="lithium/storage/cache/strategy/Json.html">lithium\storage\cache\strategy\Json</a>												<li class="class">
+				<a href="lithium/storage/cache/strategy/Serializer.html">lithium\storage\cache\strategy\Serializer</a>												<li class="class">
+				<a href="lithium/storage/session/adapter/Cookie.html">lithium\storage\session\adapter\Cookie</a>												<li class="class">
+				<a href="lithium/storage/session/adapter/Memory.html">lithium\storage\session\adapter\Memory</a>												<li class="class">
+				<a href="lithium/storage/session/adapter/Php.html">lithium\storage\session\adapter\Php</a>												<li class="class">
+				<a href="lithium/storage/session/strategy/Encrypt.html">lithium\storage\session\strategy\Encrypt</a>												<li class="class">
+				<a href="lithium/storage/session/strategy/Hmac.html">lithium\storage\session\strategy\Hmac</a>												<li class="class">
+				<a href="lithium/storage/session/strategy/MissingSignatureException.html">lithium\storage\session\strategy\MissingSignatureException</a>												<li class="class">
+				<a href="lithium/template/Helper.html">lithium\template\Helper</a>												<li class="class">
+				<a href="lithium/template/TemplateException.html">lithium\template\TemplateException</a>												<li class="class">
+				<a href="lithium/template/View.html">lithium\template\View</a>												<li class="class">
+				<a href="lithium/template/helper/Form.html">lithium\template\helper\Form</a>												<li class="class">
+				<a href="lithium/template/helper/Html.html">lithium\template\helper\Html</a>												<li class="class">
+				<a href="lithium/template/helper/Security.html">lithium\template\helper\Security</a>												<li class="class">
+				<a href="lithium/template/view/Compiler.html">lithium\template\view\Compiler</a>												<li class="class">
+				<a href="lithium/template/view/Renderer.html">lithium\template\view\Renderer</a>												<li class="class">
+				<a href="lithium/template/view/adapter/File.html">lithium\template\view\adapter\File</a>												<li class="class">
+				<a href="lithium/template/view/adapter/Simple.html">lithium\template\view\adapter\Simple</a>												<li class="class">
+				<a href="lithium/test/Controller.html">lithium\test\Controller</a>												<li class="class">
+				<a href="lithium/test/Dispatcher.html">lithium\test\Dispatcher</a>												<li class="class">
+				<a href="lithium/test/Filter.html">lithium\test\Filter</a>												<li class="class">
+				<a href="lithium/test/Fixture.html">lithium\test\Fixture</a>												<li class="class">
+				<a href="lithium/test/Fixtures.html">lithium\test\Fixtures</a>												<li class="class">
+				<a href="lithium/test/Group.html">lithium\test\Group</a>												<li class="class">
+				<a href="lithium/test/Integration.html">lithium\test\Integration</a>												<li class="class deprecated">
+				<a href="lithium/test/Mocker.html">lithium\test\Mocker</a>												<li class="class deprecated">
+				<a href="lithium/test/MockerChain.html">lithium\test\MockerChain</a>												<li class="class">
+				<a href="lithium/test/Report.html">lithium\test\Report</a>												<li class="class">
+				<a href="lithium/test/Unit.html">lithium\test\Unit</a>												<li class="class">
+				<a href="lithium/test/filter/Affected.html">lithium\test\filter\Affected</a>												<li class="class">
+				<a href="lithium/test/filter/Complexity.html">lithium\test\filter\Complexity</a>												<li class="class">
+				<a href="lithium/test/filter/Coverage.html">lithium\test\filter\Coverage</a>												<li class="class">
+				<a href="lithium/test/filter/Profiler.html">lithium\test\filter\Profiler</a>												<li class="class">
+				<a href="lithium/test/fixtures/adapter/Connection.html">lithium\test\fixtures\adapter\Connection</a>												<li class="class">
+				<a href="lithium/util/Collection.html">lithium\util\Collection</a>												<li class="class">
+				<a href="lithium/util/Inflector.html">lithium\util\Inflector</a>												<li class="class">
+				<a href="lithium/util/Set.html">lithium\util\Set</a>												<li class="class deprecated">
+				<a href="lithium/util/StringDeprecated.html">lithium\util\StringDeprecated</a>												<li class="class">
+				<a href="lithium/util/Text.html">lithium\util\Text</a>												<li class="class">
+				<a href="../latest:1.x/lithium/util/Validator.html">lithium\util\Validator</a>												<li class="class deprecated">
+				<a href="lithium/util/collection/Filters.html">lithium\util\collection\Filters</a>							</ul>
+											<h2 class="h-beta">Traits</h2>
+			<ul>
+												<li class="trait">
+				<a href="lithium/core/AutoConfigurable.html">lithium\core\AutoConfigurable</a>												<li class="trait">
+				<a href="lithium/core/MergeInheritable.html">lithium\core\MergeInheritable</a>							</ul>
+												</section>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

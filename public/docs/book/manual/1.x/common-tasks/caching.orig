@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Caching – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/book/manual/1.x" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/book/manual/1.x/common-tasks" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Common Tasks</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Caching</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="/docs/book/manual/1.x/common-tasks" class="">Common Tasks</a><ul><li><a href="/docs/book/manual/1.x/common-tasks/logging" class="">Logging</a><li><a href="/docs/book/manual/1.x/common-tasks/plugins" class="">Plugins</a><li><a href="/docs/book/manual/1.x/common-tasks/error-handling" class="">Error Handling</a><li><a href="/docs/book/manual/1.x/common-tasks/caching" class="active">Caching</a><li><a href="/docs/book/manual/1.x/common-tasks/filters" class="">Filters</a><li><a href="/docs/book/manual/1.x/common-tasks/etags" class="">Etags</a><li><a href="/docs/book/manual/1.x/common-tasks/globalization" class="">Globalization</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-authentication" class="">Simple Authentication</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-auth-user" class="">Simple Auth User</a><li><a href="/docs/book/manual/1.x/common-tasks/console-applications" class="">Console Applications</a></ul><li><a href="/docs/book/manual/1.x/appendices" class="">Appendices</a><ul><li><a href="/docs/book/manual/1.x/appendices/faqs" class="">FAQs</a><li><a href="/docs/book/manual/1.x/appendices/using-in-other-applications" class="">Using In Other Applications</a></ul><li><a href="/docs/book/manual/1.x/quickstart" class="">Quickstart</a><li><a href="/docs/book/manual/1.x/controllers" class="">Controllers</a><ul><li><a href="/docs/book/manual/1.x/controllers/actions" class="">Actions</a><li><a href="/docs/book/manual/1.x/controllers/flow-control" class="">Flow Control</a><li><a href="/docs/book/manual/1.x/controllers/parameters" class="">Parameters</a><li><a href="/docs/book/manual/1.x/controllers/type-rendering-detection" class="">Type Rendering Detection</a><li><a href="/docs/book/manual/1.x/controllers/routing" class="">Routing</a></ul><li><a href="/docs/book/manual/1.x/installation" class="">Installation</a><ul><li><a href="/docs/book/manual/1.x/installation/requirements" class="">Requirements</a><li><a href="/docs/book/manual/1.x/installation/troubleshooting" class="">Troubleshooting</a><li><a href="/docs/book/manual/1.x/installation/web-servers" class="">Web Servers</a></ul><li><a href="/docs/book/manual/1.x/architecture" class="">Architecture</a><ul><li><a href="/docs/book/manual/1.x/architecture/file-structure" class="">File Structure</a><li><a href="/docs/book/manual/1.x/architecture/response-lifecycle" class="">Response Lifecycle</a><li><a href="/docs/book/manual/1.x/architecture/aop" class="">AOP</a><li><a href="/docs/book/manual/1.x/architecture/mvc" class="">MVC</a><li><a href="/docs/book/manual/1.x/architecture/objects" class="">Objects</a></ul><li><a href="/docs/book/manual/1.x/quality-code" class="">Quality Code</a><ul><li><a href="/docs/book/manual/1.x/quality-code/fixtures" class="">Fixtures</a><li><a href="/docs/book/manual/1.x/quality-code/analysis" class="">Analysis</a><li><a href="/docs/book/manual/1.x/quality-code/testing" class="">Testing</a><li><a href="/docs/book/manual/1.x/quality-code/security" class="">Security</a></ul><li><a href="/docs/book/manual/1.x/configuration" class="">Configuration</a><ul><li><a href="/docs/book/manual/1.x/configuration/environment" class="">Environment</a><li><a href="/docs/book/manual/1.x/configuration/bootstrapping" class="">Bootstrapping</a><li><a href="/docs/book/manual/1.x/configuration/third-party-libraries" class="">Third Party Libraries</a></ul><li><a href="/docs/book/manual/1.x/views" class="">Views</a><ul><li><a href="/docs/book/manual/1.x/views/layouts" class="">Layouts</a><li><a href="/docs/book/manual/1.x/views/elements" class="">Elements</a><li><a href="/docs/book/manual/1.x/views/helpers" class="">Helpers</a><li><a href="/docs/book/manual/1.x/views/static-content" class="">Static Content</a><li><a href="/docs/book/manual/1.x/views/auto-escaping" class="">Auto Escaping</a></ul><li><a href="/docs/book/manual/1.x/models" class="">Models</a><ul><li><a href="/docs/book/manual/1.x/models/mongodb" class="">Mongodb</a><li><a href="/docs/book/manual/1.x/models/meta" class="">Meta</a><li><a href="/docs/book/manual/1.x/models/relationships" class="">Relationships</a><li><a href="/docs/book/manual/1.x/models/saving" class="">Saving</a><li><a href="/docs/book/manual/1.x/models/using-data-sources" class="">Using Data Sources</a><li><a href="/docs/book/manual/1.x/models/adding-functions" class="">Adding Functions</a><li><a href="/docs/book/manual/1.x/models/data-mutation" class="">Data Mutation</a><li><a href="/docs/book/manual/1.x/models/connections" class="">Connections</a><li><a href="/docs/book/manual/1.x/models/creating-data-sources" class="">Creating Data Sources</a><li><a href="/docs/book/manual/1.x/models/querying" class="">Querying</a><li><a href="/docs/book/manual/1.x/models/validation" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="caching" class="anchor" href="#caching">Caching</a></h1>
+<p>The <code>Cache</code> static class provides a consistent interface to configure and utilize the different cache adapters included with li3, as well as your own adapters.</p>
+<h2><a id="included-adapters" class="anchor" href="#included-adapters">Included Adapters</a></h2>
+<p>The framework ships with several adapters for caching. These adapters can be found in
+<code>lithium/storage/cache/adapter</code>. Each adapter has its own special characteristics,
+pick one (or two) dependent on your specific use case.</p>
+<ul>
+<li><code>Memcache</code> - A libmemcached based adapter, highly recommended.</li>
+<li><code>Apc</code> - Can be used if you're on an older PHP version and cannot use memcached, but have APC or APCu available.</li>
+<li><code>Redis</code> - Recommended if you're already using redis for other tasks.</li>
+<li><code>File</code> -  A minimal file-based cache, good if your app lives in constrained environment or you'd like to cache BLOBs.</li>
+<li><code>Memory</code> - A minimal in-memory cache, good for testing purposes.</li>
+<li><code>Xcache</code> - An alternative to <code>Apc</code>, not recommended as support might be phased out.</li>
+</ul>
+<p>Also see the <a href="/docs/api/lithium/latest:1.x/lithium/storage/cache/adapter">Cache Adapters API Documentation</a> for more information.</p>
+<h2><a id="enabling-disabling-caching" class="anchor" href="#enabling-disabling-caching">Enabling/Disabling Caching</a></h2>
+<p>To control whether or not caching is enabled, you can either comment or uncomment the
+following line in your application's <code>config/bootstrap.php</code> file:</p>
+<pre><code class="language-php">/**
+ * This file contains configurations for connecting to external caching resources, as well as
+ * default caching rules for various systems within your application
+ */
+require __DIR__ . '/bootstrap/cache.php';
+</code></pre>
+<div class="note note-info">
+	By default, caching is enabled in the framework.
+</div>
+<h2><a id="configuration" class="anchor" href="#configuration">Configuration</a></h2>
+<p>In most cases, you will configure various named cache configurations in your bootstrap
+process, which will then be available to you in all other parts of your application. A
+simple example configuration:</p>
+<pre><code class="language-php">Cache::config([
+    'local' =&gt; [
+        'adapter' =&gt; 'Apc'
+    ],
+    'distributed' =&gt; [
+        'adapter' =&gt; 'Memcached',
+        'host' =&gt; '127.0.0.1:11211'
+    ],
+    'default' =&gt; [
+        'adapter' =&gt; 'File',
+        'strategies =&gt; ['Serializer']
+    ]
+];
+</code></pre>
+<h3><a id="strategies" class="anchor" href="#strategies">Strategies</a></h3>
+<p>Each cache configuration can be configured with <em>strategies</em>. These influence how values are read and written
+into the cache. Some adapters already handle serialization for you, others like <code>File</code> do not do this. This
+is why we configure the <code>File</code> adapter using the general <code>Serializer</code> strategy. Other stratgies can be found
+in the <a href="/docs/api/lithium/latest:1.x/lithium/storage/cache/strategy">Cache Strategies API Documentation</a>.</p>
+<h3><a id="scoping" class="anchor" href="#scoping">Scoping</a></h3>
+<p>Adapter configurations can be scoped, adapters will then handle the
+namespacing of the keys transparently for you. This prevents caches
+from "stepping on each others toes".</p>
+<pre><code class="language-php">Cache::config([
+    'primary'   =&gt; ['adapter' =&gt; 'Apc', 'scope' =&gt; 'primary'],
+    'secondary' =&gt; ['adapter' =&gt; 'Apc', 'scope' =&gt; 'secondary']
+];
+</code></pre>
+<h2><a id="general-operation" class="anchor" href="#general-operation">General Operation</a></h2>
+<p>Adapters provide a consistent interface for basic cache operations (<code>write</code>, <code>read</code>,
+<code>increment</code>, <code>decrement</code>, <code>delete</code> and <code>clear</code>), which can be used interchangeably between
+all adapters. Some adapters may provide additional methods that are not consistently
+available across other adapters.</p>
+<h3><a id="writing-to-the-cache" class="anchor" href="#writing-to-the-cache">Writing to the Cache</a></h3>
+<p>All cache operations take the name of the configuration as their first argument. This
+allows you to use the best cache configuration for your use cache.</p>
+<pre><code class="language-php">// Will store the value `'bar'` under the `foo` key, using the default expiry.
+Cache::write('default', 'foo', 'bar');
+</code></pre>
+<div class="note note-hint">
+	The read/write and delete methods can handle multi keys/values or so called batch operations.
+	Simply pass an array of keys (and value pairs) to the respective method.
+</div>
+<p>To specify an <strong>expiry</strong>, use the 4th parameter of the method. Expiry time is a <code>strtotime()</code>
+compatible string. Alternatively an integer denoting the seconds until the item expires
+(TTL). If no expiry time is set, then the default cache expiration time set with the cache
+adapter configuration will be used. To persist an item use <code>Cache::PERSIST</code>.</p>
+<pre><code class="language-php">Cache::write('default', 'foo', 'bar', '+1 hour');
+Cache::write('default', 'foo', 'bar', Cache::PERSIST);
+</code></pre>
+<h3><a id="atomically-increment-decrement-values" class="anchor" href="#atomically-increment-decrement-values">(Atomically) Increment/Decrement Values</a></h3>
+<p>Two specialized methods for writing to the cache are <code>Cache::increment()</code> and <code>Cache::decrement()</code>. These
+can be used i.e. if you want to increase a counter. Some adapters handle these operations atomically others
+can't. Please check your adapter configuration for details.</p>
+<pre><code class="language-php">Cache::increment('default', 'pageviews'); // increment count by one
+Cache::increment('default', 'pageviews', 2); // increment count by two
+</code></pre>
+<h3><a id="reading-from-the-cache" class="anchor" href="#reading-from-the-cache">Reading from the Cache</a></h3>
+<p>Reading from cache is pretty is and after reading the above you should already be able to
+guess, how this works.</p>
+<pre><code class="language-php">// Will read the value under the `foo` key, if isn't found returns `null`.
+Cache::read('default', 'foo');
+</code></pre>
+<h2><a id="caching-blobs" class="anchor" href="#caching-blobs">Caching BLOBs</a></h2>
+<div class="note note-version">This feature is available with version 1.1.</div>
+<p>BLOBs are binary large objects or simply put: <em>files</em>. The file cache adapter is capable
+of storing BLOBs using the following configuration.</p>
+<pre><code class="language-php">Cache::config([
+	'blob' =&gt; [
+		'adapter' =&gt; 'File',
+		'streams' =&gt; true
+	]
+]);
+</code></pre>
+<p>Imagine - upon user request - a PDF is compiled. This requires quite a
+bit of CPU time and memory. Upon following requests for the same PDF you
+want to save some cycles and return the file from cache. This example
+shows you how.</p>
+<pre><code class="language-php">// We will need a stream handle we can write to and read from.
+$stream = fopen('php://temp', 'wb');
+
+// Pseudocode; generate a PDF then store it in the stream.
+$pdf-&gt;generate()-&gt;store($stream);
+
+// We must rewind the stream, as Cache will not do this for us.
+rewind($stream);
+
+// Store the contents of $stream into a cache item.
+Cache::write('blob', 'productCatalogPdf', $stream);
+</code></pre>
+<pre><code class="language-php">// ... later somewhere else in the galaxy ...
+$stream = Cache::read('blob', 'productCatalogPdf');
+
+// Output $stream to the client.
+// echo stream_get_contents($stream);
+</code></pre>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

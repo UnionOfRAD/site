@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\action\Response – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../action.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">action</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Response</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../action.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Response::__construct().html">__construct()</a>												<li class="method protected">
+				<a href="./Response::_init().html">_init()</a>												<li class="method public">
+				<a href="./Response::cache().html">cache()</a>												<li class="method public">
+				<a href="./Response::type().html">type()</a>												<li class="method public">
+				<a href="./Response::render().html">render()</a>												<li class="method public">
+				<a href="./Response::__toString().html">__toString()</a>												<li class="method protected">
+				<a href="./Response::_writeHeaders().html">_writeHeaders()</a>												<li class="method public deprecated">
+				<a href="./Response::headers().html">headers()</a>												<li class="method public inherited">
+				<a href="../net/http/Response::body().html">body()</a>												<li class="method public inherited">
+				<a href="../net/http/Response::status().html">status()</a>												<li class="method public inherited">
+				<a href="../net/http/Response::cookies().html">cookies()</a>												<li class="method protected inherited">
+				<a href="../net/http/Response::_cookies().html">_cookies()</a>												<li class="method public inherited">
+				<a href="../net/http/Response::digest().html">digest()</a>												<li class="method protected inherited">
+				<a href="../net/http/Response::_parseMessage().html">_parseMessage()</a>												<li class="method protected inherited">
+				<a href="../net/http/Response::_parseCookies().html">_parseCookies()</a>												<li class="method protected inherited">
+				<a href="../net/http/Response::_httpChunkedDecode().html">_httpChunkedDecode()</a>												<li class="method protected inherited">
+				<a href="../net/http/Message::_encode().html">_encode()</a>												<li class="method protected inherited">
+				<a href="../net/http/Message::_decode().html">_decode()</a>												<li class="method public inherited">
+				<a href="../net/Message::to().html">to()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::applyFilter()">applyFilter()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::invokeMethod()">invokeMethod()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::__set_state()">__set_state()</a>												<li class="method public inherited">
+				<a href="../core/Object::respondsTo().html">respondsTo()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_instance()">_instance()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_filter()">_filter()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_parents()">_parents()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_stop()">_stop()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./Response::$_classes.html">$_classes</a>												<li class="property protected">
+				<a href="./Response::$_autoConfig.html">$_autoConfig</a>												<li class="property public inherited">
+				<a href="../net/http/Response::$status.html">$status</a>												<li class="property public inherited">
+				<a href="../net/http/Response::$encoding.html">$encoding</a>												<li class="property public inherited">
+				<a href="../net/http/Response::$cookies.html">$cookies</a>												<li class="property protected inherited">
+				<a href="../net/http/Response::$_statuses.html">$_statuses</a>												<li class="property public inherited">
+				<a href="../net/http/Message::$protocol.html">$protocol</a>												<li class="property public inherited">
+				<a href="../net/http/Message::$version.html">$version</a>												<li class="property public inherited">
+				<a href="../net/http/Message::$headers.html">$headers</a>												<li class="property protected inherited">
+				<a href="../net/http/Message::$_type.html">$_type</a>												<li class="property public inherited">
+				<a href="../net/Message::$scheme.html">$scheme</a>												<li class="property public inherited">
+				<a href="../net/Message::$host.html">$host</a>												<li class="property public inherited">
+				<a href="../net/Message::$port.html">$port</a>												<li class="property public inherited">
+				<a href="../net/Message::$username.html">$username</a>												<li class="property public inherited">
+				<a href="../net/Message::$password.html">$password</a>												<li class="property public inherited">
+				<a href="../net/Message::$path.html">$path</a>												<li class="property public inherited">
+				<a href="../net/Message::$body.html">$body</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_config">$_config</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_methodFilters">$_methodFilters</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_parents">$_parents</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../action.html" class="symbol-segment">action</a>\Response		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../net/http/Response.html" class="extends__symbol">lithium\net\http\Response</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>A <code>Response</code> object is typically instantiated automatically by the <code>Controller</code>. It is assigned
+any headers set in the course of the request, as well as any content rendered by the
+<code>Controller</code>. Once completed, the <code>Controller</code> returns the <code>Response</code> object to the <code>Dispatcher</code>.</p>
+					</div>
+				
+									<div class="description">
+						<p>The <code>Response</code> object is responsible for writing its body content to output, and writing any
+headers to the browser.</p>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="Dispatcher.html">lithium\action\Dispatcher</a>									<li><a href="Controller.html">lithium\action\Controller</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Response extends \lithium\net\http\Response {
+
+	/**
+	 * Classes used by Response.
+	 *
+	 * @var array
+	 */
+	protected $_classes = array(
+		&#039;router&#039; =&gt; &#039;lithium\net\http\Router&#039;,
+		&#039;media&#039; =&gt; &#039;lithium\net\http\Media&#039;,
+		&#039;auth&#039; =&gt; &#039;lithium\net\http\Auth&#039;
+	);
+
+	/**
+	 * Auto configuration properties.
+	 *
+	 * @var array
+	 */
+	protected $_autoConfig = array(&#039;classes&#039; =&gt; &#039;merge&#039;);
+
+	/**
+	 * Constructor. Adds config values to the public properties when a new object is created.
+	 * Config options also include default values for `Response::body()` when called from
+	 * `Response::render()`.
+	 *
+	 * @see lithium\net\http\Message::body()
+	 * @see lithium\net\http\Response::__construct()
+	 * @see lithium\net\http\Message::__construct()
+	 * @see lithium\net\Message::__construct()
+	 * @param array $config The available configuration options are the following. Further
+	 *        options are inherited from the parent classes.
+	 *        - `&#039;buffer&#039;` _integer_: Defaults to `null`
+	 *        - `&#039;decode&#039;` _boolean_: Defaults to `null`.
+	 *        - `&#039;location&#039;` _array|string|null_: Defaults to `null`.
+	 *        - `&#039;request&#039;` _object_: Defaults to `null`.
+	 * @return void
+	 */
+	public function __construct(array $config = array()) {
+		$defaults = array(
+			&#039;buffer&#039; =&gt; 8192,
+			&#039;location&#039; =&gt; null,
+			&#039;request&#039; =&gt; null,
+			&#039;decode&#039; =&gt; false
+		);
+		parent::__construct($config + $defaults);
+	}
+
+	/**
+	 * Sets the Location header using `$config[&#039;location&#039;]` and `$config[&#039;request&#039;]` passed in
+	 * through the constructor if provided.
+	 *
+	 * @return void
+	 */
+	protected function _init() {
+		parent::_init();
+		$router = $this-&gt;_classes[&#039;router&#039;];
+
+		if ($this-&gt;_config[&#039;location&#039;]) {
+			$location = $router::match($this-&gt;_config[&#039;location&#039;], $this-&gt;_config[&#039;request&#039;]);
+			$this-&gt;headers(&#039;Location&#039;, $location);
+		}
+	}
+
+	/**
+	 * Controls how or whether the client browser and web proxies should cache this response.
+	 *
+	 * @param mixed $expires This can be a Unix timestamp indicating when the page expires, or a
+	 *        string indicating the relative time offset that a page should expire, i.e. `&quot;+5 hours&quot;.
+	 *        Finally, `$expires` can be set to `false` to completely disable browser or proxy
+	 *        caching.
+	 * @return void
+	 */
+	public function cache($expires) {
+		if ($expires === false) {
+			$headers = array(
+				&#039;Expires&#039; =&gt; &#039;Mon, 26 Jul 1997 05:00:00 GMT&#039;,
+				&#039;Cache-Control&#039; =&gt; array(
+					&#039;no-store, no-cache, must-revalidate&#039;,
+					&#039;post-check=0, pre-check=0&#039;,
+					&#039;max-age=0&#039;
+				),
+				&#039;Pragma&#039; =&gt; &#039;no-cache&#039;
+			);
+		} else {
+			$expires = is_int($expires) ? $expires : strtotime($expires);
+
+			$headers = array(
+				&#039;Expires&#039; =&gt; gmdate(&#039;D, d M Y H:i:s&#039;, $expires) . &#039; GMT&#039;,
+				&#039;Cache-Control&#039; =&gt; &#039;max-age=&#039; . ($expires - time()),
+				&#039;Pragma&#039; =&gt; &#039;cache&#039;
+			);
+		}
+		$this-&gt;headers($headers);
+	}
+
+	/**
+	 * Sets/Gets the content type. If `&#039;type&#039;` is null, the method will attempt to determine the
+	 * type from the params, then from the environment setting
+	 *
+	 * @param string $type a full content type i.e. `&#039;application/json&#039;` or simple name `&#039;json&#039;`
+	 * @return string A simple content type name, i.e. `&#039;html&#039;`, `&#039;xml&#039;`, `&#039;json&#039;`, etc., depending
+	 *         on the content type of the request.
+	 */
+	public function type($type = null) {
+		if ($type === null &amp;&amp; $this-&gt;_type === null) {
+			$type = &#039;html&#039;;
+		}
+		return parent::type($type);
+	}
+
+	/**
+	 * Render a response by writing headers and output. Output is echoed in
+	 * chunks because of an issue where `echo` time increases exponentially
+	 * on long message bodies.
+	 *
+	 * Reponses which have a `Location` header set are indicating a
+	 * redirect, will get their status code automatically adjusted to `302`
+	 * (Found/Moved Temporarily) in case the status code before was `200`
+	 * (OK). This is to allow easy redirects by setting just the `Location`
+	 * header and is assumed to be the original intent of the user.
+	 *
+	 * On responses with status codes `204` (No Content) and `302` (Found)
+	 * a message body - even if one is set - will never be send. These
+	 * status codes either don&#039;t have a message body as per their nature or
+	 * they are ignored and can thus be omitted for  performance reasons.
+	 *
+	 * @return void
+	 */
+	public function render() {
+		$code = null;
+
+		if (isset($this-&gt;headers[&#039;location&#039;]) || isset($this-&gt;headers[&#039;Location&#039;])) {
+			if ($this-&gt;status[&#039;code&#039;] === 200) {
+				$this-&gt;status(302);
+			}
+			$code = $this-&gt;status[&#039;code&#039;];
+		}
+		if ($cookies = $this-&gt;_cookies()) {
+			$this-&gt;headers(&#039;Set-Cookie&#039;, $cookies);
+		}
+		$this-&gt;_writeHeaders($this-&gt;status() ?: $this-&gt;status(500));
+		$this-&gt;_writeHeaders($this-&gt;headers(), $code);
+
+		if ($this-&gt;status[&#039;code&#039;] === 302 || $this-&gt;status[&#039;code&#039;] === 204) {
+			return;
+		}
+		foreach ($this-&gt;body(null, $this-&gt;_config) as $chunk) {
+			echo $chunk;
+		}
+	}
+
+	/**
+	 * Casts the Response object to a string.  This doesn&#039;t actually return a string, but does
+	 * a direct render and returns an empty string.
+	 *
+	 * @return string Just an empty string to satify requirements of this magic method.
+	 */
+	public function __toString() {
+		$this-&gt;render();
+		return &#039;&#039;;
+	}
+
+	/**
+	 * Writes raw headers to output.
+	 *
+	 * @param string|array $headers Either a raw header string, or an array of header strings. Use
+	 *        an array if a single header must be written multiple times with different values.
+	 *        Otherwise, additional values for duplicate headers will overwrite previous values.
+	 * @param integer $code Optional. If present, forces a specific HTTP response code.  Used
+	 *        primarily in conjunction with the &#039;Location&#039; header.
+	 * @return void
+	 */
+	protected function _writeHeaders($headers, $code = null) {
+		foreach ((array) $headers as $header) {
+			$code ? header($header, false, $code) : header($header, false);
+		}
+	}
+
+	/**
+	 * Expands on `\net\http\Message::headers()` with some magic conversions for shorthand headers.
+	 *
+	 * @deprecated This method will be removed in a future version. Note that the parent `header()`
+	 *             wil continue to exist.
+	 * @param string|array $key
+	 * @param mixed $value
+	 * @param boolean $replace
+	 * @return mixed
+	 */
+	public function headers($key = null, $value = null, $replace = true) {
+		if ($key === &#039;download&#039; || $key === &#039;Download&#039;) {
+			$message  = &quot;Shorthand header `Download` with `&lt;FILENAME&gt;` has been deprecated &quot;;
+			$message .= &quot;because it&#039;s too magic. Please use `Content-Disposition` &quot;;
+			$message .= &quot;with `attachment; filename=\&quot;&lt;FILENAME&gt;\&quot;` instead.&quot;;
+			trigger_error($message, E_USER_DEPRECATED);
+
+			$key = &#039;Content-Disposition&#039;;
+			$value = &#039;attachment; filename=&quot;&#039; . $value . &#039;&quot;&#039;;
+		}
+		return parent::headers($key, $value, $replace);
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

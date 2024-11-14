@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Third Party Libraries – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/book/manual/1.x" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/book/manual/1.x/configuration" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Configuration</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Third Party Libraries</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="/docs/book/manual/1.x/common-tasks" class="">Common Tasks</a><ul><li><a href="/docs/book/manual/1.x/common-tasks/logging" class="">Logging</a><li><a href="/docs/book/manual/1.x/common-tasks/plugins" class="">Plugins</a><li><a href="/docs/book/manual/1.x/common-tasks/error-handling" class="">Error Handling</a><li><a href="/docs/book/manual/1.x/common-tasks/caching" class="">Caching</a><li><a href="/docs/book/manual/1.x/common-tasks/filters" class="">Filters</a><li><a href="/docs/book/manual/1.x/common-tasks/etags" class="">Etags</a><li><a href="/docs/book/manual/1.x/common-tasks/globalization" class="">Globalization</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-authentication" class="">Simple Authentication</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-auth-user" class="">Simple Auth User</a><li><a href="/docs/book/manual/1.x/common-tasks/console-applications" class="">Console Applications</a></ul><li><a href="/docs/book/manual/1.x/appendices" class="">Appendices</a><ul><li><a href="/docs/book/manual/1.x/appendices/faqs" class="">FAQs</a><li><a href="/docs/book/manual/1.x/appendices/using-in-other-applications" class="">Using In Other Applications</a></ul><li><a href="/docs/book/manual/1.x/quickstart" class="">Quickstart</a><li><a href="/docs/book/manual/1.x/controllers" class="">Controllers</a><ul><li><a href="/docs/book/manual/1.x/controllers/actions" class="">Actions</a><li><a href="/docs/book/manual/1.x/controllers/flow-control" class="">Flow Control</a><li><a href="/docs/book/manual/1.x/controllers/parameters" class="">Parameters</a><li><a href="/docs/book/manual/1.x/controllers/type-rendering-detection" class="">Type Rendering Detection</a><li><a href="/docs/book/manual/1.x/controllers/routing" class="">Routing</a></ul><li><a href="/docs/book/manual/1.x/installation" class="">Installation</a><ul><li><a href="/docs/book/manual/1.x/installation/requirements" class="">Requirements</a><li><a href="/docs/book/manual/1.x/installation/troubleshooting" class="">Troubleshooting</a><li><a href="/docs/book/manual/1.x/installation/web-servers" class="">Web Servers</a></ul><li><a href="/docs/book/manual/1.x/architecture" class="">Architecture</a><ul><li><a href="/docs/book/manual/1.x/architecture/file-structure" class="">File Structure</a><li><a href="/docs/book/manual/1.x/architecture/response-lifecycle" class="">Response Lifecycle</a><li><a href="/docs/book/manual/1.x/architecture/aop" class="">AOP</a><li><a href="/docs/book/manual/1.x/architecture/mvc" class="">MVC</a><li><a href="/docs/book/manual/1.x/architecture/objects" class="">Objects</a></ul><li><a href="/docs/book/manual/1.x/quality-code" class="">Quality Code</a><ul><li><a href="/docs/book/manual/1.x/quality-code/fixtures" class="">Fixtures</a><li><a href="/docs/book/manual/1.x/quality-code/analysis" class="">Analysis</a><li><a href="/docs/book/manual/1.x/quality-code/testing" class="">Testing</a><li><a href="/docs/book/manual/1.x/quality-code/security" class="">Security</a></ul><li><a href="/docs/book/manual/1.x/configuration" class="">Configuration</a><ul><li><a href="/docs/book/manual/1.x/configuration/environment" class="">Environment</a><li><a href="/docs/book/manual/1.x/configuration/bootstrapping" class="">Bootstrapping</a><li><a href="/docs/book/manual/1.x/configuration/third-party-libraries" class="active">Third Party Libraries</a></ul><li><a href="/docs/book/manual/1.x/views" class="">Views</a><ul><li><a href="/docs/book/manual/1.x/views/layouts" class="">Layouts</a><li><a href="/docs/book/manual/1.x/views/elements" class="">Elements</a><li><a href="/docs/book/manual/1.x/views/helpers" class="">Helpers</a><li><a href="/docs/book/manual/1.x/views/static-content" class="">Static Content</a><li><a href="/docs/book/manual/1.x/views/auto-escaping" class="">Auto Escaping</a></ul><li><a href="/docs/book/manual/1.x/models" class="">Models</a><ul><li><a href="/docs/book/manual/1.x/models/mongodb" class="">Mongodb</a><li><a href="/docs/book/manual/1.x/models/meta" class="">Meta</a><li><a href="/docs/book/manual/1.x/models/relationships" class="">Relationships</a><li><a href="/docs/book/manual/1.x/models/saving" class="">Saving</a><li><a href="/docs/book/manual/1.x/models/using-data-sources" class="">Using Data Sources</a><li><a href="/docs/book/manual/1.x/models/adding-functions" class="">Adding Functions</a><li><a href="/docs/book/manual/1.x/models/data-mutation" class="">Data Mutation</a><li><a href="/docs/book/manual/1.x/models/connections" class="">Connections</a><li><a href="/docs/book/manual/1.x/models/creating-data-sources" class="">Creating Data Sources</a><li><a href="/docs/book/manual/1.x/models/querying" class="">Querying</a><li><a href="/docs/book/manual/1.x/models/validation" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="working-with-external-libraries" class="anchor" href="#working-with-external-libraries">Working with External Libraries</a></h1>
+<p>li3 applications are made up of collections of <em>libraries</em>. A library is any discrete group of PHP class files; this includes any li3 plugins, other class libraries like PEAR and Zend Framework, and other frameworks like Symfony 2. Even your application and the li3 core itself are considered libraries in li3 parlance.</p>
+<h2><a id="basics" class="anchor" href="#basics">Basics</a></h2>
+<p>Libraries are managed by the <code>lithium\core\Libraries</code> class, which handles auto-loading, service location, and introspecting available classes. When loading classes, li3 assumes a <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md">PSR-0 compatible</a> class mapping structure. For more information, see the <a href="/docs/api/lithium/latest:1.x/lithium/core/Libraries">documentation for the <code>Libraries</code> class</a>.</p>
+<p>The default li3 distribution ships with two <code>libraries</code> directories: one located at the root of the distribution, and one located in the <code>app</code> folder (or any application you generate with the console tooling). Libraries can be installed into either of these directories, and both are used interchangeably throughout this guide. The global <code>libraries</code> directory is intended for libraries which are shared across multiple applications, whereas the local directory is intended for application-specific ones, and will override the global directory in the event of a conflict.</p>
+<p>By convention, library configurations are added in <code>config/bootstrap/libraries.php</code>, and are loaded in your application's bootstrap process. However, there are no rules or requirements as to where or when this can happen. The default bootstrap files are simply that: a default; they're designed to be changed and re-organized as your application requirements dictate.</p>
+<h2><a id="installation" class="anchor" href="#installation">Installation</a></h2>
+<p>Generally, there are two ways in which a library can be packaged and distributed. In the first, the library <em>is</em> the distribution. In this case, the root of the PHP class libraries is the same as the root of the repository or distribution. An example of this is <a href="https://github.com/UnionOfRAD/lithium">the li3 core</a>.</p>
+<p>The alternative approach is for a distribution to contain its library in a subdirectory. Examples would be the <a href="https://github.com/zendframework/zf2/tree/master/library">Zend Framework</a> or <a href="https://github.com/symfony/symfony/tree/master/src">Symfony 2</a>.</p>
+<p>In the first case, installation is as simple as downloading (or cloning, or adding as a submodule) the library you wish to use into your <code>libraries</code> directory. When registering the library with [<code>Libraries::add()</code>](/docs/api/lithium/latest:1.x/lithium/core/Libraries::add(), no other configuration is necessary, since li3 knows where to look for it, and how to map its classes.</p>
+<p>Since that's not possible for libraries in the second case, we recommend an alternative installation: download (clone, etc.) the distribution to <code>libraries/_source</code>, and symlink the root of the library source into the <code>libraries</code> directory.</p>
+<p>For example, the Zend Framework 1.11.7 distribution would be installed to <code>libraries/_source/ZendFramework-1.11.7</code>. Then, <code>libraries/Zend</code> would be symlinked to <code>libraries/_source/ZendFramework-1.11.7/library/Zend</code>, so that the root of the library source would map directly to where li3 expects it to be.</p>
+<p>This not only simplifies your configuration, but has the added benefit of allowing you to switch between different versions of vendor libraries for your application, just by changing a symlink. <em>Note</em>: While the <code>libraries</code> directories are used by convention, libraries can be referenced anywhere on the filesystem by including a <code>'path'</code> key in your <code>Libraries::add()</code> configuration.</p>
+<h2><a id="configuration" class="anchor" href="#configuration">Configuration</a></h2>
+<p>The following examples should give you an overview of the various approaches to configuring class libraries in li3. The easiest type of library to configure are libraries written for PHP 5.3 or higher which conform to the above-referenced namespacing standard.</p>
+<p>For example, the image manipulation library <a href="https://github.com/avalanche123/Imagine"> Imagine</a>, once installed according to the above (with <code>lib/Imagine</code> symlinked to <code>libraries/Imagine</code>), can be configured simply with the following:</p>
+<pre><code class="language-php">Libraries::add('Imagine');
+</code></pre>
+<p>Again, because it conforms to the 5.3 namespacing standard, and because (using the symlink) li3 knows how to locate its class files, no other configuration is required.</p>
+<h3><a id="pear" class="anchor" href="#pear">PEAR</a></h3>
+<p>Since PEAR is typically installed into a system directory (i.e. <code>/usr/local/lib/php</code>), you should first symlink it to <code>libraries/PEAR</code>, then add the following:</p>
+<pre><code class="language-php">Libraries::add("PEAR", [
+	"prefix" =&gt; false,
+	"includePath" =&gt; true,
+	"transform" =&gt; function($class, $config) {
+		$file = $config['path'] . '/' . str_replace("_", "/", $class) . $config['suffix'];
+		return file_exists($file) ? $file : null;
+	}
+]);
+</code></pre>
+<p>There are a number of things to note about this configuration. First, while PEAR classes use package prefix, there is no standard vendor prefix, so the <code>'prefix'</code> setting must be overridden accordingly.</p>
+<p>Second, PEAR classes depend on PHP's include path. Setting <code>'includePath'</code> to <code>true</code> adds the current library path to the include path. It can also be set to an absolute physical path if, for example, the library depends on the directory <em>above</em> it being in the include path.</p>
+<p>Finally, the <code>'transform'</code> key is used to manually map class names to file names.</p>
+<h3><a id="zend-framework-1-x" class="anchor" href="#zend-framework-1-x">Zend Framework 1.x</a></h3>
+<p>First, we recommend installing ZF1 from the unofficial Git mirror, at <code>git://github.com/Enrise/Zend.git</code>. This distribution contains only the class library, and as such, can be cloned (or submodule'd) directly into the <code>libraries</code> directory.</p>
+<p>If you downloaded ZF1, or did an SVN checkout, you'll follow the alternative instructions above so that (for example, with ZF 1.11.7) you'll have <code>libraries/Zend</code> symlinked to <code>libraries/_source/ZendFramework-1.11.7/library/Zend</code>.</p>
+<p>Once installed, ZF1 can be configured per the following. Again, because li3 assumes 5.3 standard namespacing in all libraries, some special considerations are necessary for dealing with class libraries written for 5.2 and lower.</p>
+<pre><code class="language-php">Libraries::add("Zend", [
+	"prefix" =&gt; "Zend_",
+	"includePath" =&gt; LITHIUM_LIBRARY_PATH, // or LITHIUM_APP_PATH . '/libraries'
+	"bootstrap" =&gt; "Loader/Autoloader.php",
+	"loader" =&gt; ["Zend_Loader_Autoloader", "autoload"],
+	"transform" =&gt; function($class) { return str_replace("_", "/", $class) . ".php"; }
+]);
+</code></pre>
+<p>First, because we're dealing with underscore-prefixed classes, we need to override the default prefix. Also, ZF1 depends on its parent directory being included in PHP's <code>include_path</code>, which we can tell <code>Libraries</code> to do, using the directory constants to provide an absolute path. Again, if your system is already configured for this, you can omit the <code>'includePath'</code> key.</p>
+<p>Next, since ZF1 uses its own autoloader, we can tell <code>Libraries</code> to delegate to that one, first by setting its class file as the bootstrap file, then by indicating it should use the <code>Zend_Loader_Autoloader</code> class as the loader.</p>
+<p>Most importantly, we're overriding how class names are transformed into path names, by passing in a custom function which transforms PEAR-style class names. Finally, to use classes in Zend's incubator, we can add a separate configuration for this.</p>
+<p>Note, the following should appear <strong>above</strong> the primary ZF configuration, because they both have the same class prefix. However, this configuration will verify that a file exists before attempting to autoload it, allowing classes to "fall through" to other loaders.</p>
+<pre><code class="language-php">Libraries::add("ZendIncubator", [
+	"prefix" =&gt; "Zend_",
+	"includePath" =&gt; '/path/to/libraries/ZF_Install_Dir/incubator/library',
+	"transform" =&gt; function($class) {
+		$file = str_replace("_", "/", $class) . ".php";
+		return file_exists($file) ? $file : null;
+	}
+]);
+</code></pre>
+<h3><a id="zend-framework-2-x" class="anchor" href="#zend-framework-2-x">Zend Framework 2.x</a></h3>
+<p>Fortunately, installing and configuring ZF2 is quite a bit easier. It can be cloned (or added as a submodule) from the official repository at <code>git://github.com/zendframework/zf2.git</code> into <code>libraries/_source/zf2</code>. Then, symlink <code>libraries/_source/zf2/library/Zend</code> to <code>libraries/Zend</code>.</p>
+<p>Because ZF2 uses the same class naming scheme as li3, configuring it is quite a bit easier:</p>
+<pre><code class="language-php">Libraries::add("Zend");
+</code></pre>
+<p>As with ZF1 above, using Zend's native autoloader is technically optional. Here, it is omitted specifically because both li3 and ZF2 class loading rules were written to the same specification, and using this approach, li3 can cache ZF class paths along with its own.</p>
+<h3><a id="usage-example-zend-framework-1-x-2-x" class="anchor" href="#usage-example-zend-framework-1-x-2-x">Usage example: Zend Framework 1.x / 2.x</a></h3>
+<p>Once you've properly installed and configured your chosen version of Zend Framework, you can use its classes as you would any other:</p>
+<pre><code class="language-php">namespace app\controllers;
+
+/**
+ * Import the class names. Use this style for static dependencies.
+ */
+use Zend_Mail_Storage_Pop3; // For ZF1
+use Zend\Mail\Storage\Pop3; // For ZF2
+
+class EmailController extends \lithium\action\Controller {
+
+	/**
+	 * Use this style for dynamic dependencies.
+	 */
+	protected function _init() {
+		$this-&gt;_classes += [
+			'pop3' =&gt; 'Zend_Mail_Storage_Pop3' // ZF1
+			'pop3' =&gt; 'Zend\Mail\Storage\Pop3' // ZF2
+		];
+	}
+
+	public function index() {
+		// If used statically:
+		$mail = new Zend_Mail_Storage_Pop3([
+			'host' =&gt; 'localhost', 'user' =&gt; 'test', 'password' =&gt; 'test'
+		]);
+
+		// If used dynamically:
+		$mail = $this-&gt;_instance('pop3', [
+			'host' =&gt; 'localhost', 'user' =&gt; 'test', 'password' =&gt; 'test'
+		]);
+
+		return compact('mail');
+	}
+
+}
+</code></pre>
+<h3><a id="tcpdf" class="anchor" href="#tcpdf">TCPDF</a></h3>
+<p>Some legacy vendor libraries have no consistent class-to-file mapping scheme whatsoever. These libraries must be mapped by hand. Below is an example of a small library (TCPDF), containing just a few files.</p>
+<p> <em>Note</em>: For larger libraries, generating the map by hand can be tedious. Check out <a href="/docs/api/lithium/latest:1.x/lithium/analysis/Inspector">the <code>Inspector</code> class</a>, which can be used to introspect classes and files to generate a map automatically.</p>
+<pre><code class="language-php">Libraries::add('tcpdf', [
+	'prefix' =&gt; false,
+	'transform' =&gt; function($class, $config) {
+		$map = [
+			'TCPDF2DBarcode'     =&gt; '2dbarcodes',
+			'TCPDFBarcode'       =&gt; 'barcodes',
+			'TCPDF_UNICODE_DATA' =&gt; 'unicode_data',
+			'PDF417'             =&gt; 'pdf417',
+			'TCPDF'              =&gt; 'tcpdf',
+			'QRcode'             =&gt; 'qrcode'
+		];
+		if (!isset($map[$class])) {
+			return false;
+		}
+		return "{$config['path']}/{$map[$class]}{$config['suffix']}";
+	}
+]);
+</code></pre>
+<p>Again, the lack of vendor prefix is denoted by setting <code>'prefix'</code> to <code>false</code>. Next, the class-to-file mapping function is passed in the <code>'transform'</code> key, which contains an array mapping class names to file names. These are then used to generate and return a full physical path to the correct file.</p>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

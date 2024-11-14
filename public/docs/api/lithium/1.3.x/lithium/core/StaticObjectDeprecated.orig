@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\core\StaticObjectDeprecated – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.3.x/lithium/core" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">core</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">StaticObjectDeprecated</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.3.x/lithium/core" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public deprecated">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::respondsTo()">respondsTo()</a>												<li class="method public deprecated">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::invokeMethod()">invokeMethod()</a>												<li class="method protected deprecated">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::_instance()">_instance()</a>												<li class="method protected deprecated">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::_stop()">_stop()</a>												<li class="method protected deprecated">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::_parents()">_parents()</a>												<li class="method public deprecated">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::applyFilter()">applyFilter()</a>												<li class="method protected deprecated">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::_filter()">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected deprecated">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::$_parents">$_parents</a>												<li class="property protected deprecated">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::$_methodFilters">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.3.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.3.x/lithium/core" class="symbol-segment">core</a>\StaticObjectDeprecated		</h1>
+
+		<section class="under">
+															<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+								<section class="deprecated">
+															This class, its method, properties and constants are deprecated.
+												</section>
+			
+			<section>
+									<div class="summary">
+						<p>Provides a base class for all static classes in the Lithium framework. Similar to its
+counterpart, the <code>Object</code> class, <code>StaticObject</code> defines some utility useful for testing purposes.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="/docs/api/lithium/1.3.x/lithium/core/Object">lithium\core\Object</a>								</ul>
+			</section>
+			
+			
+						<section id="subclasses" class="section">
+				<h3 class="h-beta">Subclasses</h3>
+				<ul class="subclasses">
+											<li><a href="/docs/api/lithium/1.3.x/lithium/action/Dispatcher">lithium\action\Dispatcher</a>											<li><a href="/docs/api/lithium/1.3.x/lithium/analysis/Docblock">lithium\analysis\Docblock</a>											<li><a href="/docs/api/lithium/1.3.x/lithium/analysis/Parser">lithium\analysis\Parser</a>											<li><a href="/docs/api/lithium/1.3.x/lithium/console/Dispatcher">lithium\console\Dispatcher</a>											<li><a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable">lithium\core\Adaptable</a>											<li><a href="/docs/api/lithium/1.3.x/lithium/core/ErrorHandler">lithium\core\ErrorHandler</a>											<li><a href="/docs/api/lithium/1.3.x/lithium/data/Model">lithium\data\Model</a>											<li><a href="/docs/api/lithium/1.3.x/lithium/data/source/mongo_db/Exporter">lithium\data\source\mongo_db\Exporter</a>											<li><a href="/docs/api/lithium/1.3.x/lithium/g11n/Locale">lithium\g11n\Locale</a>											<li><a href="/docs/api/lithium/1.3.x/lithium/g11n/Message">lithium\g11n\Message</a>											<li><a href="/docs/api/lithium/1.3.x/lithium/net/http/Auth">lithium\net\http\Auth</a>											<li><a href="/docs/api/lithium/1.3.x/lithium/net/http/Media">lithium\net\http\Media</a>											<li><a href="/docs/api/lithium/1.3.x/lithium/net/http/Router">lithium\net\http\Router</a>											<li><a href="/docs/api/lithium/1.3.x/lithium/template/view/Compiler">lithium\template\view\Compiler</a>											<li><a href="/docs/api/lithium/1.3.x/lithium/test/Dispatcher">lithium\test\Dispatcher</a>											<li><a href="/docs/api/lithium/1.3.x/lithium/test/Filter">lithium\test\Filter</a>											<li><a href="/docs/api/lithium/1.3.x/lithium/util/Validator">lithium\util\Validator</a>									</ul>
+			</section>
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class StaticObjectDeprecated {
+
+	/**
+	 * Keeps a cached list of each class&#039; inheritance tree.
+	 *
+	 * @deprecated
+	 * @var array
+	 */
+	protected static $_parents = [];
+
+	/**
+	 * Stores the closures that represent the method filters. They are indexed by called class.
+	 *
+	 * @deprecated Not used anymore.
+	 * @var array Method filters, indexed by `get_called_class()`.
+	 */
+	protected static $_methodFilters = [];
+
+	/**
+	 * Determines if a given method can be called.
+	 *
+	 * @deprecated
+	 * @param string $method Name of the method.
+	 * @param boolean $internal Provide `true` to perform check from inside the
+	 *                class/object. When `false` checks also for public visibility;
+	 *                defaults to `false`.
+	 * @return boolean Returns `true` if the method can be called, `false` otherwise.
+	 */
+	public static function respondsTo($method, $internal = false) {
+		$message  = &#039;`&#039; . __METHOD__ . &#039;()` has been deprecated. &#039;;
+		$message .= &quot;Use `is_callable(&#039;&lt;class&gt;::&lt;method&gt;&#039;)` instead.&quot;;
+		trigger_error($message, E_USER_DEPRECATED);
+
+		return Inspector::isCallable(get_called_class(), $method, $internal);
+	}
+
+	/**
+	 * Calls a method on this object with the given parameters. Provides an OO wrapper for
+	 * `forward_static_call_array()`, and improves performance by using straight method calls
+	 * in most cases.
+	 *
+	 * @deprecated
+	 * @param string $method Name of the method to call.
+	 * @param array $params Parameter list to use when calling `$method`.
+	 * @return mixed Returns the result of the method call.
+	 */
+	public static function invokeMethod($method, $params = []) {
+		$message  = &#039;`&#039; . __METHOD__ . &#039;()` has been deprecated.&#039;;
+		trigger_error($message, E_USER_DEPRECATED);
+
+		switch (count($params)) {
+			case 0:
+				return static::$method();
+			case 1:
+				return static::$method($params[0]);
+			case 2:
+				return static::$method($params[0], $params[1]);
+			case 3:
+				return static::$method($params[0], $params[1], $params[2]);
+			case 4:
+				return static::$method($params[0], $params[1], $params[2], $params[3]);
+			case 5:
+				return static::$method($params[0], $params[1], $params[2], $params[3], $params[4]);
+			default:
+				return forward_static_call_array([get_called_class(), $method], $params);
+		}
+	}
+
+	/**
+	 * Returns an instance of a class with given `config`. The `name` could be a key from the
+	 * `classes` array, a fully namespaced class name, or an object. Typically this method is used
+	 * in `_init` to create the dependencies used in the current class.
+	 *
+	 * @deprecated
+	 * @param string|object $name A `classes` key or fully-namespaced class name.
+	 * @param array $options The configuration passed to the constructor.
+	 * @return object
+	 */
+	protected static function _instance($name, array $options = []) {
+		$message  = &#039;`&#039; . __METHOD__ . &#039;()` has been deprecated. &#039;;
+		$message .= &#039;Please use Libraries::instance(), with the 4th parameter instead.&#039;;
+		trigger_error($message, E_USER_DEPRECATED);
+		return Libraries::instance(null, $name, $options, static::$_classes);
+	}
+
+	/**
+	 * Exit immediately. Primarily used for overrides during testing.
+	 *
+	 * @deprecated
+	 * @param integer|string $status integer range 0 to 254, string printed on exit
+	 * @return void
+	 */
+	protected static function _stop($status = 0) {
+		$message  = &#039;`&#039; . __METHOD__ . &#039;()` has been deprecated.&#039;;
+		trigger_error($message, E_USER_DEPRECATED);
+		exit($status);
+	}
+
+	/**
+	 * Gets and caches an array of the parent methods of a class.
+	 *
+	 * @deprecated
+	 * @return array Returns an array of parent classes for the current class.
+	 */
+	protected static function _parents() {
+		$message  = &#039;`&#039; . __METHOD__ . &#039;()` has been deprecated. For property merging &#039;;
+		$message .= &#039;use `\lithium\core\MergeInheritable::_inherit()`&#039;;
+		trigger_error($message, E_USER_DEPRECATED);
+
+		$class = get_called_class();
+
+		if (!isset(self::$_parents[$class])) {
+			static::$_parents[$class] = class_parents($class);
+		}
+		return static::$_parents[$class];
+	}
+
+	/**
+	 * Apply a closure to a method of the current static object.
+	 *
+	 * @deprecated Replaced by `\lithium\aop\Filters::apply()` and `::clear()`.
+	 * @see lithium\core\StaticObject::_filter()
+	 * @see lithium\util\collection\Filters
+	 * @param mixed $method The name of the method to apply the closure to. Can either be a single
+	 *        method name as a string, or an array of method names. Can also be false to remove
+	 *        all filters on the current object.
+	 * @param \Closure $filter The closure that is used to filter the method(s), can also be false
+	 *        to remove all the current filters for the given method.
+	 * @return void
+	 */
+	public static function applyFilter($method, $filter = null) {
+		$message  = &#039;`&#039; . __METHOD__ . &#039;()` has been deprecated in favor of &#039;;
+		$message .= &#039;`\lithium\aop\Filters::apply()` and `::clear()`.&#039;;
+		trigger_error($message, E_USER_DEPRECATED);
+
+		$class = get_called_class();
+
+		if ($method === false) {
+			Filters::clear($class);
+			return;
+		}
+		foreach ((array) $method as $m) {
+			if ($filter === false) {
+				Filters::clear($class, $m);
+			} else {
+				Filters::apply($class, $m, $filter);
+			}
+		}
+	}
+
+	/**
+	 * Executes a set of filters against a method by taking a method&#039;s main implementation as a
+	 * callback, and iteratively wrapping the filters around it.
+	 *
+	 * @deprecated Replaced by `\lithium\aop\Filters::run()`.
+	 * @see lithium\util\collection\Filters
+	 * @param string $method The name of the method being executed.
+	 * @param array $params An associative array containing all the parameters passed into
+	 *        the method.
+	 * @param \Closure $callback The method&#039;s implementation, wrapped in a closure.
+	 * @param array $filters Additional filters to apply to the method for this call only.
+	 * @return mixed
+	 */
+	protected static function _filter($method, $params, $callback, $filters = []) {
+		$message  = &#039;`&#039; . __METHOD__ . &#039;()` has been deprecated in favor of &#039;;
+		$message .= &#039;`\lithium\aop\Filters::run()` and `::apply()`.&#039;;
+		trigger_error($message, E_USER_DEPRECATED);
+
+		if (strpos($method, &#039;::&#039;) !== false) {
+			list($class, $method) = explode(&#039;::&#039; , $method);
+		} else {
+			$class = get_called_class();
+		}
+
+		foreach ($filters as $filter) {
+			Filters::apply($class, $method, $filter);
+		}
+		return Filters::run($class, $method, $params, $callback);
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

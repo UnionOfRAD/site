@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\net\http\Request::__construct() – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../versions.html">Versions</a><a href="../../../../../../../present.html">Presentations</a><a href="../../../../../../../support.html">Community</a><a href="../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../net.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">net</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../http.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">http</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="Request.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Request</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">__construct()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="Request.html" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../net.html" class="symbol-segment">net</a>\<a href="../http.html" class="symbol-segment">http</a>\<a href="Request.html" class="symbol-segment">Request</a>::__construct()		</h1>
+
+		<section class="under">
+																<div class="extends">
+					<span class="extends__title">
+													Overrides
+											</span>
+					<a href="../../core/ObjectDeprecated::__construct().html" class="extends__symbol">lithium\core\ObjectDeprecated::__construct()</a>				</div>
+						<div class="tags">
+													<span class="tag public">public</span>
+												<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Constructor. Adds config values to the public properties when a new object is created.</p>
+					</div>
+				
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">array</span>
+							<code class="name">$config</code>
+															<span class="parameter">
+									<p>The available configuration options are the following. Further
+options are inherited from the parent classes.</p>
+<ul>
+<li><code>'method'</code> <em>string</em>: Defaults to <code>'GET'</code>.</li>
+<li><code>'path'</code> <em>string</em>: Defaults to <code>null</code>.</li>
+<li><code>'query'</code> <em>array</em>: Defaults to <code>array()</code>.</li>
+<li><code>'cookies'</code> <em>array</em>: Defaults to <code>array()</code>.</li>
+<li><code>'type'</code> <em>string</em>: Defaults to <code>null</code>.</li>
+<li><code>'auth'</code> <em>mixed</em>: Defaults to <code>null</code>.</li>
+<li><code>'proxy'</code> <em>string</em>: Defaults to <code>null</code>.</li>
+<li><code>'ignoreErrors'</code> <em>boolean</em>: Defaults to <code>true</code>.</li>
+<li><code>'followLocation'</code> <em>boolean</em>: Defaults to <code>true</code>.</li>
+</ul>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">void</span>
+							</section>
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="./Message::__construct().html">lithium\net\http\Message::__construct()</a>									<li><a href="../Message::__construct().html">lithium\net\Message::__construct()</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public function __construct(array $config = []) {
+		$defaults = [
+			&#039;method&#039; =&gt; &#039;GET&#039;,
+			&#039;query&#039; =&gt; [],
+			&#039;cookies&#039; =&gt; [],
+			&#039;type&#039; =&gt; null,
+			&#039;auth&#039; =&gt; null,
+			&#039;proxy&#039; =&gt; null,
+			&#039;ignoreErrors&#039; =&gt; true,
+			&#039;followLocation&#039; =&gt; true
+		];
+		$config += $defaults;
+
+		$this-&gt;method  = $config[&#039;method&#039;];
+		$this-&gt;query   = $config[&#039;query&#039;];
+		$this-&gt;auth    = $config[&#039;auth&#039;];
+		parent::__construct($config);
+
+		$this-&gt;headers = [
+			&#039;Host&#039; =&gt; $this-&gt;port ? &quot;{$this-&gt;host}:{$this-&gt;port}&quot; : $this-&gt;host,
+			&#039;Connection&#039; =&gt; &#039;Close&#039;,
+			&#039;User-Agent&#039; =&gt; &#039;Mozilla/5.0&#039;
+		];
+		foreach ([&#039;type&#039;, &#039;headers&#039;, &#039;cookies&#039;] as $field) {
+			if ($value = $this-&gt;_config[$field]) {
+				$this-&gt;{$field}($value);
+			}
+		}
+		if ($cookies = $this-&gt;headers(&#039;Cookie&#039;)) {
+			$this-&gt;_parseCookies($cookies);
+		}
+
+		$this-&gt;_formats += [
+			&#039;url&#039; =&gt; function($req, $options) {
+				$options[&#039;port&#039;] = $options[&#039;port&#039;] ? &quot;:{$options[&#039;port&#039;]}&quot; : &#039;&#039;;
+				$options[&#039;path&#039;] = str_replace(&#039;//&#039;, &#039;/&#039;, $options[&#039;path&#039;]);
+
+				return Text::insert(&quot;{:scheme}://{:host}{:port}{:path}{:query}&quot;, $options);
+			},
+			&#039;context&#039; =&gt; function($req, $options, $defaults) {
+				$req-&gt;headers($options[&#039;headers&#039;]);
+
+				return [&#039;http&#039; =&gt; array_diff_key($options, $defaults) + [
+					&#039;content&#039; =&gt; $req-&gt;body(),
+					&#039;method&#039; =&gt; $options[&#039;method&#039;],
+					&#039;header&#039; =&gt; $req-&gt;headers(),
+					&#039;protocol_version&#039; =&gt; $options[&#039;version&#039;],
+					&#039;ignore_errors&#039; =&gt; $options[&#039;ignore_errors&#039;],
+					&#039;follow_location&#039; =&gt; $options[&#039;follow_location&#039;],
+					&#039;request_fulluri&#039; =&gt; $options[&#039;request_fulluri&#039;],
+					&#039;proxy&#039; =&gt; $options[&#039;proxy&#039;]
+				]];
+			},
+			&#039;string&#039; =&gt; function($req, $options) {
+				$body = $req-&gt;body();
+				$path = str_replace(&#039;//&#039;, &#039;/&#039;, $options[&#039;path&#039;]) . $options[&#039;query&#039;];
+				$status = &quot;{$options[&#039;method&#039;]} {$path} {$req-&gt;protocol}&quot;;
+
+				return join(&quot;\r\n&quot;, [$status, join(&quot;\r\n&quot;, $req-&gt;headers()), &quot;&quot;, $body]);
+			}
+		];
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

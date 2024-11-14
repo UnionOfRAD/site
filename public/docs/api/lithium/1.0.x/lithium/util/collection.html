@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\util\Collection – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="http://li3.me/index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="http://li3.me/docs.html" class="active">Documentation</a><a href="http://li3.me/versions.html">Versions</a><a href="http://li3.me/present.html">Presentations</a><a href="http://li3.me/support.html">Community</a><a href="http://li3.me/development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="http://li3.me/docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="http://li3.me/docs/api/lithium/1.0.x/lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="http://li3.me/docs/api/lithium/1.0.x/lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">util</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Collection</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::formats()">formats()</a>												<li class="method protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::_init()">_init()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::invoke()">invoke()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::__call()">__call()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::respondsTo()">respondsTo()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::to()">to()</a>												<li class="method protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::_to()">_to()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::find()">find()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::first()">first()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::each()">each()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::map()">map()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::reduce()">reduce()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::sort()">sort()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::offsetExists()">offsetExists()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::offsetGet()">offsetGet()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::offsetSet()">offsetSet()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::offsetUnset()">offsetUnset()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::rewind()">rewind()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::end()">end()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::valid()">valid()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::current()">current()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::key()">key()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::prev()">prev()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::next().html">next()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::append()">append()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::count()">count()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::keys()">keys()</a>												<li class="method public">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::toArray()">toArray()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::__construct()">__construct()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::applyFilter()">applyFilter()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::invokeMethod()">invokeMethod()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::__set_state()">__set_state()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_instance()">_instance()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_filter()">_filter()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_parents()">_parents()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_stop()">_stop()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::$_formats">$_formats</a>												<li class="property protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/data/Collection::$_data.html">$_data</a>												<li class="property protected">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util/Collection::$_autoConfig.html">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_config">$_config</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_methodFilters">$_methodFilters</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_parents">$_parents</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="http://li3.me/docs/api/lithium/1.0.x/lithium.html" class="symbol-segment">lithium</a>\<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/util.html" class="symbol-segment">util</a>\Collection		</h1>
+
+		<section class="under">
+											<div class="extends">
+					<span class="extends__title">Implements</span>
+											ArrayAccess									</div>
+								<div class="extends">
+					<span class="extends__title">Implements</span>
+											Iterator									</div>
+								<div class="extends">
+					<span class="extends__title">Implements</span>
+											Countable									</div>
+																	<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object.html" class="extends__symbol">lithium\core\Object</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The parent class for all collection objects. Contains methods for collection iteration,
+conversion, and filtering. Implements <code>ArrayAccess</code>, <code>Iterator</code>, and <code>Countable</code>.</p>
+					</div>
+				
+									<div class="description">
+						<p>Collection objects can act very much like arrays. This is especially evident in creating new
+objects, or by converting Collection into an actual array:</p>
+<pre><code class="language-php">$coll = new Collection();
+$coll[] = 'foo';
+// $coll[0] --&gt; 'foo'
+
+$coll = new Collection(array('data' =&gt; array('foo')));
+// $coll[0] --&gt; 'foo'
+
+$array = $coll-&gt;to('array');
+</code></pre>
+<p>Apart from array-like data access, Collections allow for filtering and iteration methods:</p>
+<pre><code class="language-php">$coll = new Collection(array('data' =&gt; array(0, 1, 2, 3, 4)));
+
+$coll-&gt;first();   // 0
+$coll-&gt;current(); // 0
+$coll-&gt;next();    // 1
+$coll-&gt;next();    // 2
+$coll-&gt;next();    // 3
+$coll-&gt;prev();    // 2
+$coll-&gt;rewind();  // 0
+</code></pre>
+<p>The primary purpose of the <code>Collection</code> class is to enable simple, efficient access to groups
+of similar objects, and to perform operations against these objects using anonymous functions.</p>
+<p>The <code>map()</code> and <code>each()</code> methods allow you to perform operations against the entire set of values
+in a <code>Collection</code>, while <code>find()</code> and <code>first()</code> allow you to search through values and pick out
+one or more.</p>
+<p>The <code>Collection</code> class also supports dispatching methods against a set of objects, if the method
+is supported by all objects. For example:</p>
+<pre><code class="language-php">class Task {
+	public function run($when) {
+		// Do some work
+	}
+}
+
+$data = array(
+	new Task(array('task' =&gt; 'task 1')),
+	new Task(array('task' =&gt; 'task 2')),
+	new Task(array('task' =&gt; 'task 3'))
+);
+$tasks = new Collection(compact('data'));
+
+// $result will contain an array, and each element will be the return
+// value of a run() method call:
+$result = $tasks-&gt;invoke('run', array('now'));
+
+// Alternatively, the method can be called natively, with the same result:
+$result = $tasks-&gt;run('now');
+</code></pre>
+					</div>
+							</section>
+
+			
+			
+			
+			
+						<section id="links">
+				<h3 class="h-beta">Links</h3>
+				<ul class="links">
+									<li><a href="http://php.net/class.arrayaccess.php" target="new">PHP Manual: ArrayAccess Interface</a>									<li><a href="http://php.net/class.iterator.php" target="new">PHP Manual: Iterator Interface</a>									<li><a href="http://php.net/class.countable.php" target="new">PHP Manual: Countable Interface</a>								</ul>
+			</section>
+			
+						<section id="subclasses" class="section">
+				<h3 class="h-beta">Subclasses</h3>
+				<ul class="subclasses">
+											<li><a href="http://li3.me/docs/api/lithium/1.0.x/lithium/data/Collection.html">lithium\data\Collection</a>											<li><a href="http://li3.me/docs/api/lithium/1.0.x/lithium/test/Group.html">lithium\test\Group</a>											<li><a href="http://li3.me/docs/lithium/util/collection/Filters.html">lithium\util\collection\Filters</a>									</ul>
+			</section>
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Collection extends \lithium\core\Object implements \ArrayAccess, \Iterator, \Countable {
+
+	/**
+	 * A central registry of global format handlers for `Collection` objects and subclasses.
+	 * Accessed via the `formats()` method.
+	 *
+	 * @see lithium\util\Collection::formats()
+	 * @var array
+	 */
+	protected static $_formats = array(
+		&#039;array&#039; =&gt; &#039;lithium\util\Collection::toArray&#039;
+	);
+
+	/**
+	 * The items contained in the collection.
+	 *
+	 * @var array
+	 */
+	protected $_data = array();
+
+	/**
+	 * Allows a collection&#039;s items to be automatically assigned from class construction options.
+	 *
+	 * @var array
+	 */
+	protected $_autoConfig = array(&#039;data&#039;);
+
+	/**
+	 * Accessor method for adding format handlers to instances and subclasses of `Collection`.
+	 * The values assigned are used by `Collection::to()` to convert `Collection` instances into
+	 * different formats, i.e. JSON.
+	 *
+	 * This can be accomplished in two ways. First, format handlers may be registered on a
+	 * case-by-case basis, as in the following:
+	 *
+	 * ```
+	 * Collection::formats(&#039;json&#039;, function($collection, $options) {
+	 * 	return json_encode($collection-&gt;to(&#039;array&#039;));
+	 * });
+	 *
+	 * // You can also implement the above as a static class method, and register it as follows:
+	 * Collection::formats(&#039;json&#039;, &#039;\my\custom\Formatter::toJson&#039;);
+	 * ```
+	 *
+	 * Alternatively, you can implement a class that can handle several formats. This class must
+	 * implement two static methods:
+	 *
+	 * - A `formats()` method, which returns an array indicating what formats it handles.
+	 *
+	 * - A `to()` method, which handles the actual conversion.
+	 *
+	 * Once a class implements these methods, it may be registered per the following:
+	 * ```
+	 * Collection::formats(&#039;\lithium\net\http\Media&#039;);
+	 * ```
+	 *
+	 * For reference on how to implement these methods, see the `Media` class.
+	 *
+	 * Once a handler is registered, any instance of `Collection` or a subclass can be converted to
+	 * the format(s) supported by the class or handler, using the `to()` method.
+	 *
+	 * @see lithium\net\http\Media::to()
+	 * @see lithium\net\http\Media::formats()
+	 * @see lithium\util\Collection::to()
+	 * @param string $format A string representing the name of the format that a `Collection` can
+	 *        be converted to. This corresponds to the `$format` parameter in the `to()` method.
+	 *        Alternatively, the fully-namespaced class name of a format-handler class.
+	 * @param mixed $handler If `$format` is the name of a format string, `$handler` should be the
+	 *        function that handles the conversion, either an anonymous function, or a
+	 *        reference to a method name in `&quot;Class::method&quot;` form. If `$format` is a class
+	 *        name, can be `null`.
+	 * @return mixed Returns the value of the format handler assigned.
+	 */
+	public static function formats($format, $handler = null) {
+		if ($format === false) {
+			return static::$_formats = array(&#039;array&#039; =&gt; &#039;lithium\util\Collection::toArray&#039;);
+		}
+		if ($handler === null &amp;&amp; class_exists($format)) {
+			return static::$_formats[] = $format;
+		}
+		return static::$_formats[$format] = $handler;
+	}
+
+	/**
+	 * Initializes the collection object by merging in collection items and removing redundant
+	 * object properties.
+	 *
+	 * @return void
+	 */
+	protected function _init() {
+		parent::_init();
+		unset($this-&gt;_config[&#039;data&#039;]);
+	}
+
+	/**
+	 * Handles dispatching of methods against all items in the collection.
+	 *
+	 * @param string $method The name of the method to call on each instance in the collection.
+	 * @param array $params The parameters to pass on each method call.
+	 * @param array $options Specifies options for how to run the given method against the object
+	 *        collection. The available options are:
+	 *        - `&#039;collect&#039;`: If `true`, the results of this method call will be returned
+	 *          wrapped in a new `Collection` object or subclass.
+	 *        - `&#039;merge&#039;`: Used primarily if the method being invoked returns an array.  If
+	 *          set to `true`, merges all results arrays into one.
+	 * @todo Implement filtering.
+	 * @return mixed Returns either an array of the return values of the methods, or the return
+	 *         values wrapped in a `Collection` instance.
+	 */
+	public function invoke($method, array $params = array(), array $options = array()) {
+		$class = get_class($this);
+		$defaults = array(&#039;merge&#039; =&gt; false, &#039;collect&#039; =&gt; false);
+		$options += $defaults;
+		$data = array();
+
+		foreach ($this as $object) {
+			$value = call_user_func_array(array(&amp;$object, $method), $params);
+			($options[&#039;merge&#039;]) ? $data = array_merge($data, $value) : $data[$this-&gt;key()] = $value;
+		}
+		return ($options[&#039;collect&#039;]) ? new $class(compact(&#039;data&#039;)) : $data;
+	}
+
+	/**
+	 * Hook to handle dispatching of methods against all items in the collection.
+	 *
+	 * @param string $method
+	 * @param array $parameters
+	 * @return mixed
+	 */
+	public function __call($method, $parameters = array()) {
+		return $this-&gt;invoke($method, $parameters);
+	}
+
+	/**
+	 * Determines if a given method can be called.
+	 *
+	 * @param string $method Name of the method.
+	 * @param boolean $internal Provide `true` to perform check from inside the
+	 *                class/object. When `false` checks also for public visibility;
+	 *                defaults to `false`.
+	 * @return boolean Returns `true` if the method can be called, `false` otherwise.
+	 */
+	public function respondsTo($method, $internal = false) {
+		$magicMethod = count($this-&gt;_data) &gt; 0 &amp;&amp; $this-&gt;_data[0]-&gt;respondsTo($method, $internal);
+		return $magicMethod || parent::respondsTo($method, $internal);
+	}
+
+	/**
+	 * Converts a `Collection` object to another type of object, or a simple type such as an array.
+	 * The supported values of `$format` depend on the format handlers registered in the static
+	 * property `Collection::$_formats`. The `Collection` class comes with built-in support for
+	 * array conversion, but other formats may be registered.
+	 *
+	 * Once the appropriate handlers are registered, a `Collection` instance can be
+	 * converted into any handler-supported format, i.e.:
+	 * ```
+	 * $collection-&gt;to(&#039;json&#039;); // returns a JSON string
+	 * $collection-&gt;to(&#039;xml&#039;); // returns an XML string
+	 * ```
+	 *
+	 *  _Please note that Lithium does not ship with a default XML handler, but one can be
+	 * configured easily._
+	 *
+	 * @see lithium\util\Collection::formats()
+	 * @see lithium\util\Collection::$_formats
+	 * @param string $format By default the only supported value is `&#039;array&#039;`. However, additional
+	 *        format handlers can be registered using the `formats()` method.
+	 * @param array $options Options for converting this collection:
+	 *        - `&#039;internal&#039;` _boolean_: Indicates whether the current internal representation of the
+	 *          collection should be exported. Defaults to `false`, which uses the standard iterator
+	 *          interfaces. This is useful for exporting record sets, where records are lazy-loaded,
+	 *          and the collection must be iterated in order to fetch all objects.
+	 * @return mixed The object converted to the value specified in `$format`; usually an array or
+	 *         string.
+	 */
+	public function to($format, array $options = array()) {
+		$defaults = array(&#039;internal&#039; =&gt; false);
+		$options += $defaults;
+		$data = $options[&#039;internal&#039;] ? $this-&gt;_data : $this;
+		return $this-&gt;_to($format, $data, $options);
+	}
+
+	protected function _to($format, &amp;$data, &amp;$options) {
+		if (is_object($format) &amp;&amp; is_callable($format)) {
+			return $format($data, $options);
+		}
+
+		if (isset(static::$_formats[$format]) &amp;&amp; is_callable(static::$_formats[$format])) {
+			$handler = static::$_formats[$format];
+			$handler = is_string($handler) ? explode(&#039;::&#039;, $handler, 2) : $handler;
+
+			if (is_array($handler)) {
+				list($class, $method) = $handler;
+				return $class::$method($data, $options);
+			}
+			return $handler($data, $options);
+		}
+
+		foreach (static::$_formats as $key =&gt; $handler) {
+			if (!is_int($key)) {
+				continue;
+			}
+			if (in_array($format, $handler::formats($format, $data, $options))) {
+				return $handler::to($format, $data, $options);
+			}
+		}
+	}
+
+	/**
+	 * Filters a copy of the items in the collection.
+	 *
+	 * @param callback $filter Callback to use for filtering.
+	 * @param array $options The available options are:
+	 *        - `&#039;collect&#039;`: If `true`, the results will be returned wrapped in a new
+	 *          `Collection` object or subclass. Defaults to `true`.
+	 * @return mixed The filtered items. Will be an array unless `&#039;collect&#039;` is defined in the
+	 *         `$options` argument, then an instance of this class will be returned.
+	 */
+	public function find($filter, array $options = array()) {
+		$defaults = array(&#039;collect&#039; =&gt; true);
+		$options += $defaults;
+		$data = array_filter($this-&gt;_data, $filter);
+
+		if ($options[&#039;collect&#039;]) {
+			$class = get_class($this);
+			$data = new $class(compact(&#039;data&#039;));
+		}
+		return $data;
+	}
+
+	/**
+	 * Returns the first non-empty value in the collection after a filter is applied, or rewinds the
+	 * collection and returns the first value.
+	 *
+	 * @see lithium\util\Collection::rewind()
+	 * @param callback $filter A closure through which collection values will be passed.
+	 *        If the return value of this function is non-empty, it will be returned as
+	 *        the result of the method call. If `null`, the collection is rewound
+	 *        (see `rewind()`) and the first item is returned.
+	 * @return mixed Returns the first non-empty collection value returned from `$filter`.
+	 */
+	public function first($filter = null) {
+		if (!$filter) {
+			return $this-&gt;rewind();
+		}
+
+		foreach ($this as $item) {
+			if ($filter($item)) {
+				return $item;
+			}
+		}
+	}
+
+	/**
+	 * Applies a callback to all items in the collection.
+	 *
+	 * @link http://php.net/array_map
+	 * @param callback $filter The filter to apply.
+	 * @return Collection This collection instance.
+	 */
+	public function each($filter) {
+		$this-&gt;_data = array_map($filter, $this-&gt;_data);
+		return $this;
+	}
+
+	/**
+	 * Applies a callback to a copy of all data in the collection
+	 * and returns the result.
+	 *
+	 * @link http://php.net/array_map
+	 * @param callback $filter The filter to apply.
+	 * @param array $options The available options are:
+	 *        - `&#039;collect&#039;`: If `true`, the results will be returned wrapped
+	 *        in a new `Collection` object or subclass.
+	 * @return mixed The filtered items. Will be an array unless `&#039;collect&#039;` is defined in the
+	 *         `$options` argument, then an instance of this class will be returned.
+	 */
+	public function map($filter, array $options = array()) {
+		$defaults = array(&#039;collect&#039; =&gt; true);
+		$options += $defaults;
+		$data = array_map($filter, $this-&gt;_data);
+
+		if ($options[&#039;collect&#039;]) {
+			$class = get_class($this);
+			return new $class(compact(&#039;data&#039;));
+		}
+		return $data;
+	}
+
+	/**
+	 * Reduce, or fold, a collection down to a single value
+	 *
+	 * @link http://php.net/array_reduce
+	 * @param callback $reducer The reduce function, i.e. `function($carry, $item) { return ... }`
+	 * @param mixed $initial Initial value passed to the reduce function as `$carry`,
+	 *        defaults to `false`.
+	 * @return mixed A single reduced value.
+	 */
+	public function reduce($reducer, $initial = false) {
+		return array_reduce($this-&gt;_data, $reducer, $initial);
+	}
+
+	/**
+	 * Sorts the objects in the collection.
+	 *
+	 * @link http://php.net/sort
+	 * @link http://php.net/usort
+	 * @link http://php.net/strcmp
+	 * @param string|callable $sorter The sorter for the data. Either a callable to use
+	 *        as the sort function or a string with the name of a well-known sort function like
+	 *        `&#039;natsort&#039;` or a compare function like `&#039;strcmp&#039;`. Defaults to `&#039;sort&#039;`.
+	 * @param array $options Reserved for future use.
+	 * @return Collection Returns itself.
+	 */
+	public function sort($sorter = &#039;sort&#039;, array $options = array()) {
+		if (is_string($sorter) &amp;&amp; strpos($sorter, &#039;sort&#039;) !== false &amp;&amp; is_callable($sorter)) {
+			call_user_func_array($sorter, array(&amp;$this-&gt;_data));
+		} elseif (is_callable($sorter)) {
+			usort($this-&gt;_data, $sorter);
+		}
+		return $this;
+	}
+
+	/**
+	 * Checks whether or not an offset exists.
+	 *
+	 * @param string $offset An offset to check for.
+	 * @return boolean `true` if offset exists, `false` otherwise.
+	 */
+	public function offsetExists($offset) {
+		return array_key_exists($offset, $this-&gt;_data);
+	}
+
+	/**
+	 * Returns the value at specified offset.
+	 *
+	 * @param string $offset The offset to retrieve.
+	 * @return mixed Value at offset.
+	 */
+	public function offsetGet($offset) {
+		return $this-&gt;_data[$offset];
+	}
+
+	/**
+	 * Assigns a value to the specified offset.
+	 *
+	 * @param string $offset The offset to assign the value to.
+	 * @param mixed $value The value to set.
+	 * @return mixed The value which was set.
+	 */
+	public function offsetSet($offset, $value) {
+		if ($offset === null) {
+			return $this-&gt;_data[] = $value;
+		}
+		return $this-&gt;_data[$offset] = $value;
+	}
+
+	/**
+	 * Unsets an offset.
+	 *
+	 * @param string $offset The offset to unset.
+	 */
+	public function offsetUnset($offset) {
+		prev($this-&gt;_data);
+		if (key($this-&gt;_data) === null) {
+			$this-&gt;rewind();
+		}
+		unset($this-&gt;_data[$offset]);
+	}
+
+	/**
+	 * Rewinds to the first item.
+	 *
+	 * @return mixed The current item after rewinding.
+	 */
+	public function rewind() {
+		reset($this-&gt;_data);
+		return current($this-&gt;_data);
+	}
+
+	/**
+	 * Moves forward to the last item.
+	 *
+	 * @return mixed The current item after moving.
+	 */
+	public function end() {
+		end($this-&gt;_data);
+		return current($this-&gt;_data);
+	}
+
+	/**
+	 * Checks if current position is valid.
+	 *
+	 * @return boolean `true` if valid, `false` otherwise.
+	 */
+	public function valid() {
+		return key($this-&gt;_data) !== null;
+	}
+
+	/**
+	 * Returns the current item.
+	 *
+	 * @return mixed The current item or `false` on failure.
+	 */
+	public function current() {
+		return current($this-&gt;_data);
+	}
+
+	/**
+	 * Returns the key of the current item.
+	 *
+	 * @return scalar Scalar on success or `null` on failure.
+	 */
+	public function key() {
+		return key($this-&gt;_data);
+	}
+
+	/**
+	 * Moves backward to the previous item.  If already at the first item,
+	 * moves to the last one.
+	 *
+	 * @return mixed The current item after moving or the last item on failure.
+	 */
+	public function prev() {
+		if (!prev($this-&gt;_data)) {
+			end($this-&gt;_data);
+		}
+		return current($this-&gt;_data);
+	}
+
+	/**
+	 * Move forwards to the next item.
+	 *
+	 * @return The current item after moving or `false` on failure.
+	 */
+	public function next() {
+		next($this-&gt;_data);
+		return current($this-&gt;_data);
+	}
+
+	/**
+	 * Appends an item.
+	 *
+	 * @param mixed $value The item to append.
+	 */
+	public function append($value) {
+		is_object($value) ? $this-&gt;_data[] =&amp; $value : $this-&gt;_data[] = $value;
+	}
+
+	/**
+	 * Counts the items of the object.
+	 *
+	 * @return integer Returns the number of items in the collection.
+	 */
+	public function count() {
+		$count = iterator_count($this);
+		$this-&gt;rewind();
+		return $count;
+	}
+
+	/**
+	 * Returns the item keys.
+	 *
+	 * @return array The keys of the items.
+	 */
+	public function keys() {
+		return array_keys($this-&gt;_data);
+	}
+
+	/**
+	 * Exports a `Collection` instance to an array. Used by `Collection::to()`.
+	 *
+	 * @param mixed $data Either a `Collection` instance, or an array representing a `Collection`&#039;s
+	 *        internal state.
+	 * @param array $options Options used when converting `$data` to an array:
+	 *        - `&#039;handlers&#039;` _array_: An array where the keys are fully-namespaced class
+	 *        names, and the values are closures that take an instance of the class as a
+	 *        parameter, and return an array or scalar value that the instance represents.
+	 * @return array Returns the value of `$data` as a pure PHP array, recursively converting all
+	 *         sub-objects and other values to their closest array or scalar equivalents.
+	 */
+	public static function toArray($data, array $options = array()) {
+		$defaults = array(&#039;handlers&#039; =&gt; array());
+		$options += $defaults;
+		$result = array();
+
+		foreach ($data as $key =&gt; $item) {
+			switch (true) {
+				case is_array($item):
+					$result[$key] = static::toArray($item, $options);
+				break;
+				case (!is_object($item)):
+					$result[$key] = $item;
+				break;
+				case (isset($options[&#039;handlers&#039;][$class = get_class($item)])):
+					$result[$key] = $options[&#039;handlers&#039;][$class]($item);
+				break;
+				case (method_exists($item, &#039;to&#039;)):
+					$result[$key] = $item-&gt;to(&#039;array&#039;, $options);
+				break;
+				case ($vars = get_object_vars($item)):
+					$result[$key] = static::toArray($vars, $options);
+				break;
+				case (method_exists($item, &#039;__toString&#039;)):
+					$result[$key] = (string) $item;
+				break;
+				default:
+					$result[$key] = $item;
+				break;
+			}
+		}
+		return $result;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

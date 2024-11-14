@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\analysis\Logger – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.3.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.3.x/lithium/analysis" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">analysis</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Logger</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.3.x/lithium/analysis" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/analysis/Logger::write()">write()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.3.x/lithium/analysis/Logger::__callStatic()">__callStatic()</a>												<li class="method public deprecated">
+				<a href="/docs/api/lithium/1.3.x/lithium/analysis/Logger::respondsTo()">respondsTo()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/analysis/Logger::_initConfig()">_initConfig()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/analysis/Logger::_configsByPriority()">_configsByPriority()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::config()">config()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::reset()">reset()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::adapter()">adapter()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::strategies()">strategies()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::applyStrategies()">applyStrategies()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::enabled()">enabled()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::_initAdapter()">_initAdapter()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::_class()">_class()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::_strategy()">_strategy()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::_locate()">_locate()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::_config()">_config()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::invokeMethod()">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::_instance()">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::_stop()">_stop()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::_parents()">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::applyFilter()">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::_filter()">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/analysis/Logger::$_configurations">$_configurations</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/analysis/Logger::$_adapters">$_adapters</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.3.x/lithium/analysis/Logger::$_priorities">$_priorities</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable::$_strategies">$_strategies</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::$_parents">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.3.x/lithium/core/StaticObjectDeprecated::$_methodFilters">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.3.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.3.x/lithium/analysis" class="symbol-segment">analysis</a>\Logger		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.3.x/lithium/core/Adaptable" class="extends__symbol">lithium\core\Adaptable</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The <code>Logger</code> class provides a consistent, application-wide interface for configuring and writing
+log messages. As with other subclasses of <code>Adaptable</code>, <code>Logger</code> can be configured with a series
+of named configurations, each containing a log adapter to write to. <code>Logger</code> exposes a single
+method, <code>write()</code>, which can write to one or more log adapters.</p>
+					</div>
+				
+									<div class="description">
+						<p>When configuring adapters, you may specify one or more priorities for each, using the
+<code>'priority'</code> key. This key can be a single priority level (string), or an array of multiple
+levels. When a log message is written, all adapters that are configured to accept the priority
+level with which the message was written will receive the message.</p>
+<pre><code class="language-php">Logger::config([
+	'default' =&gt; ['adapter' =&gt; 'Syslog'],
+	'badnews' =&gt; [
+		'adapter' =&gt; 'File',
+		'priority' =&gt; ['emergency', 'alert', 'critical', 'error']
+	]
+]);
+</code></pre>
+<p>In the above configuration, all messages will be written to the system log (<code>syslogd</code>), but only
+messages with the priority <code>error</code> or higher will be logged to a file. Messages can then be
+written to the log(s) using the <code>write()</code> method:</p>
+<pre><code class="language-php">Logger::write('alert', 'This is an alert-level message that will be logged in 2 places');
+</code></pre>
+<p>Messages can also be written using the log priority as a method name:</p>
+<pre><code class="language-php">Logger::alert('This is an alert-level message that will be logged in 2 places');
+</code></pre>
+<p>This works identically to the above. The message priority levels which <code>Logger</code> supports are as
+follows: <code>emergency</code>, <code>alert</code>, <code>critical</code>, <code>error</code>, <code>warning</code>, <code>notice</code>, <code>info</code> and <code>debug</code>.
+Attempting to use any other priority level will raise an exception. See the list of available
+adapters for more information on what adapters are available, and how to configure them.</p>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="/docs/api/lithium/1.3.x/lithium/analysis/logger/adapter">lithium\analysis\logger\adapter</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Logger extends \lithium\core\Adaptable {
+
+	/**
+	 * Stores configurations for cache adapters.
+	 *
+	 * @var object `Collection` of logger configurations.
+	 */
+	protected static $_configurations = [];
+
+	/**
+	 * Libraries::locate() compatible path to adapters for this class.
+	 *
+	 * @see lithium\core\Libraries::locate()
+	 * @var string Dot-delimited path.
+	 */
+	protected static $_adapters = &#039;adapter.analysis.logger&#039;;
+
+	/**
+	 * An array of valid message priorities.
+	 *
+	 * @var array
+	 */
+	protected static $_priorities = [
+		&#039;emergency&#039; =&gt; 0,
+		&#039;alert&#039;     =&gt; 1,
+		&#039;critical&#039;  =&gt; 2,
+		&#039;error&#039;     =&gt; 3,
+		&#039;warning&#039;   =&gt; 4,
+		&#039;notice&#039;    =&gt; 5,
+		&#039;info&#039;      =&gt; 6,
+		&#039;debug&#039;     =&gt; 7
+	];
+
+	/**
+	 * Writes a message to one or more log adapters, where the adapters that are written to are the
+	 * ones that respond to the given priority level.
+	 *
+	 * @param string $priority The priority of the log message to be written.
+	 * @param string $message The message to be written.
+	 * @param array $options An array of adapter-specific options that may be passed when writing
+	 *              log messages. Some options are also handled by `Logger` itself:
+	 *              - `&#039;name&#039;` _string_: This option can be specified if you wish to write to a
+	 *                specific adapter configuration, instead of writing to the adapter(s) that
+	 *                respond to the given priority.
+	 * @return boolean Returns `true` if all log writes succeeded, or `false` if _any or all_ writes
+	 *         failed.
+	 * @throws UnexpectedValueException If the value of `$priority` is not a defined priority value,
+	 *         an `UnexpectedValueException` will be thrown.
+	 * @filter
+	 */
+	public static function write($priority, $message, array $options = []) {
+		$defaults = [&#039;name&#039; =&gt; null];
+		$options += $defaults;
+		$result = true;
+
+		if (isset(static::$_configurations[$options[&#039;name&#039;]])) {
+			$name = $options[&#039;name&#039;];
+			$methods = [$name =&gt; static::adapter($name)-&gt;write($priority, $message, $options)];
+		} elseif (!isset(static::$_priorities[$priority])) {
+			$message = &quot;Attempted to write log message with invalid priority `{$priority}`.&quot;;
+			throw new UnexpectedValueException($message);
+		} else {
+			$methods = static::_configsByPriority($priority, $message, $options);
+		}
+
+		foreach ($methods as $name =&gt; $method) {
+			$params = compact(&#039;priority&#039;, &#039;message&#039;, &#039;options&#039;);
+			$config = static::_config($name);
+
+			if (!empty($config[&#039;filters&#039;])) {
+				$message  = &#039;Per adapter filters have been deprecated. Please &#039;;
+				$message .= &quot;filter the manager class&#039; static methods instead.&quot;;
+				trigger_error($message, E_USER_DEPRECATED);
+
+				$r = Filters::bcRun(
+					get_called_class(), __FUNCTION__, $params, $method, $config[&#039;filters&#039;]
+				);
+			} else {
+				$r = Filters::run(get_called_class(), __FUNCTION__, $params, $method);
+			}
+			if (!$r) {
+				$result = false;
+			}
+		}
+		return $methods ? $result : false;
+	}
+
+	/**
+	 * Acts as a proxy for the `write()` method, allowing log message priority names to be called as
+	 * methods, i.e.:
+	 * ```
+	 * Logger::emergency(&#039;Something bad happened.&#039;);
+	 * // This is equivalent to Logger::write(&#039;emergency&#039;, &#039;Something bad happened&#039;)
+	 * ```
+	 *
+	 * @param string $priority The name of the method called on the `Logger` class. This should map
+	 *               to a log type.
+	 * @param array $params An array of parameters passed in the method.
+	 * @return boolean Returns `true` or `false`, depending on the success of the `write()` method.
+	 */
+	public static function __callStatic($priority, $params) {
+		$params += [null, []];
+		return static::write($priority, $params[0], $params[1]);
+	}
+
+	/**
+	 * Determines if a given method can be called.
+	 *
+	 * @deprecated
+	 * @param string $method Name of the method.
+	 * @param boolean $internal Provide `true` to perform check from inside the
+	 *                class/object. When `false` checks also for public visibility;
+	 *                defaults to `false`.
+	 * @return boolean Returns `true` if the method can be called, `false` otherwise.
+	 */
+	public static function respondsTo($method, $internal = false) {
+		$message  = &#039;`&#039; . __METHOD__ . &#039;()` has been deprecated. &#039;;
+		$message .= &quot;Use `is_callable([&lt;class&gt;, &#039;&lt;method&gt;&#039;])` instead.&quot;;
+		trigger_error($message, E_USER_DEPRECATED);
+
+		return isset(static::$_priorities[$method]) || parent::respondsTo($method, $internal);
+	}
+
+	/**
+	 * This method is called automatically to initialize the default configuration of a log adapter,
+	 * such that the adapter defaults to accepting log messages of any priority (i.e. the
+	 * `&#039;priority&#039;` key is set to `true`).
+	 *
+	 * @param string $name The name of the logger configuration.
+	 * @param array $config The logger configuration as specified in application code.
+	 * @return array Returns an array of configuration data, merged with default values.
+	 */
+	protected static function _initConfig($name, $config) {
+		$defaults = [&#039;priority&#039; =&gt; true];
+		return parent::_initConfig($name, $config) + $defaults;
+	}
+
+	/**
+	 * Gets the names of the adapter configurations that respond to a specific priority. The list
+	 * of adapter configurations returned will be used to write a message with the given priority.
+	 *
+	 * @param string $priority The priority level of a message to be written.
+	 * @param string $message The message to write to the adapter.
+	 * @param array $options Adapter-specific options.
+	 * @return array Returns an array of names of configurations which are set up to respond to the
+	 *         message priority specified in `$priority`, or configured to respond to _all_ message
+	 *        priorities.
+	 */
+	protected static function _configsByPriority($priority, $message, array $options = []) {
+		$configs = [];
+		$key = &#039;priority&#039;;
+
+		foreach (array_keys(static::$_configurations) as $name) {
+			$config = static::config($name);
+			$nameMatch = ($config[$key] === true || $config[$key] === $priority);
+			$arrayMatch = (is_array($config[$key]) &amp;&amp; in_array($priority, $config[$key]));
+
+			if ($nameMatch || $arrayMatch) {
+				$method = static::adapter($name)-&gt;write($priority, $message, $options);
+				$method ? $configs[$name] = $method : null;
+			}
+		}
+		return $configs;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

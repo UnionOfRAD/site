@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\data\model\Relationship – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../versions.html">Versions</a><a href="../../../../../../../present.html">Presentations</a><a href="../../../../../../../support.html">Community</a><a href="../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../data.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">data</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../model.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">model</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Relationship</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../model.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Relationship::__construct().html">__construct()</a>												<li class="method protected">
+				<a href="./Relationship::_init().html">_init()</a>												<li class="method public">
+				<a href="./Relationship::data().html">data()</a>												<li class="method public">
+				<a href="./Relationship::__call().html">__call()</a>												<li class="method public">
+				<a href="./Relationship::get().html">get()</a>												<li class="method public">
+				<a href="./Relationship::query().html">query()</a>												<li class="method public">
+				<a href="./Relationship::foreignKey().html">foreignKey()</a>												<li class="method public deprecated">
+				<a href="./Relationship::respondsTo().html">respondsTo()</a>												<li class="method protected">
+				<a href="./Relationship::_keys().html">_keys()</a>												<li class="method protected">
+				<a href="./Relationship::_strategies().html">_strategies()</a>												<li class="method public">
+				<a href="./Relationship::embed().html">embed()</a>												<li class="method protected">
+				<a href="./Relationship::_embedBelongsTo().html">_embedBelongsTo()</a>												<li class="method protected">
+				<a href="./Relationship::_embedHasMany().html">_embedHasMany()</a>												<li class="method protected">
+				<a href="./Relationship::_embedHasManyAsList().html">_embedHasManyAsList()</a>												<li class="method protected">
+				<a href="./Relationship::_embedOne().html">_embedOne()</a>												<li class="method protected">
+				<a href="./Relationship::_find().html">_find()</a>												<li class="method protected">
+				<a href="./Relationship::_index().html">_index()</a>												<li class="method protected">
+				<a href="./Relationship::_list().html">_list()</a>												<li class="method public deprecated inherited">
+				<a href="../../core/ObjectDeprecated::__set_state().html">__set_state()</a>												<li class="method public deprecated inherited">
+				<a href="../../core/ObjectDeprecated::invokeMethod().html">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::_instance().html">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::_stop().html">_stop()</a>												<li class="method protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::_parents().html">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="../../core/ObjectDeprecated::applyFilter().html">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::_filter().html">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./Relationship::$_classes.html">$_classes</a>												<li class="property protected inherited">
+				<a href="../../core/ObjectDeprecated::$_config.html">$_config</a>												<li class="property protected inherited">
+				<a href="../../core/ObjectDeprecated::$_autoConfig.html">$_autoConfig</a>												<li class="property protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::$_parents.html">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="../../core/ObjectDeprecated::$_methodFilters.html">$_methodFilters</a>							</ul>
+								<h3 class="h-gamma">Constants</h3>
+			<ul>
+												<li class="constant ">
+				<a href="./Relationship::LINK_EMBEDDED.html">LINK_EMBEDDED</a>												<li class="constant ">
+				<a href="./Relationship::LINK_CONTAINED.html">LINK_CONTAINED</a>												<li class="constant ">
+				<a href="./Relationship::LINK_KEY.html">LINK_KEY</a>												<li class="constant ">
+				<a href="./Relationship::LINK_KEY_LIST.html">LINK_KEY_LIST</a>												<li class="constant ">
+				<a href="./Relationship::LINK_REF.html">LINK_REF</a>							</ul>
+			</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../data.html" class="symbol-segment">data</a>\<a href="../model.html" class="symbol-segment">model</a>\Relationship		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../../core/ObjectDeprecated.html" class="extends__symbol">lithium\core\ObjectDeprecated</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The <code>Relationship</code> class encapsulates the data and functionality necessary to link two model
+classes together.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Relationship extends \lithium\core\ObjectDeprecated {
+
+	/**
+	 * Class dependencies.
+	 *
+	 * @var array
+	 */
+	protected $_classes = [
+		&#039;entity&#039; =&gt; &#039;lithium\data\Entity&#039;
+	];
+
+	/**
+	 * A relationship linking type defined by one document or record (or multiple) being embedded
+	 * within another.
+	 */
+	const LINK_EMBEDDED = &#039;embedded&#039;;
+
+	/**
+	 * The reciprocal of `LINK_EMBEDDED`, this defines a linking type wherein an embedded document
+	 * references the document that contains it.
+	 */
+	const LINK_CONTAINED = &#039;contained&#039;;
+
+	/**
+	 * A one-to-one or many-to-one relationship in which a key contains an ID value linking to
+	 * another document or record.
+	 */
+	const LINK_KEY = &#039;key&#039;;
+
+	/**
+	 * A many-to-many relationship in which a key contains an embedded array of IDs linking to other
+	 * records or documents.
+	 */
+	const LINK_KEY_LIST = &#039;keylist&#039;;
+
+	/**
+	 * A relationship defined by a database-native reference mechanism, linking a key to an
+	 * arbitrary record or document in another data collection or entirely separate database.
+	 */
+	const LINK_REF = &#039;ref&#039;;
+
+	/**
+	 * Constructor. Constructs an object that represents a relationship between two model classes.
+	 *
+	 * @param array $config The relationship&#039;s configuration, which defines how the two models in
+	 *        question are bound. The available options are:
+	 *        - `&#039;name&#039;` _string_: The name of the relationship in the context of the
+	 *          originating model. For example, a `Posts` model might define a relationship to
+	 *          a `Users` model like so:
+	 *          `public $hasMany = [&#039;Author&#039; =&gt; [&#039;to&#039; =&gt; &#039;Users&#039;]];`
+	 *          In this case, the relationship is bound to the `Users` model, but `&#039;Author&#039;` would
+	 *          be the relationship name. This is the name with which the relationship is
+	 *          referenced in the originating model.
+	 *        - `&#039;key&#039;` _mixed_: An array of fields that define the relationship, where the
+	 *          keys are fields in the originating model, and the values are fields in the
+	 *          target model. If the relationship is not defined by keys, this array should be
+	 *          empty.
+	 *        - `&#039;type&#039;` _string_: The type of relationship. Should be one of `&#039;belongsTo&#039;`,
+	 *          `&#039;hasOne&#039;` or `&#039;hasMany&#039;`.
+	 *        - `&#039;from&#039;` _string_: The fully namespaced class name of the model where this
+	 *          relationship originates.
+	 *        - `&#039;to&#039;` _string_: The fully namespaced class name of the model that this
+	 *          relationship targets.
+	 *        - `&#039;link&#039;` _string_: A constant specifying how the object bound to the
+	 *          originating model is linked to the object bound to the target model. For
+	 *          relational databases, the only valid value is `LINK_KEY`, which means a foreign
+	 *          key in one object matches another key (usually the primary key) in the other.
+	 *          For document-oriented and other non-relational databases, different types of
+	 *          linking, including key lists, database reference objects (such as MongoDB&#039;s
+	 *          `MongoDBRef`), or even embedding.
+	 *        - `&#039;fields&#039;` _mixed_: An array of the subset of fields that should be selected
+	 *          from the related object(s) by default. If set to `true` (the default), all
+	 *          fields are selected.
+	 *        - `&#039;fieldName&#039;` _string_: The name of the field used when accessing the related
+	 *          data in a result set. For example, in the case of `Posts hasMany Comments`, the
+	 *          field name defaults to `&#039;comments&#039;`, so comment data is accessed (assuming
+	 *          `$post = Posts::first()`) as `$post-&gt;comments`.
+	 *        - `&#039;constraints&#039;` _mixed_: A string or array containing additional constraints
+	 *          on the relationship query. If a string, can contain a literal SQL fragment or
+	 *          other database-native value. If an array, maps fields from the related object
+	 *          either to fields elsewhere, or to arbitrary expressions. In either case, _the
+	 *          values specified here will be literally interpreted by the database_.
+	 *        - `&#039;strategy&#039;` _\Closure_: An anonymous function used by an instantiating class,
+	 *          such as a database object, to provide additional, dynamic configuration, after
+	 *          the `Relationship` instance has finished configuring itself.
+	 * @return void
+	 */
+	public function __construct(array $config = []) {
+		$defaults = [
+			&#039;name&#039;        =&gt; null,
+			&#039;key&#039;         =&gt; [],
+			&#039;type&#039;        =&gt; null,
+			&#039;to&#039;          =&gt; null,
+			&#039;from&#039;        =&gt; null,
+			&#039;link&#039;        =&gt; static::LINK_KEY,
+			&#039;fields&#039;      =&gt; true,
+			&#039;fieldName&#039;   =&gt; null,
+			&#039;constraints&#039; =&gt; [],
+			&#039;strategy&#039;    =&gt; null
+		];
+		$config += $defaults;
+
+		if (!$config[&#039;type&#039;] || !$config[&#039;fieldName&#039;]) {
+			throw new ConfigException(&quot;`&#039;type&#039;`, `&#039;fieldName&#039;` and `&#039;from&#039;` options can&#039;t be empty.&quot;);
+		}
+		if (!$config[&#039;to&#039;] &amp;&amp; !$config[&#039;name&#039;]) {
+			throw new ConfigException(&quot;`&#039;to&#039;` and `&#039;name&#039;` options can&#039;t both be empty.&quot;);
+		}
+		parent::__construct($config);
+	}
+
+	/**
+	 * Initializes the `Relationship` object by attempting to automatically generate any values
+	 * that were not provided in the constructor configuration.
+	 */
+	protected function _init() {
+		parent::_init();
+		$config =&amp; $this-&gt;_config;
+
+		if (!$config[&#039;to&#039;]) {
+			$assoc = preg_replace(&quot;/\\w+$/&quot;, &quot;&quot;, $config[&#039;from&#039;]) . $config[&#039;name&#039;];
+			$config[&#039;to&#039;] = Libraries::locate(&#039;models&#039;, $assoc);
+		} elseif (!strpos($config[&#039;to&#039;], &#039;\\&#039;)) {
+			$config[&#039;to&#039;] = preg_replace(&quot;/\\w+$/&quot;, &quot;&quot;, $config[&#039;from&#039;]) . $config[&#039;to&#039;];
+		}
+
+		if (!$config[&#039;key&#039;] || !is_array($config[&#039;key&#039;])) {
+			$config[&#039;key&#039;] = $this-&gt;_keys($config[&#039;key&#039;]);
+		}
+		if ($config[&#039;strategy&#039;]) {
+			$config = (array) $config[&#039;strategy&#039;]($this) + $config;
+			unset($this-&gt;_config[&#039;strategy&#039;]);
+		}
+	}
+
+	/**
+	 * Returns the named configuration item, or all configuration data, if no parameter is given.
+	 *
+	 * @param string $key The name of the configuration item to return, or `null` to return all
+	 *               items.
+	 * @return mixed Returns a single configuration item (mixed), or an array of all items.
+	 */
+	public function data($key = null) {
+		if (!$key) {
+			return $this-&gt;_config;
+		}
+		return isset($this-&gt;_config[$key]) ? $this-&gt;_config[$key] : null;
+	}
+
+	/**
+	 * Allows relationship configuration items to be queried by name as methods.
+	 *
+	 * @param string $name The name of the configuration item to query.
+	 * @param array $args Unused.
+	 * @return mixed Returns the value of the given configuration item.
+	 */
+	public function __call($name, $args = []) {
+		return $this-&gt;data($name);
+	}
+
+	/**
+	 * Gets a related object (or objects) for the given object connected to it by this relationship.
+	 *
+	 * @param object $object The object to get the related data for.
+	 * @param array $options Additional options to merge into the query to be performed, where
+	 *              applicable.
+	 * @return object Returns the object(s) for this relationship.
+	 */
+	public function get($object, array $options = []) {
+		$link = $this-&gt;link();
+		$strategies = $this-&gt;_strategies();
+
+		if (!isset($strategies[$link]) || !is_callable($strategies[$link])) {
+			$msg = &quot;Attempted to get object for invalid relationship link type `{$link}`.&quot;;
+			throw new ConfigException($msg);
+		}
+		return $strategies[$link]($object, $this, $options);
+	}
+
+	/**
+	 * Generates query parameters for a related object (or objects) for the given object
+	 * connected to it by this relationship.
+	 *
+	 * @param object $object The object to get the related data for.
+	 * @return object Returns the object(s) for this relationship.
+	 */
+	public function query($object) {
+		$conditions = (array) $this-&gt;constraints();
+
+		foreach ($this-&gt;key() as $from =&gt; $to) {
+			if (empty($object-&gt;{$from})) {
+				return;
+			}
+
+			$conditions[$to] = $object-&gt;{$from};
+
+			if ($conditions[$to] instanceof Traversable) {
+				$conditions[$to] = iterator_to_array($conditions[$to], false);
+			}
+
+			if (empty($conditions[$to])) {
+				return;
+			}
+		}
+		$fields = $this-&gt;fields();
+		$fields = $fields === true ? null : $fields;
+		return compact(&#039;conditions&#039;, &#039;fields&#039;);
+	}
+
+	/**
+	 * Build foreign keys from primary keys array.
+	 *
+	 * @param $primaryKey An array where keys are primary keys and values are
+	 *                    the associated values of primary keys.
+	 * @return array An array where keys are foreign keys and values are
+	 *               the associated values of foreign keys.
+	 */
+	public function foreignKey($primaryKey) {
+		$result = [];
+		$entity = $this-&gt;_classes[&#039;entity&#039;];
+		$keys = ($this-&gt;type() === &#039;belongsTo&#039;) ? array_flip($this-&gt;key()) : $this-&gt;key();
+		$primaryKey = ($primaryKey instanceof $entity) ? $primaryKey-&gt;to(&#039;array&#039;) : $primaryKey;
+
+		foreach ($keys as $key =&gt; $foreignKey) {
+			$result[$foreignKey] = $primaryKey[$key];
+		}
+		return $result;
+	}
+
+	/**
+	 * Determines if a given method can be called.
+	 *
+	 * @deprecated
+	 * @param string $method Name of the method.
+	 * @param boolean $internal Provide `true` to perform check from inside the
+	 *                class/object. When `false` checks also for public visibility;
+	 *                defaults to `false`.
+	 * @return boolean Returns `true` if the method can be called, `false` otherwise.
+	 */
+	public function respondsTo($method, $internal = false) {
+		$message  = &#039;`&#039; . __METHOD__ . &#039;()` has been deprecated. &#039;;
+		$message .= &quot;Use `is_callable([&lt;class&gt;, &#039;&lt;method&gt;&#039;])` instead.&quot;;
+		trigger_error($message, E_USER_DEPRECATED);
+
+		return is_callable([$this, $method], true);
+	}
+
+	/**
+	 * Generates an array of relationship key pairs, where the keys are fields on the origin model,
+	 * and values are fields on the lniked model.
+	 */
+	protected function _keys($keys) {
+		if (!$keys) {
+			return [];
+		}
+		$config = $this-&gt;_config;
+		$hasType = ($config[&#039;type&#039;] === &#039;hasOne&#039; || $config[&#039;type&#039;] === &#039;hasMany&#039;);
+		$related = Libraries::locate(&#039;models&#039;, $config[$hasType ? &#039;from&#039; : &#039;to&#039;]);
+
+		if (!class_exists($related)) {
+			throw new ClassNotFoundException(&quot;Related model class &#039;{$related}&#039; not found.&quot;);
+		}
+		if (!$related::key()) {
+			throw new ConfigException(&quot;No key defined for related model `{$related}`.&quot;);
+		}
+		$keys = (array) $keys;
+		$related = (array) $related::key();
+
+		if (count($keys) !== count($related)) {
+			$msg = &quot;Unmatched keys in relationship `{$config[&#039;name&#039;]}` between models &quot;;
+			$msg .= &quot;`{$config[&#039;from&#039;]}` and `{$config[&#039;to&#039;]}`.&quot;;
+			throw new ConfigException($msg);
+		}
+		return $hasType ? array_combine($related, $keys) : array_combine($keys, $related);
+	}
+
+	/**
+	 * Strategies used to query related objects, indexed by key.
+	 */
+	protected function _strategies() {
+		return [
+			static::LINK_EMBEDDED =&gt; function($object, $relationship) {
+				$fieldName = $relationship-&gt;fieldName();
+				return $object-&gt;{$fieldName};
+			},
+			static::LINK_CONTAINED =&gt; function($object, $relationship) {
+				$isArray = ($relationship-&gt;type() === &quot;hasMany&quot;);
+				return $isArray ? $object-&gt;parent()-&gt;parent() : $object-&gt;parent();
+			},
+			static::LINK_KEY =&gt; function($object, $relationship, $options) {
+				$model = $relationship-&gt;to();
+				$method = ($relationship-&gt;type() === &quot;hasMany&quot;) ? &#039;all&#039; : &#039;first&#039;;
+				if (!$query = $relationship-&gt;query($object)) {
+					return $method === &#039;first&#039; ? null : $model::create([], [&#039;class&#039; =&gt; &#039;set&#039;]);
+				}
+				return $model::$method(Set::merge((array) $query, (array) $options));
+			},
+			static::LINK_KEY_LIST  =&gt; function($object, $relationship, $options) {
+				$model = $relationship-&gt;to();
+				if (!$query = $relationship-&gt;query($object)) {
+					return $model::create([], [&#039;class&#039; =&gt; &#039;set&#039;]);
+				}
+				return $model::all(Set::merge((array) $query, (array) $options));
+			}
+		];
+	}
+
+	/**
+	 * Fetch data related to a whole collection and embed the result in it.
+	 *
+	 * @param mixed $collection A collection of data.
+	 * @param array $options The embed query options.
+	 * @return mixed The fetched data.
+	 */
+	public function embed(&amp;$collection, $options = []) {
+		$keys = $this-&gt;key();
+
+		if (count($keys) !== 1) {
+			throw new Exception(&quot;The embedding doesn&#039;t support composite primary key.&quot;);
+		}
+
+		switch($this-&gt;type()) {
+			case &#039;belongsTo&#039;;
+				return $this-&gt;_embedBelongsTo($collection, $options);
+			case &#039;hasMany&#039;;
+				if ($this-&gt;link() === static::LINK_KEY_LIST) {
+					return $this-&gt;_embedHasManyAsList($collection, $options);
+				}
+				return $this-&gt;_embedHasMany($collection, $options);
+			case &#039;hasOne&#039;;
+				return $this-&gt;_embedHasOne($collection, $options);
+			default:
+				throw new Exception(&quot;Error {$this-&gt;type()} is unsupported &quot;);
+		}
+	}
+
+	/**
+	 * Fetch belongsTo related data to a whole collection and embed the result in it.
+	 *
+	 * @param mixed $collection A collection of data.
+	 * @param array $options The embed query options.
+	 * @return mixed The fetched data.
+	 */
+	protected function _embedBelongsTo(&amp;$collection, $options) {
+		$keys = $this-&gt;key();
+		$formKey = key($keys);
+		$toKey = current($keys);
+
+		$related = [];
+
+		$indexes = $this-&gt;_index($collection, $formKey);
+		$related = $this-&gt;_find(array_keys($indexes), $options);
+		$indexes = $this-&gt;_index($related, $toKey);
+
+		$fieldName = $this-&gt;fieldName();
+
+		foreach ($collection as $index =&gt; $source) {
+			if (is_object($source)) {
+				$value = (string) $source-&gt;{$formKey};
+				if (isset($indexes[$value])) {
+					$source-&gt;{$fieldName} = $related[$indexes[$value]];
+				}
+			} else {
+				$value = (string) $source[$formKey];
+				if (isset($indexes[$value])) {
+					$collection[$index][$fieldName] = $related[$indexes[$value]];
+				}
+			}
+		}
+		return $related;
+	}
+
+	/**
+	 * Fetch hasMany related data to a whole collection and embed the result in it.
+	 *
+	 * @param mixed $collection A collection of data.
+	 * @param array $options The embed query options.
+	 * @return mixed The fetched data.
+	 */
+	protected function _embedHasMany(&amp;$collection, $options) {
+		$keys = $this-&gt;key();
+		$formKey = key($keys);
+		$toKey = current($keys);
+
+		$related = [];
+
+		$indexes = $this-&gt;_index($collection, $formKey);
+		$related = $this-&gt;_find(array_keys($indexes), $options);
+		$fieldName = $this-&gt;fieldName();
+
+		foreach ($collection as $index =&gt; $entity) {
+			if (is_object($entity)) {
+				$entity-&gt;{$fieldName} = [];
+			} else {
+				$collection[$index][$fieldName] = [];
+			}
+		}
+
+		foreach ($related as $index =&gt; $entity) {
+			$isObject = is_object($entity);
+			$values = $isObject ? $entity-&gt;{$toKey} : $entity[$toKey];
+			$values = is_array($values) || $values instanceof Traversable ? $values : [$values];
+			foreach ($values as $value) {
+				$value = (string) $value;
+				if (isset($indexes[$value])) {
+					if ($isObject) {
+						$source = $collection[$indexes[$value]];
+						$source-&gt;{$fieldName}[] = $entity;
+					} else {
+						$collection[$indexes[$value]][$fieldName][] = $entity;
+					}
+				}
+			}
+		}
+
+		return $related;
+	}
+
+	/**
+	 * Fetch hasMany related data (through an embedded list) to a whole collection and embed the result in it.
+	 *
+	 * @param mixed $collection A collection of data.
+	 * @param array $options The embed query options.
+	 * @return mixed The fetched data.
+	 */
+	protected function _embedHasManyAsList(&amp;$collection, $options) {
+		$keys = $this-&gt;key();
+		$formKey = key($keys);
+		$toKey = current($keys);
+
+		$related = [];
+
+		$list = $this-&gt;_list($collection, $formKey);
+		$related = $this-&gt;_find($list, $options);
+		$indexes = $this-&gt;_index($related, $toKey);
+		$fieldName = $this-&gt;fieldName();
+
+		foreach ($collection as $index =&gt; $source) {
+			if (is_object($source)) {
+				$list = $source-&gt;{$formKey};
+				$source-&gt;{$fieldName} = [];
+				foreach ($list as $id) {
+					$id = (string) $id;
+					if (isset($indexes[$id])) {
+						$source-&gt;{$fieldName}[] = $related[$indexes[$id]];
+					}
+				}
+			} else {
+				$list = $source[$formKey];
+				$collection[$index][$fieldName] = [];
+				foreach ($list as $id) {
+					$id = (string) $id;
+					if (isset($indexes[$id])) {
+						$collection[$index][$fieldName][] = $related[$indexes[$id]];
+					}
+				}
+			}
+		}
+
+		return $related;
+	}
+
+	/**
+	 * Fetch hasOne related data to a whole collection and embed the result in it.
+	 *
+	 * @param mixed $collection A collection of data.
+	 * @param array $options The embed query options.
+	 * @return mixed The fetched data.
+	 */
+	protected function _embedOne(&amp;$collection, $options) {
+		$keys = $this-&gt;key();
+		$formKey = key($keys);
+		$toKey = current($keys);
+
+		$related = [];
+
+		$indexes = $this-&gt;_index($collection, $formKey);
+		$related = $this-&gt;_find(array_keys($indexes), $options);
+		$fieldName = $this-&gt;fieldName();
+
+		foreach ($related as $index =&gt; $entity) {
+			if (is_object($entity)) {
+				$value = (string) $entity-&gt;{$toKey};
+				if (isset($indexes[$value])) {
+					$source = $collection[$indexes[$value]];
+					$source-&gt;{$fieldName} = $entity;
+				}
+			} else {
+				$value = (string) $entity[$toKey];
+				if (isset($indexes[$value])) {
+					$collection[$indexes[$value]][$fieldName] = $entity;
+				}
+			}
+		}
+		return $related;
+	}
+
+	/**
+	 * Gets all entities attached to a collection en entities.
+	 *
+	 * @param  mixed  $id An id or an array of ids.
+	 * @return object     A collection of items matching the id/ids.
+	 */
+	protected function _find($id, $options = []) {
+		if ($this-&gt;link() !== static::LINK_KEY &amp;&amp; $this-&gt;link() !== static::LINK_KEY_LIST) {
+			throw new Exception(&quot;This relation is not based on a foreign key.&quot;);
+		}
+		if ($id === []) {
+			return [];
+		}
+		$to = $this-&gt;to();
+		$options += [&#039;conditions&#039; =&gt; []];
+		$options[&#039;conditions&#039;] = array_merge($options[&#039;conditions&#039;], [
+			current($this-&gt;key()) =&gt; $id
+		]);
+		return $to::find(&#039;all&#039;, $options);
+	}
+
+	/**
+	 * Indexes a collection.
+	 *
+	 * @param  mixed  $collection An collection to extract index from.
+	 * @param  string $name       The field name to build index for.
+	 * @return array              An array of indexes where keys are `$name` values and
+	 *                            values the correcponding index in the collection.
+	 */
+	protected function _index($collection, $name) {
+		$indexes = [];
+		foreach ($collection as $key =&gt; $entity) {
+			$id = is_object($entity) ? $entity-&gt;{$name} : $entity[$name];
+			$indexes[(string) $id] = $key;
+		}
+		return $indexes;
+	}
+
+	/**
+	 * Extract embedded hasMany foreign keys from collection.
+	 *
+	 * @param  mixed  $collection An collection to extract keys from.
+	 * @param  string $name       The field name of the key.
+	 * @return array              An array of keys.
+	 */
+	protected function _list($collection, $name) {
+		$list = [];
+		foreach ($collection as $key =&gt; $entity) {
+			$array = is_object($entity) ? $entity-&gt;{$name} : $entity[$name];
+			foreach ($array as $id) {
+				$list[] = $id;
+			}
+		}
+		return $list;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

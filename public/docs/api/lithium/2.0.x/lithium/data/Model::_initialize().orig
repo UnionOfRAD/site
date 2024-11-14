@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\data\Model::_initialize() – Framework API v2.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/2.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (2.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/2.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/2.0.x/lithium/data" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">data</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/2.0.x/lithium/data/Model" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Model</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">_initialize()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/2.0.x/lithium/data/Model" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/2.0.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/2.0.x/lithium/data" class="symbol-segment">data</a>\<a href="/docs/api/lithium/2.0.x/lithium/data/Model" class="symbol-segment">Model</a>::_initialize()		</h1>
+
+		<section class="under">
+															<div class="tags">
+													<span class="tag protected">protected</span>
+													<span class="tag">static</span>
+								<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Init default connection options and connects default finders.</p>
+					</div>
+				
+									<div class="description">
+						<p>This method will set the <code>Model::$_schema</code>, <code>Model::$_meta</code>, <code>Model::$_finders</code> class
+attributes, as well as obtain a handle to the configured persistent storage connection</p>
+					</div>
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">string</span>
+							<code class="name">$class</code>
+															<span class="parameter">
+									<p>The fully-namespaced class name to initialize.</p>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">object</span>
+									<span class="return">
+						<p>Returns the initialized model instance.</p>
+					</span>
+							</section>
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	protected static function _initialize($class) {
+		$self = static::$_instances[$class];
+
+		if (isset(static::$_initialized[$class]) &amp;&amp; static::$_initialized[$class]) {
+			return $self;
+		}
+		static::$_initialized[$class] = true;
+
+		$properties = [
+			&#039;validates&#039;,
+			&#039;belongsTo&#039;,
+			&#039;hasMany&#039;,
+			&#039;hasOne&#039;,
+			&#039;_meta&#039;,
+			&#039;_finders&#039;,
+			&#039;_query&#039;,
+			&#039;_classes&#039;,
+			&#039;_initializers&#039;
+		];
+		if (is_array($self-&gt;_schema)) {
+			$properties[] = &#039;_schema&#039;;
+		}
+		if ($self-&gt;_inherits) {
+			$properties = array_merge($self-&gt;_inherits, $properties);
+		}
+		$self-&gt;_inherit($properties);
+
+		$source = [
+			&#039;classes&#039; =&gt; [], &#039;meta&#039; =&gt; [], &#039;finders&#039; =&gt; [], &#039;schema&#039; =&gt; []
+		];
+
+		$meta = $self-&gt;_meta;
+		if ($meta[&#039;connection&#039;]) {
+			$classes = $self-&gt;_classes;
+			$conn = $classes[&#039;connections&#039;]::get($meta[&#039;connection&#039;]);
+			$source = (($conn) ? $conn-&gt;configureClass($class) : []) + $source;
+		}
+
+		$self-&gt;_classes += $source[&#039;classes&#039;];
+		$self-&gt;_meta = compact(&#039;class&#039;) + $self-&gt;_meta + $source[&#039;meta&#039;];
+
+		$self-&gt;_initializers += [
+			&#039;name&#039; =&gt; function($self) {
+				return basename(str_replace(&#039;\\&#039;, &#039;/&#039;, $self));
+			},
+			&#039;source&#039; =&gt; function($self) {
+				return Inflector::tableize($self::meta(&#039;name&#039;));
+			},
+			&#039;title&#039; =&gt; function($self) {
+				$titleKeys = [&#039;title&#039;, &#039;name&#039;];
+				$titleKeys = array_merge($titleKeys, (array) $self::meta(&#039;key&#039;));
+				return $self::hasField($titleKeys);
+			}
+		];
+
+		if (is_object($self-&gt;_schema)) {
+			$self-&gt;_schema-&gt;append($source[&#039;schema&#039;]);
+		} else {
+			$self-&gt;_schema += $source[&#039;schema&#039;];
+		}
+
+		$self-&gt;_finders += $source[&#039;finders&#039;] + static::_finders();
+
+		$self-&gt;_classes += [
+			&#039;query&#039;       =&gt; &#039;lithium\data\model\Query&#039;,
+			&#039;validator&#039;   =&gt; &#039;lithium\util\Validator&#039;,
+			&#039;entity&#039;      =&gt; &#039;lithium\data\Entity&#039;
+		];
+
+		static::_relationsToLoad();
+		return $self;
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

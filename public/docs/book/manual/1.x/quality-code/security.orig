@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Security – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/book/manual/1.x" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/book/manual/1.x/quality-code" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Quality Code</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Security</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="/docs/book/manual/1.x/common-tasks" class="">Common Tasks</a><ul><li><a href="/docs/book/manual/1.x/common-tasks/logging" class="">Logging</a><li><a href="/docs/book/manual/1.x/common-tasks/plugins" class="">Plugins</a><li><a href="/docs/book/manual/1.x/common-tasks/error-handling" class="">Error Handling</a><li><a href="/docs/book/manual/1.x/common-tasks/caching" class="">Caching</a><li><a href="/docs/book/manual/1.x/common-tasks/filters" class="">Filters</a><li><a href="/docs/book/manual/1.x/common-tasks/etags" class="">Etags</a><li><a href="/docs/book/manual/1.x/common-tasks/globalization" class="">Globalization</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-authentication" class="">Simple Authentication</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-auth-user" class="">Simple Auth User</a><li><a href="/docs/book/manual/1.x/common-tasks/console-applications" class="">Console Applications</a></ul><li><a href="/docs/book/manual/1.x/appendices" class="">Appendices</a><ul><li><a href="/docs/book/manual/1.x/appendices/faqs" class="">FAQs</a><li><a href="/docs/book/manual/1.x/appendices/using-in-other-applications" class="">Using In Other Applications</a></ul><li><a href="/docs/book/manual/1.x/quickstart" class="">Quickstart</a><li><a href="/docs/book/manual/1.x/controllers" class="">Controllers</a><ul><li><a href="/docs/book/manual/1.x/controllers/actions" class="">Actions</a><li><a href="/docs/book/manual/1.x/controllers/flow-control" class="">Flow Control</a><li><a href="/docs/book/manual/1.x/controllers/parameters" class="">Parameters</a><li><a href="/docs/book/manual/1.x/controllers/type-rendering-detection" class="">Type Rendering Detection</a><li><a href="/docs/book/manual/1.x/controllers/routing" class="">Routing</a></ul><li><a href="/docs/book/manual/1.x/installation" class="">Installation</a><ul><li><a href="/docs/book/manual/1.x/installation/requirements" class="">Requirements</a><li><a href="/docs/book/manual/1.x/installation/troubleshooting" class="">Troubleshooting</a><li><a href="/docs/book/manual/1.x/installation/web-servers" class="">Web Servers</a></ul><li><a href="/docs/book/manual/1.x/architecture" class="">Architecture</a><ul><li><a href="/docs/book/manual/1.x/architecture/file-structure" class="">File Structure</a><li><a href="/docs/book/manual/1.x/architecture/response-lifecycle" class="">Response Lifecycle</a><li><a href="/docs/book/manual/1.x/architecture/aop" class="">AOP</a><li><a href="/docs/book/manual/1.x/architecture/mvc" class="">MVC</a><li><a href="/docs/book/manual/1.x/architecture/objects" class="">Objects</a></ul><li><a href="/docs/book/manual/1.x/quality-code" class="">Quality Code</a><ul><li><a href="/docs/book/manual/1.x/quality-code/fixtures" class="">Fixtures</a><li><a href="/docs/book/manual/1.x/quality-code/analysis" class="">Analysis</a><li><a href="/docs/book/manual/1.x/quality-code/testing" class="">Testing</a><li><a href="/docs/book/manual/1.x/quality-code/security" class="active">Security</a></ul><li><a href="/docs/book/manual/1.x/configuration" class="">Configuration</a><ul><li><a href="/docs/book/manual/1.x/configuration/environment" class="">Environment</a><li><a href="/docs/book/manual/1.x/configuration/bootstrapping" class="">Bootstrapping</a><li><a href="/docs/book/manual/1.x/configuration/third-party-libraries" class="">Third Party Libraries</a></ul><li><a href="/docs/book/manual/1.x/views" class="">Views</a><ul><li><a href="/docs/book/manual/1.x/views/layouts" class="">Layouts</a><li><a href="/docs/book/manual/1.x/views/elements" class="">Elements</a><li><a href="/docs/book/manual/1.x/views/helpers" class="">Helpers</a><li><a href="/docs/book/manual/1.x/views/static-content" class="">Static Content</a><li><a href="/docs/book/manual/1.x/views/auto-escaping" class="">Auto Escaping</a></ul><li><a href="/docs/book/manual/1.x/models" class="">Models</a><ul><li><a href="/docs/book/manual/1.x/models/mongodb" class="">Mongodb</a><li><a href="/docs/book/manual/1.x/models/meta" class="">Meta</a><li><a href="/docs/book/manual/1.x/models/relationships" class="">Relationships</a><li><a href="/docs/book/manual/1.x/models/saving" class="">Saving</a><li><a href="/docs/book/manual/1.x/models/using-data-sources" class="">Using Data Sources</a><li><a href="/docs/book/manual/1.x/models/adding-functions" class="">Adding Functions</a><li><a href="/docs/book/manual/1.x/models/data-mutation" class="">Data Mutation</a><li><a href="/docs/book/manual/1.x/models/connections" class="">Connections</a><li><a href="/docs/book/manual/1.x/models/creating-data-sources" class="">Creating Data Sources</a><li><a href="/docs/book/manual/1.x/models/querying" class="">Querying</a><li><a href="/docs/book/manual/1.x/models/validation" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="securing-applications" class="anchor" href="#securing-applications">Securing Applications</a></h1>
+<h2><a id="preventing-sql-injections" class="anchor" href="#preventing-sql-injections">Preventing SQL Injections</a></h2>
+<p><a href="https://en.wikipedia.org/wiki/SQL_injection">SQL Injections</a> are a common type of attack
+and can take very different forms.</p>
+<p>The ORM will quote any values that are passed as condition values automatically in order to
+protect your application from injection attacks.</p>
+<pre><code class="language-php">$author = 'UNTRUSTED USER INPUT';
+
+Posts::find('first', [
+	'conditions' =&gt; ['author' =&gt; $author]
+]);
+</code></pre>
+<p>However you <strong>cannot rely</strong> on this feature if you use user input in any other place of a query. The
+following example shows how untrusted user input can be used safely used to specify the set of
+fields to be retrieved. As a countermeasure we first check if the provided field actually exists.</p>
+<pre><code class="language-php">$field = 'UNTRUSTED USER INPUT';
+
+if (!Posts::hasField($field)) {
+	throw new Exception('Invalid field.');
+}
+
+Posts::find('first', [
+	'fields' =&gt; [$field, 'title']
+]);
+</code></pre>
+<h2><a id="preventing-http-host-header-attacks" class="anchor" href="#preventing-http-host-header-attacks">Preventing HTTP Host Header Attacks</a></h2>
+<p>The framework uses the information from the <code>Host</code> header when constructing
+absolute URLs (i.e. through <code>Router::match()</code> or inside views via
+<code>$this-&gt;url()</code> and <code>$this-&gt;html-&gt;link()</code>.</p>
+<p><a href="https://de.slideshare.net/DefconRussia/http-host-header-attacks">HTTP Host Header Attacks</a> are
+an attack where the <code>Host</code> header is manipulated by the attacker, to redirect
+victims to a website he controls and ultimately gain confidential information.</p>
+<p>A common attack scenario are password reset mails that contain a link with
+a reset token. By sending a hostname with the <code>Host</code> header he controls the
+attacker forces the framework to generate an incorrect absolute URL, which when
+clicked, redirects the reset request to his server where he is able to log the
+reset token.</p>
+<p>There are two ways, which can also be combined, to protect against this kind of attack.</p>
+<p>First, check the <code>Host</code> header against a whitelist before the request
+enters the framework. The standard distro contains such a filter in the
+<code>config/bootstrap/action.php</code> file. To activate it, uncomment and configure
+the whitelist.</p>
+<p>Second, when building absolute URLs inside relevant views/emails, explicitly specify the host.</p>
+<pre><code class="language-php">echo $this-&gt;url(
+	['action' =&gt; 'reset', 'token' =&gt; 'secr3t'],
+	['absolute' =&gt; true, 'host' =&gt; 'example.org']
+);
+</code></pre>
+<h2><a id="securing-form-fields-and-values" class="anchor" href="#securing-form-fields-and-values">Securing Form Fields and Values</a></h2>
+<p>The <code>FormSignature</code> class cryptographically signs web forms, to prevent adding or removing
+fields, or modifying hidden (locked) fields.</p>
+<p>Using the <code>Security</code> helper, <code>FormSignature</code> calculates a hash of all fields in a form, so that
+when the form is submitted, the fields may be validated to ensure that none were added or
+removed, and that fields designated as <em>locked</em> have not had their values altered.</p>
+<p>To enable form signing in a view, simply call <code>$this-&gt;security-&gt;sign()</code> before generating your
+form. In the controller, you may then validate the request by passing <code>$this-&gt;request</code> to the
+<code>check()</code> method.</p>
+<p>Inside the view:</p>
+<pre><code class="language-php">&lt;?php $this-&gt;security-&gt;sign() ?&gt;
+
+&lt;?= $this-&gt;form-&gt;create($post) ?&gt;
+	&lt;?= $this-&gt;form-&gt;field('title') ?&gt;
+	&lt;?= $this-&gt;form-&gt;field('body', ['type' =&gt; 'textarea']) ?&gt;
+	&lt;?= $this-&gt;form-&gt;field('') ?&gt;
+	&lt;?= $this-&gt;form-&gt;submit('save') ?&gt;
+&lt;?= $this-&gt;form-&gt;end() ?&gt;
+</code></pre>
+<p>Inside a controller action:</p>
+<pre><code class="language-php">if ($this-&gt;request-&gt;is('post') &amp;&amp; !FormSignature::check($this-&gt;request)) {
+	// The key didn't match, meaning the request has been tampered with.
+}
+</code></pre>
+<div class="note note-hint">
+	To make form signing work, you must use the form helper to create the form and its fields.
+</div>
+<p>When fields are inserted dynamically into the form (i.e. through JavaScript) then those can
+be manually excluded while checking the signature.</p>
+<pre><code class="language-php">FormSignature::check($this-&gt;request, [
+	'exclude' =&gt; [
+		'_wysihtml5'
+	]
+]);
+</code></pre>
+<h2><a id="preventing-mass-assignment" class="anchor" href="#preventing-mass-assignment">Preventing Mass Assignment</a></h2>
+<p>To prevent your application from opening up to the so called <a href="http://en.wikipedia.org/wiki/Mass_assignment_vulnerability">mass assingment vulnerabilty</a>,
+the framework provides you with the <em>whitelist</em> feature. This whitelist can be used to limit the set of fields which get updated during create or update operations.</p>
+<pre><code class="language-php">$data = [
+	'name' =&gt; 'John Doe',
+	'email' =&gt; 'haxx0r@example.org' // Added by the attacker.
+];
+
+$user = Users::findById($authed['user']['id']);
+$user-&gt;save();
+</code></pre>
+<p>As a countermeasure additionally use the whitelist feature. So that in this
+case really just the name field gets updated.</p>
+<pre><code class="language-php">$user = Users::findById($authed['user']['id']);
+$user-&gt;save($data, [
+	'whitelist' =&gt; ['name']
+]);
+</code></pre>
+<div class="note note-info">
+	Always prefer whitelisting over blacklisting.
+</div>
+<h2><a id="secure-your-database" class="anchor" href="#secure-your-database">Secure Your Database</a></h2>
+<p><a href="http://cispa.saarland/wp-content/uploads/2015/02/MongoDB_documentation.pdf">There has recently been a study</a> into how many people aren't properly securing their mongo databases. The study found that over 40,000 sites using MongoDB didn't correctly configure their databases to use a password so that a malicious user could connect without any verification. When putting your database system online, make sure that you properly configure your database so that it is secure.</p>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

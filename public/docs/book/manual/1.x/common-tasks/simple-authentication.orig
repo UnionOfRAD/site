@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Simple Authentication – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/book/manual/1.x" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/book/manual/1.x/common-tasks" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Common Tasks</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Simple Authentication</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="/docs/book/manual/1.x/common-tasks" class="">Common Tasks</a><ul><li><a href="/docs/book/manual/1.x/common-tasks/logging" class="">Logging</a><li><a href="/docs/book/manual/1.x/common-tasks/plugins" class="">Plugins</a><li><a href="/docs/book/manual/1.x/common-tasks/error-handling" class="">Error Handling</a><li><a href="/docs/book/manual/1.x/common-tasks/caching" class="">Caching</a><li><a href="/docs/book/manual/1.x/common-tasks/filters" class="">Filters</a><li><a href="/docs/book/manual/1.x/common-tasks/etags" class="">Etags</a><li><a href="/docs/book/manual/1.x/common-tasks/globalization" class="">Globalization</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-authentication" class="active">Simple Authentication</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-auth-user" class="">Simple Auth User</a><li><a href="/docs/book/manual/1.x/common-tasks/console-applications" class="">Console Applications</a></ul><li><a href="/docs/book/manual/1.x/appendices" class="">Appendices</a><ul><li><a href="/docs/book/manual/1.x/appendices/faqs" class="">FAQs</a><li><a href="/docs/book/manual/1.x/appendices/using-in-other-applications" class="">Using In Other Applications</a></ul><li><a href="/docs/book/manual/1.x/quickstart" class="">Quickstart</a><li><a href="/docs/book/manual/1.x/controllers" class="">Controllers</a><ul><li><a href="/docs/book/manual/1.x/controllers/actions" class="">Actions</a><li><a href="/docs/book/manual/1.x/controllers/flow-control" class="">Flow Control</a><li><a href="/docs/book/manual/1.x/controllers/parameters" class="">Parameters</a><li><a href="/docs/book/manual/1.x/controllers/type-rendering-detection" class="">Type Rendering Detection</a><li><a href="/docs/book/manual/1.x/controllers/routing" class="">Routing</a></ul><li><a href="/docs/book/manual/1.x/installation" class="">Installation</a><ul><li><a href="/docs/book/manual/1.x/installation/requirements" class="">Requirements</a><li><a href="/docs/book/manual/1.x/installation/troubleshooting" class="">Troubleshooting</a><li><a href="/docs/book/manual/1.x/installation/web-servers" class="">Web Servers</a></ul><li><a href="/docs/book/manual/1.x/architecture" class="">Architecture</a><ul><li><a href="/docs/book/manual/1.x/architecture/file-structure" class="">File Structure</a><li><a href="/docs/book/manual/1.x/architecture/response-lifecycle" class="">Response Lifecycle</a><li><a href="/docs/book/manual/1.x/architecture/aop" class="">AOP</a><li><a href="/docs/book/manual/1.x/architecture/mvc" class="">MVC</a><li><a href="/docs/book/manual/1.x/architecture/objects" class="">Objects</a></ul><li><a href="/docs/book/manual/1.x/quality-code" class="">Quality Code</a><ul><li><a href="/docs/book/manual/1.x/quality-code/fixtures" class="">Fixtures</a><li><a href="/docs/book/manual/1.x/quality-code/analysis" class="">Analysis</a><li><a href="/docs/book/manual/1.x/quality-code/testing" class="">Testing</a><li><a href="/docs/book/manual/1.x/quality-code/security" class="">Security</a></ul><li><a href="/docs/book/manual/1.x/configuration" class="">Configuration</a><ul><li><a href="/docs/book/manual/1.x/configuration/environment" class="">Environment</a><li><a href="/docs/book/manual/1.x/configuration/bootstrapping" class="">Bootstrapping</a><li><a href="/docs/book/manual/1.x/configuration/third-party-libraries" class="">Third Party Libraries</a></ul><li><a href="/docs/book/manual/1.x/views" class="">Views</a><ul><li><a href="/docs/book/manual/1.x/views/layouts" class="">Layouts</a><li><a href="/docs/book/manual/1.x/views/elements" class="">Elements</a><li><a href="/docs/book/manual/1.x/views/helpers" class="">Helpers</a><li><a href="/docs/book/manual/1.x/views/static-content" class="">Static Content</a><li><a href="/docs/book/manual/1.x/views/auto-escaping" class="">Auto Escaping</a></ul><li><a href="/docs/book/manual/1.x/models" class="">Models</a><ul><li><a href="/docs/book/manual/1.x/models/mongodb" class="">Mongodb</a><li><a href="/docs/book/manual/1.x/models/meta" class="">Meta</a><li><a href="/docs/book/manual/1.x/models/relationships" class="">Relationships</a><li><a href="/docs/book/manual/1.x/models/saving" class="">Saving</a><li><a href="/docs/book/manual/1.x/models/using-data-sources" class="">Using Data Sources</a><li><a href="/docs/book/manual/1.x/models/adding-functions" class="">Adding Functions</a><li><a href="/docs/book/manual/1.x/models/data-mutation" class="">Data Mutation</a><li><a href="/docs/book/manual/1.x/models/connections" class="">Connections</a><li><a href="/docs/book/manual/1.x/models/creating-data-sources" class="">Creating Data Sources</a><li><a href="/docs/book/manual/1.x/models/querying" class="">Querying</a><li><a href="/docs/book/manual/1.x/models/validation" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="simple-authentication" class="anchor" href="#simple-authentication">Simple Authentication</a></h1>
+<p>If you're doing much more than simple static content delivery, chances are you'll end up needing to protect access to certain resources and functionality your application provides. li3's authentication setup is simple and allows you to quickly create a framework for managing and protecting those resources.</p>
+<h2><a id="data-setup" class="anchor" href="#data-setup">Data Setup</a></h2>
+<p>The default auth setup makes decisions based on information in your data store. The first thing you'll need to do is set up a model that handles user credentials. That model first needs a connection: set that up first in <code>config/bootstrap/connections.php</code>. If you're using MySQL as your data source, it should look something like this:</p>
+<pre><code class="language-php">use lithium\data\Connections;
+
+Connections::add('default', [
+	'type'     =&gt; 'database',
+	'adapter'  =&gt; 'MySql',
+	'database' =&gt; 'mydatabase',
+	'user'     =&gt; 'myusername',
+	'password' =&gt; 'mypassword'
+]);
+</code></pre>
+<p>If you're running with Mongo, it'll look a bit different:</p>
+<pre><code class="language-php">Connections::add('default', [
+	'type'     =&gt; 'MongoDb',
+	'database' =&gt; 'mydatabase',
+]);
+</code></pre>
+<p>Developers using MySQL will need a <code>users</code> table with at least the columns <code>id</code>, <code>username</code>, and <code>password</code>. Those using Mongo will need a collection in the database with a similar structure. You can customize the model and fields that <code>Auth</code> will use as we'll see later. Make sure to take a moment and set up your <code>Users</code> model as well in <code>models/Users.php</code>:</p>
+<pre><code class="language-php">namespace app\models;
+
+class Users extends \lithium\data\Model {}
+</code></pre>
+<p>Once you've got that setup, your application more or less interacts with the data in the same way, regardless of the particular data source you're using.</p>
+<h2><a id="user-creation" class="anchor" href="#user-creation">User Creation</a></h2>
+<p>Creating users that are compatible with the <code>Auth</code> setup is worth noting. While configurable, the default setup assumes a users data source with a hashed <code>password</code> field, and a <code>username</code> field. Please keep these defaults in mind as you create controller logic or view forms that interact with user data.</p>
+<p>For convenience, we also recommend setting up a filter to automatically hash user passwords when new users are created. You can see an example filter in the <strong>Model</strong> section of the <a href="simple-auth-user">MVC auth setup instructions</a>. You can continue to follow those instructions to create a controller and template that will allow you to generate users within your application.</p>
+<h2><a id="bootstrapping-auth" class="anchor" href="#bootstrapping-auth">Bootstrapping Auth</a></h2>
+<p>Once the data handling is in place, li3 needs to know you intend to use authentication, and with which settings. As with most things, this is done in a specific bootstrap file.</p>
+<p>li3's default application template ships with a file called <code>config/bootstrap/session.php</code>, which contains default session storage settings, as well as a commented-out default authentication configuration. To enable this configuration, first edit <code>config/bootstrap.php</code> to include (or uncomment) the line requiring the session bootstrap file:</p>
+<pre><code class="language-php">require __DIR__ . '/bootstrap/session.php';
+</code></pre>
+<p>Next, make sure your <code>Session</code> setup is using the PHP adapter, then create or uncomment the initial <code>Auth</code> configuration:</p>
+<pre><code class="language-php">use lithium\storage\Session;
+use lithium\security\Auth;
+
+Session::config([
+	'default' =&gt; ['adapter' =&gt; 'Php']
+]);
+
+Auth::config([
+	'default' =&gt; ['adapter' =&gt; 'Form']
+]);
+</code></pre>
+<p>The <code>Session</code> setup is pretty straightforward, and the <code>Auth</code> configuration tells li3 which adapter we want to use (one suited for credentials submitted via web form), and details about the model involved and used to match incoming credentials against.</p>
+<p>Note that the configuration information is housed in an array keyed <code>'default'</code>. <code>Auth</code> supports many different simultaneous configurations. Here we're only creating one, but you can add more (each using different adapters/configurations) as needed.</p>
+<p>If you're editing the bootstrap files that ship with each new application, you'll notice that the configuration presented above is quite a bit simpler than the configuration provided. This is because the manual assumes you are following the default conventions, whereas the bootstrap files make it more explicit as to what configuration options are available.</p>
+<h2><a id="authentication-and-controller-actions" class="anchor" href="#authentication-and-controller-actions">Authentication and Controller Actions</a></h2>
+<p>The first action you'll need to setup is the one that authenticates your users and adjusts the session to mark the user as identified. You could place this as you please, but it's generally accepted to create it in <code>SessionsController::add()</code>. The suggested approach is very simple:</p>
+<pre><code class="language-php">namespace app\controllers;
+
+use lithium\security\Auth;
+
+class SessionsController extends \lithium\action\Controller {
+
+	public function add() {
+		if ($this-&gt;request-&gt;data &amp;&amp; Auth::check('default', $this-&gt;request)) {
+			return $this-&gt;redirect('/');
+		}
+		// Handle failed authentication attempts
+	}
+
+	/* ... */
+}
+</code></pre>
+<p>The meat is the part of the conditional that calls <code>Auth::check()</code> and hands it the name of our desired <code>Auth</code> configuration name (remember we named the whole config array <code>'default'</code>?), and information about the current request.</p>
+<p>If the user has been successfully verified, the session is updated to mark the user as authenticated and the user is redirected to the root of the application. If there are problems with the authentication process the login view is rendered again.</p>
+<p>As a reference, the web form that sends the credentials and is the content of the <code>add</code> view at <code>views/sessions/add.html.php</code> should contain something that looks like this:</p>
+<pre><code class="language-php">&lt;?= $this-&gt;form-&gt;create(null) ?&gt;
+	&lt;?= $this-&gt;form-&gt;field('username') ?&gt;
+	&lt;?= $this-&gt;form-&gt;field('password', ['type' =&gt; 'password']) ?&gt;
+	&lt;?= $this-&gt;form-&gt;submit('Log in') ?&gt;
+&lt;?= $this-&gt;form-&gt;end() ?&gt;
+</code></pre>
+<h2><a id="protecting-resources" class="anchor" href="#protecting-resources">Protecting Resources</a></h2>
+<p>The setup for protecting resources is almost the same as it is for initially authenticating the user (though you'd want to redirect the user to the login action on error). Use <code>Auth::check()</code> in your controller actions to make sure that sections in your application are blocked from non-authenticated users. For example:</p>
+<pre><code class="language-php">namespace app\controllers;
+
+use lithium\security\Auth;
+
+class PostsController extends \lithium\action\Controller {
+
+	public function add() {
+		if (!Auth::check('default')) {
+			return $this-&gt;redirect('Sessions::add');
+		}
+
+		/* ... */
+	}
+}
+</code></pre>
+<h2><a id="checking-out" class="anchor" href="#checking-out">Checking Out</a></h2>
+<p>Next, you'll want to create an action that clears an end-user's authentication session on your system. Do that by making a call to <code>Auth::clear()</code> in a controller action.</p>
+<pre><code class="language-php">namespace app\controllers;
+
+use lithium\security\Auth;
+
+class SessionsController extends \lithium\action\Controller {
+
+	/* ... */
+
+	public function delete() {
+		Auth::clear('default');
+		return $this-&gt;redirect('/');
+	}
+}
+</code></pre>
+<h2><a id="routing" class="anchor" href="#routing">Routing</a></h2>
+<p>Finally, in order to give users slightly friendlier URLs than <code>/sessions/add</code> and <code>/sessions/delete</code>, you can wire up some very simple custom routes in <code>config/routes.php</code>. Since these are very specific routes, you'll want to add them at or near the top of your routes file:</p>
+<pre><code class="language-php">Router::connect('/login', 'Sessions::add');
+Router::connect('/logout', 'Sessions::delete');
+</code></pre>
+<h2><a id="more-information" class="anchor" href="#more-information">More Information</a></h2>
+<p>If you'd like to get under the hood and see how li3 handles password hashing, auth queries &amp; session writes, etc., check out the API documentation for the following:</p>
+<ul>
+<li><a href="/docs/api/lithium/latest:1.x/lithium/security/Auth">The <code>Auth</code> class</a></li>
+<li><a href="/docs/api/lithium/latest:1.x/lithium/security/auth/adapter/Form">The <code>Form</code> auth adapter</a></li>
+<li><a href="/docs/api/lithium/latest:1.x/lithium/security/Password">The <code>Password</code> class</a></li>
+</ul>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

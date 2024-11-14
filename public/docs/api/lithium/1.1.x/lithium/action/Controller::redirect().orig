@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\action\Controller::redirect() – Framework API v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.1.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.1.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.1.x/lithium/action" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">action</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.1.x/lithium/action/Controller" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Controller</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">redirect()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.1.x/lithium/action/Controller" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.1.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.1.x/lithium/action" class="symbol-segment">action</a>\<a href="/docs/api/lithium/1.1.x/lithium/action/Controller" class="symbol-segment">Controller</a>::redirect()		</h1>
+
+		<section class="under">
+															<div class="tags">
+													<span class="tag public">public</span>
+												<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Creates a redirect response by calling <code>render()</code> and providing a <code>'location'</code> parameter.</p>
+					</div>
+				
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">mixed</span>
+							<code class="name">$url</code>
+															<span class="parameter">
+									<p>The location to redirect to, provided as a string relative to the root of
+the application, a fully-qualified URL, or an array of routing parameters to be
+resolved to a URL. Post-processed by <code>Router::match()</code>.</p>
+								</span>
+													</li>
+											<li>
+							<span class="type">array</span>
+							<code class="name">$options</code>
+															<span class="parameter">
+									<p>Options when performing the redirect. Available options include:</p>
+<ul>
+<li><code>'status'</code> <em>integer</em>: The HTTP status code associated with the redirect.
+Defaults to <code>302</code>.</li>
+<li><code>'head'</code> <em>boolean</em>: Determines whether only headers are returned with the
+response. Defaults to <code>true</code>, in which case only headers and no body are
+returned. Set to <code>false</code> to render a body as well.</li>
+<li><code>'exit'</code> <em>boolean</em>: Exit immediately after rendering. Defaults to <code>false</code>.
+Because <code>redirect()</code> does not exit by default, you should always prefix calls
+with a <code>return</code> statement, so that the action is always immediately exited.</li>
+</ul>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">object</span>
+									<span class="return">
+						<p>Returns the instance of the <code>Response</code> object associated with this controller.</p>
+					</span>
+							</section>
+			
+						<section id="filter" class="flag">
+				<h3 class="h-beta">
+					Filter
+					<nav class="headline-nav">
+						<a href="http://li3.me/docs/book/manual/1.x/common-tasks/filters">see how to use filters</a>					</nav>
+				</h3>
+				<p>
+					Allows to intercept redirects, either stopping them completely i.e. during debugging
+        or for logging purposes.				</p>
+			</section>
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="/docs/api/lithium/1.1.x/lithium/net/http/Router::match()">lithium\net\http\Router::match()</a>									<li><a href="/docs/api/lithium/1.1.x/lithium/action/Controller::$response">lithium\action\Controller::$response</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public function redirect($url, array $options = []) {
+		$defaults = [&#039;location&#039; =&gt; null, &#039;status&#039; =&gt; 302, &#039;head&#039; =&gt; true, &#039;exit&#039; =&gt; false];
+		$options += $defaults;
+		$params = compact(&#039;url&#039;, &#039;options&#039;);
+
+		Filters::run($this, __FUNCTION__, $params, function($params) {
+			$router = $this-&gt;_classes[&#039;router&#039;];
+
+			$options = $params[&#039;options&#039;];
+			$location = $options[&#039;location&#039;] ?: $router::match($params[&#039;url&#039;], $this-&gt;request);
+			$this-&gt;render(compact(&#039;location&#039;) + $options);
+		});
+
+		if ($options[&#039;exit&#039;]) {
+			$this-&gt;response-&gt;render();
+			$this-&gt;_stop();
+		}
+		return $this-&gt;response;
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

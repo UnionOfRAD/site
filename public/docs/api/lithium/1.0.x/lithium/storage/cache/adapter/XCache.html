@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\storage\cache\adapter\XCache – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../../versions.html">Versions</a><a href="../../../../../../../../present.html">Presentations</a><a href="../../../../../../../../support.html">Community</a><a href="../../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../../storage.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">storage</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../../cache.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">cache</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="../adapter.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">adapter</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">XCache</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../adapter.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./XCache::__construct().html">__construct()</a>												<li class="method public">
+				<a href="./XCache::write().html">write()</a>												<li class="method public">
+				<a href="./XCache::read().html">read()</a>												<li class="method public">
+				<a href="./XCache::delete().html">delete()</a>												<li class="method public">
+				<a href="./XCache::decrement().html">decrement()</a>												<li class="method public">
+				<a href="./XCache::increment().html">increment()</a>												<li class="method public">
+				<a href="./XCache::clear().html">clear()</a>												<li class="method public">
+				<a href="./XCache::enabled().html">enabled()</a>												<li class="method public inherited">
+				<a href="../Adapter::clean().html">clean()</a>												<li class="method protected inherited">
+				<a href="../Adapter::_addScopePrefix().html">_addScopePrefix()</a>												<li class="method protected inherited">
+				<a href="../Adapter::_removeScopePrefix().html">_removeScopePrefix()</a>												<li class="method protected inherited">
+				<a href="../../../core/Object::_init().html">_init()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::applyFilter()">applyFilter()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::invokeMethod()">invokeMethod()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::__set_state()">__set_state()</a>												<li class="method public inherited">
+				<a href="../../../core/Object::respondsTo().html">respondsTo()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_instance()">_instance()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_filter()">_filter()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_parents()">_parents()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_stop()">_stop()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_config">$_config</a>												<li class="property protected inherited">
+				<a href="../../../core/Object::$_autoConfig.html">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_methodFilters">$_methodFilters</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_parents">$_parents</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../../storage.html" class="symbol-segment">storage</a>\<a href="../../cache.html" class="symbol-segment">cache</a>\<a href="../adapter.html" class="symbol-segment">adapter</a>\XCache		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../Adapter.html" class="extends__symbol">lithium\storage\cache\Adapter</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>An XCache cache adapter implementation leveraging the user-
+space caching features (not the opcode caching features).</p>
+					</div>
+				
+									<div class="description">
+						<p>This adapter requires the <code>xcache</code> extensionto be installed. The extension
+and user-space caching must be enabled according to the extension documention.</p>
+<p>This adapter natively handles multi-key reads/writes/deletes, natively
+provides serialization features and supports atomic increment/decrement
+operations as well as clearing the entire user-space cache.</p>
+<p>Cached item persistence is not guaranteed. Infrequently used items will
+be evicted from the cache when there is no room to store new ones. Scope
+support is available but not natively.</p>
+<p>A simple configuration can be accomplished as follows:</p>
+<pre><code class="language-php">Cache::config(array(
+    'default' =&gt; array(
+        'adapter' =&gt; 'XCache',
+        'username' =&gt; 'user',
+        'password' =&gt; 'pass'
+    )
+));
+</code></pre>
+<p>Note that the <code>username</code> and <code>password</code> configuration fields are only required if
+you wish to use <code>XCache::clear()</code> - all other methods do not require XCache
+administrator credentials.</p>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="../../Cache::key().html">lithium\storage\Cache::key()</a>									<li><a href="../adapter.html">lithium\storage\cache\adapter</a>								</ul>
+			</section>
+			
+						<section id="links">
+				<h3 class="h-beta">Links</h3>
+				<ul class="links">
+									<li><a href="http://xcache.lighttpd.net/" target="new">http://xcache.lighttpd.net/</a>								</ul>
+			</section>
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class XCache extends \lithium\storage\cache\Adapter {
+
+	/**
+	 * Constructor.
+	 *
+	 * @see lithium\storage\Cache::config()
+	 * @param array $config Configuration for this cache adapter. These settings are queryable
+	 *        through `Cache::config(&#039;name&#039;)`. The available options are as follows:
+	 *        - `&#039;scope&#039;` _string_: Scope which will prefix keys; per default not set.
+	 *        - `&#039;expiry&#039;` _mixed_: The default expiration time for cache values, if no value
+	 *          is otherwise set. Can be either a `strtotime()` compatible tring or TTL in
+	 *          seconds. To indicate items should not expire use `Cache::PERSIST`. Defaults
+	 *          to `+1 hour`.
+	 * @return void
+	 */
+	public function __construct(array $config = array()) {
+		$defaults = array(
+			&#039;scope&#039; =&gt; null,
+			&#039;expiry&#039; =&gt; &#039;+1 hour&#039;
+		);
+		parent::__construct($config + $defaults);
+	}
+
+	/**
+	 * Write values to the cache. All items to be cached will receive an
+	 * expiration time of `$expiry`.
+	 *
+	 * Note that this is not an atomic operation when using multiple keys.
+	 *
+	 * @param array $keys Key/value pairs with keys to uniquely identify the to-be-cached item.
+	 * @param string|integer $expiry A `strtotime()` compatible cache time or TTL in seconds.
+	 *                       To persist an item use `\lithium\storage\Cache::PERSIST`.
+	 * @return boolean `true` on successful write, `false` otherwise.
+	 */
+	public function write(array $keys, $expiry = null) {
+		$expiry = $expiry || $expiry === Cache::PERSIST ? $expiry : $this-&gt;_config[&#039;expiry&#039;];
+
+		if (!$expiry || $expiry === Cache::PERSIST) {
+			$ttl = 0;
+		} elseif (is_int($expiry)) {
+			$ttl = $expiry;
+		} else {
+			$ttl = strtotime($expiry) - time();
+		}
+		if ($this-&gt;_config[&#039;scope&#039;]) {
+			$keys = $this-&gt;_addScopePrefix($this-&gt;_config[&#039;scope&#039;], $keys);
+		}
+		foreach ($keys as $key =&gt; $value) {
+			if (!xcache_set($key, $value, $ttl)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * Read values from the cache. Will attempt to return an array of data
+	 * containing key/value pairs of the requested data.
+	 *
+	 * Note that this is not an atomic operation when using multiple keys.
+	 *
+	 * @param array $keys Keys to uniquely identify the cached items.
+	 * @return array Cached values keyed by cache keys on successful read,
+	 *               keys which could not be read will not be included in
+	 *               the results array.
+	 */
+	public function read(array $keys) {
+		if ($this-&gt;_config[&#039;scope&#039;]) {
+			$keys = $this-&gt;_addScopePrefix($this-&gt;_config[&#039;scope&#039;], $keys);
+		}
+		$results = array();
+
+		foreach ($keys as $key) {
+			$result = xcache_get($key);
+
+			if ($result === null &amp;&amp; !xcache_isset($key)) {
+				continue;
+			}
+			$results[$key] = $result;
+		}
+		if ($this-&gt;_config[&#039;scope&#039;]) {
+			$results = $this-&gt;_removeScopePrefix($this-&gt;_config[&#039;scope&#039;], $results);
+		}
+		return $results;
+	}
+
+	/**
+	 * Will attempt to remove specified keys from the user space cache.
+	 *
+	 * Note that this is not an atomic operation when using multiple keys.
+	 *
+	 * @param array $keys Keys to uniquely identify the cached items.
+	 * @return boolean `true` on successful delete, `false` otherwise.
+	 */
+	public function delete(array $keys) {
+		if ($this-&gt;_config[&#039;scope&#039;]) {
+			$keys = $this-&gt;_addScopePrefix($this-&gt;_config[&#039;scope&#039;], $keys);
+		}
+		foreach ($keys as $key) {
+			if (!xcache_unset($key)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * Performs an atomic decrement operation on specified numeric cache item.
+	 *
+	 * Note that, as per the XCache specification:
+	 * If the item&#039;s value is not numeric, it is treated as if the value were 0.
+	 * It is possible to decrement a value into the negative integers.
+	 *
+	 * @param string $key Key of numeric cache item to decrement.
+	 * @param integer $offset Offset to decrement - defaults to `1`.
+	 * @return integer|boolean The item&#039;s new value on successful decrement, else `false`.
+	 */
+	public function decrement($key, $offset = 1) {
+		return xcache_dec(
+			$this-&gt;_config[&#039;scope&#039;] ? &quot;{$this-&gt;_config[&#039;scope&#039;]}:{$key}&quot; : $key, $offset
+		);
+	}
+
+	/**
+	 * Performs an atomic increment operation on specified numeric cache item.
+	 *
+	 * Note that, as per the XCache specification:
+	 * If the item&#039;s value is not numeric, it is treated as if the value were 0.
+	 *
+	 * @param string $key Key of numeric cache item to increment.
+	 * @param integer $offset Offset to increment - defaults to `1`.
+	 * @return integer|boolean The item&#039;s new value on successful increment, else `false`.
+	 */
+	public function increment($key, $offset = 1) {
+		return xcache_inc(
+			$this-&gt;_config[&#039;scope&#039;] ? &quot;{$this-&gt;_config[&#039;scope&#039;]}:{$key}&quot; : $key, $offset
+		);
+	}
+
+	/**
+	 * Clears entire user-space cache by flushing it. All cache keys
+	 * using the configuration but *without* honoring the scope are removed.
+	 *
+	 * This method requires valid XCache admin credentials to be set when the adapter
+	 * was configured, due to the use of the xcache_clear_cache admin method. If the
+	 * `xcache.admin.enable_auth` ini setting is set to `Off`, no credentials required.
+	 *
+	 * The behavior and result when removing a single key
+	 * during this process fails is unknown.
+	 *
+	 * @return boolean `true` on successful clearing, `false` otherwise.
+	 */
+	public function clear() {
+		$admin = (ini_get(&#039;xcache.admin.enable_auth&#039;) === &quot;On&quot;);
+		if ($admin &amp;&amp; (!isset($this-&gt;_config[&#039;username&#039;]) || !isset($this-&gt;_config[&#039;password&#039;]))) {
+			return false;
+		}
+		$credentials = array();
+
+		if (isset($_SERVER[&#039;PHP_AUTH_USER&#039;])) {
+			$credentials[&#039;username&#039;] = $_SERVER[&#039;PHP_AUTH_USER&#039;];
+			$_SERVER[&#039;PHP_AUTH_USER&#039;] = $this-&gt;_config[&#039;username&#039;];
+		}
+		if (isset($_SERVER[&#039;PHP_AUTH_PW&#039;])) {
+			$credentials[&#039;password&#039;] = $_SERVER[&#039;PHP_AUTH_PW&#039;];
+			$_SERVER[&#039;PHP_AUTH_PW&#039;] = $this-&gt;_config[&#039;pass&#039;];
+		}
+
+		for ($i = 0, $max = xcache_count(XC_TYPE_VAR); $i &lt; $max; $i++) {
+			if (xcache_clear_cache(XC_TYPE_VAR, $i) === false) {
+				return false;
+			}
+		}
+
+		if (isset($_SERVER[&#039;PHP_AUTH_USER&#039;])) {
+			$_SERVER[&#039;PHP_AUTH_USER&#039;] = $credentials[&#039;username&#039;];
+		}
+		if (isset($_SERVER[&#039;PHP_AUTH_PW&#039;])) {
+			$_SERVER[&#039;PHP_AUTH_PW&#039;] = $credentials[&#039;password&#039;];
+		}
+		return true;
+	}
+
+	/**
+	 * Determines if the XCache extension has been installed and
+	 * if the userspace cache is available.
+	 *
+	 * @return boolean `true` if enabled, `false` otherwise.
+	 */
+	public static function enabled() {
+		return extension_loaded(&#039;xcache&#039;);
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

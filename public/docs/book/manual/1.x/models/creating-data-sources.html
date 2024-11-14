@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Creating Data Sources – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../docs.html" class="active">Documentation</a><a href="../../../../../versions.html">Versions</a><a href="../../../../../present.html">Presentations</a><a href="../../../../../support.html">Community</a><a href="../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../models.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Models</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Creating Data Sources</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="../common-tasks.html" class="">Common Tasks</a><ul><li><a href="../common-tasks/logging.html" class="">Logging</a><li><a href="../common-tasks/plugins.html" class="">Plugins</a><li><a href="../common-tasks/error-handling.html" class="">Error Handling</a><li><a href="../common-tasks/caching.html" class="">Caching</a><li><a href="../common-tasks/filters.html" class="">Filters</a><li><a href="../common-tasks/etags.html" class="">Etags</a><li><a href="../common-tasks/globalization.html" class="">Globalization</a><li><a href="../common-tasks/simple-authentication.html" class="">Simple Authentication</a><li><a href="../common-tasks/simple-auth-user.html" class="">Simple Auth User</a><li><a href="../common-tasks/console-applications.html" class="">Console Applications</a></ul><li><a href="../appendices.html" class="">Appendices</a><ul><li><a href="../appendices/faqs.html" class="">FAQs</a><li><a href="../appendices/using-in-other-applications.html" class="">Using In Other Applications</a></ul><li><a href="../quickstart.html" class="">Quickstart</a><li><a href="../controllers.html" class="">Controllers</a><ul><li><a href="../controllers/actions.html" class="">Actions</a><li><a href="../controllers/flow-control.html" class="">Flow Control</a><li><a href="../controllers/parameters.html" class="">Parameters</a><li><a href="../controllers/type-rendering-detection.html" class="">Type Rendering Detection</a><li><a href="../controllers/routing.html" class="">Routing</a></ul><li><a href="../installation.html" class="">Installation</a><ul><li><a href="../installation/requirements.html" class="">Requirements</a><li><a href="../installation/troubleshooting.html" class="">Troubleshooting</a><li><a href="../installation/web-servers.html" class="">Web Servers</a></ul><li><a href="../architecture.html" class="">Architecture</a><ul><li><a href="../architecture/file-structure.html" class="">File Structure</a><li><a href="../architecture/response-lifecycle.html" class="">Response Lifecycle</a><li><a href="../architecture/aop.html" class="">AOP</a><li><a href="../architecture/mvc.html" class="">MVC</a><li><a href="../architecture/objects.html" class="">Objects</a></ul><li><a href="../quality-code.html" class="">Quality Code</a><ul><li><a href="../quality-code/fixtures.html" class="">Fixtures</a><li><a href="../quality-code/analysis.html" class="">Analysis</a><li><a href="../../../../manual/quality-code/testing.wiki.html" class="">Testing</a><li><a href="../quality-code/security.html" class="">Security</a></ul><li><a href="../configuration.html" class="">Configuration</a><ul><li><a href="../configuration/environment.html" class="">Environment</a><li><a href="../configuration/bootstrapping.html" class="">Bootstrapping</a><li><a href="../configuration/third-party-libraries.html" class="">Third Party Libraries</a></ul><li><a href="../views.html" class="">Views</a><ul><li><a href="../views/layouts.html" class="">Layouts</a><li><a href="../views/elements.html" class="">Elements</a><li><a href="../views/helpers.html" class="">Helpers</a><li><a href="../views/static-content.html" class="">Static Content</a><li><a href="../views/auto-escaping.html" class="">Auto Escaping</a></ul><li><a href="../models.html" class="">Models</a><ul><li><a href="mongodb.html" class="">Mongodb</a><li><a href="meta.html" class="">Meta</a><li><a href="relationships.html" class="">Relationships</a><li><a href="saving.html" class="">Saving</a><li><a href="using-data-sources.html" class="">Using Data Sources</a><li><a href="adding-functions.html" class="">Adding Functions</a><li><a href="data-mutation.html" class="">Data Mutation</a><li><a href="connections.html" class="">Connections</a><li><a href="creating-data-sources.html" class="active">Creating Data Sources</a><li><a href="querying.html" class="">Querying</a><li><a href="validation.html" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="creating-data-sources" class="anchor" href="creating-data-sources.html#creating-data-sources">Creating Data Sources</a></h1>
+<h2><a id="introduction" class="anchor" href="creating-data-sources.html#introduction">Introduction</a></h2>
+<p>If you're reading this guide, chances are you've looked around for a data source in the li3 community but haven't yet found it. Whether it's LDAP or the Flickr API you want to connect to, you're in luck. This guide will walk you through the thinking and the process necessary to create your own data source. First, we'll discuss some of the overall architectural knowledge needed, then we'll dive into the details with a real example.</p>
+<h2><a id="metadata-methods" class="anchor" href="creating-data-sources.html#metadata-methods">Metadata Methods</a></h2>
+<p>When creating a data source, it's important to realize the role of a data source. Data sources provide a layer that assists models, but focuses on the details surrounding connecting to, authenticating, and facilitating generic reads and writes to a certain data store. When creating a data source, work on the generic tasks needed to get the work done rather than the domain-specific work models will perform later on.</p>
+<p>As such, it's important for li3's models to understand the structure of the underlying data. A well-written data source should provide that information in a format models understand.</p>
+<p>There are two main metadata methods your data source will want to implement &mdash; <code>sources()</code> and <code>describe()</code>:</p>
+<table>
+	<thead>
+	<tr>
+		<th>Method Name</th>
+		<th>Question it Answers</th>
+		<th>RDMBS Example</th>
+		<th>NoSQL Example</th>
+		<th>API / Service Example</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td><pre>sources()</pre></td>
+		<td>What objects can models bind to?</td>
+		<td>A list of tables in the database.</td>
+		<td>A list of collections in the database.</td>
+		<td>A list of resource collections available in a REST API.</td>
+	</tr>
+	<tr>
+		<td><pre>describe()</pre></td>
+		<td>What properties does each entity have?</td>
+		<td>What columns are in a given table, and what are their types?</td>
+		<td>May only return an empty array, as the schema could be different between documents.</td>
+		<td>Which properties are mutable/searchable on the objects in the API, and what type are they?</td>
+	</tr>
+	</tbody>
+</table>
+<p>Focus on understanding the meaning behind these methods for now—we'll be implementing them and discussing the details as we create a real data source shortly.</p>
+<h2><a id="queries-and-entities" class="anchor" href="creating-data-sources.html#queries-and-entities">Queries and Entities</a></h2>
+<p>Once models understand the basic shape for your data, the next step is facilitating communication between the data source and its associated models.</p>
+<p>In li3, models ask the data source questions through <a href="../../../../api/lithium/latest:1.x/lithium/data/model/Query.html"><code>Query</code> objects</a>, and the data source (typically) answers with one or more <code>Entity</code> objects, which are either a <code>Record</code> or a <code>Document</code>. For example, when a model is to find data, it packages up a <code>Query</code> object that contains structured data about what sort of information the model is asking for, in what order it expects it returned in, paging information, etc.</p>
+<p>It passes this <code>Query</code> to the data source, which connects and authenticates to the data store. It inspects the query to see what the model needs, interacts with the underlying data store, and wraps the response data in some sort of <code>Entity</code>. If the response requires more than one <code>Entity</code>, it's usually wrapped up in a <code>Collection</code> like a <code>RecordSet</code> or <code>DocumentSet</code>.</p>
+<p>Once the model has the <code>Entity</code> (or collection of entities), it can provide that information back to the caller (i.e. a controller).</p>
+<h2><a id="example-data-source-git-hub-issues-api" class="anchor" href="creating-data-sources.html#example-data-source-git-hub-issues-api">Example Data Source: GitHub Issues API</a></h2>
+<p>Let's dive into a real-life example of creating a data source. For the remainder of this guide, we'll walk through the process of creating a new data source that connects to, authenticates with, and moves data to and from the GitHub API. Version 2 of the GitHub API is available via a simple RESTful interface that uses HTTP authentication. We'll be setting up a new data source, using the existing <a href="../../../../api/lithium/latest:1.x/lithium/data/source/Http.html"><code>data\source\Http</code> base class</a> as a starting point.</p>
+<h3><a id="setup" class="anchor" href="creating-data-sources.html#setup">Setup</a></h3>
+<p>The end result we're looking for is being able to create models that read from and write to GitHub using our data source. Let's get started by creating the data source file and creating a connection to it. First, create a new file in <code>extensions/adapter/data/source/http/GitHub.php</code>, inside your app or plugin:</p>
+<pre><code class="language-php">namespace app\extensions\adapter\data\source\http;
+
+use lithium\util\String;
+use lithium\util\Inflector;
+
+class GitHub extends \lithium\data\source\Http {}
+</code></pre>
+<p>This puts the class in the proper namespace, and imports some utility classes we'll be using later on.</p>
+<p> <em>A note on organization:</em> Most data source adapters break down into a few basic <em>types</em>. For example, all relational databases are of the <code>database</code> type. They all work similarly, all share a common base class, and all live in <code>data\source\database</code> (in core), or <code>extensions\adapter\data\source\database</code> (in an application or plugin). Likewise with data sources that connect to databases or web services over HTTP. However, other data sources like <a href="../../../../api/lithium/latest:1.x/lithium/data/source/MongoDb.html"> <code>MongoDb</code></a> don't have a type. This distinction becomes important when configuring them, as seen below.</p>
+<p>Now, let's create a connection that uses this new data source. Add a few lines to <code>config/bootstrap/connections.php</code>:</p>
+<pre><code class="language-php">Connections::add('github', [
+	'type'     =&gt; 'http',
+	'adapter'  =&gt; 'GitHub',
+	'login'    =&gt; 'myusername',
+	'password' =&gt; '5up3Rs3CrE7',
+	'token'    =&gt; 'e83fd93a7e099c8523ab99d003ce939a',
+]);
+</code></pre>
+<p>Since the GitHub API allows for an API token to be passed instead of a password, we've added that to the connection information.</p>
+<p>Finally, we'll need to create a new model and controller to test the functionality as we build it:</p>
+<pre><code class="language-php">namespace app\models;
+
+class Issues extends \lithium\data\Model {
+
+	public $_meta = ['connection' =&gt; 'github'];
+}
+</code></pre>
+<p>These can be saved in <code>models/Issues.php</code>, and <code>controllers/IssuesController.php</code>, respectively.</p>
+<pre><code class="language-php">namespace app\controllers;
+
+use app\models\Issues;
+
+class IssuesController extends \lithium\action\Controller {
+
+	public function index() {}
+}
+</code></pre>
+<h3><a id="connecting-amp-authenticating" class="anchor" href="creating-data-sources.html#connecting-amp-authenticating">Connecting &amp; Authenticating</a></h3>
+<p>Now that we've got the basic classes in place, let's make sure that the model can connect to GitHub API correctly. Looking at the HTTP data source we're extending, we can see that the configuration details for the <code>lithium\net\http\Service</code> object are passed to the data source's constructor, along with the connection details. By overriding the constructor, we can supply our own GitHub-specific connection details:</p>
+<pre><code class="language-php">public function __construct(array $config = []) {
+	$defaults = [
+		'scheme'   =&gt; 'https',
+		'host'     =&gt; 'github.com',
+		'port'     =&gt; 443,
+		'login'    =&gt; null,
+		'password' =&gt; null,
+		'token'    =&gt; null,
+		'auth'     =&gt; 'Basic',
+		'version'  =&gt; '1.1',
+		'basePath' =&gt; '/api/v2/json',
+	];
+	$config += $defaults;
+
+	if ($config['token']) {
+		$config['login'] = $config['login'] . '/token';
+		$config['password'] = $config['token'];
+	}
+	parent::__construct($config + $defaults);
+}
+</code></pre>
+<p>What we're doing here is checking to see if there's a token related to the connection. If so, we use it and adjust the username and password field as noted on the GitHub API website. Otherwise, we'll just pass up the configuration to the parent constructor, which will set the configuration options for the new <code>Service</code> object with the details we need. As we make changes, we're using the <code>$config</code> parameter of the data source. This constructor parameter is populated with the same data we passed into <code>Connections::add()</code>.</p>
+<h3><a id="reads" class="anchor" href="creating-data-sources.html#reads">Reads</a></h3>
+<p>Next, let's use our model to read from the data source. This is done by the model's <code>find()</code> method. Let's place a call to <code>find()</code> inside our controller, and supply a few parameters the GitHub API is going to need to fetch some issues from a project:</p>
+<pre><code class="language-php">public function index() {
+	$results = Issues::find('all', [
+		'conditions' =&gt; [
+			'user' =&gt; 'myuser', 'repo' =&gt; 'myrepo', 'state' =&gt; 'open'
+		]
+	]);
+}
+</code></pre>
+<p>If you try this, <code>$results</code> will get filled with the 404 response from GitHub's servers. This is because the default behavior of <code>read()</code> doesn't fit our use-case. Let's override it in our new data source in order fix that. Remember that the model layer communicates to the data source via <code>Query</code> objects. The first argument for <code>read()</code> is the <code>Query</code> from our <code>Issues</code> model. We can inspect that to find out what the model wants, and translate that into HTTP requests to the GitHub API.</p>
+<p>Let's override <code>read()</code>, and inspect the <code>Query</code> object so we can direct the query to the GitHub API properly.</p>
+<pre><code class="language-php">public function read($query, array $options = []) {
+	$paths = [
+		'issues' =&gt; '/issues/list/{:user}/{:repo}/{:state}'
+	];
+
+	$params = $query-&gt;export($this, ['keys' =&gt; ['source', 'conditions']]);
+	$source = $params['source'];
+	$conditions = (array) $params['conditions'] + [
+		'user' =&gt; '', 'repo' =&gt; '', 'state' =&gt; ''
+	];
+
+	if (!isset($paths[$source])) {
+		return null;
+	}
+	$path = String::insert($paths[$source], array_map('urlencode', (array) $conditions));
+	return json_decode($this-&gt;connection-&gt;get($this-&gt;_config['basePath'] . $path), true);
+}
+</code></pre>
+<p>First, what we're doing is defining an array that maps resource names to API URLs. This makes our design more extensible, as we can come back later and map other API resources.</p>
+<p>Next, we're asking the <code>Query</code> object to export the parameters that we care about for this API call, by passing it the adapter instance (<code>$this</code>) along with the list of values we care about: <code>'source'</code> being the API resource accessed (<code>'issues'</code>), and <code>'conditions'</code>, the array of conditions values we passed to <code>find()</code>. We then assign these to local variables, making sure that the default keys we care about for <code>$conditions</code> are initialized.</p>
+<p>After that, we'll check to make sure the resource we're attempting to read from is one we know about in our map, and bail out if not. In this case, our <code>Issues</code> model is bound to the <code>'issues'</code> resource, which happens automatically by naming convention. We then craft the URL to the GitHub API using the conditions from the <code>Query</code>.</p>
+<p>At this point, you've got a model that now returns array data that matches the JSON data returned from the GitHub API, but let's take this a bit further. We'll want to take advantage of li3's data objects: in this case, the <code>DocumentSet</code> and <code>Document</code> objects. Doing so allows your application or plugin to present an API that's consistent with li3's data APIs, and can be handled uniformly in controllers and templates.</p>
+<p>We'll format the data for use in the model using two important data source methods: <code>item()</code> and <code>cast()</code>. The <code>item()</code> method is used to create data objects, and <code>cast()</code> is used by the data source to walk recursively through data structures and format them as you specify.</p>
+<p>Both methods use li3's dependency injection mechanism to know what classes to use. As such, it's important to understand it at a basic level. Rather than a complex class structure of managers or containers, li3 uses class properties to manage class dependencies. If you look at the <code>$_classes</code> property of a li3 object, you'll see the types and fully namespaced class paths of each dependency. In our case, we want to define what <code>item()</code> uses to create data objects. Let's add a <code>$_classes</code> definition to our data source:</p>
+<pre><code class="language-php">protected $_classes = [
+	'service' =&gt; 'lithium\net\http\Service',
+	'entity'  =&gt; 'lithium\data\entity\Document',
+	'set'     =&gt; 'lithium\data\collection\DocumentSet',
+];
+</code></pre>
+<p>The <code>'service'</code> dependency is included in the array because it's needed for the parent <code>Http</code> data source class, but it's something we could redefine if needed. The most important points to note are the last two entries: <code>'entity'</code> and <code>'set'</code>. By defining these dependencies, we're telling the data source what classes to use to package our data, either in singular or plural form. Because GitHub API data responses are JSON objects (that sometimes include embedded objects), we'll use <code>Document</code> rather than <code>Record</code>.</p>
+<p>Once that's in place, we can adjust our <code>read()</code> function to return the results of an <code>item()</code> call:</p>
+<pre><code class="language-php">public function read($query, array $options = []) {
+	$paths = [
+		'issues' =&gt; '/issues/list/{:user}/{:repo}/{:state}'
+	];
+
+	$params = $query-&gt;export($this, ['source', 'conditions']);
+	$source = $params['source'];
+	$conditions = (array) $params['conditions'] + [
+		'user' =&gt; '', 'repo' =&gt; '', 'state' =&gt; ''
+	];
+
+	if (!isset($paths[$source])) {
+		return null;
+	}
+	$path = String::insert($paths[$source], array_map('urlencode', (array) $conditions));
+	$result = json_decode($this-&gt;connection-&gt;get($this-&gt;_config['basePath'] . $path), true);
+
+	return $this-&gt;item($query-&gt;model(), $result[$source], ['class' =&gt; 'set']);
+}
+</code></pre>
+<p>The <code>item()</code> method needs to know what model the data is coming from, the data itself, along with some options. Here, we're passing along an option that specifies that we want the data we're supplying returned as our defined <code>'set'</code> dependency. In this case, we've configured that as <code>lithium\data\collection\DocumentSet</code>.</p>
+<p>Running <code>find()</code> on our <code>Issues</code> model now gives us a <code>DocumentSet</code>, but if we inspect a specific entry in the set (by iterating, for example) we see that the entities in the set are just plain PHP arrays. Let's add the final piece to our data source that will create <code>Document</code> objects out of our responses.</p>
+<p>The <code>cast()</code> method is used by the data source to recursively inspect and transform data as it's placed into a collection. In this case, we'll use <code>cast()</code> to transform arrays into <code>Document</code> objects:</p>
+<pre><code class="language-php">public function cast($entity, array $data, array $options = []) {
+	$model = $entity-&gt;model();
+
+	foreach ($data as $key =&gt; $val) {
+		if (!is_array($val)) {
+			continue;
+		}
+		$data[$key] = $this-&gt;item($model, $val, ['class' =&gt; 'entity']);
+	}
+	return parent::cast($entity, $data, $options);
+}
+</code></pre>
+<p>Notice how we're using <code>item()</code>, but to create entities rather than sets now? Here's where our <code>'entity'</code> dependency comes into play. Also note that because <code>cast()</code> recursively inspects data, arrays embedded into our GitHub API responses will also be cast as <code>Document</code> objects.</p>
+<p>At this point, your <code>Issues</code> model should be successfully connecting to the API and fetching lists of issues and returning that data in <code>Documents</code> inside of <code>DocumentSet</code> objects.</p>
+<h3><a id="creating-and-updating" class="anchor" href="creating-data-sources.html#creating-and-updating">Creating and Updating</a></h3>
+<p>Now that we're rocking with some reads, let's hook up the writes. This is done by POSTing some data to the GitHub API. First, let's change our controller so that the model is saving a new issue:</p>
+<pre><code class="language-php">public function index() {
+	$issue = Issues::create();
+	$issue-&gt;user = 'myuser';
+	$issue-&gt;repo = 'myrepo';
+	$issue-&gt;title = 'Title for my new issue!';
+	$issue-&gt;body = 'Here\'s a description of the issue.';
+
+	$issue-&gt;save();
+}
+</code></pre>
+<p>The API specifies that we POST to a URL composed of the user and repository names, and includes data about title and body. We'll need to make a new <code>create()</code> method in our data source that assembles the right URL and POST data based off what it receives from the model. In this case, <code>create()</code> is handed a <code>Query</code> that has an <code>Entity</code> we can inspect and use.</p>
+<pre><code class="language-php">public function create($query, array $options = []) {
+	$paths = [
+		'issues' =&gt; '/issues/open/{:user}/{:repo}'
+	];
+
+	$params = $query-&gt;export($this, ['source', 'data']);
+	$source = $params['source'];
+	$data = array_map('urlencode', (array) $params['data']['data']);
+
+	if (!isset($paths[$source])) {
+		return false;
+	}
+	$path = $this-&gt;_config['basePath'] . String::insert($paths[$source], $data);
+
+	switch ($source) {
+		case 'issues':
+			$data = $query-&gt;entity()-&gt;data();
+			$data = array_intersect_key($data, ['title' =&gt; '', 'body' =&gt; '']);
+		break;
+	}
+	$result = json_decode($this-&gt;connection-&gt;post($path, $data), true);
+	$key = Inflector::singularize($source);
+	return isset($result[$key]);
+}
+</code></pre>
+<p>As before, we'll create a map of available resources to API endpoints, and then extract out the parameters that we need from the query. <em>Note</em>: Sometimes you need lots of parameters, or you might not know all the parameters you need right at the beginning. You can simply omit the second parameter to <code>export()</code> to retrieve all of them.</p>
+<p>After we've verified the resource we're trying to access is valid, we'll build our API URL just like in <code>read()</code>. Next, we'll pull out the data which is to be submitted via the POST request, and whitelist it so we're only pulling the <code>'title'</code> and <code>'body'</code> fields.</p>
+<p>Since the GitHub API returns a JSON object on success, we inspect the response to make sure it's there, and return a boolean based on the success of the operation. This works fine, and our controller can check the value of <code>save()</code> to ensure that the issue was created successfully.</p>
+<p>However, subsequent code won't be able to verify that <code>$issue</code> actually exists in the database, and none of our code will be able to reference it within the GitHub API, because it hasn't received a key (or any other information) that the API has given us. To fix this, we can simply change the last few lines of the <code>create()</code> method, as follows:</p>
+<pre><code class="language-php">$result = json_decode($this-&gt;connection-&gt;post($path, $data), true);
+$key = Inflector::singularize($source);
+
+if (!isset($result[$key])) {
+	return false;
+}
+$query-&gt;entity()-&gt;sync(null, $result[$key]);
+return true;
+</code></pre>
+<p>The first thing to do is, instead of simply returning the result of the key check, just bail out if the operation failed. Next, we call the <code>sync()</code> method of the <code>Entity</code> class. This method lets our <code>Document</code> instance know that it is now current with the data stored in the service backend, and also lets us update the <code>Document</code>'s internal state with any new information received.</p>
+<p>Because the API does not define an explicit primary key for issues, we simply pass <code>null</code> as the first parameter (we could create a primary key by convention within our adapter, but that's another matter). To the second parameter, we pass the entire array of new issue data received from the API, including identifier values like <code>position</code> and <code>number</code>, the <code>user</code> name and <code>gravatar_id</code> of the GitHub user that posted it, and meta information like the <code>created_at</code> timestamp, the current <code>state</code> (<code>'open'</code>), and the <code>html_url</code> of the issue's page within GitHub.</p>
+<p>The other important piece of internal state modified by <code>sync()</code> indicates to <code>$issue</code> whether or not it <em>exists</em> within the service. Without this, calling <code>$issue-&gt;exists()</code> would continue to return <code>false</code>, even if the call to <code>save()</code> were successful. It's up to your data source to manage the state of the entity objects it handles.</p>
+<p>Finally, for implementing updates, we can follow essentially the same template we did for the <code>create()</code> method, with a couple of notable exceptions:</p>
+<ul>
+<li>Instead of calling <code>post()</code> on our <code>$connection</code> property, we call <code>put()</code>.</li>
+<li>When exporting parameters from the <code>Query</code> object, we use <code>$params['data']['update']</code>, instead of <code>$params['data']['data']</code>. This provides us with just the fields that have been updated on the <code>Document</code> object.</li>
+</ul>
+<h2><a id="handling-errors" class="anchor" href="creating-data-sources.html#handling-errors">Handling Errors</a></h2>
+<p>So far, there are two exceptional conditions which we've encountered in our data source. The first is that this data source does not support delete operations. Accordingly, we should override the <code>delete()</code> method, so that it raises an exception if called. li3's <code>data</code> package provides a generic <code>QueryException</code> for failed query operations. We can use it to prevent delete operations from proceeding, and notify other developers that these API calls aren't permitted.</p>
+<p>First, import <code>QueryException</code> at the top of the data source class:</p>
+<pre><code class="language-php">use lithium\data\model\QueryException;
+</code></pre>
+<p>Then, override the <code>delete()</code> method of the parent class, and throw the exception:</p>
+<pre><code class="language-php">public function delete($query, array $options = []) {
+	throw new QueryException("Delete operations are not supported by this API.");
+}
+</code></pre>
+<p>The other condition which we have so far not dealt with is that of errors generated by the API. If you've been inspecting the JSON data that the GitHub API returns, you'll have noticed that certain API calls return a JSON structure with an <code>error</code> key.</p>
+<p>To implement error handling for this case, simply add the following check right below where the return value of <code>json_decode()</code> is assigned to <code>$result</code> in any of our implemented CRUD methods:</p>
+<pre><code class="language-php">if (isset($result['error'])) {
+	throw new QueryException($result['error']);
+}
+</code></pre>
+<p>This will cause any errors generated by the API to bubble up to our application's error-handling.</p>
+<h2><a id="refactoring-and-adding-metadata" class="anchor" href="creating-data-sources.html#refactoring-and-adding-metadata">Refactoring and Adding Metadata</a></h2>
+<p>So far in our implementation, we've just been doing the simplest thing possible to get working functionality. However, that's left us with some repetitive operations and patterns across our methods. A lot of the work has to do with building queries and URLs, and defining things like <code>$paths</code> arrays.</p>
+<p>We can clean some of this up by extracting code out into properties and helper methods. This will not only make it easier for our adapter to support new features down the road, but it also helps us extract out some metadata that the model layer can use for introspection.</p>
+<p>The first step is to extract out the paths for the available operations on each resource:</p>
+<pre><code class="language-php">protected $_sources = [
+	'issues' =&gt; [
+		'paths' =&gt; [
+			'create' =&gt; [
+				'/issues/open/{:user}/{:repo}' =&gt; ['user', 'repo']
+			],
+			'read' =&gt; [
+				'issues/show/{:user}/{:repo}/{:number}' =&gt; ['user', 'repo', 'number'],
+				'issues/list/{:user}/{:repo}/{:label}' =&gt; ['user', 'repo', 'label'],
+				'issues/list/{:user}/{:repo}/{:state}' =&gt; ['user', 'repo', 'state'],
+				'issues/list/{:user}/{:repo}/{:state}/{:search}' =&gt; [
+					'user', 'repo', 'state', 'search'
+				]
+			]
+		]
+	]
+];
+</code></pre>
+<p>Here, we have one key for each resource our data source will expose (we can add more later), and within that, we have a listing of paths, one for each operation, with each URL matching up to an array of keys required to use each one. Also note that the URLs are nested within a <code>'paths'</code> key. This allows us to associate other data with each resource down the road, i.e. a schema indicating the various fields exposed, and their data types.</p>
+<p>Next, we'll implement a method that will generate our new service URLs, which will be used by the various CRUD methods:</p>
+<pre><code class="language-php">protected function _path($source, $type, array $params) {
+	if (!isset($this-&gt;_sources[$source]['paths'][$type])) {
+		return null;
+	}
+	$keys = array_keys($params);
+	sort($keys);
+
+	foreach ($this-&gt;_paths[$source][$type] as $path =&gt; $required) {
+		sort($required);
+
+		if ($keys !== $required) {
+			continue;
+		}
+		$params = array_map('urlencode', (array) $params);
+		$result = String::insert($path, $params);
+		return "{$this-&gt;_config['basePath']}/{$result}";
+	}
+}
+</code></pre>
+<p>This method will first check to see if a path is defined for the resource/operation combination requested. It will then iterate over the available paths, comparing the keys required for each path to the keys provided to the method, in an attempt to find a match.</p>
+<p>When a match is found, it uses <code>$params</code> to generate an API URL, which is returned to the calling method. Now, let's refactor the <code>read()</code> method, by removing the string-handling code that was previously used to generate URLs, and replace it with a simple set-and-check block which calls our new <code>_path()</code> method:</p>
+<pre><code class="language-php">public function read($query, array $options = []) {
+	$params = $query-&gt;export($this, ['source', 'conditions']);
+	$source = $params['source'];
+	$conditions = (array) $params['conditions'];
+
+	if (!$path = $this-&gt;_path($source, __FUNCTION__, $conditions)) {
+		return null;
+	}
+	$result = json_decode($this-&gt;connection-&gt;get($path), true);
+
+	if (isset($result['error'])) {
+		throw new QueryException($result['error']);
+	}
+	return $this-&gt;item($query-&gt;model(), $result[$source], ['class' =&gt; 'set']);
+}
+</code></pre>
+<p>The new implementation uses just a few lines to extract the necessary parameters from the <code>Query</code> object, then uses the new helper method to generate the correct URL, calls it and decodes the result, then implements the error-handling we saw above. Finally, if all goes well, it returns the results of the method call, wrapped in a set of <code>Document</code> objects that can be iterated over.</p>
+<p>Now that we've extracted the above information into a class property, we can do other useful things with it such as implement the <code>sources()</code> method described at the beginning of this section. This method is intended to return a simple array indicating the list of resources available to bind to:</p>
+<pre><code class="language-php">public function sources($class = null) {
+	return array_keys($this-&gt;_sources);
+}
+</code></pre>
+<h2><a id="conclusions" class="anchor" href="creating-data-sources.html#conclusions">Conclusions</a></h2>
+<p>Hopefully this section has armed you with all the knowledge required to create your own data sources. They're a very powerful tool in the framework, that allow you to model many different types of data from disparate sources in a single, unified way.</p>
+<p>Just remember, while you may choose to implement your own conventions on data access for the sake of convenience, data sources should only be concerned with interacting with backend data in abstract terms; high-level domain logic should always be implemented in models, or other classes designed to augment models.</p>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

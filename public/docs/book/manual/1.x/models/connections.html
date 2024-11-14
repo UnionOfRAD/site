@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Connections – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../docs.html" class="active">Documentation</a><a href="../../../../../versions.html">Versions</a><a href="../../../../../present.html">Presentations</a><a href="../../../../../support.html">Community</a><a href="../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../models.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Models</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Connections</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="../common-tasks.html" class="">Common Tasks</a><ul><li><a href="../common-tasks/logging.html" class="">Logging</a><li><a href="../common-tasks/plugins.html" class="">Plugins</a><li><a href="../common-tasks/error-handling.html" class="">Error Handling</a><li><a href="../common-tasks/caching.html" class="">Caching</a><li><a href="../common-tasks/filters.html" class="">Filters</a><li><a href="../common-tasks/etags.html" class="">Etags</a><li><a href="../common-tasks/globalization.html" class="">Globalization</a><li><a href="../common-tasks/simple-authentication.html" class="">Simple Authentication</a><li><a href="../common-tasks/simple-auth-user.html" class="">Simple Auth User</a><li><a href="../common-tasks/console-applications.html" class="">Console Applications</a></ul><li><a href="../appendices.html" class="">Appendices</a><ul><li><a href="../appendices/faqs.html" class="">FAQs</a><li><a href="../appendices/using-in-other-applications.html" class="">Using In Other Applications</a></ul><li><a href="../quickstart.html" class="">Quickstart</a><li><a href="../controllers.html" class="">Controllers</a><ul><li><a href="../controllers/actions.html" class="">Actions</a><li><a href="../controllers/flow-control.html" class="">Flow Control</a><li><a href="../controllers/parameters.html" class="">Parameters</a><li><a href="../controllers/type-rendering-detection.html" class="">Type Rendering Detection</a><li><a href="../controllers/routing.html" class="">Routing</a></ul><li><a href="../installation.html" class="">Installation</a><ul><li><a href="../installation/requirements.html" class="">Requirements</a><li><a href="../installation/troubleshooting.html" class="">Troubleshooting</a><li><a href="../installation/web-servers.html" class="">Web Servers</a></ul><li><a href="../architecture.html" class="">Architecture</a><ul><li><a href="../architecture/file-structure.html" class="">File Structure</a><li><a href="../architecture/response-lifecycle.html" class="">Response Lifecycle</a><li><a href="../architecture/aop.html" class="">AOP</a><li><a href="../architecture/mvc.html" class="">MVC</a><li><a href="../architecture/objects.html" class="">Objects</a></ul><li><a href="../quality-code.html" class="">Quality Code</a><ul><li><a href="../quality-code/fixtures.html" class="">Fixtures</a><li><a href="../quality-code/analysis.html" class="">Analysis</a><li><a href="../../../../manual/quality-code/testing.wiki.html" class="">Testing</a><li><a href="../quality-code/security.html" class="">Security</a></ul><li><a href="../configuration.html" class="">Configuration</a><ul><li><a href="../configuration/environment.html" class="">Environment</a><li><a href="../configuration/bootstrapping.html" class="">Bootstrapping</a><li><a href="../configuration/third-party-libraries.html" class="">Third Party Libraries</a></ul><li><a href="../views.html" class="">Views</a><ul><li><a href="../views/layouts.html" class="">Layouts</a><li><a href="../views/elements.html" class="">Elements</a><li><a href="../views/helpers.html" class="">Helpers</a><li><a href="../views/static-content.html" class="">Static Content</a><li><a href="../views/auto-escaping.html" class="">Auto Escaping</a></ul><li><a href="../models.html" class="">Models</a><ul><li><a href="mongodb.html" class="">Mongodb</a><li><a href="meta.html" class="">Meta</a><li><a href="relationships.html" class="">Relationships</a><li><a href="saving.html" class="">Saving</a><li><a href="using-data-sources.html" class="">Using Data Sources</a><li><a href="adding-functions.html" class="">Adding Functions</a><li><a href="data-mutation.html" class="">Data Mutation</a><li><a href="connections.html" class="active">Connections</a><li><a href="creating-data-sources.html" class="">Creating Data Sources</a><li><a href="querying.html" class="">Querying</a><li><a href="validation.html" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="connections" class="anchor" href="connections.html#connections">Connections</a></h1>
+<p>Connection configuration is the first place you need to start when working with models. li3 supports a number of different relational and non-relational databases, and each is defined through the connection configuration.</p>
+<p>Connections are configured in the core bootstrap file <code>config/bootstrap/connections.php</code>. The <code>Connections::add()</code> method is used in this file to make different connections available to your models.</p>
+<p>Each connection is made up of two parts: the first part is the name that identifies the connection. This must be unique, and can be used to fetch connection details and configure models. If you create a connection named "default", your models will use it unless configured otherwise.</p>
+<p>The second part of a connection is an array of configuration options specific to the database type you're planning to use. Each connection configuration may differ, but most will include the following:</p>
+<ul>
+<li><p><code>'type'</code> <em>string</em>: The type of data source that defines this connection; typically a
+class or namespace name. Relational database data sources, use <code>'database'</code>, while
+CouchDB and other HTTP-related data sources use <code>'http'</code>, etc. For classes which
+directly extend <code>lithium\data\Source</code>, and do not use an adapter, simply use the
+name of the class, i.e. <code>'MongoDb'</code>.</p>
+</li>
+<li><p><code>'adapter'</code> <em>string</em>: For <code>type</code>s such as <code>'database'</code> which are adapter-driven,
+provides the name of the adapter associated with this configuration.</p>
+</li>
+<li><p><code>'host'</code> <em>string</em>: The host name that the database should connect to. Typically
+defaults to <code>'localhost'</code>.</p>
+</li>
+<li><p><code>'login'</code> <em>string</em>: If the connection requires authentication, specifies the login
+name to use.</p>
+</li>
+<li><p><code>'password'</code> <em>string</em>: If the connection requires authentication, specifies the
+password to use.</p>
+</li>
+</ul>
+<p>A quick look at the examples in the default <code>connections.php</code> file illustrate the possibilities:</p>
+<pre><code class="language-php">Connections::add('default', [
+	'type' =&gt; 'MongoDb',
+	'host' =&gt; 'localhost',
+	'database' =&gt; 'app'
+]);
+
+Connections::add('default', [
+	'type' =&gt; 'http',
+	'adapter' =&gt; 'CouchDb',
+	'host' =&gt; 'localhost',
+	'database' =&gt; 'app'
+]);
+
+Connections::add('default', [
+	'type' =&gt; 'database',
+	'adapter' =&gt; 'MySql',
+	'host' =&gt; 'localhost',
+	'login' =&gt; 'root',
+	'password' =&gt; '',
+	'database' =&gt; 'app',
+	'encoding' =&gt; 'UTF-8'
+]);
+</code></pre>
+<h2><a id="models-and-connections" class="anchor" href="connections.html#models-and-connections">Models and Connections</a></h2>
+<p>Models will look for the <code>'default'</code> connection first. If you've got more than one connection you're using, or wish a model to use an alternate, specify the connection name in the model's <code>$_meta</code> property.</p>
+<pre><code class="language-php">class Posts extends \lithium\data\Model {
+
+	protected $_meta = [
+		'connection' =&gt; 'legacy'
+	];
+}
+</code></pre>
+<p>For connection-less models you may disable the connection altogether by setting the connection to use to <code>false</code>.</p>
+<pre><code class="language-php">class Movies extends \lithium\data\Model {
+
+	protected $_meta = [
+		'connection' =&gt; false
+	];
+}
+</code></pre>
+<p>If you ever need to access the connection for model directly, you may do so by using the <code>connection()</code> method. The following example shows how to make use of this feature to control PDO transactions.</p>
+<pre><code class="language-php">$source = Posts::connection(); // Gives you the connected data source i.e. a `Database` object.
+$pdo = $source-&gt;connection; // Gives you the underlying connection of that object.
+
+$pdo-&gt;beginTransaction();
+$pdo-&gt;commit();
+$pdo-&gt;rollback();
+</code></pre>
+<h2><a id="connections-and-environments" class="anchor" href="connections.html#connections-and-environments">Connections and Environments</a></h2>
+<p>Many applications use different databases depending on which environment the application is currently being hosted from. For example, you might want to switch your MongoDB connection from a locally hosted database in development, but use a cloud-based hosting service once you're in production. Connection configurations were built with this in mind.</p>
+<p>Once your environments have been defined, use their names as keys in the configuration array, as shown here:</p>
+<pre><code class="language-php">Connections:add('default', [ // 'default' is the name of the connection
+	'development' =&gt; [
+		'type'     =&gt; 'MongoDb',
+		'host'     =&gt; 'localhost',
+		'database' =&gt; 'myapp'
+	],
+	'production' =&gt; [
+		'type'     =&gt; 'MongoDb',
+		'host'     =&gt; 'flame.mongohq.com:27111',
+		'database' =&gt; 'myapp',
+		'login'    =&gt; 'myuser',
+		'password' =&gt; 'mysecret'
+	]
+]);
+</code></pre>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

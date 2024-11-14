@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>li3_docs – li₃ Docs v2.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../docs.html" class="active">Documentation</a><a href="../../../../versions.html">Versions</a><a href="../../../../present.html">Presentations</a><a href="../../../../support.html">Community</a><a href="../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="li3_docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃ Docs (2.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">li3_docs</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+	
+						<h3 class="h-gamma">Namespaces</h3>
+			<ul>
+												<li class="namespace">
+				<a href="li3_docs/controllers.html">controllers</a>												<li class="namespace">
+				<a href="li3_docs/doc.html">doc</a>												<li class="namespace">
+				<a href="li3_docs/extensions.html">extensions</a>												<li class="namespace">
+				<a href="li3_docs/models.html">models</a>							</ul>
+												
+										</nav>
+	<div class="body">
+			<section>
+			<h1><a id="li-docs" class="anchor" href="li3_docs.html#li-docs">li₃ docs</a></h1>
+<p>Once installed in your existing application, however, it generates documentation from your
+app's docblocks in real-time, which is all accessible from <a href="http://yourapp.tld/docs/">http://yourapp.tld/docs/</a>. Not
+only that, but it will generate documentation for your plugins, too. Including itself;
+so it is self-replicating in a way. In this vein, it becomes part of a series of plugins
+required in order to obtain various documentation volumes of interest.</p>
+<p>Such as:</p>
+<ul>
+<li><a href="https://github.com/UnionOfRAD/manual">https://github.com/UnionOfRAD/manual</a></li>
+<li><a href="https://github.com/UnionOfRAD/lithium">https://github.com/UnionOfRAD/lithium</a></li>
+</ul>
+<p>So the documentation plugin is a tool for creating automatically browse-able documentation
+of your application's codebase. In addition to simple descriptions and tables of contents,</p>
+<p><em>Note</em>: <code>li3_docs</code> is a <strong>plugin</strong>, NOT an app. Furthermore, by itself it is a VIEWER ONLY and
+contains no actual documentation other than its own.</p>
+<h3><a id="installation" class="anchor" href="li3_docs.html#installation">Installation</a></h3>
+<ol>
+<li>To install run <code>composer require unionofrad/li3_docs</code>.</li>
+<li>The plugin needs a configured <code>default</code> connection.</li>
+<li>2 tables need to be created using <code>schema.sql</code> file.</li>
+</ol>
+<h3><a id="documentation-structure" class="anchor" href="li3_docs.html#documentation-structure">Documentation structure</a></h3>
+<p>For generating documentation, li3_docs relies on PHP documentation blocks, or <em>docblocks</em>.
+These docblocks can appear above classes, methods, properties, etc., and contain three
+things: a short description, a longer description (often including usage examples), and
+docblock <em>tags</em>, which are denoted by an <code>@</code> symbol, followed by a keyword. A typical
+docblock might look something like this:</p>
+<pre><code class="language-php">	/**
+	 * Contains an instance of the `Request` object with all the details of the HTTP request that
+	 * was dispatched to the controller object. Any parameters captured in routing, such as
+	 * controller or action name are accessible as properties of this object, i.e.
+	 * `$this-&gt;request-&gt;controller` or `$this-&gt;request-&gt;action`.
+	 *
+	 * @see lithium\action\Request
+	 * @var object
+	 */
+	public $request = null;
+</code></pre>
+<p>This docblock documents a class property, and contains a short description and two
+docblock tags. The tags to be used in a docblock vary by what is being documented. A
+property docblock should contain a <code>@var</code> tag that describes what type of value the
+property holds, while methods have a series of <code>@param</code> tags and a <code>@return</code> tag.</p>
+<p>There are also general tags which can be added to any docblock. These include the <code>@see</code>
+tag, which allows you to link to another class, method or property, and the <code>@link</code> tag,
+which allows you to link to an arbitrary URL.</p>
+<h3><a id="markdown-syntax" class="anchor" href="li3_docs.html#markdown-syntax">Markdown syntax</a></h3>
+<p>Docblock descriptions are written in Markdown format, with a few conventions. Namely, any
+code references or identifiers should be enclosed in backticks. This includes namespaces,
+classes, variable names, and keywords like <code>true</code>, <code>false</code> and <code>null</code>. Extended code
+examples should be written enclosed in three sets of backticks, i.e.: <code>`&amp;zwj;</code><code> // Code
+goes here </code>``.</p>
+<h3><a id="indexing" class="anchor" href="li3_docs.html#indexing">Indexing</a></h3>
+<p>The plugin supports both manual-like repositories holding markdown formatted files,
+as well as source-code repositories, which may additionally have so called <em>namespace
+documents</em> (a <code>README.md</code> files nested inside directories).</p>
+<p>The following registers 2 indexes, one for our manual, one for the frameowork API.</p>
+<pre><code class="language-php">use li3_docs\models\Indexes;
+
+Indexes::register([
+	'type' =&gt; 'book',
+	'title' =&gt; 'li₃: The Definitive Guide',
+	'name' =&gt; 'manual',
+	'version' =&gt; '1.x',
+	'path' =&gt; '/tmp/manual_1',
+]);
+
+Indexes::register([
+	'type' =&gt; 'api',
+	'title' =&gt; 'Framework API',
+	'name' =&gt; 'lithium',
+	'version' =&gt; '1.0.x',
+	'path' =&gt; '/tmp/lithium_10',
+	'namespace' =&gt; 'lithium'
+]);
+</code></pre>
+<p>Once registered the index can be regenerated by running the following command.</p>
+<pre><code class="language-php">li3 docs index
+</code></pre>
+<h3><a id="searching" class="anchor" href="li3_docs.html#searching">Searching</a></h3>
+<p>The plugin supports symbol-based search i.e. via ElasticSearch. Search for classes,
+methods and properties. To get all symbols available in all libraries registered with li3
+execute the following method.</p>
+<pre><code class="language-php">use li3_docs\models\Symbols;
+
+foreach (Symbols::harvest($index) as $symbol) {
+	ElasticSearch::addToIndex($symbol-&gt;data());
+}
+
+</code></pre>
+		</section>
+		</div>
+			<hr class="section-separator lightblue">
+		<section class="ns-summary">
+								<h2 class="h-beta">Classes</h2>
+			<ul>
+												<li class="class">
+				<a href="li3_docs/controllers/ApisController.html">li3_docs\controllers\ApisController</a>												<li class="class">
+				<a href="li3_docs/controllers/BooksController.html">li3_docs\controllers\BooksController</a>												<li class="class">
+				<a href="li3_docs/controllers/DocsController.html">li3_docs\controllers\DocsController</a>												<li class="class">
+				<a href="li3_docs/doc/Docblock.html">li3_docs\doc\Docblock</a>												<li class="class">
+				<a href="li3_docs/doc/UorMarkdown.html">li3_docs\doc\UorMarkdown</a>												<li class="class">
+				<a href="li3_docs/doc/Visitor.html">li3_docs\doc\Visitor</a>												<li class="class">
+				<a href="li3_docs/extensions/command/Docs.html">li3_docs\extensions\command\Docs</a>												<li class="class">
+				<a href="li3_docs/extensions/helper/Markdown.html">li3_docs\extensions\helper\Markdown</a>												<li class="class">
+				<a href="li3_docs/models/Indexes.html">li3_docs\models\Indexes</a>												<li class="class">
+				<a href="li3_docs/models/Pages.html">li3_docs\models\Pages</a>												<li class="class">
+				<a href="li3_docs/models/Symbols.html">li3_docs\models\Symbols</a>							</ul>
+																	</section>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

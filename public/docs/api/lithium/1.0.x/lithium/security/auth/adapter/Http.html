@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\security\auth\adapter\Http – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../../versions.html">Versions</a><a href="../../../../../../../../present.html">Presentations</a><a href="../../../../../../../../support.html">Community</a><a href="../../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../../security.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">security</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../../auth.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">auth</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="../adapter.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">adapter</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Http</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../adapter.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Http::__construct().html">__construct()</a>												<li class="method public">
+				<a href="./Http::check().html">check()</a>												<li class="method public">
+				<a href="./Http::set().html">set()</a>												<li class="method public">
+				<a href="./Http::clear().html">clear()</a>												<li class="method protected">
+				<a href="./Http::_basic().html">_basic()</a>												<li class="method protected">
+				<a href="./Http::_digest().html">_digest()</a>												<li class="method protected">
+				<a href="./Http::_writeHeader().html">_writeHeader()</a>												<li class="method protected inherited">
+				<a href="../../../core/Object::_init().html">_init()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::applyFilter()">applyFilter()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::invokeMethod()">invokeMethod()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::__set_state()">__set_state()</a>												<li class="method public inherited">
+				<a href="../../../core/Object::respondsTo().html">respondsTo()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_instance()">_instance()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_filter()">_filter()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_parents()">_parents()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::_stop()">_stop()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./Http::$_classes.html">$_classes</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_config">$_config</a>												<li class="property protected inherited">
+				<a href="../../../core/Object::$_autoConfig.html">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_methodFilters">$_methodFilters</a>												<li class="property protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/Object::$_parents">$_parents</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../../security.html" class="symbol-segment">security</a>\<a href="../../auth.html" class="symbol-segment">auth</a>\<a href="../adapter.html" class="symbol-segment">adapter</a>\Http		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../../../core/Object.html" class="extends__symbol">lithium\core\Object</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The <code>Http</code> adapter provides basic and digest authentication based on the HTTP protocol.
+By default, the adapter uses Http Digest based authentication.</p>
+<pre><code class="language-php">Auth::config(array('name' =&gt; array('adapter' =&gt; 'Http', 'users' =&gt; array('gwoo' =&gt; 'li3'))))
+</code></pre>
+					</div>
+				
+									<div class="description">
+						<p>To use Basic authentication, set the <code>method</code> to basic.</p>
+<pre><code class="language-php">Auth::config(array('name' =&gt; array(
+    'adapter' =&gt; 'Http', 'users' =&gt; array('gwoo' =&gt; 'li3'),
+    'method' =&gt; 'basic'
+)))
+</code></pre>
+<p>When running PHP as a CGI/FCGI PHP doesn't automatically parse the authorization
+header into <code>PHP_AUTH_*</code> headers. Lithium will work arround this issue by looking for
+a <code>HTTP_AUTHORIZATION</code> header instead. When using PHP as a CGI/FCGI in combination
+with Apache you must additionally add the following rewrite rule to your configuration
+in order to make the header available so Lithium can pick it up:</p>
+<pre><code class="language-php">RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</code></pre>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="../../../action/Request.html">lithium\action\Request</a>									<li><a href="../../../action/Request::env.html">lithium\action\Request::env</a>								</ul>
+			</section>
+			
+						<section id="links">
+				<h3 class="h-beta">Links</h3>
+				<ul class="links">
+									<li><a href="http://tools.ietf.org/html/rfc2068#section-14.8" target="new">http://tools.ietf.org/html/rfc2068#section-14.8</a>								</ul>
+			</section>
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Http extends \lithium\core\Object {
+
+	/**
+	 * Dynamic class dependencies.
+	 *
+	 * @var array Associative array of class names &amp; their namespaces.
+	 */
+	protected $_classes = array(
+		&#039;auth&#039; =&gt; &#039;lithium\net\http\Auth&#039;
+	);
+
+	/**
+	 * Constructor.
+	 *
+	 * @param array $config
+	 *        - `&#039;method&#039;`: default: `digest` options: `basic|digest`
+	 *        - `&#039;realm&#039;`: default: `Protected by Lithium`
+	 *        - `&#039;users&#039;`: the users to permit. key =&gt; value pair of username =&gt; password
+	 * @return void
+	 */
+	public function __construct(array $config = array()) {
+		$realm = basename(Libraries::get(true, &#039;path&#039;));
+		$defaults = array(
+			&#039;method&#039; =&gt; &#039;digest&#039;, &#039;realm&#039; =&gt; $realm, &#039;users&#039; =&gt; array()
+		);
+		parent::__construct($config + $defaults);
+	}
+
+	/**
+	 * Called by the `Auth` class to run an authentication check against the HTTP data using the
+	 * credentials in a data container (a `Request` object), and returns an array of user
+	 * information on success, or `false` on failure.
+	 *
+	 * @param object $request A env container which wraps the authentication credentials used
+	 *               by HTTP (usually a `Request` object). See the documentation for this
+	 *               class for further details.
+	 * @param array $options Additional configuration options. Not currently implemented in this
+	 *              adapter.
+	 * @return array Returns an array containing user information on success, or `false` on failure.
+	 */
+	public function check($request, array $options = array()) {
+		$method = &quot;_{$this-&gt;_config[&#039;method&#039;]}&quot;;
+		return $this-&gt;{$method}($request);
+	}
+
+	/**
+	 * A pass-through method called by `Auth`. Returns the value of `$data`, which is written to
+	 * a user&#039;s session. When implementing a custom adapter, this method may be used to modify or
+	 * reject data before it is written to the session.
+	 *
+	 * @param array $data User data to be written to the session.
+	 * @param array $options Adapter-specific options. Not implemented in the `Form` adapter.
+	 * @return array Returns the value of `$data`.
+	 */
+	public function set($data, array $options = array()) {
+		return $data;
+	}
+
+	/**
+	 * Called by `Auth` when a user session is terminated. Not implemented in the `Form` adapter.
+	 *
+	 * @param array $options Adapter-specific options. Not implemented in the `Form` adapter.
+	 * @return void
+	 */
+	public function clear(array $options = array()) {}
+
+	/**
+	 * Handler for HTTP Basic Authentication
+	 *
+	 * @param \lithium\action\Request $request
+	 * @return void|array
+	 */
+	protected function _basic($request) {
+		$users = $this-&gt;_config[&#039;users&#039;];
+		$username = $request-&gt;env(&#039;PHP_AUTH_USER&#039;);
+		$auth = $this-&gt;_classes[&#039;auth&#039;];
+		$basic = $auth::encode($username, $request-&gt;env(&#039;PHP_AUTH_PW&#039;));
+		$encoded = array(&#039;response&#039; =&gt; null);
+
+		if (isset($users[$username])) {
+			$encoded = $auth::encode($username, $users[$username]);
+		}
+		if ($basic[&#039;response&#039;] !== $encoded[&#039;response&#039;]) {
+			$this-&gt;_writeHeader(&quot;WWW-Authenticate: Basic realm=\&quot;{$this-&gt;_config[&#039;realm&#039;]}\&quot;&quot;);
+			return;
+		}
+		return compact(&#039;username&#039;, &#039;password&#039;);
+	}
+
+	/**
+	 * Handler for HTTP Digest Authentication
+	 *
+	 * @param \lithium\action\Request $request
+	 * @return boolean|array
+	 */
+	protected function _digest($request) {
+		$username = $password = null;
+		$auth = $this-&gt;_classes[&#039;auth&#039;];
+		$data = $auth::decode($request-&gt;env(&#039;PHP_AUTH_DIGEST&#039;));
+		$data[&#039;realm&#039;] = $this-&gt;_config[&#039;realm&#039;];
+		$data[&#039;method&#039;] = $request-&gt;method;
+		$users = $this-&gt;_config[&#039;users&#039;];
+
+		if (!empty($data[&#039;username&#039;]) &amp;&amp; !empty($users[$data[&#039;username&#039;]])) {
+			$username = $data[&#039;username&#039;];
+			$password = $users[$data[&#039;username&#039;]];
+		}
+		$encoded = $auth::encode($username, $password, $data);
+
+		if ($encoded[&#039;response&#039;] !== $data[&#039;response&#039;]) {
+			$nonce = uniqid();
+			$opaque = md5($data[&#039;realm&#039;]);
+			$message = &quot;WWW-Authenticate: Digest realm=\&quot;{$data[&#039;realm&#039;]}\&quot;,qop=\&quot;auth\&quot;,&quot;;
+			$message .= &quot;nonce=\&quot;{$nonce}\&quot;,opaque=\&quot;{$opaque}\&quot;&quot;;
+			$this-&gt;_writeHeader($message);
+			return false;
+		}
+		return compact(&#039;username&#039;, &#039;password&#039;);
+	}
+
+	/**
+	 * Helper method for writing headers. Mainly used to override the output while testing.
+	 *
+	 * @param string $string the string the send as a header
+	 * @return void
+	 */
+	protected function _writeHeader($string) {
+		header($string, true);
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\core\Environment::is() – Framework API v1.2.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.2.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.2.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.2.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.2.x/lithium/core" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">core</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.2.x/lithium/core/Environment" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Environment</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">is()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.2.x/lithium/core/Environment" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.2.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.2.x/lithium/core" class="symbol-segment">core</a>\<a href="/docs/api/lithium/1.2.x/lithium/core/Environment" class="symbol-segment">Environment</a>::is()		</h1>
+
+		<section class="under">
+															<div class="tags">
+													<span class="tag public">public</span>
+													<span class="tag">static</span>
+								<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>A simple boolean detector that can be used to test which environment the application is
+running under. For example <code>Environment::is('development')</code> will return <code>true</code> if
+<code>'development'</code> is, in fact, the current environment.</p>
+					</div>
+				
+									<div class="description">
+						<p>This method also handles how the environment is detected at the beginning of the request.</p>
+<h4><a id="custom-detection" class="anchor" href="#custom-detection">Custom Detection</a></h4>
+<p>While the default detection rules are very simple (if the <code>'SERVER_ADDR'</code> variable is set to
+<code>127.0.0.1</code>, the environment is assumed to be <code>'development'</code>, or if the string <code>'test'</code> is
+found anywhere in the host name, it is assumed to be <code>'test'</code>, and in all other cases it
+is assumed to be <code>'production'</code>), you can define your own detection rule set easily using a
+closure that accepts an instance of the <code>Request</code> object, and returns the name of the correct
+environment, as in the following example:</p>
+<pre><code class="language-php">
+In the above example, the user-specified closure takes in a `Request` object, and using the
+server data which it encapsulates, returns the correct environment name as a string.
+
+#### Host Mapping
+
+The most common use case is to set the environment depending on host name. For convenience,
+the `is()` method also accepts an array that matches host names to environment names, where
+each key is an environment, and each value is either an array of valid host names, or a
+regular expression used to match a valid host name.
+
+``` embed:lithium\tests\cases\core\EnvironmentTest::testDetectionWithArrayMap(1-5) ```
+
+In this example, a regular expression is being used to match local domains
+(i.e. `localhost`), as well as the built-in `.console` domain, for console requests. Note
+that in the console, the environment can always be overridden by specifying the `--env`
+option.
+
+Then, one or more host names are matched up to `'test'` and `'staging'`, respectively. Note
+that no rule is present for production: this is because `'production'` is the default value
+if no other environment matches.
+
+</code></pre>
+					</div>
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">mixed</span>
+							<code class="name">$detect</code>
+															<span class="parameter">
+									<p>Either the name of an environment to check against the current, i.e.
+<code>'development'</code> or <code>'production'</code>, or a closure which <code>Environment</code> will use
+to determine the current environment name, or an array mapping environment names
+to host names.</p>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">boolean</span>
+									<span class="return">
+						<p>If <code>$detect</code> is a string, returns <code>true</code> if the current environment matches
+the value of <code>$detect</code>, or <code>false</code> if no match. If used to set a custom detector,
+returns <code>null</code>.</p>
+					</span>
+							</section>
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public static function is($detect) {
+		if (is_callable($detect)) {
+			static::$_detector = $detect;
+		}
+		if (!is_array($detect)) {
+			return (static::$_current == $detect);
+		}
+		static::$_detector = function($request) use ($detect) {
+			if ($request-&gt;env || $request-&gt;command == &#039;test&#039;) {
+				return $request-&gt;env ?: &#039;test&#039;;
+			}
+			$host = method_exists($request, &#039;get&#039;) ? $request-&gt;get(&#039;http:host&#039;) : &#039;.console&#039;;
+
+			foreach ($detect as $environment =&gt; $hosts) {
+				if (is_string($hosts) &amp;&amp; preg_match($hosts, $host)) {
+					return $environment;
+				}
+				if (is_array($hosts) &amp;&amp; in_array($host, $hosts)) {
+					return $environment;
+				}
+			}
+			return &quot;production&quot;;
+		};
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

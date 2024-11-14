@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>LSR 1 Documenting – Specifications v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="https://li3.me/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="https://li3.me/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="https://li3.me/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="https://li3.me/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="https://li3.me/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="https://li3.me/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="https://li3.me/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="https://li3.me/docs" class="active">Documentation</a><a href="https://li3.me/versions">Versions</a><a href="https://li3.me/present">Presentations</a><a href="https://li3.me/support">Community</a><a href="https://li3.me/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="https://li3.me/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="https://li3.me/docs/book/specs/1.x" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Specifications (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="https://li3.me/docs/book/specs/1.x/accepted" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Accepted</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">LSR 1 Documenting</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="https://li3.me/docs/book/specs/1.x/draft" class="">Drafts</a><ul><li><a href="https://li3.me/docs/book/specs/1.x/draft/caching" class="">Caching</a><li><a href="https://li3.me/docs/book/specs/1.x/draft/ajax" class="">Ajax</a><li><a href="https://li3.me/docs/book/specs/1.x/draft/logging" class="">Logging</a><li><a href="https://li3.me/docs/book/specs/1.x/draft/formulas" class="">Formulas</a><li><a href="https://li3.me/docs/book/specs/1.x/draft/translating" class="">Translating</a><li><a href="https://li3.me/docs/book/specs/1.x/draft/documentation" class="">Documentation</a><li><a href="https://li3.me/docs/book/specs/1.x/draft/visual-identity" class="">Visual Identity</a><li><a href="https://li3.me/docs/book/specs/1.x/draft/error-handling" class="">Error Handling</a><li><a href="https://li3.me/docs/book/specs/1.x/draft/access" class="">Access</a><li><a href="https://li3.me/docs/book/specs/1.x/draft/globalization" class="">Globalization</a></ul><li><a href="https://li3.me/docs/book/specs/1.x/accepted" class="">Accepted</a><ul><li><a href="LSR-1-documenting.html" class="active">LSR 1 Documenting</a><li><a href="LSR-2-testing.html" class="">LSR 2 Testing</a><li><a href="LSR-0-coding.html" class="">LSR 0 Coding</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="lsr-1-documenting" class="anchor" href="LSR-1-documenting.html#lsr-1-documenting">LSR-1 Documenting</a></h1>
+<h2><a id="abstract" class="anchor" href="LSR-1-documenting.html#abstract">Abstract</a></h2>
+<p>For checking if the codebase complies with the standards we make use of the <code>Syntax</code> command which comes with the <a href="https://github.com/UnionOfRAD/li3_qa">QA plugin for li3</a>. Rules which have a corresponding check in li3 QA are marked with the <code>◌</code> symbol.</p>
+<h2><a id="general" class="anchor" href="LSR-1-documenting.html#general">General</a></h2>
+<p>All documentation must be written in English and must follow the basic rules of punctuation. <strong>Sentences usually end with a period.</strong> Sentences are separated by one space from each other. The first letter of a word must be capitalized if it's the beginning of a sentence, following a period or exclamation mark. Paragraphs are in general separated by one empty line. No indentation of the first paragraph line must occur.</p>
+<p>Markdown syntax can be used in all docblocks. As a rule of thumb you should wrap in single backticks if you're talking about code. Please note that <code>null</code>, <code>false</code> and <code>true</code> must always be wrapped in single backticks.</p>
+<p>The <strong>maximum line length of 100 characters</strong> which applies to code, of course applies to documentation, too.</p>
+<p><strong>Do not use tabs within dockblocks.</strong> Use spaces instead.</p>
+<h2><a id="short-and-long-description" class="anchor" href="LSR-1-documenting.html#short-and-long-description">Short and Long Description</a></h2>
+<p>All properties and methods <strong>must at least have a short description</strong>.
+The short description must not span more than 3 lines and may be followed by a more extensive description, which is separated by one empty line from the short description.</p>
+<pre><code class="language-php">/**
+ * The required short description.
+ *
+ * The optional long description dictum ante quis enim
+ * luctus eget auctor leo sagittis.
+[...]
+</code></pre>
+<h2><a id="examples" class="anchor" href="LSR-1-documenting.html#examples">Examples</a></h2>
+<h3><a id="usage" class="anchor" href="LSR-1-documenting.html#usage">Usage</a></h3>
+<p>Usage examples can be given as part of a long description but should be as short and to the point as possible. They should start with <code>Usage:</code>,  <code>For example:</code> or something comparable followed by the code block which is wrapped in three braces (<code>{</code> and <code>}</code>). Several example blocks can be used to group examples logically and must be separated by a blank line.</p>
+<pre><code class="language-php">[...]
+ * Usage:
+</code></pre>
+<ul>
+<li>Foo::bar();</li>
+<li>// returns ['a', 'b']
+ *</li>
+<li>Foo::out('xyz'); // echoes xyz</li>
+<li><pre><code class="language-php"> *
+</code></pre>
+</li>
+<li>Extended usage:</li>
+<li><pre><code class="language-php">
+</code></pre>
+</li>
+<li>Foo::run('fast'); // returns true</li>
+<li><pre><code class="language-php">[..]
+</code></pre>
+</li>
+</ul>
+<p>By convention an example consists of the code calling i.e. the method and the result of that call. Results are always commented with two slashes and can either be returned (<code>returns</code>), echoed (<code>echoes</code>) or one or the other.</p>
+<h3><a id="addresses" class="anchor" href="LSR-1-documenting.html#addresses">Addresses</a></h3>
+<p>For all example URL and mail addresses use <em>example.org</em>, for example:</p>
+<ul>
+<li>Email: <em>someone@example.org</em></li>
+<li>WWW: <em><a href="http://example.org">http://example.org</a></em></li>
+<li>FTP: <em><a href="ftp://ftp.example.org">ftp://ftp.example.org</a></em></li>
+</ul>
+<h2><a id="parameters-et-al" class="anchor" href="LSR-1-documenting.html#parameters-et-al">Parameters et. al.</a></h2>
+<p>Each tag should have a description. If that description spans multiple lines the <strong>wrapped lines must be indented using 4 spaces</strong>.</p>
+<pre><code class="language-php">[...]
+ * @return array Nunc rutrum luctus velit, eu mattis quam aliquet quis. Morbi pulvinar
+ *         posuere neque, eget consectetur nisi tristique nec. Cras in tellus orci,
+ *         ac venenatis magna.
+[...]
+</code></pre>
+<p>The <em>options</em> parameter is a special case and should be described by listing all valid keys it may take. Most often the description starts with <em>Valid options are:</em> but may also start with a more extensive description.</p>
+<pre><code class="language-php">[...]
+ * @param array $options This array may contain groups of settings used to override
+ *        the default loader initialization for both the framework and the application.
+ *        For details on allowed settings, see `Libraries::add()`. Valid options are:
+ *        - `'lithium'`: Overrides base path and class load settings for core framework.
+ *        - `'app'`: Overrides base path and class load settings for application.
+[...]
+</code></pre>
+<p>If you need to specify multiple types use the pipe symbol to separate up to 2 different types (i.e. <code>boolean|array</code>), if there are more than 2 two types possible use mixed.</p>
+<p>Don't use <code>@access</code> and <code>@static</code> tags as they are not necessary.</p>
+<p>Don't use inline tags. Put links and references on their own lines i.e. below the return tag.</p>
+<p>The <code>@author</code> tag must not be used in core code and usage in i.e. plugins is discouraged. An <code>AUTHORS.txt</code> file is a much better place to collect the names of the contributers as it's less "code territory carving".</p>
+<h3><a id="basic" class="anchor" href="LSR-1-documenting.html#basic">Basic</a></h3>
+<ul>
+<li><a href="http://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_tags.var.pkg.html">@var</a></li>
+<li>Syntax: <code>@var type Description.</code></li>
+<li><a href="http://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_tags.param.pkg.html">@param</a></li>
+<li>Syntax: <code>@param type $parameter Description.</code></li>
+<li>If the parameter accepts null as a value use void as type.</li>
+<li><a href="http://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_tags.return.pkg.html">@return</a></li>
+<li>Syntax: <code>@return type Description.</code></li>
+<li>If the method don't return anything specify void as type.</li>
+<li>If the documented object is a method you must use this tag.</li>
+<li>@throws</li>
+<li>Syntax: <code>@throws \qualified\Class Description.</code></li>
+</ul>
+<h3><a id="other" class="anchor" href="LSR-1-documenting.html#other">Other</a></h3>
+<ul>
+<li><a href="http://manual.phpdoc.org/HTMLframesConverter/phpdoc.de/phpDocumentor/tutorial_tags.link.pkg.html">@link</a></li>
+<li>For <em>external</em> links.</li>
+<li><a href="http://manual.phpdoc.org/HTMLframesConverter/phpdoc.de/phpDocumentor/tutorial_tags.see.pkg.html">@see</a></li>
+<li>For <em>internal</em> links.</li>
+<li>@filter</li>
+<li>Flag indicating that a method is filterable.</li>
+<li>Use only in docblocks for methods.</li>
+<li><a href="http://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_tags.deprecated.pkg.html">@deprecated</a></li>
+<li>Flag indicating that a method or property is deprecated.</li>
+<li><a href="http://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_tags.todo.pkg.html">@todo</a></li>
+<li>Used very sparsely or during early development stages.</li>
+<li>Tag itself is always lowercased.</li>
+<li>Is used instead of the <code>@fixme</code> tag.</li>
+<li><a href="http://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_tags.method.pkg.html">@method</a></li>
+<li>Used in the docblock of a class to show it's magic methods</li>
+<li>Usage: <code>@method returntype function_name(type $param1[ = ][, type $param2[ = ]...]) [description]</code></li>
+<li><a href="http://manual.phpdoc.org/HTMLSmartyConverter/PHP/phpDocumentor/tutorial_tags.property.pkg.html">@property</a></li>
+<li>Used in the docblock of a class to show it's magic properties</li>
+<li>Usage: <code>@property type $varname [description]</code></li>
+</ul>
+<h3><a id="variable-types" class="anchor" href="LSR-1-documenting.html#variable-types">Variable Types</a></h3>
+<p>Variable types which are used in DocBlocks. These types (with a few exceptions) are also used for typecasting.</p>
+<ul>
+<li><code>integer</code> Integer type variable (non-floating-point positive or negative number).</li>
+<li><code>float</code> Float type (point number).</li>
+<li><code>boolean</code> Logical type (true or false).</li>
+<li><code>string</code> String type (any value in &quot;&quot; or &#039; &#039;).</li>
+<li><code>array</code> Array type.</li>
+<li><code>object</code> Object type.</li>
+<li><code>resource</code> Resource type (for example, the result of mysql_connect()).</li>
+<li><code>callback</code> Used for anonymous functions, or objects that implement <code>__invoke()</code>, or array style callbacks.</li>
+<li><code>mixed</code> Pseudo type with undefined (or multiple) types.</li>
+<li><code>void</code> Pseudo type (i.e. null, a function returns nothing)</li>
+</ul>
+<p>Remember that when you specify the type as <code>mixed</code>, you should indicate whether it is unknown, or what the possible types are.</p>
+<p>If a function returns nothing or explicitly <code>null</code>, <code>void</code> is used to indicate this.</p>
+<p>For more information on pseudo types see the <a href="http://de2.php.net/manual/en/language.pseudo-types.php">PHP documentation</a>.</p>
+<h3><a id="order-of-tags" class="anchor" href="LSR-1-documenting.html#order-of-tags">Order of Tags</a></h3>
+<p>The rule of thumb is that code related tags should be located close to the actual code and documentation related tags close to the documenting text.</p>
+<p>Tags should be ordered according to the following list.<sup>◌</sup></p>
+<ul>
+<li><code>@link</code></li>
+<li><code>@see</code></li>
+<li><code>@params</code></li>
+<li><code>@return</code></li>
+</ul>
+<p>The discussion about the order of tags can be reviewed <a href="http://li3.me/bot/view/li3-core/2010-01-08">here</a>.</p>
+<h2><a id="referring" class="anchor" href="LSR-1-documenting.html#referring">Referring</a></h2>
+<p>When referring to methods always use the parentheses i.e. <code>run()</code>. Variables should be prepended with the dollar symbol i.e. <code>$enabled</code>.</p>
+<p>When referring to a class or a parameter of the documented object use unqualified notation and wrap in backticks. When referring to classes, methods or properties in a <em>see</em> tag use the fully qualified notation omitting the leading namespace separator.</p>
+<pre><code class="language-php">[...]
+ * You better use the `Cache` class.
+ *
+ * The `$bubbles` parameter of this method does some crazy things.
+[...]
+ * @see lithium\util\Inflector::pluralize()
+[...]
+</code></pre>
+<h2><a id="formatting-of-comments" class="anchor" href="LSR-1-documenting.html#formatting-of-comments">Formatting of Comments</a></h2>
+<p>The comment block of a DocBlock must begin with <code>/**</code>  and close with <code>*/</code>. All lines between the first and the last begin with an asterisk. The following example shows how the asterisk must be aligned.</p>
+<pre><code class="language-php">/**
+ * First line.
+ *
+ * @return void Last line.
+ */
+</code></pre>
+<p><strong>The following section is under discussion:</strong></p>
+<p>Non-DocBlock comment blocks begin with <code>/*</code>and are otherwise formatted the same way as DocBlocks. The very first line (the one with the <code>/*</code>) must be left empty.</p>
+<pre><code class="language-php">/*
+ * First line.
+ */
+</code></pre>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="https://li3.me/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

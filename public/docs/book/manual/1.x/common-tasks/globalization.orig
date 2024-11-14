@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Globalization – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/book/manual/1.x" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/book/manual/1.x/common-tasks" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Common Tasks</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Globalization</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="/docs/book/manual/1.x/common-tasks" class="">Common Tasks</a><ul><li><a href="/docs/book/manual/1.x/common-tasks/logging" class="">Logging</a><li><a href="/docs/book/manual/1.x/common-tasks/plugins" class="">Plugins</a><li><a href="/docs/book/manual/1.x/common-tasks/error-handling" class="">Error Handling</a><li><a href="/docs/book/manual/1.x/common-tasks/caching" class="">Caching</a><li><a href="/docs/book/manual/1.x/common-tasks/filters" class="">Filters</a><li><a href="/docs/book/manual/1.x/common-tasks/etags" class="">Etags</a><li><a href="/docs/book/manual/1.x/common-tasks/globalization" class="active">Globalization</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-authentication" class="">Simple Authentication</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-auth-user" class="">Simple Auth User</a><li><a href="/docs/book/manual/1.x/common-tasks/console-applications" class="">Console Applications</a></ul><li><a href="/docs/book/manual/1.x/appendices" class="">Appendices</a><ul><li><a href="/docs/book/manual/1.x/appendices/faqs" class="">FAQs</a><li><a href="/docs/book/manual/1.x/appendices/using-in-other-applications" class="">Using In Other Applications</a></ul><li><a href="/docs/book/manual/1.x/quickstart" class="">Quickstart</a><li><a href="/docs/book/manual/1.x/controllers" class="">Controllers</a><ul><li><a href="/docs/book/manual/1.x/controllers/actions" class="">Actions</a><li><a href="/docs/book/manual/1.x/controllers/flow-control" class="">Flow Control</a><li><a href="/docs/book/manual/1.x/controllers/parameters" class="">Parameters</a><li><a href="/docs/book/manual/1.x/controllers/type-rendering-detection" class="">Type Rendering Detection</a><li><a href="/docs/book/manual/1.x/controllers/routing" class="">Routing</a></ul><li><a href="/docs/book/manual/1.x/installation" class="">Installation</a><ul><li><a href="/docs/book/manual/1.x/installation/requirements" class="">Requirements</a><li><a href="/docs/book/manual/1.x/installation/troubleshooting" class="">Troubleshooting</a><li><a href="/docs/book/manual/1.x/installation/web-servers" class="">Web Servers</a></ul><li><a href="/docs/book/manual/1.x/architecture" class="">Architecture</a><ul><li><a href="/docs/book/manual/1.x/architecture/file-structure" class="">File Structure</a><li><a href="/docs/book/manual/1.x/architecture/response-lifecycle" class="">Response Lifecycle</a><li><a href="/docs/book/manual/1.x/architecture/aop" class="">AOP</a><li><a href="/docs/book/manual/1.x/architecture/mvc" class="">MVC</a><li><a href="/docs/book/manual/1.x/architecture/objects" class="">Objects</a></ul><li><a href="/docs/book/manual/1.x/quality-code" class="">Quality Code</a><ul><li><a href="/docs/book/manual/1.x/quality-code/fixtures" class="">Fixtures</a><li><a href="/docs/book/manual/1.x/quality-code/analysis" class="">Analysis</a><li><a href="/docs/book/manual/1.x/quality-code/testing" class="">Testing</a><li><a href="/docs/book/manual/1.x/quality-code/security" class="">Security</a></ul><li><a href="/docs/book/manual/1.x/configuration" class="">Configuration</a><ul><li><a href="/docs/book/manual/1.x/configuration/environment" class="">Environment</a><li><a href="/docs/book/manual/1.x/configuration/bootstrapping" class="">Bootstrapping</a><li><a href="/docs/book/manual/1.x/configuration/third-party-libraries" class="">Third Party Libraries</a></ul><li><a href="/docs/book/manual/1.x/views" class="">Views</a><ul><li><a href="/docs/book/manual/1.x/views/layouts" class="">Layouts</a><li><a href="/docs/book/manual/1.x/views/elements" class="">Elements</a><li><a href="/docs/book/manual/1.x/views/helpers" class="">Helpers</a><li><a href="/docs/book/manual/1.x/views/static-content" class="">Static Content</a><li><a href="/docs/book/manual/1.x/views/auto-escaping" class="">Auto Escaping</a></ul><li><a href="/docs/book/manual/1.x/models" class="">Models</a><ul><li><a href="/docs/book/manual/1.x/models/mongodb" class="">Mongodb</a><li><a href="/docs/book/manual/1.x/models/meta" class="">Meta</a><li><a href="/docs/book/manual/1.x/models/relationships" class="">Relationships</a><li><a href="/docs/book/manual/1.x/models/saving" class="">Saving</a><li><a href="/docs/book/manual/1.x/models/using-data-sources" class="">Using Data Sources</a><li><a href="/docs/book/manual/1.x/models/adding-functions" class="">Adding Functions</a><li><a href="/docs/book/manual/1.x/models/data-mutation" class="">Data Mutation</a><li><a href="/docs/book/manual/1.x/models/connections" class="">Connections</a><li><a href="/docs/book/manual/1.x/models/creating-data-sources" class="">Creating Data Sources</a><li><a href="/docs/book/manual/1.x/models/querying" class="">Querying</a><li><a href="/docs/book/manual/1.x/models/validation" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="globalization-tutorial" class="anchor" href="#globalization-tutorial">Globalization Tutorial</a></h1>
+<h2><a id="introduction" class="anchor" href="#introduction">Introduction</a></h2>
+<p>Globalization, or <a href="https://secure.wikimedia.org/wikipedia/en/wiki/G11n"> g11n</a>, is a term that combines the features found in internationalization and localization. Globalization makes it possible to adapt a single piece of software to different languages, scripts and regional language differences. This tutorial describes the approach li3 takes towards globalizing software.</p>
+<p>Globalization in li3 is a core framework feature, and li3 has been developed with g11n in mind from the start.</p>
+<h2><a id="bootstrapping-g11n" class="anchor" href="#bootstrapping-g11n">Bootstrapping g11n</a></h2>
+<p>Enabling g11n in your application starts by loading it in the li3 bootstrap process. Start by uncommenting the g11n line in <code>bootstrap.php</code>. The <code>g11n.php</code> file contains your application's globalization rules, including inflections, transliterations, localized validation, and how localized text should be loaded.</p>
+<pre><code class="language-php">require __DIR__ . '/bootstrap/g11n.php';
+</code></pre>
+<h2><a id="creating-default-locale-settings" class="anchor" href="#creating-default-locale-settings">Creating Default Locale Settings</a></h2>
+<p>The settings for the current locale (and available locales) are kept as environment settings inside <code>g11n.php</code>. This allows for a central place to switch, set, and retrieve g11n-related settings. It also makes very clear what the current locale settings are.</p>
+<p>Here, you can decide which locale is your default effective locale, and also which locales your application will support. Do so by defining environment variables like so:</p>
+<pre><code class="language-php">Environment::set('development', [
+	'locale' =&gt; 'en', // the default effective locale
+	'locales' =&gt; ['en' =&gt; 'English'] // locales available for your application
+]);
+</code></pre>
+<h2><a id="locale-detection" class="anchor" href="#locale-detection">Locale Detection</a></h2>
+<p>The <em>effective locale</em> depends on the availability of globalized application content and the locale preferred by the client.</p>
+<p><strong>But how do you identify the preferred locale(s)?</strong></p>
+<h3><a id="general-approach" class="anchor" href="#general-approach">General Approach</a></h3>
+<p>There are two main ways to make guesses about which locale to make effective. First, you can guess based on the name of the resource (parts of the request URL). Second, you can make some informed guesses based on information you receive from the client (user agent information, etc.).</p>
+<p>In order to keep the process as transparent as possible, we recommend inspecting resources first, and falling back on client information as necessary.</p>
+<h3><a id="technical-implementation" class="anchor" href="#technical-implementation">Technical Implementation</a></h3>
+<p>The detection of the effective locale works differently for controller action and console application requests.</p>
+<p>For controller action requests, the <code>Locale</code> class parses the locales contained within the <code>Accept-Language</code> header (which is sent by the user agent on behalf of the user). For console requests, the preferred locale is retrieved by looking at certain environment settings.</p>
+<p>While determining the effective locale in an semi-automatic way works well for console requests, it is a less successful approach with controller action requests. As such, we recommend using pieces of the request URL to set the effective locale. The side benefit is that the locale is also in plain view to the user, making the decision completely transparent. We'll cover more on localized routing in a bit, but for now, understand that URL-based g11n is going to be your best bet as far as user experience goes.</p>
+<h3><a id="g11n-filters" class="anchor" href="#g11n-filters">g11n Filters</a></h3>
+<p>One of the last things that <code>g11n.php</code> does in the bootstrap process is apply filters to both the console command and controller action dispatchers. Here is the perfect place to decide how we set and switch between locales based on the information we have from the request and user agent.</p>
+<pre><code class="language-php">Filters::apply(Dispatcher::class, '_callable', function($params, $next) {
+	if (!$params['request']-&gt;locale()) {
+		$params['request']-&gt;locale(Locale::preferred($params['request']));
+	}
+	Environment::set(true, ['locale' =&gt; $params['request']-&gt;locale()]);
+
+	return $next($params);
+});
+</code></pre>
+<div class="note note-info">This example uses new-style filters, available with 1.1.</div>
+<p>This filter does the following:</p>
+<ol>
+<li>Checks to see if the request explicitly states the locale to use</li>
+<li>In case it does not, detects the locale from request</li>
+<li>Sets the effective locale from the request</li>
+</ol>
+<p>Generally speaking, if the preferred locale is available, then it is set as the effective locale. If it's not, the next locale accepted by the client is matched against the available ones. If none of the accepted locales matches, the detection fails.</p>
+<p>While this setup should meet most g11n needs, feel free to implement your own according to the needs of your application. For example, you could alter this filter to search an IP-to-Geo database, and set the effective locale based on the location of the IP address of the request.</p>
+<h2><a id="localized-routing" class="anchor" href="#localized-routing">Localized routing</a></h2>
+<p>There is <a href="http://h3h.net/2007/01/designing-urls-for-multilingual-web-sites/"> a great deal of thought</a> on the different approaches to embedding locale information in URLs. While each have their respective advantages, the li3 g11n framework uses prefixed routes.</p>
+<p>A localized route is configured by connecting a continuation route. This example shows how such a route looks like.</p>
+<p>Once the route has been connected, all the other application routes become localized and may now carry a locale:</p>
+<pre><code class="language-php">Router::connect('/{:locale:[a-zA-Z_]+}/{:args}', [], ['continue' =&gt; true]);
+</code></pre>
+<p>Once this is in place, our application's routes will illustrate the effective locale, i.e.:</p>
+<ul>
+<li><code>http://example.com/en/controller/action/param1</code></li>
+<li><code>http://example.com/fr/controller/action/param1</code></li>
+</ul>
+<p>As a final example, here's a bit of view code you could use to switch between locales:</p>
+<pre><code class="language-html">&lt;?php use lithium\core\Environment ?&gt;
+ &lt;div id="locale-navigation"&gt;
+	&lt;ul&gt;
+		&lt;?php foreach (Environment::get('locales') as $locale =&gt; $name): ?&gt;
+			&lt;li&gt;&lt;?= $this-&gt;html-&gt;link($name, compact('locale') + $this-&gt;_request-&gt;params) ?&gt;&lt;/li&gt;
+		&lt;?php endforeach ?&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<h2><a id="globalization-catalog-adapters" class="anchor" href="#globalization-catalog-adapters">Globalization Catalog Adapters</a></h2>
+<p>G11n data is not just translated messages: it's informed validation rules, date/number/currency formats, and a lot more. Data is grouped into four different kinds of categories: <em>inflection</em> (not yet used), <em>validation</em>, <em>message</em> and <em>list</em>.</p>
+<p>The <code>Catalog</code> is a class that allows us to retrieve and store globalized data, providing low-level functionality to other classes. Because it extends <code>Adaptable</code>, its interface is similar to classes like <code>Session</code> or <code>Cache</code>, and is extensible through adapters.</p>
+<p>The class is able to aggregate globalized data from different sources, which allows a developer to complement sparse data. Example usage:</p>
+<pre><code class="language-php">use lithium\g11n\Catalog;
+
+// Configures the runtime source.
+Catalog::config(['runtime' =&gt; ['adapter' =&gt; 'Memory']]);
+
+$data = [
+	'laboratory' =&gt; 'Labor',
+	'life' =&gt; 'Leben'
+];
+Catalog::write('message', 'de', $data, ['name' =&gt; 'runtime']);
+
+// Reads from the runtime g11n configuration
+Catalog::read('runtime', 'message', 'de');
+
+// Results for the `de_DE` locale are merged with those for `de`
+Catalog::read('runtime', 'message', 'de_DE');
+
+// Reads from just the runtime source.
+Catalog::read('runtime', 'message', 'de', ['name' =&gt; 'runtime']);
+</code></pre>
+<p>By default, the g11n bootstrap configures a <code>runtime</code> (using the <code>Memory</code> adapter) and a <code>lithium</code> catalog (using the php adapter for validations and translation shipped with the framework).</p>
+<p>For an ad-hoc solution (i.e. translating API messages) it's workable to utilize the <code>runtime</code> catalog, but most other use cases will require storing translated messages in files.</p>
+<p>In order to allow the application to read write gettext resource files (PO and MO) we configure <code>Catalog</code> as follows:</p>
+<pre><code class="language-php">Catalog::config([
+	'runtime' =&gt; ['adapter' =&gt; 'Memory'],
+	'app' =&gt; ['adapter' =&gt; 'Gettext', 'path' =&gt; LITHIUM_APP_PATH . '/resources/g11n'],
+	'lithium' =&gt; [
+		'adapter' =&gt; 'Php',
+		'path' =&gt; LITHIUM_LIBRARY_PATH . '/lithium/g11n/resources/php'
+	]
+] + Catalog::config());
+</code></pre>
+<h3><a id="available-catalog-adapters" class="anchor" href="#available-catalog-adapters">Available Catalog Adapters</a></h3>
+<p>The <strong>gettext adapter</strong> reads and writes PO and MO files. While the current implementation of gettext is not thread safe, this PHP only implementation is thread safe and allows reading binary MO files independent of the machine it was created on (and its endian-ness). Both 32bit and 64bit systems are also supported.
+ <em>Note:</em> Currently contexts are not supported.</p>
+<p>The <strong>memory adapter</strong> allows for writing and reading globalized data needed at runtime, and as such is helpful in testing.</p>
+<p>The <strong>code adapter</strong> extracts message IDs for creating message catalog templates from source code. PHP is supported through a parser (using the built-in tokenizer) but future support for other formats (i.e. JavaScript) is possible too.</p>
+<p>The <strong>php adapter</strong> allows for reading from files containing data in PHP format.</p>
+<pre><code class="language-php">return ['the artists' =&gt; 'die Künstler'];
+</code></pre>
+<h3><a id="g11n-data-storage" class="anchor" href="#g11n-data-storage">G11n Data Storage</a></h3>
+<p>Nearly all adapters require a path to a directory containing globalized data. Data is conventionally stored in the following default locations:</p>
+<ul>
+<li><code>libraries/lithium/g11n/resources[/{php,po}]</code></li>
+<li><code>resources/g11n[/{php,po}]</code></li>
+<li><code>plugins/PLUGIN/resources/g11n[/{php,po}]</code></li>
+</ul>
+<p>Data can either be stored directly below <code>resources/g11n</code> or in a subdirectory. If data is stored in a subdirectory, adapters expect a <code>php</code> subdirectory to contain data for usage with the PHP adapter and <code>po</code> to contain files for usage with the gettext adapter.</p>
+<p>More information on the directory structures required by the different adapters can be found in the docblocks of the adapters in <code>g11n\catalog\adapter\*</code> namespace.</p>
+<h2><a id="localized-validation-settings" class="anchor" href="#localized-validation-settings">Localized Validation Settings</a></h2>
+<p>li3's g11n framework ships with some localized validation rules for phone number, postal code and social security number validation rules. The <code>g11n.php</code> bootstrap file defines these additions so they're available before you use them:</p>
+<pre><code class="language-php">use lithium\util\Validator;
+
+foreach (['phone', 'postalCode', 'ssn'] as $name) {
+    Validator::add($name, Catalog::read('runtime', "validation.{$name}", 'en_US'));
+}
+</code></pre>
+<p>Once those changes have been bootstrapped, you can use this g11n-aware validation logic in your application logic like so:</p>
+<pre><code class="language-php">Validator::isPhone('PHONE NUMBER US', 'en_US');
+</code></pre>
+<h2><a id="using-localized-content" class="anchor" href="#using-localized-content">Using Localized Content</a></h2>
+<p>While it may seem like a simple process from the outside, message globalization is actually a multi-step process. This section covers those steps, enabling you to fully use globalized content in your views. Here are the steps we'll cover:</p>
+<ol>
+<li><p>Marking messages as translatable.  The <code>$t()</code> and <code>$tn()</code> shortcut functions help the extraction tools identify where messages have been in views.</p>
+</li>
+<li><p>Extracting marked messages.  Messages can be extracted through the <code>g11n</code> command, and placed in a template.</p>
+</li>
+<li><p>Translating messages. Once a template has been created, translators add localized content to them. The completed templates are often stored on disk.</p>
+</li>
+<li><p>Retrieving the translation for a message. The <code>$t()</code> and <code>$tn()</code> functions are used to output translated content for the correct locale in a view.</p>
+</li>
+</ol>
+<h2><a id="marking-messages-as-translatable" class="anchor" href="#marking-messages-as-translatable">Marking Messages as Translatable</a></h2>
+<p>The two convenience aliases for <code>Message::translate()</code>—<code>$t()</code> and <code>$tn()</code>—are injected into the view as output filters by default. This allows for the following syntax throughout templates:</p>
+<pre><code class="language-php">&lt;?= $t('green') ?&gt;
+&lt;?= $tn('House', 'Houses', ['count' =&gt; 3]) ?&gt;
+&lt;?= $t('Everything is so {:color}.', ['color' =&gt; $t('green')]) ?&gt;
+</code></pre>
+<p>If you need access to translated content outside of a view, use <code>extract()</code> to use these aliases like so:</p>
+<pre><code class="language-php">namespace app\controllers;
+
+use lithium\g11n\Message;
+
+class PostsController extends \lithium\action\Controller {
+
+	public function add() {
+		extract(Message::aliases());
+		// ...
+		$message = $t('Post successfully added.');
+		// ...
+	}
+}
+</code></pre>
+<h3><a id="best-practices" class="anchor" href="#best-practices">Best Practices</a></h3>
+<p>Since the marked messages will later be translated by many others, it's important to keep a few best practices in mind.</p>
+<p>When embedding translated messages into your application, it's best to use entire sentences as identifiers rather than just single words. Since a translator is often viewing a long list of strings needing to be translated, context is everything.</p>
+<pre><code class="language-html">&lt;!-- Not so great: --&gt;
+&lt;?= $t('welcome') ?&gt;
+
+&lt;!-- Better: --&gt;
+&lt;?= $t('Welcome to Gary\'s Fine Clarinets™. How can we help you today?') ?&gt;
+</code></pre>
+<p>It's also best to split paragraphs into single sentences as well. This makes things more atomic and granular where large chunks of content may be difficult to work with:</p>
+<p>Next, treating text like you would with <code>String::insert()</code> can make things easier in the long run, especially in contrast to using bare string concatenation with the <code>.</code> operator.</p>
+<pre><code class="language-html">&lt;!-- Not so great: --&gt;
+&lt;?= "Gary's Fine Clarinets " . $t('is really great') ?&gt;
+
+&lt;!-- Better: --&gt;
+&lt;?= $t('Everything is so {:color}.', ['color' =&gt; $t('green')]) ?&gt;
+</code></pre>
+<p>Also, avoid the use of escaped characters, or markup of any kind inside of translated messages. This makes it much less error prone, as your language team may not be as keen on well-structured HTML as you are.</p>
+<h3><a id="no-operation" class="anchor" href="#no-operation">No Operation</a></h3>
+<p>Passing the <code>'noop'</code> option to <code>Message::translate()</code> will result in the default message being returned. Since the short-hand translation functions use <code>translate()</code> internally, you can use the option to just mark a string for translation without it actually being translated during runtime:</p>
+<pre><code class="language-html">&lt;?= $t('foo', ['noop' =&gt; true]) ?&gt;
+&lt;?= $tn('foo', 'bar', ['noop' =&gt; true]); /* we don't need to pass `'count'` in this case */ ?&gt;
+</code></pre>
+<p>File: <code>a.php</code>:</p>
+<pre><code class="language-html">&lt;?= $t('foo', ['noop' =&gt; true]); /* the extractor picks up `foo` */ ?&gt;
+</code></pre>
+<p>File: <code>b.php</code>:</p>
+<pre><code class="language-html">&lt;?php $section = 'foo' ?&gt;
+&lt;?= $t($section) ?&gt;
+</code></pre>
+<h3><a id="knock-out" class="anchor" href="#knock-out">Knock Out</a></h3>
+<p>If you're using templates which use the aliased translation functions but don't want to do any globalization, you can disable the lookup of translations by using a filter.</p>
+<pre><code class="language-php">Filters::apply(Message::class, '_translated', function($params, $next) {
+	return null;
+});
+</code></pre>
+<div class="note note-info">This example uses new-style filters, available with 1.1.</div>
+<h2><a id="extracting-marked-messages-amp-creating-templates" class="anchor" href="#extracting-marked-messages-amp-creating-templates">Extracting Marked Messages &amp; Creating Templates</a></h2>
+<p>Marked messages are extracted using the <code>g11n</code> command. This allows for extracting messages and comments from source files, creating and updating files containing message templates, creating and updating files containing translated messages and compilation of those.</p>
+<pre><code class="language-text">li3 g11n extract [--source=DIRECTORY] [--destination=DIRECTORY]
+</code></pre>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\net\http\Router – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../versions.html">Versions</a><a href="../../../../../../../present.html">Presentations</a><a href="../../../../../../../support.html">Community</a><a href="../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../net.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">net</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../http.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">http</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Router</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../http.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Router::config().html">config()</a>												<li class="method public">
+				<a href="./Router::connect().html">connect()</a>												<li class="method public">
+				<a href="./Router::process().html">process()</a>												<li class="method public">
+				<a href="./Router::modifiers().html">modifiers()</a>												<li class="method public">
+				<a href="./Router::formatters().html">formatters()</a>												<li class="method public">
+				<a href="./Router::parse().html">parse()</a>												<li class="method public">
+				<a href="./Router::match().html">match()</a>												<li class="method protected">
+				<a href="./Router::_matchOptions().html">_matchOptions()</a>												<li class="method protected">
+				<a href="./Router::_compileStack().html">_compileStack()</a>												<li class="method protected">
+				<a href="./Router::_formatError().html">_formatError()</a>												<li class="method protected">
+				<a href="./Router::_parseController().html">_parseController()</a>												<li class="method protected">
+				<a href="./Router::_prepareParams().html">_prepareParams()</a>												<li class="method protected">
+				<a href="./Router::_prefix().html">_prefix()</a>												<li class="method protected">
+				<a href="./Router::_persist().html">_persist()</a>												<li class="method public">
+				<a href="./Router::get().html">get()</a>												<li class="method public">
+				<a href="./Router::reset().html">reset()</a>												<li class="method protected">
+				<a href="./Router::_parseString().html">_parseString()</a>												<li class="method public">
+				<a href="./Router::scope().html">scope()</a>												<li class="method public">
+				<a href="./Router::attach().html">attach()</a>												<li class="method public">
+				<a href="./Router::attached().html">attached()</a>												<li class="method protected">
+				<a href="./Router::_initScopes().html">_initScopes()</a>												<li class="method protected">
+				<a href="./Router::_compileScope().html">_compileScope()</a>												<li class="method protected">
+				<a href="./Router::_parseScope().html">_parseScope()</a>												<li class="method public inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/StaticObject::applyFilter()">applyFilter()</a>												<li class="method public inherited">
+				<a href="../../core/StaticObject::invokeMethod().html">invokeMethod()</a>												<li class="method public inherited">
+				<a href="../../core/StaticObject::respondsTo().html">respondsTo()</a>												<li class="method protected inherited">
+				<a href="../../core/StaticObject::_instance().html">_instance()</a>												<li class="method protected inherited">
+				<a href="http://li3.me/docs/api/lithium/1.0.x/lithium/core/StaticObject::_filter()">_filter()</a>												<li class="method protected inherited">
+				<a href="../../core/StaticObject::_parents().html">_parents()</a>												<li class="method protected inherited">
+				<a href="../../core/StaticObject::_stop().html">_stop()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="./Router::$_scopes.html">$_scopes</a>												<li class="property protected">
+				<a href="./Router::$_scope.html">$_scope</a>												<li class="property protected">
+				<a href="./Router::$_configurations.html">$_configurations</a>												<li class="property protected">
+				<a href="./Router::$_modifiers.html">$_modifiers</a>												<li class="property protected">
+				<a href="./Router::$_formatters.html">$_formatters</a>												<li class="property protected">
+				<a href="./Router::$_classes.html">$_classes</a>												<li class="property protected">
+				<a href="./Router::$_unicode.html">$_unicode</a>												<li class="property protected inherited">
+				<a href="../../core/StaticObject::$_methodFilters.html">$_methodFilters</a>												<li class="property protected inherited">
+				<a href="../../core/StaticObject::$_parents.html">$_parents</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../net.html" class="symbol-segment">net</a>\<a href="../http.html" class="symbol-segment">http</a>\Router		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../../core/StaticObject.html" class="extends__symbol">lithium\core\StaticObject</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The two primary responsibilities of the <code>Router</code> are to determine the correct set of
+parameters for incoming request (<em>parsing</em>) and second to generate URLs from parameters
+(<em>matching</em>). These two operations can be handled in a reciprocally consistent way.</p>
+					</div>
+				
+									<div class="description">
+						<p>To begin using the router, routes must be defined first. A route maps an URL (template)
+to a set of paremeters and vice versa. The following example maps the <code>'/login'</code> URL
+to <code>SessionController::add()</code>.</p>
+<pre><code class="language-php">Router::connect('/login', array('controller' =&gt; 'Sessions', 'action' =&gt; 'add'));
+</code></pre>
+<p>The <code>Router</code> plays an important role in the dispatching process. It allows the <code>Dispatcher</code>
+to invoke the correct controller action for a requested URL. During this process the <code>Router</code>
+will <em>parse</em> the URL and respond with a set of dispatch parameters.</p>
+<pre><code class="language-php">Router::parse('/login'); // returns array('controller' =&gt; 'Sessions', 'action' =&gt; 'add')
+</code></pre>
+<p>Another important thing the <code>Router</code> is quite often used for, is the so called <em>reverse
+routing</em>. During this process the <code>Router</code> will <em>match</em> a set of parameters and return
+a URL. In contrast to normal, manually created URLs (i.e. <code>http://li3.me/support</code>) These
+URLs are called <em>routed URLs</em> as they have been generated through the <code>Router</code>.</p>
+<pre><code class="language-php">Router::match(('controller' =&gt; 'Sessions', 'action' =&gt; 'add')); // returns `'/login'`
+</code></pre>
+<p>Framework components that work with URLs (and utilize routing), also support
+reverse routing and accept route parameters.</p>
+<pre><code class="language-php">$this-&gt;html-&gt;link(array(...));
+</code></pre>
+<p>But why use reverse routing and parameters instead of URL string at all? Well, as the whole
+application URL structure is defined in one place (the routes defintion file) it is quite easy to
+change the URL structure without touching i.e. the templates.</p>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="./Router::parse().html">lithium\net\http\Router::parse()</a>									<li><a href="./Router::match().html">lithium\net\http\Router::match()</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Router extends \lithium\core\StaticObject {
+
+	/**
+	 * Contain the configuration of scopes.
+	 *
+	 * @var array of scopes
+	 */
+	protected static $_scopes = null;
+
+	/**
+	 * Stores the name of the scope to use for building urls.
+	 * If is set to `true`, the scope of the user&#039;s request will be used.
+	 * saved
+	 *
+	 * @see lithium\net\http\Router::scope()
+	 * @var string
+	 */
+	protected static $_scope = false;
+
+	/**
+	 * An array of loaded `Route` objects used to match Request objects against.
+	 *
+	 * @see lithium\net\http\Route
+	 * @var array
+	 */
+	protected static $_configurations = array();
+
+	/**
+	 * Array of closures used to format route parameters when parsing URLs.
+	 *
+	 * @see lithium\net\http\Router::modifiers()
+	 * @var array
+	 */
+	protected static $_modifiers = array();
+
+	/**
+	 * An array of named closures matching up to corresponding route parameter values. Used to
+	 * format those values.
+	 *
+	 * @see lithium\net\http\Router::formatters()
+	 * @var array
+	 */
+	protected static $_formatters = array();
+
+	/**
+	 * Classes used by `Router`.
+	 *
+	 * @var array
+	 */
+	protected static $_classes = array(
+		&#039;route&#039;         =&gt; &#039;lithium\net\http\Route&#039;,
+		&#039;configuration&#039; =&gt; &#039;lithium\core\Configuration&#039;
+	);
+
+	/**
+	 * Flag for generating Unicode-capable routes. Turn this off if you don&#039;t need it, or if you&#039;re
+	 * using a broken OS distribution (i.e. CentOS).
+	 */
+	protected static $_unicode = true;
+
+	/**
+	 * Modify `Router` configuration settings and dependencies.
+	 *
+	 * @param array $config Optional array to override configuration. Acceptable keys are
+	 *        `&#039;classes&#039;` and `&#039;unicode&#039;`.
+	 * @return array Returns the current configuration settings.
+	 */
+	public static function config($config = array()) {
+		if (!$config) {
+			return array(&#039;classes&#039; =&gt; static::$_classes, &#039;unicode&#039; =&gt; static::$_unicode);
+		}
+		if (isset($config[&#039;classes&#039;])) {
+			static::$_classes = $config[&#039;classes&#039;] + static::$_classes;
+		}
+		if (isset($config[&#039;unicode&#039;])) {
+			static::$_unicode = $config[&#039;unicode&#039;];
+		}
+	}
+
+	/**
+	 * Connects a new route and returns the current routes array. This method creates a new
+	 * `Route` object and registers it with the `Router`. The order in which routes are connected
+	 * matters, since the order of precedence is taken into account in parsing and matching
+	 * operations.
+	 *
+	 * A callable can be passed in place of `$options`. In this case the callable acts as a *route
+	 * handler*. Route handlers should return an instance of `lithium\net\http\Response`
+	 * and can be used to short-circuit the framework&#039;s lookup and invocation of controller
+	 * actions:
+	 * ```
+	 * Router::connect(&#039;/photos/{:id:[0-9]+}.jpg&#039;, array(), function($request) {
+	 *     return new Response(array(
+	 *         &#039;headers&#039; =&gt; array(&#039;Content-type&#039; =&gt; &#039;image/jpeg&#039;),
+	 *         &#039;body&#039; =&gt; Photos::first($request-&gt;id)-&gt;bytes()
+	 *     ));
+	 * });
+	 * ```
+	 *
+	 * @see lithium\net\http\Route
+	 * @see lithium\net\http\Route::$_handler
+	 * @see lithium\net\http\Router::parse()
+	 * @see lithium\net\http\Router::match()
+	 * @see lithium\net\http\Router::_parseString()
+	 * @see lithium\net\http\Response
+	 * @param string|object $template An empty string, a route string `/` or an
+	 *                      instance of `lithium\net\http\Route`.
+	 * @param array|string $params An array describing the default or required elements of
+	 *                     the route or alternatively a path string i.e. `Posts::index`.
+	 * @param array|callable $options Either an array of options (`&#039;handler&#039;`, `&#039;formatters&#039;`,
+	 *                      `&#039;modifiers&#039;`, `&#039;unicode&#039;` as well as any options for `Route`) or
+	 *                      a callable that will be used as a route handler.
+	 * @return array Array of routes
+	 */
+	public static function connect($template, $params = array(), $options = array()) {
+		if (is_array($options) &amp;&amp; isset($options[&#039;scope&#039;])) {
+			$name = $options[&#039;scope&#039;];
+		} else {
+			$name = static::$_scope;
+		}
+		if (is_object($template)) {
+			return (static::$_configurations[$name][] = $template);
+		}
+		if (is_string($params)) {
+			$params = static::_parseString($params, false);
+		}
+		if (isset($params[0]) &amp;&amp; is_array($tmp = static::_parseString($params[0], false))) {
+			unset($params[0]);
+			$params = $tmp + $params;
+		}
+		$params = static::_parseController($params);
+		if (is_callable($options)) {
+			$options = array(&#039;handler&#039; =&gt; $options);
+		}
+		$config = compact(&#039;template&#039;, &#039;params&#039;) + $options + array(
+			&#039;formatters&#039; =&gt; static::formatters(),
+			&#039;modifiers&#039; =&gt; static::modifiers(),
+			&#039;unicode&#039; =&gt; static::$_unicode
+		);
+		return (static::$_configurations[$name][] = static::_instance(&#039;route&#039;, $config));
+	}
+
+	/**
+	 * Wrapper method which takes a `Request` object, parses it through all attached `Route`
+	 * objects, assigns the resulting parameters to the `Request` object, and returns it.
+	 *
+	 * @param \lithium\action\Request $request
+	 * @return \lithium\action\Request Returns a copy of the request with parameters applied.
+	 */
+	public static function process($request) {
+		if (!$result = static::parse($request)) {
+			return $request;
+		}
+		return $result;
+	}
+
+	/**
+	 * Used to get or set an array of named formatter closures, which are used to format route
+	 * parameters when parsing URLs. For example, the following would match a `posts/index` url
+	 * to a `PostsController::indexAction()` method.
+	 *
+	 * ```
+	 * use lithium\util\Inflector;
+	 *
+	 * Router::modifiers(array(
+	 *     &#039;controller&#039; =&gt; function($value) {
+	 *         return Inflector::camelize($value);
+	 *     },
+	 *     &#039;action&#039; =&gt; function($value) {
+	 *         return Inflector::camelize($value) . &#039;Action&#039;;
+	 *     }
+	 * ));
+	 * ```
+	 *
+	 * _Note_: Because modifiers are copied to `Route` objects on an individual basis, make sure
+	 * you append your custom modifiers _before_ connecting new routes.
+	 *
+	 * @param array $modifiers An array of named formatter closures to append to (or overwrite) the
+	 *        existing list.
+	 * @return array Returns the formatters array.
+	 */
+	public static function modifiers(array $modifiers = array()) {
+		if (!static::$_modifiers) {
+			static::$_modifiers = array(
+				&#039;args&#039; =&gt; function($value) {
+					return explode(&#039;/&#039;, $value);
+				},
+				&#039;controller&#039; =&gt; function($value) {
+					return Inflector::camelize($value);
+				}
+			);
+		}
+		if ($modifiers) {
+			static::$_modifiers = array_filter($modifiers + static::$_modifiers);
+		}
+		return static::$_modifiers;
+	}
+
+	/**
+	 * Used to get or set an array of named formatter closures, which are used to format route
+	 * parameters when generating URLs. For example, for controller/action parameters to be dashed
+	 * instead of underscored or camelBacked, you could do the following:
+	 *
+	 * ```
+	 * use lithium\util\Inflector;
+	 *
+	 * Router::formatters(array(
+	 *     &#039;controller&#039; =&gt; function($value) { return Inflector::slug($value); },
+	 *     &#039;action&#039; =&gt; function($value) { return Inflector::slug($value); }
+	 * ));
+	 * ```
+	 *
+	 * _Note_: Because formatters are copied to `Route` objects on an individual basis, make sure
+	 * you append custom formatters _before_ connecting new routes.
+	 *
+	 * @param array $formatters An array of named formatter closures to append to (or overwrite) the
+	 *        existing list.
+	 * @return array Returns the formatters array.
+	 */
+	public static function formatters(array $formatters = array()) {
+		if (!static::$_formatters) {
+			static::$_formatters = array(
+				&#039;args&#039; =&gt; function($value) {
+					return is_array($value) ? join(&#039;/&#039;, $value) : $value;
+				},
+				&#039;controller&#039; =&gt; function($value) {
+					if (strpos($value, &#039;\\&#039;)) {
+						$value = explode(&#039;\\&#039;, $value);
+						$value = end($value);
+					}
+					return Inflector::underscore($value);
+				}
+			);
+		}
+		if ($formatters) {
+			static::$_formatters = array_filter($formatters + static::$_formatters);
+		}
+		return static::$_formatters;
+	}
+
+	/**
+	 * Accepts an instance of `lithium\action\Request` (or a subclass) and matches it against each
+	 * route, in the order that the routes are connected.
+	 *
+	 * If a route match the request, `lithium\net\http\Router::_scope` will be updated according
+	 * the scope membership of the route
+	 *
+	 * @see lithium\action\Request
+	 * @see lithium\net\http\Router::connect()
+	 * @param object $request A request object containing URL and environment data.
+	 * @return array Returns an array of parameters specifying how the given request should be
+	 *         routed. The keys returned depend on the `Route` object that was matched, but
+	 *         typically include `&#039;controller&#039;` and `&#039;action&#039;` keys.
+	 */
+	public static function parse($request) {
+		foreach (static::$_configurations as $name =&gt; $value) {
+			$original = $request-&gt;params;
+			$name = is_int($name) ? false : $name;
+
+			if (!$url = static::_parseScope($name, $request)) {
+				continue;
+			}
+
+			foreach (static::$_configurations[$name] as $route) {
+				if (!$match = $route-&gt;parse($request, compact(&#039;url&#039;))) {
+					continue;
+				}
+				$request = $match;
+				if ($route-&gt;canContinue() &amp;&amp; isset($request-&gt;params[&#039;args&#039;])) {
+					$url = &#039;/&#039; . join(&#039;/&#039;, $request-&gt;params[&#039;args&#039;]);
+					unset($request-&gt;params[&#039;args&#039;]);
+					continue;
+				}
+
+				static::attach($name, null, isset($request-&gt;params) ? $request-&gt;params : array());
+				static::scope($name);
+
+				return $request;
+			}
+			$request-&gt;params = $original;
+		}
+	}
+
+	/**
+	 * Attempts to match an array of route parameters (i.e. `&#039;controller&#039;`, `&#039;action&#039;`, etc.)
+	 * against a connected `Route` object. For example, given the following route:
+	 *
+	 * ```
+	 * Router::connect(&#039;/login&#039;, array(&#039;controller&#039; =&gt; &#039;users&#039;, &#039;action&#039; =&gt; &#039;login&#039;));
+	 * ```
+	 *
+	 * This will match:
+	 * ```
+	 * $url = Router::match(array(&#039;controller&#039; =&gt; &#039;users&#039;, &#039;action&#039; =&gt; &#039;login&#039;));
+	 * // returns /login
+	 * ```
+	 *
+	 * For URLs templates with no insert parameters (i.e. elements like `{:id}` that are replaced
+	 * with a value), all parameters must match exactly as they appear in the route parameters.
+	 *
+	 * Alternatively to using a full array, you can specify routes using a more compact syntax. The
+	 * above example can be written as:
+	 * ```
+	 * $url = Router::match(&#039;Users::login&#039;); // still returns /login
+	 * ```
+	 *
+	 * You can combine this with more complicated routes; for example:
+	 * ```
+	 * Router::connect(&#039;/posts/{:id:\d+}&#039;, array(&#039;controller&#039; =&gt; &#039;posts&#039;, &#039;action&#039; =&gt; &#039;view&#039;));
+	 * ```
+	 *
+	 * This will match:
+	 * ```
+	 * $url = Router::match(array(&#039;controller&#039; =&gt; &#039;posts&#039;, &#039;action&#039; =&gt; &#039;view&#039;, &#039;id&#039; =&gt; &#039;1138&#039;));
+	 * // returns /posts/1138
+	 * ```
+	 *
+	 * Again, you can specify the same URL with a more compact syntax, as in the following:
+	 * ```
+	 * $url = Router::match(array(&#039;Posts::view&#039;, &#039;id&#039; =&gt; &#039;1138&#039;));
+	 * // again, returns /posts/1138
+	 * ```
+	 *
+	 * You can use either syntax anywhere an URL is accepted, i.e. when redirecting
+	 * or creating links using the `Html` helper.
+	 *
+	 * @see lithium\action\Controller::redirect()
+	 * @see lithium\template\helper\Html::link()
+	 * @param array|string $url An array of parameters to match, or paremeters in their
+	 *        shorthand form (i.e. `&#039;Posts::view&#039;`). Also takes non-routed, manually generated
+	 *        URL strings.
+	 * @param \lithium\action\Request $context This supplies the context for
+	 *        any persistent parameters, as well as the base URL for the application.
+	 * @param array $options Options for the generation of the matched URL. Currently accepted
+	 *        values are:
+	 *        - `&#039;absolute&#039;` _boolean_: Indicates whether or not the returned URL should be an
+	 *          absolute path (i.e. including scheme and host name).
+	 *        - `&#039;host&#039;` _string_: If `&#039;absolute&#039;` is `true`, sets the host name to be used,
+	 *          or overrides the one provided in `$context`.
+	 *        - `&#039;scheme&#039;` _string_: If `&#039;absolute&#039;` is `true`, sets the URL scheme to be
+	 *          used, or overrides the one provided in `$context`.
+	 *        - `&#039;scope&#039;` _string_: Optionnal scope name.
+	 * @return string Returns a generated URL, based on the URL template of the matched route, and
+	 *         prefixed with the base URL of the application.
+	 */
+	public static function match($url = array(), $context = null, array $options = array()) {
+		$options = static::_matchOptions($url, $context, $options);
+
+		if (is_string($url = static::_prepareParams($url, $context, $options))) {
+			return $url;
+		}
+
+		$base = $options[&#039;base&#039;];
+		$url += array(&#039;action&#039; =&gt; &#039;index&#039;);
+		$stack = array();
+
+		$suffix = isset($url[&#039;#&#039;]) ? &quot;#{$url[&#039;#&#039;]}&quot; : null;
+		unset($url[&#039;#&#039;]);
+
+		$scope = $options[&#039;scope&#039;];
+		if (isset(static::$_configurations[$scope])) {
+			foreach (static::$_configurations[$scope] as $route) {
+				if (!$match = $route-&gt;match($url + array(&#039;scope&#039; =&gt; static::attached($scope)), $context)) {
+					continue;
+				}
+				if ($route-&gt;canContinue()) {
+					$stack[] = $match;
+					$export = $route-&gt;export();
+					$keys = $export[&#039;match&#039;] + $export[&#039;keys&#039;] + $export[&#039;defaults&#039;];
+					unset($keys[&#039;args&#039;]);
+					$url = array_diff_key($url, $keys);
+					continue;
+				}
+				if ($stack) {
+					$stack[] = $match;
+					$match = static::_compileStack($stack);
+				}
+				$path = rtrim(&quot;{$base}{$match}{$suffix}&quot;, &#039;/&#039;) ?: &#039;/&#039;;
+				$path = ($options) ? static::_prefix($path, $context, $options) : $path;
+				return $path ?: &#039;/&#039;;
+			}
+		}
+		$url = static::_formatError($url);
+		$message = &quot;No parameter match found for URL `{$url}`&quot;;
+		$message .= $scope ? &quot; in `{$scope}` scope.&quot; : &#039;.&#039;;
+		throw new RoutingException($message);
+	}
+
+	/**
+	 * Initialize options for `Router::match()`.
+	 *
+	 * @param string|array $url Options to match to a URL. Optionally, this can be a string
+	 *        containing a manually generated URL.
+	 * @param \lithium\action\Request $context
+	 * @param array $options Options for the generation of the matched URL.
+	 * @return array The initialized options.
+	 */
+	protected static function _matchOptions(&amp;$url, $context, $options) {
+		$defaults = array(
+			&#039;scheme&#039; =&gt; null,
+			&#039;host&#039; =&gt; null,
+			&#039;absolute&#039; =&gt; false,
+			&#039;base&#039; =&gt; &#039;&#039;
+		);
+		if ($context) {
+			$defaults = array(
+				&#039;base&#039; =&gt; $context-&gt;env(&#039;base&#039;),
+				&#039;host&#039; =&gt; $context-&gt;host,
+				&#039;scheme&#039; =&gt; $context-&gt;scheme . ($context-&gt;scheme ? &#039;://&#039; : &#039;//&#039;)
+			) + $defaults;
+		}
+
+		$options += array(&#039;scope&#039; =&gt; static::scope());
+		$vars = array();
+		$scope = $options[&#039;scope&#039;];
+		if (is_array($scope)) {
+			list($tmp, $vars) = each($scope);
+			if (!is_array($vars)) {
+				$vars = $scope;
+				$scope = static::scope();
+			} else {
+				$scope = $tmp;
+			}
+		}
+		if ($config = static::attached($scope, $vars)) {
+			if (is_array($url)) {
+				unset($url[&#039;library&#039;]);
+			}
+			$config[&#039;host&#039;] = $config[&#039;host&#039;] ? : $defaults[&#039;host&#039;];
+			if ($config[&#039;scheme&#039;] === false) {
+				$config[&#039;scheme&#039;] = &#039;//&#039;;
+			} else {
+				$config[&#039;scheme&#039;] .= ($config[&#039;scheme&#039;] ? &#039;://&#039; : $defaults[&#039;scheme&#039;]);
+			}
+			$config[&#039;scheme&#039;] = $config[&#039;scheme&#039;] ? : &#039;http://&#039;;
+
+			$base = isset($config[&#039;base&#039;]) ? &#039;/&#039; . $config[&#039;base&#039;] : $defaults[&#039;base&#039;];
+			$base = $base . ($config[&#039;prefix&#039;] ? &#039;/&#039; . $config[&#039;prefix&#039;] : &#039;&#039;);
+			$config[&#039;base&#039;] = rtrim($config[&#039;absolute&#039;] ? &#039;/&#039; . trim($base, &#039;/&#039;) : $base, &#039;/&#039;);
+			$defaults = $config + $defaults;
+		}
+		return $options + $defaults;
+	}
+
+	protected static function _compileStack($stack) {
+		$result = null;
+		list($result, $query) = array_pad(explode(&#039;?&#039;, array_pop($stack), 2), 2, null);
+		foreach (array_reverse($stack) as $fragment) {
+			$result = ltrim($result, &#039;/&#039;);
+			$result = str_replace(($result ? &#039;&#039; : &#039;/&#039;) . &#039;{:args}&#039;, $result, $fragment);
+		}
+		return $result . ($query ? &#039;?&#039; . $query : &#039;&#039;);
+	}
+
+	protected static function _formatError($url) {
+		$match = array(&quot;\n&quot;, &#039;array (&#039;, &#039;,)&#039;, &#039;=&gt; NULL&#039;, &#039;(  \&#039;&#039;, &#039;,  &#039;);
+		$replace = array(&#039;&#039;, &#039;(&#039;, &#039;)&#039;, &#039;=&gt; null&#039;, &#039;(\&#039;&#039;, &#039;, &#039;);
+		return str_replace($match, $replace, var_export($url, true));
+	}
+
+	protected static function _parseController(array $params) {
+		if (!isset($params[&#039;controller&#039;])) {
+			return $params;
+		}
+		if (strpos($params[&#039;controller&#039;], &#039;.&#039;)) {
+			$separated = explode(&#039;.&#039;, $params[&#039;controller&#039;], 2);
+			list($params[&#039;library&#039;], $params[&#039;controller&#039;]) = $separated;
+		}
+		if (strpos($params[&#039;controller&#039;], &#039;\\&#039;) === false) {
+			$params[&#039;controller&#039;] = Inflector::camelize($params[&#039;controller&#039;]);
+		}
+		return $params;
+	}
+
+	/**
+	 * Prepares URL parameters for matching. Detects and Passes through un-routed URL strings,
+	 * leaving them untouched.
+	 *
+	 * Will not attempt to parse strings as shorthand parameters but instead interpret
+	 * them as normal, non-routed URLs when they are prefixed with a known scheme.
+	 *
+	 * @param array|string $url An array of parameters, shorthand parameter string or URL string.
+	 * @param \lithium\action\Request $context
+	 * @param array $options
+	 * @return array|string Depending on the type of $url either a string or an array.
+	 */
+	protected static function _prepareParams($url, $context, array $options) {
+		if (is_string($url)) {
+			if (strpos($url, &#039;://&#039;)) {
+				return $url;
+			}
+			foreach (array(&#039;#&#039;, &#039;//&#039;, &#039;mailto&#039;, &#039;javascript&#039;) as $prefix) {
+				if (strpos($url, $prefix) === 0) {
+					return $url;
+				}
+			}
+			if (is_string($url = static::_parseString($url, $context, $options))) {
+				return static::_prefix($url, $context, $options);
+			}
+		}
+		$isArray = (
+			isset($url[0]) &amp;&amp;
+			is_array($params = static::_parseString($url[0], $context, $options))
+		);
+		if ($isArray) {
+			unset($url[0]);
+			$url = $params + $url;
+		}
+		return static::_persist(static::_parseController($url), $context);
+	}
+
+	/**
+	 * Returns the prefix (scheme + hostname) for a URL based on the passed `$options` and the
+	 * `$context`.
+	 *
+	 * @param string $path The URL to be prefixed.
+	 * @param object $context The request context.
+	 * @param array $options Options for generating the proper prefix. Currently accepted values
+	 *              are: `&#039;absolute&#039; =&gt; true|false`, `&#039;host&#039; =&gt; string` and `&#039;scheme&#039; =&gt; string`.
+	 * @return string The prefixed URL, depending on the passed options.
+	 */
+	protected static function _prefix($path, $context = null, array $options = array()) {
+		$defaults = array(&#039;scheme&#039; =&gt; null, &#039;host&#039; =&gt; null, &#039;absolute&#039; =&gt; false);
+		$options += $defaults;
+		return ($options[&#039;absolute&#039;]) ? &quot;{$options[&#039;scheme&#039;]}{$options[&#039;host&#039;]}{$path}&quot; : $path;
+	}
+
+	/**
+	 * Copies persistent parameters (parameters in the request which have been designated to
+	 * persist) to the current URL, unless the parameter has been explicitly disabled from
+	 * persisting by setting the value in the URL to `null`, or by assigning some other value.
+	 *
+	 * For example:
+	 *
+	 * ``` embed:lithium\tests\cases\net\http\RouterTest::testParameterPersistence(1-10) ```
+	 *
+	 * @see lithium\action\Request::$persist
+	 * @param array $url The parameters that define the URL to be matched.
+	 * @param \lithium\action\Request $context A request object, which contains a
+	 *        `$persist` property, which is an array of keys to be persisted in URLs between
+	 *        requests.
+	 * @return array Returns the modified URL array.
+	 */
+	protected static function _persist($url, $context) {
+		if (!$context || !isset($context-&gt;persist)) {
+			return $url;
+		}
+		foreach ($context-&gt;persist as $key) {
+			$url += array($key =&gt; $context-&gt;params[$key]);
+
+			if ($url[$key] === null) {
+				unset($url[$key]);
+			}
+		}
+		return $url;
+	}
+
+	/**
+	 * Returns one or multiple connected routes.
+	 *
+	 * A specific route can be retrived by providing its index. All connected routes inside all
+	 * scopes may be retrieved by providing `null` instead of the route index. To retrieve all
+	 * routes for the current scope only, pass `true` for the `$scope` parameter.
+	 *
+	 * @param integer $route Index of the route.
+	 * @param string|boolean $scope Name of the scope to get routes from. Uses default
+	 *        scope if `true`.
+	 * @return object|array|null If $route is an integer, returns the route object at given index or
+	 *         if that fails returns `null`. If $route is `null` returns an array of routes or
+	 *         scopes with their respective routes depending on the value of $scope.
+	 */
+	public static function get($route = null, $scope = null) {
+		if ($route === null &amp;&amp; $scope === null) {
+			return static::$_configurations;
+		}
+
+		if ($scope === true) {
+			$scope = static::$_scope;
+		}
+
+		if ($route === null &amp;&amp; $scope !== null) {
+			if (isset(static::$_configurations[$scope])) {
+				return static::$_configurations[$scope];
+			}
+			return array();
+		}
+
+		if (!isset(static::$_configurations[$scope][$route])) {
+			return null;
+		}
+		return static::$_configurations[$scope][$route];
+	}
+
+	/**
+	 * Resets the `Router` to its default state, unloading all routes.
+	 */
+	public static function reset() {
+		static::$_configurations = array();
+		static::$_scope = false;
+		if (isset(static::$_scopes)) {
+			static::$_scopes-&gt;reset();
+		}
+	}
+
+	/**
+	 * Helper function for taking a path string and parsing it into a controller and action array.
+	 *
+	 * @param string $path Path string to parse i.e. `li3_bot.Logs::index` or `Posts::index`.
+	 * @param boolean $context
+	 * @return array
+	 */
+	protected static function _parseString($path, $context, array $options = array()) {
+		if (!preg_match(&#039;/^[A-Za-z0-9._\\\\]+::[A-Za-z0-9_]+$/&#039;, $path)) {
+			$base = rtrim($options[&#039;base&#039;], &#039;/&#039;);
+			if ((!$path || $path[0] != &#039;/&#039;) &amp;&amp; $context &amp;&amp; isset($context-&gt;controller)) {
+				$formatters = static::formatters();
+				$base .= &#039;/&#039; . $formatters[&#039;controller&#039;]($context-&gt;controller);
+			}
+			$path = trim($path, &#039;/&#039;);
+			return &quot;{$base}/{$path}&quot;;
+		}
+		list($controller, $action) = explode(&#039;::&#039;, $path, 2);
+		return compact(&#039;controller&#039;, &#039;action&#039;);
+	}
+
+	/**
+	 * Scope getter/setter.
+	 *
+	 * Special use case: If `$closure` is not null executing the closure inside
+	 * the specified scope.
+	 *
+	 * @param string $name Name of the scope to use.
+	 * @param \Closure $closure A closure to execute inside the scope.
+	 * @return mixed Returns the previous scope if if `$name` is not null and `$closure` is null,
+	 *         returns the default used scope if `$name` is null, otherwise returns `null`.
+	 */
+	public static function scope($name = null, \Closure $closure = null) {
+		if ($name === null) {
+			return static::$_scope;
+		}
+
+		if ($closure === null) {
+			$former = static::$_scope;
+			static::$_scope = $name;
+			return $former;
+		}
+
+		$former = static::$_scope;
+		static::$_scope = $name;
+		call_user_func($closure);
+		static::$_scope = $former;
+	}
+
+	/**
+	 * Attach a scope to a mount point.
+	 *
+	 * Example 1:
+	 * ```
+	 * Router::attach(&#039;app&#039;, array(
+	 *     &#039;absolute&#039; =&gt; true,
+	 *     &#039;host&#039; =&gt; &#039;localhost&#039;,
+	 *     &#039;scheme&#039; =&gt; &#039;http://&#039;,
+	 *     &#039;prefix&#039; =&gt; &#039;web/tests&#039;
+	 * ));
+	 * ```
+	 *
+	 * Example 2:
+	 * ```
+	 * Router::attach(&#039;app&#039;, array(
+	 *     &#039;absolute&#039; =&gt; true,
+	 *     &#039;host&#039; =&gt; &#039;{:subdomain:[a-z]+}.{:hostname}.{:tld}&#039;,
+	 *     &#039;scheme&#039; =&gt; &#039;{:scheme:https://}&#039;,
+	 *     &#039;prefix&#039; =&gt; &#039;&#039;
+	 * ));
+	 * ```
+	 *
+	 * Attach the variables to populate for the app scope.
+	 * ```
+	 * Router::attach(&#039;app&#039;, null, array(
+	 *     &#039;subdomain&#039; =&gt; &#039;www&#039;,
+	 *     &#039;hostname&#039; =&gt; &#039;li3&#039;,
+	 *     &#039;tld&#039; =&gt; &#039;me&#039;
+	 * ));
+	 * ```
+	 *
+	 * @param string Name of the scope.
+	 * @param mixed Settings of the mount point or `null` for setting only variables to populate.
+	 * @param array Variables to populate for the scope.
+	 */
+	public static function attach($name, $config = null, array $vars = array()) {
+		if ($name === false) {
+			return null;
+		}
+
+		if (!isset(static::$_scopes)) {
+			static::_initScopes();
+		}
+
+		if ($config === null) {
+			if ($vars &amp;&amp; ($config = static::$_scopes-&gt;get($name))) {
+				$config[&#039;values&#039;] = $vars;
+				static::$_scopes-&gt;set($name, $config);
+			}
+			return;
+		}
+
+		if (is_array($config) || $config === false) {
+			static::$_scopes-&gt;set($name, $config);
+		}
+	}
+
+	/**
+	 * Returns an attached mount point configuration.
+	 *
+	 * Example:
+	 * ```
+	 * Router::attach(&#039;app&#039;, array(
+	 *     &#039;absolute&#039; =&gt; true,
+	 *     &#039;host&#039; =&gt; &#039;{:subdomain:[a-z]+}.{:hostname}.{:tld}&#039;,
+	 *     &#039;scheme&#039; =&gt; &#039;{:scheme:https://}&#039;,
+	 *     &#039;prefix&#039; =&gt; &#039;&#039;
+	 * ));
+	 * ```
+	 *
+	 * ```
+	 * $result = Router::attached(&#039;app&#039;, array(
+	 *     &#039;subdomain&#039; =&gt; &#039;app&#039;,
+	 *     &#039;hostname&#039; =&gt; &#039;blog&#039;,
+	 *     &#039;tld&#039; =&gt; &#039;co.uk&#039;
+	 * ));
+	 * ```
+	 *
+	 * Will give the following array in `$result`:
+	 *
+	 * array(
+	 *     &#039;absolute&#039; =&gt; true,
+	 *     &#039;host&#039; =&gt; &#039;blog.mysite.co.uk&#039;,
+	 *     &#039;scheme&#039; =&gt; &#039;http://&#039;,
+	 *     &#039;prefix&#039; =&gt; &#039;&#039;
+	 * ));
+	 *
+	 * @param string Name of the scope.
+	 * @param array Optionnal variables which override the default setted variables with
+	 *        `lithium\net\http\Router::attach()`for population step.
+	 * @return mixed The settings array of the scope or an array of settings array
+	 *         if `$name === null`.
+	 */
+	public static function attached($name = null, array $vars = array()) {
+		if ($name === false) {
+			return null;
+		}
+
+		if (!isset(static::$_scopes)) {
+			static::_initScopes();
+		}
+
+		if ($name === null) {
+			return static::$_scopes-&gt;get();
+		} elseif (!$config = static::$_scopes-&gt;get($name)) {
+			static::$_scopes-&gt;set($name, array());
+			$config = static::$_scopes-&gt;get($name);
+		}
+		$vars += $config[&#039;values&#039;];
+		$match = &#039;@\{:([^:}]+):?((?:[^{]+(?:\{[0-9,]+\})?)*?)\}@S&#039;;
+		$fields = array(&#039;scheme&#039;, &#039;host&#039;);
+		foreach ($fields as $field) {
+			if (preg_match_all($match, $config[$field], $m)) {
+				$tokens = $m[0];
+				$names = $m[1];
+				$regexs = $m[2];
+				foreach ($names as $i =&gt; $name) {
+					if (isset($vars[$name])) {
+						if (($regex = $regexs[$i]) &amp;&amp; !preg_match(&quot;@^{$regex}\$@&quot;, $vars[$name])) {
+							continue;
+						}
+						$config[$field] = str_replace($tokens[$i], $vars[$name], $config[$field]);
+					}
+				}
+			}
+		}
+		return $config;
+	}
+
+	/**
+	 * Initialize `static::$_scopes` with a `lithium\core\Configuration` instance.
+	 */
+	protected static function _initScopes() {
+		static::$_scopes = static::_instance(&#039;configuration&#039;);
+		$self = get_called_class();
+		static::$_scopes-&gt;initConfig = function($name, $config) use ($self) {
+			$defaults = array(
+				&#039;absolute&#039; =&gt; false,
+				&#039;host&#039; =&gt; null,
+				&#039;scheme&#039; =&gt; null,
+				&#039;base&#039; =&gt; null,
+				&#039;prefix&#039; =&gt; &#039;&#039;,
+				&#039;pattern&#039; =&gt; &#039;&#039;,
+				&#039;values&#039; =&gt; array(),
+				&#039;library&#039; =&gt; $name
+			);
+
+			$config += $defaults;
+
+			if (!$config[&#039;pattern&#039;]) {
+				$config = $self::invokeMethod(&#039;_compileScope&#039;, array($config));
+			}
+			$config[&#039;base&#039;] = $config[&#039;base&#039;] ? trim($config[&#039;base&#039;], &#039;/&#039;) : $config[&#039;base&#039;];
+			return $config;
+		};
+	}
+
+	/**
+	 * Compiles the scope into regular expression patterns for matching against request URLs
+	 *
+	 * @param array $config Array of settings.
+	 * @return array Returns the complied settings.
+	 */
+	protected static function _compileScope(array $config) {
+		$defaults = array(
+			&#039;absolute&#039; =&gt; false,
+			&#039;host&#039; =&gt; null,
+			&#039;scheme&#039; =&gt; null,
+			&#039;base&#039; =&gt; null,
+			&#039;prefix&#039; =&gt; &#039;&#039;,
+			&#039;pattern&#039; =&gt; &#039;&#039;,
+			&#039;params&#039; =&gt; array()
+		);
+
+		$config += $defaults;
+
+		$config[&#039;prefix&#039;] = trim($config[&#039;prefix&#039;], &#039;/&#039;);
+		$prefix = &#039;/&#039; . ($config[&#039;prefix&#039;] ? $config[&#039;prefix&#039;] . &#039;/&#039; : &#039;&#039;);
+
+		if (!$config[&#039;absolute&#039;]) {
+			$config[&#039;pattern&#039;] = &quot;@^{$prefix}@&quot;;
+		} else {
+			$fields = array(&#039;scheme&#039;, &#039;host&#039;);
+			foreach ($fields as $field) {
+				$dots = &#039;/(?!\{[^\}]*)\.(?![^\{]*\})/&#039;;
+				$pattern[$field] = preg_replace($dots, &#039;\.&#039;, $config[$field]);
+				$match = &#039;@\{:([^:}]+):?((?:[^{]+(?:\{[0-9,]+\})?)*?)\}@S&#039;;
+				if (preg_match_all($match, $pattern[$field], $m)) {
+					$tokens = $m[0];
+					$names = $m[1];
+					$regexs = $m[2];
+					foreach ($names as $i =&gt; $name) {
+						$regex = $regexs[$i] ? : &#039;[^/]+?&#039;;
+						$pattern[$field] = str_replace(
+							$tokens[$i],
+							&quot;(?P&lt;{$name}&gt;{$regex})&quot;,
+							$pattern[$field]
+						);
+						$config[&#039;params&#039;][] = $name;
+					}
+				}
+			}
+			$pattern[&#039;host&#039;] = $pattern[&#039;host&#039;] ? : &#039;localhost&#039;;
+			$pattern[&#039;scheme&#039;] = $pattern[&#039;scheme&#039;] . ($pattern[&#039;scheme&#039;] ? &#039;://&#039; : &#039;(.*?)//&#039;);
+			$config[&#039;pattern&#039;] = &quot;@^{$pattern[&#039;scheme&#039;]}{$pattern[&#039;host&#039;]}{$prefix}@&quot;;
+		}
+		return $config;
+	}
+
+	/**
+	 * Return the unscoped url to route.
+	 *
+	 * @param string $name Scope name.
+	 * @param string $request A `lithium\action\Request` instance .
+	 * @return mixed The url to route, or `false` if the request doesn&#039;t match the scope.
+	 */
+	protected static function _parseScope($name, $request) {
+		$url = trim($request-&gt;url, &#039;/&#039;);
+		$url = $url ? &#039;/&#039; . $url . &#039;/&#039; : &#039;/&#039;;
+
+		if (!$config = static::attached($name)) {
+			return $url;
+		}
+
+		$scheme = $request-&gt;scheme . ($request-&gt;scheme ? &#039;://&#039; : &#039;//&#039;);
+		$host = $request-&gt;host;
+
+		if ($config[&#039;absolute&#039;]) {
+			preg_match($config[&#039;pattern&#039;], $scheme . $host . $url, $match);
+		} else {
+			preg_match($config[&#039;pattern&#039;], $url, $match);
+		}
+
+		if ($match) {
+			$result = array_intersect_key($match, array_flip($config[&#039;params&#039;]));
+			$request-&gt;params = array();
+			if (isset($config[&#039;library&#039;])) {
+				$request-&gt;params[&#039;library&#039;] = $config[&#039;library&#039;];
+			}
+			$request-&gt;params += $result;
+			if ($config[&#039;prefix&#039;]) {
+				$url = preg_replace(&#039;@^/&#039; . trim($config[&#039;prefix&#039;], &#039;/&#039;) . &#039;@&#039;, &#039;&#039;, $url);
+			}
+			return $url;
+		}
+		return false;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

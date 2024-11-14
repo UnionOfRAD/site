@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\net\http\Request::to() – Framework API v1.2.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.2.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.2.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.2.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.2.x/lithium/net" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">net</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.2.x/lithium/net/http" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">http</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="/docs/api/lithium/1.2.x/lithium/net/http/Request" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Request</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">to()</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.2.x/lithium/net/http/Request" rel="up">../</a>		</ul>
+	
+													
+										</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.2.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.2.x/lithium/net" class="symbol-segment">net</a>\<a href="/docs/api/lithium/1.2.x/lithium/net/http" class="symbol-segment">http</a>\<a href="/docs/api/lithium/1.2.x/lithium/net/http/Request" class="symbol-segment">Request</a>::to()		</h1>
+
+		<section class="under">
+																<div class="extends">
+					<span class="extends__title">
+													Overrides
+											</span>
+					<a href="/docs/api/lithium/1.2.x/lithium/net/Message::to()" class="extends__symbol">lithium\net\Message::to()</a>				</div>
+						<div class="tags">
+													<span class="tag public">public</span>
+												<span class="tag">method</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Converts the data in the record set to a different format, i.e. an array. Available
+options: array, URL, stream context configuration, or string.</p>
+					</div>
+				
+							</section>
+
+						<section id="params">
+				<h3 class="h-beta">Parameters</h3>
+				<ul class="parameters">
+											<li>
+							<span class="type">string</span>
+							<code class="name">$format</code>
+															<span class="parameter">
+									<p>Format to convert to. Should be either <code>'url'</code>, which returns a string
+representation of the URL that this request points to, or <code>'context'</code>, which returns an
+array usable with PHP's <code>stream_context_create()</code> function. For more available formats,
+see the parent method, <code>lithium\net\Message::to()</code>.</p>
+								</span>
+													</li>
+											<li>
+							<span class="type">array</span>
+							<code class="name">$options</code>
+															<span class="parameter">
+									<p>Allows overriding of specific portions of the URL, as follows. These
+options should only be specified if you intend to replace the values that are already in
+the <code>Request</code> object.</p>
+<ul>
+<li><code>'scheme'</code> <em>string</em>: The protocol scheme of the URL.</li>
+<li><code>'method'</code> <em>string</em>: If applicable, the HTTP method to use in the request. Mainly
+applies to the <code>'context'</code> format.</li>
+<li><code>'host'</code> <em>string</em>: The host name the request is pointing at.</li>
+<li><code>'port'</code> <em>string</em>: The host port, if any.</li>
+<li><code>'path'</code> <em>string</em>: The URL path.</li>
+<li><code>'query'</code> <em>mixed</em>: The query string of the URL as a string or array.</li>
+<li><code>'auth'</code> <em>string</em>: Authentication information. See the constructor for details.</li>
+<li><code>'content'</code> <em>string</em>: The body of the request.</li>
+<li><code>'headers'</code> <em>array</em>: The request headers.</li>
+<li><code>'version'</code> <em>string</em>: The HTTP version of the request, where applicable.</li>
+</ul>
+								</span>
+													</li>
+									</ul>
+			</section>
+			
+						<section id="return">
+				<h3 class="h-beta">Returns</h3>
+				<span class="type">mixed</span>
+									<span class="return">
+						<p>Varies; see the <code>$format</code> parameter for possible return values.</p>
+					</span>
+							</section>
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="/docs/api/lithium/1.2.x/lithium/net/Message::to()">lithium\net\Message::to()</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">	public function to($format, array $options = []) {
+		$defaults = [
+			&#039;method&#039; =&gt; $this-&gt;method,
+			&#039;scheme&#039; =&gt; $this-&gt;scheme,
+			&#039;host&#039; =&gt; $this-&gt;host,
+			&#039;port&#039; =&gt; $this-&gt;port,
+			&#039;path&#039; =&gt; $this-&gt;path,
+			&#039;query&#039; =&gt; null,
+			&#039;auth&#039; =&gt; $this-&gt;auth,
+			&#039;username&#039; =&gt; $this-&gt;username,
+			&#039;password&#039; =&gt; $this-&gt;password,
+			&#039;headers&#039; =&gt; [],
+			&#039;cookies&#039; =&gt; [],
+			&#039;proxy&#039; =&gt; $this-&gt;_config[&#039;proxy&#039;],
+			&#039;body&#039; =&gt; null,
+			&#039;version&#039; =&gt; $this-&gt;version,
+			&#039;ignore_errors&#039; =&gt; $this-&gt;_config[&#039;ignoreErrors&#039;],
+			&#039;follow_location&#039; =&gt; $this-&gt;_config[&#039;followLocation&#039;],
+			&#039;request_fulluri&#039; =&gt; (boolean) $this-&gt;_config[&#039;proxy&#039;]
+		];
+		$options += $defaults;
+
+		if (is_string($options[&#039;query&#039;])) {
+			$options[&#039;query&#039;] = &quot;?&quot; . $options[&#039;query&#039;];
+		} elseif ($options[&#039;query&#039;]) {
+			$options[&#039;query&#039;] = &quot;?&quot; . http_build_query($options[&#039;query&#039;]);
+		} elseif ($options[&#039;query&#039;] === null) {
+			$options[&#039;query&#039;] = $this-&gt;queryString();
+		}
+
+		if ($options[&#039;auth&#039;]) {
+			$data = [];
+
+			if (is_array($options[&#039;auth&#039;]) &amp;&amp; !empty($options[&#039;auth&#039;][&#039;nonce&#039;])) {
+				$data = [&#039;method&#039; =&gt; $options[&#039;method&#039;], &#039;uri&#039; =&gt; $options[&#039;path&#039;]];
+				$data += $options[&#039;auth&#039;];
+			}
+			$auth = $this-&gt;_classes[&#039;auth&#039;];
+			$data = $auth::encode($options[&#039;username&#039;], $options[&#039;password&#039;], $data);
+			$this-&gt;headers(&#039;Authorization&#039;, $auth::header($data));
+		}
+		if ($this-&gt;cookies($options[&#039;cookies&#039;])) {
+			$this-&gt;headers(&#039;Cookie&#039;, $this-&gt;_cookies());
+		}
+		$body = $this-&gt;body($options[&#039;body&#039;]);
+
+		if ($body || !in_array($options[&#039;method&#039;], [&#039;GET&#039;, &#039;HEAD&#039;, &#039;DELETE&#039;])) {
+			$this-&gt;headers(&#039;Content-Length&#039;, strlen($body));
+		}
+
+		$conv = isset($this-&gt;_formats[$format]) ? $this-&gt;_formats[$format] : null;
+		return $conv ? $conv($this, $options, $defaults) : parent::to($format, $options);
+	}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

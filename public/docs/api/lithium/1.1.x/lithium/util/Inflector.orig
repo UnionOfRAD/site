@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\util\Inflector – Framework API v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.1.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.1.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.1.x/lithium/util" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">util</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Inflector</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.1.x/lithium/util" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::reset()">reset()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::rules()">rules()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::pluralize()">pluralize()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::singularize()">singularize()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::camelize()">camelize()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::underscore()">underscore()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::slug()">slug()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::humanize()">humanize()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::tableize()">tableize()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::classify()">classify()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::_enclose()">_enclose()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::$_transliteration">$_transliteration</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::$_uninflected">$_uninflected</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::$_singular">$_singular</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::$_singularized">$_singularized</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::$_plural">$_plural</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::$_pluralized">$_pluralized</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::$_camelized">$_camelized</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::$_underscored">$_underscored</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/util/Inflector::$_humanized">$_humanized</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.1.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.1.x/lithium/util" class="symbol-segment">util</a>\Inflector		</h1>
+
+		<section class="under">
+															<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Utility for modifying format of words. Change singular to plural and vice versa.
+Under_score a CamelCased word and vice versa. Replace spaces and special characters.
+Create a human readable word from the others. Used when consistency in naming
+conventions must be enforced.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Inflector {
+
+	/**
+	 * Contains a default map of accented and special characters to ASCII characters.  Can be
+	 * extended or added to using `Inflector::rules()`.
+	 *
+	 * @see lithium\util\Inflector::slug()
+	 * @see lithium\util\Inflector::rules()
+	 * @var array
+	 */
+	protected static $_transliteration = [
+		&#039;/à|á|å|â/&#039; =&gt; &#039;a&#039;,
+		&#039;/Á|À|Å|Â/&#039; =&gt; &#039;A&#039;,
+		&#039;/è|é|ė|ê|ẽ|ë/&#039; =&gt; &#039;e&#039;,
+		&#039;/É|È|Ė|Ê|Ē|Ë/&#039; =&gt; &#039;E&#039;,
+		&#039;/ì|í|î/&#039; =&gt; &#039;i&#039;,
+		&#039;/Í|Ì|Î/&#039; =&gt; &#039;I&#039;,
+		&#039;/ò|ó|ơ|ô|ø/&#039; =&gt; &#039;o&#039;,
+		&#039;/Ò|Ó|Ơ|Ô|Ø/&#039; =&gt; &#039;O&#039;,
+		&#039;/ù|ú|ů|û/&#039; =&gt; &#039;u&#039;,
+		&#039;/Ú|Ù|Ů|Û/&#039; =&gt; &#039;U&#039;,
+		&#039;/ç|ć|č/&#039; =&gt; &#039;c&#039;,
+		&#039;/Č|Ć|Č/&#039; =&gt; &#039;C&#039;,
+		&#039;/đ/&#039; =&gt; &#039;dj&#039;,
+		&#039;/Đ/&#039; =&gt; &#039;Dj&#039;,
+		&#039;/DŽ/&#039; =&gt; &#039;Dz&#039;,
+		&#039;/š/&#039; =&gt; &#039;s&#039;,
+		&#039;/Š/&#039; =&gt; &#039;S&#039;,
+		&#039;/ž/&#039; =&gt; &#039;z&#039;,
+		&#039;/Ž/&#039; =&gt; &#039;Z&#039;,
+		&#039;/ñ/&#039; =&gt; &#039;n&#039;,
+		&#039;/Ñ/&#039; =&gt; &#039;N&#039;,
+		&#039;/ä|æ/&#039; =&gt; &#039;ae&#039;,
+		&#039;/Ä/&#039; =&gt; &#039;Ae&#039;,
+		&#039;/ö/&#039; =&gt; &#039;oe&#039;,
+		&#039;/Ö/&#039; =&gt; &#039;Oe&#039;,
+		&#039;/ü/&#039; =&gt; &#039;ue&#039;,
+		&#039;/Ü/&#039; =&gt; &#039;Ue&#039;,
+		&#039;/ß/&#039; =&gt; &#039;ss&#039;
+	];
+
+	/**
+	 * Indexed array of words which are the same in both singular and plural form.  You can add
+	 * rules to this list using `Inflector::rules()`.
+	 *
+	 * @see lithium\util\Inflector::rules()
+	 * @var array
+	 */
+	protected static $_uninflected = [
+		&#039;Amoyese&#039;, &#039;bison&#039;, &#039;Borghese&#039;, &#039;bream&#039;, &#039;breeches&#039;, &#039;britches&#039;, &#039;buffalo&#039;, &#039;cantus&#039;,
+		&#039;carp&#039;, &#039;chassis&#039;, &#039;clippers&#039;, &#039;cod&#039;, &#039;coitus&#039;, &#039;Congoese&#039;, &#039;contretemps&#039;, &#039;corps&#039;,
+		&#039;debris&#039;, &#039;diabetes&#039;, &#039;djinn&#039;, &#039;eland&#039;, &#039;elk&#039;, &#039;equipment&#039;, &#039;Faroese&#039;, &#039;flounder&#039;,
+		&#039;Foochowese&#039;, &#039;gallows&#039;, &#039;Genevese&#039;, &#039;Genoese&#039;, &#039;Gilbertese&#039;, &#039;graffiti&#039;,
+		&#039;headquarters&#039;, &#039;herpes&#039;, &#039;hijinks&#039;, &#039;Hottentotese&#039;, &#039;information&#039;, &#039;innings&#039;,
+		&#039;jackanapes&#039;, &#039;Kiplingese&#039;, &#039;Kongoese&#039;, &#039;Lucchese&#039;, &#039;mackerel&#039;, &#039;Maltese&#039;, &#039;media&#039;,
+		&#039;mews&#039;, &#039;moose&#039;, &#039;mumps&#039;, &#039;Nankingese&#039;, &#039;news&#039;, &#039;nexus&#039;, &#039;Niasese&#039;, &#039;People&#039;,
+		&#039;Pekingese&#039;, &#039;Piedmontese&#039;, &#039;pincers&#039;, &#039;Pistoiese&#039;, &#039;pliers&#039;, &#039;Portuguese&#039;,
+		&#039;proceedings&#039;, &#039;rabies&#039;, &#039;rice&#039;, &#039;rhinoceros&#039;, &#039;salmon&#039;, &#039;Sarawakese&#039;, &#039;scissors&#039;,
+		&#039;sea[- ]bass&#039;, &#039;series&#039;, &#039;Shavese&#039;, &#039;shears&#039;, &#039;siemens&#039;, &#039;species&#039;, &#039;swine&#039;, &#039;testes&#039;,
+		&#039;trousers&#039;, &#039;trout&#039;,&#039;tuna&#039;, &#039;Vermontese&#039;, &#039;Wenchowese&#039;, &#039;whiting&#039;, &#039;wildebeest&#039;,
+		&#039;Yengeese&#039;
+	];
+
+	/**
+	 * Contains the list of pluralization rules.
+	 *
+	 * @see lithium\util\Inflector::rules()
+	 * @var array Contains the following keys:
+	 *      - `&#039;rules&#039;`: An array of regular expression rules in the form of
+	 *        `&#039;match&#039; =&gt; &#039;replace&#039;`, which specify the matching and replacing rules for
+	 *        the pluralization of words.
+	 *      - `&#039;uninflected&#039;`: A indexed array containing regex word patterns which do not
+	 *        get inflected (i.e. singular and plural are the same).
+	 *      - `&#039;irregular&#039;`: Contains key-value pairs of specific words which are
+	 *        not inflected according to the rules. This is populated from `Inflector::$_plural`
+	 *        when the class is loaded.
+	 */
+	protected static $_singular = [
+		&#039;rules&#039; =&gt; [
+			&#039;/(s)tatuses$/i&#039; =&gt; &#039;\1\2tatus&#039;,
+			&#039;/^(.*)(menu)s$/i&#039; =&gt; &#039;\1\2&#039;,
+			&#039;/(quiz)zes$/i&#039; =&gt; &#039;\\1&#039;,
+			&#039;/(matr)ices$/i&#039; =&gt; &#039;\1ix&#039;,
+			&#039;/(vert|ind)ices$/i&#039; =&gt; &#039;\1ex&#039;,
+			&#039;/^(ox)en/i&#039; =&gt; &#039;\1&#039;,
+			&#039;/(alias)(es)*$/i&#039; =&gt; &#039;\1&#039;,
+			&#039;/(alumn|bacill|cact|foc|fung|nucle|radi|stimul|syllab|termin|viri?)i$/i&#039; =&gt; &#039;\1us&#039;,
+			&#039;/(cris|ax|test)es$/i&#039; =&gt; &#039;\1is&#039;,
+			&#039;/(shoe)s$/i&#039; =&gt; &#039;\1&#039;,
+			&#039;/(o)es$/i&#039; =&gt; &#039;\1&#039;,
+			&#039;/ouses$/&#039; =&gt; &#039;ouse&#039;,
+			&#039;/([^a])uses$/&#039; =&gt; &#039;\1us&#039;,
+			&#039;/([m|l])ice$/i&#039; =&gt; &#039;\1ouse&#039;,
+			&#039;/(x|ch|ss|sh)es$/i&#039; =&gt; &#039;\1&#039;,
+			&#039;/(m)ovies$/i&#039; =&gt; &#039;\1\2ovie&#039;,
+			&#039;/(s)eries$/i&#039; =&gt; &#039;\1\2eries&#039;,
+			&#039;/([^aeiouy]|qu)ies$/i&#039; =&gt; &#039;\1y&#039;,
+			&#039;/([lr])ves$/i&#039; =&gt; &#039;\1f&#039;,
+			&#039;/(tive)s$/i&#039; =&gt; &#039;\1&#039;,
+			&#039;/(hive)s$/i&#039; =&gt; &#039;\1&#039;,
+			&#039;/(drive)s$/i&#039; =&gt; &#039;\1&#039;,
+			&#039;/([^fo])ves$/i&#039; =&gt; &#039;\1fe&#039;,
+			&#039;/(^analy)ses$/i&#039; =&gt; &#039;\1sis&#039;,
+			&#039;/((a)naly|(b)a|(d)iagno|(p)arenthe|(p)rogno|(s)ynop|(t)he)ses$/i&#039; =&gt; &#039;\1\2sis&#039;,
+			&#039;/([ti])a$/i&#039; =&gt; &#039;\1um&#039;,
+			&#039;/(p)eople$/i&#039; =&gt; &#039;\1\2erson&#039;,
+			&#039;/(m)en$/i&#039; =&gt; &#039;\1an&#039;,
+			&#039;/(c)hildren$/i&#039; =&gt; &#039;\1\2hild&#039;,
+			&#039;/(n)ews$/i&#039; =&gt; &#039;\1\2ews&#039;,
+			&#039;/^(.*us)$/&#039; =&gt; &#039;\\1&#039;,
+			&#039;/s$/i&#039; =&gt; &#039;&#039;
+		],
+		&#039;irregular&#039; =&gt; [],
+		&#039;uninflected&#039; =&gt; [
+			&#039;.*[nrlm]ese&#039;, &#039;.*deer&#039;, &#039;.*fish&#039;, &#039;.*measles&#039;, &#039;.*ois&#039;, &#039;.*pox&#039;, &#039;.*sheep&#039;, &#039;.*ss&#039;
+		]
+	];
+
+	/**
+	 * Contains a cache map of previously singularized words.
+	 *
+	 * @var array
+	 */
+	protected static $_singularized = [];
+
+	/**
+	 * Contains the list of pluralization rules.
+	 *
+	 * @see lithium\util\Inflector::rules()
+	 * @var array Contains the following keys:
+	 *      - `&#039;rules&#039;`: An array of regular expression rules in the form of
+	 *        `&#039;match&#039; =&gt; &#039;replace&#039;`, which specify the matching and replacing
+	 *        rules for the pluralization of words.
+	 *      - `&#039;uninflected&#039;`: A indexed array containing regex word patterns
+	 *        which do not get inflected (i.e. singular and plural are the same).
+	 *      - `&#039;irregular&#039;`: Contains key-value pairs of specific words which are
+	 *        not inflected according to the rules.
+	 */
+	protected static $_plural = [
+		&#039;rules&#039; =&gt; [
+			&#039;/(s)tatus$/i&#039; =&gt; &#039;\1\2tatuses&#039;,
+			&#039;/(quiz)$/i&#039; =&gt; &#039;\1zes&#039;,
+			&#039;/^(ox)$/i&#039; =&gt; &#039;\1\2en&#039;,
+			&#039;/([m|l])ouse$/i&#039; =&gt; &#039;\1ice&#039;,
+			&#039;/(matr|vert|ind)(ix|ex)$/i&#039;  =&gt; &#039;\1ices&#039;,
+			&#039;/(x|ch|ss|sh)$/i&#039; =&gt; &#039;\1es&#039;,
+			&#039;/([^aeiouy]|qu)y$/i&#039; =&gt; &#039;\1ies&#039;,
+			&#039;/(hive)$/i&#039; =&gt; &#039;\1s&#039;,
+			&#039;/(?:([^f])fe|([lr])f)$/i&#039; =&gt; &#039;\1\2ves&#039;,
+			&#039;/sis$/i&#039; =&gt; &#039;ses&#039;,
+			&#039;/([ti])um$/i&#039; =&gt; &#039;\1a&#039;,
+			&#039;/(p)erson$/i&#039; =&gt; &#039;\1eople&#039;,
+			&#039;/(m)an$/i&#039; =&gt; &#039;\1en&#039;,
+			&#039;/(c)hild$/i&#039; =&gt; &#039;\1hildren&#039;,
+			&#039;/(buffal|tomat)o$/i&#039; =&gt; &#039;\1\2oes&#039;,
+			&#039;/(alumn|bacill|cact|foc|fung|nucle|radi|stimul|syllab|termin|vir)us$/i&#039; =&gt; &#039;\1i&#039;,
+			&#039;/us$/&#039; =&gt; &#039;uses&#039;,
+			&#039;/(alias)$/i&#039; =&gt; &#039;\1es&#039;,
+			&#039;/(ax|cri|test)is$/i&#039; =&gt; &#039;\1es&#039;,
+			&#039;/s$/&#039; =&gt; &#039;s&#039;,
+			&#039;/^$/&#039; =&gt; &#039;&#039;,
+			&#039;/$/&#039; =&gt; &#039;s&#039;
+		],
+		&#039;irregular&#039; =&gt; [
+			&#039;atlas&#039; =&gt; &#039;atlases&#039;, &#039;beef&#039; =&gt; &#039;beefs&#039;, &#039;brother&#039; =&gt; &#039;brothers&#039;,
+			&#039;child&#039; =&gt; &#039;children&#039;, &#039;corpus&#039; =&gt; &#039;corpuses&#039;, &#039;cow&#039; =&gt; &#039;cows&#039;,
+			&#039;ganglion&#039; =&gt; &#039;ganglions&#039;, &#039;genie&#039; =&gt; &#039;genies&#039;, &#039;genus&#039; =&gt; &#039;genera&#039;,
+			&#039;graffito&#039; =&gt; &#039;graffiti&#039;, &#039;hoof&#039; =&gt; &#039;hoofs&#039;, &#039;loaf&#039; =&gt; &#039;loaves&#039;, &#039;man&#039; =&gt; &#039;men&#039;,
+			&#039;leaf&#039; =&gt; &#039;leaves&#039;, &#039;money&#039; =&gt; &#039;monies&#039;, &#039;mongoose&#039; =&gt; &#039;mongooses&#039;, &#039;move&#039; =&gt; &#039;moves&#039;,
+			&#039;mythos&#039; =&gt; &#039;mythoi&#039;, &#039;numen&#039; =&gt; &#039;numina&#039;, &#039;occiput&#039; =&gt; &#039;occiputs&#039;,
+			&#039;octopus&#039; =&gt; &#039;octopuses&#039;, &#039;opus&#039; =&gt; &#039;opuses&#039;, &#039;ox&#039; =&gt; &#039;oxen&#039;, &#039;penis&#039; =&gt; &#039;penises&#039;,
+			&#039;person&#039; =&gt; &#039;people&#039;, &#039;sex&#039; =&gt; &#039;sexes&#039;, &#039;sleeve&#039; =&gt; &#039;sleeves&#039;,
+			&#039;soliloquy&#039; =&gt; &#039;soliloquies&#039;, &#039;tax&#039; =&gt; &#039;taxes&#039;, &#039;testis&#039; =&gt; &#039;testes&#039;,
+			&#039;trilby&#039; =&gt; &#039;trilbys&#039;, &#039;turf&#039; =&gt; &#039;turfs&#039;
+		],
+		&#039;uninflected&#039; =&gt; [
+			&#039;.*[nrlm]ese&#039;, &#039;.*deer&#039;, &#039;.*fish&#039;, &#039;.*measles&#039;, &#039;.*ois&#039;, &#039;.*pox&#039;, &#039;.*sheep&#039;
+		]
+	];
+
+	/**
+	 * Contains a cache map of previously pluralized words.
+	 *
+	 * @var array
+	 */
+	protected static $_pluralized = [];
+
+	/**
+	 * Contains a cache map of previously camelized words.
+	 *
+	 * @var array
+	 */
+	protected static $_camelized = [];
+
+	/**
+	 * Contains a cache map of previously underscored words.
+	 *
+	 * @var array
+	 */
+	protected static $_underscored = [];
+
+	/**
+	 * Contains a cache map of previously humanized words.
+	 *
+	 * @var array
+	 */
+	protected static $_humanized = [];
+
+	/**
+	 * Clears local in-memory caches.  Can be used to force a full-cache clear when updating
+	 * inflection rules mid-way through request execution.
+	 */
+	public static function reset() {
+		static::$_singularized = static::$_pluralized = [];
+		static::$_camelized = static::$_underscored = [];
+		static::$_humanized = [];
+
+		static::$_plural[&#039;regexUninflected&#039;] = static::$_singular[&#039;regexUninflected&#039;] = null;
+		static::$_plural[&#039;regexIrregular&#039;] = static::$_singular[&#039;regexIrregular&#039;] = null;
+		static::$_transliteration = [
+			&#039;/à|á|å|â/&#039; =&gt; &#039;a&#039;,
+			&#039;/è|é|ê|ẽ|ë/&#039; =&gt; &#039;e&#039;,
+			&#039;/ì|í|î/&#039; =&gt; &#039;i&#039;,
+			&#039;/ò|ó|ô|ø/&#039; =&gt; &#039;o&#039;,
+			&#039;/ù|ú|ů|û/&#039; =&gt; &#039;u&#039;,
+			&#039;/ç|ć|č/&#039; =&gt; &#039;c&#039;,
+			&#039;/đ/&#039; =&gt; &#039;dj&#039;,
+			&#039;/š/&#039; =&gt; &#039;s&#039;,
+			&#039;/ž/&#039; =&gt; &#039;z&#039;,
+			&#039;/ñ/&#039; =&gt; &#039;n&#039;,
+			&#039;/ä|æ/&#039; =&gt; &#039;ae&#039;,
+			&#039;/ö/&#039; =&gt; &#039;oe&#039;,
+			&#039;/ü/&#039; =&gt; &#039;ue&#039;,
+			&#039;/Ä/&#039; =&gt; &#039;Ae&#039;,
+			&#039;/Ü/&#039; =&gt; &#039;Ue&#039;,
+			&#039;/Ö/&#039; =&gt; &#039;Oe&#039;,
+			&#039;/ß/&#039; =&gt; &#039;ss&#039;,
+			&#039;/Č|Ć/&#039; =&gt; &#039;C&#039;,
+			&#039;/DŽ/&#039; =&gt; &#039;Dz&#039;,
+			&#039;/Đ/&#039; =&gt; &#039;Dj&#039;,
+			&#039;/Š/&#039; =&gt; &#039;S&#039;,
+			&#039;/Ž/&#039; =&gt; &#039;Z&#039;
+		];
+	}
+
+	/**
+	 * Gets or adds inflection and transliteration rules.
+	 *
+	 * @param string $type Either `&#039;transliteration&#039;`, `&#039;uninflected&#039;`, `&#039;singular&#039;` or `&#039;plural&#039;`.
+	 * @param array $config
+	 * @return mixed If `$config` is empty, returns the rules list specified
+	 *         by `$type`, otherwise returns `null`.
+	 */
+	public static function rules($type, $config = []) {
+		$var = &#039;_&#039; . $type;
+
+		if (!isset(static::${$var})) {
+			return null;
+		}
+		if (empty($config)) {
+			return static::${$var};
+		}
+		switch ($type) {
+			case &#039;transliteration&#039;:
+				$_config = [];
+
+				foreach ($config as $key =&gt; $val) {
+					if ($key[0] !== &#039;/&#039;) {
+						$key = &#039;/&#039; . join(&#039;|&#039;, array_filter(preg_split(&#039;//u&#039;, $key))) . &#039;/&#039;;
+					}
+					$_config[$key] = $val;
+				}
+				static::$_transliteration = array_merge(
+					$_config, static::$_transliteration, $_config
+				);
+			break;
+			case &#039;uninflected&#039;:
+				static::$_uninflected = array_merge(static::$_uninflected, (array) $config);
+				static::$_plural[&#039;regexUninflected&#039;] = null;
+				static::$_singular[&#039;regexUninflected&#039;] = null;
+
+				foreach ((array) $config as $word) {
+					unset(static::$_singularized[$word], static::$_pluralized[$word]);
+				}
+			break;
+			case &#039;singular&#039;:
+			case &#039;plural&#039;:
+				if (isset(static::${$var}[key($config)])) {
+					foreach ($config as $rType =&gt; $set) {
+						static::${$var}[$rType] = array_merge($set, static::${$var}[$rType], $set);
+
+						if ($rType === &#039;irregular&#039;) {
+							$swap = ($type === &#039;singular&#039; ? &#039;_plural&#039; : &#039;_singular&#039;);
+							static::${$swap}[$rType] = array_flip(static::${$var}[$rType]);
+						}
+					}
+				} else {
+					static::${$var}[&#039;rules&#039;] = array_merge(
+						$config, static::${$var}[&#039;rules&#039;], $config
+					);
+				}
+			break;
+		}
+	}
+
+	/**
+	 * Changes the form of a word from singular to plural.
+	 *
+	 * @param string $word Word in singular form.
+	 * @return string Word in plural form.
+	 */
+	public static function pluralize($word) {
+		if (isset(static::$_pluralized[$word])) {
+			return static::$_pluralized[$word];
+		}
+		extract(static::$_plural);
+
+		if (!isset($regexUninflected) || !isset($regexIrregular)) {
+			$regexUninflected = static::_enclose(join(&#039;|&#039;, $uninflected + static::$_uninflected));
+			$regexIrregular = static::_enclose(join(&#039;|&#039;, array_keys($irregular)));
+			static::$_plural += compact(&#039;regexUninflected&#039;, &#039;regexIrregular&#039;);
+		}
+		if (preg_match(&#039;/(&#039; . $regexUninflected . &#039;)$/i&#039;, $word, $regs)) {
+			return static::$_pluralized[$word] = $word;
+		}
+		if (preg_match(&#039;/(.*)\\b(&#039; . $regexIrregular . &#039;)$/i&#039;, $word, $regs)) {
+			$plural = substr($word, 0, 1) . substr($irregular[strtolower($regs[2])], 1);
+			return static::$_pluralized[$word] = $regs[1] . $plural;
+		}
+		foreach ($rules as $rule =&gt; $replacement) {
+			if (preg_match($rule, $word)) {
+				return static::$_pluralized[$word] = preg_replace($rule, $replacement, $word);
+			}
+		}
+		return static::$_pluralized[$word] = $word;
+	}
+
+	/**
+	 * Changes the form of a word from plural to singular.
+	 *
+	 * @param string $word Word in plural form.
+	 * @return string Word in singular form.
+	 */
+	public static function singularize($word) {
+		if (isset(static::$_singularized[$word])) {
+			return static::$_singularized[$word];
+		}
+		if (empty(static::$_singular[&#039;irregular&#039;])) {
+			static::$_singular[&#039;irregular&#039;] = array_flip(static::$_plural[&#039;irregular&#039;]);
+		}
+		extract(static::$_singular);
+
+		if (!isset($regexUninflected) || !isset($regexIrregular)) {
+			$regexUninflected = static::_enclose(join(&#039;|&#039;, $uninflected + static::$_uninflected));
+			$regexIrregular = static::_enclose(join(&#039;|&#039;, array_keys($irregular)));
+			static::$_singular += compact(&#039;regexUninflected&#039;, &#039;regexIrregular&#039;);
+		}
+		if (preg_match(&quot;/(.*)\\b({$regexIrregular})\$/i&quot;, $word, $regs)) {
+			$singular = substr($word, 0, 1) . substr($irregular[strtolower($regs[2])], 1);
+			return static::$_singularized[$word] = $regs[1] . $singular;
+		}
+		if (preg_match(&#039;/^(&#039; . $regexUninflected . &#039;)$/i&#039;, $word, $regs)) {
+			return static::$_singularized[$word] = $word;
+		}
+		foreach ($rules as $rule =&gt; $replacement) {
+			if (preg_match($rule, $word)) {
+				return static::$_singularized[$word] = preg_replace($rule, $replacement, $word);
+			}
+		}
+		return static::$_singularized[$word] = $word;
+	}
+
+	/**
+	 * Takes a under_scored word and turns it into a CamelCased or camelBack word
+	 *
+	 * @param string $word An under_scored or slugged word (i.e. `&#039;red_bike&#039;` or `&#039;red-bike&#039;`).
+	 * @param boolean $cased If false, first character is not upper cased
+	 * @return string CamelCased version of the word (i.e. `&#039;RedBike&#039;`).
+	 */
+	public static function camelize($word, $cased = true) {
+		$_word = $word;
+
+		if (isset(static::$_camelized[$_word]) &amp;&amp; $cased) {
+			return static::$_camelized[$_word];
+		}
+		$word = str_replace(&quot; &quot;, &quot;&quot;, ucwords(str_replace([&quot;_&quot;, &#039;-&#039;], &quot; &quot;, $word)));
+
+		if (!$cased) {
+			return lcfirst($word);
+		}
+		return static::$_camelized[$_word] = $word;
+	}
+
+	/**
+	 * Takes a CamelCased version of a word and turns it into an under_scored one.
+	 *
+	 * @param string $word CamelCased version of a word (i.e. `&#039;RedBike&#039;`).
+	 * @return string Under_scored version of the workd (i.e. `&#039;red_bike&#039;`).
+	 */
+	public static function underscore($word) {
+		if (isset(static::$_underscored[$word])) {
+			return static::$_underscored[$word];
+		}
+		return static::$_underscored[$word] = strtolower(static::slug($word, &#039;_&#039;));
+	}
+
+	/**
+	 * Returns a string with all spaces converted to given replacement and
+	 * non word characters removed.  Maps special characters to ASCII using
+	 * `Inflector::$_transliteration`, which can be updated using `Inflector::rules()`.
+	 *
+	 * @see lithium\util\Inflector::rules()
+	 * @param string $string An arbitrary string to convert.
+	 * @param string $replacement The replacement to use for spaces.
+	 * @return string The converted string.
+	 */
+	public static function slug($string, $replacement = &#039;-&#039;) {
+		$map = static::$_transliteration + [
+			&#039;/[^\s\p{L}\p{Nd}]/u&#039; =&gt; &#039; &#039;,
+			&#039;/\s+/u&#039; =&gt; $replacement,
+			&#039;/(?&lt;=[a-z])([A-Z])/&#039; =&gt; $replacement . &#039;\\1&#039;,
+			str_replace(&#039;:rep&#039;, preg_quote($replacement, &#039;/&#039;), &#039;/^[:rep]+|[:rep]+$/&#039;) =&gt; &#039;&#039;
+		];
+		return preg_replace(array_keys($map), array_values($map), $string);
+	}
+
+	/**
+	 * Takes an under_scored version of a word and turns it into an human- readable form
+	 * by replacing underscores with a space, and by upper casing the initial character.
+	 *
+	 * @param string $word Under_scored version of a word (i.e. `&#039;red_bike&#039;`).
+	 * @param string $separator The separator character used in the initial string.
+	 * @return string Human readable version of the word (i.e. `&#039;Red Bike&#039;`).
+	 */
+	public static function humanize($word, $separator = &#039;_&#039;) {
+		if (isset(static::$_humanized[$key = $word . &#039;:&#039; . $separator])) {
+			return static::$_humanized[$key];
+		}
+		return static::$_humanized[$key] = ucwords(str_replace($separator, &quot; &quot;, $word));
+	}
+
+	/**
+	 * Takes a CamelCased class name and returns corresponding under_scored table name.
+	 *
+	 * @param string $className CamelCased class name (i.e. `&#039;Post&#039;`).
+	 * @return string Under_scored and plural table name (i.e. `&#039;posts&#039;`).
+	 */
+	public static function tableize($className) {
+		return static::pluralize(static::underscore($className));
+	}
+
+	/**
+	 * Takes a under_scored table name and returns corresponding class name.
+	 *
+	 * @param string $tableName Under_scored and plural table name (i.e. `&#039;posts&#039;`).
+	 * @return string CamelCased class name (i.e. `&#039;Post&#039;`).
+	 */
+	public static function classify($tableName) {
+		return static::camelize(static::singularize($tableName));
+	}
+
+	/**
+	 * Enclose a string for preg matching.
+	 *
+	 * @param string $string String to enclose
+	 * @return string Enclosed string
+	 */
+	protected static function _enclose($string) {
+		return &#039;(?:&#039; . $string . &#039;)&#039;;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

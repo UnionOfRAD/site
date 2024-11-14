@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Relationships – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/book/manual/1.x" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/book/manual/1.x/models" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Models</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Relationships</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="/docs/book/manual/1.x/common-tasks" class="">Common Tasks</a><ul><li><a href="/docs/book/manual/1.x/common-tasks/logging" class="">Logging</a><li><a href="/docs/book/manual/1.x/common-tasks/plugins" class="">Plugins</a><li><a href="/docs/book/manual/1.x/common-tasks/error-handling" class="">Error Handling</a><li><a href="/docs/book/manual/1.x/common-tasks/caching" class="">Caching</a><li><a href="/docs/book/manual/1.x/common-tasks/filters" class="">Filters</a><li><a href="/docs/book/manual/1.x/common-tasks/etags" class="">Etags</a><li><a href="/docs/book/manual/1.x/common-tasks/globalization" class="">Globalization</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-authentication" class="">Simple Authentication</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-auth-user" class="">Simple Auth User</a><li><a href="/docs/book/manual/1.x/common-tasks/console-applications" class="">Console Applications</a></ul><li><a href="/docs/book/manual/1.x/appendices" class="">Appendices</a><ul><li><a href="/docs/book/manual/1.x/appendices/faqs" class="">FAQs</a><li><a href="/docs/book/manual/1.x/appendices/using-in-other-applications" class="">Using In Other Applications</a></ul><li><a href="/docs/book/manual/1.x/quickstart" class="">Quickstart</a><li><a href="/docs/book/manual/1.x/controllers" class="">Controllers</a><ul><li><a href="/docs/book/manual/1.x/controllers/actions" class="">Actions</a><li><a href="/docs/book/manual/1.x/controllers/flow-control" class="">Flow Control</a><li><a href="/docs/book/manual/1.x/controllers/parameters" class="">Parameters</a><li><a href="/docs/book/manual/1.x/controllers/type-rendering-detection" class="">Type Rendering Detection</a><li><a href="/docs/book/manual/1.x/controllers/routing" class="">Routing</a></ul><li><a href="/docs/book/manual/1.x/installation" class="">Installation</a><ul><li><a href="/docs/book/manual/1.x/installation/requirements" class="">Requirements</a><li><a href="/docs/book/manual/1.x/installation/troubleshooting" class="">Troubleshooting</a><li><a href="/docs/book/manual/1.x/installation/web-servers" class="">Web Servers</a></ul><li><a href="/docs/book/manual/1.x/architecture" class="">Architecture</a><ul><li><a href="/docs/book/manual/1.x/architecture/file-structure" class="">File Structure</a><li><a href="/docs/book/manual/1.x/architecture/response-lifecycle" class="">Response Lifecycle</a><li><a href="/docs/book/manual/1.x/architecture/aop" class="">AOP</a><li><a href="/docs/book/manual/1.x/architecture/mvc" class="">MVC</a><li><a href="/docs/book/manual/1.x/architecture/objects" class="">Objects</a></ul><li><a href="/docs/book/manual/1.x/quality-code" class="">Quality Code</a><ul><li><a href="/docs/book/manual/1.x/quality-code/fixtures" class="">Fixtures</a><li><a href="/docs/book/manual/1.x/quality-code/analysis" class="">Analysis</a><li><a href="/docs/book/manual/1.x/quality-code/testing" class="">Testing</a><li><a href="/docs/book/manual/1.x/quality-code/security" class="">Security</a></ul><li><a href="/docs/book/manual/1.x/configuration" class="">Configuration</a><ul><li><a href="/docs/book/manual/1.x/configuration/environment" class="">Environment</a><li><a href="/docs/book/manual/1.x/configuration/bootstrapping" class="">Bootstrapping</a><li><a href="/docs/book/manual/1.x/configuration/third-party-libraries" class="">Third Party Libraries</a></ul><li><a href="/docs/book/manual/1.x/views" class="">Views</a><ul><li><a href="/docs/book/manual/1.x/views/layouts" class="">Layouts</a><li><a href="/docs/book/manual/1.x/views/elements" class="">Elements</a><li><a href="/docs/book/manual/1.x/views/helpers" class="">Helpers</a><li><a href="/docs/book/manual/1.x/views/static-content" class="">Static Content</a><li><a href="/docs/book/manual/1.x/views/auto-escaping" class="">Auto Escaping</a></ul><li><a href="/docs/book/manual/1.x/models" class="">Models</a><ul><li><a href="/docs/book/manual/1.x/models/mongodb" class="">Mongodb</a><li><a href="/docs/book/manual/1.x/models/meta" class="">Meta</a><li><a href="/docs/book/manual/1.x/models/relationships" class="active">Relationships</a><li><a href="/docs/book/manual/1.x/models/saving" class="">Saving</a><li><a href="/docs/book/manual/1.x/models/using-data-sources" class="">Using Data Sources</a><li><a href="/docs/book/manual/1.x/models/adding-functions" class="">Adding Functions</a><li><a href="/docs/book/manual/1.x/models/data-mutation" class="">Data Mutation</a><li><a href="/docs/book/manual/1.x/models/connections" class="">Connections</a><li><a href="/docs/book/manual/1.x/models/creating-data-sources" class="">Creating Data Sources</a><li><a href="/docs/book/manual/1.x/models/querying" class="">Querying</a><li><a href="/docs/book/manual/1.x/models/validation" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="model-relationships" class="anchor" href="#model-relationships">Model Relationships</a></h1>
+<p>The data that applications manipulate is usually structured in some way. Objects have links to other objects, and the model layer that represents that data should reflect the structure inherent in the data it represents and interacts with.</p>
+<p>li3's data layer offers a way to facilitate data relationships and structure. This guide is meant to show you how to specify and define these data relationships and use them to your advantage as you build your application.</p>
+<h2><a id="defining-model-relationships" class="anchor" href="#defining-model-relationships">Defining Model Relationships</a></h2>
+<p>Before you define a model relationship in your code, it's important to understand the terminology that describes a relationship between two objects in your system. In li3 (and elsewhere), a specific set of terms are used to describe model relationships:</p>
+<ul>
+<li><em>hasOne</em>: the current object is linked to a single object of another type</li>
+<li><em>hasMany</em>: the current object is linked to many objects of another type</li>
+<li><em>belongsTo</em>: the current object is owned and marked as related to another object</li>
+</ul>
+<div class="note note-hint">
+	If you're having a hard time remembering hasOne/hasMany versus belongsTo, just
+	remember this: if the current model contains some sort of marker (like a foreign key), it
+	<em>belongsTo</em> another model.
+</div>
+<p>Defining this object relationship is simple: you populate special properties on the model object. For example, let's say we're building an online store. Each <code>Category</code> is filled with many <code>Product</code> objects. In this case, we'd want to specify <code>Category</code> hasMany <code>Product</code>. Let's see how this is done:</p>
+<pre><code class="language-php">class Categories extends \lithium\data\Model {
+
+	public $hasMany = ['Products'];
+}
+</code></pre>
+<p>This simple declaration relies on convention, and is the functional equivalent to this:</p>
+<pre><code class="language-php">class Categories extends \lithium\data\Model {
+
+	public $hasMany = ['Products' =&gt; [
+		'to'          =&gt; 'Products',
+		'key'         =&gt; 'category_id',
+		'constraints' =&gt; [],
+		'fields'      =&gt; [],
+		'order'       =&gt; null,
+		'limit'       =&gt; null
+	]];
+}
+</code></pre>
+<p>Unless specified otherwise, the relationship assumes you're using the exact class name specified, with a key that is an under_scored version of the model's class name, suffixed with <code>_id</code>. All other sorting and limit options are assumed to be empty.</p>
+<p>All of the model relationships use these same keys (although there's no reason to order or limit hasOne or belongsTo) and can be configured likewise.</p>
+<h2><a id="reading-related-data" class="anchor" href="#reading-related-data">Reading Related Data</a></h2>
+<p>Once a relationship as been configured, you can use your models to fetch related data. We can now do this in a controller:</p>
+<pre><code class="language-php">$categories = Categories::find('all', [
+	'with' =&gt; 'Products'
+]);
+
+print_r($categories-&gt;to('array'));
+/* outputs:
+	Array
+	(
+	    [id] =&gt; 1
+	    [name] =&gt; Audio
+	    [products] =&gt; Array
+	        (
+	            [0] =&gt; Array
+	                (
+	                    [id] =&gt; 1
+	                    [category_id] =&gt; 1
+	                    [name] =&gt; Headphones
+	                    [price] =&gt; 21.99
+	                )
+	            [1] =&gt; Array
+	                (
+	                    [id] =&gt; 2
+	                    [category_id] =&gt; 1
+	                    [name] =&gt; Desk Speakers
+	                    [price] =&gt; 39.95
+	                )
+	            [2] =&gt; Array
+	                (
+	                    [id] =&gt; 3
+	                    [category_id] =&gt; 1
+	                    [name] =&gt; Portable Radio
+	                    [price] =&gt; 9.95
+	                )
+	        )
+	)
+*/
+</code></pre>
+<p>Notice the new <code>with</code> key supplied to the model? This tells the model that you want related data joined to the normal result.</p>
+<p>As you can see from the output, the related data has been added on to the model result. While we're printing out array contents here, you can as easily loop through or access the same information at <code>$categories-&gt;products</code> in this case as well.</p>
+<h2><a id="ordering-related-data" class="anchor" href="#ordering-related-data">Ordering Related Data</a></h2>
+<p>Ordering data works mostly as you'd expect it to. The following returns
+all categories and their associated products first unsorted and than sorted
+by the category title.</p>
+<p>Good practice is to qualify fields (with the model name) in such queries to make the
+statement unambigous.</p>
+<pre><code class="language-php">Categories::find('all', [
+	'with' =&gt; 'Products'
+]);
+
+Categories::find('all', [
+	'with' =&gt; 'Products',
+	'order' =&gt; ['Categories.title']
+]);
+</code></pre>
+<p>To have the nested products themselves sorted inside the <code>-&gt;products</code>, you
+add the qualified relationship field to the order statement.</p>
+<pre><code class="language-php">Categories::find('all', [
+	'order' =&gt; ['Categories.id', 'Products.price'],
+	'with' =&gt; 'Products'
+]);
+</code></pre>
+<p>Did you note that we also added <code>Categories.id</code> in there? This is to keep
+a consistent result set.</p>
+<div class="note note-caution">
+	Sorting the whole result set just by the products
+	price alone is <em>not</em> possible.
+</div>
+<p>If you see an exception thrown (<code>Associated records hydrated out of order.</code>), than
+simply order by the main models primary key first. Other frameworks will magically
+rewrite the query for you and add that primary key automatically. li3 however has
+decided against this, as it doesn't want to mess with your queries.</p>
+<h2><a id="saving-related-data" class="anchor" href="#saving-related-data">Saving Related Data</a></h2>
+<p>Because relationship setup is simple, so is saving related data. When saving related data, just make sure the proper key values are set so that the underlying data storage engine can match up the data correctly.
+Here's a simplified example of how we'd save a newly created product, matched up to a category. First, the <code>ProductsController</code>:</p>
+<pre><code class="language-php">namespace app\controllers;
+
+use \app\models\Products;
+use \app\models\Categories;
+
+class ProductsController extends \lithium\action\Controller {
+
+	public function create() {
+		// If form data has been submitted, create a new Product.
+		if ($this-&gt;request-&gt;data) {
+			Products::create($this-&gt;request-&gt;data)-&gt;save();
+		}
+
+		// Create a list of categories to send to the view.
+		$categories = Categories::find('all');
+		$categoryList = [];
+		foreach ($categories as $category) {
+			$categoryList[$category-&gt;id] = $category-&gt;name;
+		}
+
+		$this-&gt;set(compact('categoryList'));
+	}
+}
+</code></pre>
+<p>And, here is the view that contains the form:</p>
+<pre><code class="language-php">&lt;?= $this-&gt;form-&gt;create() ?&gt;
+	&lt;?= $this-&gt;form-&gt;select('category_id', $categoryList) ?&gt;
+	&lt;?= $this-&gt;form-&gt;text('name') ?&gt;
+	&lt;?= $this-&gt;form-&gt;text('price') ?&gt;
+	&lt;?= $this-&gt;form-&gt;submit('Create Product') ?&gt;
+&lt;?= $this-&gt;form-&gt;end() ?&gt;
+</code></pre>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

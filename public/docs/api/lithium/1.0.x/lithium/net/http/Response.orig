@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\net\http\Response – Framework API v1.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.0.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.0.x/lithium/net" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">net</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.0.x/lithium/net/http" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">http</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Response</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.0.x/lithium/net/http" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Response::__construct()">__construct()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Response::body()">body()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Response::status()">status()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Response::cookies()">cookies()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Response::_cookies()">_cookies()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Response::digest()">digest()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Response::_parseMessage()">_parseMessage()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Response::_parseCookies()">_parseCookies()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Response::_httpChunkedDecode()">_httpChunkedDecode()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Response::__toString()">__toString()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Message::headers()">headers()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Message::type()">type()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Message::_encode()">_encode()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Message::_decode()">_decode()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/Message::to()">to()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_init()">_init()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::applyFilter()">applyFilter()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::invokeMethod()">invokeMethod()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::__set_state()">__set_state()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::respondsTo()">respondsTo()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_instance()">_instance()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_filter()">_filter()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_parents()">_parents()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::_stop()">_stop()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property public">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Response::$status">$status</a>												<li class="property public">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Response::$encoding">$encoding</a>												<li class="property public">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Response::$cookies">$cookies</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Response::$_statuses">$_statuses</a>												<li class="property public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Message::$protocol">$protocol</a>												<li class="property public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Message::$version">$version</a>												<li class="property public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Message::$headers">$headers</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Message::$_type">$_type</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/http/Message::$_classes">$_classes</a>												<li class="property public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/Message::$scheme">$scheme</a>												<li class="property public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/Message::$host">$host</a>												<li class="property public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/Message::$port">$port</a>												<li class="property public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/Message::$username">$username</a>												<li class="property public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/Message::$password">$password</a>												<li class="property public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/Message::$path">$path</a>												<li class="property public inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/net/Message::$body">$body</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::$_config">$_config</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::$_autoConfig">$_autoConfig</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::$_methodFilters">$_methodFilters</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.0.x/lithium/core/Object::$_parents">$_parents</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.0.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.0.x/lithium/net" class="symbol-segment">net</a>\<a href="/docs/api/lithium/1.0.x/lithium/net/http" class="symbol-segment">http</a>\Response		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.0.x/lithium/net/http/Message" class="extends__symbol">lithium\net\http\Message</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Parses and stores the status, headers and body of an HTTP response.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+			
+			
+						<section id="subclasses" class="section">
+				<h3 class="h-beta">Subclasses</h3>
+				<ul class="subclasses">
+											<li><a href="/docs/api/lithium/1.0.x/lithium/action/Response">lithium\action\Response</a>									</ul>
+			</section>
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Response extends \lithium\net\http\Message {
+
+	/**
+	 * Status code and message.
+	 *
+	 * @var array
+	 */
+	public $status = array(&#039;code&#039; =&gt; 200, &#039;message&#039; =&gt; &#039;OK&#039;);
+
+	/**
+	 * Character encoding.
+	 *
+	 * @var string
+	 */
+	public $encoding = &#039;UTF-8&#039;;
+
+	/**
+	 * Cookies to be set in this HTTP response, usually parsed from `Set-Cookie` headers.
+	 *
+	 * Cookies are stored as arrays of `$name =&gt; $value` where `$value` is an associative array
+	 * or an array of associative arrays which contain at minimum a `value` key and optionally,
+	 * `expire`, `path`, `domain`, `secure`, and/or `httponly` keys corresponding to the parameters
+	 * of PHP `setcookie()`.
+	 *
+	 * @see lithium\net\http\Response::cookies()
+	 * @link http://php.net/function.setcookie.php
+	 * @var array
+	 */
+	public $cookies = array();
+
+	/**
+	 * Status codes.
+	 *
+	 * @var array
+	 */
+	protected $_statuses = array(
+		100 =&gt; &#039;Continue&#039;,
+		101 =&gt; &#039;Switching Protocols&#039;,
+		102 =&gt; &#039;Processing&#039;,
+		200 =&gt; &#039;OK&#039;,
+		201 =&gt; &#039;Created&#039;,
+		202 =&gt; &#039;Accepted&#039;,
+		203 =&gt; &#039;Non-Authoritative Information&#039;,
+		204 =&gt; &#039;No Content&#039;,
+		205 =&gt; &#039;Reset Content&#039;,
+		206 =&gt; &#039;Partial Content&#039;,
+		300 =&gt; &#039;Multiple Choices&#039;,
+		301 =&gt; &#039;Moved Permanently&#039;,
+		302 =&gt; &#039;Found&#039;,
+		303 =&gt; &#039;See Other&#039;,
+		304 =&gt; &#039;Not Modified&#039;,
+		305 =&gt; &#039;Use Proxy&#039;,
+		307 =&gt; &#039;Temporary Redirect&#039;,
+		308 =&gt; &#039;Permanent Redirect&#039;,
+		400 =&gt; &#039;Bad Request&#039;,
+		401 =&gt; &#039;Unauthorized&#039;,
+		402 =&gt; &#039;Payment Required&#039;,
+		403 =&gt; &#039;Forbidden&#039;,
+		404 =&gt; &#039;Not Found&#039;,
+		405 =&gt; &#039;Method Not Allowed&#039;,
+		406 =&gt; &#039;Not Acceptable&#039;,
+		407 =&gt; &#039;Proxy Authentication Required&#039;,
+		408 =&gt; &#039;Request Time-out&#039;,
+		409 =&gt; &#039;Conflict&#039;,
+		410 =&gt; &#039;Gone&#039;,
+		411 =&gt; &#039;Length Required&#039;,
+		412 =&gt; &#039;Precondition Failed&#039;,
+		413 =&gt; &#039;Request Entity Too Large&#039;,
+		414 =&gt; &#039;Request-URI Too Large&#039;,
+		415 =&gt; &#039;Unsupported Media Type&#039;,
+		416 =&gt; &#039;Requested Range Not Satisfiable&#039;,
+		417 =&gt; &#039;Expectation Failed&#039;,
+		422 =&gt; &#039;Unprocessable Entity&#039;,
+		423 =&gt; &#039;Locked&#039;,
+		424 =&gt; &#039;Method Failure&#039;,
+		428 =&gt; &#039;Precondition Required&#039;,
+		429 =&gt; &#039;Too Many Requests&#039;,
+		431 =&gt; &#039;Request Header Fields Too Large&#039;,
+		451 =&gt; &#039;Unavailable For Legal Reasons&#039;,
+		500 =&gt; &#039;Internal Server Error&#039;,
+		501 =&gt; &#039;Not Implemented&#039;,
+		502 =&gt; &#039;Bad Gateway&#039;,
+		503 =&gt; &#039;Service Unavailable&#039;,
+		504 =&gt; &#039;Gateway Time-out&#039;,
+		507 =&gt; &#039;Insufficient Storage&#039;,
+		511 =&gt; &#039;Network Authentication Required&#039;
+	);
+
+	/**
+	 * Constructor. Adds config values to the public properties when a new object is created.
+	 *
+	 * @see lithium\net\http\Message::__construct()
+	 * @see lithium\net\Message::__construct()
+	 * @param array $config The available configuration options are the following. Further
+	 *        options are inherited from the parent classes.
+	 *        - `&#039;message&#039;` _string_: Defaults to `null`.
+	 *        - `&#039;status&#039;` _mixed_: Defaults to `null`.
+	 *        - `&#039;type&#039;` _string_: Defaults to `null`.
+	 *        - `&#039;cookies&#039;` _array_: Defaults to `array()`.
+	 * @return void
+	 */
+	public function __construct(array $config = array()) {
+		$defaults = array(
+			&#039;message&#039; =&gt; null,
+			&#039;status&#039; =&gt; null,
+			&#039;type&#039; =&gt; null,
+			&#039;cookies&#039; =&gt; array()
+		);
+		parent::__construct($config + $defaults);
+
+		if ($this-&gt;_config[&#039;message&#039;]) {
+			$this-&gt;body = $this-&gt;_parseMessage($this-&gt;_config[&#039;message&#039;]);
+		}
+		if ($this-&gt;headers(&#039;Transfer-Encoding&#039;)) {
+			$this-&gt;body = $this-&gt;_httpChunkedDecode($this-&gt;body);
+		}
+		if ($status = $this-&gt;_config[&#039;status&#039;]) {
+			$this-&gt;status($status);
+		}
+		if ($cookies = $this-&gt;headers(&#039;Set-Cookie&#039;)) {
+			$this-&gt;_parseCookies($cookies);
+		}
+		if ($cookies = $this-&gt;_config[&#039;cookies&#039;]) {
+			$this-&gt;cookies($cookies);
+		}
+		if ($type = $this-&gt;_config[&#039;type&#039;]) {
+			$this-&gt;type($type);
+		}
+		if (!$header = $this-&gt;headers(&#039;Content-Type&#039;)) {
+			return;
+		}
+		$header = is_array($header) ? end($header) : $header;
+		preg_match(&#039;/([-\w\/\.+]+)(;\s*?charset=(.+))?/i&#039;, $header, $match);
+
+		if (isset($match[1])) {
+			$this-&gt;type(trim($match[1]));
+		}
+		if (isset($match[3])) {
+			$this-&gt;encoding = strtoupper(trim($match[3]));
+		}
+	}
+
+	/**
+	 * Add data to or compile and return the HTTP message body, optionally decoding its parts
+	 * according to content type.
+	 *
+	 * @see lithium\net\Message::body()
+	 * @see lithium\net\http\Message::_decode()
+	 * @param mixed $data
+	 * @param array $options
+	 *        - `&#039;buffer&#039;` _integer_: split the body string
+	 *        - `&#039;encode&#039;` _boolean_: encode the body based on the content type
+	 *        - `&#039;decode&#039;` _boolean_: decode the body based on the content type
+	 * @return array
+	 */
+	public function body($data = null, $options = array()) {
+		$defaults = array(&#039;decode&#039; =&gt; true);
+		return parent::body($data, $options + $defaults);
+	}
+
+	/**
+	 * Set and get the status for the response.
+	 *
+	 * @param string $key Optional. Set to `&#039;code&#039;` or `&#039;message&#039;` to return just the code
+	 *        or message of the status, otherwise returns the full status header.
+	 * @param string $status The code or message of the status you wish to set.
+	 * @return string Returns the full HTTP status, with version, code and message or
+	 *         dending on $key just the code or message.
+	 */
+	public function status($key = null, $status = null) {
+		if ($status === null) {
+			$status = $key;
+		}
+		if ($status) {
+			$this-&gt;status = array(&#039;code&#039; =&gt; null, &#039;message&#039; =&gt; null);
+
+			if (is_array($status)) {
+				$key = null;
+				$this-&gt;status = $status + $this-&gt;status;
+			} elseif (is_numeric($status) &amp;&amp; isset($this-&gt;_statuses[$status])) {
+				$this-&gt;status = array(&#039;code&#039; =&gt; $status, &#039;message&#039; =&gt; $this-&gt;_statuses[$status]);
+			} else {
+				$statuses = array_flip($this-&gt;_statuses);
+
+				if (isset($statuses[$status])) {
+					$this-&gt;status = array(&#039;code&#039; =&gt; $statuses[$status], &#039;message&#039; =&gt; $status);
+				}
+			}
+		}
+		if (!isset($this-&gt;_statuses[$this-&gt;status[&#039;code&#039;]])) {
+			return false;
+		}
+		if (isset($this-&gt;status[$key])) {
+			return $this-&gt;status[$key];
+		}
+		return &quot;{$this-&gt;protocol} {$this-&gt;status[&#039;code&#039;]} {$this-&gt;status[&#039;message&#039;]}&quot;;
+	}
+
+	/**
+	 * Add a cookie to header output, or return a single cookie or full cookie list.
+	 *
+	 * This function&#039;s parameters are designed to be analogous to setcookie(). Function parameters
+	 * `expire`, `path`, `domain`, `secure`, and `httponly` may be passed in as an associative array
+	 * alongside `value` inside `$value`.
+	 *
+	 * NOTE: Cookies values are expected to be scalar. This function will not serialize cookie values.
+	 * If you wish to store a non-scalar value, you must serialize the data first.
+	 *
+	 * NOTE: Cookie values are stored as an associative array containing at minimum a `value` key.
+	 * Cookies which have been set multiple times do not overwrite each other.  Rather they are stored
+	 * as an array of associative arrays.
+	 *
+	 * @link http://php.net/function.setcookie.php
+	 * @param string $key
+	 * @param string $value
+	 * @return mixed
+	 */
+	public function cookies($key = null, $value = null) {
+		if (!$key) {
+			$key = $this-&gt;cookies;
+			$this-&gt;cookies = array();
+		}
+		if (is_array($key)) {
+			foreach ($key as $cookie =&gt; $value) {
+				$this-&gt;cookies($cookie, $value);
+			}
+		} elseif (is_string($key)) {
+			if ($value === null) {
+				return isset($this-&gt;cookies[$key]) ? $this-&gt;cookies[$key] : null;
+			}
+			if ($value === false) {
+				unset($this-&gt;cookies[$key]);
+			} else {
+				if (is_array($value)) {
+					if (array_values($value) === $value) {
+						foreach ($value as $i =&gt; $set) {
+							if (!is_array($set)) {
+								$value[$i] = array(&#039;value&#039; =&gt; $set);
+							}
+						}
+					}
+				} else {
+					$value = array(&#039;value&#039; =&gt; $value);
+				}
+				if (isset($this-&gt;cookies[$key])) {
+					$orig = $this-&gt;cookies[$key];
+					if (array_values($orig) !== $orig) {
+						$orig = array($orig);
+					}
+					if (array_values($value) !== $value) {
+						$value = array($value);
+					}
+					$this-&gt;cookies[$key] = array_merge($orig, $value);
+				} else {
+					$this-&gt;cookies[$key] = $value;
+				}
+			}
+		}
+		return $this-&gt;cookies;
+	}
+
+	/**
+	 * Render `Set-Cookie` headers, urlencoding invalid characters.
+	 *
+	 * NOTE: Technically &#039;+&#039; is a valid character, but many browsers erroneously convert these to
+	 * spaces, so we must escape this too.
+	 *
+	 * @return array Array of `Set-Cookie` headers or `null` if no cookies to set.
+	 */
+	protected function _cookies() {
+		$cookies = array();
+		foreach ($this-&gt;cookies() as $name =&gt; $value) {
+			if (!isset($value[&#039;value&#039;])) {
+				foreach ($value as $set) {
+					$cookies[] = compact(&#039;name&#039;) + $set;
+				}
+			} else {
+				$cookies[] = compact(&#039;name&#039;) + $value;
+			}
+		}
+		$invalid = str_split(&quot;,; \+\t\r\n\013\014&quot;);
+		$replace = array_map(&#039;rawurlencode&#039;, $invalid);
+		$replace = array_combine($invalid, $replace);
+
+		foreach ($cookies as &amp;$cookie) {
+			if (!is_scalar($cookie[&#039;value&#039;])) {
+				$message = &quot;Non-scalar value cannot be rendered for cookie `{$cookie[&#039;name&#039;]}`&quot;;
+				throw new UnexpectedValueException($message);
+			}
+			$value = strtr($cookie[&#039;value&#039;], $replace);
+			$header = $cookie[&#039;name&#039;] . &#039;=&#039; . $value;
+
+			if (!empty($cookie[&#039;expires&#039;])) {
+				if (is_string($cookie[&#039;expires&#039;])) {
+					$cookie[&#039;expires&#039;] = strtotime($cookie[&#039;expires&#039;]);
+				}
+				$header .= &#039;; Expires=&#039; . gmdate(&#039;D, d-M-Y H:i:s&#039;, $cookie[&#039;expires&#039;]) . &#039; GMT&#039;;
+			}
+			if (!empty($cookie[&#039;path&#039;])) {
+				$header .= &#039;; Path=&#039; . strtr($cookie[&#039;path&#039;], $replace);
+			}
+			if (!empty($cookie[&#039;domain&#039;])) {
+				$header .= &#039;; Domain=&#039; . strtr($cookie[&#039;domain&#039;], $replace);
+			}
+			if (!empty($cookie[&#039;secure&#039;])) {
+				$header .= &#039;; Secure&#039;;
+			}
+			if (!empty($cookie[&#039;httponly&#039;])) {
+				$header .= &#039;; HttpOnly&#039;;
+			}
+			$cookie = $header;
+		}
+		return $cookies ?: null;
+	}
+
+	/**
+	 * Looks at the WWW-Authenticate. Will return array of key/values if digest.
+	 *
+	 * @param string $header value of WWW-Authenticate
+	 * @return array
+	 */
+	public function digest() {
+		if (empty($this-&gt;headers[&#039;WWW-Authenticate&#039;])) {
+			return array();
+		}
+		$auth = $this-&gt;_classes[&#039;auth&#039;];
+		return $auth::decode($this-&gt;headers[&#039;WWW-Authenticate&#039;]);
+	}
+
+	/**
+	 * Accepts an entire HTTP message including headers and body, and parses it into a message body
+	 * an array of headers, and the HTTP status.
+	 *
+	 * @param string $body The full body of the message.
+	 * @return After parsing out other message components, returns just the message body.
+	 */
+	protected function _parseMessage($body) {
+		if (!($parts = explode(&quot;\r\n\r\n&quot;, $body, 2)) || count($parts) === 1) {
+			return trim($body);
+		}
+		list($headers, $body) = $parts;
+		$headers = str_replace(&quot;\r&quot;, &quot;&quot;, explode(&quot;\n&quot;, $headers));
+
+		if (array_filter($headers) === array()) {
+			return trim($body);
+		}
+		preg_match(&#039;/HTTP\/(\d+\.\d+)\s+(\d+)(?:\s+(.*))?/i&#039;, array_shift($headers), $match);
+		$this-&gt;headers($headers, false);
+
+		if (!$match) {
+			return trim($body);
+		}
+		list($line, $this-&gt;version, $code) = $match;
+		if (isset($this-&gt;_statuses[$code])) {
+			$message = $this-&gt;_statuses[$code];
+		}
+		if (isset($match[3])) {
+			$message = $match[3];
+		}
+		$this-&gt;status = compact(&#039;code&#039;, &#039;message&#039;) + $this-&gt;status;
+		$this-&gt;protocol = &quot;HTTP/{$this-&gt;version}&quot;;
+		return $body;
+	}
+
+	/**
+	 * Parse `Set-Cookie` headers.
+	 *
+	 * @param array $headers Array of `Set-Cookie` headers or `null` if no cookies to set.
+	 */
+	protected function _parseCookies($headers) {
+		foreach ((array) $headers as $header) {
+			$parts = array_map(&#039;trim&#039;, array_filter(explode(&#039;; &#039;, $header)));
+			$cookie = array_shift($parts);
+			list($name, $value) = array_map(&#039;urldecode&#039;, explode(&#039;=&#039;, $cookie, 2)) + array(&#039;&#039;,&#039;&#039;);
+
+			$options = array();
+			foreach ($parts as $part) {
+				$part = array_map(&#039;urldecode&#039;, explode(&#039;=&#039;, $part, 2)) + array(&#039;&#039;,&#039;&#039;);
+				$options[strtolower($part[0])] = $part[1] ?: true;
+			}
+			if (isset($options[&#039;expires&#039;])) {
+				$options[&#039;expires&#039;] = strtotime($options[&#039;expires&#039;]);
+			}
+			$this-&gt;cookies($name, compact(&#039;value&#039;) + $options);
+		}
+	}
+
+	/**
+	 * Decodes content bodies transferred with HTTP chunked encoding.
+	 *
+	 * @link http://en.wikipedia.org/wiki/Chunked_transfer_encoding Wikipedia: Chunked encoding
+	 * @param string $body A chunked HTTP message body.
+	 * @return string Returns the value of `$body` with chunks decoded, but only if the value of the
+	 *         `Transfer-Encoding` header is set to `&#039;chunked&#039;`. Otherwise, returns `$body`
+	 *         unmodified.
+	 */
+	protected function _httpChunkedDecode($body) {
+		if (stripos($this-&gt;headers(&#039;Transfer-Encoding&#039;), &#039;chunked&#039;) === false) {
+			return $body;
+		}
+		$stream = fopen(&#039;data://text/plain;base64,&#039; . base64_encode($body), &#039;r&#039;);
+		stream_filter_append($stream, &#039;dechunk&#039;);
+		return trim(stream_get_contents($stream));
+	}
+
+	/**
+	 * Return the response as a string.
+	 *
+	 * @return string
+	 */
+	public function __toString() {
+		if ($type = $this-&gt;headers(&#039;Content-Type&#039;)) {
+			$this-&gt;headers(&#039;Content-Type&#039;, &quot;{$type};charset={$this-&gt;encoding}&quot;);
+		}
+		if ($cookies = $this-&gt;_cookies()) {
+			$this-&gt;headers(&#039;Set-Cookie&#039;, $cookies);
+		}
+		$body = join(&quot;\r\n&quot;, (array) $this-&gt;body);
+		$headers = join(&quot;\r\n&quot;, $this-&gt;headers());
+		$response = array($this-&gt;status(), $headers, &quot;&quot;, $body);
+		return join(&quot;\r\n&quot;, $response);
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

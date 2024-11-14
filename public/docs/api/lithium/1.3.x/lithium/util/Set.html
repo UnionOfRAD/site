@@ -1,0 +1,957 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\util\Set – Framework API v1.3.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.3.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../util.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">util</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Set</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../util.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Set::append().html">append()</a>												<li class="method public">
+				<a href="./Set::check().html">check()</a>												<li class="method public">
+				<a href="./Set::combine().html">combine()</a>												<li class="method public">
+				<a href="./Set::contains().html">contains()</a>												<li class="method public">
+				<a href="./Set::depth().html">depth()</a>												<li class="method public">
+				<a href="./Set::diff().html">diff()</a>												<li class="method public">
+				<a href="./Set::extract().html">extract()</a>												<li class="method public">
+				<a href="./Set::flatten().html">flatten()</a>												<li class="method public">
+				<a href="./Set::expand().html">expand()</a>												<li class="method public">
+				<a href="./Set::format().html">format()</a>												<li class="method public">
+				<a href="./Set::insert().html">insert()</a>												<li class="method public">
+				<a href="./Set::isNumeric().html">isNumeric()</a>												<li class="method public">
+				<a href="./Set::matches().html">matches()</a>												<li class="method public">
+				<a href="./Set::merge().html">merge()</a>												<li class="method public">
+				<a href="./Set::normalize().html">normalize()</a>												<li class="method public">
+				<a href="./Set::remove().html">remove()</a>												<li class="method public">
+				<a href="./Set::sort().html">sort()</a>												<li class="method public">
+				<a href="./Set::slice().html">slice()</a>							</ul>
+									</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../util.html" class="symbol-segment">util</a>\Set		</h1>
+
+		<section class="under">
+															<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>Used for complex manipulation, comparison, and access of array data. Some methods allow for
+XPath-like data access, as follows:</p>
+					</div>
+				
+									<div class="description">
+						<ul>
+<li><code>'/User/id'</code>: Similar to the classic {n}.User.id.</li>
+<li><code>'/User[2]/name'</code>: Selects the name of the second User.</li>
+<li><code>'/User[id&gt;2]'</code>: Selects all Users with an id &gt; 2.</li>
+<li><code>'/User[id&gt;2][&lt;5]'</code>: Selects all Users with an id &gt; 2 but &lt; 5.</li>
+<li><code>'/Post/Comment[author_name=John]/../name'</code>: Selects the name of
+all posts that have at least one comment written by John.</li>
+<li><code>'/Posts[name]'</code>: Selects all Posts that have a <code>'name'</code> key.</li>
+<li><code>'/Comment/.[1]'</code>: Selects the contents of the first comment.</li>
+<li><code>'/Comment/.[:last]'</code>: Selects the last comment.</li>
+<li><code>'/Comment/.[:first]'</code>: Selects the first comment.</li>
+<li><code>'/Comment[text=/lithium/i]</code>': Selects the all comments that have
+a text matching the regex <code>/lithium/i</code>.</li>
+<li><code>'/Comment/@*'</code>: Selects all key names of all comments.</li>
+</ul>
+					</div>
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Set {
+
+	/**
+	 * Add the keys/values in `$array2` that are not found in `$array` onto the end of `$array`.
+	 *
+	 * @param mixed $array Original array.
+	 * @param mixed $array2 Second array to add onto the original.
+	 * @return array An array containing all the keys of the second array not already present in the
+	 *         first.
+	 */
+	public static function append(array $array, array $array2) {
+		$arrays = func_get_args();
+		$array = array_shift($arrays);
+		foreach ($arrays as $array2) {
+			if (!$array &amp;&amp; $array2) {
+				$array = $array2;
+				continue;
+			}
+			foreach ($array2 as $key =&gt; $value) {
+				if (!array_key_exists($key, $array)) {
+					$array[$key] = $value;
+				} elseif (is_array($value)) {
+					$array[$key] = static::append($array[$key], $array2[$key]);
+				}
+			}
+		}
+		return $array;
+	}
+
+	/**
+	 * Checks if a particular path is set in an array. Tests by key name, or dot-delimited key
+	 * name, i.e.:
+	 *
+	 * ``` embed:lithium\tests\cases\util\SetTest::testCheck(1-4) ```
+	 *
+	 * @param mixed $data Data to check on.
+	 * @param mixed $path A dot-delimited string.
+	 * @return boolean `true` if path is found, `false` otherwise.
+	 */
+	public static function check($data, $path = null) {
+		if (!$path) {
+			return $data;
+		}
+		$path = is_array($path) ? $path : explode(&#039;.&#039;, $path);
+
+		foreach ($path as $i =&gt; $key) {
+			if (is_numeric($key) &amp;&amp; (integer) $key &gt; 0 || $key === &#039;0&#039;) {
+				$key = (integer) $key;
+			}
+			if ($i === count($path) - 1) {
+				return (is_array($data) &amp;&amp; isset($data[$key]));
+			} else {
+				if (!is_array($data) || !isset($data[$key])) {
+					return false;
+				}
+				$data =&amp; $data[$key];
+			}
+		}
+	}
+
+	/**
+	 * Creates an associative array using a `$path1` as the path to build its keys, and optionally
+	 * `$path2` as path to get the values. If `$path2` is not specified, all values will be
+	 * initialized to `null` (useful for `Set::merge()`). You can optionally group the values by
+	 * what is obtained when following the path specified in `$groupPath`.
+	 *
+	 * @param array $data Array from where to extract keys and values.
+	 * @param mixed $path1 As an array, or as a dot-delimited string.
+	 * @param mixed $path2 As an array, or as a dot-delimited string.
+	 * @param string $groupPath As an array, or as a dot-delimited string.
+	 * @return array Combined array.
+	 */
+	public static function combine($data, $path1 = null, $path2 = null, $groupPath = null) {
+		if (!$data) {
+			return [];
+		}
+		if (is_object($data)) {
+			$data = get_object_vars($data);
+		}
+		if (is_array($path1)) {
+			$format = array_shift($path1);
+			$keys = static::format($data, $format, $path1);
+		} else {
+			$keys = static::extract($data, $path1);
+		}
+		$vals = [];
+		if (!empty($path2) &amp;&amp; is_array($path2)) {
+			$format = array_shift($path2);
+			$vals = static::format($data, $format, $path2);
+		} elseif (!empty($path2)) {
+			$vals = static::extract($data, $path2);
+		}
+		$valCount = count($vals);
+		$count = count($keys);
+
+		for ($i = $valCount; $i &lt; $count; $i++) {
+			$vals[$i] = null;
+		}
+		if ($groupPath) {
+			$group = static::extract($data, $groupPath);
+			if (!empty($group)) {
+				$c = count($keys);
+				for ($i = 0; $i &lt; $c; $i++) {
+					if (!isset($group[$i])) {
+						$group[$i] = 0;
+					}
+					if (!isset($out[$group[$i]])) {
+						$out[$group[$i]] = [];
+					}
+					$out[$group[$i]][$keys[$i]] = $vals[$i];
+				}
+				return $out;
+			}
+		}
+		return array_combine($keys, $vals);
+	}
+
+	/**
+	 * Determines if the array elements in `$array2` are wholly contained within `$array1`. Works
+	 * recursively.
+	 *
+	 * @param array $array1 First value.
+	 * @param array $array2 Second value.
+	 * @return boolean Returns `true` if `$array1` wholly contains the keys and values of `$array2`,
+	 *         otherwise, returns `false`. Returns `false` if either array is empty.
+	 */
+	public static function contains(array $array1, array $array2) {
+		if (!$array1 || !$array2) {
+			return false;
+		}
+		foreach ($array2 as $key =&gt; $val) {
+			if (!isset($array1[$key]) || $array1[$key] !== $val) {
+				return false;
+			}
+			if (is_array($val) &amp;&amp; !static::contains($array1[$key], $val)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * Counts the dimensions of an array. If `$all` is set to `false` (which is the default) it will
+	 * only consider the dimension of the first element in the array.
+	 *
+	 * @param array $data Array to count dimensions on.
+	 * @param array $options
+	 * @return integer The number of dimensions in `$array`.
+	 */
+	public static function depth($data, array $options = []) {
+		$defaults = [&#039;all&#039; =&gt; false, &#039;count&#039; =&gt; 0];
+		$options += $defaults;
+
+		if (!$data) {
+			return 0;
+		}
+
+		if (!$options[&#039;all&#039;]) {
+			return (is_array(reset($data))) ? static::depth(reset($data)) + 1 : 1;
+		}
+		$depth = [$options[&#039;count&#039;]];
+
+		if (is_array($data) &amp;&amp; reset($data) !== false) {
+			foreach ($data as $value) {
+				$depth[] = static::depth($value, [
+					&#039;all&#039; =&gt; $options[&#039;all&#039;],
+					&#039;count&#039; =&gt; $options[&#039;count&#039;] + 1
+				]);
+			}
+		}
+		return max($depth);
+	}
+
+	/**
+	 * Computes the difference between two arrays.
+	 *
+	 * @param array $val1 First value.
+	 * @param array $val2 Second value.
+	 * @return array Computed difference.
+	 */
+	public static function diff(array $val1, array $val2) {
+		if (!$val1 || !$val2) {
+			return $val2 ?: $val1;
+		}
+		$out = [];
+
+		foreach ($val1 as $key =&gt; $val) {
+			$exists = isset($val2[$key]);
+
+			if (($exists &amp;&amp; $val2[$key] !== $val) || !$exists) {
+				$out[$key] = $val;
+			}
+			unset($val2[$key]);
+		}
+
+		foreach ($val2 as $key =&gt; $val) {
+			if (!isset($out[$key])) {
+				$out[$key] = $val;
+			}
+		}
+		return $out;
+	}
+
+	/**
+	 * Implements partial support for XPath 2.0.
+	 *
+	 * @param array $data An array of data to extract from.
+	 * @param string $path An absolute XPath 2.0 path. Only absolute paths starting with a
+	 *        single slash are supported right now. Implemented selectors:
+	 *        - `&#039;/User/id&#039;`: Similar to the classic {n}.User.id.
+	 *        - `&#039;/User[2]/name&#039;`: Selects the name of the second User.
+	 *        - `&#039;/User[id&gt;2]&#039;`: Selects all Users with an id &gt; 2.
+	 *        - `&#039;/User[id&gt;2][&lt;5]&#039;`: Selects all Users with an id &gt; 2 but &lt; 5.
+	 *        - `&#039;/Post/Comment[author_name=John]/../name&#039;`: Selects the name of
+	 *          all posts that have at least one comment written by John.
+	 *        - `&#039;/Posts[name]&#039;`: Selects all Posts that have a `&#039;name&#039;` key.
+	 *        - `&#039;/Comment/.[1]&#039;`: Selects the contents of the first comment.
+	 *        - `&#039;/Comment/.[:last]&#039;`: Selects the last comment.
+	 *        - `&#039;/Comment/.[:first]&#039;`: Selects the first comment.
+	 *        - `&#039;/Comment[text=/lithium/i]`&#039;: Selects the all comments that have
+	 *          a text matching the regex `/lithium/i`.
+	 *        - `&#039;/Comment/@*&#039;`: Selects all key names of all comments.
+	 * @param array $options Currently only supports `&#039;flatten&#039;` which can be
+	 *              disabled for higher XPath-ness.
+	 * @return array An array of matched items.
+	 */
+	public static function extract(array $data, $path = null, array $options = []) {
+		$defaults = [&#039;flatten&#039; =&gt; true];
+		$options += $defaults;
+
+		if (!$options[&#039;flatten&#039;]) {
+			$message = &#039;Non-flatten mode in `Set::extract()` has been deprecated.&#039;;
+			trigger_error($message, E_USER_DEPRECATED);
+		}
+
+		if (!$data) {
+			return [];
+		}
+		if ($path === &#039;/&#039;) {
+			return array_filter($data, function($data) {
+				return ($data === 0 || $data === &#039;0&#039; || !empty($data));
+			});
+		}
+		$contexts = $data;
+
+		if (!isset($contexts[0])) {
+			$contexts = [$data];
+		}
+
+		$tokens = array_slice(preg_split(&#039;/(?&lt;!=)\/(?![a-z-]*\])/&#039;, $path), 1);
+
+		do {
+			$token = array_shift($tokens);
+			$conditions = false;
+
+			if (preg_match_all(&#039;/\[([^=]+=\/[^\/]+\/|[^\]]+)\]/&#039;, $token, $m)) {
+				$conditions = $m[1];
+				$token = substr($token, 0, strpos($token, &#039;[&#039;));
+			}
+			$matches = [];
+
+			foreach ($contexts as $key =&gt; $context) {
+				if (!isset($context[&#039;trace&#039;])) {
+					$context = [&#039;trace&#039; =&gt; [null], &#039;item&#039; =&gt; $context, &#039;key&#039; =&gt; $key];
+				}
+				if ($token === &#039;..&#039;) {
+					if (count($context[&#039;trace&#039;]) === 1) {
+						$context[&#039;trace&#039;][] = $context[&#039;key&#039;];
+					}
+
+					array_pop($context[&#039;trace&#039;]);
+					$parent = join(&#039;/&#039;, $context[&#039;trace&#039;]);
+					$context[&#039;item&#039;] = static::extract($data, $parent);
+					array_pop($context[&#039;trace&#039;]);
+					$context[&#039;item&#039;] = array_shift($context[&#039;item&#039;]);
+					$matches[] = $context;
+					continue;
+				}
+				$match = false;
+
+				if ($token === &#039;@*&#039; &amp;&amp; is_array($context[&#039;item&#039;])) {
+					$matches[] = [
+						&#039;trace&#039; =&gt; array_merge($context[&#039;trace&#039;], (array) $key),
+						&#039;key&#039; =&gt; $key,
+						&#039;item&#039; =&gt; array_keys($context[&#039;item&#039;])
+					];
+				} elseif (is_array($context[&#039;item&#039;]) &amp;&amp; isset($context[&#039;item&#039;][$token])) {
+					$items = $context[&#039;item&#039;][$token];
+					if (!is_array($items)) {
+						$items = [$items];
+					} elseif (!isset($items[0])) {
+						$current = current($items);
+						if ((is_array($current) &amp;&amp; count($items) &lt;= 1) || !is_array($current)) {
+							$items = [$items];
+						}
+					}
+
+					foreach ($items as $key =&gt; $item) {
+						$ctext = [$context[&#039;key&#039;]];
+						if (!is_numeric($key)) {
+							$ctext[] = $token;
+							$token = array_shift($tokens);
+							if (isset($items[$token])) {
+								$ctext[] = $token;
+								$item = $items[$token];
+								$matches[] = [
+									&#039;trace&#039; =&gt; array_merge($context[&#039;trace&#039;], $ctext),
+									&#039;key&#039; =&gt; $key,
+									&#039;item&#039; =&gt; $item
+								];
+								break;
+							} else {
+								array_unshift($tokens, $token);
+							}
+						} else {
+							$ctext[] = $token;
+						}
+
+						$matches[] = [
+							&#039;trace&#039; =&gt; array_merge($context[&#039;trace&#039;], $ctext),
+							&#039;key&#039; =&gt; $key,
+							&#039;item&#039; =&gt; $item
+						];
+					}
+				} elseif (
+					$key === $token || (is_numeric($token) &amp;&amp; $key == $token) || $token === &#039;.&#039;
+				) {
+					$context[&#039;trace&#039;][] = $key;
+					$matches[] = [
+						&#039;trace&#039; =&gt; $context[&#039;trace&#039;],
+						&#039;key&#039; =&gt; $key,
+						&#039;item&#039; =&gt; $context[&#039;item&#039;]
+					];
+				}
+			}
+			if ($conditions) {
+				foreach ($conditions as $condition) {
+					$filtered = [];
+					$length = count($matches);
+
+					foreach ($matches as $i =&gt; $match) {
+						if (static::matches($match[&#039;item&#039;], [$condition], $i + 1, $length)) {
+							$filtered[] = $match;
+						}
+					}
+					$matches = $filtered;
+				}
+			}
+			$contexts = $matches;
+
+			if (empty($tokens)) {
+				break;
+			}
+		} while (true);
+
+		$r = [];
+
+		foreach ($matches as $match) {
+			$key = array_pop($match[&#039;trace&#039;]);
+			$condition = (!is_int($key) &amp;&amp; $key !== null);
+			if ((!$options[&#039;flatten&#039;] || is_array($match[&#039;item&#039;])) &amp;&amp; $condition) {
+				$r[] = [$key =&gt; $match[&#039;item&#039;]];
+			} else {
+				$r[] = $match[&#039;item&#039;];
+			}
+		}
+		return $r;
+	}
+
+	/**
+	 * Collapses a multi-dimensional array into a single dimension, using a delimited array path
+	 * for each array element&#039;s key, i.e. [array(&#039;Foo&#039; =&gt; [&#039;Bar&#039; =&gt; &#039;Far&#039;])] becomes
+	 * [&#039;0.Foo.Bar&#039; =&gt; &#039;Far&#039;].
+	 *
+	 * @param array $data array to flatten
+	 * @param array $options Available options are:
+	 *        - `&#039;separator&#039;`: String to separate array keys in path (defaults to `&#039;.&#039;`).
+	 *        - `&#039;path&#039;`: Starting point (defaults to null).
+	 * @return array
+	 */
+	public static function flatten($data, array $options = []) {
+		$defaults = [&#039;separator&#039; =&gt; &#039;.&#039;, &#039;path&#039; =&gt; null];
+		$options += $defaults;
+		$result = [];
+
+		if ($options[&#039;path&#039;] !== null) {
+			$options[&#039;path&#039;] .= $options[&#039;separator&#039;];
+		}
+		foreach ($data as $key =&gt; $val) {
+			if (!is_array($val)) {
+				$result[$options[&#039;path&#039;] . $key] = $val;
+				continue;
+			}
+			$opts = [&#039;separator&#039; =&gt; $options[&#039;separator&#039;], &#039;path&#039; =&gt; $options[&#039;path&#039;] . $key];
+			$result += (array) static::flatten($val, $opts);
+		}
+		return $result;
+	}
+
+	/**
+	 * Accepts a one-dimensional array where the keys are separated by a delimiter.
+	 *
+	 * @param array $data The one-dimensional array to expand.
+	 * @param array $options The options used when expanding the array:
+	 *        - `&#039;separator&#039;` _string_: The delimiter to use when separating keys. Defaults
+	 *          to `&#039;.&#039;`.
+	 * @return array Returns a multi-dimensional array expanded from a one dimensional
+	 *         dot-separated array.
+	 */
+	public static function expand(array $data, array $options = []) {
+		$defaults = [&#039;separator&#039; =&gt; &#039;.&#039;];
+		$options += $defaults;
+		$result = [];
+
+		foreach ($data as $key =&gt; $val) {
+			if (strpos($key, $options[&#039;separator&#039;]) === false) {
+				if (!isset($result[$key])) {
+					$result[$key] = $val;
+				}
+				continue;
+			}
+			list($path, $key) = explode($options[&#039;separator&#039;], $key, 2);
+			$path = is_numeric($path) ? (integer) $path : $path;
+			$result[$path][$key] = $val;
+		}
+		foreach ($result as $key =&gt; $value) {
+			if (is_array($value)) {
+				$result[$key] = static::expand($value, $options);
+			}
+		}
+		return $result;
+	}
+
+	/**
+	 * Returns a series of values extracted from an array, formatted in a format string.
+	 *
+	 * @param array $data Source array from which to extract the data.
+	 * @param string $format Format string into which values will be inserted using `sprintf()`.
+	 * @param array $keys An array containing one or more `Set::extract()`-style key paths.
+	 * @return array An array of strings extracted from `$keys` and formatted with `$format`.
+	 * @link http://php.net/sprintf
+	 */
+	public static function format($data, $format, $keys) {
+		$extracted = [];
+		$count = count($keys);
+
+		if (!$count) {
+			return;
+		}
+		for ($i = 0; $i &lt; $count; $i++) {
+			$extracted[] = static::extract($data, $keys[$i]);
+		}
+		$out = [];
+		$data = $extracted;
+		$count = count($data[0]);
+
+		if (preg_match_all(&#039;/\{([0-9]+)\}/msi&#039;, $format, $keys2) &amp;&amp; isset($keys2[1])) {
+			$keys = $keys2[1];
+			$format = preg_split(&#039;/\{([0-9]+)\}/msi&#039;, $format);
+			$count2 = count($format);
+
+			for ($j = 0; $j &lt; $count; $j++) {
+				$formatted = &#039;&#039;;
+				for ($i = 0; $i &lt;= $count2; $i++) {
+					if (isset($format[$i])) {
+						$formatted .= $format[$i];
+					}
+					if (isset($keys[$i]) &amp;&amp; isset($data[$keys[$i]][$j])) {
+						$formatted .= $data[$keys[$i]][$j];
+					}
+				}
+				$out[] = $formatted;
+			}
+			return $out;
+		}
+		$count2 = count($data);
+
+		for ($j = 0; $j &lt; $count; $j++) {
+			$args = [];
+
+			for ($i = 0; $i &lt; $count2; $i++) {
+				if (isset($data[$i][$j])) {
+					$args[] = $data[$i][$j];
+				}
+			}
+			$out[] = vsprintf($format, $args);
+		}
+		return $out;
+	}
+
+	/**
+	 * Inserts `$data` into an array as defined by `$path`.
+	 *
+	 * @param mixed $list Where to insert into.
+	 * @param mixed $path A dot-delimited string.
+	 * @param array $data Data to insert.
+	 * @return array
+	 */
+	public static function insert($list, $path, $data = []) {
+		if (!is_array($path)) {
+			$path = explode(&#039;.&#039;, $path);
+		}
+		$_list =&amp; $list;
+
+		foreach ($path as $i =&gt; $key) {
+			if (is_numeric($key) &amp;&amp; (integer) $key &gt; 0 || $key === &#039;0&#039;) {
+				$key = (integer) $key;
+			}
+			if ($i === count($path) - 1) {
+				$_list[$key] = $data;
+			} else {
+				if (!isset($_list[$key])) {
+					$_list[$key] = [];
+				}
+				$_list =&amp; $_list[$key];
+			}
+		}
+		return $list;
+	}
+
+	/**
+	 * Checks to see if all the values in the array are numeric.
+	 *
+	 * @param array $array The array to check.  If null, the value of the current Set object.
+	 * @return mixed `true` if values are numeric, `false` if not and `null` if the array to
+	 *               check is empty.
+	 */
+	public static function isNumeric($array = null) {
+		if (empty($array)) {
+			return null;
+		}
+		if ($array === range(0, count($array) - 1)) {
+			return true;
+		}
+		$numeric = true;
+		$keys = array_keys($array);
+		$count = count($keys);
+
+		for ($i = 0; $i &lt; $count; $i++) {
+			if (!is_numeric($array[$keys[$i]])) {
+				$numeric = false;
+				break;
+			}
+		}
+		return $numeric;
+	}
+
+	/**
+	 * This function can be used to see if a single item or a given XPath
+	 * match certain conditions.
+	 *
+	 * @param array $data An array of data to execute the match on.
+	 * @param mixed $conditions An array of condition strings or an XPath expression.
+	 * @param integer $i Optional: The &#039;nth&#039;-number of the item being matched.
+	 * @param integer $length
+	 * @return boolean
+	 */
+	public static function matches($data, $conditions, $i = null, $length = null) {
+		if (!$conditions) {
+			return true;
+		}
+		if (is_string($conditions)) {
+			return (boolean) static::extract($data, $conditions);
+		}
+		foreach ($conditions as $condition) {
+			if ($condition === &#039;:last&#039;) {
+				if ($i !== $length) {
+					return false;
+				}
+				continue;
+			} elseif ($condition === &#039;:first&#039;) {
+				if ($i !== 1) {
+					return false;
+				}
+				continue;
+			}
+			if (!preg_match(&#039;/(.+?)([&gt;&lt;!]?[=]|[&gt;&lt;])(.*)/&#039;, $condition, $match)) {
+				if (ctype_digit($condition)) {
+					if ($i !== (int) $condition) {
+						return false;
+					}
+				} elseif (preg_match_all(&#039;/(?:^[0-9]+|(?&lt;=,)[0-9]+)/&#039;, $condition, $matches)) {
+					return in_array($i, $matches[0]);
+				} elseif (!isset($data[$condition])) {
+					return false;
+				}
+				continue;
+			}
+			list(,$key,$op,$expected) = $match;
+
+			if (!isset($data[$key])) {
+				return false;
+			}
+			$val = $data[$key];
+
+			if ($op === &#039;=&#039; &amp;&amp; $expected &amp;&amp; $expected[0] === &#039;/&#039;) {
+				return preg_match($expected, $val);
+			} elseif ($op === &#039;=&#039; &amp;&amp; $val != $expected) {
+				return false;
+			} elseif ($op === &#039;!=&#039; &amp;&amp; $val == $expected) {
+				return false;
+			} elseif ($op === &#039;&gt;&#039; &amp;&amp; $val &lt;= $expected) {
+				return false;
+			} elseif ($op === &#039;&lt;&#039; &amp;&amp; $val &gt;= $expected) {
+				return false;
+			} elseif ($op === &#039;&lt;=&#039; &amp;&amp; $val &gt; $expected) {
+				return false;
+			} elseif ($op === &#039;&gt;=&#039; &amp;&amp; $val &lt; $expected) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * This method can be thought of as a hybrid between PHP&#039;s `array_merge()`
+	 * and `array_merge_recursive()`.  The difference to the two is that if an
+	 * array key contains another array then the function behaves recursive
+	 * (unlike `array_merge()`) but does not do if for keys containing strings
+	 * (unlike `array_merge_recursive()`).  Please note: This function will work
+	 * with an unlimited amount of arguments and typecasts non-array parameters
+	 * into arrays.
+	 *
+	 * @param array $array1 The base array.
+	 * @param array $array2 The array to be merged on top of the base array.
+	 * @return array Merged array of all passed params.
+	 */
+	public static function merge(array $array1, array $array2) {
+		$args = [$array1, $array2];
+
+		if (!$array1 || !$array2) {
+			return $array1 ?: $array2;
+		}
+		$result = (array) current($args);
+
+		while (($arg = next($args)) !== false) {
+			foreach ((array) $arg as $key =&gt; $val) {
+				if (is_array($val) &amp;&amp; isset($result[$key]) &amp;&amp; is_array($result[$key])) {
+					$result[$key] = static::merge($result[$key], $val);
+				} elseif (is_int($key)) {
+					$result[] = $val;
+				} else {
+					$result[$key] = $val;
+				}
+			}
+		}
+		return $result;
+	}
+
+	/**
+	 * Normalizes a string or array list.
+	 *
+	 * ```
+	 * Set::normalize(&#039;foo,bar&#039;); // returns [&#039;foo&#039; =&gt; null, &#039;bar&#039; =&gt; null];
+	 * Set::normalize([&#039;foo&#039;, &#039;bar&#039; =&gt; &#039;baz&#039;]; // returns [&#039;foo&#039; =&gt; null, &#039;bar&#039; =&gt; &#039;baz&#039;];
+	 * ```
+	 *
+	 * @param string|array $list List to normalize.
+	 * @param boolean $assoc If `true`, `$list` will be converted to an associative array.
+	 * @param string $sep If `$list` is a string, it will be split into an array with `$sep`.
+	 * @param boolean $trim If `true`, separated strings will be trimmed.
+	 * @return array
+	 */
+	public static function normalize($list, $assoc = true, $sep = &#039;,&#039;, $trim = true) {
+		if (is_string($list)) {
+			$list = explode($sep, $list);
+			$list = ($trim) ? array_map(&#039;trim&#039;, $list) : $list;
+			return ($assoc) ? static::normalize($list) : $list;
+		}
+
+		if (!is_array($list)) {
+			return $list;
+		}
+
+		$keys = array_keys($list);
+		$count = count($keys);
+		$numeric = true;
+
+		if (!$assoc) {
+			for ($i = 0; $i &lt; $count; $i++) {
+				if (!is_int($keys[$i])) {
+					$numeric = false;
+					break;
+				}
+			}
+		}
+
+		if (!$numeric || $assoc) {
+			$newList = [];
+			for ($i = 0; $i &lt; $count; $i++) {
+				if (is_int($keys[$i]) &amp;&amp; is_scalar($list[$keys[$i]])) {
+					$newList[$list[$keys[$i]]] = null;
+				} else {
+					$newList[$keys[$i]] = $list[$keys[$i]];
+				}
+			}
+			$list = $newList;
+		}
+		return $list;
+	}
+
+	/**
+	 * Removes an element from an array as defined by `$path`.
+	 *
+	 * @param mixed $list From where to remove.
+	 * @param mixed $path A dot-delimited string.
+	 * @return array Array with `$path` removed from its value.
+	 */
+	public static function remove($list, $path = null) {
+		if (empty($path)) {
+			return $list;
+		}
+		if (!is_array($path)) {
+			$path = explode(&#039;.&#039;, $path);
+		}
+		$_list =&amp; $list;
+
+		foreach ($path as $i =&gt; $key) {
+			if (is_numeric($key) &amp;&amp; (integer) $key &gt; 0 || $key === &#039;0&#039;) {
+				$key = (integer) $key;
+			}
+			if ($i === count($path) - 1) {
+				unset($_list[$key]);
+			} else {
+				if (!isset($_list[$key])) {
+					return $list;
+				}
+				$_list =&amp; $_list[$key];
+			}
+		}
+		return $list;
+	}
+
+	/**
+	 * Sorts an array by any value, determined by a `Set`-compatible path.
+	 *
+	 * @param array $data
+	 * @param string $path A `Set`-compatible path to the array value.
+	 * @param string $dir Either `&#039;asc&#039;` (the default) or `&#039;desc&#039;`.
+	 * @return array
+	 */
+	public static function sort($data, $path, $dir = &#039;asc&#039;) {
+		$flatten = function($flatten, $results, $key = null) {
+			$stack = [];
+			foreach ((array) $results as $k =&gt; $r) {
+				$id = $k;
+				if ($key !== null) {
+					$id = $key;
+				}
+				if (is_array($r)) {
+					$stack = array_merge($stack, $flatten($flatten, $r, $id));
+				} else {
+					$stack[] = [&#039;id&#039; =&gt; $id, &#039;value&#039; =&gt; $r];
+				}
+			}
+			return $stack;
+		};
+		$extract = static::extract($data, $path);
+		$result = $flatten($flatten, $extract);
+
+		$keys = static::extract($result, &#039;/id&#039;);
+		$values = static::extract($result, &#039;/value&#039;);
+
+		$dir = ($dir === &#039;desc&#039;) ? SORT_DESC : SORT_ASC;
+		array_multisort($values, $dir, $keys, $dir);
+		$sorted = [];
+		$keys = array_unique($keys);
+
+		foreach ($keys as $k) {
+			$sorted[] = $data[$k];
+		}
+		return $sorted;
+	}
+
+	/**
+	 * Slices an array into two, separating them determined by an array of keys.
+	 *
+	 * Usage examples:
+	 *
+	 * ``` embed:lithium\tests\cases\util\SetTest::testSetSlice(1-4) ```
+	 *
+	 * @param array $subject Array that gets split apart
+	 * @param array|string $keys An array of keys or a single key as string
+	 * @return array An array containing both arrays, having the array with requested keys first and
+	 *         the remainder as second element
+	 */
+	public static function slice(array $data, $keys) {
+		$removed = array_intersect_key($data, array_fill_keys((array) $keys, true));
+		$data = array_diff_key($data, $removed);
+		return [$data, $removed];
+	}
+
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

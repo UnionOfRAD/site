@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Querying – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../docs.html" class="active">Documentation</a><a href="../../../../../versions.html">Versions</a><a href="../../../../../present.html">Presentations</a><a href="../../../../../support.html">Community</a><a href="../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../models.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Models</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Querying</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="../common-tasks.html" class="">Common Tasks</a><ul><li><a href="../common-tasks/logging.html" class="">Logging</a><li><a href="../common-tasks/plugins.html" class="">Plugins</a><li><a href="../common-tasks/error-handling.html" class="">Error Handling</a><li><a href="../common-tasks/caching.html" class="">Caching</a><li><a href="../common-tasks/filters.html" class="">Filters</a><li><a href="../common-tasks/etags.html" class="">Etags</a><li><a href="../common-tasks/globalization.html" class="">Globalization</a><li><a href="../common-tasks/simple-authentication.html" class="">Simple Authentication</a><li><a href="../common-tasks/simple-auth-user.html" class="">Simple Auth User</a><li><a href="../common-tasks/console-applications.html" class="">Console Applications</a></ul><li><a href="../appendices.html" class="">Appendices</a><ul><li><a href="../appendices/faqs.html" class="">FAQs</a><li><a href="../appendices/using-in-other-applications.html" class="">Using In Other Applications</a></ul><li><a href="../quickstart.html" class="">Quickstart</a><li><a href="../controllers.html" class="">Controllers</a><ul><li><a href="../controllers/actions.html" class="">Actions</a><li><a href="../controllers/flow-control.html" class="">Flow Control</a><li><a href="../controllers/parameters.html" class="">Parameters</a><li><a href="../controllers/type-rendering-detection.html" class="">Type Rendering Detection</a><li><a href="../controllers/routing.html" class="">Routing</a></ul><li><a href="../installation.html" class="">Installation</a><ul><li><a href="../installation/requirements.html" class="">Requirements</a><li><a href="../installation/troubleshooting.html" class="">Troubleshooting</a><li><a href="../installation/web-servers.html" class="">Web Servers</a></ul><li><a href="../architecture.html" class="">Architecture</a><ul><li><a href="../architecture/file-structure.html" class="">File Structure</a><li><a href="../architecture/response-lifecycle.html" class="">Response Lifecycle</a><li><a href="../architecture/aop.html" class="">AOP</a><li><a href="../architecture/mvc.html" class="">MVC</a><li><a href="../architecture/objects.html" class="">Objects</a></ul><li><a href="../quality-code.html" class="">Quality Code</a><ul><li><a href="../quality-code/fixtures.html" class="">Fixtures</a><li><a href="../quality-code/analysis.html" class="">Analysis</a><li><a href="../../../../manual/quality-code/testing.wiki.html" class="">Testing</a><li><a href="../quality-code/security.html" class="">Security</a></ul><li><a href="../configuration.html" class="">Configuration</a><ul><li><a href="../configuration/environment.html" class="">Environment</a><li><a href="../configuration/bootstrapping.html" class="">Bootstrapping</a><li><a href="../configuration/third-party-libraries.html" class="">Third Party Libraries</a></ul><li><a href="../views.html" class="">Views</a><ul><li><a href="../views/layouts.html" class="">Layouts</a><li><a href="../views/elements.html" class="">Elements</a><li><a href="../views/helpers.html" class="">Helpers</a><li><a href="../views/static-content.html" class="">Static Content</a><li><a href="../views/auto-escaping.html" class="">Auto Escaping</a></ul><li><a href="../models.html" class="">Models</a><ul><li><a href="mongodb.html" class="">Mongodb</a><li><a href="meta.html" class="">Meta</a><li><a href="relationships.html" class="">Relationships</a><li><a href="saving.html" class="">Saving</a><li><a href="using-data-sources.html" class="">Using Data Sources</a><li><a href="adding-functions.html" class="">Adding Functions</a><li><a href="data-mutation.html" class="">Data Mutation</a><li><a href="connections.html" class="">Connections</a><li><a href="creating-data-sources.html" class="">Creating Data Sources</a><li><a href="querying.html" class="active">Querying</a><li><a href="validation.html" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="querying" class="anchor" href="querying.html#querying">Querying</a></h1>
+<p>Reading data from your database (or any datasource available) is a common
+tasks that you will perform. All query-related operations may be done through
+the static <code>find()</code> method, along with some additional utility methods provided
+for convenience.</p>
+<pre><code class="language-php">// Read all posts.
+$posts = Posts::find('all');
+
+// Read the first post.
+$post = Posts::find('first');
+
+// Read all posts with the newest ones first.
+$posts = Posts::find('all', [
+	'order' =&gt; ['created' =&gt; 'DESC']
+]);
+
+// Read only the title of the newest post.
+$post = Posts::find('first', [
+	'fields' =&gt; ['title'],
+	'order' =&gt; ['created' =&gt; 'DESC']
+]);
+
+// Read only posts where the author name is "michael".
+$posts = Posts::find('all', [
+	'conditions' =&gt; ['author' =&gt; 'michael']
+]);
+</code></pre>
+<div class="note note-caution">
+	The framework protects against injection attacks by quoting
+	condition values. Other options i.e. <code>'fields'</code> are
+	however <strong>not</strong> automatically quoted. Read more about the topic
+	and potential countermeasures in the <a href="http://li3.me/docs/book/manual/1.x/security">Security</a> chapter.
+</div>
+<h2><a id="built-in-finders" class="anchor" href="querying.html#built-in-finders">Built-in Finders</a></h2>
+<p><code>find()</code> utilizes <em>finders</em> to do most of its work. The first parameter to <code>find()</code>
+selects the type of finder you want to use. The second parameter provides options to the
+finder.</p>
+<p>There are four built-in finders. The most commonly used ones are <code>'all'</code> and <code>'first'</code>.</p>
+<div class="note note-hint">
+	You can also create your own custom finders via `finder()`.
+</div>
+<ul>
+<li><code>'all'</code>: Returns a collection of records matching the conditions.</li>
+<li><code>'first'</code>: Returns the first record matching the conditions.</li>
+<li><code>'count'</code>: Returns an integer count of all records matching the conditions.</li>
+<li><code>'list'</code>: Returns a one dimensional array, where the key is the primary
+key and the value the title of the record (a <code>'title'</code> field is required
+for this). A result may look like: <code>array(1 =&gt; 'Foo', 2 =&gt; 'Bar')</code>.</li>
+</ul>
+<p>All bultin-in finders take the same set of options to control which and
+how many records they return.</p>
+<h2><a id="using-conditions" class="anchor" href="querying.html#using-conditions">Using Conditions</a></h2>
+<p>The <code>'conditions'</code> option allows you to provide conditions for the query
+i.e. <code>'array('is_published' =&gt; true)</code>.  The following example finds all
+posts author name is <code>michael</code>.</p>
+<pre><code class="language-php">$posts = Posts::find('all', [
+	'conditions' =&gt; ['author' =&gt; 'michael']
+]);
+</code></pre>
+<p>By default the conditions are AND'ed together so the following
+example would require each post to be published <strong>and</strong> authored
+by <code>michael</code>.</p>
+<pre><code class="language-php">$posts = Posts::find('all', [
+	'conditions' =&gt; [
+		'author' =&gt; 'michael',
+		'is_published' =&gt; true
+	]
+]);
+</code></pre>
+<p>To OR conditions together use the following syntax.</p>
+<pre><code class="language-php">$posts = Posts::find('all', [
+	'conditions' =&gt; [
+		'or' =&gt; [
+			'author' =&gt; 'michael',
+			'is_published' =&gt; true
+		]
+	]
+]);
+</code></pre>
+<p>To find all records from a set of authors use the array
+syntax.</p>
+<pre><code class="language-php">$posts = Posts::find('all', [
+	'conditions' =&gt; [
+		'author' =&gt; ['michael', 'nate']
+	]
+]);
+</code></pre>
+<h2><a id="ordering" class="anchor" href="querying.html#ordering">Ordering</a></h2>
+<p>The <code>'order'</code> option allows to control the order in which the data will be returned, i.e.
+<code>'created ASC'</code> sorts by created date in ascending order, <code>'created DESC'</code> sorts
+the same field in descending order. To sort by multiple fields use the array
+syntax <code>array('title' =&gt; 'ASC', 'id' =&gt; 'ASC)</code>.</p>
+<p>The following are equal groups:</p>
+<pre><code class="language-php">Posts::find('all', ['order' =&gt; 'title']);
+Posts::find('all', ['order' =&gt; 'title ASC']);
+Posts::find('all', ['order' =&gt; ['title']]);
+Posts::find('all', ['order' =&gt; ['title' =&gt; 'ASC']]);
+
+Posts::find('all', ['order' =&gt; ['title', 'id']]);
+Posts::find('all', ['order' =&gt; ['title' =&gt; 'ASC', 'id' =&gt; 'ASC']]);
+</code></pre>
+<h2><a id="restricting-returned-fields" class="anchor" href="querying.html#restricting-returned-fields">Restricting Returned Fields</a></h2>
+<p>The <code>'fields'</code> option allows to specify the fields that should be retrieved. By default
+all fields are retrieved. To optimize query performance, limit to just the ones actually
+needed.</p>
+<pre><code class="language-php">Posts::find('all', [
+	'fields' =&gt; ['title', 'author']
+]);
+</code></pre>
+<h2><a id="limiting-number-of-records" class="anchor" href="querying.html#limiting-number-of-records">Limiting Number of Records</a></h2>
+<p>The <code>'limit'</code> option allows to limit the set of returned records to a maximum number.</p>
+<pre><code class="language-php">Posts::find('all', [
+	'limit' =&gt; 10
+]);
+</code></pre>
+<h2><a id="pagination" class="anchor" href="querying.html#pagination">Pagination</a></h2>
+<p>The <code>'page'</code> option allows to paginate data sets. It specifies the page of the set
+together with the limit option specifying the number of records per page. The first
+page starts at <code>1</code>.</p>
+<pre><code class="language-php">$page1 = Posts::find('all', [
+	'page' =&gt; 1,
+	'limit' =&gt; 10
+]);
+$page2 = Posts::find('all', [
+	'page' =&gt; 2,
+	'limit' =&gt; 10
+]);
+</code></pre>
+<h2><a id="shorthands" class="anchor" href="querying.html#shorthands">Shorthands</a></h2>
+<p>li3 also provides some additional basic methods around the <code>find()</code> method which
+make your code less verbose and easier to read:</p>
+<pre><code class="language-php">// Shorthand for find first by primary key.
+Posts::find(23);
+
+Posts::all();
+</code></pre>
+<div class="note note-info">
+	Note <code>list</code> is a keyword in PHP and so cannot be called magically like other finders.
+</div>
+<p>The example below shows two different approaches to finding all the posts related to the
+username "Michael". The first bare approach shows how to use <code>find()</code> directly. The second
+example uses camelCase convention to tell li3 to filter by a specific field name and
+value.</p>
+<pre><code class="language-php">$posts = Posts::findAllByUsername('michael');
+// ... is functionally equal to ...
+$posts = Posts::find('all', [
+	'conditions' =&gt; ['username' =&gt; 'michael']
+]);
+</code></pre>
+<h2><a id="custom-finders" class="anchor" href="querying.html#custom-finders">Custom Finders</a></h2>
+<p>The basic finders are nice, but the framework also provides you with a set of highly
+dynamic methods that match against your dataset. It allows you to build
+custom <em>finders</em> to extend functionality.</p>
+<p>As you use your models, you might start to wish for a shortcut. For example,
+instead of having to do this repeatedly:</p>
+<pre><code class="language-php">$recentComments = Comments::find('all', [
+	'conditions' =&gt; [
+		'created' =&gt; [
+			'&gt;=' =&gt; date('Y-m-d H:i:s', time() - (86400 * 3))
+		]
+	]
+]);
+</code></pre>
+<p>You could create a custom finder method that packages the specified conditions into a one-liner:</p>
+<pre><code class="language-php">$recentComments = Comments::find('recent');
+
+// or, as a "magic" method:
+
+$recentComments = Comments::recent();
+</code></pre>
+<p>At a basic level, this is done by utilizing the <code>finder()</code> method of the model.
+You call <code>finder()</code> and supply the name of the finder, along with a definition
+so li3 knows how to form the query. The definition in this simple case looks
+just like the query array we supplied to <code>find()</code> earlier:</p>
+<pre><code class="language-php">Comments::finder('recent', [
+	'conditions' =&gt; [
+		'created' =&gt; [
+			'&gt;=' =&gt; date('Y-m-d H:i:s', time() - (86400 * 3))
+		]
+	]
+]);
+</code></pre>
+<p>Some finder implementations might require a little processing in addition to a default set
+of conditions. In that case, you can define a finder using a closure that will be called
+as part of find chaining. In this use case, you supply the name of the finder along with a
+closure that looks much like a filter definition:</p>
+<div class="note note-version">
+	The syntax for filter and thus for finders has changed in 1.1.
+	Below you find the new syntax. The old one receives 3 parameters
+	(`$self`, `$params`, `$chain`).
+</div>
+<pre><code class="language-php">Comments::finder('recentCategories', function($params, $next){
+	// Set up default conditions
+	$defaults = [
+		'created' =&gt; [
+			'&gt;=' =&gt; date('Y-m-d H:i:s', time() - (86400 * 3))
+		]
+	];
+
+	// Merge with supplied params
+	$params['options']['conditions'] = $defaults + (array) $params['options']['conditions'];
+
+	// Do a bit of reformatting
+	$results = [];
+	foreach ($next($params) as $entity) {
+		$results[] = $entity-&gt;categoryName;
+	}
+
+	// Returns an array of recent categories given the supplied query params.
+	return $results;
+});
+</code></pre>
+<h2><a id="rich-returned-values" class="anchor" href="querying.html#rich-returned-values">Rich Returned Values</a></h2>
+<p>The response from a model method is not just a plain array but actually an
+entity object (or a collection of them). This means that you can perform a
+variety of actions on them if you need to. Here are a few examples:</p>
+<pre><code class="language-php">// Find all Posts
+$posts = Posts::all();
+
+// Get the first and last post of the collection
+$first = $posts-&gt;first();
+$last  = $posts-&gt;last();
+
+// Iterate over all posts and print out the title
+foreach ($posts as $post) {
+	echo $post-&gt;title;
+}
+</code></pre>
+<p>Entities can be easily converted into other formats.</p>
+<pre><code class="language-php">Posts::find('all')-&gt;data();
+Posts::find('all')-&gt;to('array');
+</code></pre>
+<h2><a id="default-query-options" class="anchor" href="querying.html#default-query-options">Default Query Options</a></h2>
+<p>In cases where you always want finders results constrained to i.e. certain conditions,
+default query options can be used. Default options may be defined by using the <code>query()</code>
+method or alternatively by defining the <code>$_query</code> property on the model class.</p>
+<p>Specific query options overwrite default ones. As both are merged by simply using the <code>+</code>
+operator for arrays. Note that this can also be a common pitfall.</p>
+<pre><code class="language-php">Posts::query([
+	'conditions' =&gt; ['is_published' =&gt; true],
+	'limit' =&gt; 4
+]);
+
+// Will retrieve maximum of 4 results which are published.
+Posts::find('all');
+
+// Potential pitfall: will retrieve results published or not
+// for author michael. Limited to 4 results maximum.
+Posts::find('all', [
+	'conditions' =&gt; ['author' =&gt; 'michael']
+]);
+
+// Will retrieve only published results for author michael.
+// Limited to 4 results.
+Posts::find('all', [
+	'conditions' =&gt; ['author' =&gt; 'michael', 'is_published' =&gt; true]
+]);
+</code></pre>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

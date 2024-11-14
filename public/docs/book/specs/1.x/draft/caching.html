@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Caching – Specifications v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../docs.html" class="active">Documentation</a><a href="../../../../../versions.html">Versions</a><a href="../../../../../present.html">Presentations</a><a href="../../../../../support.html">Community</a><a href="../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../1.x.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Specifications (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../draft.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Drafts</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Caching</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="../draft.html" class="">Drafts</a><ul><li><a href="caching.html" class="active">Caching</a><li><a href="ajax.html" class="">Ajax</a><li><a href="logging.html" class="">Logging</a><li><a href="formulas.html" class="">Formulas</a><li><a href="translating.html" class="">Translating</a><li><a href="documentation.html" class="">Documentation</a><li><a href="visual-identity.html" class="">Visual Identity</a><li><a href="error-handling.html" class="">Error Handling</a><li><a href="access.html" class="">Access</a><li><a href="globalization.html" class="">Globalization</a></ul><li><a href="../accepted.html" class="">Accepted</a><ul><li><a href="../../../../specs/accepted/LSR-1-documenting.md.html" class="">LSR 1 Documenting</a><li><a href="../../../../specs/accepted/LSR-2-testing.md.html" class="">LSR 2 Testing</a><li><a href="../../../../specs/accepted/LSR-0-coding.md.html" class="">LSR 0 Coding</a></ul></ul>	</nav>
+	<div class="body">
+		<h2><a id="objectives" class="anchor" href="caching.html#objectives">Objectives</a></h2>
+<p>Caching in li3 will be built-in right from the start, and will have these goals in mind:</p>
+<ul>
+<li>Intuitive API</li>
+<li>Provide a base for all caching used in the core</li>
+<li>Easy to extend &amp; add cache strategies</li>
+<li>Availability of a cache engine should depend on the context; i.e. you <strong>should not</strong> be able to use the cache strategy designed for Views to cache Model queries.</li>
+<li><strong>Context-based caching</strong>: Perform sane key generation based on context. e.g. full page caching should use different parameters for key generation than query caching, but do this <strong>transparently</strong>. The user should never need to know that the key that he selects for an element cache (example) is supplemented with additional parameters to ensure the uniqueness of his cache key based on the context which it is in.</li>
+</ul>
+<h2><a id="high-level-architecture" class="anchor" href="caching.html#high-level-architecture">High Level Architecture</a></h2>
+<ul>
+<li>Adapter-driven base.<ul>
+<li>Any cache adapter which writes directly to some sort of persistent store (as opposed to a cache strategy which wraps a storage adapter with additional functionality).</li>
+<li>General Cache API:<ul>
+<li>Cache::write( (string) $name, (string|int) $key, (string|array) $value, $conditions = [])</li>
+<li>Cache::read( (string) $name, (string|int) $key, $conditions = [])</li>
+<li>Cache::delete( (string) $name, (string|int) $key, $conditions = [])</li>
+<li>Cache::fetch( (string) $name, (string|int) $key,  $closure, $conditions = [])</li>
+<li>Cache::adapter( (string) $name, $options)</li>
+<li>Cache::clean( (string) $name = null)</li>
+<li>Cache::clear( (string) $name = null)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3><a id="cache-write" class="anchor" href="caching.html#cache-write">Cache::write</a></h3>
+<p>The cache strategy being used is identified by $name (consistent across all methods. Write takes a key (either string or integer), and writes $value to the storage engine using the given key. Note that the key itself will be normalized to something that encapsulates the context in which the Cache::write option was made, and the user need not know this is even happening.</p>
+<h3><a id="cache-read" class="anchor" href="caching.html#cache-read">Cache::read</a></h3>
+<p>Reads from cache store based on $key given. Again, keys are normalized to be contextually-dependent.</p>
+<h3><a id="cache-delete" class="anchor" href="caching.html#cache-delete">Cache::delete</a></h3>
+<p>Deletes from cache store based on $key.</p>
+<h3><a id="cache-fetch" class="anchor" href="caching.html#cache-fetch">Cache::fetch</a></h3>
+<p>A convenience method. You call Cache::fetch with the specified key. If the key does not exist in the cache, then $closure is run &amp; the returned value is stored in the cache with the given key. Obviously, Cache::fetch does not introduce any new functionality, but allows for more concise &amp; intelligent cache implementations.</p>
+<h3><a id="cache-adapter" class="anchor" href="caching.html#cache-adapter">Cache::adapter</a></h3>
+<p>Configures the cache adapter (and perhaps strategy?) at run-time.</p>
+<h3><a id="cache-clean" class="anchor" href="caching.html#cache-clean">Cache::clean</a></h3>
+<p>Garbage collection</p>
+<h3><a id="cache-clear" class="anchor" href="caching.html#cache-clear">Cache::clear</a></h3>
+<p>Deletes all keys from cache storage</p>
+<h2><a id="general" class="anchor" href="caching.html#general">General</a></h2>
+<p>Cache adapters will be configured in a similar manner to Connections, allowing us to retain some consistency across adapter configuration methods.</p>
+<h2><a id="strategy-based-caching" class="anchor" href="caching.html#strategy-based-caching">Strategy-Based Caching</a></h2>
+<ul>
+<li>Make it extremely simple for a user to define a custom cache strategy that can easily use other strategies &amp; adapters.</li>
+<li>Strategies can optionally use several different adapters. Could be useful for fall-back situations.</li>
+<li>A strategy can wrap another strategy.</li>
+</ul>
+<p>In addition to allowing the user a greater level of flexibility in defining &amp; re-using cache adapters and strategies, this will allow us to programmatically build up the cache strategies to be used internally.</p>
+<p>Example: a File cache adapter is wrapped by an Element cache strategy, which provides the specifics that are needed for that use case. For full page caching: File cache adapter + Page cache strategy, and so on. Since strategies can be applied to adapters as well as other strategies, the reusability of these is greatly increased.</p>
+<p><strong>Example</strong>: (add one here)</p>
+<ul>
+<li>Serialization strategy</li>
+<li>Compression strategy (gzip)</li>
+<li>Cipher strategy (e.g. blowfish encrypt/decrypt)</li>
+<li>Write-through strategy</li>
+</ul>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

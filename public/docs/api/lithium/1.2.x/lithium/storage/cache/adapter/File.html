@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\storage\cache\adapter\File – Framework API v1.2.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../../../versions.html">Versions</a><a href="../../../../../../../../present.html">Presentations</a><a href="../../../../../../../../support.html">Community</a><a href="../../../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.2.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../../../storage.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">storage</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="../../cache.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">cache</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<a href="../adapter.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">adapter</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="7" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">File</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../adapter.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./File::__construct().html">__construct()</a>												<li class="method public">
+				<a href="./File::key().html">key()</a>												<li class="method public">
+				<a href="./File::write().html">write()</a>												<li class="method public">
+				<a href="./File::read().html">read()</a>												<li class="method public">
+				<a href="./File::delete().html">delete()</a>												<li class="method public">
+				<a href="./File::decrement().html">decrement()</a>												<li class="method public">
+				<a href="./File::increment().html">increment()</a>												<li class="method public">
+				<a href="./File::clear().html">clear()</a>												<li class="method public">
+				<a href="./File::clean().html">clean()</a>												<li class="method protected">
+				<a href="./File::_write().html">_write()</a>												<li class="method protected">
+				<a href="./File::_read().html">_read()</a>												<li class="method protected">
+				<a href="./File::_delete().html">_delete()</a>												<li class="method public inherited">
+				<a href="../Adapter::enabled().html">enabled()</a>												<li class="method protected inherited">
+				<a href="../Adapter::_addScopePrefix().html">_addScopePrefix()</a>												<li class="method protected inherited">
+				<a href="../Adapter::_removeScopePrefix().html">_removeScopePrefix()</a>												<li class="method protected inherited">
+				<a href="../../../core/ObjectDeprecated::_init().html">_init()</a>												<li class="method public deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::__set_state().html">__set_state()</a>												<li class="method public deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::respondsTo().html">respondsTo()</a>												<li class="method public deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::invokeMethod().html">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::_instance().html">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::_stop().html">_stop()</a>												<li class="method protected deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::_parents().html">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::applyFilter().html">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::_filter().html">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected inherited">
+				<a href="../../../core/ObjectDeprecated::$_config.html">$_config</a>												<li class="property protected inherited">
+				<a href="../../../core/ObjectDeprecated::$_autoConfig.html">$_autoConfig</a>												<li class="property protected deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::$_parents.html">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="../../../core/ObjectDeprecated::$_methodFilters.html">$_methodFilters</a>							</ul>
+								<h3 class="h-gamma">Constants</h3>
+			<ul>
+												<li class="constant ">
+				<a href="./File::MAX_HEADER_LENGTH.html">MAX_HEADER_LENGTH</a>							</ul>
+			</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../../../lithium.html" class="symbol-segment">lithium</a>\<a href="../../../storage.html" class="symbol-segment">storage</a>\<a href="../../cache.html" class="symbol-segment">cache</a>\<a href="../adapter.html" class="symbol-segment">adapter</a>\File		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="../Adapter.html" class="extends__symbol">lithium\storage\cache\Adapter</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>A minimal file-based cache.</p>
+					</div>
+				
+									<div class="description">
+						<p>The File adapter is a very simple cache, and should only be used for prototyping or for
+specifically caching <em>files</em> in conjunction with the <code>'streams'</code> configuration option.
+For more general caching needs, please consider using a more appropriate cache adapter.</p>
+<p>This adapter has no external dependencies. Operations in read/write/delete are atomic
+for single-keys only. Clearing the cache is supported. Real persistence of cached items
+is provided. Increment/decrement functionality is provided but only in a non-atomic way.</p>
+<p>This adapter can't handle serialization natively. Scope support is available but not natively.</p>
+<p>A simple configuration can be accomplished as follows:</p>
+<pre><code class="language-php">Cache::config([
+    'default' =&gt; [
+        'adapter' =&gt; 'File',
+        'strategies =&gt; ['Serializer']
+     ]
+]);
+</code></pre>
+<p>The path that the cached files will be written to defaults to
+<code>&lt;app&gt;/resources/tmp/cache</code>, but is user-configurable.</p>
+<p>Note that the cache expiration time is stored within the first few bytes
+of the cached data, and is transparently added and/or removed when values
+are stored and/or retrieved from the cache.</p>
+					</div>
+							</section>
+
+			
+			
+			
+						<section id="related">
+				<h3 class="h-beta">Related</h3>
+				<ul class="related">
+									<li><a href="../adapter.html">lithium\storage\cache\adapter</a>								</ul>
+			</section>
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class File extends \lithium\storage\cache\Adapter {
+
+	/**
+	 * The maximum line length of the file header storing meta data.
+	 *
+	 * @var integer
+	 */
+	const MAX_HEADER_LENGTH = 500;
+
+	/**
+	 * Constructor.
+	 *
+	 * @see lithium\storage\Cache::config()
+	 * @param array $config Configuration for this cache adapter. These settings are queryable
+	 *        through `Cache::config(&#039;name&#039;)`. The available options are as follows:
+	 *        - `&#039;scope&#039;` _string_: Scope which will prefix keys; per default not set.
+	 *        - `&#039;expiry&#039;` _mixed_: The default expiration time for cache values, if no value
+	 *          is otherwise set. Can be either a `strtotime()` compatible tring or TTL in
+	 *          seconds. To indicate items should not expire use `Cache::PERSIST`. Defaults
+	 *          to `+1 hour`.
+	 *        - `&#039;path&#039;` _string_: Path where cached entries live, defaults to
+	 *          `Libraries::get(true, &#039;resources&#039;) . &#039;/tmp/cache&#039;`.
+	 *        - `&#039;streams&#039;`: When enabled (by default disabled) read operations will return
+	 *          stream handles instead of the value itself. This is useful when reading
+	 *          BLOBs.
+	 * @return void
+	 */
+	public function __construct(array $config = []) {
+		$defaults = [
+			&#039;path&#039; =&gt; Libraries::get(true, &#039;resources&#039;) . &#039;/tmp/cache&#039;,
+			&#039;scope&#039; =&gt; null,
+			&#039;expiry&#039; =&gt; &#039;+1 hour&#039;,
+			&#039;streams&#039; =&gt; false
+		];
+		parent::__construct($config + $defaults);
+	}
+
+	/**
+	 * Generates safe cache keys.
+	 *
+	 * Keys should be safe to be used as filename. So we conservatively disallalow
+	 * any non alphanumeric characters with the exception of dash und underscore.
+	 *
+	 * We also limit to max. 255 characters. The limit is actually lowered
+	 * to 255 minus the length of an crc32b hash minus separator (246)
+	 * minus scope length minus separator (246 - x).
+	 *
+	 * 255 was chosen as most commonly used filesystems (ext2-4, HFS+,
+	 * NTFS, XFS, FAT32, btrfs) limit filename characters to a length of
+	 * 255.
+	 *
+	 * @link https://en.wikipedia.org/wiki/Comparison_of_file_systems#Limits
+	 * @param array $keys The original keys.
+	 * @return array Keys modified and safe to use with adapter.
+	 */
+	public function key(array $keys) {
+		$length = 246 - ($this-&gt;_config[&#039;scope&#039;] ? strlen($this-&gt;_config[&#039;scope&#039;]) + 1 : 0);
+
+		return array_map(
+			function($key) use ($length) {
+				$result = substr(preg_replace(&#039;/[^a-z0-9_\-]/iu&#039;, &#039;_&#039;, $key), 0, $length);
+				return $result !== $key ? $result . &#039;_&#039; . hash(&#039;crc32b&#039;, $key) : $result;
+			},
+			$keys
+		);
+	}
+
+	/**
+	 * Write values to the cache. All items to be cached will receive an
+	 * expiration time of `$expiry`.
+	 *
+	 * @param array $keys Key/value pairs with keys to uniquely identify the to-be-cached item.
+	 * @param string|integer $expiry A `strtotime()` compatible cache time or TTL in seconds.
+	 *                       To persist an item use `\lithium\storage\Cache::PERSIST`.
+	 * @return boolean `true` on successful write, `false` otherwise.
+	 */
+	public function write(array $keys, $expiry = null) {
+		$expiry = $expiry || $expiry === Cache::PERSIST ? $expiry : $this-&gt;_config[&#039;expiry&#039;];
+
+		if (!$expiry || $expiry === Cache::PERSIST) {
+			$expires = 0;
+		} elseif (is_int($expiry)) {
+			$expires = $expiry + time();
+		} else {
+			$expires = strtotime($expiry);
+		}
+		if ($this-&gt;_config[&#039;scope&#039;]) {
+			$keys = $this-&gt;_addScopePrefix($this-&gt;_config[&#039;scope&#039;], $keys, &#039;_&#039;);
+		}
+		foreach ($keys as $key =&gt; $value) {
+			if (!$this-&gt;_write($key, $value, $expires)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * Read values from the cache. Will attempt to return an array of data
+	 * containing key/value pairs of the requested data.
+	 *
+	 * Invalidates and cleans up expired items on-the-fly when found.
+	 *
+	 * @param array $keys Keys to uniquely identify the cached items.
+	 * @return array Cached values keyed by cache keys on successful read,
+	 *               keys which could not be read will not be included in
+	 *               the results array.
+	 */
+	public function read(array $keys) {
+		if ($this-&gt;_config[&#039;scope&#039;]) {
+			$keys = $this-&gt;_addScopePrefix($this-&gt;_config[&#039;scope&#039;], $keys, &#039;_&#039;);
+		}
+		$results = [];
+
+		foreach ($keys as $key) {
+			if (!$item = $this-&gt;_read($key, $this-&gt;_config[&#039;streams&#039;])) {
+				continue;
+			}
+			if ($item[&#039;expiry&#039;] &lt; time() &amp;&amp; $item[&#039;expiry&#039;] != 0) {
+				$this-&gt;_delete($key);
+				continue;
+			}
+			$results[$key] = $item[&#039;value&#039;];
+		}
+		if ($this-&gt;_config[&#039;scope&#039;]) {
+			$results = $this-&gt;_removeScopePrefix($this-&gt;_config[&#039;scope&#039;], $results, &#039;_&#039;);
+		}
+		return $results;
+	}
+
+	/**
+	 * Will attempt to remove specified keys from the user space cache.
+	 *
+	 * @param array $keys Keys to uniquely identify the cached items.
+	 * @return boolean `true` on successful delete, `false` otherwise.
+	 */
+	public function delete(array $keys) {
+		if ($this-&gt;_config[&#039;scope&#039;]) {
+			$keys = $this-&gt;_addScopePrefix($this-&gt;_config[&#039;scope&#039;], $keys, &#039;_&#039;);
+		}
+		foreach ($keys as $key) {
+			if (!$this-&gt;_delete($key)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * Performs a decrement operation on a specified numeric cache item.
+	 *
+	 * @param string $key Key of numeric cache item to decrement.
+	 * @param integer $offset Offset to decrement - defaults to `1`.
+	 * @return integer|boolean The item&#039;s new value on successful decrement, else `false`.
+	 */
+	public function decrement($key, $offset = 1) {
+		if ($this-&gt;_config[&#039;scope&#039;]) {
+			$key = &quot;{$this-&gt;_config[&#039;scope&#039;]}_{$key}&quot;;
+		}
+		if (!$result = $this-&gt;_read($key)) {
+			return false;
+		}
+		if (!$this-&gt;_write($key, $result[&#039;value&#039;] -= $offset, $result[&#039;expiry&#039;])) {
+			return false;
+		}
+		return $result[&#039;value&#039;];
+	}
+
+	/**
+	 * Performs an increment operation on a specified numeric cache item.
+	 *
+	 * @param string $key Key of numeric cache item to increment
+	 * @param integer $offset Offset to increment - defaults to `1`.
+	 * @return integer|boolean The item&#039;s new value on successful increment, else `false`.
+	 */
+	public function increment($key, $offset = 1) {
+		if ($this-&gt;_config[&#039;scope&#039;]) {
+			$key = &quot;{$this-&gt;_config[&#039;scope&#039;]}_{$key}&quot;;
+		}
+		if (!$result = $this-&gt;_read($key)) {
+			return false;
+		}
+		if (!$this-&gt;_write($key, $result[&#039;value&#039;] += $offset, $result[&#039;expiry&#039;])) {
+			return false;
+		}
+		return $result[&#039;value&#039;];
+	}
+
+	/**
+	 * Clears entire cache by flushing it. Please note
+	 * that a scope - in case one is set - is *not* honored.
+	 *
+	 * The operation will continue to remove keys even if removing
+	 * one single key fails, clearing thoroughly as possible.
+	 *
+	 * @return boolean `true` on successful clearing, `false` if failed partially or entirely.
+	 */
+	public function clear() {
+		$result = true;
+		foreach (new DirectoryIterator($this-&gt;_config[&#039;path&#039;]) as $file) {
+			if (!$file-&gt;isFile()) {
+				continue;
+			}
+			$result = $this-&gt;_delete($file-&gt;getBasename()) &amp;&amp; $result;
+		}
+		return $result;
+	}
+
+	/**
+	 * Cleans entire cache running garbage collection on it. Please
+	 * note that a scope - in case one is set - is *not* honored.
+	 *
+	 * The operation will continue to remove keys even if removing
+	 * one single key fails, cleaning thoroughly as possible.
+	 *
+	 * @return boolean `true` on successful cleaning, `false` if failed partially or entirely.
+	 */
+	public function clean() {
+		$result = true;
+		foreach (new DirectoryIterator($this-&gt;_config[&#039;path&#039;]) as $file) {
+			if (!$file-&gt;isFile()) {
+				continue;
+			}
+			if (!$item = $this-&gt;_read($key = $file-&gt;getBasename())) {
+				continue;
+			}
+			if ($item[&#039;expiry&#039;] &gt; time()) {
+				continue;
+			}
+			$result = $this-&gt;_delete($key) &amp;&amp; $result;
+		}
+		return $result;
+	}
+
+	/**
+	 * Compiles value to format and writes file.
+	 *
+	 * @see lithium\storage\cache\adapter\File::write()
+	 * @param string $key Key to uniquely identify the cached item.
+	 * @param mixed $value Value or resource with value to store under given key.
+	 * @param integer $expires UNIX timestamp after which the item is invalid.
+	 * @return boolean `true` on success, `false` otherwise.
+	 */
+	protected function _write($key, $value, $expires) {
+		$path = &quot;{$this-&gt;_config[&#039;path&#039;]}/{$key}&quot;;
+
+		if (!$stream = fopen($path, &#039;wb&#039;)) {
+			return false;
+		}
+		fwrite($stream, &quot;{:expiry:{$expires}}\n&quot;);
+
+		if (is_resource($value)) {
+			stream_copy_to_stream($value, $stream);
+		} else {
+			fwrite($stream, $value);
+		}
+		return fclose($stream);
+	}
+
+	/**
+	 * Reads from file, parses its format and returns its expiry and value.
+	 *
+	 * @see lithium\storage\cache\adapter\File::read()
+	 * @param string $key Key to uniquely identify the cached item.
+	 * @param boolean $streams When `true` will return stream handle instead of value.
+	 * @return array|boolean Array with `expiry` and `value` or `false` otherwise.
+	 */
+	protected function _read($key, $streams = false) {
+		$path = &quot;{$this-&gt;_config[&#039;path&#039;]}/{$key}&quot;;
+
+		if (!is_file($path) || !is_readable($path)) {
+			return false;
+		}
+		if (!$stream = fopen($path, &#039;rb&#039;)) {
+			return false;
+		}
+		$header = stream_get_line($stream, static::MAX_HEADER_LENGTH, &quot;\n&quot;);
+
+		if (!preg_match(&#039;/^\{\:expiry\:(\d+)\}/&#039;, $header, $matches)) {
+			return false;
+		}
+		if ($streams) {
+			$value = fopen(&#039;php://temp&#039;, &#039;wb&#039;);
+			stream_copy_to_stream($stream, $value);
+			rewind($value);
+		} else {
+			$value = stream_get_contents($stream);
+		}
+		fclose($stream);
+
+		return [&#039;expiry&#039; =&gt; $matches[1], &#039;value&#039; =&gt; $value];
+
+	}
+
+	/**
+	 * Deletes a file using the corresponding cached item key.
+	 *
+	 * @see lithium\storage\cache\adapter\File::delete()
+	 * @param string $key Key to uniquely identify the cached item.
+	 * @return boolean `true` on success, `false` otherwise.
+	 */
+	protected function _delete($key) {
+		$path = &quot;{$this-&gt;_config[&#039;path&#039;]}/{$key}&quot;;
+		return is_readable($path) &amp;&amp; is_file($path) &amp;&amp; unlink($path);
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

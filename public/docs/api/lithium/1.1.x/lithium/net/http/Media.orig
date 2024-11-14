@@ -1,0 +1,1261 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\net\http\Media – Framework API v1.1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.1.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.1.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.1.x/lithium/net" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">net</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<a href="/docs/api/lithium/1.1.x/lithium/net/http" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">http</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="6" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Media</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.1.x/lithium/net/http" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::types()">types()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::formats()">formats()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::to()">to()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::type()">type()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::negotiate()">negotiate()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::match()">match()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::assets()">assets()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::asset()">asset()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::_assetOptions()">_assetOptions()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::filterAssetPath()">filterAssetPath()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::webroot()">webroot()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::path()">path()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::render()">render()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::view()">view()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::encode()">encode()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::decode()">decode()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::reset()">reset()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::_handle()">_handle()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::_types()">_types()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::handlers()">handlers()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::_assets()">_assets()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::scope()">scope()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::attach()">attach()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::attached()">attached()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::_initScopes()">_initScopes()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::invokeMethod()">invokeMethod()</a>												<li class="method public inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::respondsTo()">respondsTo()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::_instance()">_instance()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::_parents()">_parents()</a>												<li class="method protected inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::_stop()">_stop()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::applyFilter()">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::_filter()">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::$_scopes">$_scopes</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::$_scope">$_scope</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::$_types">$_types</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::$_handlers">$_handlers</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::$_assets">$_assets</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.1.x/lithium/net/http/Media::$_classes">$_classes</a>												<li class="property protected inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::$_parents">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject::$_methodFilters">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.1.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.1.x/lithium/net" class="symbol-segment">net</a>\<a href="/docs/api/lithium/1.1.x/lithium/net/http" class="symbol-segment">http</a>\Media		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.1.x/lithium/core/StaticObject" class="extends__symbol">lithium\core\StaticObject</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The <code>Media</code> class facilitates content-type mapping (mapping between content-types and file
+extensions), handling static assets and globally configuring how the framework handles output in
+different formats.</p>
+					</div>
+				
+									<div class="description">
+						<p>Using the <code>Media</code> class, you can globally configure input and output of different types of
+content, i.e.:</p>
+<pre><code class="language-php">
+You may then render CSV content from anywhere in your application. For example, in a controller
+you may do the following:
+
+```
+$this-&gt;render(['csv' =&gt; Post::find('all')]);
+```
+</code></pre>
+					</div>
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Media extends \lithium\core\StaticObject {
+
+	/**
+	 * Contain the configuration of scopes.
+	 *
+	 * @var array of scopes
+	 */
+	protected static $_scopes = null;
+
+	/**
+	 * Stores the name of the scope in use.
+	 * If set to `false`, no scope is used.
+	 *
+	 * @see lithium\net\http\Media::scope()
+	 * @var string
+	 */
+	protected static $_scope = false;
+
+	/**
+	 * Maps file extensions to content-types.  Used to set response types and determine request
+	 * types. Can be modified with `Media::type()`.
+	 *
+	 * @var array
+	 * @see lithium\net\http\Media::type()
+	 */
+	protected static $_types = [];
+
+	/**
+	 * A map of media handler objects or callbacks, mapped to media types.
+	 *
+	 * @var array
+	 */
+	protected static $_handlers = [];
+
+	/**
+	 * Contains default path settings for various asset types.
+	 *
+	 * For each type, the corresponding array key maps to the general type name, i.e. `&#039;js&#039;` or
+	 * `&#039;image&#039;`. Each type contains a set of keys which define their locations and default
+	 * behavior. For more information how each key works, see `Media::assets()`.
+	 *
+	 * @var array
+	 * @see lithium\net\http\Media::assets()
+	 */
+	protected static $_assets = [];
+
+	/**
+	 * Placeholder for class dependencies. This class&#039; dependencies (i.e. templating classes) are
+	 * typically specified through other configuration.
+	 *
+	 * @var array
+	 */
+	protected static $_classes = [
+		&#039;configuration&#039; =&gt; &#039;lithium\core\Configuration&#039;
+	];
+
+	/**
+	 * Returns the list of registered media types.  New types can be set with the `type()` method.
+	 *
+	 * @return array Returns an array of media type extensions or short-names, which comprise the
+	 *         list of types handled.
+	 */
+	public static function types() {
+		return array_keys(static::_types());
+	}
+
+	/**
+	 * Alias for `types()`; included for interface compatibility with
+	 * `lithium\util\Collection::to()`, which allows a collection object to be exported to any
+	 * format supported by a `Media` handler. See the documentation for `Collection::to()` for more
+	 * information.
+	 *
+	 * @see lithium\net\http\Media
+	 * @return array Returns the value of `Media::types()`.
+	 */
+	public static function formats() {
+		return static::types();
+	}
+
+	/**
+	 * Alias for `encode()`; included for interface compatibility with
+	 * `lithium\util\Collection::to()`, which allows a collection object to be exported to any
+	 * format supported by a `Media` handler. See the documentation for `Collection::to()` for more
+	 * information.
+	 *
+	 * @param mixed $format Format into which data will be converted, i.e. `&#039;json&#039;`.
+	 * @param mixed $data Either an array or object (usually an instance of `Collection`) which will
+	 *              be converted into the specified format.
+	 * @param array $options Additional handler-specific options to pass to the content handler.
+	 * @return mixed
+	 */
+	public static function to($format, $data, array $options = []) {
+		return static::encode($format, $data, $options);
+	}
+
+	/**
+	 * Maps a type name to a particular content-type (or multiple types) with a set of options, or
+	 * retrieves information about a type that has been defined.
+	 *
+	 * Examples:
+	 * ``` embed:lithium\tests\cases\net\http\MediaTest::testMediaTypes(1-2) ```
+	 *
+	 * ``` embed:lithium\tests\cases\net\http\MediaTest::testMediaTypes(19-23) ```
+	 *
+	 * ``` embed:lithium\tests\cases\net\http\MediaTest::testMediaTypes(43-44) ```
+	 *
+	 * Alternatively, can be used to detect the type name of a registered content type:
+	 * ```
+	 * Media::type(&#039;application/json&#039;); // returns &#039;json&#039;
+	 * Media::type(&#039;application/javascript&#039;); // returns &#039;javascript&#039;
+	 * Media::type(&#039;text/javascript&#039;); // also returns &#039;javascript&#039;
+	 *
+	 * Media::type(&#039;text/html&#039;); // returns &#039;html&#039;
+	 * Media::type(&#039;application/xhtml+xml&#039;); // also returns &#039;html&#039;
+	 * ```
+	 *
+	 * #### Content negotiation
+	 *
+	 * When creating custom media types, specifying which content-type(s) to match isn&#039;t always
+	 * enough. For example, if you wish to serve a different set of templates to mobile web
+	 * browsers, you&#039;d still want those templates served as HTML. You might add something like this:
+	 *
+	 * ```
+	 * Media::type(&#039;mobile&#039;, [&#039;application/xhtml+xml&#039;, &#039;text/html&#039;]);
+	 * ```
+	 *
+	 * However, this would cause _all_ requests for HTML content to be interpreted as
+	 * `&#039;mobile&#039;`-type requests. Instead, we can use _content negotiation_ to granularly specify how
+	 * to match a particular type. Content negotiation is the process of examining the HTTP headers
+	 * provided in the request (including the content-types listed in the `Accept` header, and
+	 * optionally other things as well, like the `Accept-Language` or `User-Agent` headers), in
+	 * order to produce the best representation of the requested resource for the client; in other
+	 * words, the resource that most closely matches what the client is asking for.
+	 *
+	 * Content negotiation with media types is made possible through the `&#039;conditions&#039;` key of the
+	 * `$options` parameter, which contains an array of assertions made against the `Request`
+	 * object. Each assertion (array key) can be one of three different things:
+	 *
+	 * - `&#039;type&#039;` _boolean_: In the default routing, some routes have `{:type}` keys, which are
+	 *   designed to match file extensions in URLs. These values act as overrides for the
+	 *   HTTP `Accept` header, allowing different formats to be served with the same content
+	 *   type. For example, if you&#039;re serving JSONP, you&#039;ll want to serve it with the same
+	 *   content-type as JavaScript (since it is JavaScript), but you probably won&#039;t want to
+	 *   use the same template(s) or other settings. Therefore, when serving JSONP content, you
+	 *   can specify that the extension defined in the type must be present in the URL:
+	 *  ```
+	 *  Media::type(&#039;jsonp&#039;, [&#039;application/json&#039;], [
+	 *  	// template settings...
+	 *  	&#039;conditions&#039; =&gt; [&#039;type&#039; =&gt; true]
+	 *  ]);
+	 *  ```
+	 *  Then, JSONP content will only ever be served when the request URL ends in `.jsonp`.
+	 *
+	 * - `&#039;&lt;prefix&gt;:&lt;key&gt;&#039;` _string_: This type of assertion can be used to match against arbitrary
+	 *   information in the request, including headers (i.e. `&#039;http:user_agent&#039;`), environment
+	 *   variables (i.e. `&#039;env:home&#039;`), GET and POST data (i.e. `&#039;query:foo&#039;` or `&#039;data:foo&#039;`,
+	 *   respectively), and the HTTP method (`&#039;http:method&#039;`) of the request. For more information
+	 *   on possible keys, see `lithium\action\Request::get()`.
+	 *
+	 * - `&#039;&lt;detector&gt;&#039;` _boolean_: Uses detector checks added to the `Request` object to make
+	 *   boolean assertions against the request. For example, if a detector called `&#039;iPhone&#039;` is
+	 *   attached, you can add `&#039;iPhone&#039; =&gt; true` to the `&#039;conditions&#039;` array in order to filter for
+	 *   iPhone requests only. See `lithium\action\Request::detect()` for more information on adding
+	 *   detectors.
+	 *
+	 * @link http://en.wikipedia.org/wiki/JSON#JSONP
+	 * @see lithium\net\http\Media::$_types
+	 * @see lithium\net\http\Media::$_handlers
+	 * @see lithium\net\http\Media::negotiate()
+	 * @see lithium\action\Request::get()
+	 * @see lithium\action\Request::is()
+	 * @see lithium\action\Request::detect()
+	 * @see lithium\util\Text::insert()
+	 * @param string $type A file-extension-style type name, i.e. `&#039;txt&#039;`, `&#039;js&#039;`, or `&#039;atom&#039;`.
+	 *               Alternatively, a mapped content type, i.e. `&#039;text/html&#039;`,
+	 *               `&#039;application/atom+xml&#039;`, etc.; in which case, the matching type name (i.e.
+	 *               &#039;`html&#039;` or `&#039;atom&#039;`) will be returned.
+	 * @param mixed $content Optional. A string or array containing the content-type(s) that
+	 *        `$type` should map to.  If `$type` is an array of content-types, the first one listed
+	 *        should be the &quot;primary&quot; type, and will be used as the `Content-type` header of any
+	 *        `Response` objects served through this type.
+	 * @param array $options Optional.  The handling options for this media type. Possible keys are:
+	 *        - `&#039;view&#039;` _string_: Specifies the view class to use when rendering this content.
+	 *          Note that no `&#039;view&#039;` class is specified by default.  If you want to
+	 *          render templates using Lithium&#039;s default view class, use
+	 *          `&#039;lithium\template\View&#039;`
+	 *        - `&#039;decode&#039;` _mixed_: A (string) function name or (object) closure that handles
+	 *          decoding or unserializing content from this format.
+	 *        - `&#039;encode&#039;` _mixed_: A (string) function name or (object) closure that handles
+	 *          encoding or serializing content into this format.
+	 *        - `&#039;cast&#039;` _boolean_: Used with `&#039;encode&#039;`. If `true`, all data passed into the
+	 *          specified encode function is first cast to array structures.
+	 *        - `&#039;paths&#039;` _array_: Optional key/value pairs mapping paths for
+	 *          `&#039;template&#039;`, `&#039;layout&#039;`, and `&#039;element&#039;` template files.  Any keys ommitted
+	 *          will use the default path.  The values should be `Text::insert()`-style
+	 *          paths or an array of `Text::insert()`-style paths.  If it is an array,
+	 *          each path will be tried in the order specified until a template is found.
+	 *          This is useful for allowing custom templates while falling back on
+	 *          default templates if no custom template was found.  If you want to
+	 *          render templates without a layout, use a `false` value for `&#039;layout&#039;`.
+	 *        - `&#039;conditions&#039;` _array_: Optional key/value pairs used as assertions in content
+	 *          negotiation. See the above section on **Content Negotiation**.
+	 * @return mixed If `$content` and `$options` are empty, returns an array with `&#039;content&#039;` and
+	 *         `&#039;options&#039;` keys, where `&#039;content&#039;` is the content-type(s) that correspond to
+	 *         `$type` (can be a string or array, if multiple content-types are available), and
+	 *         `&#039;options&#039;` is the array of options which define how this content-type should be
+	 *         handled.  If `$content` or `$options` are non-empty, returns `null`.
+	 */
+	public static function type($type, $content = null, array $options = []) {
+		$defaults = [
+			&#039;view&#039; =&gt; false,
+			&#039;paths&#039; =&gt; [
+				&#039;template&#039; =&gt; &#039;{:library}/views/{:controller}/{:template}.{:type}.php&#039;,
+				&#039;layout&#039;   =&gt; &#039;{:library}/views/layouts/{:layout}.{:type}.php&#039;,
+				&#039;element&#039;  =&gt; &#039;{:library}/views/elements/{:template}.{:type}.php&#039;
+			],
+			&#039;encode&#039; =&gt; false,
+			&#039;decode&#039; =&gt; false,
+			&#039;cast&#039;   =&gt; true,
+			&#039;conditions&#039; =&gt; []
+		];
+
+		if ($content === false) {
+			unset(static::$_types[$type], static::$_handlers[$type]);
+		}
+		if (!$content &amp;&amp; !$options) {
+			if (!$content = static::_types($type)) {
+				return;
+			}
+			if (strpos($type, &#039;/&#039;)) {
+				return $content;
+			}
+			if (is_array($content) &amp;&amp; isset($content[&#039;alias&#039;])) {
+				return static::type($content[&#039;alias&#039;]);
+			}
+			return compact(&#039;content&#039;) + [&#039;options&#039; =&gt; static::handlers($type)];
+		}
+		if ($content) {
+			static::$_types[$type] = (array) $content;
+		}
+		static::$_handlers[$type] = $options ? Set::merge($defaults, $options) : [];
+	}
+
+	/**
+	 * Performs content-type negotiation on a `Request` object, by iterating over the accepted
+	 * types in sequence, from most preferred to least, and attempting to match each one against a
+	 * content type defined by `Media::type()`, until a match is found. If more than one defined
+	 * type matches for a given content type, they will be checked in the order they were added
+	 * (usually, this corresponds to the order they were defined in the application bootstrapping
+	 * process).
+	 *
+	 * @see lithium\net\http\Media::type()
+	 * @see lithium\net\http\Media::match()
+	 * @see lithium\action\Request
+	 * @param \lithium\action\Request $request The request which contains the details of
+	 *        the request to be content-negotiated.
+	 * @return string|null Returns the first matching type name, i.e. `&#039;html&#039;` or `&#039;json&#039;`. When
+	 *         no matching type is found returns `null`.
+	 */
+	public static function negotiate($request) {
+		$match = function($name) use ($request) {
+			if (($cfg = static::type($name)) &amp;&amp; static::match($request, compact(&#039;name&#039;) + $cfg)) {
+				return true;
+			}
+			return false;
+		};
+
+		if (($type = $request-&gt;type) &amp;&amp; $match($type)) {
+			return $type;
+		}
+
+		foreach ($request-&gt;accepts(true) as $type) {
+			if (!$types = (array) static::_types($type)) {
+				continue;
+			}
+			foreach ($types as $name) {
+				if (!$match($name)) {
+					continue;
+				}
+				return $name;
+			}
+		}
+	}
+
+	/**
+	 * Assists `Media::negotiate()` in processing the negotiation conditions of a content type, by
+	 * iterating through the conditions and checking each one against the `Request` object.
+	 *
+	 * @see lithium\net\http\Media::negotiate()
+	 * @see lithium\net\http\Media::type()
+	 * @see lithium\action\Request
+	 * @param \lithium\action\Request $request The request to be checked against a
+	 *        set of conditions (if applicable).
+	 * @param array $config Represents a content type configuration, which is an array containing 3
+	 *              keys:
+	 *              - `&#039;name&#039;` _string_: The type name, i.e. `&#039;html&#039;` or `&#039;json&#039;`.
+	 *              - `&#039;content&#039;` _mixed_: One or more content types that the configuration
+	 *                represents, i.e. `&#039;text/html&#039;`, `&#039;application/xhtml+xml&#039;` or
+	 *                `&#039;application/json&#039;`, or an array containing multiple content types.
+	 *              - `&#039;options&#039;` _array_: An array containing rendering information, and an
+	 *                optional `&#039;conditions&#039;` key, which contains an array of matching parameters.
+	 *                For more details on these matching parameters, see `Media::type()`.
+	 * @return boolean Returns `true` if the information in `$request` matches the type
+	 *         configuration in `$config`, otherwise false.
+	 */
+	public static function match($request, array $config) {
+		if (!isset($config[&#039;options&#039;][&#039;conditions&#039;])) {
+			return true;
+		}
+		$conditions = $config[&#039;options&#039;][&#039;conditions&#039;];
+
+		foreach ($conditions as $key =&gt; $value) {
+			switch (true) {
+				case $key === &#039;type&#039;:
+					if ($value !== ($request-&gt;type === $config[&#039;name&#039;])) {
+						return false;
+					}
+				break;
+				case strpos($key, &#039;:&#039;):
+					if ($request-&gt;get($key) !== $value) {
+						return false;
+					}
+				break;
+				case ($request-&gt;is($key) !== $value):
+					return false;
+				break;
+			}
+		}
+		return true;
+	}
+
+	/**
+	 * Gets or sets options for various asset types.
+	 *
+	 * @see lithium\util\Text::insert()
+	 * @param string $type The name of the asset type, i.e. `&#039;js&#039;` or `&#039;css&#039;`.
+	 * @param array $options If registering a new asset type or modifying an existing asset type,
+	 *        contains settings for the asset type, where the available keys are as follows:
+	 *        - `&#039;suffix&#039;`: The standard suffix for this content type, with leading dot (&#039;.&#039;) if
+	 *          applicable.
+	 *        - `&#039;filter&#039;`: An array of key/value pairs representing simple string replacements to
+	 *          be done on a path once it is generated.
+	 *        - `&#039;paths&#039;`: An array of key/value pairs where the keys are `Text::insert()`
+	 *          compatible paths, and the values are array lists of keys to be inserted into the
+	 *          path string.
+	 * @return array If `$type` is empty, an associative array of all registered types and all
+	 *         associated options is returned. If `$type` is a string and `$options` is empty,
+	 *         returns an associative array with the options for `$type`. If `$type` and `$options`
+	 *         are both non-empty, returns `null`.
+	 */
+	public static function assets($type = null, $options = []) {
+		$defaults = [&#039;suffix&#039; =&gt; null, &#039;filter&#039; =&gt; null, &#039;paths&#039; =&gt; []];
+
+		if (!$type) {
+			return static::_assets();
+		}
+		if ($options === false) {
+			unset(static::$_assets[$type]);
+		}
+		if (!$options) {
+			return static::_assets($type);
+		}
+		$options = (array) $options + $defaults;
+
+		if ($base = static::_assets($type)) {
+			$options = array_merge($base, array_filter($options));
+		}
+		static::$_assets[$type] = $options;
+	}
+
+	/**
+	 * Calculates the web-accessible path to a static asset, usually a JavaScript, CSS or image
+	 * file.
+	 *
+	 * @see lithium\net\http\Media::$_assets
+	 * @see lithium\action\Request::env()
+	 * @param string $path The path to the asset, relative to the given `$type`s path and without a
+	 *        suffix. If the path contains a URI Scheme (eg. `http://`), no path munging will occur.
+	 * @param string $type The asset type. See `Media::$_assets` or `Media::assets()`.
+	 * @param array $options Contains setting for finding and handling the path, where the keys are
+	 *        the following:
+	 *        - `&#039;base&#039;`: The base URL of your application. Defaults to `null` for no base path.
+	 *          This is usually set with the return value of a call to `env(&#039;base&#039;)` on an instance
+	 *          of `lithium\action\Request`.
+	 *        - `&#039;check&#039;`: Check for the existence of the file before returning. Defaults to
+	 *          `false`.
+	 *        - `&#039;filter&#039;`: An array of key/value pairs representing simple string replacements to
+	 *          be done on a path once it is generated.
+	 *        - `&#039;paths&#039;`: An array of paths to search for the asset in. The paths should use
+	 *          `Text::insert()` formatting. See `Media::$_assets` for more.
+	 *        - `suffix`: The suffix to attach to the path, generally a file extension.
+	 *        - `&#039;timestamp&#039;`: Appends the last modified time of the file to the path if `true`.
+	 *          Defaults to `false`.
+	 *        - `&#039;library&#039;`: The name of the library from which to load the asset. Defaults to
+	 *           `true`, for the default library.
+	 * @return string Returns the publicly-accessible absolute path to the static asset. If checking
+	 *         for the asset&#039;s existence (`$options[&#039;check&#039;]`), returns `false` if it does not exist
+	 *         in your `/webroot` directory, or the `/webroot` directories of one of your included
+	 *         plugins.
+	 * @filter
+	 */
+	public static function asset($path, $type, array $options = []) {
+		$options = static::_assetOptions($path, $type, $options);
+		$params = compact(&#039;path&#039;, &#039;type&#039;, &#039;options&#039;);
+
+		return Filters::run(get_called_class(), __FUNCTION__, $params, function($params) {
+			$path = $params[&#039;path&#039;];
+			$type = $params[&#039;type&#039;];
+			$options = $params[&#039;options&#039;];
+			$library = $options[&#039;library&#039;];
+
+			if (preg_match(&#039;/^(?:[a-z0-9-]+:)?\/\//i&#039;, $path)) {
+				return $path;
+			}
+			$config = Libraries::get($library);
+			$paths = $options[&#039;paths&#039;];
+			$config[&#039;default&#039;] ? end($paths) : reset($paths);
+			$options[&#039;library&#039;] = basename($config[&#039;path&#039;]);
+
+			if ($options[&#039;suffix&#039;] &amp;&amp; strpos($path, $options[&#039;suffix&#039;]) === false) {
+				$path .= $options[&#039;suffix&#039;];
+			}
+			return static::filterAssetPath($path, $paths, $config, compact(&#039;type&#039;) + $options);
+		});
+	}
+
+	/**
+	 * Initialize options for `Media::asset()`.
+	 *
+	 * @param string $path The path to the asset.
+	 * @param string $type The asset type.
+	 * @param array $options Contains setting for finding and handling the path.
+	 * @return array The initialized options.
+	 */
+	protected static function _assetOptions($path, $type, $options) {
+		$defaults = [
+			&#039;base&#039; =&gt; null,
+			&#039;timestamp&#039; =&gt; false,
+			&#039;filter&#039; =&gt; null,
+			&#039;paths&#039; =&gt; [],
+			&#039;suffix&#039; =&gt; null,
+			&#039;check&#039; =&gt; false,
+			&#039;library&#039; =&gt; true
+		];
+
+		$base = isset($options[&#039;base&#039;]) ? rtrim($options[&#039;base&#039;], &#039;/&#039;) : &#039;&#039;;
+		$options += [&#039;scope&#039; =&gt; static::scope()];
+		$name = $options[&#039;scope&#039;];
+
+		if ($config = static::attached($name)) {
+			$base = isset($config[&#039;base&#039;]) ? &#039;/&#039; . $config[&#039;base&#039;] : $base;
+			$defaults = array_merge($defaults, $config);
+
+			if (preg_match(&#039;/^((?:[a-z0-9-]+:)?\/\/)([^\/]*)/i&#039;, $base, $match)) {
+				$options = array_merge($defaults, [
+					&#039;base&#039; =&gt; rtrim($base . &#039;/&#039; . $defaults[&#039;prefix&#039;], &#039;/&#039;)
+				]);
+			} else {
+				$host = &#039;&#039;;
+
+				if ($defaults[&#039;absolute&#039;]) {
+					$host = $defaults[&#039;host&#039;];
+
+					if (is_array($host)) {
+						$hash = substr(hexdec(md5($path)), 0, 10);
+						$index = ((integer) $hash) % count($host);
+
+						if (is_array($defaults[&#039;scheme&#039;])) {
+							$host = $defaults[&#039;scheme&#039;][$index] . $host[$index];
+						} else {
+							$host = $defaults[&#039;scheme&#039;] . $host[$index];
+						}
+					} else {
+						$host = $defaults[&#039;scheme&#039;] . $defaults[&#039;host&#039;];
+					}
+					$base = trim($base, &#039;/&#039;);
+					$base = $base ? &#039;/&#039; . $base : &#039;&#039;;
+				}
+				$options[&#039;base&#039;] = rtrim($host . $base . &#039;/&#039; . $defaults[&#039;prefix&#039;], &#039;/&#039;);
+			}
+		}
+
+		if (!$paths = static::_assets($type)) {
+			$paths = static::_assets(&#039;generic&#039;);
+		}
+		return $options + $paths + $defaults;
+	}
+
+	/**
+	 * Performs checks and applies transformations to asset paths, including verifying that the
+	 * virtual path exists on the filesystem, appending a timestamp, prepending an asset host, or
+	 * applying a user-defined filter.
+	 *
+	 * @see lithium\net\http\Media::asset()
+	 * @param string $asset A full asset path, relative to the public web path of the application.
+	 * @param mixed $path Path information for the asset type.
+	 * @param array $config The configuration array of the library from which the asset is being
+	 *              loaded.
+	 * @param array $options The array of options passed to `asset()` (see the `$options` parameter
+	 *              of `Media::asset()`).
+	 * @return mixed Returns a modified path to a web asset, or `false`, if the path fails a check.
+	 */
+	public static function filterAssetPath($asset, $path, array $config, array $options = []) {
+		$config += [&#039;assets&#039; =&gt; null];
+
+		if ($options[&#039;check&#039;] || $options[&#039;timestamp&#039;]) {
+			$file = static::path($asset, $options[&#039;type&#039;], $options);
+		}
+		if ($options[&#039;check&#039;] &amp;&amp; !is_file($file)) {
+			return false;
+		}
+		$isAbsolute = ($asset &amp;&amp; $asset[0] === &#039;/&#039;);
+
+		if ($isAbsolute &amp;&amp; $options[&#039;base&#039;] &amp;&amp; strpos($asset, $options[&#039;base&#039;]) !== 0) {
+			$asset = &quot;{$options[&#039;base&#039;]}{$asset}&quot;;
+		} elseif (!$isAbsolute) {
+			$asset = Text::insert(key($path), [&#039;path&#039; =&gt; $asset] + $options);
+		}
+
+		if (is_array($options[&#039;filter&#039;]) &amp;&amp; !empty($options[&#039;filter&#039;])) {
+			$filter = $options[&#039;filter&#039;];
+			$asset = str_replace(array_keys($filter), array_values($filter), $asset);
+		}
+
+		if ($options[&#039;timestamp&#039;] &amp;&amp; is_file($file)) {
+			$separator = (strpos($asset, &#039;?&#039;) !== false) ? &#039;&amp;&#039; : &#039;?&#039;;
+			$asset .= $separator . filemtime($file);
+		}
+
+		if ($host = $config[&#039;assets&#039;]) {
+			$type = $options[&#039;type&#039;];
+			$env  = Environment::get();
+			$base = isset($host[$env][$type]) ? $host[$env][$type] : null;
+			$base = (isset($host[$type]) &amp;&amp; !$base) ? $host[$type] : $base;
+
+			if ($base) {
+				return &quot;{$base}{$asset}&quot;;
+			}
+		}
+		return $asset;
+	}
+
+	/**
+	 * Gets the physical path to the web assets (i.e. `/webroot`) directory of a library.
+	 *
+	 * @param string|boolean $library The name of the library for which to find the path, or `true`
+	 *        for the default library.
+	 * @param string|boolean $scope The name of the to use to find the path.
+	 * @return string Returns the physical path to the web assets directory.
+	 */
+	public static function webroot($library = true, $scope = null) {
+		if ($scope) {
+			if ($config = static::attached($scope)) {
+				return $config[&#039;path&#039;];
+			}
+			return null;
+		}
+		if (!$config = Libraries::get($library)) {
+			return null;
+		}
+		if (isset($config[&#039;webroot&#039;])) {
+			return $config[&#039;webroot&#039;];
+		}
+		if (isset($config[&#039;path&#039;])) {
+			return $config[&#039;path&#039;] . &#039;/webroot&#039;;
+		}
+	}
+
+	/**
+	 * Returns the physical path to an asset in the `/webroot` directory of an application or
+	 * plugin.
+	 *
+	 * @param string $paths The path to a web asset, relative to the root path for its type. For
+	 *        example, for a JavaScript file in `/webroot/js/subpath/file.js`, the correct
+	 *        value for `$path` would be `&#039;subpath/file.js&#039;`.
+	 * @param string $type A valid asset type, i.e. `&#039;js&#039;`, `&#039;cs&#039;`, `&#039;image&#039;`, or another type
+	 *        registered with `Media::assets()`, or `&#039;generic&#039;`.
+	 * @param array $options The options used to calculate the path to the file.
+	 * @return string Returns the physical filesystem path to an asset in the `/webroot` directory.
+	 */
+	public static function path($path, $type, array $options = []) {
+		$defaults = [
+			&#039;base&#039; =&gt; null,
+			&#039;paths&#039; =&gt; [],
+			&#039;suffix&#039; =&gt; null,
+			&#039;library&#039; =&gt; true,
+			&#039;scope&#039; =&gt; false
+		];
+		if (!$base = static::_assets($type)) {
+			$base = static::_assets(&#039;generic&#039;);
+		}
+		$options += ($base + $defaults);
+		$paths = $options[&#039;paths&#039;];
+
+		if ($options[&#039;scope&#039;]) {
+			$root = static::webroot(false, $options[&#039;scope&#039;]);
+		} else {
+			$root = static::webroot($options[&#039;library&#039;]);
+			Libraries::get(true, &#039;name&#039;) === $options[&#039;library&#039;] ? end($paths) : reset($paths);
+		}
+
+		if ($qOffset = strpos($path, &#039;?&#039;)) {
+			$path = substr($path, 0, $qOffset);
+		}
+
+		if ($path[0] === &#039;/&#039;) {
+			$file = $root . $path;
+		} else {
+			$template = str_replace(&#039;{:library}/&#039;, &#039;&#039;, key($paths));
+			$insert = [&#039;base&#039; =&gt; $root] + compact(&#039;path&#039;);
+			$file = Text::insert($template, $insert);
+		}
+		return realpath($file);
+	}
+
+	/**
+	 * Renders data (usually the result of a controller action) and generates a string
+	 * representation of it, based on the type of expected output.
+	 *
+	 * @param object $response A Response object into which the operation will be
+	 *        rendered. The content of the render operation will be assigned to the `$body`
+	 *        property of the object, the `&#039;Content-Type&#039;` header will be set accordingly, and it
+	 *        will be returned.
+	 * @param mixed $data The data (usually an associative array) to be rendered in the response.
+	 * @param array $options Any options specific to the response being rendered, such as type
+	 *              information, keys (i.e. controller and action) used to generate template paths,
+	 *              etc.
+	 * @return object Returns a modified `Response` object with headers and body defined.
+	 * @filter
+	 */
+	public static function render($response, $data = null, array $options = []) {
+		$params = compact(&#039;response&#039;, &#039;data&#039;, &#039;options&#039;);
+
+		return Filters::run(get_called_class(), __FUNCTION__, $params, function($params) {
+			$types = static::_types();
+			$handlers = static::handlers();
+
+			$defaults = [&#039;encode&#039; =&gt; null, &#039;template&#039; =&gt; null, &#039;layout&#039; =&gt; &#039;&#039;, &#039;view&#039; =&gt; null];
+			$response = $params[&#039;response&#039;];
+			$data = $params[&#039;data&#039;];
+			$options = $params[&#039;options&#039;] + [&#039;type&#039; =&gt; $response-&gt;type()];
+
+			$result = null;
+			$type = $options[&#039;type&#039;];
+
+			if (!isset($handlers[$type])) {
+				throw new MediaException(&quot;Unhandled media type `{$type}`.&quot;);
+			}
+			$handler = $options + $handlers[$type] + $defaults;
+			$filter = function($v) { return $v !== null; };
+			$handler = array_filter($handler, $filter) + $handlers[&#039;default&#039;] + $defaults;
+
+			if (isset($types[$type])) {
+				$mimeTypes = (array) $types[$type];
+
+				$header  = current($mimeTypes);
+				$header .= $response-&gt;encoding ? &quot;; charset={$response-&gt;encoding}&quot; : &#039;&#039;;
+				$response-&gt;headers(&#039;Content-Type&#039;, $header);
+			}
+			$response-&gt;body(static::_handle($handler, $data, $response));
+
+			return $response;
+		});
+	}
+
+	/**
+	 * Configures a template object instance, based on a media handler configuration.
+	 *
+	 * @see lithium\net\http\Media::type()
+	 * @see lithium\template\View::render()
+	 * @see lithium\action\Response
+	 * @param mixed $handler Either a string specifying the name of a media type for which a handler
+	 *              is defined, or an array representing a handler configuration. For more on types
+	 *              and type handlers, see the `type()` method.
+	 * @param mixed $data The data to be rendered. Usually an array.
+	 * @param object $response The `Response` object associated with this dispatch cycle. Usually an
+	 *               instance of `lithium\action\Response`.
+	 * @param array $options Any options that will be passed to the `render()` method of the
+	 *              templating object.
+	 * @return object Returns an instance of a templating object, usually `lithium\template\View`.
+	 * @filter
+	 */
+	public static function view($handler, $data, &amp;$response = null, array $options = []) {
+		$params = [&#039;response&#039; =&gt; &amp;$response] + compact(&#039;handler&#039;, &#039;data&#039;, &#039;options&#039;);
+
+		return Filters::run(get_called_class(), __FUNCTION__, $params, function($params) {
+			$handler = $params[&#039;handler&#039;];
+			$response =&amp; $params[&#039;response&#039;];
+
+			$handler = is_array($handler) ? $handler : static::handlers($handler);
+			$class = $handler[&#039;view&#039;];
+			unset($handler[&#039;view&#039;]);
+
+			$config = $handler + [&#039;response&#039; =&gt; &amp;$response];
+			return static::_instance($class, $config);
+		});
+	}
+
+	/**
+	 * For media types registered in `$_handlers` which include an `&#039;encode&#039;` setting, encodes data
+	 * according to the specified media type.
+	 *
+	 * @see lithium\net\http\Media::type()
+	 * @param mixed $handler Specifies the media type into which `$data` will be encoded. This media
+	 *              type must have an `&#039;encode&#039;` setting specified in `Media::$_handlers`.
+	 *              Alternatively, `$type` can be an array, in which case it is used as the type
+	 *              handler configuration. See the `type()` method for information on adding type
+	 *              handlers, and the available configuration keys.
+	 * @param mixed $data Arbitrary data you wish to encode. Note that some encoders can only handle
+	 *        arrays or objects.
+	 * @param object $response A reference to the `Response` object for this dispatch cycle.
+	 * @return mixed Returns the result of `$data`, encoded with the encoding configuration
+	 *               specified by `$type`, the result of which is usually a string.
+	 * @filter
+	 */
+	public static function encode($handler, $data, &amp;$response = null) {
+		$params = [&#039;response&#039; =&gt; &amp;$response] + compact(&#039;handler&#039;, &#039;data&#039;);
+
+		return Filters::run(get_called_class(), __FUNCTION__, $params, function($params) {
+			$data = $params[&#039;data&#039;];
+			$handler = $params[&#039;handler&#039;];
+			$response =&amp; $params[&#039;response&#039;];
+			$handler = is_array($handler) ? $handler : static::handlers($handler);
+
+			if (!$handler || empty($handler[&#039;encode&#039;])) {
+				return null;
+			}
+
+			$cast = function($data) {
+				if (!is_object($data)) {
+					return $data;
+				}
+				return method_exists($data, &#039;to&#039;) ? $data-&gt;to(&#039;array&#039;) : get_object_vars($data);
+			};
+
+			if (!isset($handler[&#039;cast&#039;]) || $handler[&#039;cast&#039;]) {
+				$data = is_object($data) ? $cast($data) : $data;
+				$data = is_array($data) ? array_map($cast, $data) : $data;
+			}
+			$method = $handler[&#039;encode&#039;];
+			return is_string($method) ? $method($data) : $method($data, $handler, $response);
+		});
+	}
+
+	/**
+	 * For media types registered in `$_handlers` which include an `&#039;decode&#039;` setting, decodes data
+	 * according to the specified media type.
+	 *
+	 * @param string $type Specifies the media type into which `$data` will be encoded. This media
+	 *        type must have an `&#039;encode&#039;` setting specified in `Media::$_handlers`.
+	 * @param mixed $data Arbitrary data you wish to encode. Note that some encoders can only handle
+	 *        arrays or objects.
+	 * @param array $options Handler-specific options.
+	 * @return mixed
+	 */
+	public static function decode($type, $data, array $options = []) {
+		if ((!$handler = static::handlers($type)) || empty($handler[&#039;decode&#039;])) {
+			return null;
+		}
+		$method = $handler[&#039;decode&#039;];
+		return is_string($method) ? $method($data) : $method($data, $handler + $options);
+	}
+
+	/**
+	 * Resets the `Media` class to its default state. Mainly used for ensuring a consistent state
+	 * during testing.
+	 */
+	public static function reset() {
+		static::$_handlers = [];
+		static::$_types = [];
+		static::$_scope = false;
+		if (isset(static::$_scopes)) {
+			static::$_scopes-&gt;reset();
+		}
+	}
+
+	/**
+	 * Called by `Media::render()` to render response content. Given a content handler and data,
+	 * calls the content handler and passes in the data, receiving back a rendered content string.
+	 *
+	 * @see lithium\action\Response
+	 * @param array $handler
+	 * @param array $data
+	 * @param object $response A reference to the `Response` object for this dispatch cycle.
+	 * @return string
+	 * @filter
+	 */
+	protected static function _handle($handler, $data, &amp;$response) {
+		$params = [&#039;response&#039; =&gt; &amp;$response] + compact(&#039;handler&#039;, &#039;data&#039;);
+
+		return Filters::run(get_called_class(), __FUNCTION__, $params, function($params) {
+			$response = $params[&#039;response&#039;];
+			$handler = $params[&#039;handler&#039;];
+			$data = $params[&#039;data&#039;];
+			$options = $handler;
+
+			if (isset($options[&#039;request&#039;])) {
+				$options += $options[&#039;request&#039;]-&gt;params;
+				unset($options[&#039;request&#039;]);
+			}
+
+			switch (true) {
+				case $handler[&#039;encode&#039;]:
+					return static::encode($handler, $data, $response);
+				case ($handler[&#039;template&#039;] === false) &amp;&amp; is_string($data):
+					return $data;
+				case $handler[&#039;view&#039;]:
+					unset($options[&#039;view&#039;]);
+					$instance = static::view($handler, $data, $response, $options);
+					return $instance-&gt;render(&#039;all&#039;, (array) $data, $options);
+				default:
+					throw new MediaException(&quot;Could not interpret type settings for handler.&quot;);
+			}
+		});
+	}
+
+	/**
+	 * Helper method for listing registered media types. Returns all types, or a single
+	 * content type if a specific type is specified.
+	 *
+	 * @todo Use fnmatch() to support wildcards.
+	 * @param string $type Type to return.
+	 * @return mixed Array of types, or single type requested.
+	 */
+	protected static function _types($type = null) {
+		$types = static::$_types + [
+			&#039;html&#039;         =&gt; [&#039;text/html&#039;, &#039;application/xhtml+xml&#039;, &#039;*/*&#039;],
+			&#039;htm&#039;          =&gt; [&#039;alias&#039; =&gt; &#039;html&#039;],
+			&#039;form&#039;         =&gt; [&#039;application/x-www-form-urlencoded&#039;, &#039;multipart/form-data&#039;],
+			&#039;json&#039;         =&gt; [&#039;application/json&#039;],
+			&#039;rss&#039;          =&gt; [&#039;application/rss+xml&#039;],
+			&#039;atom&#039;         =&gt; [&#039;application/atom+xml&#039;],
+			&#039;css&#039;          =&gt; [&#039;text/css&#039;],
+			&#039;js&#039;           =&gt; [&#039;application/javascript&#039;, &#039;text/javascript&#039;],
+			&#039;text&#039;         =&gt; [&#039;text/plain&#039;],
+			&#039;txt&#039;          =&gt; [&#039;alias&#039; =&gt; &#039;text&#039;],
+			&#039;xml&#039;          =&gt; [&#039;application/xml&#039;, &#039;application/soap+xml&#039;, &#039;text/xml&#039;]
+		];
+
+		if (!$type) {
+			return $types;
+		}
+		if (strpos($type, &#039;/&#039;) === false) {
+			return isset($types[$type]) ? $types[$type] : null;
+		}
+		if (strpos($type, &#039;;&#039;)) {
+			list($type) = explode(&#039;;&#039;, $type, 2);
+		}
+		$result = [];
+
+		foreach ($types as $name =&gt; $cTypes) {
+			if ($type === $cTypes || (is_array($cTypes) &amp;&amp; in_array($type, $cTypes))) {
+				$result[] = $name;
+			}
+		}
+		if (count($result) === 1) {
+			return reset($result);
+		}
+		return $result ?: null;
+	}
+
+	/**
+	 * Helper method for listing registered type handlers. Returns all handlers, or the
+	 * handler for a specific media type, if requested.
+	 *
+	 * @param string $type The type of handler to return.
+	 * @return mixed Array of all handlers, or the handler for a specific type.
+	 */
+	public static function handlers($type = null) {
+		$handlers = static::$_handlers + [
+			&#039;default&#039; =&gt; [
+				&#039;view&#039;     =&gt; &#039;lithium\template\View&#039;,
+				&#039;encode&#039;   =&gt; false,
+				&#039;decode&#039;   =&gt; false,
+				&#039;cast&#039;     =&gt; false,
+				&#039;paths&#039;    =&gt; [
+					&#039;template&#039; =&gt; &#039;{:library}/views/{:controller}/{:template}.{:type}.php&#039;,
+					&#039;layout&#039;   =&gt; &#039;{:library}/views/layouts/{:layout}.{:type}.php&#039;,
+					&#039;element&#039;  =&gt; &#039;{:library}/views/elements/{:template}.{:type}.php&#039;
+				]
+			],
+			&#039;html&#039; =&gt; [],
+			&#039;json&#039; =&gt; [
+				&#039;cast&#039; =&gt; true,
+				&#039;encode&#039; =&gt; &#039;json_encode&#039;,
+				&#039;decode&#039; =&gt; function($data) {
+					return json_decode($data, true);
+				}
+			],
+			&#039;text&#039; =&gt; [&#039;cast&#039; =&gt; false, &#039;encode&#039; =&gt; function($s) { return $s; }],
+			&#039;form&#039; =&gt; [
+				&#039;cast&#039; =&gt; true,
+				&#039;encode&#039; =&gt; &#039;http_build_query&#039;,
+				&#039;decode&#039; =&gt; function($data) {
+					$decoded = [];
+					parse_str($data, $decoded);
+					return $decoded;
+				}
+			]
+		];
+
+		if ($type) {
+			return isset($handlers[$type]) ? $handlers[$type] : null;
+		}
+		return $handlers;
+	}
+
+	/**
+	 * Helper method to list all asset paths, or the path for a single type.
+	 *
+	 * @param string $type The type you wish to get paths for.
+	 * @return mixed An array of all paths, or a single array of paths for the
+	 *               given type.
+	 */
+	protected static function _assets($type = null) {
+		$assets = static::$_assets + [
+			&#039;js&#039; =&gt; [&#039;suffix&#039; =&gt; &#039;.js&#039;, &#039;filter&#039; =&gt; null, &#039;paths&#039; =&gt; [
+				&#039;{:base}/{:library}/js/{:path}&#039; =&gt; [&#039;base&#039;, &#039;library&#039;, &#039;path&#039;],
+				&#039;{:base}/js/{:path}&#039; =&gt; [&#039;base&#039;, &#039;path&#039;]
+			]],
+			&#039;css&#039; =&gt; [&#039;suffix&#039; =&gt; &#039;.css&#039;, &#039;filter&#039; =&gt; null, &#039;paths&#039; =&gt; [
+				&#039;{:base}/{:library}/css/{:path}&#039; =&gt; [&#039;base&#039;, &#039;library&#039;, &#039;path&#039;],
+				&#039;{:base}/css/{:path}&#039; =&gt; [&#039;base&#039;, &#039;path&#039;]
+			]],
+			&#039;image&#039; =&gt; [&#039;suffix&#039; =&gt; null, &#039;filter&#039; =&gt; null, &#039;paths&#039; =&gt; [
+				&#039;{:base}/{:library}/img/{:path}&#039; =&gt; [&#039;base&#039;, &#039;library&#039;, &#039;path&#039;],
+				&#039;{:base}/img/{:path}&#039; =&gt; [&#039;base&#039;, &#039;path&#039;]
+			]],
+			&#039;generic&#039; =&gt; [&#039;suffix&#039; =&gt; null, &#039;filter&#039; =&gt; null, &#039;paths&#039; =&gt; [
+				&#039;{:base}/{:library}/{:path}&#039; =&gt; [&#039;base&#039;, &#039;library&#039;, &#039;path&#039;],
+				&#039;{:base}/{:path}&#039; =&gt; [&#039;base&#039;, &#039;path&#039;]
+			]]
+		];
+		if ($type) {
+			return isset($assets[$type]) ? $assets[$type] : null;
+		}
+		return $assets;
+	}
+
+	/**
+	 * Scope getter/setter.
+	 *
+	 * Special use case: If `$closure` is not null executing the closure inside
+	 * the specified scope.
+	 *
+	 * @param string $name Name of the scope to use.
+	 * @param \Closure $closure A closure to execute inside the scope.
+	 * @return mixed Returns the previous scope if if `$name` is not null and `$closure` is null,
+	 *               returns the default used scope if `$name` is null, otherwise returns `null`.
+	 */
+	public static function scope($name = null, Closure $closure = null) {
+		if ($name === null) {
+			return static::$_scope;
+		}
+
+		if ($closure === null) {
+			$former = static::$_scope;
+			static::$_scope = $name;
+			return $former;
+		}
+
+		$former = static::$_scope;
+		static::$_scope = $name;
+		call_user_func($closure);
+		static::$_scope = $former;
+	}
+
+	/**
+	 * Attach a scope to a mount point.
+	 *
+	 * Example:
+	 * ```
+	 * Media::attach(&#039;app&#039;, [
+	 *     &#039;path&#039; =&gt; &#039;/var/www/website/app/webroot/extradir&#039;,
+	 *     &#039;prefix&#039; =&gt; &#039;extradir&#039;
+	 * ]);
+	 * ```
+	 *
+	 * ```
+	 * Media::attach(&#039;cdn&#039;, [
+	 *     &#039;absolute&#039; =&gt; true,
+	 *     &#039;path&#039; =&gt; null,
+	 *     &#039;host&#039; =&gt; &#039;http://my.cdn.com&#039;,
+	 *     &#039;prefix&#039; =&gt; &#039;project1/assets&#039;
+	 * ]);
+	 * ```
+	 *
+	 * ```
+	 * Media::attach(&#039;cdn&#039;, [
+	 *     &#039;absolute&#039; =&gt; true,
+	 *     &#039;path&#039; =&gt; null,
+	 *     &#039;host&#039; =&gt; [&#039;my.cdn.com&#039;, &#039;secure.cdn.com&#039;],
+	 *     &#039;scheme&#039; =&gt; [&#039;http://&#039;, &#039;https://&#039;],
+	 *     &#039;prefix&#039; =&gt; &#039;project1/assets&#039;,
+	 * ]);
+	 * ```
+	 *
+	 * ```
+	 * Media::attach(&#039;cdn&#039;, [
+	 *     &#039;absolute&#039; =&gt; true,
+	 *     &#039;path&#039; =&gt; null,
+	 *     &#039;host&#039; =&gt; [&#039;my1.cdn.com&#039;, &#039;my2.cdn.com&#039;],
+	 *     &#039;scheme&#039; =&gt; &#039;http://&#039;,
+	 *     &#039;prefix&#039; =&gt; &#039;project1/assets&#039;,
+	 * ]);
+	 * ```
+	 *
+	 * @param  string $name The name of the media you wish to attach.
+	 * @param  array  $config Asset configuration options for the given scope.
+	 *        - `&#039;path&#039;` _string_: Path of the media.
+	 *        - `&#039;prefix&#039;` _string_: Contains the uri prefix. Such as `css`.
+	 *        - `&#039;absolute&#039;` _boolean_: Defaults to `false`. If you want to generate
+	 *                                  absolute URL&#039;s.
+	 *        - `&#039;host&#039;` _mixed_: String host, or array of hosts, of the media, if absolute is
+	 *          `true`.
+	 *        - `&#039;scheme&#039;` _mixed_: String scheme, or array of sc, of the media, if absolute is
+	 *          `true`.
+	 * @return void
+	 */
+	public static function attach($name, $config = null) {
+		if (!isset(static::$_scopes)) {
+			static::_initScopes();
+		}
+		if ($name === false) {
+			$name = &#039;__defaultScope__&#039;;
+		}
+		if (is_array($config) || $config === false) {
+			static::$_scopes-&gt;set($name, $config);
+		}
+	}
+
+	/**
+	 * Returns an attached mount point configuration.
+	 */
+	public static function attached($name = null) {
+		if (!isset(static::$_scopes)) {
+			static::_initScopes();
+		}
+		if ($name === false) {
+			$name = &#039;__defaultScope__&#039;;
+		}
+		return static::$_scopes-&gt;get($name);
+	}
+
+	/**
+	 * Initialize `static::$_scopes` with a `lithium\core\Configuration` instance.
+	 */
+	protected static function _initScopes() {
+		static::$_scopes = static::_instance(&#039;configuration&#039;);
+		static::$_scopes-&gt;initConfig = function($name, $config) {
+			$defaults = [
+				&#039;absolute&#039; =&gt; false,
+				&#039;host&#039; =&gt; &#039;localhost&#039;,
+				&#039;scheme&#039; =&gt; &#039;http://&#039;,
+				&#039;base&#039; =&gt; null,
+				&#039;prefix&#039; =&gt; &#039;&#039;,
+				&#039;path&#039; =&gt; null,
+				&#039;timestamp&#039; =&gt; false,
+				&#039;filter&#039; =&gt; null,
+				&#039;suffix&#039; =&gt; null,
+				&#039;check&#039; =&gt; false
+			];
+			$config += $defaults;
+			$config[&#039;prefix&#039;] = trim($config[&#039;prefix&#039;], &#039;/&#039;);
+			$config[&#039;base&#039;] = $config[&#039;base&#039;] ? trim($config[&#039;base&#039;], &#039;/&#039;) : $config[&#039;base&#039;];
+			return $config;
+		};
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\analysis\Docblock – Framework API v2.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (2.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../lithium.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../analysis.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">analysis</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Docblock</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../analysis.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="./Docblock::comment().html">comment()</a>												<li class="method public">
+				<a href="./Docblock::tags().html">tags()</a>												<li class="method protected">
+				<a href="./Docblock::_params().html">_params()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property public">
+				<a href="./Docblock::$tags.html">$tags</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../lithium.html" class="symbol-segment">lithium</a>\<a href="../analysis.html" class="symbol-segment">analysis</a>\Docblock		</h1>
+
+		<section class="under">
+															<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>A source code doc block parser.</p>
+					</div>
+				
+									<div class="description">
+						<p>This parser may be used as the basis for a variety of secondary tools, including
+a reflection-based API generator, a code metrics analyzer, and various other code or structural
+analysis tools.</p>
+					</div>
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Docblock {
+
+	/**
+	 * List of supported docblock tags.
+	 *
+	 * @var array
+	 */
+	public static $tags = [
+		&#039;todo&#039;, &#039;discuss&#039;, &#039;fix&#039;, &#039;important&#039;, &#039;var&#039;,
+		&#039;param&#039;, &#039;return&#039;, &#039;throws&#039;, &#039;see&#039;, &#039;link&#039;,
+		&#039;task&#039;, &#039;dependencies&#039;, &#039;filter&#039;, &#039;deprecated&#039;
+	];
+
+	/**
+	 * Parses a doc block into its major components of `description`, `text` and `tags`.
+	 *
+	 * @param string $comment The doc block string to be parsed
+	 * @return array An associative array of the parsed comment, whose keys are `description`,
+	 *         `text` and `tags`.
+	 */
+	public static function comment($comment) {
+		$text = null;
+		$tags = [];
+		$description = null;
+		$comment = trim(preg_replace(&#039;/^(\s*\/\*\*|\s*\*{1,2}\/|\s*\* ?)/m&#039;, &#039;&#039;, $comment));
+		$comment = str_replace(&quot;\r\n&quot;, &quot;\n&quot;, $comment);
+
+		if ($items = preg_split(&#039;/\n@/ms&#039;, $comment, 2)) {
+			list($description, $tags) = $items + [&#039;&#039;, &#039;&#039;];
+			$tags = $tags ? static::tags(&quot;@{$tags}&quot;) : [];
+		}
+
+		if (strpos($description, &quot;\n\n&quot;)) {
+			list($description, $text) = explode(&quot;\n\n&quot;, $description, 2);
+		}
+		$text = trim($text ?? &quot;&quot;);
+		$description = trim($description);
+		return compact(&#039;description&#039;, &#039;text&#039;, &#039;tags&#039;);
+	}
+
+	/**
+	 * Parses `@&lt;tagname&gt;` docblock tags and their descriptions from a docblock.
+	 *
+	 * See the `$tags` property for the list of supported tags.
+	 *
+	 * @param string $string The string to be parsed for tags
+	 * @return array Returns an array where each docblock tag is a key name, and the corresponding
+	 *         values are either strings (if one of each tag), or arrays (if multiple of the same
+	 *         tag).
+	 */
+	public static function tags($string) {
+		$regex = &#039;/\n@(?P&lt;type&gt;&#039; . join(&#039;|&#039;, static::$tags) . &quot;)/msi&quot;;
+		$string = trim($string ?? &quot;&quot;);
+
+		$result = preg_split($regex, &quot;\n$string&quot;, -1, PREG_SPLIT_DELIM_CAPTURE);
+		$tags = [];
+
+		for ($i = 1; $i &lt; count($result) - 1; $i += 2) {
+			$type = trim(strtolower($result[$i]));
+			$text = trim($result[$i + 1]);
+
+			if (isset($tags[$type])) {
+				$tags[$type] = is_array($tags[$type]) ? $tags[$type] : (array) $tags[$type];
+				$tags[$type][] = $text;
+			} else {
+				$tags[$type] = $text;
+			}
+		}
+
+		if (isset($tags[&#039;param&#039;])) {
+			$tags[&#039;params&#039;] = static::_params((array) $tags[&#039;param&#039;]);
+			unset($tags[&#039;param&#039;]);
+		}
+		return $tags;
+	}
+
+	/**
+	 * Parses `@param` docblock tags to separate out the parameter type from the description.
+	 *
+	 * @param array $params An array of `@param` tags, as parsed from the `tags()` method.
+	 * @return array Returns an array where each key is a parameter name, and each value is an
+	 *         associative array containing `&#039;type&#039;` and `&#039;text&#039;` keys.
+	 */
+	protected static function _params(array $params) {
+		$result = [];
+		foreach ($params as $param) {
+			$param = explode(&#039; &#039;, $param, 3);
+			$type = $name = $text = null;
+
+			foreach ([&#039;type&#039;, &#039;name&#039;, &#039;text&#039;] as $i =&gt; $key) {
+				if (!isset($param[$i])) {
+					break;
+				}
+				${$key} = $param[$i];
+			}
+			if ($name) {
+				$result[$name] = compact(&#039;type&#039;, &#039;text&#039;);
+			}
+		}
+		return $result;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

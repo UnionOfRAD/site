@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>lithium\util\Validator – Framework API v1.2.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/api/lithium/1.2.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Framework API (1.2.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/api/lithium/1.2.x/lithium" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">lithium</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="/docs/api/lithium/1.2.x/lithium/util" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">util</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Validator</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="/docs/api/lithium/1.2.x/lithium/util" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/util/Validator::reset()">reset()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/util/Validator::__callStatic()">__callStatic()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/util/Validator::has()">has()</a>												<li class="method public deprecated">
+				<a href="/docs/api/lithium/1.2.x/lithium/util/Validator::respondsTo()">respondsTo()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/util/Validator::check()">check()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/util/Validator::add()">add()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/util/Validator::rule()">rule()</a>												<li class="method public">
+				<a href="/docs/api/lithium/1.2.x/lithium/util/Validator::rules()">rules()</a>												<li class="method protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/util/Validator::_checkFormats()">_checkFormats()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::invokeMethod()">invokeMethod()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::_instance()">_instance()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::_stop()">_stop()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::_parents()">_parents()</a>												<li class="method public deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::applyFilter()">applyFilter()</a>												<li class="method protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::_filter()">_filter()</a>							</ul>
+								<h3 class="h-gamma">Properties</h3>
+			<ul>
+												<li class="property protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/util/Validator::$_rules">$_rules</a>												<li class="property protected">
+				<a href="/docs/api/lithium/1.2.x/lithium/util/Validator::$_options">$_options</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::$_parents">$_parents</a>												<li class="property protected deprecated inherited">
+				<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated::$_methodFilters">$_methodFilters</a>							</ul>
+						</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="/docs/api/lithium/1.2.x/lithium" class="symbol-segment">lithium</a>\<a href="/docs/api/lithium/1.2.x/lithium/util" class="symbol-segment">util</a>\Validator		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											<a href="/docs/api/lithium/1.2.x/lithium/core/StaticObjectDeprecated" class="extends__symbol">lithium\core\StaticObjectDeprecated</a>									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>The <code>Validator</code> class provides static access to commonly used data validation logic. These common
+routines cover HTML form input data such as phone and credit card numbers, dates and postal
+codes, but also include general checks for regular expressions and booleans and numericality.</p>
+					</div>
+				
+									<div class="description">
+						<p>General data checking is done by using <code>Validator</code> statically. Rules can be specified as a
+parameter to the <code>rule()</code> method or accessed directly via the <code>is[RuleName]()</code> method name
+convention:</p>
+<pre><code class="language-php">use lithium\util\Validator;
+
+// The following are equivalent:
+Validator::rule('email', 'foo@example.com');  // true
+Validator::isEmail('foo-at-example.com');     // false
+</code></pre>
+<p>Data can also be validated against multiple rules, each having their own associated error
+message. The rule structure is array-based and hierarchical based on rule names and
+messages. Responses match the keys present in the <code>$data</code> parameter of <code>check()</code> up with an array
+of rules which they violate.</p>
+<pre><code class="language-php">
+See the `check()` method for more information an multi-value datasets. Custom validation rules
+can also be added to `Validator` at runtime. These can either take the form of regular expression
+strings or functions supplied to the `add()` method.
+
+### Rules
+
+The `Validator` class includes a series of commonly-used rules by default, any of which may be
+used in calls to `rule()` or `check()`, or called directly as a method. Additionally, many rules
+have a variety of different _formats_ in which they may be specified. The following is the list
+of the built-in rules, but keep in mind that none of them are hard-coded. Any rule may be
+overridden by adding a new rule of the same name using the `add()` method.
+
+- `notEmpty`: Checks that a string contains at least one non-whitespace character.
+
+- `alphaNumeric`: Checks that a string contains only integer or letters.
+
+- `lengthBetween`: Checks that a string length is within a specified range. Spaces are included
+  in the character count. The available options are `'min'` and `'max'`, which designate the
+  minimum and maximum length of the string.
+
+- `blank`: Checks that a field is left blank **OR** only whitespace characters are present in its
+  value. Whitespace characters include spaces, tabs, carriage returns and newlines.
+
+- `creditCard`: Checks that a value is a valid credit card number. This rule is divided into a
+  series of formats: `'amex'`, `'bankcard'`, `'diners'`, `'disc'`, `'electron'`, `'enroute'`,
+  `'jcb'`, `'maestro'`, `'mc'`, `'solo'`, `'switch'`, `'visa'`, `'voyager'`, `'fast'`. If no
+  format value is specified, the value defaults to `'any'`, which will validate the value if
+  _any_ of the available formats match. You can also use the `'fast'` format, which does a
+  high-speed, low-fidelity check to ensure that the value looks like a real credit card number.
+  This rule includes one option, `'deep'`, which (if set to `true`) validates the value using the
+  [Luhn algorithm](http://en.wikipedia.org/wiki/Luhn_algorithm) if the format validation is
+  successful. See the `luhn` validator below for more details.
+
+- `date`: Checks that a value is a valid date that complies with one or more formats. Also
+  validates leap years. Possible formats are `'dmy'` (27-12-2010 or 27-12-10 separators can be a
+  space, period, dash, forward slash), `'mdy'` (12-27-2010 or 12-27-10 separators can be a space,
+  period, dash, forward slash), `'ymd'` (2010-12-27 or 10-12-27 separators can be a space,
+  period, dash, forward slash), `'dMy'` (27 December 2010 or 27 Dec 2010), `'Mdy'` (December 27,
+  2010 or Dec 27, 2010 comma is optional), `'My'` (December 2010 or Dec 2010) or `'my'` (12/2010
+  separators can be a space, period, dash, forward slash).
+
+- `time`: Checks that a value is a valid time. Validates time as 24hr (HH:MM) or am/pm
+  ([ H]H:MM[a|p]m). Does not allow / validate seconds.
+
+- `boolean`: Checks that the value is or looks like a boolean value. The following types of
+  values are interpreted as boolean and will pass the check.
+  - boolean (`true`, `false`, `'true'`, `'false'`)
+  - boolean number (`1`, `0`, `'1'`, `'0'`)
+  - boolean text string (`'on'`, `'off'`, `'yes'`, `'no'`)
+
+- `decimal`: Checks that a value is a valid decimal. Takes one option, `'precision'`, which is
+  an optional integer value defining the level of precision the decimal number must match.
+
+- `email`: Checks that a value is (probably) a valid email address. The subject of validating
+  an actual email address is complicated and problematic. A regular expression that correctly
+  validates addresses against [RFC 5322](http://tools.ietf.org/html/rfc5322) would be several
+  pages long, with the drawback of being unable to keep up as new top-level domains are added.
+  Instead, this validator uses PHP's internal input filtering API to check the format, and
+  provides an option, `'deep'` ( _boolean_) which, if set to `true`, will validate that the email
+  address' domain contains a valid MX record. Keep in mind, this is just one of the many ways to
+  validate an email address in the overall context of an application. For other ideas or
+  examples, [ask Sean](http://seancoates.com/).
+
+- `ip`: Validates a string as a valid IPv4 or IPv6 address.
+
+- `money`: Checks that a value is a valid monetary amount. This rule has two formats, `'right'`
+  and `'left'`, which indicates which side the monetary symbol (i.e. $) appears on.
+
+- `numeric`: Checks that a value is numeric.
+
+- `phone`: Check that a value is a valid phone number, non-locale-specific phone number.
+
+- `postalCode`: Checks that a given value is a valid US postal code.
+
+- `inRange`: Checks that a numeric value is within a specified range. This value has two options,
+   `'upper'` and `'lower'`, which specify the boundary of the value.
+
+- `url`: Checks that a value is a valid URL according to
+  [RFC 2395](http://www.faqs.org/rfcs/rfc2396.html). Uses PHP's filter API, and accepts any
+  options accepted for
+  [the validation URL filter](http://php.net/filter.filters.validate.php).
+
+- `luhn`: Checks that a value is a valid credit card number according to the
+  [Luhn algorithm](http://en.wikipedia.org/wiki/Luhn_algorithm). (See also: the `creditCard`
+  validator).
+
+- `inList`: Checks that a value is in a pre-defined list of values. This validator accepts one
+  option, `'list'`, which is an array containing acceptable values.
+
+- `regex`: Checks that a value appears to be a valid regular expression, possibly
+  containing PCRE-compatible options flags.
+
+- `uuid`: Checks that a value is a valid UUID.
+
+### UTF-8 encoded input strings
+
+All rules operating on strings have been created with the possibility of
+UTF-8 encoded input in mind. A default PHP binary and an enabled Lithium
+g11n bootstrap will make these rules work correctly in any case. Should you
+ever experience odd behavior following paragraph with implementation
+details might help you to track down the cause.
+
+The rules `alphaNumeric` and `money` rely on additional functionality of
+PCRE to validate UTF-8 encoded strings. As no PCRE feature detection is
+done, having this feature enabled in PCRE isn't optional. Please ensure
+you've got PCRE compiled with UTF-8 support.
+</code></pre>
+					</div>
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class Validator extends \lithium\core\StaticObjectDeprecated {
+
+	/**
+	 * An array of validation rules.  May contain a single regular expression, an array of regular
+	 * expressions (where the array keys define various possible &#039;formats&#039; of the same rule), or a
+	 * closure which accepts a value to be validated, and an array of options, and returns a
+	 * boolean value, indicating whether the validation succeeded or failed.
+	 *
+	 * @var array
+	 * @see lithium\util\Validator::add()
+	 * @see lithium\util\Validator::rule()
+	 */
+	protected static $_rules = [];
+
+	/**
+	 * Default options used when defining a new validator rule. Each key contains method-specific
+	 * options that should always be applied, or options that should be applied to all rules in the
+	 * `&#039;defaults&#039;` key.
+	 *
+	 * @see lithium\util\Validator::add()
+	 * @see lithium\util\Validator::rule()
+	 * @var array
+	 */
+	protected static $_options = [
+		&#039;defaults&#039; =&gt; [&#039;contains&#039; =&gt; true]
+	];
+
+	/**
+	 * Initializes the list of default validation rules.
+	 */
+	public static function reset() {
+		$alnum = &#039;[A-Fa-f0-9]&#039;;
+		$class = get_called_class();
+		Filters::clear($class);
+
+		static::$_rules = [
+			&#039;alphaNumeric&#039; =&gt; &#039;/^[\p{Ll}\p{Lm}\p{Lo}\p{Lt}\p{Lu}\p{Nd}]+$/mu&#039;,
+			&#039;blank&#039;        =&gt; &#039;/[^\\s]/&#039;,
+			&#039;creditCard&#039;   =&gt; [
+				&#039;amex&#039;     =&gt; &#039;/^3[4|7]\\d{13}$/&#039;,
+				&#039;bankcard&#039; =&gt; &#039;/^56(10\\d\\d|022[1-5])\\d{10}$/&#039;,
+				&#039;diners&#039;   =&gt; &#039;/^(?:3(0[0-5]|[68]\\d)\\d{11})|(?:5[1-5]\\d{14})$/&#039;,
+				&#039;disc&#039;     =&gt; &#039;/^(?:6011|650\\d)\\d{12}$/&#039;,
+				&#039;electron&#039; =&gt; &#039;/^(?:417500|4917\\d{2}|4913\\d{2})\\d{10}$/&#039;,
+				&#039;enroute&#039;  =&gt; &#039;/^2(?:014|149)\\d{11}$/&#039;,
+				&#039;jcb&#039;      =&gt; &#039;/^(3\\d{4}|2100|1800)\\d{11}$/&#039;,
+				&#039;maestro&#039;  =&gt; &#039;/^(?:5020|6\\d{3})\\d{12}$/&#039;,
+				&#039;mc&#039;       =&gt; &#039;/^(?:5[1-5]|2[2-7])\\d{14}$/&#039;,
+				&#039;solo&#039;     =&gt; &#039;/^(6334[5-9][0-9]|6767[0-9]{2})\\d{10}(\\d{2,3})?$/&#039;,
+				&#039;switch&#039;   =&gt; &#039;/^(?:49(03(0[2-9]|3[5-9])|11(0[1-2]|7[4-9]|8[1-2])|36[0-9]{2})&#039; .
+				              &#039;\\d{10}(\\d{2,3})?)|(?:564182\\d{10}(\\d{2,3})?)|(6(3(33[0-4]&#039; .
+				              &#039;[0-9])|759[0-9]{2})\\d{10}(\\d{2,3})?)$/&#039;,
+				&#039;visa&#039;     =&gt; &#039;/^4\\d{12}(\\d{3})?$/&#039;,
+				&#039;voyager&#039;  =&gt; &#039;/^8699[0-9]{11}$/&#039;,
+				&#039;fast&#039;     =&gt; &#039;/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6011[0-9]{12}|3&#039; .
+				              &#039;(?:0[0-5]|[68][0-9])[0-9]{11}|3[47][0-9]{13})$/&#039;
+			],
+			&#039;date&#039;         =&gt; [
+				&#039;dmy&#039;      =&gt; &#039;%^(?:(?:31(\\/|-|\\.|\\x20)(?:0?[13578]|1[02]))\\1|(?:(?:29|30)&#039; .
+				              &#039;(\\/|-|\\.|\\x20)(?:0?[1,3-9]|1[0-2])\\2))(?:(?:1[6-9]|[2-9]\\d)?&#039; .
+				              &#039;\\d{2})$|^(?:29(\\/|-|\\.|\\x20)0?2\\3(?:(?:(?:1[6-9]|[2-9]\\d)?&#039; .
+				              &#039;(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])&#039; .
+				              &#039;00))))$|^(?:0?[1-9]|1\\d|2[0-8])(\\/|-|\\.|\\x20)(?:(?:0?[1-9])|&#039; .
+				              &#039;(?:1[0-2]))\\4(?:(?:1[6-9]|[2-9]\\d)?\\d{2})$%&#039;,
+				&#039;mdy&#039;      =&gt; &#039;%^(?:(?:(?:0?[13578]|1[02])(\\/|-|\\.|\\x20)31)\\1|(?:(?:0?[13-9]|&#039; .
+				              &#039;1[0-2])(\\/|-|\\.|\\x20)(?:29|30)\\2))(?:(?:1[6-9]|[2-9]\\d)?\\d&#039; .
+				              &#039;{2})$|^(?:0?2(\\/|-|\\.|\\x20)29\\3(?:(?:(?:1[6-9]|[2-9]\\d)?&#039; .
+				              &#039;(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])&#039; .
+				              &#039;00))))$|^(?:(?:0?[1-9])|(?:1[0-2]))(\\/|-|\\.|\\x20)(?:0?[1-9]|1&#039; .
+				              &#039;\\d|2[0-8])\\4(?:(?:1[6-9]|[2-9]\\d)?\\d{2})$%&#039;,
+				&#039;ymd&#039;      =&gt; &#039;%^(?:(?:(?:(?:(?:1[6-9]|[2-9]\\d)?(?:0[48]|[2468][048]|[13579]&#039; .
+				              &#039;[26])|(?:(?:16|[2468][048]|[3579][26])00)))(\\/|-|\\.|\\x20)&#039; .
+				              &#039;(?:0?2\\1(?:29)))|(?:(?:(?:1[6-9]|[2-9]\\d)?\\d{2})(\\/|-|\\.|&#039; .
+				              &#039;\\x20)(?:(?:(?:0?[13578]|1[02])\\2(?:31))|(?:(?:0?[1,3-9]|1[0-2])&#039; .
+				              &#039;\\2(29|30))|(?:(?:0?[1-9])|(?:1[0-2]))\\2(?:0?[1-9]|1\\d|2[0-8]&#039; .
+				              &#039;))))$%&#039;,
+				&#039;dMy&#039;      =&gt; &#039;/^((31(?!\\ (Feb(ruary)?|Apr(il)?|June?|(Sep(?=\\b|t)t?|Nov)&#039; .
+				              &#039;(ember)?)))|((30|29)(?!\\ Feb(ruary)?))|(29(?=\\ Feb(ruary)?\\ &#039; .
+				              &#039;(((1[6-9]|[2-9]\\d)(0[48]|[2468][048]|[13579][26])|((16|[2468]&#039; .
+				              &#039;[048]|[3579][26])00)))))|(0?[1-9])|1\\d|2[0-8])\\ (Jan(uary)?|&#039; .
+				              &#039;Feb(ruary)?|Ma(r(ch)?|y)|Apr(il)?|Ju((ly?)|(ne?))|Aug(ust)?|&#039; .
+				              &#039;Oct(ober)?|(Sep(?=\\b|t)t?|Nov|Dec)(ember)?)\\ ((1[6-9]|[2-9]&#039; .
+				              &#039;\\d)\\d{2})$/&#039;,
+				&#039;Mdy&#039;      =&gt; &#039;/^(?:(((Jan(uary)?|Ma(r(ch)?|y)|Jul(y)?|Aug(ust)?|Oct(ober)?&#039; .
+				              &#039;|Dec(ember)?)\\ 31)|((Jan(uary)?|Ma(r(ch)?|y)|Apr(il)?|Ju((ly?)&#039; .
+				              &#039;|(ne?))|Aug(ust)?|Oct(ober)?|(Sept|Nov|Dec)(ember)?)\\ (0?[1-9]&#039; .
+				              &#039;|([12]\\d)|30))|(Feb(ruary)?\\ (0?[1-9]|1\\d|2[0-8]|(29(?=,?\\ &#039; .
+				              &#039;((1[6-9]|[2-9]\\d)(0[48]|[2468][048]|[13579][26])|((16|[2468]&#039; .
+				              &#039;[048]|[3579][26])00)))))))\\,?\\ ((1[6-9]|[2-9]\\d)\\d{2}))$/&#039;,
+				&#039;My&#039;       =&gt; &#039;%^(Jan(uary)?|Feb(ruary)?|Ma(r(ch)?|y)|Apr(il)?|Ju((ly?)|(ne?))|&#039; .
+				              &#039;Aug(ust)?|Oct(ober)?|(Sep(?=\\b|t)t?|Nov|Dec)(ember)?)\\ ((1[6-9]&#039; .
+				              &#039;|[2-9]\\d)\\d{2})$%&#039;,
+				&#039;my&#039;       =&gt; &#039;%^(0?[1-9]|1[012])([- /.])((1[6-9])|([2-9]\\d)\\d{2})$%&#039;
+			],
+			&#039;ip&#039; =&gt; function($value, $format = null, array $options = []) {
+				$options += [&#039;flags&#039; =&gt; []];
+				return (boolean) filter_var($value, FILTER_VALIDATE_IP, $options);
+			},
+			&#039;money&#039;        =&gt; [
+				&#039;right&#039;    =&gt; &#039;/^(?!0,?\d)(?:\d{1,3}(?:([, .])\d{3})?(?:\1\d{3})*|(?:\d+))&#039; .
+				              &#039;((?!\1)[,.]\d{2})?(?&lt;!\x{00a2})\p{Sc}?$/u&#039;,
+				&#039;left&#039;     =&gt; &#039;/^(?!\x{00a2})\p{Sc}?(?!0,?\d)(?:\d{1,3}(?:([, .])\d{3})?&#039; .
+				              &#039;(?:\1\d{3})*|(?:\d+))((?!\1)[,.]\d{2})?$/u&#039;
+			],
+			&#039;notEmpty&#039;     =&gt; &#039;/[^\s]+/m&#039;,
+			&#039;phone&#039;        =&gt; &#039;/^\+?[0-9\(\)\-]{10,20}$/&#039;,
+			&#039;postalCode&#039;   =&gt; &#039;/(^|\A\b)[A-Z0-9\s\-]{5,}($|\b\z)/i&#039;,
+			&#039;regex&#039;        =&gt; &#039;/^(?:([^[:alpha:]\\\\{&lt;\[\(])(.+)(?:\1))|(?:{(.+)})|(?:&lt;(.+)&gt;)|&#039; .
+			                  &#039;(?:\[(.+)\])|(?:\((.+)\))[gimsxu]*$/&#039;,
+			&#039;time&#039;         =&gt; &#039;%^((0?[1-9]|1[012])(:[0-5]\d){0,2}([AP]M|[ap]m))$|^([01]\d|2[0-3])&#039; .
+			                  &#039;(:[0-5]\d){0,2}$%&#039;,
+			&#039;boolean&#039;      =&gt; function($value) {
+				$bool = is_bool($value);
+				$filter = filter_var($value, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE);
+				return ($bool || $filter !== null || empty($value));
+			},
+			&#039;decimal&#039; =&gt; function($value, $format = null, array $options = []) {
+				if (isset($options[&#039;precision&#039;])) {
+					$precision = strlen($value) - strrpos($value, &#039;.&#039;) - 1;
+
+					if ($precision !== (int) $options[&#039;precision&#039;]) {
+						return false;
+					}
+				}
+				return (filter_var($value, FILTER_VALIDATE_FLOAT, FILTER_NULL_ON_FAILURE) !== null);
+			},
+			&#039;inList&#039; =&gt; function($value, $format, $options) {
+				$options += [&#039;list&#039; =&gt; []];
+				$strict = is_bool($value) || $value === &#039;&#039;;
+				return in_array($value, $options[&#039;list&#039;], $strict);
+			},
+			&#039;lengthBetween&#039; =&gt; function($value, $format, $options) {
+				$length = strlen($value);
+				$options += [&#039;min&#039; =&gt; 1, &#039;max&#039; =&gt; 255];
+				return ($length &gt;= $options[&#039;min&#039;] &amp;&amp; $length &lt;= $options[&#039;max&#039;]);
+			},
+			&#039;luhn&#039; =&gt; function($value) {
+				if (empty($value) || !is_string($value)) {
+					return false;
+				}
+				$sum = 0;
+				$length = strlen($value);
+
+				for ($position = 1 - ($length % 2); $position &lt; $length; $position += 2) {
+					$sum += $value[$position];
+				}
+				for ($position = ($length % 2); $position &lt; $length; $position += 2) {
+					$number = $value[$position] * 2;
+					$sum += ($number &lt; 10) ? $number : $number - 9;
+				}
+				return ($sum % 10 === 0);
+			},
+			&#039;numeric&#039; =&gt; function($value) {
+				return is_numeric($value);
+			},
+			&#039;inRange&#039; =&gt; function($value, $format, $options) {
+				$defaults = [&#039;upper&#039; =&gt; null, &#039;lower&#039; =&gt; null];
+				$options += $defaults;
+
+				if (!is_numeric($value)) {
+					return false;
+				}
+				switch (true) {
+					case ($options[&#039;upper&#039;] !== null &amp;&amp; $options[&#039;lower&#039;] !== null):
+						return ($value &gt;= $options[&#039;lower&#039;] &amp;&amp; $value &lt;= $options[&#039;upper&#039;]);
+					case ($options[&#039;upper&#039;] !== null):
+						return ($value &lt;= $options[&#039;upper&#039;]);
+					case ($options[&#039;lower&#039;] !== null):
+						return ($value &gt;= $options[&#039;lower&#039;]);
+				}
+				return is_finite($value);
+			},
+			&#039;uuid&#039; =&gt; &quot;/^{$alnum}{8}-{$alnum}{4}-{$alnum}{4}-{$alnum}{4}-{$alnum}{12}$/&quot;,
+			&#039;email&#039; =&gt; function($value) {
+				return filter_var($value, FILTER_VALIDATE_EMAIL);
+			},
+			&#039;url&#039; =&gt; function($value, $format = null, array $options = []) {
+				$options += [&#039;flags&#039; =&gt; []];
+				return (boolean) filter_var($value, FILTER_VALIDATE_URL, $options);
+			}
+		];
+
+		$isEmpty = function($params, $next) {
+			extract($params);
+			return (empty($value) &amp;&amp; $value !== &#039;0&#039;) ? false : $next($params);
+		};
+
+		Filters::apply($class, &#039;alphaNumeric&#039;, $isEmpty);
+		Filters::apply($class, &#039;notEmpty&#039;, $isEmpty);
+
+		Filters::apply($class, &#039;creditCard&#039;, function($params, $next) {
+			extract($params);
+			$options += [&#039;deep&#039; =&gt; false];
+
+			if (strlen($value = str_replace([&#039;-&#039;, &#039; &#039;], &#039;&#039;, $value)) &lt; 13) {
+				return false;
+			}
+			$params[&#039;value&#039;] = $value;
+
+			if (!$next($params)) {
+				return false;
+			}
+			return $options[&#039;deep&#039;] ? Validator::isLuhn($value) : true;
+		});
+
+		Filters::apply($class, &#039;email&#039;, function($params, $next) {
+			extract($params);
+
+			$defaults = [&#039;deep&#039; =&gt; false];
+			$options += $defaults;
+
+			if (!$next($params)) {
+				return false;
+			}
+			if (!$options[&#039;deep&#039;]) {
+				return true;
+			}
+			list($prefix, $host) = explode(&#039;@&#039;, $params[&#039;value&#039;]);
+
+			$mxhosts = [];
+			if (getmxrr($host, $mxhosts)) {
+				return is_array($mxhosts);
+			}
+			return false;
+		});
+	}
+
+	/**
+	 * Maps method calls to validation rule names.  For example, a validation rule that would
+	 * normally be called as `Validator::rule(&#039;email&#039;, &#039;foo@bar.com&#039;)` can also be called as
+	 * `Validator::isEmail(&#039;foo@bar.com&#039;)`.
+	 *
+	 * @param string $method The name of the method called, i.e. `&#039;isEmail&#039;` or `&#039;isCreditCard&#039;`.
+	 * @param array $args
+	 * @return boolean
+	 */
+	public static function __callStatic($method, $args = []) {
+		if (!isset($args[0])) {
+			return false;
+		}
+		$args = array_filter($args) + [0 =&gt; $args[0], 1 =&gt; &#039;any&#039;, 2 =&gt; []];
+		$rule = preg_replace(&quot;/^is([A-Z][A-Za-z0-9]+)$/&quot;, &#039;$1&#039;, $method);
+		$rule[0] = strtolower($rule[0]);
+		return static::rule($rule, $args[0], $args[1], $args[2]);
+	}
+
+	/**
+	 * Checks whether a rule under given name exists and can be called using `is&lt;Name&gt;`
+	 * syntax.
+	 *
+	 * @param string $rule Name of the rule.
+	 * @return boolean `true` if the rule exists, `false` if not.
+	 */
+	public static function has($rule) {
+		if (!preg_match(&#039;/^(is)?([A-Za-z0-9]+)$/&#039;, $rule, $matches)) {
+			return false;
+		}
+		$matches[2][0] = strtolower($matches[2][0]);
+		return isset(static::$_rules[$matches[2]]);
+	}
+
+	/**
+	 * Determines if a given method can be called.
+	 *
+	 * @deprecated
+	 * @param string $method Name of the method.
+	 * @param boolean $internal Provide `true` to perform check from inside the
+	 *                class/object. When `false` checks also for public visibility;
+	 *                defaults to `false`.
+	 * @return boolean Returns `true` if the method can be called, `false` otherwise.
+	 */
+	public static function respondsTo($method, $internal = false) {
+		$message  = &#039;`&#039; . __METHOD__ . &#039;()` has been deprecated. &#039;;
+		$message .= &quot;Use `Validator::has()` or `is_callable([&lt;class&gt;, &#039;&lt;method&gt;&#039;])` instead.&quot;;
+		trigger_error($message, E_USER_DEPRECATED);
+
+		$rule = preg_replace(&quot;/^is([A-Z][A-Za-z0-9]+)$/&quot;, &#039;$1&#039;, $method);
+		$rule[0] = strtolower($rule[0]);
+		return isset(static::$_rules[$rule]) || parent::respondsTo($method, $internal);
+	}
+
+	/**
+	 * Checks a set of values against a specified rules list. This method may be used to validate
+	 * any arbitrary array of data against a set of validation rules.
+	 *
+	 * @param array $values An array of key/value pairs, where the values are to be checked.
+	 * @param array $rules An array of rules to check the values in `$values` against. Each key in
+	 *        `$rules` should match a key contained in `$values`, and each value should be a
+	 *        validation rule in one of the allowable formats. For example, if you are
+	 *        validating a data set containing a `&#039;credit_card&#039;` key, possible values for
+	 *        `$rules` would be as follows:
+	 *        - `array(&#039;credit_card&#039; =&gt; &#039;You must include a credit card number&#039;)`: This is the
+	 *          simplest form of validation rule, in which the value is simply a message to
+	 *          display if the rule fails. Using this format, all other validation settings
+	 *          inherit from the defaults, including the validation rule itself, which only
+	 *          checks to see that the corresponding key in `$values` is present and contains
+	 *          a value that is not empty. _Please note when globalizing validation messages:_
+	 *          When specifying messages, it may be preferable to use a code string (i.e.
+	 *          `&#039;ERR_NO_TITLE&#039;`) instead of the full text of the validation error. These code
+	 *          strings may then be translated by the appropriate tools in the templating layer.
+	 *         - `array(&#039;credit_card&#039; =&gt; [&#039;creditCard&#039;, &#039;message&#039; =&gt; &#039;Invalid CC #&#039;])`:
+	 *           In the second format, the validation rule (in this case `creditCard`) and
+	 *           associated configuration are specified as an array, where the rule to use is
+	 *           the first value in the array (no key), and additional settings are specified
+	 *           as other keys in the array. Please see the list below for more information on
+	 *           allowed keys.
+	 *         - The final format allows you to apply multiple validation rules to a single
+	 *           value, and it is specified as follows:
+	 *           `array(&#039;credit_card&#039; =&gt; [
+	 *                [&#039;notEmpty&#039;, &#039;message&#039; =&gt; &#039;You must include credit card number&#039;],
+	 *                [&#039;creditCard&#039;, &#039;message&#039; =&gt; &#039;Your credit card number must be valid&#039;]
+	 *           ]);`
+	 * @param array $options Validator-specific options.
+	 *        Each rule defined as an array can contain any of the following settings
+	 *        (in addition to the first value, which represents the rule to be used):
+	 *        - `&#039;message&#039;` _string_: The error message to be returned if the validation
+	 *          rule fails. See the note above regarding globalization of error messages.
+	 *        - `&#039;required`&#039; _boolean_: Represents whether the value is required to be
+	 *          present in `$values`. If `&#039;required&#039;` is set to `false`, the validation rule
+	 *          will be skipped if the corresponding key is not present. Defaults to `true`.
+	 *        - `&#039;skipEmpty&#039;` _boolean_: Similar to `&#039;required&#039;`, this setting (if `true`)
+	 *          will cause the validation rule to be skipped if the corresponding value
+	 *          is empty (an empty string or `null`). Defaults to `false`.
+	 *        - `&#039;format&#039;` _string_: If the validation rule has multiple format definitions
+	 *          (see the `add()` or `init()` methods), the name of the format to be used
+	 *          can be specified here. Additionally, two special values can be used:
+	 *          either `&#039;any&#039;`, which means that all formats will be checked and the rule
+	 *          will pass if any format passes, or `&#039;all&#039;`, which requires all formats to
+	 *          pass in order for the rule check to succeed.
+	 * @return array Returns an array containing all validation failures for data in `$values`,
+	 *         where each key matches a key in `$values`, and each value is an array of
+	 *         that element&#039;s validation errors.
+	 * @filter
+	 */
+	public static function check(array $values, array $rules, array $options = []) {
+		$defaults = [
+			&#039;notEmpty&#039;,
+			&#039;message&#039; =&gt; null,
+			&#039;required&#039; =&gt; true,
+			&#039;skipEmpty&#039; =&gt; false,
+			&#039;format&#039; =&gt; &#039;any&#039;,
+			&#039;on&#039; =&gt; null,
+			&#039;last&#039; =&gt; false
+		];
+
+		$options += $defaults;
+		$params = compact(&#039;values&#039;, &#039;rules&#039;, &#039;options&#039;);
+
+		return Filters::run(get_called_class(), __FUNCTION__, $params, function($params) {
+			$values = $params[&#039;values&#039;];
+			$rules = $params[&#039;rules&#039;];
+			$options = $params[&#039;options&#039;];
+
+			$errors = [];
+			$events = (array) (isset($options[&#039;events&#039;]) ? $options[&#039;events&#039;] : null);
+			$values = array_merge($values, Set::flatten($values));
+
+			foreach ($rules as $field =&gt; $rules) {
+				$rules = is_string($rules) ? [&#039;message&#039; =&gt; $rules] : $rules;
+				$rules = is_array(current($rules)) ? $rules : [$rules];
+				$errors[$field] = [];
+				$options[&#039;field&#039;] = $field;
+
+				foreach ($rules as $key =&gt; $rule) {
+					if (array_key_exists(&#039;required&#039;, $rule) &amp;&amp; $rule[&#039;required&#039;] === null) {
+						unset($rule[&#039;required&#039;]);
+					}
+					$rule += $options + compact(&#039;values&#039;);
+					list($name) = $rule;
+
+					if ($events &amp;&amp; $rule[&#039;on&#039;] &amp;&amp; !array_intersect($events, (array) $rule[&#039;on&#039;])) {
+						continue;
+					}
+					if (!array_key_exists($field, $values)) {
+						if ($rule[&#039;required&#039;]) {
+							$errors[$field][$key] = $rule[&#039;message&#039;] ?: $key;
+						}
+						if ($rule[&#039;last&#039;]) {
+							break;
+						}
+						continue;
+					}
+					if (empty($values[$field]) &amp;&amp; $rule[&#039;skipEmpty&#039;]) {
+						continue;
+					}
+
+					if (!static::rule($name, $values[$field], $rule[&#039;format&#039;], $rule + $options)) {
+						$errors[$field][$key] = $rule[&#039;message&#039;] ?: $key;
+
+						if ($rule[&#039;last&#039;]) {
+							break;
+						}
+					}
+				}
+			}
+			return array_filter($errors);
+		});
+	}
+
+	/**
+	 * Adds to or replaces built-in validation rules specified in `Validator::$_rules`.  Any new
+	 * validation rules created are automatically callable as validation methods.
+	 *
+	 * For example:
+	 * ```
+	 * Validator::add(&#039;zeroToNine&#039;, &#039;/^[0-9]$/&#039;);
+	 * $isValid = Validator::isZeroToNine(&quot;5&quot;); // true
+	 * $isValid = Validator::isZeroToNine(&quot;20&quot;); // false
+	 * ```
+	 *
+	 * Alternatively, the first parameter may be an array of rules expressed as key/value pairs,
+	 * as in the following:
+	 * ```
+	 * Validator::add([
+	 * 	&#039;zeroToNine&#039; =&gt; &#039;/^[0-9]$/&#039;,
+	 * 	&#039;tenToNineteen&#039; =&gt; &#039;/^1[0-9]$/&#039;,
+	 * ]);
+	 * ```
+	 *
+	 * In addition to regular expressions, validation rules can also be defined as full anonymous
+	 * functions:
+	 * ```
+	 * use app\models\Account;
+	 *
+	 * Validator::add(&#039;accountActive&#039;, function($value) {
+	 * 	$value = is_int($value) ? Account::find($value) : $value;
+	 * 	return (boolean) $value-&gt;is_active;
+	 * });
+	 *
+	 * $testAccount = Account::create([&#039;is_active&#039; =&gt; false]);
+	 * Validator::isAccountActive($testAccount); // returns false
+	 * ```
+	 *
+	 * These functions can take up to 3 parameters:
+	 * 	- `$value` _mixed_: This is the actual value to be validated (as in the above example).
+	 * 	- `$format` _string_: Often, validation rules come in multiple &quot;formats&quot;, for example:
+	 * 	  postal codes, which vary by country or region. Defining multiple formats allows you to
+	 * 	  retain flexibility in how you validate data. In cases where a user&#039;s country of origin
+	 * 	  is known, the appropriate validation rule may be selected. In cases where it is not
+	 * 	  known, the value of `$format` may be `&#039;any&#039;`, which should pass if any format matches.
+	 * 	  In cases where validation rule formats are not mutually exclusive, the value may be
+	 * 	  `&#039;all&#039;`, in which case all must match.
+	 * 	- `$options` _array_: This parameter allows a validation rule to implement custom
+	 * 	  options.
+	 *
+	 * @see lithium\util\Validator::$_rules
+	 * @param mixed $name The name of the validation rule (string), or an array of key/value pairs
+	 *        of names and rules.
+	 * @param string $rule If $name is a string, this should be a string regular expression, or a
+	 *        closure that returns a boolean indicating success. Should be left blank if
+	 *        `$name` is an array.
+	 * @param array $options The default options for validating this rule. An option which applies
+	 *        to all regular expression rules is `&#039;contains&#039;` which, if set to true, allows
+	 *        validated values to simply _contain_ a match to a rule, rather than exactly
+	 *        matching it in whole.
+	 */
+	public static function add($name, $rule = null, array $options = []) {
+		if (!is_array($name)) {
+			$name = [$name =&gt; $rule];
+		}
+		static::$_rules = Set::merge(static::$_rules, $name);
+
+		if (!empty($options)) {
+			$options = array_combine(array_keys($name), array_fill(0, count($name), $options));
+			static::$_options = Set::merge(static::$_options, $options);
+		}
+	}
+
+	/**
+	 * Checks a single value against a single validation rule in one or more formats.
+	 *
+	 * @param string $rule
+	 * @param mixed $value
+	 * @param string $format
+	 * @param array $options
+	 * @return boolean Returns `true` or `false` indicating whether the validation rule check
+	 *         succeeded or failed.
+	 * @filter
+	 */
+	public static function rule($rule, $value, $format = &#039;any&#039;, array $options = []) {
+		if (!isset(static::$_rules[$rule])) {
+			throw new InvalidArgumentException(&quot;Rule `{$rule}` is not a validation rule.&quot;);
+		}
+		$defaults = isset(static::$_options[$rule]) ? static::$_options[$rule] : [];
+		$options = (array) $options + $defaults + static::$_options[&#039;defaults&#039;];
+
+		$ruleCheck = static::$_rules[$rule];
+		$ruleCheck = is_array($ruleCheck) ? $ruleCheck : [$ruleCheck];
+
+		if (!$options[&#039;contains&#039;] &amp;&amp; !empty($ruleCheck)) {
+			foreach ($ruleCheck as $key =&gt; $item) {
+				$ruleCheck[$key] = is_string($item) ? &quot;/^{$item}$/&quot; : $item;
+			}
+		}
+
+		$params = compact(&#039;value&#039;, &#039;format&#039;, &#039;options&#039;);
+		return Filters::run(get_called_class(), $rule, $params, static::_checkFormats($ruleCheck));
+	}
+
+	/**
+	 * Returns a list of available validation rules, or the configuration details of a single rule.
+	 *
+	 * @param string $name Optional name of a rule to get the details of. If not specified, an array
+	 *        of all available rule names is returned. Otherwise, returns the details of a
+	 *        single rule. This can be a regular expression string, a closure object, or an
+	 *        array of available rule formats made up of string regular expressions,
+	 *        closures, or both.
+	 * @return mixed Returns either an single array of rule names, or the details of a single rule.
+	 */
+	public static function rules($name = null) {
+		if (!$name) {
+			return array_keys(static::$_rules);
+		}
+		return isset(static::$_rules[$name]) ? static::$_rules[$name] : null;
+	}
+
+	/**
+	 * Perform validation checks against a value using an array of all possible formats for a rule,
+	 * and an array specifying which formats within the rule to use.
+	 *
+	 * @param array $rules All available rules.
+	 * @return \Closure Function returning boolean `true` if validation succeeded, `false` otherwise.
+	 */
+	protected static function _checkFormats($rules) {
+		return function($params) use ($rules) {
+			$value = $params[&#039;value&#039;];
+			$format = $params[&#039;format&#039;];
+			$options = $params[&#039;options&#039;];
+
+			$defaults = [&#039;all&#039; =&gt; true];
+			$options += $defaults;
+
+			$formats = (array) $format;
+			$options[&#039;all&#039;] = ($format === &#039;any&#039;);
+
+			foreach ($rules as $index =&gt; $check) {
+				if (!$options[&#039;all&#039;] &amp;&amp; !(in_array($index, $formats) || isset($formats[$index]))) {
+					continue;
+				}
+
+				$regexPassed = (is_string($check) &amp;&amp; preg_match($check, $value));
+				$closurePassed = (is_object($check) &amp;&amp; $check($value, $format, $options));
+
+				if ($regexPassed || $closurePassed) {
+					return true;
+				}
+			}
+			return false;
+		};
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

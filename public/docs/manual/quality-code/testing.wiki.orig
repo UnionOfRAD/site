@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>Testing – li₃: The Definitive Guide v1.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="/assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="/assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="/" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="/docs" class="active">Documentation</a><a href="/versions">Versions</a><a href="/present">Presentations</a><a href="/support">Community</a><a href="/development">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="/docs" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="/docs/book/manual/1.x" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃: The Definitive Guide (1.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="/docs/book/manual/1.x/quality-code" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Quality Code</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">Testing</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="books-view has-aside-right">
+	<nav class="aside aside-right">
+		<h3 class="h-gamma">Contents</h3>
+		<ul><li><a href="/docs/book/manual/1.x/common-tasks" class="">Common Tasks</a><ul><li><a href="/docs/book/manual/1.x/common-tasks/logging" class="">Logging</a><li><a href="/docs/book/manual/1.x/common-tasks/plugins" class="">Plugins</a><li><a href="/docs/book/manual/1.x/common-tasks/error-handling" class="">Error Handling</a><li><a href="/docs/book/manual/1.x/common-tasks/caching" class="">Caching</a><li><a href="/docs/book/manual/1.x/common-tasks/filters" class="">Filters</a><li><a href="/docs/book/manual/1.x/common-tasks/etags" class="">Etags</a><li><a href="/docs/book/manual/1.x/common-tasks/globalization" class="">Globalization</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-authentication" class="">Simple Authentication</a><li><a href="/docs/book/manual/1.x/common-tasks/simple-auth-user" class="">Simple Auth User</a><li><a href="/docs/book/manual/1.x/common-tasks/console-applications" class="">Console Applications</a></ul><li><a href="/docs/book/manual/1.x/appendices" class="">Appendices</a><ul><li><a href="/docs/book/manual/1.x/appendices/faqs" class="">FAQs</a><li><a href="/docs/book/manual/1.x/appendices/using-in-other-applications" class="">Using In Other Applications</a></ul><li><a href="/docs/book/manual/1.x/quickstart" class="">Quickstart</a><li><a href="/docs/book/manual/1.x/controllers" class="">Controllers</a><ul><li><a href="/docs/book/manual/1.x/controllers/actions" class="">Actions</a><li><a href="/docs/book/manual/1.x/controllers/flow-control" class="">Flow Control</a><li><a href="/docs/book/manual/1.x/controllers/parameters" class="">Parameters</a><li><a href="/docs/book/manual/1.x/controllers/type-rendering-detection" class="">Type Rendering Detection</a><li><a href="/docs/book/manual/1.x/controllers/routing" class="">Routing</a></ul><li><a href="/docs/book/manual/1.x/installation" class="">Installation</a><ul><li><a href="/docs/book/manual/1.x/installation/requirements" class="">Requirements</a><li><a href="/docs/book/manual/1.x/installation/troubleshooting" class="">Troubleshooting</a><li><a href="/docs/book/manual/1.x/installation/web-servers" class="">Web Servers</a></ul><li><a href="/docs/book/manual/1.x/architecture" class="">Architecture</a><ul><li><a href="/docs/book/manual/1.x/architecture/file-structure" class="">File Structure</a><li><a href="/docs/book/manual/1.x/architecture/response-lifecycle" class="">Response Lifecycle</a><li><a href="/docs/book/manual/1.x/architecture/aop" class="">AOP</a><li><a href="/docs/book/manual/1.x/architecture/mvc" class="">MVC</a><li><a href="/docs/book/manual/1.x/architecture/objects" class="">Objects</a></ul><li><a href="/docs/book/manual/1.x/quality-code" class="">Quality Code</a><ul><li><a href="/docs/book/manual/1.x/quality-code/fixtures" class="">Fixtures</a><li><a href="/docs/book/manual/1.x/quality-code/analysis" class="">Analysis</a><li><a href="/docs/book/manual/1.x/quality-code/testing" class="active">Testing</a><li><a href="/docs/book/manual/1.x/quality-code/security" class="">Security</a></ul><li><a href="/docs/book/manual/1.x/configuration" class="">Configuration</a><ul><li><a href="/docs/book/manual/1.x/configuration/environment" class="">Environment</a><li><a href="/docs/book/manual/1.x/configuration/bootstrapping" class="">Bootstrapping</a><li><a href="/docs/book/manual/1.x/configuration/third-party-libraries" class="">Third Party Libraries</a></ul><li><a href="/docs/book/manual/1.x/views" class="">Views</a><ul><li><a href="/docs/book/manual/1.x/views/layouts" class="">Layouts</a><li><a href="/docs/book/manual/1.x/views/elements" class="">Elements</a><li><a href="/docs/book/manual/1.x/views/helpers" class="">Helpers</a><li><a href="/docs/book/manual/1.x/views/static-content" class="">Static Content</a><li><a href="/docs/book/manual/1.x/views/auto-escaping" class="">Auto Escaping</a></ul><li><a href="/docs/book/manual/1.x/models" class="">Models</a><ul><li><a href="/docs/book/manual/1.x/models/mongodb" class="">Mongodb</a><li><a href="/docs/book/manual/1.x/models/meta" class="">Meta</a><li><a href="/docs/book/manual/1.x/models/relationships" class="">Relationships</a><li><a href="/docs/book/manual/1.x/models/saving" class="">Saving</a><li><a href="/docs/book/manual/1.x/models/using-data-sources" class="">Using Data Sources</a><li><a href="/docs/book/manual/1.x/models/adding-functions" class="">Adding Functions</a><li><a href="/docs/book/manual/1.x/models/data-mutation" class="">Data Mutation</a><li><a href="/docs/book/manual/1.x/models/connections" class="">Connections</a><li><a href="/docs/book/manual/1.x/models/creating-data-sources" class="">Creating Data Sources</a><li><a href="/docs/book/manual/1.x/models/querying" class="">Querying</a><li><a href="/docs/book/manual/1.x/models/validation" class="">Validation</a></ul></ul>	</nav>
+	<div class="body">
+		<h1><a id="the-unit-testing-framework" class="anchor" href="#the-unit-testing-framework">The Unit Testing Framework</a></h1>
+<p>Applications with any amount of complexity or reuse necessitate test coverage. li3's unit testing framework is home grown, and is used for the framework's own testing. It's simple, lightweight, and ready for immediate use.</p>
+<h2><a id="getting-started" class="anchor" href="#getting-started">Getting Started</a></h2>
+<p>Since the unit testing framework is built into li3, you might already have it up and running. Once you've downloaded and installed li3, point your web browser to <code>/test</code> under your application's base URL.</p>
+<p>The li3 Unit Test Dashboard is where you'll be able to view test cases, run unit tests, and view reports. Initially, you'll only be seeing li3's core tests. Soon enough, however, you'll be managing your own application's unit testing setup.</p>
+<p>All of your application's unit tests will reside in <code>tests</code>. There are three main test folders you'll need to be using: <code>cases</code>, <code>integration</code>, and <code>mocks</code>. The <code>cases</code> folder holds unit tests for single classes, <code>integration</code> holds test cases that span two or more classes, and <code>mocks</code> is used to create fake data for use during testing.</p>
+<h2><a id="test-cases" class="anchor" href="#test-cases">Test Cases</a></h2>
+<p>The <code>cases</code> folder is used to house all the core logic for your unit tests. If you take a peek inside <code>tests/cases</code>, you'll see that you already have three folders used to organize your application's unit tests. This folder structure dictates the namespace for each unit test class, and should generally mirror your application's class/namespace structure.</p>
+<p>Let's start out by creating a simple test case as a working example. Our first working example will be a model unit test. Let's start by creating one using the <code>li3 create</code> console command.</p>
+<pre><code class="language-bash">cd /path/to/lithium/app
+
+li3 create model Posts
+# Outputs: Posts created in app\models.
+</code></pre>
+<p>We can also use the <code>li3 create</code> command to create our test case class.</p>
+<pre><code class="language-bash">li3 create test model Posts
+# Outputs: PostsTest created for Posts in app\tests\cases\models.
+</code></pre>
+<p>Doing so creates a test file template class that extends <code>lithium\test\Unit</code> and looks like the following:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace app\tests\cases\models;
+
+use app\models\Posts;
+
+class PostsTest extends \lithium\test\Unit {
+
+	public function setUp() {}
+
+	public function tearDown() {}
+}
+
+?&gt;
+</code></pre>
+<p>The two initial methods supplied act as they're named. The <code>setUp()</code> method is used to perform any preparation work you'll need to perform your unit testing logic. This might be anything from setting up database connections to initializing mock data. Similarly, <code>tearDown()</code> is used to clean up anything that might be left over once a unit test has been completed. These methods are called before and after each method in your unit test case.</p>
+<p>The meat of the unit test, however, will be housed inside of methods you create. Each piece of your unit testing logic should be placed inside of a method whose name starts with 'test'. Before we make any adjustments to the <code>Posts</code> model, let's exercise a bit of TDD and write an example test method first.</p>
+<p>Since our test case is a subclass of <code>lithium\test\Unit</code>, we have easy access to a number of methods that help us validate test assertions. Since they're plainly named, I'll list some here. For more information, please refer to the API documentation for <code>lithium\test\Unit</code>.</p>
+<ul>
+<li><code>assertEqual()</code></li>
+<li><code>assertNotEqual()</code></li>
+<li><code>assertIdentical()</code></li>
+<li><code>assertTrue()</code></li>
+<li><code>assertFalse()</code></li>
+<li><code>assertNull()</code></li>
+<li><code>assertNoPattern()</code></li>
+<li><code>assertPattern()</code></li>
+<li><code>assertTags()</code></li>
+<li><code>assertCookie()</code></li>
+<li><code>expectException()</code></li>
+</ul>
+<p>Every post should have a great title, and any editor knows that post titles containing the phrase "top ten" are pure rubbish. We'll eventually need a method in our Posts model that searches for this phrase and warns us. Before writing that method, let's establish a test case to cover it. We'll call it <code>testIsGoodTitle()</code>. See an example implementation below:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace app\tests\cases\models;
+
+use app\models\Posts;
+
+class PostsTest extends \lithium\test\Unit {
+
+	public function setUp() {}
+
+	public function tearDown() {}
+
+	public function testIsGoodTitle() {
+		$this-&gt;assertTrue(Posts::isGoodTitle("How to Win Friends and Influence People"));
+		$this-&gt;assertFalse(Posts::isGoodTitle("The Top 10 Best Top Ten Lists"));
+	}
+}
+
+?&gt;
+</code></pre>
+<p>Turn back to your browser showing the Unit Test Dashboard, and refresh it. You should see a new entry at the top of the list on the left hand side that shows our <code>PostsTest</code> unit test case. Clicking on the <code>PostsTest</code> test case should show you the test results. At this point you won't get far—the model will likely complain about a missing connection or function: as it should!</p>
+<p>Let's start working on the model so we can get that test to pass. First, let's specify our model as not having any connection. We'll adjust this later, but let's do this now for simplicity's sake.</p>
+<pre><code class="language-php">&lt;?php
+
+namespace app\models;
+
+class Posts extends \lithium\data\Model {
+
+	protected $_meta = ['connection' =&gt; false];
+
+	public $validates = [];
+}
+
+?&gt;
+</code></pre>
+<p>Once that's in place, running the test again should have it barking about how <code>isGoodTitle()</code> hasn't been defined. Let's provide a rudimentary implementation in the model to satisfy it:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace app\models;
+
+class Posts extends \lithium\data\Model {
+
+	protected $_meta = ['connection' =&gt; false];
+
+	public $validates = [];
+
+	public static function isGoodTitle($title) {
+		return !stristr($title, 'top ten');
+	}
+}
+
+?&gt;
+</code></pre>
+<p>At this point, your test cases should run successfully in the Unit Test Dashboard.</p>
+<h2><a id="mocks" class="anchor" href="#mocks">Mocks</a></h2>
+<p>Mocks are used in place of actual sources of information. You can create a mock for just about anything: a data source, model data, a console command response... anything. Since we're dealing primarily with the model in this example, let's continue that train of thought, and use some mocks to help us test our new model functionality.</p>
+<p>Let's create a MockPosts that returns test data we can use to run through our <code>isGoodTitle()</code> method. One easy way to do that is to create a new class that just returns a RecordSet (in the case of an SQL database) or a Document (in the case of a document database) collection.</p>
+<p>Start by creating a new file in <code>tests/mocks/data/MockPosts.php</code>:</p>
+<pre><code class="language-php">&lt;?php
+
+namespace app\tests\mocks\data;
+
+use lithium\data\collection\RecordSet;
+
+class MockPosts extends \app\models\Posts {
+
+	public static function find($type = 'all', array $options = []) {
+		switch ($type) {
+			case 'first':
+				return new RecordSet(['data' =&gt; [
+					'id' =&gt; 1, 'title' =&gt; 'Top ten reasons why this is a bad title.'
+				]]);
+			break;
+			case 'all':
+			default :
+				return new RecordSet(['data' =&gt; [
+					['id' =&gt; 1, 'title' =&gt; 'Top ten reasons why this is a bad title.'],
+					['id' =&gt; 2, 'title' =&gt; 'Sensationalist Over-dramatization!'],
+					['id' =&gt; 3, 'title' =&gt; 'Heavy Editorializing!'],
+				]]);
+			break;
+		}
+	}
+}
+
+?&gt;
+</code></pre>
+<p>What we've got here is essentially a model that spits out hard-coded data when we call <code>find()</code>. In some cases, this might really be all we need. Let's use this in our main test case by adding the following function:</p>
+<pre><code class="language-php">public function testMockTitles() {
+	$results = MockPosts::find('all');
+
+	$first = $results-&gt;current();
+	$this-&gt;assertFalse(MockPosts::isGoodTitle($first['title']));
+}
+</code></pre>
+<p>Head back to the Unit Test Dashboard to make sure this runs successfully, and you're done!</p>
+<h3><a id="state" class="anchor" href="#state">State</a></h3>
+<div class="note note-version">
+	As part of the deprecation of the framework base classes in 1.2,
+	<code>__set_state()</code> has been deprecated without a replacement.
+</div>
+<p>One challenge with testing is creating and initializing your objects. The <code>__set_state()</code> function allows test writers to quickly create objects with their pre-existing properties and values intact. This method can be called statically on any class that extends <code>Object</code> to return an instance of itself.</p>
+<pre><code class="language-php">class MockObject extends \lithium\core\Object {
+
+	protected $_protected = null;
+
+	public function getProtected() {
+		echo $this-&gt;$_protected;
+	}
+}
+
+$object = MockObject::__set_state([
+	'_protected' =&gt; 'testing'
+]);
+
+$object-&gt;getProtected();        // 'testing'
+</code></pre>
+	</div>
+</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="/assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>

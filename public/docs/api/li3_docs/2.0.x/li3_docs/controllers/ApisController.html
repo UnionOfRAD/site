@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />	<title>li3_docs\controllers\ApisController – li₃ Docs v2.0.x – Documentation – li3 PHP-Framework</title>
+		<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/reset.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic,700italic" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/u1m.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/li3_docs.css" />
+	<link rel="stylesheet" href="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/css/highlight.css" />
+	
+	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+	<script src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/js/base.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+	
+	
+	<link rel="icon" href="../../../../../../assets/ico/site.png">
+
+		<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-11048416-4', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	</head>
+<body class="layout-default li3-docs">
+		<div id="container">
+			<header class="main">
+	<div class="left">
+		<h1><a href="../../../../../../index.html" class="li3-logo">li3</a></h1>
+	</div>
+	<div class="right">
+		<nav class="main-nav"><a href="http://news.li3.me">News</a><a href="../../../../../../docs.html" class="active">Documentation</a><a href="../../../../../../versions.html">Versions</a><a href="../../../../../../present.html">Presentations</a><a href="../../../../../../support.html">Community</a><a href="../../../../../../development.html">Development</a></nav>	</div>
+</header>							<nav class="crumbs">
+	<ul itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="1" />
+							<a href="../../../../../../docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">Documentation</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="2" />
+							<a href="../../li3_docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li₃ Docs (2.0.x)</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="3" />
+							<a href="../../li3_docs.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">li3_docs</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="4" />
+							<a href="../controllers.html" itemscope itemprop="item" itemtype="http://schema.org/Thing"><span itemprop="name">controllers</span></a>
+					</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<meta itemprop="position" content="5" />
+							<span itemscope itemprop="item" itemtype="http://schema.org/Thing">
+					<span itemprop="name">ApisController</span>
+				</span>
+					</li>
+		</ul>
+</nav>						<div id="content">
+				<article class="apis-view has-aside-right">
+
+	<nav class="aside aside-right">
+			<h3 class="h-gamma">Contents</h3>
+		<ul>
+			<li class="nav-up"><a href="../controllers.html" rel="up">../</a>		</ul>
+	
+													
+						<h3 class="h-gamma">Methods</h3>
+			<ul>
+												<li class="method protected">
+				<a href="./ApisController::_init().html">_init()</a>												<li class="method public">
+				<a href="./ApisController::view().html">view()</a>												<li class="method protected">
+				<a href="./ApisController::_crumbsForSymbol().html">_crumbsForSymbol()</a>							</ul>
+									</nav>
+	<div class="body">
+			<h1 class="h-alpha">
+		<a href="../../li3_docs.html" class="symbol-segment">li3_docs</a>\<a href="../controllers.html" class="symbol-segment">controllers</a>\ApisController		</h1>
+
+		<section class="under">
+													<div class="extends">
+					<span class="extends__title">Extends</span>
+											lithium\action\Controller									</div>
+									<div class="tags">
+																<span class="tag">class</span>
+			</div>
+		</section>
+
+					
+			<section>
+									<div class="summary">
+						<p>This is the Lithium API browser controller. This class introspects your application's libraries,
+plugins and classes to generate on-the-fly API documentation.</p>
+					</div>
+				
+							</section>
+
+			
+			
+			
+			
+			
+			
+						<section id="source" class="section">
+				<h3 class="h-beta">Source</h3>
+				<div id="source" class="source-display">
+					<div class="source-wrapper">
+						<pre class="source-code"><code class="language-php">class ApisController extends \lithium\action\Controller {
+
+	protected function _init() {
+		parent::_init();
+		$this-&gt;response-&gt;encoding = &#039;UTF-8&#039;;
+	}
+
+	/**
+	 * This action renders the detail page for all API elements, including namespaces, classes,
+	 * properties and methods. The action determines what type of entity is being displayed, and
+	 * gathers all available data on it. Any wiki text embedded in the data is then post-processed
+	 * and prepped for display.
+	 *
+	 * Handles broken URL parsers by matching method URLs with no closing ) or no () at all
+	 * and redirecting.
+	 *
+	 * @return array Returns an array with the following keys:
+	 *               - `&#039;name&#039;`: A string containing the full name of the entity being displayed
+	 *               - `&#039;library&#039;`: An array with the details of the current class library being
+	 *                 browsed, in which the current entity is contained.
+	 *               - `&#039;object&#039;`: A multi-level array containing all data extracted about the
+	 *                 current entity.
+	 */
+	public function view() {
+		$index = Indexes::find(&#039;first&#039;, [
+			&#039;conditions&#039; =&gt; [
+				&#039;type&#039; =&gt; &#039;api&#039;,
+				&#039;name&#039; =&gt; $this-&gt;request-&gt;name,
+				// $this-&gt;request-&gt;version gives HTTP version.
+				&#039;version&#039; =&gt; isset($this-&gt;request-&gt;params[&#039;version&#039;]) ? $this-&gt;request-&gt;params[&#039;version&#039;] : null
+			]
+		]);
+		if (!$index) {
+			throw new Exception(&#039;Index not found.&#039;);
+		}
+		if (!$this-&gt;request-&gt;symbol &amp;&amp; $index-&gt;namespace) {
+			return $this-&gt;redirect([
+				&#039;library&#039; =&gt; &#039;li3_docs&#039;,
+				&#039;controller&#039; =&gt; &#039;Apis&#039;,
+				&#039;action&#039; =&gt; &#039;view&#039;,
+				&#039;name&#039; =&gt; $index-&gt;name,
+				&#039;version&#039; =&gt; $index-&gt;version,
+				&#039;symbol&#039; =&gt; $index-&gt;namespace
+			]);
+		}
+		if (!$symbol = $index-&gt;symbol($this-&gt;request-&gt;symbol)) {
+			// Just class members are handled below.
+			if (strpos($this-&gt;request-&gt;symbol, &#039;::&#039;) === false) {
+				throw new Exception(&quot;Symbol `{$this-&gt;request-&gt;symbol}` not found.&quot;);
+			}
+			// As Markdown does not allow closing () on method links or sends
+			// them out as just ) or ( we&#039;ll see if there&#039;s method symbol
+			// similiar to this one and redirect to that.
+			$fixed = rtrim($this-&gt;request-&gt;symbol, &#039;()&#039;) . &#039;()&#039;;
+
+			if ($symbol = $index-&gt;symbol($fixed)) {
+				return $this-&gt;redirect([
+					&#039;library&#039; =&gt; &#039;li3_docs&#039;,
+					&#039;controller&#039; =&gt; &#039;Apis&#039;,
+					&#039;action&#039; =&gt; &#039;view&#039;,
+					&#039;name&#039; =&gt; $index-&gt;name,
+					&#039;version&#039; =&gt; $index-&gt;version,
+					&#039;symbol&#039; =&gt; $symbol-&gt;name
+				]);
+			}
+
+			// From documentation links may be generated to inherited
+			// members of a class. We redirect to the class where they
+			// were defined. Document::$_parent -&gt; Entity::$_parent
+			list($class, $member) = explode(&#039;::&#039;, $this-&gt;request-&gt;symbol, 2) + [null, null];
+
+			if (!$symbol = $index-&gt;symbol($class)) {
+				throw new Exception(&quot;Symbol `{$this-&gt;request-&gt;symbol}` not found.&quot;);
+			}
+			if ($member[0] === &#039;$&#039;) {
+				$type = &#039;property&#039;;
+			} elseif (strtoupper($member[0]) === $member[0]) {
+				$type = &#039;constant&#039;;
+			} else {
+				$type = &#039;method&#039;;
+			}
+			$symbol = $symbol-&gt;members(compact(&#039;type&#039;))-&gt;first(function($item) use ($member) {
+				return $item-&gt;title([&#039;last&#039; =&gt; true]) === $member;
+			});
+			if (!$symbol) {
+				throw new Exception(&quot;Symbol `{$this-&gt;request-&gt;symbol}` not found.&quot;);
+			}
+			return $this-&gt;redirect([
+				&#039;library&#039; =&gt; &#039;li3_docs&#039;,
+				&#039;controller&#039; =&gt; &#039;Apis&#039;,
+				&#039;action&#039; =&gt; &#039;view&#039;,
+				&#039;name&#039; =&gt; $index-&gt;name,
+				&#039;version&#039; =&gt; $index-&gt;version,
+				&#039;symbol&#039; =&gt; $symbol-&gt;name
+			]);
+		}
+		$crumbs = $this-&gt;_crumbsForSymbol($index, $symbol);
+		return compact(&#039;index&#039;, &#039;symbol&#039;, &#039;crumbs&#039;);
+	}
+
+	protected function _crumbsForSymbol($index, $symbol) {
+		$crumbs = [];
+
+		$crumbs[] = [
+			&#039;title&#039; =&gt; &#039;Documentation&#039;,
+			&#039;url&#039; =&gt; [
+				&#039;library&#039; =&gt; &#039;li3_docs&#039;,
+				&#039;controller&#039; =&gt; &#039;Docs&#039;,
+				&#039;action&#039; =&gt; &#039;index&#039;
+			]
+		];
+		$crumbs[] = [
+			&#039;title&#039; =&gt; $index-&gt;title() . &#039; (&#039; . $index-&gt;version . &#039;)&#039;,
+			&#039;url&#039; =&gt; [
+				&#039;library&#039; =&gt; &#039;li3_docs&#039;,
+				&#039;controller&#039; =&gt; &#039;Apis&#039;,
+				&#039;action&#039; =&gt; &#039;view&#039;,
+				&#039;name&#039; =&gt; $index-&gt;name,
+				&#039;version&#039; =&gt; $index-&gt;version,
+				&#039;symbol&#039; =&gt; $index-&gt;namespace
+			]
+		];
+		$segments = $symbol-&gt;segments();
+		while (list($segment, $title) = each($segments)) {
+			if (!is_string($segment)) {
+				continue;
+			}
+			if (key($segments) === null) {
+				$crumbs[] = [
+					&#039;title&#039; =&gt; $title,
+					&#039;url&#039; =&gt; null
+				];
+			} else {
+				$crumbs[] = [
+					&#039;title&#039; =&gt; $title,
+					&#039;url&#039; =&gt; [
+						&#039;library&#039; =&gt; &#039;li3_docs&#039;,
+						&#039;controller&#039; =&gt; &#039;Apis&#039;,
+						&#039;action&#039; =&gt; &#039;view&#039;,
+						&#039;name&#039; =&gt; $index-&gt;name,
+						&#039;version&#039; =&gt; $index-&gt;version,
+						&#039;symbol&#039; =&gt; $segment
+					]
+				];
+			}
+		}
+		return $crumbs;
+	}
+}</code></pre>
+					</div>
+				</div>
+			</section>
+							</div>
+	</article>			</div>
+		</div>
+		<footer class="main">
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+	<div class="area"></div>
+
+	<div class="social">
+		<a href="https://github.com/unionofrad" target="new">GitHub</a>		<span class="separator">/</span>
+		<a href="https://twitter.com/unionofrad" target="new">Twitter</a>		<span class="separator">/</span>
+		<a href="http://www.reddit.com/r/li3" target="new">Reddit</a>		<span class="separator">/</span>
+		<a href="https://stackoverflow.com/questions/tagged/lithium" target="new">Stack Overflow</a>	</div>
+	<div class="testimonial">
+		<img src="../../../../../../assets/v:__PROJECT_VERSION_BUILD__xyzz/img/testimonials/10.png" alt="Testimonial Image" />		<p>I think it's time you started<br />
+writing better code.</p>
+	</div>
+	<div class="copyright">
+		Pretty much everything is (c) 2009-2024 and beyond, the <a href="http://unionofrad.org">Union of RAD</a>.	</div>
+</footer>	</body>
+</body>
+</html>
