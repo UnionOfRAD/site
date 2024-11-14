@@ -1,3 +1,0 @@
-[submodule "lib/deta"]
-	path = lib/deta
-	url = https://github.com/davidpersson/deta.git
